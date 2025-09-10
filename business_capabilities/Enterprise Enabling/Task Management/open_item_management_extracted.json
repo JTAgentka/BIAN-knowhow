@@ -1,0 +1,35 @@
+{
+  "capability_name": "Open Item Management",
+  "role_definition": "This service domain handles open item processing against accounts typically for loans. It enables a unit to handle resolution across multiple accounts as a specialized/centralized administrative activity",
+  "folder_name": "Task Management",
+  "core_business_object": "Open Item (object_26.html?object=44546)",
+  "example_of_use": "Open items are cleared against an active loan facility",
+  "executive_summary": "This service domain provides a service for handling the resolution of open items against accounts (such as overdue loan payments)",
+  "key_features": [
+    "Register and classify open items for processing",
+    "Process/resolve open items",
+    "Report on open item resolution activity"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/OpenItemManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Task Management (object_6.html?object=130474)"
+  ],
+  "triggered_by": [
+    "Open Item Management (object_21.html?object=31686)",
+    "Consumer Loan (object_22.html?object=42931)"
+  ],
+  "triggers": [
+    "Open Item Management (object_21.html?object=31686)",
+    "Customer Billing (object_20.html?object=42033)",
+    "Delinquent Account Handling (object_22.html?object=47264)"
+  ],
+  "list_of_scenarios_with_links": [
+    "Process Consumer Loan Delinquency First Stage (views/view_55407.html)",
+    "Open Item Procedure_Instantiation (object_18.html?object=210441)",
+    "Open Item Management_SD_Operations (object_19.html?object=210451)",
+    "Open Item Procedure_Invocation (object_18.html?object=210463)",
+    "Open Item Procedure_Reporting (object_18.html?object=210468)",
+    "Open Item Management_SD_Service Group (object_19.html?object=240393)"
+  ]
+}

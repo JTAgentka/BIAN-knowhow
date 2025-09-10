@@ -1,0 +1,58 @@
+{
+  "capability_name": "Card Case",
+  "role_definition": "Capture, track, resolve and report on card related transactional disputes, handling all the dispute resolution messages between the Issuer, the Card Network and the Acquirer.",
+  "folder_name": "Task Management",
+  "core_business_object": "Card Case (object_26.html?object=47333)",
+  "example_of_use": "A card holder reports a payment dispute to the contact center and a case is initiated. The account is credited and documentation requested from the merchant. The case is finally judged when the documents are available for review and all interested parties are notified of the resolution",
+  "executive_summary": "This service domain handles the processing of a customer card case, typically a disputed charge",
+  "key_features": [
+    "Consolidation of transaction details",
+    "Chargeback processing",
+    "Case decisioning and arbitration",
+    "Case resolution"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CardCase/12.0.0",
+  "served_by": [
+    "Servicing (object_25.html?object=130062)",
+    "Wave 2 (object_25.html?object=153742)",
+    "Customer Care (object_25.html?object=171879)"
+  ],
+  "serves": [
+    "Task Management (object_6.html?object=130474)"
+  ],
+  "triggered_by": [
+    "Card Case (object_21.html?object=30796)",
+    "Card Clearing (object_21.html?object=36804)",
+    "Customer Case (object_22.html?object=47339)"
+  ],
+  "triggers": [
+    "Card Case (object_21.html?object=30796)",
+    "Operational Gateway (object_21.html?object=32276)",
+    "Correspondence (object_20.html?object=32927)",
+    "Card Transaction Capture (object_21.html?object=35397)",
+    "Payment Order (object_21.html?object=35550)",
+    "Card Clearing (object_21.html?object=36804)",
+    "Credit Card (object_22.html?object=40448)",
+    "Merchant Acquiring Facility (object_20.html?object=42530)",
+    "Card Network Participant Facility (object_22.html?object=42759)",
+    "Document Directory (object_22.html?object=44708)"
+  ],
+  "scenarios": [
+    {
+      "name": "Process Card Clearing by Issuer",
+      "link": "views/view_55194.html"
+    },
+    {
+      "name": "Handle Request for Chargeback at Acquirer",
+      "link": "views/view_55230.html"
+    },
+    {
+      "name": "Handle Card Chargeback at Issuer",
+      "link": "views/view_55464.html"
+    },
+    {
+      "name": "Handle Request for Information for Chargeback at Acquirer",
+      "link": "views/view_55149.html"
+    }
+  ]
+}

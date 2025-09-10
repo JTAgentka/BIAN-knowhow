@@ -1,0 +1,41 @@
+{
+  "capability_name": "Card Collections",
+  "role_definition": "The card collection process relates to the determination and execution of the optimal strategy to ensure the collection of unsecured distressed card debt, which may include aggressive collection efforts, renegotiation of payments terms in order to improve customer commitment to make the payment, or to take any applicable legal actions against the customer.",
+  "folder_name": "Task Management",
+  "core_business_object": "Individual Analytics: cardCollectionsProcedureAccumulators, cardCollectionsProcedureActivityAnalysis, cardCollectionsProcedurePerformanceAnalysis, cardCollectionsProcedureTrends&Events; Portfolio Analytics: cardCollectionsProcedurePortfolioActivityAnalysis, cardCollectionsProcedurePortfolioMake-UpAnalysis, cardCollectionsProcedurePortfolioPerformanceAnalysis",
+  "example_of_use": "A card account is canceled when the age of outstanding balance exceeds policy limits (normally 90 days) or when delinquency management and dunning efforts are determined to be unsuccessful at eliciting payment. The account is then assigned to an internal Collections department or an external Collection Agency for making aggressive attempts at securing the payment of the outstandings.",
+  "executive_summary": "This service domain administers the recovery of outstanding amounts from cancelled card accounts through internal or external collection agencies. This may involve negotiating payment terms and/or interest write-downs.",
+  "key_features": [
+    "Card collection case classification and assignment",
+    "Collection payment terms and processing",
+    "Collection processing resolution/conclusion"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CardCollections/12.0.0",
+  "served_by": [
+    "Credit Card",
+    "Card Collections"
+  ],
+  "serves": [
+    "Task Management",
+    "Risk Event Management"
+  ],
+  "triggered_by": [
+    "Credit Card",
+    "Card Collections"
+  ],
+  "triggers": [
+    "Correspondence",
+    "Credit Card",
+    "Card Collections"
+  ],
+  "scenarios_with_links": [
+    {
+      "scenario": "Process Periodic Review of Collection Actions",
+      "link": "views/view_55302.html"
+    },
+    {
+      "scenario": "Process Card Collection",
+      "link": "views/view_54910.html"
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "capability_name": "Contact Handler",
+  "role_definition": "BIAN defines a customer contact as the overarching structure handling a customer interaction from start to end. A contact can include one or more servicing dialogue 'sessions' in parallel or sequence to support different device/channel uses within the contact and to allow for the customer to be passed on to different servicing specialists as necessary during the contact. Each session is handled at a servicing position where the Contact Dialogue service domain is called to handle the specific customer interaction. Contact Handler concludes the contact, handles the authorization permissions and shares any contact information collected during the contact between sessions as necessary",
+  "folder_name": "Task Management",
+  "core_business_object": "CustomerContactSession",
+  "example_of_use": "A customer is self serving on the web and then requests to talk to a servicing representative directory using the VoIP capability presented on the banks web portal.",
+  "executive_summary": "This service domain handles a customer's interactive contact with the bank. This will typically involve launching of one or more channel/device specific dialogue sessions as necessary within the customer contact",
+  "key_features": [
+    "Handle customer contacts with the bank",
+    "Obtain customer identity authentication",
+    "Consolidate reference information and recent contact activity details",
+    "Obtain routing decision (select optimal servicing resource)",
+    "Initiate servicing sessions",
+    "Log contact activity"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ContactHandler/12.0.0",
+  "served_by": [
+    "eBranch Operations",
+    "Business Unit Management",
+    "Business Development",
+    "Advanced Voice Services Operations",
+    "Session Dialogue"
+  ],
+  "serves": [
+    "Task Management"
+  ],
+  "triggered_by": [
+    "eBranch Operations",
+    "Advanced Voice Services Operations",
+    "Contact Handler",
+    "Brokered Product",
+    "Session Dialogue"
+  ],
+  "triggers": [
+    "Party Lifecycle Management",
+    "Customer Access Entitlement",
+    "eBranch Operations",
+    "Issued Device Administration",
+    "Party Routing Profile",
+    "Channel Activity Analysis",
+    "Customer Workbench",
+    "Servicing Mandate",
+    "Channel Activity History",
+    "Party Authentication",
+    "Contact Routing",
+    "Customer Position",
+    "Contact Handler",
+    "Point of Service",
+    "Fraud Resolution",
+    "Party Reference Data Directory",
+    "Service Directory",
+    "Session Dialogue",
+    "Transaction Authorization"
+  ],
+  "scenarios": [
+    {
+      "name": "EXT Handle Request for Overdraft Limit on Virtual Account",
+      "link": "views/view_55055.html"
+    },
+    {
+      "name": "EXT Handle Request to Add Account to Sweep Agreement",
+      "link": "views/view_55061.html"
+    },
+    {
+      "name": "Update status of the consent to authorized and get authentication code",
+      "link": "views/view_39389.html"
+    },
+    {
+      "name": "EXT Handle Request to Move Overdraft Limit between Virtual Accounts",
+      "link": "views/view_54989.html"
+    },
+    {
+      "name": "EXT Handle Request for High Volume Account Opening",
+      "link": "views/view_54681.html"
+    },
+    {
+      "name": "Retrieve a list of connected ASPSB banks",
+      "link": "views/view_46375.html"
+    },
+    {
+      "name": "Handle Customer Request for User Access Token Using Bank Authorization Grant and its Client Secret within Active Contact",
+      "link": "views/view_54913.html"
+    },
+    {
+      "name": "Create Customer Reports",
+      "link": "views/view_55419.html"
+    },
+    {
+      "name": "EXT Handle Merchandising Loan Application",
+      "link": "views/view_55092.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Retail Current Account",
+      "link": "views/view_55487.html"
+    },
+    {
+      "name": "Execute Interactive Retention Campaign",
+      "link": "views/view_55098.html"
+    },
+    {
+      "name": "EXT Handle Customer Relationships Case",
+      "link": "views/view_55529.html"
+    },
+    {
+      "name": "EXT Handle Request to Reactivate Dormant Corporate Current Account",
+      "link": "views/view_55347.html"
+    },
+    {
+      "name": "Process Contact setup and start TPP Servicing Dialogue",
+      "link": "views/view_55305.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Corporate Current Account Ownership",
+      "link": "views/view_55493.html"
+    },
+    {
+      "name": "Develop Opportunity",
+      "link": "views/view_55143.html"
+    },
+    {
+      "name": "EXT Handle Request to Pre-Open Corporate Current Account",
+      "link": "views/view_55077.html"
+    },
+    {
+      "name": "EXT Handle Request to Add Signatory to Corporate Current Account",
+      "link": "views/view_55296.html"
+    },
+    {
+      "name": "EXT Process B2B Direct Debit Mandate Notice from Creditor Bank at Debtor Bank",
+      "link": "views/view_55425.html"
+    },
+    {
+      "name": "EXT Handle Bulk Request for Opening Salary Accounts",
+      "link": "views/view_55326.html"
+    },
+    {
+      "name": "Handle Servicing Request for Access Attempt with out of Pattern Customer or TPP Behaviour",
+      "link": "views/view_55532.html"
+    },
+    {
+      "name": "Handle TPP Request for Registration with Bank and Exchange of 'Client Identifier' and 'Client Secret' for Later Reference",
+      "link": "views/view_55320.html"
+    },
+    {
+      "name": "EXT Handle Request to Use Direct Debits as Payment Instrument",
+      "link": "views/view_55260.html"
+    },
+    {
+      "name": "Get Customer Request and Show Account Balance",
+      "link": "views/view_55475.html"
+    },
+    {
+      "name": "EXT Handle Request to Terminate Sweep Agreement",
+      "link": "views/view_55499.html"
+    },
+    {
+      "name": "EXT Handle Instruction to Terminate B2B Direct Debits Service at Creditor Bank",
+      "link": "views/view_55440.html"
+    },
+    {
+      "name": "Process Access Request by TPP on Behalf of Customer",
+      "link": "views/view_55437.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Virtual Account Ownership",
+      "link": "views/view_55562.html"
+    },
+    {
+      "name": "Customer Sees the NBP Offer and Decides if to Apply",
+      "link": "views/view_55585.html"
+    },
+    {
+      "name": "EXT Handle Request to Close Virtual Account",
+      "link": "views/view_55455.html"
+    },
+    {
+      "name": "EXT Handle Request for High Volume Virtual Account Opening",
+      "link": "views/view_55266.html"
+    },
+    {
+      "name": "EXT Handle Request to Close Corporate Current Account",
+      "link": "views/view_55101.html"
+    },
+    {
+      "name": "EXT Handle Request for Combined Account Statement",
+      "link": "views/view_55637.html"
+    },
+    {
+      "name": "EXT Handle Request for Renewal of Uncollateralised Consumer Loan",
+      "link": "views/view_55034.html"
+    },
+    {
+      "name": "Get Customer account details",
+      "link": "views/view_36796.html"
+    },
+    {
+      "name": "EXT Handle Request to Detach Account from Corporate Payroll Service Agreement",
+      "link": "views/view_54714.html"
+    },
+    {
+      "name": "Get customer account beneficiaries",
+      "link": "views/view_46252.html"
+    },
+    {
+      "name": "Get and store authentication token, trigger a request to transfer account",
+      "link": "views/view_32684.html"
+    },
+    {
+      "name": "Initiate Consent",
+      "link": "views/view_39366.html"
+    },
+    {
+      "name": "Initiate consent authorization",
+      "link": "views/view_48589.html"
+    },
+    {
+      "name": "Customer log-in",
+      "link": "views/view_38593.html"
+    },
+    {
+      "name": "Initiate Consent",
+      "link": "views/view_44841.html"
+    },
+    {
+      "name": "EXT Handle Request for Preferential Rates for Corporate Current Account",
+      "link": "views/view_54889.html"
+    },
+    {
+      "name": "Retrieve accounts and consent details",
+      "link": "views/view_35037.html"
+    },
+    {
+      "name": "Get customer account balances",
+      "link": "views/view_30223.html"
+    },
+    {
+      "name": "End Mobile Access Session and Update Event and Servicing and Channel History",
+      "link": "views/view_54816.html"
+    },
+    {
+      "name": "Create account consent",
+      "link": "views/view_48501.html"
+    },
+    {
+      "name": "EXT Handle Request for Account Statement and Outgoing Credit Transfer",
+      "link": "views/view_54747.html"
+    },
+    {
+      "name": "Handle Customer Request to Log On to Bank to Authenticate and to Authorise Client Access to Their Account",
+      "link": "views/view_54928.html"
+    },
+    {
+      "name": "Check Customer Channel Access History and Access Entitlements",
+      "link": "views/view_54968.html"
+    },
+    {
+      "name": "Handle Failed Self Service Product Application",
+      "link": "views/view_54810.html"
+    },
+    {
+      "name": "EXT Handle Request for Account Statement and Balances",
+      "link": "views/view_54631.html"
+    },
+    {
+      "name": "Process Customer Access Request and Authentication",
+      "link": "views/view_54634.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Sweep Sequence",
+      "link": "views/view_54834.html"
+    },
+    {
+      "name": "EXT Record Core SEPA Direct Debit Mandate at Creditor Bank",
+      "link": "views/view_54744.html"
+    },
+    {
+      "name": "Periodically the TPP Bank Request Account Updates",
+      "link": "views/view_54916.html"
+    },
+    {
+      "name": "Get customer account transactions",
+      "link": "views/view_39221.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Corporate Current Account",
+      "link": "views/view_54675.html"
+    },
+    {
+      "name": "Handle Customer Request for Payment Order during Active Mobile Access Session",
+      "link": "views/view_55010.html"
+    },
+    {
+      "name": "Save selected accounts",
+      "link": "views/view_35560.html"
+    },
+    {
+      "name": "Get access token, refresh access token",
+      "link": "views/view_35507.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Virtual Account",
+      "link": "views/view_54790.html"
+    },
+    {
+      "name": "Get list of customer accounts",
+      "link": "views/view_30521.html"
+    },
+    {
+      "name": "Retrieve a list of ASPSB banks from the OB Directory",
+      "link": "views/view_42714.html"
+    },
+    {
+      "name": "Exchange OTP",
+      "link": "views/view_41381.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Term Deposit Agreement for Retail Customer",
+      "link": "views/view_55007.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Term Deposit Agreement Conditions",
+      "link": "views/view_54971.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Retail Customer",
+      "link": "views/view_55547.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Term Deposit Attached Corporate Current Account",
+      "link": "views/view_55610.html"
+    },
+    {
+      "name": "EXT Handle request for Corporate Debit Cards Service",
+      "link": "views/view_55446.html"
+    },
+    {
+      "name": "EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Corporate Customer",
+      "link": "views/view_55209.html"
+    },
+    {
+      "name": "EXT Handle Request to Establish Term Deposit Agreement",
+      "link": "views/view_54702.html"
+    },
+    {
+      "name": "EXT Handle Request for Early Closing of Term Deposit",
+      "link": "views/view_54863.html"
+    },
+    {
+      "name": "EXT Handle Request for Early Renewal of Term Deposit",
+      "link": "views/view_54866.html"
+    },
+    {
+      "name": "EXT Handle Request to Establish Credit Transfer Standing Order on Corporate Current Account",
+      "link": "views/view_54951.html"
+    },
+    {
+      "name": "EXT Handle Request for Modification of Merchandising Loan",
+      "link": "views/view_54708.html"
+    }
+  ]
+}

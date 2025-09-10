@@ -1,0 +1,28 @@
+{
+  "capability_name": "Advanced Voice Services Management",
+  "role_definition": "Handles the oversight and configuration of the PBX (telephony/voice) access channel. This includes assessing capacity, performance, scheduling maintenance and updates to the channel configuration. Also determining allowed access and usage and troubleshooting major production problems",
+  "folder_name": "Channel Management",
+  "core_business_object": "Voice Channel (object_26.html?object=44999)",
+  "example_of_use": "Management review and define the reconfiguration requirements for the voice channel based on capacity/volume projections",
+  "executive_summary": "Oversee the configuration and operation of the voice channel facilities",
+  "key_features": [
+    "Determine the required voice channel platform configuration",
+    "Oversee platform upgrades and maintenance",
+    "Track service availability and troubleshoot major production issues"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/AdvancedVoiceServicesManagement/12.0.0",
+  "served_by": [
+    "Business Unit Management (object_21.html?object=30964)",
+    "Contact Handler (object_20.html?object=41839)"
+  ],
+  "serves": [
+    "Channel Management (object_6.html?object=130032)"
+  ],
+  "triggered_by": [
+    "Contact Center Operations (object_22.html?object=43894)"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Adjust Call Centre Position Assignments (views/view_55380.html)"
+  ]
+}

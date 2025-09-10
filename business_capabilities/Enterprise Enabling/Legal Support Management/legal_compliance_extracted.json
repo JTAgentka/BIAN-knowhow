@@ -1,0 +1,61 @@
+{
+  "capability_name": "Legal Compliance",
+  "role_definition": "This service domain oversees legal compliance related considerations for the bank. This includes interpreting the laws that govern the bank's operations and determining which laws apply in specific circumstances across the enterprise. Support and guidelines are provided to activities in the bank that are subject to specific laws and support given to address legal matters that might arise",
+  "folder_name": "Legal Support Management",
+  "core_business_object": "Legal Compliance (object_26.html?object=38586)",
+  "example_of_use": "A new product design is checked against the prevailing financial laws for the target jurisdictions of delivery",
+  "executive_summary": "Provide specialist legal advice, assess for legal compliance and resolve legal cases as they occur",
+  "key_features": [
+    "Review and interpret the law",
+    "Provide legal advice/guidance",
+    "Evaluate and report on bank activity to ensure legality"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/LegalCompliance/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Legal Support Management"
+  ],
+  "triggered_by": [
+    "Party Lifecycle Management",
+    "Customer Relationship Management", 
+    "Term Deposit",
+    "Corporate Current Account",
+    "Collateral Asset Administration",
+    "Customer Offer",
+    "Asset Securitization"
+  ],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Verify Corporate Customer",
+      "link": "views/view_55019.html"
+    },
+    {
+      "name": "Process Sales Marketing and Closing",
+      "link": "views/view_55605.html"
+    },
+    {
+      "name": "Verify Private Banking Customer", 
+      "link": "views/view_55374.html"
+    },
+    {
+      "name": "EXT Handle Request to Change Corporate Current Account Ownership",
+      "link": "views/view_55493.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Provide specialist legal advice, assess for legal compliance and resolve legal cases as they occur",
+    "individual_analytics": [
+      "legalComplianceAssessmentAccumulators",
+      "legalComplianceAssessmentActivityAnalysis", 
+      "legalComplianceAssessmentPerformanceAnalysis",
+      "legalComplianceAssessmentTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "legalComplianceAssessmentPortfolioActivityAnalysis",
+      "legalComplianceAssessmentPortfolioMake-UpAnalysis",
+      "legalComplianceAssessmentPortfolioPerformanceAnalysis"
+    ]
+  }
+}

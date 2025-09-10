@@ -1,0 +1,21 @@
+{
+  "capability_name": "Customer Case Management",
+  "role_definition": "Manage customer case handling, track the effectiveness and impact of case resolution. Evaluate and confirm that the decision making rules and thresholds are well balanced in terms of equitable determination with general customer and merchant acceptance of the process. Ensure and that sufficient and appropriately trained resources are available",
+  "folder_name": "Task Management",
+  "core_business_object": "Customer Case Management Plan",
+  "example_of_use": "Customer case handling is assessed over a period and the rules and thresholds guiding resolution decisions recalibrated",
+  "executive_summary": "Track and assess case load and resolution activity - allocate resources as necessary to optimize case resolution performance",
+  "key_features": [
+    "Define and refine the guiding principles and rules for case resolution",
+    "Assess effectiveness of the case processing function",
+    "Determine and monitor staffing levels and utilization"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerCaseManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Task Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios_with_links": []
+}
