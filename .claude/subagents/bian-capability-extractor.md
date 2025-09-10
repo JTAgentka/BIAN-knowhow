@@ -1,10 +1,10 @@
 # BIAN Capability Extractor
 
 ## Purpose
-Extract structured BIAN capability information from HTML/MHTML files and return it in both Markdown table and JSON formats.
+Extract structured BIAN capability information from PDF files and return it in both Markdown table and JSON formats.
 
 ## Input Parameters
-- `file_path`: Path to the BIAN capability file (HTML/MHTML format)
+- `file_path`: Path to the BIAN capability file (PDF format)
 
 ## Output Format
 Returns both:
@@ -30,14 +30,14 @@ This agent analyzes BIAN service landscape documentation files to extract key ca
 
 ## Processing Steps
 1. Read the specified file
-2. Parse HTML/MHTML content to extract BIAN capability data
-3. Structure the information according to the defined fields
+2. Parse PDF content to extract BIAN capability data
+3. Structure the information according to the defined fields/table
 4. Format output as both Markdown table and JSON
-5. Save both format in the same director as the source MHTML files
+5. Save both format in the same director as the source PDF files
 5. Return JSON file for further processing
 
 ## Error Handling
 - Handle file not found errors
-- Parse malformed HTML gracefully
+- Parse malformed PDF gracefully
 - Return partial data if some fields are missing
 - Provide clear error messages for debugging
