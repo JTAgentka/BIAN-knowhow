@@ -1,0 +1,32 @@
+{
+  "capability_name": "Advertising",
+  "role_definition": "Oversee the use and assess the coverage and impact of advertising campaigns. Direct advertising campaign execution to maximize business impact. Oversee advertising campaign design and development activity.",
+  "folder_name": "Campaign Management",
+  "core_business_object": "Advertising Campaign Management Plan (object_25.html?object=30184)",
+  "example_of_use": "Business development reviews market research to determine levels of awareness for selected bank products and initiates an advertising campaign to raise awareness",
+  "executive_summary": "Develop the plan for and oversee advertising campaign activity, including budget and resource management",
+  "key_features": [
+    "Track market/competitor activity",
+    "Assess customer segment performance",
+    "Assess coverage of advertising campaigns",
+    "Direct the development of advertising campaigns",
+    "Direct the execution of advertising campaigns"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/Advertising/12.0.0",
+  "served_by": [
+    "Marketing (object_25.html?object=130117)"
+  ],
+  "serves": [
+    "Campaign Management (object_6.html?object=130345)"
+  ],
+  "triggered_by": [
+    "Business Development (object_20.html?object=32900)"
+  ],
+  "triggers": [
+    "Market Research (object_21.html?object=34938)"
+  ],
+  "list_of_scenarios": [
+    "Develop Advertising Campaign (views/view_55317.html)",
+    "Analyse Competitor Activity (views/view_54711.html)"
+  ]
+}

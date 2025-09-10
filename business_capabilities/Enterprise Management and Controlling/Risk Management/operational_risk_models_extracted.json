@@ -1,0 +1,66 @@
+{
+  "capability_name": "Operational Risk Models",
+  "role_definition": "Develop and refine operational risk models to detect possible exposures to operational failures",
+  "folder_name": "Risk Management",
+  "core_business_object": "Operational Risk Model Specification",
+  "example_of_use": "Financial engineers evaluate the history of operational breaches and issues to determine how well existing operational risk models cover the detection of exposures",
+  "executive_summary": "Operational Risk Models capability focuses on developing, maintaining, and refining models that detect potential operational failures and exposures. It provides comprehensive analysis of operational breaches and issues to ensure effective risk detection and mitigation.",
+  "key_features": [
+    "Operational risk model development and refinement",
+    "Detection of operational failure exposures",
+    "Historical breach analysis",
+    "Model effectiveness evaluation",
+    "Individual analytics including accumulators, activity analysis, performance analysis, and trends & events",
+    "Portfolio analytics for activity, make-up, and performance analysis"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_23.html/object_47895",
+  "served_by": [
+    "Operational Risk Model Specification_ Analytics Object",
+    "Operational Risk Model",
+    "Operational Risk Model Specification",
+    "Operational Risk Model Specification_Instantiation",
+    "Operational Risk Model Specification_Reporting",
+    "Operational Risk Model Specification_Invocation",
+    "Operational Risk Models_SD_Service Group"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Financial Message Analysis",
+    "Transaction Authorization"
+  ],
+  "triggers": [
+    "Operational risk assessments",
+    "Model validation processes",
+    "Risk exposure evaluations",
+    "Operational failure detection"
+  ],
+  "list_of_scenarios": [
+    "Operational breach history evaluation",
+    "Risk model effectiveness assessment",
+    "Operational failure exposure detection",
+    "Historical analysis of operational issues",
+    "Model refinement based on breach patterns"
+  ],
+  "properties": {
+    "service_domain": "ServiceDomain",
+    "service_role": "Develop and refine operational risk models to detect possible exposures to operational failures",
+    "individual_analytics": [
+      "opertionalRiskModelSpecificationAccumulators",
+      "opertionalRiskModelSpecificationActivityAnalysis",
+      "opertionalRiskModelSpecificationPerformanceAnalysis",
+      "opertionalRiskModelSpecificationTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "opertionalRiskModelSpecificationPortfolioActivityAnalysis",
+      "opertionalRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "opertionalRiskModelSpecificationPortfolioPerformanceAnalysis"
+    ],
+    "bian_life_cycle": "Registered",
+    "stereotypes": ["ServiceDomain"],
+    "aggregated_by": ["Operational Risk"],
+    "is_part_of": ["Models"],
+    "gets_input_from": ["Financial Message Analysis", "Transaction Authorization"]
+  }
+}

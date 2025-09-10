@@ -1,0 +1,30 @@
+{
+  "capability_name": "Bank Drafts",
+  "role_definition": "This Service Domain handles the pricing and issuance of various forms of bank guaranteed payment vehicles, including bank drafts, wire transfers, certified checks and travelers checks. The transaction combines extracting the principal amount and fees from the buyer's account and creating and registering the physical bearer document using any suitable media and security mechanisms. The bank guaranteed funds are held on a holding account pending the deposit of the draft by the payee.",
+  "folder_name": "Issued Device Management",
+  "core_business_object": "Not explicitly specified",
+  "example_of_use": "A customer purchases a bank draft in order to meet the requirements of a merchant from which they wish to make a major purchase",
+  "executive_summary": "This Service Domain support bank guaranteed payment transactions such as bank drafts",
+  "key_features": [
+    "Agree mechanism and terms for the bank guaranteed payment",
+    "Calculate and obtain payment from the payer",
+    "Generate and register the bearer document",
+    "Process remittance of the bearer document"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/BankDrafts/12.0.0",
+  "served_by": [
+    "Not explicitly specified"
+  ],
+  "serves": [
+    "Issued Device Management (object_6.html?object=57833)"
+  ],
+  "triggered_by": [
+    "Not explicitly specified"
+  ],
+  "triggers": [
+    "Not explicitly specified"
+  ],
+  "list_of_scenarios": [
+    "Not explicitly specified in the document"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "capability_name": "Financial Instrument Valuation Models",
+  "role_definition": "Develop and maintain a portfolio of valuation models considering currency, interest rate, instrument quotes, indices, commodity prices and other market, liquidity and credit risk factors. Support the use of these models in trading and pricing activity",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Market Asset Valuation Model Specification",
+  "example_of_use": "Financial engineers assess the coverage and currency of the portfolio of valuation models and update certain models accordingly",
+  "executive_summary": "Not explicitly provided in the document",
+  "key_features": [
+    "Develop and maintain valuation models",
+    "Consider various risk factors",
+    "Support trading and pricing activities"
+  ],
+  "api_bian_portal_link": "Not specified in the document",
+  "served_by": [
+    "Collateral Asset Administration",
+    "Investment Portfolio Analysis"
+  ],
+  "serves": [
+    "Financial Instrument Management",
+    "Financial Instrument Valuation"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

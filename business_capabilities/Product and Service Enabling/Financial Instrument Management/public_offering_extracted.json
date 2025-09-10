@@ -1,0 +1,39 @@
+{
+  "capability_name": "Public Offering",
+  "role_definition": "A public offering involves the specification and packaging of corporate equity or bonds in the public markets to raise capital. This can be the initial public offering (IPO) when a private company is first taken public, and secondary/follow-on offerings to raise further capital. IPO's involve a broad range of financial analysis, auditing and regulatory approval actions. A lead bank and several underwriting banks may coordinate to underwrite the initiative. Secondary offerings can be dilutive (create additional shares) or non-dilutive (redistribute existing shares).",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Public Offering (object_37.html?object=44553)",
+  "example_of_use": "An investment bank assembles a consortia of banks as lead bank to orchestrate an IPO for a rapidly growing private company that wishes to raise significant capital to expand its operations",
+  "executive_summary": "This Service Domain supports a broad range of complex financial, accounting and regulatory actions involved in providing advice and practical support to companies going public and/or raising additional capital through the issuance of publicly traded securities",
+  "key_features": [
+    "Determine and specify the optimum financing mechanism (debt or equity)",
+    "Coordinate with regulators for the approval and registration of the instrument",
+    "Develop comprehensive financial and managerial assessments to support the pricing of the instrument",
+    "Package the debt/equity security for public investors and undertake road-shows as necessary",
+    "Coordinate as lead or secondary underwriting bank for the IPO",
+    "Support the traded equity/debt instrument maintenance and fulfillment actions if necessary"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/PublicOffering/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Project coordination and execution/ placement of a public offering of corporate equity or debt",
+    "individual_analytics": [
+      "publicOfferingFulfillmentArrangementAccumulators",
+      "publicOfferingFulfillmentArrangementActivityAnalysis",
+      "publicOfferingFulfillmentArrangementPerformanceAnalysis",
+      "publicOfferingFulfillmentArrangementTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "publicOfferingFulfillmentArrangementPortfolioActivityAnalysis",
+      "publicOfferingFulfillmentArrangementPortfolioMake-UpAnalysis",
+      "publicOfferingFulfillmentArrangementPortfolioPerformanceAnalysis"
+    ]
+  }
+}

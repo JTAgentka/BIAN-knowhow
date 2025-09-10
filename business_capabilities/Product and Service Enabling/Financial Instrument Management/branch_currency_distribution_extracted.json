@@ -1,0 +1,31 @@
+{
+  "capability_name": "Branch Currency Distribution",
+  "role_definition": "This service domain handles the scheduling and secure distribution of currency throughout the branch network (for bank branches and remote ATM locations). It ensures the required float is maintained at locations and undertakes the movement into and out of central currency holding facilities as necessary to ensure cash availability",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Cash Distribution Procedure",
+  "example_of_use": "ATMs at a branch location are stocked with currency in response to anticipated customer demand",
+  "executive_summary": "Schedule and coordinate the secure distribution of cash inventory across the branch and ATM networks",
+  "key_features": [
+    "Distribution vehicle fleet administration",
+    "Distribution planning and scheduling",
+    "Distribution activity monitoring and control",
+    "Central cash access coordination"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/BranchCurrencyDistribution/12.0.0",
+  "served_by": [
+    "Currency Exchange"
+  ],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [
+    "Central Cash Handling"
+  ],
+  "triggers": [
+    "Servicing Event History",
+    "Branch Location Operations"
+  ],
+  "list_of_scenarios": [
+    "Process Inventory of Cash and Distribution of Cash to Branches"
+  ]
+}

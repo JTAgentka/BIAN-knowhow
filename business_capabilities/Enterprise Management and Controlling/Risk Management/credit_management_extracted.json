@@ -1,0 +1,63 @@
+{
+  "capability_name": "Credit Management",
+  "role_definition": "This service domain supports a central bank credit management function that maintains an overarching credit perspective across all bank activity. Transactions can be re-priced to factor in this credit perspective",
+  "folder_name": "Risk Management",
+  "core_business_object": "Credit Position",
+  "example_of_use": "A corporate loan is presented for credit management pricing decisioning prior to completion of the offer process",
+  "executive_summary": "This service domain provides a bank-wide/oversight function to qualify credit pricing for offered products and services to reflect the bank's appetite to write the business. This decision can override the standard product pricing procedure",
+  "key_features": [
+    "Evaluate a proposed loan's fit to the bank's credit policies and priorities",
+    "Re-price major loans to align to bank policies and priorities",
+    "Bank-wide credit perspective maintenance",
+    "Transaction re-pricing capabilities",
+    "Credit policy compliance assessment",
+    "Pricing decision override functionality"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CreditManagement/12.0.0",
+  "served_by": [
+    "Trade Banking",
+    "Wave 1",
+    "Credit Risk"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management",
+    "Customer Offer"
+  ],
+  "triggers": [
+    "Fraud Evaluation",
+    "Regulatory Compliance",
+    "Credit Risk Models"
+  ],
+  "scenarios": [
+    {
+      "name": "Handle Request for Credit Facility",
+      "description": "Processing credit facility requests through the credit management framework"
+    },
+    {
+      "name": "Handle Request for Consumer Loan Complete Origination",
+      "description": "Managing consumer loan origination with credit management oversight"
+    },
+    {
+      "name": "Corporate Loan Pricing Decision",
+      "description": "A corporate loan is presented for credit management pricing decisioning prior to completion of the offer process"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "creditPositionMeasurementAccumulators",
+      "creditPositionMeasurementActivityAnalysis",
+      "creditPositionMeasurementPerformanceAnalysis",
+      "creditPositionMeasurementTrends&Events"
+    ],
+    "portfolio": [
+      "creditPositionMeasurementPortfolioActivityAnalysis",
+      "creditPositionMeasurementPortfolioMake-UpAnalysis",
+      "creditPositionMeasurementPortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

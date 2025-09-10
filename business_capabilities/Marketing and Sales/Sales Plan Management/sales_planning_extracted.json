@@ -1,0 +1,32 @@
+{
+  "capability_name": "Sales Planning",
+  "role_definition": "Plan, and assess sales activity and re-direct resources and priorities as necessary",
+  "folder_name": "Sales Plan Management",
+  "core_business_object": "Marketing And Sales Strategy",
+  "example_of_use": "Sales management review quarterly performance and pipeline and set sales targets and allocations for the upcoming cycle",
+  "executive_summary": "Plan, and assess sales activity and re-direct resources and priorities as necessary",
+  "key_features": [
+    "Plan sales activity",
+    "Assess sales performance",
+    "Re-direct resources as necessary",
+    "Set priorities for sales activities"
+  ],
+  "api_bian_portal_link": "Not specified in document",
+  "served_by": [
+    "Sales Planning"
+  ],
+  "serves": [
+    "Sales Plan Management"
+  ],
+  "triggered_by": [
+    "Sales Planning"
+  ],
+  "triggers": [
+    "Sales Planning",
+    "Product Directory",
+    "Product Deployment"
+  ],
+  "list_of_scenarios": [
+    "Launch New Sales Product"
+  ]
+}

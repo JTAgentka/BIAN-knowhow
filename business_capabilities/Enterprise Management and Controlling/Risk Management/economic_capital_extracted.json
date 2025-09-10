@@ -1,0 +1,66 @@
+{
+  "capability_name": "Economic Capital",
+  "role_definition": "Develop, maintain and apply models that combine the overall risk over different risk types to determine the consolidated risk position for the bank",
+  "folder_name": "Risk Management",
+  "core_business_object": "Economic Capital Analysis",
+  "example_of_use": "Financial engineers define and apply models that consolidate the overall risk exposure for the bank to determine a complete estimate of exposure",
+  "executive_summary": "Economic Capital capability provides comprehensive risk consolidation across different risk types to determine the bank's overall risk position. It develops and maintains sophisticated models that integrate various risk categories to provide a complete picture of the institution's risk exposure.",
+  "key_features": [
+    "Risk consolidation across different risk types",
+    "Consolidated risk position determination",
+    "Economic capital model development and maintenance",
+    "Complete risk exposure estimation",
+    "Individual analytics including accumulators, activity analysis, performance analysis, and trends & events",
+    "Portfolio analytics for activity, make-up, and performance analysis"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_23.html/object_48771",
+  "served_by": [
+    "Economic Capital Analysis_ Analytics Object",
+    "Economic Capital",
+    "Economic Capital Analysis",
+    "Economic Capital Analysis_Reporting",
+    "Economic Capital Analysis_Invocation",
+    "Economic Capital Analysis_Instantiation",
+    "Economic Capital_SD_Service Group"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Risk consolidation requirements",
+    "Capital adequacy assessments",
+    "Regulatory reporting needs"
+  ],
+  "triggers": [
+    "Economic capital analysis processes",
+    "Risk position evaluations",
+    "Capital allocation decisions",
+    "Risk exposure assessments"
+  ],
+  "list_of_scenarios": [
+    "Overall risk exposure consolidation",
+    "Economic capital model application",
+    "Risk position determination",
+    "Cross-risk type analysis",
+    "Capital adequacy evaluation"
+  ],
+  "properties": {
+    "service_domain": "ServiceDomain",
+    "service_role": "Develop, maintain and apply models that combine the overall risk over different risk types to determine the consolidated risk position for the bank",
+    "individual_analytics": [
+      "economicCapitalAnalysisAccumulators",
+      "economicCapitalAnalysisActivityAnalysis",
+      "economicCapitalAnalysisPerformanceAnalysis",
+      "economicCapitalAnalysisTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "economicCapitalAnalysisPortfolioActivityAnalysis",
+      "economicCapitalAnalysisPortfolioMakeUpAnalysis",
+      "economicCapitalAnalysisPortfolioPerformanceAnalysis"
+    ],
+    "bian_life_cycle": "Registered",
+    "stereotypes": ["ServiceDomain"],
+    "aggregated_by": ["Market Risk"],
+    "is_part_of": ["Models"]
+  }
+}

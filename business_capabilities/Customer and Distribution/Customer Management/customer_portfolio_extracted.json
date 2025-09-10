@@ -1,0 +1,35 @@
+{
+  "capability_name": "Customer Portfolio",
+  "role_definition": "Maintain a portfolio of view of the customer base with key customer data and consolidated activity details to support profitability and performance analysis across many possible customer segment dimensions",
+  "folder_name": "Customer Management",
+  "core_business_object": "Customer Portfolio",
+  "example_of_use": "Business development review customer segment performance in order to target customer relationship management priorities",
+  "executive_summary": "Maintain a portfolio of analytical views of the customer base to support customer segment profitability and performance analysis",
+  "key_features": [
+    "Consolidate customer relationship performance data",
+    "Obtain comparative market research on customer relationship profitability",
+    "Conduct analysis of customer segment performance",
+    "Propose initiatives to improve customer segment performance"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerPortfolio/12.0.0",
+  "served_by": [
+    "Customer Segment Analysis Analytics Object",
+    "Customer Segment Analysis Instantiation",
+    "Customer Portfolio SD Operations",
+    "Customer Segment Analysis Invocation",
+    "Customer Segment Analysis Reporting",
+    "Customer Portfolio SD Service Group",
+    "Customer Segment",
+    "Customer Segment Analysis"
+  ],
+  "serves": [
+    "Customer Management"
+  ],
+  "triggered_by": [
+    "Business Development"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Analyse Customer Segment Performance"
+  ]
+}

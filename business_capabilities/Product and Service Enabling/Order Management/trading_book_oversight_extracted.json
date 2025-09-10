@@ -1,0 +1,50 @@
+{
+  "capability_name": "Trading Book Oversight",
+  "role_definition": "The bank's trading book tracks the securities held by the bank that are frequently traded and may implement sophisticated risk measures to manage the banks exposure. Trading book oversight is responsible for tracking and analyzing the bank's trading book to manage risk",
+  "folder_name": "Order Management",
+  "core_business_object": "Trading Book Oversight (object_37.html?object=42959)",
+  "example_of_use": "Trading book oversight reviews recent trading activity to confirm activity remains within the banks trading risk tolerance",
+  "executive_summary": "This Service Domain oversees the bank's trading book (a type of account ledger that records details of frequently traded securities held by the bank) to manage the banks market risk",
+  "key_features": [
+    "Consolidate and maintain the bank's trading book",
+    "Analyze the trading book's positions and sensitivities",
+    "Detect out of patter trading activity",
+    "Initiate remedial actions when excessive risk/exposure is detected"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/TradingBookOversight/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Order Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Trading Book Oversight SD Overview",
+      "link": "views/view_51246.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Define and track trading book activity against the established trading rules/entitlements and limits",
+    "individual_analytics": [
+      "tradingPositionManagementPlanAccumulators",
+      "tradingPositionManagementPlanActivityAnalysis",
+      "tradingPositionManagementPlanPerformanceAnalysis",
+      "tradingPositionManagementPlanTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "tradingPositionManagementPlanPortfolioActivityAnalysis",
+      "tradingPositionManagementPlanPortfolioMake-UpAnalysis",
+      "tradingPositionManagementPlanPortfolioPerformanceAnalysis"
+    ]
+  }
+}

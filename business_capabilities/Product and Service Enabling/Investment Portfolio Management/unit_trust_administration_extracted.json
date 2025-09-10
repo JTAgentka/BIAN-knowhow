@@ -1,0 +1,23 @@
+{
+  "capability_name": "Unit Trust Administration",
+  "role_definition": "Unit trusts offer a fixed term investment vehicle for bank customers with terms typically ranging from one to twenty years. Unlike many other types of investment fund the unit trust issues a fixed number of shares and is not actively managed during its term. The fund may exchange severely underperforming assets in rare cases. Investors may be able to exchange shares with other investors within the trust but the fund is essentially 'closed' to the originating investor pool for its full term",
+  "folder_name": "Investment Portfolio Management",
+  "core_business_object": "Not explicitly mentioned in the document",
+  "example_of_use": "An investment trust is established and sold to a group of investors",
+  "executive_summary": "This Service Domain handles the implementation and fulfillment of unit investment trusts",
+  "key_features": [
+    "Handle the unit trust's accounting, tax administration and financial reporting needs",
+    "Package the initial investment for the trust",
+    "Handle share exchanges between investors in the trust",
+    "Process management fees",
+    "Support/oversee all general investor servicing and process middle and back office functions"
+  ],
+  "api_bian_portal_link": "Unit Trust Administration API (https://app.swaggerhub.com/apis/BIAN-3/UnitTrustAdministration/12.0.0)",
+  "served_by": [],
+  "serves": [
+    "Investment Portfolio Management (object_6.html?object=131007)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

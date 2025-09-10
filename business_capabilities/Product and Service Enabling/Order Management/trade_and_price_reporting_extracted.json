@@ -1,0 +1,52 @@
+{
+  "capability_name": "Trade and Price Reporting",
+  "role_definition": "Operate a trade reporting facility as required by applicable trading market participation rules and regulations. Capture and transmit executed trade details to the exchange in compliance with the required timeframes and operating schedules",
+  "folder_name": "Order Management",
+  "core_business_object": "Trade and Price Reporting (object_37.html?object=44350)",
+  "example_of_use": "Real-time trade reporting is processed for market trades executed through specific trading markets accessed by the bank",
+  "executive_summary": "This Service Domain operates an automated facility that reports executed market trades to the market place as required by the rules of market participation",
+  "key_features": [
+    "Capture market trades executed in the front office",
+    "Check and report trade details to the exchange in a timely manner"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/TradeandPriceReporting/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Order Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Trade/Price Reporting SD Overview",
+      "link": "views/view_51153.html"
+    },
+    {
+      "name": "Trade and Price Reporting SD Overview",
+      "link": "views/view_51525.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Operate a trade reporting facility as required by market regulation. Capture and transmit trades details to the exchange to an operating schedule",
+    "individual_analytics": [
+      "marketTradeReportingOperatingSessionAccumulators",
+      "marketTradeReportingOperatingSessionActivityAnalysis",
+      "marketTradeReportingOperatingSessionPerformanceAnalysis",
+      "marketTradeReportingOperatingSessionTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "marketTradeReportingOperatingSessionPortfolioActivityAnalysis",
+      "marketTradeReportingOperatingSessionPortfolioMake-UpAnalysis",
+      "marketTradeReportingOperatingSessionPortfolioPerformanceAnalysis"
+    ]
+  }
+}

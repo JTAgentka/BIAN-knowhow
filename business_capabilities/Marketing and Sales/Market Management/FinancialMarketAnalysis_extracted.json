@@ -1,0 +1,31 @@
+{
+  "capability_name": "Financial Market Analysis",
+  "role_definition": "Analyze available sources of internal and external financial market information and research to develop insights and opinions on any aspect of financial market activity and pricing",
+  "folder_name": "Market Management",
+  "core_business_object": "Financial Market Analysis (object_24.html?object=38711)",
+  "example_of_use": "A competitor financial pricing analysis is requested for a company issuing corporate paper",
+  "executive_summary": "Provide different types of financial market analysis using available financial market information and research",
+  "key_features": [
+    "Identify sources of financial market research",
+    "Select appropriate analytical algorithms/hypotheses to apply",
+    "Consolidate information and apply/refine algorithms",
+    "Interpret and present analytical insights"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/FinancialMarketAnalysis/12.0.0",
+  "served_by": [
+    "Investment Portfolio Analysis (object_21.html?object=37857)"
+  ],
+  "serves": [
+    "Market Management (object_6.html?object=63703)"
+  ],
+  "triggered_by": [
+    "Investment Portfolio Analysis (object_21.html?object=37857)"
+  ],
+  "triggers": [
+    "Financial Market Research (object_21.html?object=38415)"
+  ],
+  "list_of_scenarios": [
+    "Process Performance Review (views/view_55107.html)",
+    "Process Portfolio Rebalancing (views/view_55523.html)"
+  ]
+}

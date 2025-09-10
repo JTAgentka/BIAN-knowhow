@@ -1,0 +1,46 @@
+{
+  "capability_name": "Corporate Alliance and Stake Holder",
+  "role_definition": "Manage key alliance and stake holder relationship - define tasks needed to develop and maintain contact and ensure relevant information is shared as appropriate",
+  "folder_name": "Partner Management",
+  "core_business_object": "Alliance Partner Relationship Management Plan",
+  "example_of_use": "Corporate strategy is communicated and aligned with a product alliance partner",
+  "executive_summary": "This capability manages key alliance and stakeholder relationships by defining tasks needed to develop and maintain contact while ensuring relevant information is shared appropriately to support strategic corporate partnerships.",
+  "key_features": [
+    "Alliance relationship management",
+    "Stakeholder relationship management",
+    "Information sharing coordination",
+    "Contact development and maintenance",
+    "Strategic partnership alignment"
+  ],
+  "api_bian_portal_link": "Not specified",
+  "served_by": [
+    "Corporate Alliance/ Stake Holder_SD_Service Group",
+    "Alliance Partner Relationship Management Plan_Reporting",
+    "Alliance Partner Relationship Management Plan_Instantiation", 
+    "Alliance Partner Relationship Management Plan_Analytics Object",
+    "Alliance Partner Relationship Management Plan_Invocation"
+  ],
+  "serves": [
+    "Partner Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": [],
+  "individual_analytics": [
+    "alliancePartnerRelationshipManagementPlanAccumulators",
+    "alliancePartnerRelationshipManagementPlanActivityAnalysis",
+    "alliancePartnerRelationshipManagementPlanPerformanceAnalysis",
+    "alliancePartnerRelationshipManagementPlanTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "alliancePartnerRelationshipManagementPlanPortfolioActivityAnalysis",
+    "alliancePartnerRelationshipManagementPlanPortfolioMake-UpAnalysis",
+    "alliancePartnerRelationshipManagementPlanPortfolioPerformanceAnalysis"
+  ],
+  "bian_life_cycle": "Registered",
+  "stereotype": "ServiceDomain",
+  "aggregated_by": [
+    "Corporate Relations"
+  ],
+  "is_part_of": "Corporate Relations"
+}

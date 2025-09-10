@@ -1,0 +1,62 @@
+{
+  "capability_name": "Card Network Participant Facility",
+  "role_definition": "Cards issued by banks are affiliated with one of many international Card Networks, such as Visa, Master Card, Diners, American Express. This service domain is used by the Card Network for setting up Acquiring and Issuing Bank accounts and their terms and conditions.",
+  "folder_name": "Partner Management",
+  "core_business_object": "Card Network Participant Agreement",
+  "example_of_use": "The Card Network signs up Acquiring Banks for recruiting and setting up accounts for merchants and Issuing Banks for issuing cards to its customers.",
+  "executive_summary": "This service domain orchestrates the activities related to the inclusion of new Acquirers and Issuers in the Card Network, their terms and conditions and their status.",
+  "key_features": [
+    "Acquiring bank facility terms administration",
+    "Issuing bank facility terms administration", 
+    "Participant bank service status maintenance"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CardNetworkParticipantFacility/12.0.0",
+  "served_by": [
+    "Card Network Participant Arrangement Analytics Object",
+    "Arrangement_Instantiation",
+    "Arrangement_Invocation",
+    "Card Network Participant Facility_SD_Operations",
+    "Arrangement_Reporting",
+    "Card Network Participant Facility_SD_Service Group"
+  ],
+  "serves": [
+    "Partner Management"
+  ],
+  "triggered_by": [
+    "Card Transaction Switch",
+    "Card Case",
+    "Processing Order", 
+    "Card Clearing"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Handle Request for Chargeback at Acquirer",
+    "Handle Card Chargeback at Issuer",
+    "Handle Request for Information for Chargeback at Acquirer",
+    "Process Authentication Request by Card Network",
+    "Process Card Clearing by Card Network",
+    "Authorise Card Use by Card Network"
+  ],
+  "individual_analytics": [
+    "cardNetworkParticipant FulfillmentArrangementAccumulators",
+    "cardNetworkParticipant FulfillmentArrangementActivityAnalysis",
+    "cardNetworkParticipant FulfillmentArrangementPerformanceAnalysis",
+    "cardNetworkParticipant FulfillmentArrangementTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "cardNetworkParticipant FulfillmentArrangementPortfolioActivityAnalysis",
+    "cardNetworkParticipant FulfillmentArrangementPortfolioMake-UpAnalysis",
+    "cardNetworkParticipant FulfillmentArrangementPortfolioPerformanceAnalysis"
+  ],
+  "bian_life_cycle": "Registered",
+  "stereotype": "ServiceDomain",
+  "aggregated_by": [
+    "Wave 2",
+    "Cards"
+  ],
+  "is_part_of": "Cards",
+  "gets_input_from": [
+    "Card Transaction Switch",
+    "Card Clearing"
+  ]
+}

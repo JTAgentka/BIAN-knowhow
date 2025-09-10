@@ -1,0 +1,82 @@
+{
+  "capability_name": "Product Inventory Item Management",
+  "capability_type": "Service Domain",
+  "role_definition": "Maintain the available central product materials inventory in coordination with distribution activities and new product/materials ordering, receipt and warehousing",
+  "example_of_use": "Newly developed product inventory is distributed as part of a product deployment project",
+  "executive_summary": "Maintain and distribute product inventory",
+  "key_features": [
+    "Maintain product inventory",
+    "Administer the distribution of inventory",
+    "Request stock replenishment"
+  ],
+  "service_role": "Maintain the available central product materials inventory in coordination with distribution activities and new product/materials ordering, receipt and warehousing",
+  "bian_lifecycle": {
+    "registration_status": "Registered"
+  },
+  "stereotypes": ["ServiceDomain"],
+  "api_bian_portal": "Product Inventory Item Management API (https://app.swaggerhub.com/apis/BIAN-3/ProductInventoryItemManagement/12.0.0)",
+  "core_business_object": "Product Inventory",
+  "individual_analytics": [
+    "productInventoryAllocationAccumulators",
+    "productInventoryAllocationActivityAnalysis",
+    "productInventoryAllocationPerformanceAnalysis",
+    "productInventoryAllocationTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "productInventoryAllocationPortfolioActivityAnalysis",
+    "productInventoryAllocationPortfolioMake-UpAnalysis",
+    "productInventoryAllocationPortfolioPerformanceAnalysis"
+  ],
+  "scenarios": [
+    "Create New Sales Product Bundle",
+    "Launch New Sales Product",
+    "Create New Sales Product Single"
+  ],
+  "appears_on": [
+    "Product Inventory Item Management SD Overview",
+    "BIAN Service Landscape V12.0 Value Chain",
+    "BIAN Service Landscape V12.0 Matrix View"
+  ],
+  "relations": {
+    "aggregated_by": [
+      "Channel Specific",
+      "Wave 4",
+      "Channel Management"
+    ],
+    "gets_input_from": [
+      "Sales Product",
+      "Product Deployment"
+    ],
+    "is_equal_to": ["Product Inventory Item Management"],
+    "is_part_of": ["Channel Specific"],
+    "realized_by": [
+      "Product Inventory Allocation_ Analytics Object",
+      "Product Inventory Allocation_Instantiation",
+      "Product Inventory Item Management_SD_Operations",
+      "Product Inventory Allocation_Invocation",
+      "Product Inventory Allocation_Reporting",
+      "Product Inventory Item Management_SD_Service Group",
+      "Product Inventory Allocation",
+      "Rq BQ Request manual intervention with a product inventory item assignment",
+      "Re CR Retrieve details about the product inventory distribution",
+      "Up BQ Update details of a scheduled item assignment",
+      "Ec BQ Accept, reject etc. a schedule product item assignment",
+      "Re BQ Retrieve details about a product inventory item's distribution",
+      "Product Inventory",
+      "Up CR Update details of the product inventory distribution service",
+      "Rq CR Request manual intervention with the inventory distribution service",
+      "Pr BQ Obtain the provision of product inventory",
+      "Allocate"
+    ],
+    "sends_output_to": ["Product Inventory Distribution"],
+    "serves": ["Product Management"],
+    "triggered_by": [
+      "Product Deployment",
+      "Product Design"
+    ],
+    "triggers": ["Product Inventory Distribution"]
+  },
+  "business_area": "Product and Service Enabling",
+  "domain": "Product Management",
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_35580.pdf"
+}

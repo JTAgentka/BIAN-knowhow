@@ -1,0 +1,17 @@
+{
+  "capability_name": "Credit and Margin Management",
+  "role_definition": "Determine and refine credit and margin directives and policies to reflect the overall risk/reward appetite of the organization and govern credit decisioning",
+  "folder_name": "Policy Management",
+  "core_business_object": "credit&MarginsStrategyAccumulators, credit&MarginsStrategyActivityAnalysis, credit&MarginsStrategyPerformanceAnalysis, credit&MarginsStrategyTrends&Events, credit&MarginsStrategyPortfolioActivityAnalysis, credit&MarginsStrategyPortfolioMake-UpAnalysis, credit&MarginsStrategyPortfolioPerformanceAnalysis",
+  "example_of_use": "Senior policy makers interpret the financial and risk strategies of the bank to determine specific credit and margin rules and policies",
+  "executive_summary": "Not explicitly provided in the document",
+  "key_features": [],
+  "api_bian_portal_link": "Not specified",
+  "served_by": [],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

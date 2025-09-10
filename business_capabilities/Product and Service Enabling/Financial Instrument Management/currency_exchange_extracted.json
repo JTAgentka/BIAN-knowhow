@@ -1,0 +1,44 @@
+{
+  "capability_name": "Currency Exchange",
+  "role_definition": "This is an over the counter service where currency is exchanged and the transaction uses preferential rates and can include transaction fees. Note in some cases travelers checks can be handled as a pseudo currency within this capability. Note that Branch and teller currency inventory tracking and distribution is administered by Branch Currency Management and Branch Currency Distribution service domains",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Currency Exchange (object_38.html?object=46442)",
+  "example_of_use": "A non-bank customer obtains a currency exchange at the teller, buying foreign currency for local currency in cash",
+  "executive_summary": "Service Domain supports over the counter currency exchange",
+  "key_features": [
+    "FX transaction pricing",
+    "FX transaction capture",
+    "Document handling"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CurrencyExchange/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [
+    "Business Unit Management",
+    "Business Development"
+  ],
+  "triggers": [
+    "Branch Currency Distribution",
+    "Corporate Treasury",
+    "Current Account",
+    "Financial Accounting"
+  ],
+  "scenarios": [],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "This is an over the counter service where currency is exchanged and the transaction uses preferential rates and can include transaction fees. Note in some cases travelers checks can be handled as a pseudo currency within this capability. Note that Branch and teller currency inventory is administered by Branch Currency Management and Branch Currency Distribution service domains",
+    "individual_analytics": [
+      "currencyExchangeTransactionAccumulators",
+      "currencyExchangeTransactionActivityAnalysis",
+      "currencyExchangeTransactionPerformanceAnalysis",
+      "currencyExchangeTransactionTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "currencyExchangeTransactionPortfolioActivityAnalysis",
+      "currencyExchangeTransactionPortfolioMake-UpAnalysis",
+      "currencyExchangeTransactionPortfolioPerformanceAnalysis"
+    ]
+  }
+}

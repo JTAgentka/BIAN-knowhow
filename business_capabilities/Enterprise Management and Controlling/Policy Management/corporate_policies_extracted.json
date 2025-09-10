@@ -1,0 +1,17 @@
+{
+  "capability_name": "Corporate Policies",
+  "role_definition": "Develop and communicate corporate policies that govern business execution",
+  "folder_name": "Policy Management",
+  "core_business_object": "corporatePolicySpecificationAccumulators, corporatePolicySpecificationActivityAnalysis, corporatePolicySpecificationPerformanceAnalysis, corporatePolicySpecificationTrends&Events, corporatePolicySpecificationPortfolioActivityAnalysis, corporatePolicySpecificationPortfolioMake-UpAnalysis, corporatePolicySpecificationPortfolioPerformanceAnalysis",
+  "example_of_use": "Corporate policies are defined and published across the enterprise",
+  "executive_summary": "Not explicitly provided in the document",
+  "key_features": [],
+  "api_bian_portal_link": "Not specified",
+  "served_by": [],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

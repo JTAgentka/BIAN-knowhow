@@ -1,0 +1,42 @@
+{
+  "capability_name": "Card Transaction Capture",
+  "folder_name": "Money Movement Management",
+  "role_definition": "Capture the card payment transaction at the merchant/point of sale. This includes obtaining the authorization for the transaction by accessing the issuer's account through the card network. The authorized transactions are collected for subsequent batch reporting and settlement processing through the network",
+  "core_business_object": "Not explicitly specified",
+  "example_of_use": "A card user uses their card to pay for a meal at a restaurant",
+  "executive_summary": "A distributed facility to capture card transactions at the point of sale",
+  "key_features": [
+    "Transaction capture",
+    "Transaction authorization", 
+    "Transaction consolidation at the point of sale",
+    "Transaction batch reporting for clearing through the network"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CardTransactionCapture/12.0.0",
+  "served_by": [
+    "Card Authorization"
+  ],
+  "serves": [
+    "Money Movement Management"
+  ],
+  "triggered_by": [
+    "Card Case",
+    "Card Clearing",
+    "Credit Card",
+    "Card Authorization",
+    "Card Terminal Operation",
+    "Customer Case"
+  ],
+  "triggers": [],
+  "scenarios": [
+    "Handle Request for Balance Transfer (views/view_55031.html)",
+    "Process Card Clearing by Issuer (views/view_55194.html)",
+    "Authorise Card Use by Acquirer (views/view_55588.html)",
+    "Process Card Clearing by Acquirer (views/view_55404.html)",
+    "Handle Card Chargeback at Issuer (views/view_55464.html)",
+    "Process Transaction Booking (views/view_55666.html)",
+    "Handle Request for Information for Chargeback at Acquirer (views/view_55149.html)",
+    "Process Periodic Review of Collection Actions (views/view_55302.html)",
+    "Authorise Card Use by Issuer (views/view_55275.html)",
+    "Process Card Clearing by Card Network (views/view_55080.html)"
+  ]
+}

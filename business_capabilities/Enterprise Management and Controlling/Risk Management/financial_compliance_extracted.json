@@ -1,0 +1,63 @@
+{
+  "capability_name": "Financial Compliance",
+  "role_definition": "Track the resolution of detected non compliance finance activities and instances",
+  "folder_name": "Risk Management",
+  "core_business_object": "Financial Compliance Procedure",
+  "example_of_use": "A business unit misses its first qtr targets and reacts with corrective actions that are tracked",
+  "executive_summary": "Financial Compliance capability tracks and manages the resolution of detected non-compliance financial activities and instances, ensuring corrective actions are properly monitored and resolved.",
+  "key_features": [
+    "Non-compliance detection tracking",
+    "Financial activity monitoring",
+    "Resolution tracking",
+    "Corrective action management",
+    "Financial compliance procedure analytics",
+    "Portfolio compliance analysis"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_38656",
+  "served_by": [
+    "Financial Control",
+    "Finance"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Non-compliance detection",
+    "Financial target misses",
+    "Compliance violations"
+  ],
+  "triggers": [
+    "Corrective action plans",
+    "Compliance tracking procedures",
+    "Financial compliance reporting"
+  ],
+  "scenarios": [
+    {
+      "name": "Target Miss Response",
+      "description": "A business unit misses its first qtr targets and reacts with corrective actions that are tracked"
+    },
+    {
+      "name": "Compliance Violation Resolution",
+      "description": "Tracking resolution of detected financial compliance violations"
+    },
+    {
+      "name": "Financial Compliance Monitoring",
+      "description": "Ongoing monitoring of financial compliance activities and performance"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "financialComplianceProcedureAccumulators",
+      "financialComplianceProcedureActivityAnalysis",
+      "financialComplianceProcedurePerformanceAnalysis",
+      "financialComplianceProcedureTrends&Events"
+    ],
+    "portfolio": [
+      "financialComplianceProcedurePortfolioActivityAnalysis",
+      "financialComplianceProcedurePortfolioMake-UpAnalysis",
+      "financialComplianceProcedurePortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

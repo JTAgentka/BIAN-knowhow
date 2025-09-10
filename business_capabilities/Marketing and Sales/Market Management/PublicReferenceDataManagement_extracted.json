@@ -1,0 +1,21 @@
+{
+  "capability_name": "Public Reference Data Management",
+  "role_definition": "This service domain maintains and provides structured access to standard 'global' reference data and definitions associated with market activity such as currency, country and segment identifiers. These values will typically be externally sourced using market information feeds and distributed using whatever is the appropriate mechanism within the bank",
+  "folder_name": "Market Management",
+  "core_business_object": "Global Standard Specification (object_24.html?object=45962)",
+  "example_of_use": "The international ISO standard definitions are maintained and applied across production systems of the bank",
+  "executive_summary": "Provide structured access to standard 'global' reference data and definitions associated with market activity such as currency, country and segment identifiers.",
+  "key_features": [
+    "Identify global data standards and sources",
+    "Arrange for access to external reference data sources",
+    "Import and disseminate public/global reference data"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/PublicReferenceDataManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Market Management (object_6.html?object=63703)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

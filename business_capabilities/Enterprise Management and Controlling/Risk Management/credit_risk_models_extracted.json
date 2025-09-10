@@ -1,0 +1,74 @@
+{
+  "capability_name": "Credit Risk Models",
+  "role_definition": "This service domain handles the development, maintenance and continual assessment and refinement of the collection of credit models that are deployed across the bank. This includes individual credit assessments and more complex analyses for merchants and companies/corporations. The models are used to derive credit scoring and support more involved credit analysis/insight development",
+  "folder_name": "Risk Management",
+  "core_business_object": "Credit Risk Model Specification",
+  "example_of_use": "A credit model is used to analyze product activity in order to refine then banks credit assessment of a customer",
+  "executive_summary": "This service domain handles the design and maintenance of a portfolio of credit models that are used in all aspects of customer credit assessments",
+  "key_features": [
+    "Determine desired type/coverage for credit analysis",
+    "Source, define and develop credit models",
+    "Publish, process feedback and refine/tune models",
+    "Individual credit assessments",
+    "Complex analyses for merchants and companies/corporations",
+    "Credit scoring derivation",
+    "Credit analysis/insight development support"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CreditRiskModels/12.0.0",
+  "served_by": [
+    "Credit Risk Model Specification_ Analytics Object",
+    "Credit Risk Model",
+    "Credit Risk Model Specification_Invocation",
+    "Credit Risk Model Specification_Reporting",
+    "Credit Risk Models_SD_Operations",
+    "Credit Risk Model Specification_Instantiation",
+    "Credit Risk Models_SD_Service Group"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Corporate Loan",
+    "Credit Management",
+    "Underwriting",
+    "Asset Securitization"
+  ],
+  "triggers": [
+    "Credit model specification processes",
+    "Credit risk assessments",
+    "Model testing and validation",
+    "Production deployment of models"
+  ],
+  "list_of_scenarios": [
+    "Select Buyers for Securitize Assets",
+    "Perform Underwriting for Bank Guarantee",
+    "Process Selection of Loans for Securitization",
+    "Review Borrower Financial Statements",
+    "Handle Request for Credit Facility",
+    "Perform Underwriting for Corporate Loan",
+    "Perform Underwriting for Syndicated Loan",
+    "Perform Underwriting Light for Buy Now Pay Later",
+    "Perform Underwriting for Mortgage Loan",
+    "Perform Underwriting for Uncollateralised Consumer Loan",
+    "Perform Underwriting for Renewal of Uncollateralised Consumer Loan",
+    "Perform Underwriting for Merchandising Loan"
+  ],
+  "properties": {
+    "service_domain": "ServiceDomain",
+    "service_role": "Develop and maintain models for counterparty, issuer, and portfolio risk for all contracts, instruments and (sub-)portfolios respectively.",
+    "individual_analytics": [
+      "creditRiskModelSpecificationAccumulators",
+      "creditRiskModelSpecificationActivityAnalysis",
+      "creditRiskModelSpecificationPerformanceAnalysis",
+      "creditRiskModelSpecificationTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "creditRiskModelSpecificationPortfolioActivityAnalysis",
+      "creditRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "creditRiskModelSpecificationPortfolioPerformanceAnalysis"
+    ],
+    "bian_life_cycle": "Registered",
+    "stereotypes": ["ServiceDomain"],
+    "aggregated_by": ["Models", "Wave 5", "Models And Analytics"]
+  }
+}

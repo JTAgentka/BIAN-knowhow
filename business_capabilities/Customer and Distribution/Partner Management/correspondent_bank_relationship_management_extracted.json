@@ -1,0 +1,21 @@
+{
+  "capability_name": "Correspondent Bank Relationship Management",
+  "role_definition": "Handle the negotiation, development and tracking of reciprocity with correspondent bank relationships",
+  "folder_name": "Partner Management",
+  "core_business_object": "Not specified",
+  "example_of_use": "A bank establishes and maintains a correspondent relationship for international payments and trade finance representation in a foreign country",
+  "executive_summary": "This Service Domain manages correspondent bank relations, ensuring reciprocity and developing business where possible",
+  "key_features": [
+    "Track and assess correspondent bank activity for reciprocity",
+    "Identify and develop business opportunities with the correspondent bank",
+    "Oversee the resolution of production issues as might arise"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CorrespondentBankRelationshipManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Partner Management (object_6.html?object=130509)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

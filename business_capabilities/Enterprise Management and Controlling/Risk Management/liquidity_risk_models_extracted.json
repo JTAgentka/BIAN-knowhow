@@ -1,0 +1,44 @@
+{
+  "capability_name": "Liquidity Risk Models",
+  "role_definition": "Develop and maintain models for dispositive and structural liquidity risk management, including liquidity gap analysis, Liquidity at Risk (LaR) and Liquidity Value at Risk (LVaR).",
+  "folder_name": "Risk Management",
+  "core_business_object": "Liquidity Risk Model Specification",
+  "example_of_use": "Financial engineers develop and refine liquidity risk management models",
+  "executive_summary": "This capability focuses on developing and maintaining comprehensive liquidity risk models for both dispositive and structural liquidity risk management, including advanced analytics like LaR and LVaR.",
+  "key_features": [
+    "Liquidity gap analysis",
+    "Liquidity at Risk (LaR) modeling",
+    "Liquidity Value at Risk (LVaR) modeling",
+    "Dispositive liquidity risk management",
+    "Structural liquidity risk management",
+    "Individual and portfolio analytics",
+    "Performance analysis and trending"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_34224",
+  "served_by": [
+    "Models And Analytics"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Asset Securitization",
+    "Liquidity risk assessment requirements",
+    "Regulatory compliance needs"
+  ],
+  "triggers": [
+    "Liquidity risk model development",
+    "Gap analysis execution",
+    "Risk metric calculations (LaR, LVaR)"
+  ],
+  "list_of_scenarios": [
+    "liquidityRiskModelSpecificationAccumulators",
+    "liquidityRiskModelSpecificationActivityAnalysis",
+    "liquidityRiskModelSpecificationPerformanceAnalysis",
+    "liquidityRiskModelSpecificationTrends&Events",
+    "liquidityRiskModelSpecificationPortfolioActivityAnalysis",
+    "liquidityRiskModelSpecificationPortfolioMake-UpAnalysis",
+    "liquidityRiskModelSpecificationPortfolioPerformanceAnalysis",
+    "Select Buyers for Securitize Assets"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "capability_name": "Consumer Investments",
+  "role_definition": "This supports consumer initiated securities investment and trading activity for their self-managed securities investments. Trades will typically be blocked/netted against the bank's own securities position for subsequent market execution. Quotes/prices are based on the prevailing price at the time of the customer instruction to trade",
+  "folder_name": "Order Management",
+  "core_business_object": "Securities Order (object_26.html?object=43861)",
+  "example_of_use": "An consumer initiates a securities purchase for their investment portfolio, providing funds from their linked 'trading' current account",
+  "executive_summary": "Handle the consumer front-end trading requests. These will typically be blocked/netted for market execution",
+  "key_features": [
+    "Provide price quotes",
+    "Initiate market order for consumer customer",
+    "Update banks security position"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ConsumerInvestments/12.0.0",
+  "served_by": [
+    "Business Development",
+    "Session Dialogue"
+  ],
+  "serves": [
+    "Order Management"
+  ],
+  "triggered_by": [],
+  "triggers": [
+    "Financial Instrument Valuation",
+    "Market Data Switch Operation",
+    "Current Account",
+    "Customer Billing",
+    "Financial Accounting"
+  ],
+  "scenarios": [
+    {
+      "name": "Consumer Investments SD Overview",
+      "link": "views/view_51693.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Handle the consumer front-end trading requests. These will typically be blocked/netted for market execution",
+    "individual_analytics": [
+      "managedInvestmentPortfolioFulfillmentArrangementAccumulators",
+      "managedInvestmentPortfolioFulfillmentArrangementActivityAnalysis",
+      "managedInvestmentPortfolioFulfillmentArrangementPerformanceAnalysis",
+      "managedInvestmentPortfolioFulfillmentArrangementTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "managedInvestmentPortfolioFulfillmentArrangementPortfolioActivityAnalysis",
+      "managedInvestmentPortfolioFulfillmentArrangementPortfolioMake-UpAnalysis",
+      "managedInvestmentPortfolioFulfillmentArrangementPortfolioPerformanceAnalysis"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "capability_name": "Party Routing Profile",
+  "role_definition": "The customer profile service domain is used to tune the customer experience during any real-time interaction with the bank. A collection of status indicators, ratings and alerts can be maintained that are then used to influence the routing and servicing decisions that govern the customer interaction. For example a status indicator could include a warning that the account is in distress which would limit sales activity and might result in routing a contact to a specialist account recovery servicing facility.",
+  "folder_name": "Customer Management",
+  "core_business_object": "Individual Analytics: partyMeasurementAccumulators partyMeasurementActivityAnalysis partyMeasurementPerformanceAnalysis partyMeasurementTrends&Events; Portfolio Analytics: partyMeasurementPortfolioActivityAnalysis partyMeasurementPortfolioMake-UpAnalysis partyMeasurementPortfolioPerformanceAnalysis",
+  "example_of_use": "The identity and active status of a customer is checked as they present themselves on-line to access their bank account",
+  "executive_summary": "This service domain maintains a small profile of key indicators for a customer that is referenced during customer interactions to facilitate routing, servicing and product/service fulfillment decisions. This can include status (such as account in arrears), ratings (such as high value customer) and alerts (such possible fraud activity detected)",
+  "key_features": [
+    "Track and provide customer status flags (e.g. in arrears)",
+    "Track and provide customer ratings (e.g. credit rating)",
+    "Track and provide customer alerts (e.g. possible fraud activity)"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/PartyRoutingProfile/12.0.0",
+  "served_by": [
+    "Customer Relationship Management",
+    "Business Unit Management",
+    "Customer Offer",
+    "Party Authentication",
+    "Contact Handler",
+    "Lead and Opportunity Management",
+    "Session Dialogue"
+  ],
+  "serves": [
+    "Customer Management",
+    "Customer to Information Association"
+  ],
+  "triggered_by": [
+    "Customer Behavior Insights",
+    "Customer Campaign Execution",
+    "Contact Handler",
+    "Party Reference Data Directory",
+    "Lead and Opportunity Management",
+    "Session Dialogue"
+  ],
+  "triggers": [
+    "Customer Offer",
+    "Lead and Opportunity Management"
+  ],
+  "list_of_scenarios": [
+    "Process Internal Upsell Campaign (views/view_55064.html)",
+    "1b - Retrieved ASPSP Account Information Trigger NBP (views/view_54959.html)",
+    "Execute Interactive Retention Campaign (views/view_55098.html)",
+    "Perform Customer Product Matching and Selection (views/view_55621.html)",
+    "Handle Request for Product Support (views/view_55511.html)",
+    "Execute Internal Campaign (views/view_55350.html)",
+    "Conduct Relationship Development Planning (views/view_55535.html)",
+    "2 - Customer Sees the NBP Offer and Decides if to Apply (views/view_55585.html)"
+  ]
+}

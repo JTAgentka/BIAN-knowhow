@@ -1,0 +1,38 @@
+{
+  "capability_name": "Corporate Action",
+  "role_definition": "Corporate actions cover a range of activities that directly impact the share price and hence the shareholders of a company. The main types of corporate action include stock splits and reversals, dividend (both cash and stock), rights issues, mergers and acquisitions and spin-offs. This service domain handles the required processing for a customer's securities that are held in custody by the bank",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Corporate Action (object_38.html?object=45491)",
+  "example_of_use": "A bank processes the required custody adjustments for customers holding security in a stock that is split by its issuing company",
+  "executive_summary": "This Service Domain supports the various custodial tasks associated with processing associated corporate actions for customer's with securities held at the bank",
+  "key_features": [
+    "Custodial stock split/reversal processing",
+    "Custodial security dividend payment processing",
+    "Custodial security rights issue processing",
+    "Custodial security mergers and acquisition processing",
+    "Custodial security spin-off processing"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CorporateAction/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Administer the correct allocation of entitlements to a customer arising from corporate events (such as dividend and interest payments)",
+    "individual_analytics": [
+      "corporateEventsProcedureAccumulators",
+      "corporateEventsProcedureActivityAnalysis",
+      "corporateEventsProcedurePerformanceAnalysis",
+      "corporateEventsProcedureTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "corporateEventsProcedurePortfolioActivityAnalysis",
+      "corporateEventsProcedurePortfolioMake-UpAnalysis",
+      "corporateEventsProcedurePortfolioPerformanceAnalysis"
+    ]
+  }
+}

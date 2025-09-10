@@ -1,0 +1,29 @@
+{
+  "capability_name": "Cheque Processing",
+  "role_definition": "This service domains handles the processing of paper checks, performing the necessary checks and extracting the transaction details required to create a payment transaction record stream. This includes MICR number processing and character recognition facilities",
+  "folder_name": "Issued Device Management",
+  "core_business_object": "Not specified",
+  "example_of_use": "A batch of paper cheques captured at a merchant location is processed to initiate settlement processing",
+  "executive_summary": "Handle the processing of paper cheques, generating financial transactions for processing",
+  "key_features": [
+    "Paper cheque scanning and content verification",
+    "Cancelled cheque identification",
+    "Financial transaction generation"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ChequeProcessing/12.0.0",
+  "served_by": [
+    "Not explicitly specified"
+  ],
+  "serves": [
+    "Issued Device Management (object_6.html?object=57833)"
+  ],
+  "triggered_by": [
+    "Not explicitly specified"
+  ],
+  "triggers": [
+    "Not explicitly specified"
+  ],
+  "list_of_scenarios": [
+    "Not explicitly specified in the document"
+  ]
+}

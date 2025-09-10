@@ -1,0 +1,71 @@
+{
+  "capability_name": "Legal Entity Directory",
+  "role_definition": "Maintain the legal entity structure including ownership, subsidiaries and partnership details",
+  "folder_name": "Customer Management",
+  "core_business_object": "Legal Entry Directory; Individual Analytics: partyDirectoryEntryAccumulators partyDirectoryEntryActivityAnalysis partyDirectoryEntryPerformanceAnalysis partyDirectoryEntryTrends&Events; Portfolio Analytics: partyDirectoryEntryPortfolioActivityAnalysis partyDirectoryEntryPortfolioMake-UpAnalysis partyDirectoryEntryPortfolioPerformanceAnalysis",
+  "example_of_use": "Party legal entity details are checked for the financial booking of a major loan",
+  "executive_summary": "This service domain maintains details of the legal entity structure of the party including dependents and associations for individuals and ownership/subsidiary structures for corporations. Some financial indicators and product coverage/activity details can be included where this defines the nature of the legal entity relationship in particular for corporate entities",
+  "key_features": [
+    "Maintain legal entity reference details for bank customers",
+    "Track/update legal entity details based on market research and reports",
+    "Process legal entity detail updates from customers/bank sources",
+    "Confirm/provide legal entity details for transaction processing tasks"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/LegalEntityDirectory/12.0.0",
+  "served_by": [
+    "Party Lifecycle Management",
+    "Customer Access Entitlement",
+    "Customer Relationship Management",
+    "Party Routing Profile",
+    "Corporate Lease",
+    "Servicing Order",
+    "Corporate Current Account",
+    "Customer Behavior Insights",
+    "Channel Activity History",
+    "Customer Offer",
+    "Customer Campaign Execution",
+    "Credit Facility",
+    "Party Authentication",
+    "Contact Handler",
+    "Bank Guarantee",
+    "Card Authorization",
+    "Collections",
+    "Lead and Opportunity Management",
+    "Limit and Exposure Management",
+    "Session Dialogue",
+    "Correspondent Bank Directory"
+  ],
+  "serves": [
+    "Customer Association Management",
+    "Customer Management",
+    "Customer to Information Association"
+  ],
+  "triggered_by": [
+    "Party Lifecycle Management",
+    "Customer Relationship Management",
+    "Servicing Order",
+    "Party Asset Directory",
+    "Collateral Asset Administration",
+    "Customer Offer",
+    "Regulatory Compliance",
+    "Loan Syndication"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Perform Regulatory KYC Analysis (views/view_55013.html)",
+    "Verify Corporate Customer (views/view_55019.html)",
+    "Handle Request for Loan that Requires Syndication (views/view_55083.html)",
+    "Handle Request for Corporate Loan (views/view_55212.html)",
+    "EXT Handle Request to Change Corporate Current Account Ownership (views/view_55493.html)",
+    "Record Details of Pledgeable Borrower Assets (views/view_55642.html)",
+    "Handle Request for Corporate Sweep Agreement (views/view_55200.html)",
+    "EXT Handle Request to Change Virtual Account Ownership (views/view_55562.html)",
+    "Perform Customer Due Diligence Assessment (views/view_55502.html)",
+    "Handle Request for Issuance of Commercial Paper (views/view_54869.html)",
+    "Handle Request for Corporate Sweep Agreement Considering Inter-Company Loan Agreements (views/view_54604.html)",
+    "Conduct Corporate Loan Collateral Due Diligence (views/view_54660.html)",
+    "EXT Handle Request to Open Virtual Account (views/view_54790.html)",
+    "Handle Request to Open Corporate Current Account (views/view_54919.html)",
+    "Handle Request to Establish Term Deposit Agreement (views/view_54907.html)"
+  ]
+}

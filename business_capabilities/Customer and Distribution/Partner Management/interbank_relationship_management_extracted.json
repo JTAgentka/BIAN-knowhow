@@ -1,0 +1,31 @@
+{
+  "capability_name": "Interbank Relationship Management",
+  "role_definition": "This function handles managed interbank relationships. There are a range of relationship considerations that may apply between banks covering trading arrangements, joint ventures, clearing and settlement arrangements etc. The Interbank Relationship Management function acts as a relationship planning and coordination point to facilitate interbank interactions",
+  "folder_name": "Partner Management",
+  "core_business_object": "InterBank Relationship (object_26.html?object=46903)",
+  "example_of_use": "A partner bank is contacted to review a major project opportunity. The interbank relationship management function is used to coordinate contacts for a joint venture marketing opportunity between the banks",
+  "executive_summary": "Manage the bank's relationship with other banks, covering any specific agreements that may be in place and overseeing operational issues.",
+  "key_features": [
+    "Develop the bank relationship plan/targets",
+    "Liaise/advise bank representatives and develop the relationship",
+    "Identify and develop mutually beneficial initiatives with the bank",
+    "Troubleshoot production issues that arise involving the bank"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/InterbankRelationshipManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Partner Management (object_6.html?object=130509)"
+  ],
+  "triggered_by": [
+    "ECM And DCM (object_22.html?object=40135)",
+    "Asset Securitization (object_23.html?object=47465)",
+    "Loan Syndication (object_23.html?object=47935)"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Select Buyers for Securitize Assets (views/view_54717.html)",
+    "Process Sales Marketing and Closing (views/view_55605.html)",
+    "Handle Request for Issuance of Commercial Paper (views/view_54869.html)",
+    "Negotiate Mandate Letter and Term Sheets (views/view_54880.html)"
+  ]
+}

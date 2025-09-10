@@ -1,0 +1,57 @@
+{
+  "capability_name": "Products and Services Direction",
+  "capability_type": "Service Domain",
+  "role_definition": "Develop and communicate product and service policies and adapt in response to changing needs and to practical experience",
+  "example_of_use": "Senior product and service management assess performance and define the policies governing product and service delivery",
+  "service_role": "Develop and communicate product and service policies and adapt in response to changing needs and to practical experience",
+  "bian_lifecycle": {
+    "registration_status": "Registered"
+  },
+  "stereotypes": ["ServiceDomain"],
+  "individual_analytics": [
+    "products&ServicesStrategyAccumulators",
+    "products&ServicesStrategyActivityAnalysis",
+    "products&ServicesStrategyPerformanceAnalysis",
+    "products&ServicesStrategyTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "products&ServicesStrategyPortfolioActivityAnalysis",
+    "products&ServicesStrategyPortfolioMake-UpAnalysis",
+    "products&ServicesStrategyPortfolioPerformanceAnalysis"
+  ],
+  "scenarios": [],
+  "appears_on": [
+    "BIAN Service Landscape V12.0 Value Chain",
+    "BIAN Service Landscape V12.0 Matrix View",
+    "Products And Services Direction SD Overview"
+  ],
+  "relations": {
+    "aggregated_by": ["Business Direction"],
+    "is_equal_to": ["Products and Services Direction"],
+    "is_part_of": ["Business Direction"],
+    "realized_by": [
+      "Products And Services Strategy_ Analytics Object",
+      "Products And Services Strategy",
+      "Products And Services",
+      "Products And Services Strategy_Invocation",
+      "Products And Services Strategy_Instantiation",
+      "Products And Services Strategy_Reporting",
+      "retrieve Products And Services Strategy",
+      "authorize Products And Services Strategy",
+      "request Products And Services Strategy",
+      "notify Products And Services Strategy",
+      "configure Products And Services Strategy",
+      "record Products And Services Strategy",
+      "Products And Services Direction_SD_Service Group",
+      "Direct"
+    ],
+    "serves": [
+      "Product Management",
+      "Product to Business Direction Association",
+      "Product Association Management"
+    ]
+  },
+  "business_area": "Product and Service Enabling",
+  "domain": "Product Management",
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_33781.pdf"
+}

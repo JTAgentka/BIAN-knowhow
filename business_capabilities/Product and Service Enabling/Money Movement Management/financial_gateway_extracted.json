@@ -1,0 +1,70 @@
+{
+  "capability_name": "Financial Gateway",
+  "folder_name": "Money Movement Management",
+  "role_definition": "This service domain supports the operational connections with the range of financial networks that support interbank and financial institution connectivity. This includes SWIFT, ACH gateways, and market exchange/regulatory reporting connections. The service domain does not create content itself, it provides a message exchange service between (financial) institutions for various units within the bank. It may format messages and maintain and apply authentication and encryption keys to the transmitted messages and necessary. It also provides operational message recovery and retransmission facilities as appropriate",
+  "core_business_object": "Financial Gateway Session",
+  "example_of_use": "During the 24 hour cycle, the bank's 'wire room' unit establishes the connections with the different payments, SWIFT and reporting networks",
+  "executive_summary": "This service domain operates automated message interfaces to secure networks such as SWIFT, TELEX, ACH and Financial Market/Exchange reporting services",
+  "key_features": [
+    "Operate the bank's connection to financial networks",
+    "Handle inbound and outbound financial messages",
+    "Maintain and apply encryption/authentication keys",
+    "Handle service configuration and operational controls"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/FinancialGateway/12.0.0",
+  "served_by": [
+    "Financial Message Analysis",
+    "Issued Device Administration",
+    "Business Unit Management",
+    "Correspondent Bank Operations",
+    "ACH Operations",
+    "Payment Execution"
+  ],
+  "serves": [
+    "Money Movement Management"
+  ],
+  "triggered_by": [
+    "Correspondent Bank Operations",
+    "Card Clearing",
+    "Payment Rail Operations"
+  ],
+  "triggers": [
+    "Servicing Order",
+    "Correspondent Bank Operations",
+    "Processing Order",
+    "Card Financial Settlement",
+    "Card Clearing",
+    "Payment Rail Operations"
+  ],
+  "scenarios": [
+    "Process Incoming Direct Debit Instruction at Debtor Bank (views/view_54732.html)",
+    "Handle Request to Issue Guarantee on Request of Another Bank (views/view_54980.html)",
+    "Handle Request for Refund of Incoming Direct Debit at Debtor Bank (views/view_55452.html)",
+    "Process Card Clearing by Issuer (views/view_55194.html)",
+    "Handle Request for Outgoing Credit Transfer (views/view_55383.html)",
+    "Process Settlement by Acquirer (views/view_55526.html)",
+    "Process Clearing Error for Outgoing Credit Transfer (views/view_55167.html)",
+    "Handle Request for Outgoing FCY Credit Transfer via SWIFT (views/view_55095.html)",
+    "Process Card Clearing by Acquirer (views/view_55404.html)",
+    "Handle Incoming Credit Transfer (views/view_55395.html)",
+    "Handle Incoming Request for Payment at Debtor Bank (views/view_55467.html)",
+    "Initiate Bank Guarantee (views/view_55496.html)",
+    "Handle Request for Payment at Creditor Bank for External Account (views/view_55356.html)",
+    "Process Receipt of Payment for Outgoing Direct Debit at Creditor Bank (views/view_55676.html)",
+    "Process Card Clearing by Card Network (views/view_55080.html)",
+    "Process Request for Refund of Outgoing Direct Debit at Creditor Bank (views/view_54637.html)",
+    "EXT Handle Request for Account Statement and Outgoing Credit Transfer (views/view_54747.html)",
+    "Process Settlement by Issuer (views/view_55004.html)",
+    "Handle Request for Outgoing Credit Transfer Related to Request to Pay at Debtor Bank (views/view_54799.html)",
+    "Process Rejection Message for Outgoing Direct Debit at Creditor Bank (views/view_54628.html)",
+    "Process Salary Payments for External Accounts (views/view_54595.html)",
+    "Process Incoming Credit Transfer at Creditor Bank towards Outgoing Request for Payment (views/view_54705.html)",
+    "Handle Request for Token Assurance (views/view_54761.html)",
+    "Process Incoming Credit Transfer for Letter of Credit (views/view_55656.html)",
+    "Update Letter of Credit for Extension of Validity (views/view_55579.html)",
+    "Handle Request to Extend Validity of Letter of Credit (views/view_55634.html)",
+    "Review Letter of Credit and Pass on to Exporter (views/view_54793.html)",
+    "Initiate Letter of Credit (views/view_54819.html)",
+    "Handle Incoming FCY Credit Transfer for LCY Account (views/view_54977.html)"
+  ]
+}

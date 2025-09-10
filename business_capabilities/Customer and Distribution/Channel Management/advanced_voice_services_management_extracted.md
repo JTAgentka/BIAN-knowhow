@@ -21,7 +21,7 @@ Oversee the configuration and operation of the voice channel facilities
 - Track service availability and troubleshoot major production issues
 
 ## API BIAN Portal Link
-https://app.swaggerhub.com/apis/BIAN-3/AdvancedVoiceServicesManagement/12.0.0
+https://app.swaggerhub.com/apis/BIAN3/AdvancedVoiceServicesManagement/12.0.0
 
 ## Served By
 - Business Unit Management (object_21.html?object=30964)
@@ -34,7 +34,7 @@ https://app.swaggerhub.com/apis/BIAN-3/AdvancedVoiceServicesManagement/12.0.0
 - Contact Center Operations (object_22.html?object=43894)
 
 ## Triggers
-None specified
+None listed
 
 ## List of Scenarios
 - Adjust Call Centre Position Assignments (views/view_55380.html)

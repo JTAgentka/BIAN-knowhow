@@ -1,0 +1,30 @@
+{
+  "capability_name": "Management Manual",
+  "role_definition": "This service domains handles the development and distribution of the enterprise management manual. The manual covers all procedures in place at the bank that are to be adopted followed in specific situations. It provides guidance on required actions, responsibilities and accountability to ensure the integrity of the banks operations",
+  "folder_name": "Policy Management",
+  "core_business_object": "Management Manual Specification",
+  "example_of_use": "Operational procedures to be followed when handling sensitive customer information are amended to reflect updated regulatory requirements",
+  "executive_summary": "Develop, maintain and promulgate the management manual of required procedures and guidelines. Provide support in its reference and interpretation as appropriate",
+  "key_features": [
+    "Determine the required/scope or coverage of the procedures manual",
+    "Review current procedures against prevailing best practices and refine the manual as necessary",
+    "Maintain procedure classification and indexing to support access",
+    "Clarify obligations and accountability for adopting procedures across all banking activities"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ManagementManual/12.0.0",
+  "served_by": [
+    "Knowledge and Intellectual Property Management"
+  ],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [
+    "Servicing Activity Analysis"
+  ],
+  "triggers": [
+    "Design"
+  ],
+  "list_of_scenarios": [
+    "Perform Servicing Root Cause Analysis"
+  ]
+}

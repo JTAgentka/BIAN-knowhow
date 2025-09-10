@@ -1,0 +1,22 @@
+{
+  "capability_name": "Market Data Switch Administration",
+  "role_definition": "Administer the internal information distribution 'switch' with external and external market information feeds and associated employee access rights. Note this can include 'brokering' information access on a first come first serve basis for limited active user number feed services",
+  "folder_name": "Market Management",
+  "core_business_object": "Information Feed Switch Administrative Plan (object_24.html?object=133284)",
+  "example_of_use": "A new employee is provided with the standard access to information feed at their trading desk",
+  "executive_summary": "This service domain administers the internal information distribution system with external market information feeds and associated employee access rights, including brokering information access on a first-come-first-serve basis for limited user feeds",
+  "key_features": [
+    "Administer internal information distribution switch",
+    "Manage external market information feeds",
+    "Control employee access rights",
+    "Broker information access for limited user feeds"
+  ],
+  "api_bian_portal_link": "Not specified in the document",
+  "served_by": [],
+  "serves": [
+    "Market Management (object_6.html?object=63703)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

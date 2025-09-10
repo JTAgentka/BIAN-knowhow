@@ -1,0 +1,33 @@
+{
+  "capability_name": "Internal Audit",
+  "role_definition": "This service domain administers the scheduled and ad-hoc application of internal audit and compliance reviews. This includes interpreting the banks policies and procedures that guide all aspects the bank's operations and determining which guidelines apply in specific circumstances across the enterprise. Support for interpreting guidelines are provided to activities in the bank that are subject to audit and scheduled and ad-hoc checks performed to confirm compliance",
+  "folder_name": "Policy Management",
+  "core_business_object": "Internal Audit Assessment",
+  "example_of_use": "A periodic audit of a processing unit is undertaken and remedial corrections to procedures recommended to improve compliance",
+  "executive_summary": "Maintain and portfolio of internal audit checks. Select and execute a meaningful sample of checks and identify and resolve non-compliance",
+  "key_features": [
+    "Schedule/target internal audit reviews",
+    "Consolidate documents/activity pertaining to the audit",
+    "Provide advice/guidance for achieving guideline/policy compliance",
+    "Evaluate and report on activity for regulatory compliance",
+    "Notify and track responses for detected procedural failures"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/InternalAudit/12.0.0",
+  "served_by": [
+    "Non-IT and Non-HR Enterprise Services"
+  ],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [
+    "Underwriting"
+  ],
+  "triggers": [
+    "Assess"
+  ],
+  "list_of_scenarios": [
+    "Perform Underwriting for Corporate Loan",
+    "Perform Underwriting for Mortgage Loan",
+    "Perform Underwriting for Merchandising Loan"
+  ]
+}

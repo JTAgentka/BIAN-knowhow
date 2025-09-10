@@ -1,0 +1,29 @@
+{
+  "capability_name": "Central Cash Handling",
+  "role_definition": "This service domain is responsible for tracking the available cash inventory held centrally and distributed/collected throughout the branch/ATM network and making allocation/redistribution requests to ensure adequate float is available at all locations and that excess cash at any location is transferred to central secure locations as appropriate. Also coordinating with other banks and central banks to ensure sufficient cash is on hand to support the branch network requirements",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Central Cash Allocation",
+  "example_of_use": "The central cash management function reviews the current and projected available float at locations across the network to ensure adequate supply to meet projected demand",
+  "executive_summary": "Track cash inventory, project demand and allocate inventory across the branch/ATM network",
+  "key_features": [
+    "Cash inventory usage and availability tracking",
+    "Cash inventory requirements evaluation and planning",
+    "Cash float availability and allocation oversight"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/CentralCashHandling/12.0.0",
+  "served_by": [
+    "Branch Location Operations"
+  ],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [
+    "Branch Location Operations"
+  ],
+  "triggers": [
+    "Branch Currency Distribution"
+  ],
+  "list_of_scenarios": [
+    "Process Inventory of Cash and Distribution of Cash to Branches"
+  ]
+}

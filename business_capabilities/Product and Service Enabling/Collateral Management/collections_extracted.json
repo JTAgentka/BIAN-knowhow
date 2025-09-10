@@ -1,0 +1,56 @@
+{
+  "capability_name": "Collections",
+  "role_definition": "Administer the recovery and/or liquidation of collateral against problem accounts",
+  "folder_name": "Collateral Management",
+  "core_business_object": "Collateral Asset Liquidation Procedure",
+  "example_of_use": "Collateral held against a failed account is valued and submitted for liquidation to recover losses",
+  "executive_summary": "Handles the liquidation of assets to offset the losses for problem accounts",
+  "key_features": [
+    "Assess account status and determine collections approach",
+    "Collateral title and valuation assessment",
+    "Collateral Liquidation",
+    "Account/debt factoring"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/Collections/12.0.0",
+  "served_by": [
+    "Collateral Administration",
+    "Wave 5",
+    "Custody, Collateral And Documents"
+  ],
+  "serves": [
+    "Collateral Management"
+  ],
+  "triggered_by": [
+    "Customer Case"
+  ],
+  "triggers": [
+    "Legal Entity Directory",
+    "Customer Credit Rating"
+  ],
+  "list_of_scenarios": [
+    "Update details relating to Debt Factoring",
+    "Retrieve details about any aspect of Collections Assessment",
+    "Update details relating to Collateral Liquidation",
+    "Request manual intervention or a decision with respect to Collateral Asset Liquidation Procedure",
+    "Instantiate a new Collections Assessment",
+    "Accept, verify, etc. aspects of Collateral Asset Liquidation Procedure processing",
+    "Update details relating to Collateral Asset Liquidation Procedure",
+    "Retrieve details about any aspect of Collateral Valuation",
+    "Instantiate a new Collateral Valuation",
+    "Update details relating to Collateral Valuation",
+    "Retrieve details about any aspect of Collateral Liquidation",
+    "Instantiate a new Collateral Liquidation",
+    "Update details relating to Collections Assessment",
+    "Retrieve details about any aspect of Collateral Asset Liquidation Procedure",
+    "Accept, verify, etc. aspects of Collateral Valuation processing",
+    "Retrieve details about any aspect of Debt Factoring",
+    "Accept, verify, etc. aspects of Collateral Liquidation processing",
+    "Retrieve details about any aspect of Collections Account Update",
+    "Execute an available automated action for Collateral Asset Liquidation Procedure",
+    "Instantiate a new Collateral Asset Liquidation Procedure",
+    "Accept, verify, etc. aspects of Debt Factoring processing",
+    "Update details relating to Collections Account Update",
+    "Control the processing of Collateral Asset Liquidation Procedure",
+    "Instantiate a new Debt Factoring"
+  ]
+}

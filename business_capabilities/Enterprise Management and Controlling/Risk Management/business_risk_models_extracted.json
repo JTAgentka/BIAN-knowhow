@@ -1,0 +1,44 @@
+{
+  "capability_name": "Business Risk Models",
+  "role_definition": "Develop and maintain models that assess commercial/business exposures",
+  "folder_name": "Risk Management",
+  "core_business_object": "Business Operation Risk Model Specification",
+  "example_of_use": "Financial engineers develop and deploy a collection of business risk models that can run against different failure scenarios to assess exposure and determine mitigation needs",
+  "executive_summary": "This capability focuses on developing and maintaining comprehensive business risk models that assess commercial and business exposures across various failure scenarios to support risk mitigation strategies.",
+  "key_features": [
+    "Commercial exposure assessment",
+    "Business risk modeling",
+    "Failure scenario analysis",
+    "Risk exposure evaluation",
+    "Mitigation needs determination",
+    "Individual and portfolio analytics",
+    "Performance analysis and trending"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36466",
+  "served_by": [
+    "Operational Risk"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Transaction Authorization inputs",
+    "Business failure scenarios",
+    "Commercial exposure changes",
+    "Risk assessment requirements"
+  ],
+  "triggers": [
+    "Risk model development",
+    "Exposure assessment",
+    "Mitigation planning activities"
+  ],
+  "list_of_scenarios": [
+    "businessOperationRiskModelSpecificationAccumulators",
+    "businessOperationRiskModelSpecificationActivityAnalysis",
+    "businessOperationRiskModelSpecificationPerformanceAnalysis",
+    "businessOperationRiskModelSpecificationTrends&Events",
+    "businessOperationRiskModelSpecificationPortfolioActivityAnalysis",
+    "businessOperationRiskModelSpecificationPortfolioMake-UpAnalysis",
+    "businessOperationRiskModelSpecificationPortfolioPerformanceAnalysis"
+  ]
+}

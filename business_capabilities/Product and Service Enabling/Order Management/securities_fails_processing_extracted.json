@@ -1,0 +1,49 @@
+{
+  "capability_name": "Securities Fails Processing",
+  "role_definition": "Market trades of securities may fail at different stages in the clearing and settlement processing. This Service Domain handles the resolution of securities processing failures",
+  "folder_name": "Order Management",
+  "core_business_object": "Securities Fails Processing (object_37.html?object=44403)",
+  "example_of_use": "The settlement details for an executed trade are rejected by the counterparty during confirmation. The back office traces the deal activity to identify the source of the clerical error obtain the agreement for the resolution and make the necessary changes to the transaction and trade reporting",
+  "executive_summary": "This Service Domain handles the resolution of clerical and processing errors that lead to failures in the securities trade clearing and settlement processes",
+  "key_features": [
+    "Research and determine the reason for securities back office processing failures",
+    "Determine corrective action required",
+    "Agree and execute resolution with interested parties"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/SecuritiesFailsProcessing/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Order Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "Securities Fails Processing SD Overview",
+      "link": "views/view_51735.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Capture, diagnose, resolve and report on securities related issues and transaction failures",
+    "individual_analytics": [
+      "securityTradingFailsManagementPlanAccumulators",
+      "securityTradingFailsManagementPlanActivityAnalysis",
+      "securityTradingFailsManagementPlanPerformanceAnalysis",
+      "securityTradingFailsManagementPlanTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "securityTradingFailsManagementPlanPortfolioActivityAnalysis",
+      "securityTradingFailsManagementPlanPortfolioMake-UpAnalysis",
+      "securityTradingFailsManagementPlanPortfolioPerformanceAnalysis"
+    ]
+  }
+}

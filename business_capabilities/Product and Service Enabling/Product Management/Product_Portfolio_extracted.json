@@ -1,0 +1,89 @@
+{
+  "capability_name": "Product Portfolio",
+  "capability_type": "Service Domain",
+  "role_definition": "Maintain a portfolio of view of the bank's products with key product performance data and consolidated activity details to support profitability and performance analysis across the product portfolio",
+  "example_of_use": "Business development review product performance in order to target product design, marketing, sales, pricing and delivery priorities",
+  "executive_summary": "Maintain a portfolio of analytical views of the product portfolio to support product profitability and performance analysis",
+  "key_features": [
+    "Consolidate product performance data",
+    "Obtain comparative market research on competitor product activity/profitability",
+    "Conduct analysis of product performance",
+    "Propose initiatives to improve product profitability/performance"
+  ],
+  "service_role": "Maintain and assess coverage and relative performance/profitability of the full range of offered products and product combinations/ bundles. Direct product development/refinement to rebalance the portfolio",
+  "bian_lifecycle": {
+    "registration_status": "Registered"
+  },
+  "stereotypes": ["ServiceDomain"],
+  "api_bian_portal": "Product Portfolio API (https://app.swaggerhub.com/apis/BIAN-3/ProductPortfolio/12.0.0)",
+  "core_business_object": "Product Analysis",
+  "individual_analytics": [
+    "productPortfolioAnalysisAccumulators",
+    "productPortfolioAnalysisActivityAnalysis",
+    "productPortfolioAnalysisPerformanceAnalysis",
+    "productPortfolioAnalysisTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "productPortfolioAnalysisPortfolioActivityAnalysis",
+    "productPortfolioAnalysisPortfolioMake-UpAnalysis",
+    "productPortfolioAnalysisPortfolioPerformanceAnalysis"
+  ],
+  "scenarios": [
+    "Create New Sales Product Bundle",
+    "Review Call Centre Activity for New Product",
+    "Create New Product",
+    "Phase Out Sales Product Current Account",
+    "Create New Sales Product Single",
+    "Change Operational Current Account Product",
+    "Analyse Product Portfolio Performance"
+  ],
+  "appears_on": [
+    "Product Portfolio SD Overview",
+    "BIAN Service Landscape V12.0 Value Chain",
+    "BIAN Service Landscape V12.0 Matrix View"
+  ],
+  "relations": {
+    "aggregated_by": [
+      "Business Analysis",
+      "Wave 3",
+      "Product Management"
+    ],
+    "is_equal_to": ["Product Portfolio"],
+    "is_part_of": ["Business Analysis"],
+    "realized_by": [
+      "Product Portfolio Analysis_ Analytics Object",
+      "Product Portfolio Analysis_Reporting",
+      "Product Portfolio Analysis_Instantiation",
+      "Product Portfolio_SD_Operations",
+      "Product Portfolio Analysis_Invocation",
+      "Product Portfolio_SD_Service Group",
+      "Product Portfolio",
+      "Re CR Retrieve details about product portfolio analysis activity",
+      "Product Portfolio Analysis",
+      "Ex BQ Execute an automated action against on-going analysis",
+      "Up BQ Update details of a specific product performance analysis",
+      "Ec BQ Accept, reject, verify, etc. product performance analysis",
+      "Ev BQ Evaluate product performance using a specific type of analysis",
+      "Rq BQ Request manual intervention to on-going analysis",
+      "Ev CR Evaluate product portfolio performance",
+      "Up CR Update settings or content for product portfolio analysis activity",
+      "Rq CR Request manual intervention in the product portfolio analysis activity",
+      "Re BQ Retrieve details about a specific product performance analysis",
+      "Analyze"
+    ],
+    "served_by": ["Product to Information Association"],
+    "serves": [
+      "Product Management",
+      "Product Performance Management"
+    ],
+    "triggered_by": ["Business Development"],
+    "triggers": [
+      "Sales Product",
+      "Product Quality Assurance",
+      "Product Design"
+    ]
+  },
+  "business_area": "Product and Service Enabling",
+  "domain": "Product Management",
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_36619.pdf"
+}

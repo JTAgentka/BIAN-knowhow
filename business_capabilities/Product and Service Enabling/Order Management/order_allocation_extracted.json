@@ -1,0 +1,47 @@
+{
+  "capability_name": "Order Allocation",
+  "role_definition": "Apply appropriate rules to allocate a completed or partially completed block order across the customers placing the constituent market orders",
+  "folder_name": "Order Management",
+  "core_business_object": "SecuritiesAllocationTransaction",
+  "example_of_use": "A large market order is partly fulfilled and the pricing and allocation of the trade is allocated across the counterparties",
+  "executive_summary": "This Service Domain allocates partially fulfilled market trades",
+  "key_features": [
+    "Review allocation rules for partially completed market orders",
+    "Allocate traded securities in accordance with allocation rules",
+    "Provide allocation details as requested"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/OrderAllocation/12.0.0",
+  "served_by": [
+    "Wave 6",
+    "Clearing And Settlement"
+  ],
+  "serves": [
+    "Order Management"
+  ],
+  "triggered_by": [
+    "Market Operations"
+  ],
+  "triggers": [
+    "Securities Allocation Transaction_Reporting",
+    "Securities Allocation Transaction_Invocation",
+    "Securities Allocation Transaction_Instantiation",
+    "Order Allocation_SD_Service Group",
+    "Securities Allocation Procedure",
+    "Apply Order Allocation Rules Workstep",
+    "Update (Partially Completed) Market Order Workstep"
+  ],
+  "scenarios": [
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    },
+    {
+      "name": "Order Allocation SD Overview",
+      "link": "views/view_52059.html"
+    }
+  ]
+}

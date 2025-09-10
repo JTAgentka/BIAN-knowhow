@@ -1,0 +1,45 @@
+{
+  "capability_name": "Sub Custodian Agreement",
+  "role_definition": "Maintain sub custodian agreement terms and track and report on sub custodian activity. Note the lead custodian role may engage a sub custodian for handling international securities outside its jurisdiction",
+  "folder_name": "Partner Management",
+  "core_business_object": "Sub Custodian Agreement",
+  "example_of_use": "The contractual terms are referenced during the settlement procedure for a securities trade where the sub custodian holds the associated documentation",
+  "executive_summary": "This Service Domain establishes and maintains the terms governing sub custodian relationship",
+  "key_features": [
+    "Establish appropriate contractual terms with agency",
+    "Maintain and update contractual terms as necessary",
+    "Review proposed work/assignments for compliance with agreed terms"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/SubCustodianAgreement/12.0.0",
+  "served_by": [
+    "Sub Custodian Agreement_Instantiation",
+    "Sub Custodian Agreement_SD_Operations", 
+    "Sub Custodian Agreement_Analytics Object",
+    "Sub Custodian Agreement_Invocation",
+    "Sub Custodian Agreement_Reporting"
+  ],
+  "serves": [
+    "Partner Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": [],
+  "individual_analytics": [
+    "subCustodianAgreementAccumulators",
+    "subCustodianAgreementActivityAnalysis",
+    "subCustodianAgreementPerformanceAnalysis", 
+    "subCustodianAgreementTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "subCustodianAgreementPortfolioActivityAnalysis",
+    "subCustodianAgreementPortfolioMakeUpAnalysis",
+    "subCustodianAgreementPortfolioPerformanceAnalysis"
+  ],
+  "bian_life_cycle": "Registered",
+  "stereotype": "ServiceDomain",
+  "aggregated_by": [
+    "Wave 6",
+    "External Agency"
+  ],
+  "is_part_of": "External Agency"
+}

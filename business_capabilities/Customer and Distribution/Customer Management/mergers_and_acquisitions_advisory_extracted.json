@@ -1,0 +1,36 @@
+{
+  "capability_name": "Mergers and Acquisitions Advisory",
+  "role_definition": "A fee or commission based project providing advice, execution, pricing and deal coordination and placement for M&A, IPO, MBO, LBO type transactions",
+  "folder_name": "Customer Management",
+  "core_business_object": "Not specified in the PDF",
+  "example_of_use": "A corporate customer engages an investment bank to lead an M&A transaction on its behalf",
+  "executive_summary": "This Service Domain handles mergers and acquisition, IPO, MBO and LBO projects with the bank acting in the lead and/or subordinate role",
+  "key_features": [
+    "Fee or commission based project execution",
+    "Pricing and deal coordination",
+    "Placement for M&A, IPO, LBO type transactions",
+    "Advisory services for complex transactions"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/MergersandAcquisitionsAdvisory/12.0.0",
+  "served_by": [
+    "Not specified in the PDF"
+  ],
+  "serves": [
+    "Customer Management"
+  ],
+  "triggered_by": [
+    "Not specified in the PDF"
+  ],
+  "triggers": [
+    "Not specified in the PDF"
+  ],
+  "list_of_scenarios": [
+    "Individual Analytics: mergers&AcquisitionFulfillmentArrangementAccumulators",
+    "Individual Analytics: mergers&AcquisitionFulfillmentArrangementActivityAnalysis", 
+    "Individual Analytics: mergers&AcquisitionFulfillmentArrangementPerformanceAnalysis",
+    "Individual Analytics: mergers&AcquisitionFulfillmentArrangementTrends&Events",
+    "Portfolio Analytics: mergers&AcquisitionFulfillmentArrangementPortfolioActivityAnalysis",
+    "Portfolio Analytics: mergers&AcquisitionFulfillmentArrangementPortfolioMake-UpAnalysis",
+    "Portfolio Analytics: mergers&AcquisitionFulfillmentArrangementPortfolioPerformanceAnalysis"
+  ]
+}

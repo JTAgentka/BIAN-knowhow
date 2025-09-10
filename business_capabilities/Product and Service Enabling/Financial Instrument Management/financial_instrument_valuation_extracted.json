@@ -1,0 +1,24 @@
+{
+  "capability_name": "Financial Instrument Valuation",
+  "role_definition": "Provide securities/asset valuation services. A wide range of valuation approaches can be applied to a range of different instrument/asset types. This Service Domain implements a process by which the most appropriate valuation method is selected and applied in the context of the valuation request and the purpose of the valuation. The fundamental pricing principle is based on an analysis of the present value of expected cash flows. This calculation involves identifying the expected cash flows, determining appropriate (range of)interest rates that might discount future cash flows and calculate the current value of future cash flows applying those interest rates",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Market Asset Valuation Procedure",
+  "example_of_use": "The assets held in an investment portfolio are subject to valuation as part of an annual performance report",
+  "executive_summary": "This Service Domain provides a range of financial asset valuation services",
+  "key_features": [
+    "Support the selection from various financial asset valuation approaches (e.g. market, income, replacement) and depending on the type of financial asset and valuation context",
+    "Consolidate information supporting the valuation assessment",
+    "Determine and report on the financial asset valuation"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/FinancialInstrumentValuation/12.0.0",
+  "served_by": [
+    "Consumer Investments"
+  ],
+  "serves": [
+    "Financial Instrument Management",
+    "Financial Instrument Valuation"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

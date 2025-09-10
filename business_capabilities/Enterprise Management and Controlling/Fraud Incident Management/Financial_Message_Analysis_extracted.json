@@ -1,0 +1,35 @@
+{
+  "capability_name": "Financial Message Analysis",
+  "role_definition": "Track and analyze financial message traffic to identify anomalies and potential fraudulent activity",
+  "folder_name": "Fraud Incident Management",
+  "core_business_object": "Financial Network Gateway Analysis",
+  "example_of_use": "A pattern of financial message traffic for a major counterparty is analyzed to reveal possible fraudulent behaviors",
+  "executive_summary": "Not provided in the source document",
+  "key_features": [
+    "Individual Analytics: financialNetworkGatewayAnalysisAccumulators, financialNetworkGatewayAnalysisActivityAnalysis, financialNetworkGatewayAnalysisPerformanceAnalysis, financialNetworkGatewayAnalysisTrends&Events",
+    "Portfolio Analytics: financialNetworkGatewayAnalysisPortfolioActivityAnalysis, financialNetworkGatewayAnalysisPortfolioMake-UpAnalysis, financialNetworkGatewayAnalysisPortfolioPerformanceAnalysis"
+  ],
+  "api_bian_portal_link": "Not provided in the source document",
+  "served_by": [
+    "Financial Gateway",
+    "Business Unit Management",
+    "Correspondent Bank Operations",
+    "Business Development",
+    "Payment Execution",
+    "Correspondent Bank Directory"
+  ],
+  "serves": [
+    "Fraud Incident Management"
+  ],
+  "triggered_by": [
+    "Correspondent Bank Operations"
+  ],
+  "triggers": [
+    "Not explicitly specified in the source document"
+  ],
+  "list_of_scenarios": [
+    "Handle Request to Issue Guarantee on Request of Another Bank (views/view_54980.html)",
+    "Process Incoming Credit Transfer for Letter of Credit (views/view_55656.html)",
+    "Review Letter of Credit and Pass on to Exporter (views/view_54793.html)"
+  ]
+}

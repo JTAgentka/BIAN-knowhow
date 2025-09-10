@@ -1,0 +1,59 @@
+{
+  "capability_name": "Customer Billing",
+  "role_definition": "This service domain provides a general customer billing service. The service domain is provided with the applicable fees and charges that are authorized for invoicing typically by a product or service fulfillment service domain. Processing can include verification and authorizations steps and the invoice could be issued as a single transaction or a schedule of transactions.",
+  "folder_name": "Agreement Management",
+  "core_business_object": "Invoice",
+  "example_of_use": "An invoice is raised for the fees and commissions applicable to a managed investment portfolio",
+  "executive_summary": "This service domains provides a central service to compose, issue and track customer billing and invoices",
+  "key_features": [
+    "Process/issue customer invoices (on request from fulfillment)",
+    "Issue reminders against unpaid invoices",
+    "Track and report on customer payments against invoices"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerBilling/12.0.0",
+  "served_by": [
+    "Corporate Lease",
+    "Trust Services",
+    "Credit Card",
+    "Credit Facility",
+    "Customer Billing",
+    "Brokered Product",
+    "Corporate Loan",
+    "Consumer Loan",
+    "Consumer Advisory Services",
+    "Consumer Investments"
+  ],
+  "serves": [
+    "Agreement Management",
+    "Agreement Terms and Conditions Management"
+  ],
+  "triggered_by": [
+    "Open Item Management",
+    "Mortgage Loan",
+    "Syndicated Loan",
+    "Servicing Order",
+    "Credit Card",
+    "Disbursement",
+    "Customer Billing",
+    "Corporate Loan",
+    "Consumer Loan"
+  ],
+  "triggers": [
+    "Direct Debit",
+    "Correspondence",
+    "Customer Billing",
+    "Document Directory"
+  ],
+  "list_of_scenarios": [
+    "Process End of Daily Booking Window for Syndicated Loan Payments-III",
+    "Process Syndicated Loan Instalment-I",
+    "Create Customer Reports",
+    "Process Consumer Loan Delinquency First Stage",
+    "EXT Disburse Renewed Uncollateralised Consumer Loan",
+    "Create and Send Loan Installment Invoice",
+    "Process Card Billing",
+    "Process End of Daily Booking Window for Syndicated Loan Payments-II",
+    "Process Syndicated Loan Instalment-II and III",
+    "Process Loans Instalments"
+  ]
+}

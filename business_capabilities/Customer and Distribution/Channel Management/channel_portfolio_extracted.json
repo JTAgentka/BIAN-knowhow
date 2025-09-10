@@ -1,0 +1,23 @@
+{
+  "capability_name": "Channel Portfolio",
+  "role_definition": "Evaluate the coverage and relative performance of different channels with respect to the blend of service and product activity. Optimize channel use to minimize costs and enhance customer experience",
+  "folder_name": "Channel Management",
+  "core_business_object": "Channel Portfolio Analysis (object_24.html?object=115838)",
+  "example_of_use": "Product designers review the performance of products over different channels and channel combinations to refine product designs and delivery",
+  "executive_summary": "Evaluate the coverage and relative performance of different channels with respect to the blend of service and product activity. Optimize channel use to minimize costs and enhance customer experience",
+  "key_features": [
+    "Channel coverage evaluation",
+    "Performance analysis across different channels", 
+    "Channel optimization for cost minimization",
+    "Customer experience enhancement through channel optimization"
+  ],
+  "api_bian_portal_link": "Not specified",
+  "served_by": [],
+  "serves": [
+    "Channel Management (object_6.html?object=130032)",
+    "Channel Performance Management (object_6.html?object=130665)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

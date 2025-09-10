@@ -1,0 +1,53 @@
+{
+  "capability_name": "Leasing Item Administration",
+  "role_definition": "This service domain handles the oversight, administration and confirmation that any required maintenance tasks that are associated with a leased item that is the subject of a leasing agreement financed through the bank. This can include scheduled and ad-hoc item valuations, status/documentation and title checks and tracking upkeep actions that the item owner is obliged to undertake (such as obtaining certification and insurance)",
+  "folder_name": "Collateral Management",
+  "core_business_object": "Leasing Item Administrative Plan",
+  "example_of_use": "The bank reviews the maintenance schedule for a major piece of equipment leased by a customer with bank financing to confirm that preventative maintenance has been undertaken as required and that the equipment is being used as intended",
+  "executive_summary": "Track the status of the assets underlying leasing agreements as they represent collateral items that could be accessed in the event of account recovery",
+  "key_features": [
+    "Record and classify leased items",
+    "Oversee/review leased item status and valuation checks",
+    "Confirm the maintenance, certification and insurance arrangements are in place"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/LeasingItemAdministration/12.0.0",
+  "served_by": [
+    "Operational Services",
+    "Wave 5", 
+    "Loans and Deposits"
+  ],
+  "serves": [
+    "Collateral Management"
+  ],
+  "triggered_by": [
+    "Leasing Item Administrative Plan_Instantiation",
+    "Leasing Item Administrative Plan_Invocation"
+  ],
+  "triggers": [
+    "Leasing Item Administrative Plan_Analytics Object",
+    "Leasing Item Administrative Plan_Reporting",
+    "Leasing Item Administration_SD_Operations"
+  ],
+  "list_of_scenarios": [
+    "Instantiate a new Valuation",
+    "Capture Assurance activity or event related information",
+    "Control the processing of Leasing Item Administrative Plan",
+    "Update details relating to Valuation",
+    "Update details relating to Assurance",
+    "Accept, verify, etc. aspects of Leasing Item Administrative Plan processing",
+    "Capture Valuation activity or event related information",
+    "Instantiate a new Assurance",
+    "Obtain permission to act in relation to Leasing Item Administrative Plan",
+    "Instantiate a new Leasing Item Administrative Plan",
+    "Retrieve details about any aspect of Leasing Item Administrative Plan",
+    "Update details relating to Registration",
+    "Retrieve details about any aspect of Valuation",
+    "Capture Registration activity or event related information",
+    "Retrieve details about any aspect of Assurance",
+    "Retrieve details about any aspect of Registration",
+    "Request manual intervention or a decision with respect to Leasing Item Administrative Plan",
+    "Update details relating to Leasing Item Administrative Plan",
+    "Instantiate a new Registration",
+    "Capture Leasing Item Administrative Plan activity or event related information"
+  ]
+}

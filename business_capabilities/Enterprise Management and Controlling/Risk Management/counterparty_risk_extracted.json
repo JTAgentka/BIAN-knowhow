@@ -1,0 +1,63 @@
+{
+  "capability_name": "Counterparty Risk",
+  "role_definition": "Maintain and administer a counterparty risk rating",
+  "folder_name": "Risk Management",
+  "core_business_object": "Counterparty Credit Risk Measurement",
+  "example_of_use": "A back office function tracks transaction activity and external rating details to maintain counterparty credit ratings",
+  "executive_summary": "Counterparty Risk capability maintains and administers counterparty risk ratings by tracking transaction activities and external rating details to assess and monitor credit risk exposure to counterparties.",
+  "key_features": [
+    "Counterparty risk rating maintenance",
+    "Credit risk measurement and monitoring",
+    "Transaction activity tracking",
+    "External rating integration",
+    "Risk assessment analytics",
+    "Portfolio risk analysis"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_38665",
+  "served_by": [
+    "Credit Risk",
+    "Account Management"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Transaction activity changes",
+    "External rating updates",
+    "Credit risk threshold breaches"
+  ],
+  "triggers": [
+    "Risk rating updates",
+    "Credit limit adjustments",
+    "Risk monitoring alerts"
+  ],
+  "scenarios": [
+    {
+      "name": "Credit Rating Maintenance",
+      "description": "A back office function tracks transaction activity and external rating details to maintain counterparty credit ratings"
+    },
+    {
+      "name": "Risk Assessment Update",
+      "description": "Regular assessment and update of counterparty risk ratings based on latest information"
+    },
+    {
+      "name": "Credit Risk Monitoring",
+      "description": "Ongoing monitoring of counterparty credit risk exposure and performance"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "counterpartyCreditRiskMeasurementAccumulators",
+      "counterpartyCreditRiskMeasurementActivityAnalysis",
+      "counterpartyCreditRiskMeasurementPerformanceAnalysis",
+      "counterpartyCreditRiskMeasurementTrends&Events"
+    ],
+    "portfolio": [
+      "counterpartyCreditRiskMeasurementPortfolioActivityAnalysis",
+      "counterpartyCreditRiskMeasurementPortfolioMake-UpAnalysis",
+      "counterpartyCreditRiskMeasurementPortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

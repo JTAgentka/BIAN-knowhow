@@ -1,0 +1,53 @@
+{
+  "capability_name": "Counterparty Administration",
+  "role_definition": "Maintain and provide access to the counterparty reference details to support trading/payment activity. This includes SWIFT addresses, standard settlement instructions that are published. The data is typically acquired using a market feed for the default values, but the facility can support the maintenance of specific details and instructions that apply to the counterparty relationship overriding the public default",
+  "folder_name": "Partner Management",
+  "core_business_object": "Counterparty Administrative Plan",
+  "example_of_use": "Back office clearing and settlement references the counterparty details to assemble a funds transfer as part of an equity trade using the counterparty details to generate the associated SWIFT based payment exchange",
+  "executive_summary": "This Service Domain maintains key counterparty reference information used in the clearing and settlement of wholesale trading",
+  "key_features": [
+    "Consolidate counterparty market feed data",
+    "Qualify data and maintain counterparty directory content",
+    "Provide access to counterparty reference records"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CounterpartyAdministration/12.0.0",
+  "served_by": [
+    "Counterparty Administrative Plan Analytics Object",
+    "Counterparty",
+    "Counterparty Administration_SD_Operations",
+    "Counterparty Directory Entry_Instantiation",
+    "Counterparty Directory Entry_Invocation", 
+    "Counterparty Directory Entry_Reporting",
+    "Counterparty Administration_SD_Service Group"
+  ],
+  "serves": [
+    "Partner Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": [],
+  "individual_analytics": [
+    "counterpartyAdministrativePlanAccumulators",
+    "counterpartyAdministrativePlanActivityAnalysis",
+    "counterpartyAdministrativePlanPerformanceAnalysis",
+    "counterpartyAdministrativePlanTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "counterpartyAdministrativePlanPortfolioActivityAnalysis",
+    "counterpartyAdministrativePlanPortfolioMake-UpAnalysis",
+    "counterpartyAdministrativePlanPortfolioPerformanceAnalysis"
+  ],
+  "bian_life_cycle": "Registered",
+  "stereotype": "ServiceDomain",
+  "aggregated_by": [
+    "Wave 6",
+    "Clearing And Settlement"
+  ],
+  "is_part_of": "Market Data",
+  "gets_input_from": [
+    "Payment Execution"
+  ],
+  "sends_output_to": [
+    "Payment Execution"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "capability_name": "Regulatory Reporting",
+  "role_definition": "The service domain handles the bank's regulatory reporting obligations. This includes the consolidation and presentation of information in regulatory reports and disclosures and handling the response to regulatory requests for information as part of ongoing regulator relations. It also handles the scheduled consolidation, formatting and delivery of the range of compliance reports including 'on-line' trade reporting and after the event transaction analysis reporting",
+  "folder_name": "Policy Management",
+  "core_business_object": "Regulatory Report",
+  "example_of_use": "Trading activity is reported to the exchange to comply with regulatory reporting requirements",
+  "executive_summary": "This service domain administers and orchestrates the tasks required to meet the bank's regulatory reporting obligations",
+  "key_features": [
+    "Consolidate regulatory reporting materials and assemble reports",
+    "Delivery scheduled and ad-hoc reports to regulators",
+    "Handle regulator's reporting requests and responses",
+    "Oversee on-line/production transaction regulatory reporting"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/RegulatoryReporting/12.0.0",
+  "served_by": [
+    "Regulations and Compliance"
+  ],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [
+    "Party Lifecycle Management"
+  ],
+  "triggers": [
+    "Administer"
+  ],
+  "list_of_scenarios": [
+    "Perform other Regulatory Assessments"
+  ]
+}

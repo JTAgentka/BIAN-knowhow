@@ -1,0 +1,34 @@
+{
+  "capability_name": "Investment Portfolio Analysis",
+  "role_definition": "Perform scheduled and ad-hoc performance analysis on a customer's investment portfolio. This can include different types of analysis and performance comparisons",
+  "folder_name": "Investment Portfolio Management",
+  "core_business_object": "Investment Portfolio (object_25.html?object=29475)",
+  "example_of_use": "A relationship manager requests an investment portfolio performance analysis prior to a regular client meeting",
+  "executive_summary": "Assess and report on investment portfolio make-up, valuation and performance",
+  "key_features": [
+    "Consolidate investment portfolio transaction details and comparative market activity reports",
+    "Select types of performance analysis and apply analyses to the period of transaction data",
+    "Develop portfolio performance comparisons and evaluations/justifications"
+  ],
+  "api_bian_portal_link": "Investment Portfolio Analysis API (https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioAnalysis/12.0.0)",
+  "served_by": [
+    "Customer Relationship Management (object_21.html?object=30437)",
+    "Business Unit Management (object_21.html?object=30964)",
+    "Investment Portfolio Management (object_21.html?object=32159)"
+  ],
+  "serves": [
+    "Investment Portfolio Management (object_6.html?object=131007)"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management (object_21.html?object=30437)"
+  ],
+  "triggers": [
+    "Financial Market Analysis (object_21.html?object=37182)",
+    "Financial Market Research (object_21.html?object=38415)",
+    "Investment Account (object_22.html?object=41278)"
+  ],
+  "list_of_scenarios": [
+    "Process Performance Review (views/view_55107.html)",
+    "Process Portfolio Rebalancing (views/view_55523.html)"
+  ]
+}

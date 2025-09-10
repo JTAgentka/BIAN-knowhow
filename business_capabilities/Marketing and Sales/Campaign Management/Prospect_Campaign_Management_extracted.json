@@ -1,0 +1,38 @@
+{
+  "capability_name": "Prospect Campaign Management",
+  "role_definition": "Oversee the use and assess the coverage and impact of external/prospect campaigns. Direct prospect campaign execution resources to maximize business impact and in response to any identified market opportunities and threats. Oversee campaign design and development activity.",
+  "folder_name": "Campaign Management",
+  "core_business_object": "Prospect Campaign (object_26.html?object=40891)",
+  "example_of_use": "Prospect Campaign Management identifies competitor activity that is targeting an untapped market segment. Campaign design is initiated to develop a competitive acquisition campaign to address the threat",
+  "executive_summary": "Assess the coverage and impact of external/prospect campaigns and redirect campaign development and execution activity accordingly",
+  "key_features": [
+    "Track market/competitor activity",
+    "Assess customer segment performance/opportunities",
+    "Assess coverage of prospect campaigns",
+    "Direct the development of prospect campaigns",
+    "Direct the execution of prospect campaigns"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProspectCampaignManagement/12.0.0",
+  "served_by": [
+    "Business Unit Management (object_21.html?object=30964)",
+    "Business Development (object_20.html?object=32900)"
+  ],
+  "serves": [
+    "Campaign Management (object_6.html?object=130345)",
+    "Campaign Performance Management (object_6.html?object=131090)"
+  ],
+  "triggered_by": [
+    "Business Development (object_20.html?object=32900)",
+    "Branch Network Management (object_23.html?object=48774)"
+  ],
+  "triggers": [
+    "Prospect Campaign Design (object_22.html?object=39556)",
+    "Prospect Campaign Execution (object_22.html?object=47050)"
+  ],
+  "list_of_scenarios": [
+    "Execute External Campaign (views/view_55170.html)",
+    "Analyse External Campaign Portfolio Performance (views/view_55338.html)",
+    "Review Branch Location Performance (views/view_55272.html)",
+    "Develop External Campaign (views/view_54948.html)"
+  ]
+}

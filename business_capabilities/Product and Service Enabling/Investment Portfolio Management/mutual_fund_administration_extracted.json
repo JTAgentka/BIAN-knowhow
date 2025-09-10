@@ -1,0 +1,23 @@
+{
+  "capability_name": "Mutual Fund Administration",
+  "role_definition": "Mutual funds provide an investment vehicle to general investors and as such are highly regulated and tend to focus on lower risk/return investments. Mutual funds are allowed to charge investors a management fee, but unlike hedge funds the mutual fund manager is not permitted to share in the fund's performance",
+  "folder_name": "Investment Portfolio Management",
+  "core_business_object": "Not explicitly mentioned in the document",
+  "example_of_use": "A bank operates mutual funds to offer its non accredited customers access to suitably structured investment opportunities.",
+  "executive_summary": "The Mutual Fund Administration Service Domain handles all aspects of the set-up and operation of mutual funds that can be offered to the bank's general (non-accredited) customers",
+  "key_features": [
+    "Handle the fund's accounting, tax administration and financial reporting needs",
+    "Manage/develop the fund, investing in alignment with fund policy",
+    "Handle investor inflows and outflow processing to the fund",
+    "Process management fees",
+    "Support/oversee all general investor servicing and process middle and back office functions"
+  ],
+  "api_bian_portal_link": "Mutual Fund Administration API (https://app.swaggerhub.com/apis/BIAN-3/MutualFundAdministration/12.0.0)",
+  "served_by": [],
+  "serves": [
+    "Investment Portfolio Management (object_6.html?object=131007)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

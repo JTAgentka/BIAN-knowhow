@@ -1,0 +1,24 @@
+{
+  "capability_name": "Financial Instrument Reference Data Management",
+  "role_definition": "Maintain a central reference directory of market traded asset/instrument details. The details are typically captured from one or more specialist market feeds that publish market asset/instrument details. It can include the result of internal reference data processing",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Financial Instrument Directory Entry",
+  "example_of_use": "A corporate financial advisory project references different instrument specifications when assembling a structured financial approach to the customer financing needs",
+  "executive_summary": "This Service Domain maintains a directory of financial instrument reference data",
+  "key_features": [
+    "Consolidate reference data from market sources",
+    "Classify and verify reference data",
+    "Organize reference data for ease of access",
+    "Provide access to instrument reference data"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/FinancialInstrumentReferenceDataManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Financial Instrument Management",
+    "Financial Instrument Association Management",
+    "Financial Instrument to Information Association"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

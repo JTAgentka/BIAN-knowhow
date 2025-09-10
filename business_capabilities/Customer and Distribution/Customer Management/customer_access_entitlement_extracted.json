@@ -1,0 +1,39 @@
+{
+  "capability_name": "Customer Access Entitlement",
+  "role_definition": "This profile is used for servicing and fulfillment controls covering products, services and channel/device usage entitlements. It is referenced for channel access control and utilization limits that may span multiple products. For example there can be a limit on total ATM withdrawals for a customer for all active products over a 24 hour period.",
+  "folder_name": "Customer Management",
+  "core_business_object": "Not specified in the PDF",
+  "example_of_use": "A consumer customer contacts the call center and her access profile is used to determine what products and services can be accessed through this channel",
+  "executive_summary": "This service domain maintains the details of the allowed channel/device based access to products and services that the customer has in place. This profile is referenced in servicing and fulfillment activity and may include customer preferences and access limits/constraints that span multiple products.",
+  "key_features": [
+    "Maintain customers' channel/device access profiles (allowed uses and limits)",
+    "Maintain customers' channel/device usage preferences",
+    "Check/confirm allowed access for customer contacts"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerAccessEntitlement/12.0.0",
+  "served_by": [
+    "Not specified in the PDF"
+  ],
+  "serves": [
+    "Customer Management",
+    "Customer Access Management"
+  ],
+  "triggered_by": [
+    "Servicing Order",
+    "Processing Order",
+    "Credit Card",
+    "Contact Handler",
+    "Session Dialogue",
+    "Transaction Authorization"
+  ],
+  "triggers": [
+    "Not specified in the PDF"
+  ],
+  "list_of_scenarios": [
+    "Process Authentication Request by Issuer",
+    "Develop Opportunity",
+    "Authorise Card Use by Issuer",
+    "Check Customer Channel Access History and Access Entitlements",
+    "Handle Request for Token Assurance"
+  ]
+}

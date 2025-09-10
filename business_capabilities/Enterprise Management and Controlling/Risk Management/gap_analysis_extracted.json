@@ -1,0 +1,64 @@
+{
+  "capability_name": "Gap Analysis",
+  "role_definition": "Maintain and track projected consolidated cash flows to support evaluation and management of currency and interest rate risk positions, the bank's overall dispositive liquidity risk",
+  "folder_name": "Risk Management",
+  "core_business_object": "Interest Rate Gap Risk Analysis",
+  "example_of_use": "A risk management unit/group treasury assembles and maintains the currency and interest rate maturity ladders for the trading function",
+  "executive_summary": "Gap Analysis capability maintains and tracks projected consolidated cash flows to support the evaluation and management of currency and interest rate risk positions, supporting the bank's overall liquidity risk management strategy.",
+  "key_features": [
+    "Consolidated cash flow tracking",
+    "Currency risk position management",
+    "Interest rate risk analysis",
+    "Liquidity risk evaluation",
+    "Maturity ladder maintenance",
+    "Risk position analytics"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_39139",
+  "served_by": [
+    "Market Risk",
+    "Models"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Cash flow projections",
+    "Interest rate changes",
+    "Currency fluctuations",
+    "Liquidity requirements"
+  ],
+  "triggers": [
+    "Risk position updates",
+    "Gap analysis reports",
+    "Liquidity risk assessments"
+  ],
+  "scenarios": [
+    {
+      "name": "Maturity Ladder Maintenance",
+      "description": "A risk management unit/group treasury assembles and maintains the currency and interest rate maturity ladders for the trading function"
+    },
+    {
+      "name": "Cash Flow Analysis",
+      "description": "Tracking and analysis of projected consolidated cash flows for risk management purposes"
+    },
+    {
+      "name": "Interest Rate Gap Assessment",
+      "description": "Evaluation of interest rate gap risk positions and their impact on bank profitability"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "interestRateGapRiskAnalysisAccumulators",
+      "interestRateGapRiskAnalysisActivityAnalysis",
+      "interestRateGapRiskAnalysisPerformanceAnalysis",
+      "interestRateGapRiskAnalysisTrends&Events"
+    ],
+    "portfolio": [
+      "interestRateGapRiskAnalysisPortfolioActivityAnalysis",
+      "interestRateGapRiskAnalysisPortfolioMake-UpAnalysis",
+      "interestRateGapRiskAnalysisPortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

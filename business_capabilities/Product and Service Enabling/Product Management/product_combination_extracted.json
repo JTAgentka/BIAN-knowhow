@@ -1,0 +1,50 @@
+{
+  "capability_name": "Product Combination",
+  "role_definition": "The Product Combination service domain allows a bank to assemble a composite product from two or more existing products. The combination framework implements necessary functional constraints on the 'contained products' and handles considerations such as transfer pricing where the profitability of embedded products may be compromised to ensure management analysis is not distorted",
+  "folder_name": "Product Management",
+  "core_business_object": "Product Combination Facility",
+  "example_of_use": "A current account product instance is bundled with an investment portfolio product instance to create a combined \"margin trading\" product. The performance evaluation of the embedded current account that has constrained capabilities is amended to reflect its contribution to the combined product performance",
+  "executive_summary": "Product Combination supports bundled products applying necessary constraints on embedded product fulfillment and ensuring product performance analysis takes correct account of embedded products' contribution",
+  "key_features": [
+    "Embedded product constrained operation configuration",
+    "Transfer pricing/inter product performance compensation handling",
+    "Combined product fulfillment facilities"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductCombination/12.0.0",
+  "served_by": [
+    "Account Management",
+    "Wave 5",
+    "Operational Services",
+    "Product Bundling"
+  ],
+  "serves": [
+    "Product Management",
+    "Product Development",
+    "Product Bundling"
+  ],
+  "triggered_by": [
+    "Business Unit Management",
+    "Business Development",
+    "Sales Product",
+    "Session Dialogue"
+  ],
+  "triggers": [
+    "Current Account",
+    "Sales Product",
+    "Loan"
+  ],
+  "scenarios": [
+    {
+      "name": "Product Combination SD Overview",
+      "link": "views/view_50985.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ]
+}

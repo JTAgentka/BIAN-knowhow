@@ -1,0 +1,54 @@
+{
+  "capability_name": "Savings Account",
+  "role_definition": "The savings account product may share many features with a standard bank current account (e.g. standing orders, direct debits, payments and deposit services) with some constraints/limitations. There can be restrictions on the amount and frequency of withdrawals with an associated fee/penalty structure to offset higher interest benefits. Sweep mechanisms linked to other products (current account) can also be supported.",
+  "folder_name": "Agreement Management",
+  "core_business_object": "Savings Account Agreement",
+  "example_of_use": "A customer transfers money from a current account to savings account in order to obtain a better rate of interest.",
+  "executive_summary": "This service domain orchestrates a consumer savings account. The typical range of services and fees covers payments from and scheduled and ad-hoc deposits to the account, standing orders, sweeps, and liens.",
+  "key_features": [
+    "Set-up savings account facilities",
+    "Issue cards, check-books, etc. for the account",
+    "Process deposits and withdrawals",
+    "Handle sweeps/liens linked to the account",
+    "Handle standing orders and direct debits linked to the account",
+    "Process fees and apply interest charges",
+    "Provide balance/statements and reports"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/SavingsAccount/12.0.0",
+  "served_by": [
+    "Customer Offer",
+    "Session Dialogue"
+  ],
+  "serves": [
+    "Agreement Management"
+  ],
+  "triggered_by": [
+    "Position Keeping",
+    "Customer Relationship Management",
+    "Servicing Order",
+    "Customer Behavior Insights",
+    "Payment Order",
+    "Savings Account",
+    "Customer Offer",
+    "Cash Concentration",
+    "Customer Behavior Models",
+    "Financial Accounting",
+    "Customer Case"
+  ],
+  "triggers": [
+    "Party Lifecycle Management",
+    "Position Keeping",
+    "Issued Device Administration",
+    "Correspondence",
+    "Product Directory",
+    "Payment Order",
+    "Sales Product Agreement",
+    "Savings Account",
+    "Guideline Compliance",
+    "Customer Product and Service Directory",
+    "Financial Accounting"
+  ],
+  "list_of_scenarios": [
+    "Fulfill a savings account"
+  ]
+}

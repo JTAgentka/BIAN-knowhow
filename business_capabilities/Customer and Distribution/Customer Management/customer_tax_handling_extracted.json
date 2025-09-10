@@ -1,0 +1,29 @@
+{
+  "capability_name": "Customer Tax Handling",
+  "role_definition": "There are different tax tracking and reporting obligations for products and services in different locations and jurisdictions. This service domain handles the consolidation and reporting of tax related activity as necessary for a customer. Note that this service domain is only responsible for the consolidation and reporting of tax related activity - other service domains will be required to handle actual tax processing obligations as may apply for certain products and services",
+  "folder_name": "Customer Management",
+  "core_business_object": "Customer Tax Report; Individual Analytics: customerTaxObligationFulfillmentArrangementAccumulators customerTaxObligationFulfillmentArrangementActivityAnalysis customerTaxObligationFulfillmentArrangementPerformanceAnalysis customerTaxObligationFulfillmentArrangementTrends&Events; Portfolio Analytics: customerTaxObligationFulfillmentArrangementPortfolioActivityAnalysis customerTaxObligationFulfillmentArrangementPortfolioMake-UpAnalysis customerTaxObligationFulfillmentArrangementPortfolioPerformanceAnalysis",
+  "example_of_use": "A consumer customer is provided with a year end tax report for products and services provided by the bank",
+  "executive_summary": "This service domain handles consumer tax reporting obligations including the consolidation and reporting of customer tax related financial activity",
+  "key_features": [
+    "Maintain the customer tax reporting obligations",
+    "Consolidate product/service tax related activity/transaction details",
+    "Analyse financial activity and assemble customer tax reports"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerTaxHandling/12.0.0",
+  "served_by": [
+    "Customer Relationship Management",
+    "Fiduciary Agreement",
+    "Investment Portfolio Planning"
+  ],
+  "serves": [
+    "Customer Management"
+  ],
+  "triggered_by": [
+    "Servicing Order"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Create Customer Reports (views/view_55419.html)"
+  ]
+}

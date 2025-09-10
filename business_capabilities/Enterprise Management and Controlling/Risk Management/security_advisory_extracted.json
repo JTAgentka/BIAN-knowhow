@@ -1,0 +1,63 @@
+{
+  "capability_name": "Security Advisory",
+  "role_definition": "Provide specialist security advice and guidance for line management and projects as needed to ensure security arrangements across the organization",
+  "folder_name": "Risk Management",
+  "core_business_object": "Security Compliance Procedure",
+  "example_of_use": "Specialist security advice is sought for a major project",
+  "executive_summary": "Security Advisory capability provides specialized security guidance and advice to support organizational security arrangements across line management and project implementations.",
+  "key_features": [
+    "Specialist security advice provision",
+    "Line management security guidance",
+    "Project security consultation",
+    "Organization-wide security arrangements",
+    "Security compliance procedure analytics",
+    "Portfolio security analysis"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36757",
+  "served_by": [
+    "Corporate Services",
+    "Non-IT and Non-HR Enterprise Services"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Security compliance requirements",
+    "Project security needs",
+    "Management security requests"
+  ],
+  "triggers": [
+    "Security compliance procedure execution",
+    "Security advice delivery",
+    "Security guidance provision"
+  ],
+  "scenarios": [
+    {
+      "name": "Security Advice Request",
+      "description": "Specialist security advice is sought for a major project"
+    },
+    {
+      "name": "Security Compliance Analysis",
+      "description": "Analysis of security compliance procedures and performance"
+    },
+    {
+      "name": "Security Portfolio Management",
+      "description": "Portfolio-level security analysis and performance evaluation"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "securityComplianceProcedureAccumulators",
+      "securityComplianceProcedureActivityAnalysis",
+      "securityComplianceProcedurePerformanceAnalysis",
+      "securityComplianceProcedureTrends&Events"
+    ],
+    "portfolio": [
+      "securityComplianceProcedurePortfolioActivityAnalysis",
+      "securityComplianceProcedurePortfolioMake-UpAnalysis",
+      "securityComplianceProcedurePortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

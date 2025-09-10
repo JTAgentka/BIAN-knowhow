@@ -1,0 +1,45 @@
+{
+  "capability_name": "Product Inventory Distribution",
+  "role_definition": "The service domains administer the provisioning and distribution of product inventory across the branch network and/or organizing distribution direct to customers (e.g. using mail services) where appropriate. The administration function keeps track of inventory holdings and administers a provisioning schedule to acquire replacement inventory as needed to meet requirements",
+  "folder_name": "Product Management",
+  "core_business_object": "Product Inventory Distribution Administrative Plan",
+  "example_of_use": "The distribution of 'take-one' product marketing materials distributed through the branch network is administered in support of a product sales campaign. Brochures are ordered and distributed to ensure branches are supplied with sufficient inventory to meet customer demand",
+  "executive_summary": "Administer the provisioning and distribution of product inventory across the branch network and/or distribute direct to customers (e.g. mail) where appropriate",
+  "key_features": [
+    "Product inventory tracking",
+    "Replacement inventory provisioning",
+    "Inventory distribution across the branch network",
+    "Inventory distribution through bulk correspondence"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductInventoryDistribution/12.0.0",
+  "served_by": [
+    "Channel Specific",
+    "Wave 5",
+    "Distribution"
+  ],
+  "serves": [
+    "Product Management"
+  ],
+  "triggered_by": [
+    "Product Inventory Item Management"
+  ],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Product Inventory Distribution SD Overview",
+      "link": "views/view_50674.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    },
+    {
+      "name": "Launch New Sales Product",
+      "link": "views/view_54616.html"
+    }
+  ]
+}

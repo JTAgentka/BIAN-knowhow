@@ -1,0 +1,22 @@
+{
+  "capability_name": "Regulatory And Legal Authority",
+  "role_definition": "This service domain manages the effective relations with regulators, accounting and government agencies. It includes establishing contact, assigning relationship management responsibility, scheduling meetings and briefings as necessary and dealing with ad-hoc issues as they arise",
+  "folder_name": "Policy Management",
+  "core_business_object": "regulatory&LegalAuthorityRelationshipManagementPlanAccumulators, regulatory&LegalAuthorityRelationshipManagementPlanActivityAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPerformanceAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanT, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioActivityAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioMake-UpAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioPerformanceAnalysis",
+  "example_of_use": "The bank's contact with regulators is leveraged to streamline the resolution of compliance issues to the bank's benefit",
+  "executive_summary": "Maintain effective relations with regulators, accounting and government agencies. Oversee interactions and reporting as necessary",
+  "key_features": [
+    "Identify and establish contacts",
+    "Assign relationship managers",
+    "Schedule contacts and briefings",
+    "Handle issues as they arise"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/RegulatoryAndLegalAuthority/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

@@ -1,0 +1,32 @@
+{
+  "capability_name": "Financial Market Research",
+  "role_definition": "Consolidate financial market information from a variety of sources and optionally organize the consolidated information to align to different topics or categories for subsequent selection and analysis (see Financial Market Analysis)",
+  "folder_name": "Market Management",
+  "core_business_object": "Financial Market Research (object_26.html?object=31660)",
+  "example_of_use": "An investment portfolio manager obtains financial market research to support portfolio rebalancing decisions",
+  "executive_summary": "The service domain consolidates external financial market research",
+  "key_features": [
+    "Identify and subscribe to financial market research services",
+    "Operate access to financial market research service to obtain reports",
+    "Consolidate, classify and maintain research",
+    "Provide access to financial market research within the bank (direct and for analysis)",
+    "Support ad-hoc requests to identify and obtain financial market research"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/FinancialMarketResearch/12.0.0",
+  "served_by": [
+    "Financial Market Analysis (object_21.html?object=37182)",
+    "Investment Portfolio Analysis (object_21.html?object=37857)"
+  ],
+  "serves": [
+    "Market Management (object_6.html?object=63703)"
+  ],
+  "triggered_by": [
+    "Financial Market Analysis (object_21.html?object=37182)",
+    "Investment Portfolio Analysis (object_21.html?object=37857)"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Process Performance Review (views/view_55107.html)",
+    "Process Portfolio Rebalancing (views/view_55523.html)"
+  ]
+}

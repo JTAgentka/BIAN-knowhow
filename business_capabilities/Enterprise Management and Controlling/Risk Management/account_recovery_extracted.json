@@ -1,0 +1,44 @@
+{
+  "capability_name": "Account Recovery",
+  "role_definition": "Handles the recovery of distressed accounts that have exceeded standard late/payment handling but have not yet been fully written off and passed to collections. The restructuring can involve partial write downs and leveraging any tax or other program of assistance that can be applied. The situation is managed until the account is recovered or a decision made to pass the account over to collections",
+  "folder_name": "Risk Management",
+  "core_business_object": "Account Recovery Procedure",
+  "example_of_use": "A non-performing customer account is handed over for recovery after the normal relationship management efforts have failed. Additional authority is provided to renegotiate/structure the account to enable the customer to attempt recovery. This restructuring can result in write downs that need to be booked appropriately",
+  "executive_summary": "This service domain handles the restructuring of a distressed account (loan) after standard recovery procedures have been exhausted",
+  "key_features": [
+    "Account status assessment",
+    "Account recovery planning",
+    "Customer agreement/negotiation",
+    "Account terms amendment/restructuring"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/AccountRecovery/12.0.0",
+  "served_by": [
+    "Customer Management"
+  ],
+  "serves": [
+    "Financial Account Management",
+    "Risk Management", 
+    "Risk Event Management"
+  ],
+  "triggered_by": [
+    "Credit Card issues",
+    "Customer Case escalations",
+    "Failed standard recovery procedures"
+  ],
+  "triggers": [
+    "Corporate Current Account actions",
+    "Account restructuring processes",
+    "Collection procedures"
+  ],
+  "list_of_scenarios": [
+    "accountRecoveryProcedureAccumulators",
+    "accountRecoveryProcedureActivityAnalysis",
+    "accountRecoveryProcedurePerformanceAnalysis",
+    "accountRecoveryProcedureTrends&Events",
+    "accountRecoveryProcedurePortfolioActivityAnalysis",
+    "accountRecoveryProcedurePortfolioMake-UpAnalysis",
+    "accountRecoveryProcedurePortfolioPerformanceAnalysis",
+    "Process Request for Amount Block",
+    "Process Periodic Review of Collection Actions"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "capability_name": "IT Standards And Guidelines",
+  "role_definition": "Develop, maintain and enforce IT architectures, systems related policies and standards as appropriate. Select from industry standards, commercially available development and production environments, infrastructure platforms, systems development and deployment tooling and IT utilities/libraries. Define the IT acquisition, development, maintenance and usage guidelines and policies governing systems development and production use across the enterprise",
+  "folder_name": "Policy Management",
+  "core_business_object": "Technology Standards Specification",
+  "example_of_use": "A review of available IT tooling is performed to identify recommended tooling for application development",
+  "executive_summary": "Define and apply comprehensive IT architectures, policies and standards as appropriate. Also define the IT usage guidelines and procedures governing systems use across the enterprise",
+  "key_features": [
+    "Define IT Policies and Guidelines",
+    "Select and apply IT standards",
+    "Select technology platforms and technology for development and production",
+    "Select preferred IT tools and utilities for development and production"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ITStandardsAndGuidelines/12.0.0",
+  "served_by": [
+    "IT Management"
+  ],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [],
+  "triggers": [
+    "Design"
+  ],
+  "list_of_scenarios": []
+}

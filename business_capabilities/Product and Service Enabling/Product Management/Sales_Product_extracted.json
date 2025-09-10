@@ -1,0 +1,106 @@
+{
+  "capability_name": "Sales Product",
+  "capability_type": "Service Domain",
+  "role_definition": "A sales product defines specific constraints and terms that augment the features of the base product it 'wraps'. It is used to support customization or core products to address specific market needs and opportunities with more narrowly targeted products",
+  "example_of_use": "A bank packages its Current Account product with features suited to students as part of a prospect campaign",
+  "executive_summary": "A representation of a product as sold to a customer, covering the operational fulfillment requirements",
+  "key_features": [
+    "Link to core/underlying product instance",
+    "Support specific product constraints/processing terms",
+    "Enable/link to additional service features"
+  ],
+  "service_role": "A representation of a product as sold to a customer, covering the fulfillment requirements (as opposed to the legal terms handled by Sales Product Agreement)",
+  "bian_lifecycle": {
+    "registration_status": "Registered"
+  },
+  "stereotypes": ["ServiceDomain"],
+  "api_bian_portal": "Sales Product API (https://app.swaggerhub.com/apis/BIAN-3/SalesProduct/12.0.0)",
+  "core_business_object": true,
+  "individual_analytics": [
+    "product/ServiceAgreementAccumulators",
+    "product/ServiceAgreementActivityAnalysis",
+    "product/ServiceAgreementPerformanceAnalysis",
+    "product/ServiceAgreementTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "product/ServiceAgreementPortfolioActivityAnalysis",
+    "product/ServiceAgreementPortfolioMake-UpAnalysis",
+    "product/ServiceAgreementPortfolioPerformanceAnalysis"
+  ],
+  "scenarios": [
+    "Launch New Sales Product",
+    "Phase Out Sales Product Current Account",
+    "Conduct Customer Centric Product Manufacturing"
+  ],
+  "appears_on": [
+    "BIAN Coreless 2.0 Wireframe",
+    "Sales Product SD Overview",
+    "BIAN Service Landscape V12.0 Value Chain",
+    "BIAN Service Landscape V12.0 Matrix View",
+    "Production Fulfillment & Production Operations"
+  ],
+  "relations": {
+    "aggregated_by": [
+      "Production Fulfillment & Production Operations",
+      "Sales",
+      "Wave 4",
+      "Consumer Banking"
+    ],
+    "gets_input_from": [
+      "Current Account",
+      "Sales Product",
+      "Customer Offer",
+      "Product Deployment",
+      "Product Combination",
+      "Session Dialogue"
+    ],
+    "is_equal_to": ["Sales Product"],
+    "is_part_of": ["Sales"],
+    "realized_by": [
+      "Product and Service Agreement_ Analytics Object",
+      "Sales Product_SD_Operations",
+      "Productand Service Agreement_Reporting",
+      "Productand Service Agreement_Invocation",
+      "Productand Service Agreement_Instantiation",
+      "Change FP from Agree Terms to Fulfill for Sales Product SD",
+      "Sales Product_SD_Service Group",
+      "Product and Service Agreement",
+      "Ev CR Set-up the operational terms agreement for a sales product instance",
+      "Re BQ Retrieve details about an individual arrangement",
+      "Up BQ Update details of an operational term arrangement",
+      "Co CR Control the execution/application of the operational terms",
+      "Product and Service",
+      "Ec BQ Accept, reject etc an operational term arrangement",
+      "Up CR Update sales product operational terms agreement",
+      "Gr BQ Provide a permission grant associated with an operational term arrangement",
+      "Re CR Retrieve details about the sales product operational terms agreement",
+      "Ev BQ Set up specific operational arrangements under the agreement",
+      "Agree Terms"
+    ],
+    "sends_output_to": [
+      "Product Inventory Item Management",
+      "Current Account",
+      "Sales Product",
+      "Product Combination",
+      "Intellectual Property Portfolio",
+      "Customer Proposition"
+    ],
+    "serves": ["Product Management"],
+    "triggered_by": [
+      "Investment Portfolio Management",
+      "Product Portfolio",
+      "Sales Product",
+      "Customer Offer",
+      "Product Deployment"
+    ],
+    "triggers": [
+      "Product Directory",
+      "Current Account",
+      "Sales Product",
+      "Product Fulfillment SDs"
+    ]
+  },
+  "business_area": "Product and Service Enabling",
+  "domain": "Product Management",
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_37972.pdf"
+}

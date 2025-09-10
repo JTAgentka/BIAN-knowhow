@@ -1,0 +1,101 @@
+{
+  "capability_name": "Underwriting",
+  "role_definition": "The underwriting decision considers the ability of the borrower to finance the loan based on their known cash flows and credit worthiness. The underwriting decision refers to specific properties of the proposed loan (amount, term, repayment schedule, collateral etc.), the income and known commitments of the borrower and their credit history with the bank. The decision may factor perceived underwriting risks into the interest rate and/or collateral requirements to obtain approval",
+  "folder_name": "Risk Management",
+  "core_business_object": "Underwriting Assessment",
+  "example_of_use": "A corporate loan offer is processed and at the appropriate point an underwriting authorization is requested",
+  "executive_summary": "This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)",
+  "key_features": [
+    "Consolidate underwriting decision materials",
+    "Evaluate cash flow/credit position for proposal",
+    "Make (conditional if needed) underwriting determination",
+    "Risk-based pricing adjustments",
+    "Collateral requirement assessment",
+    "Multiple authorization levels support"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/Underwriting/12.0.0",
+  "served_by": [
+    "Customer Services",
+    "Sales",
+    "Wave 1",
+    "Loans and Deposits"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management",
+    "Mortgage Loan",
+    "Servicing Order",
+    "Letter of Credit",
+    "Customer Offer",
+    "Merchandising Loan",
+    "Consumer Loan",
+    "Bank Guarantee",
+    "Loan Syndication"
+  ],
+  "triggers": [
+    "Document Services",
+    "Customer Relationship Management",
+    "Correspondence",
+    "Party Asset Directory",
+    "Corporate Current Account",
+    "Internal Audit",
+    "Payment Order",
+    "Collateral Asset Administration",
+    "Fraud Evaluation",
+    "Credit Facility",
+    "Customer Position",
+    "Guideline Compliance",
+    "Customer Credit Rating",
+    "Party Reference Data Directory",
+    "Regulatory Compliance",
+    "Credit Risk Models",
+    "Collateral Allocation Management"
+  ],
+  "scenarios": [
+    {
+      "name": "Perform Underwriting for Bank Guarantee",
+      "description": "Underwriting process for bank guarantee requests"
+    },
+    {
+      "name": "Handle Request for Loan that Requires Syndication",
+      "description": "Managing underwriting for syndicated loan requests"
+    },
+    {
+      "name": "Handle Request for Corporate Loan",
+      "description": "Corporate loan underwriting process"
+    },
+    {
+      "name": "Perform Underwriting for Mortgage Loan",
+      "description": "Mortgage loan underwriting assessment"
+    },
+    {
+      "name": "Perform Underwriting for Uncollateralised Consumer Loan",
+      "description": "Consumer loan underwriting without collateral"
+    },
+    {
+      "name": "Handle Request for Credit Facility",
+      "description": "Credit facility underwriting process"
+    },
+    {
+      "name": "Corporate Loan Authorization",
+      "description": "A corporate loan offer is processed and at the appropriate point an underwriting authorization is requested"
+    }
+  ],
+  "analytics": {
+    "individual": [
+      "underwritingAssessmentAccumulators",
+      "underwritingAssessmentActivityAnalysis",
+      "underwritingAssessmentPerformanceAnalysis",
+      "underwritingAssessmentTrends&Events"
+    ],
+    "portfolio": [
+      "underwritingAssessmentPortfolioActivityAnalysis",
+      "underwritingAssessmentPortfolioMake-UpAnalysis",
+      "underwritingAssessmentPortfolioPerformanceAnalysis"
+    ]
+  },
+  "registration_status": "Registered",
+  "stereotype": "ServiceDomain"
+}

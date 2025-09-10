@@ -1,0 +1,30 @@
+{
+  "capability_name": "Cash Management And Account Services",
+  "folder_name": "Money Movement Management",
+  "role_definition": "Cash Management and Account Services combines the capabilities of a cash management account that in itself combines features of a current account and a savings account, with additional cash management services. The supporting features that make up the facility (checks/cheques, standing orders, debit cards, phone and on-line banking services etc. can be extended to include other features such as positive pay and reverse positive pay for check processing.",
+  "core_business_object": "Cash Management Account Service Arrangement",
+  "example_of_use": "A corporate customer implements a positive pay facility with the bank to reduce the exposure to check fraud for the checks it writes.",
+  "executive_summary": "This service domain orchestrates a cash management and accounting services facility typically used by corporations to support additional cash management features over and above the standard facilities of current and savings accounts",
+  "key_features": [
+    "Set-up cash management and accounting service facilities",
+    "Issue cards, check-books for an account",
+    "Process deposits and withdrawals",
+    "Handle standing orders and direct debits",
+    "Process fees and apply interest charges",
+    "Provide balance/statements and reports",
+    "Process cash management services such a positive pay"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CashManagementAndAccountServices/12.0.0",
+  "served_by": [
+    "Customer Relationship Management",
+    "Servicing Order",
+    "Cash Management And Account Services",
+    "Customer Offer"
+  ],
+  "serves": [
+    "Money Movement Management"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": []
+}

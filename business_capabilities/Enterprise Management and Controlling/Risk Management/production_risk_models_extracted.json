@@ -1,0 +1,42 @@
+{
+  "capability_name": "Production Risk Models",
+  "role_definition": "Develop and refine production risk models to detect possible exposures to procedural failures",
+  "folder_name": "Risk Management",
+  "core_business_object": "Production Risk Model Specification",
+  "example_of_use": "Financial engineers respond to an analysis of production issues and develop/refine their production risk models to better detect the root cause",
+  "executive_summary": "This capability focuses on developing and refining production risk models to identify and detect potential exposures to procedural failures in business operations.",
+  "key_features": [
+    "Development of production risk models",
+    "Refinement of existing risk models",
+    "Detection of procedural failure exposures",
+    "Root cause analysis capabilities",
+    "Individual and portfolio analytics",
+    "Performance analysis and trending"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_20.html_object_42574",
+  "served_by": [
+    "Operational Risk"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Production issues analysis",
+    "Procedural failure detection",
+    "Risk model update requirements"
+  ],
+  "triggers": [
+    "Risk model development",
+    "Model refinement activities",
+    "Failure exposure detection"
+  ],
+  "list_of_scenarios": [
+    "productionRiskModelSpecificationAccumulators",
+    "productionRiskModelSpecificationActivityAnalysis",
+    "productionRiskModelSpecificationPerformanceAnalysis",
+    "productionRiskModelSpecificationTrends&Events",
+    "productionRiskModelSpecificationPortfolioActivityAnalysis",
+    "productionRiskModelSpecificationPortfolioMake-UpAnalysis",
+    "productionRiskModelSpecificationPortfolioPerformanceAnalysis"
+  ]
+}

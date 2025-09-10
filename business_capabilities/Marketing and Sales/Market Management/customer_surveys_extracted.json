@@ -1,0 +1,39 @@
+{
+  "capability_name": "Customer Surveys",
+  "role_definition": "Handle the deployment, execution and on-going refinement of customer surveys. This includes many types of survey including traditional mailshot questionnaires, in production review/feedback solicitation, review panels/focus groups. The survey execution process performs the survey definitions, selection of reviewers, surveying and post survey analysis",
+  "folder_name": "Market Management",
+  "core_business_object": "Customer Survey (object_26.html?object=48721)",
+  "example_of_use": "A bank develops a customer questionnaire to obtain feedback from customers that make frequent use of the self-service contact center facility for service improvement suggestions",
+  "executive_summary": "Define and execute and analyze customer surveys",
+  "key_features": [
+    "Customer survey definition/refinement",
+    "Reviewer selection/identification",
+    "Customer survey execution",
+    "Customer survey analysis and feedback"
+  ],
+  "api_bian_portal_link": "Customer Surveys API (https://app.swaggerhub.com/apis/BIAN-3/CustomerSurveys/12.0.0)",
+  "served_by": [],
+  "serves": [
+    "Market Management (object_6.html?object=63703)"
+  ],
+  "triggered_by": [
+    "Market Research (object_21.html?object=34938)"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Analyse Customer Segment Performance (views/view_55046.html)"
+  ],
+  "individual_analytics": [
+    "customerSurveyProcedureAccumulators",
+    "customerSurveyProcedureActivityAnalysis",
+    "customerSurveyProcedurePerformanceAnalysis",
+    "customerSurveyProcedureTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "customerSurveyProcedurePortfolioActivityAnalysis",
+    "customerSurveyProcedurePortfolioMake-UpAnalysis",
+    "customerSurveyProcedurePortfolioPerformanceAnalysis"
+  ],
+  "service_role": "Define and execute and analyze customer surveys",
+  "registration_status": "Registered"
+}

@@ -1,0 +1,85 @@
+{
+  "capability_name": "Product Design",
+  "role_definition": "Design and refine bank product and service specifications. This addresses multiple aspects including the core product specification definition, legal, tax and regulatory compliance, pricing, risk and performance assessments, testing and supporting systems and production requirements definition",
+  "folder_name": "Product Management",
+  "core_business_object": "Product",
+  "example_of_use": "Product management identifies an opportunity to amend key features of a product to target a market segment",
+  "executive_summary": "Develop/refine product designs and supporting specification details",
+  "key_features": [
+    "Consolidate desired product/service features and requirements",
+    "Define and develop product/service specifications",
+    "Deploy, process feedback and refine/tune product/service specifications"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductDesign/12.0.0",
+  "served_by": [
+    "Product Management",
+    "Wave 3",
+    "Product Design"
+  ],
+  "serves": [
+    "Product Management",
+    "Product Development",
+    "Product Design"
+  ],
+  "triggered_by": [
+    "Investment Portfolio Management",
+    "Product Portfolio",
+    "Product Design",
+    "Servicing Activity Analysis"
+  ],
+  "triggers": [
+    "Correspondence",
+    "Product Directory",
+    "Product Inventory Item Management",
+    "Current Account",
+    "Sales Product Agreement",
+    "Product Deployment",
+    "System Development",
+    "Financial Accounting",
+    "Intellectual Property Portfolio",
+    "Product Design",
+    "Regulatory Compliance"
+  ],
+  "scenarios": [
+    {
+      "name": "Product Design SD Overview",
+      "link": "views/view_50872.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    },
+    {
+      "name": "Create New Sales Product Bundle",
+      "link": "views/view_55028.html"
+    },
+    {
+      "name": "Review Call Centre Activity for New Product",
+      "link": "views/view_55164.html"
+    },
+    {
+      "name": "Create New Product",
+      "link": "views/view_55146.html"
+    },
+    {
+      "name": "Create New Sales Product Single",
+      "link": "views/view_55221.html"
+    },
+    {
+      "name": "Perform Servicing Root Cause Analysis",
+      "link": "views/view_54750.html"
+    },
+    {
+      "name": "Conduct Customer Centric Product Manufacturing",
+      "link": "views/view_54849.html"
+    },
+    {
+      "name": "Change Operational Current Account Product",
+      "link": "views/view_54857.html"
+    }
+  ]
+}

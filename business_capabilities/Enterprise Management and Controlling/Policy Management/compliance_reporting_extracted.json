@@ -1,0 +1,26 @@
+{
+  "capability_name": "Compliance Reporting",
+  "role_definition": "This service domain schedules, consolidates information and reports on internal audit and compliance activity across the bank",
+  "folder_name": "Policy Management",
+  "core_business_object": "Compliance Reporting Administrative Plan",
+  "example_of_use": "The financial accounting procedures for a back office function are audited",
+  "executive_summary": "This service domain administers and orchestrates the tasks required to apply and report on internal audit control and reporting activity",
+  "key_features": [
+    "Consolidate internal compliance/audit reporting materials and assemble reports",
+    "Delivery scheduled and ad-hoc reports to internal auditors, highlighting non-compliance",
+    "Handle follow up for identified remedial actions for non-compliance",
+    "Oversee on-line/production transaction regulatory reporting"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ComplianceReporting/12.0.0",
+  "served_by": [
+    "Regulations and Compliance"
+  ],
+  "serves": [
+    "Policy Management"
+  ],
+  "triggered_by": [],
+  "triggers": [
+    "Administer"
+  ],
+  "list_of_scenarios": []
+}

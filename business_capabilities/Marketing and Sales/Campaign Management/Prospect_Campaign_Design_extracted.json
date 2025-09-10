@@ -1,0 +1,36 @@
+{
+  "capability_name": "Prospect Campaign Design",
+  "role_definition": "This Service Domain designs and refines prospect campaigns (or integrates designs from external campaign specialists). Prospect campaigns target new customer acquisition and are typically proactive (involving prospect targeting, contact and solicitation). Version numbering is used to track the impact of changes made to campaigns over their usage.",
+  "folder_name": "Campaign Management",
+  "core_business_object": "Prospect Campaign (object_26.html?object=40891)",
+  "example_of_use": "A prospect acquisition campaign is updated to provide amended/improved pricing terms that can be offered to targeted prospects poor take-up rate has been detected for the campaign",
+  "executive_summary": "Design and refine prospect campaign specifications based on their impact",
+  "key_features": [
+    "Define the target profile/impact of a campaign",
+    "Specify a prospect campaign",
+    "Track the impact of a campaign",
+    "Refine/reconfigure a campaign"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProspectCampaignDesign/12.0.0",
+  "served_by": [
+    "Prospect Campaign Management (object_21.html?object=32462)",
+    "Business Development (object_20.html?object=32900)"
+  ],
+  "serves": [
+    "Campaign Management (object_6.html?object=130345)",
+    "Campaign Design (object_6.html?object=131538)"
+  ],
+  "triggered_by": [
+    "Prospect Campaign Management (object_21.html?object=32462)",
+    "Business Development (object_20.html?object=32900)",
+    "Prospect Campaign Execution (object_22.html?object=47050)"
+  ],
+  "triggers": [
+    "Market Research (object_21.html?object=34938)"
+  ],
+  "list_of_scenarios": [
+    "Execute External Campaign (views/view_55170.html)",
+    "Analyse External Campaign Portfolio Performance (views/view_55338.html)",
+    "Develop External Campaign (views/view_54948.html)"
+  ]
+}

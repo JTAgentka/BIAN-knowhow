@@ -1,0 +1,27 @@
+{
+  "capability_name": "Product Broker Agreement",
+  "role_definition": "This service domain administers the contractual, operational and financial aspects of the relationship with a 3rd party product or service provider. Note that other service domains handle different aspects of broker relations such as relationship management, commissions, billing and payments and operational support",
+  "folder_name": "Partner Management",
+  "core_business_object": "Product Broker Agreement (object_25.html?object=42120)",
+  "example_of_use": "A monthly assessment is made of the performance of a broker against service levels and projected business volumes",
+  "executive_summary": "This service domain maintains product broker contractual and service level agreements and tracks and confirms compliance and service related activity/volume goals when necessary",
+  "key_features": [
+    "Establish and maintain broker service terms and conditions",
+    "Track relationship activity for compliance with contractual limits/goals",
+    "Provide confirmation that proposed actions are covered"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductBrokerAgreement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Partner Management (object_6.html?object=130509)"
+  ],
+  "triggered_by": [
+    "Issued Device Administration (object_21.html?object=30905)",
+    "Session Dialogue (object_23.html?object=48273)"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Handle Customer Request for User Access Token Using Bank Authorization Grant and its Client Secret within Active Contact (views/view_54913.html)",
+    "Handle TPP Request for Registration with Bank and Exchange of 'Client Identifier' and 'Client Secret' for Later Reference (views/view_55320.html)"
+  ]
+}

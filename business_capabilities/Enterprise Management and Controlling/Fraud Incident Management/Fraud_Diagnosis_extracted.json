@@ -1,0 +1,29 @@
+{
+  "capability_name": "Fraud Diagnosis",
+  "role_definition": "Analyze suspect transaction with Customer behavior information across product portfolio, using Expert Systems/Artificial Intelligence and/or manual review, including customer contact to determine if transaction is fraudulent. Further apply Economic Model to determine transaction disposition and notify applicable Product Fulfillment SDs.",
+  "folder_name": "Fraud Incident Management",
+  "core_business_object": "Fraud Diagnosis",
+  "example_of_use": "Out of pattern card use is detected and the details passed for analysis. The analysis determines there is a high probability of fraud recommending appropriate containment actions",
+  "executive_summary": "This service domain handles the evaluation of detected possible fraud to support an appropriate response to contain the exposure",
+  "key_features": [
+    "Analyse activity to assess likelihood of customer fraud",
+    "Analyse activity to assess likelihood of merchant fraud",
+    "Analyse activity to assess likelihood of intermediary fraud"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/FraudDiagnosis/12.0.0",
+  "served_by": [
+    "Not explicitly specified in the source document"
+  ],
+  "serves": [
+    "Fraud Incident Management"
+  ],
+  "triggered_by": [
+    "Not explicitly specified in the source document"
+  ],
+  "triggers": [
+    "Not explicitly specified in the source document"
+  ],
+  "list_of_scenarios": [
+    "Service Role: Handle the assessment, diagnosis and resolution of cases of fraud that have been detected and confirmed in production"
+  ]
+}

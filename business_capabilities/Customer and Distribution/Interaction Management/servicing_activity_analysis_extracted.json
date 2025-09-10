@@ -1,0 +1,34 @@
+{
+  "capability_name": "Servicing Activity Analysis",
+  "role_definition": "Analyze customer servicing position activity, including teller, case/contact center traffic and VoIP activity. Analysis includes captured call/channel/device type, activity, onward routing and resolution decisions for operational and procedural insights and facility/process and training improvement (Root Cause Analysis)",
+  "folder_name": "Interaction Management",
+  "core_business_object": "Servicing Event",
+  "example_of_use": "Contact center management reviews servicing activity analysis in order to identify areas where additional training and guidance is needed to improve the customer experience",
+  "executive_summary": "This service domain analyzes servicing activity to support continual service improvement",
+  "key_features": [
+    "Analyze servicing activity for root causes",
+    "Consolidate and present data to support analysis",
+    "Recommend remedial actions that might mitigate the root cause for detected issues"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ServicingActivityAnalysis/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Customer Management",
+    "Interaction Management"
+  ],
+  "triggered_by": [
+    "Contact Center Operations",
+    "Servicing Activity Analysis"
+  ],
+  "triggers": [
+    "Servicing Event History",
+    "Management Manual",
+    "Product Design",
+    "Servicing Activity Analysis"
+  ],
+  "list_of_scenarios": [
+    "Review Call Centre Activity for New Product",
+    "Adjust Call Centre Position Assignments",
+    "Perform Servicing Root Cause Analysis"
+  ]
+}

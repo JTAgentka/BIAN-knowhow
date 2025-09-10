@@ -1,0 +1,27 @@
+{
+  "capability_name": "Corporate Relationship",
+  "role_definition": "Manage corporate relationships with key parties such as major clients, political and industry groups, user associations etc.",
+  "folder_name": "Interaction Management",
+  "core_business_object": "Corporate Partner Relationship Management Plan",
+  "example_of_use": "A regular relationship review is scheduled with a major multinational customer to develop business opportunities",
+  "executive_summary": "Not explicitly provided in the document",
+  "key_features": [
+    "Manage corporate relationships with key parties",
+    "Handle major clients relationships",
+    "Manage political and industry group relationships",
+    "Manage user associations relationships"
+  ],
+  "api_bian_portal_link": "Not specified in the document",
+  "served_by": [],
+  "serves": [
+    "Interaction Management",
+    "Partner Management"
+  ],
+  "triggered_by": [
+    "Asset Securitization"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Select Buyers for Securitize Assets"
+  ]
+}

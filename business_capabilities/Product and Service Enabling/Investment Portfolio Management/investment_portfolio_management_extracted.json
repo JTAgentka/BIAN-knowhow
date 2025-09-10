@@ -1,0 +1,47 @@
+{
+  "capability_name": "Investment Portfolio Management",
+  "role_definition": "Orchestrate the investment/ rebalancing of an investment portfolio to optimize gains remaining within the terms of the portfolio 'charter' or agreement",
+  "folder_name": "Investment Portfolio Management",
+  "core_business_object": "Investment Portfolio (object_25.html?object=29475)",
+  "example_of_use": "An investment manager monitoring the markets determines that an identified opportunity can be exploited for the portfolio, remaining in line with the portfolio policies",
+  "executive_summary": "Manage an investment portfolio, initiating trading to leverage market opportunities, remaining within portfolio trading policies",
+  "key_features": [
+    "Monitor market for opportunities/threats",
+    "Match identified trading opportunity to investment portfolio policies",
+    "Initiate market trades to rebalance/improve portfolio make-up"
+  ],
+  "api_bian_portal_link": "Investment Portfolio Management API (https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioManagement/12.0.0)",
+  "served_by": [
+    "Business Unit Management (object_21.html?object=30964)",
+    "Investment Portfolio Analysis (object_21.html?object=37857)",
+    "Session Dialogue (object_23.html?object=48273)",
+    "Investment Portfolio Planning (object_23.html?object=48534)"
+  ],
+  "serves": [
+    "Investment Portfolio Management (object_6.html?object=131007)"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management (object_21.html?object=30437)",
+    "Investment Portfolio Management (object_21.html?object=32159)",
+    "Investment Portfolio Planning (object_23.html?object=48534)"
+  ],
+  "triggers": [
+    "Investment Portfolio Management (object_21.html?object=32159)",
+    "Current Account (object_21.html?object=37122)",
+    "Sales Product (object_21.html?object=37972)",
+    "Customer Position (object_22.html?object=41136)",
+    "Investment Account (object_22.html?object=41278)",
+    "Customer Product and Service Directory (object_22.html?object=41591)",
+    "Product Design (object_22.html?object=44093)",
+    "Product Matching (object_22.html?object=44814)",
+    "Party Reference Data Directory (object_22.html?object=45230)",
+    "Session Dialogue (object_23.html?object=48273)",
+    "Investment Portfolio Planning (object_23.html?object=48534)"
+  ],
+  "list_of_scenarios": [
+    "Handle Request for Windfall Investment (views/view_55037.html)",
+    "Handle Request for Investment Plan (views/view_55514.html)",
+    "Process Portfolio Rebalancing (views/view_55523.html)",
+    "Conduct Customer Centric Product Manufacturing (views/view_54849.html)"
+  ]
+}

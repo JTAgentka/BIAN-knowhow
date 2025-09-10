@@ -1,0 +1,46 @@
+{
+  "capability_name": "Product Sales Support",
+  "role_definition": "Administer the allocation of specialist support to advise on specific products and services",
+  "folder_name": "Product Management",
+  "core_business_object": "Product Sales Support Administrative Plan",
+  "example_of_use": "An established corporate customer arranges a meeting with a specialist to discuss short term funding options",
+  "executive_summary": "This Service Domain administers customer access to product specialists",
+  "key_features": [],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductSalesSupport/12.0.0",
+  "served_by": [
+    "Wave 6",
+    "Sales"
+  ],
+  "serves": [
+    "Product Management"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management",
+    "Product Expert Sales Support"
+  ],
+  "triggers": [
+    "Product Expert Sales Support"
+  ],
+  "scenarios": [
+    {
+      "name": "Product Sales Support SD Overview",
+      "link": "views/view_50815.html"
+    },
+    {
+      "name": "BIAN Coreless 2.0 Wireframe",
+      "link": "views/view_50878.html"
+    },
+    {
+      "name": "Relationship Development",
+      "link": "views/view_51270.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ]
+}

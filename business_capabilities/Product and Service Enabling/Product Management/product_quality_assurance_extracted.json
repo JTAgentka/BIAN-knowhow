@@ -1,0 +1,51 @@
+{
+  "capability_name": "Product Quality Assurance",
+  "role_definition": "The service domain maintain and execute a portfolio of product quality assurance tests and if appropriate certifications to apply to new and updated production applications. These tests can be applied to any specific aspects of product sales, servicing and fulfillment as might be appropriate",
+  "folder_name": "Product Management",
+  "core_business_object": "Product and Service Assessment",
+  "example_of_use": "Quality assurance tests are applied to evaluate a newly released product processing to determine whether error and issue rates are acceptable and support root cause analysis",
+  "executive_summary": "Maintain and execute a portfolio of product quality assurance tests and certifications that can be applied to evaluate any aspect of production activity for quality assurance",
+  "key_features": [
+    "Select assurance target area",
+    "Apply assurance tests",
+    "Analyze testing results to determine root cause for error rates/issues"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ProductQualityAssurance/12.0.0",
+  "served_by": [
+    "Product Management",
+    "Wave 5"
+  ],
+  "serves": [
+    "Product Management",
+    "Product Performance Management"
+  ],
+  "triggered_by": [
+    "Product Portfolio",
+    "Product Deployment"
+  ],
+  "triggers": [
+    "Contact Center Management"
+  ],
+  "scenarios": [
+    {
+      "name": "Product Quality Assurance SD Overview",
+      "link": "views/view_50782.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    },
+    {
+      "name": "Launch New Sales Product",
+      "link": "views/view_54616.html"
+    },
+    {
+      "name": "Review Call Centre Activity for New Product",
+      "link": "views/view_55164.html"
+    }
+  ]
+}

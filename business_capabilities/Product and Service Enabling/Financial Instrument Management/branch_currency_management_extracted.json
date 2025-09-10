@@ -1,0 +1,45 @@
+{
+  "capability_name": "Branch Currency Management",
+  "role_definition": "This service domain is responsible for tracking the available cash (currency) inventory held and distributed within the Branch location to teller and ATM positions, to ensure adequate float is always available at all positions. Also to check balances and see that excess cash is transferred to secure central storage as appropriate. If necessary specific criteria can be selected to refine the allocation",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Branch Currency Management (object_38.html?object=48818)",
+  "example_of_use": "The branch management reviews the available float and confirms end of day balances at the teller positions",
+  "executive_summary": "Track cash inventory, project demand and ensure all cash is accounted for within the branch",
+  "key_features": [
+    "Cash inventory usage and availability tracking",
+    "Branch cash inventory requirements evaluation and planning",
+    "Oversight of cash availability and movements within the branch"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/BranchCurrencyManagement/12.0.0",
+  "served_by": [],
+  "serves": [
+    "Financial Instrument Management",
+    "Financial Instrument Custodial Management",
+    "Financial Instrument Inventory Management"
+  ],
+  "triggered_by": [
+    "ATM Network Management"
+  ],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Review ATM Float and Outage",
+      "link": "views/view_54837.html"
+    }
+  ],
+  "additional_info": {
+    "bian_lifecycle_registration_status": "Registered",
+    "service_role": "Manage the secure movement of cash and currencies between branches/ATMs and central holdings.",
+    "individual_analytics": [
+      "branchCashAllocationAccumulators",
+      "branchCashAllocationActivityAnalysis",
+      "branchCashAllocationPerformanceAnalysis",
+      "branchCashAllocationTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "branchCashAllocationPortfolioActivityAnalysis",
+      "branchCashAllocationPortfolioMake-UpAnalysis",
+      "branchCashAllocationPortfolioPerformanceAnalysis"
+    ]
+  }
+}

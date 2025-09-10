@@ -1,0 +1,90 @@
+{
+  "capability_name": "Letter of Credit",
+  "capability_type": "Capability",
+  "role_definition": "Orchestrate the pricing and issuance of Letters of Credit to bank customers guaranteeing their ability to pay sellers for goods that are to be delivered at some future date. Letters of Credit are mostly used to facilitate international trade. They can be single transaction or revolving and can also be transferable and so traded (this Service Domain only covers the issuance and processing of the LoC)",
+  "example_of_use": "A bank issues an LC to a corporate customer to enable them to make a large purchase from an overseas supplier",
+  "executive_summary": "This Service Domain handles the pricing and issuance of letters of credit to its corporate customers in support of their international trading requirements",
+  "key_features": [
+    "Price and issue letters of credit for bank customers",
+    "Evaluate seller claims and make payments against the letter of credit",
+    "Evaluate buyer delivery completion prior to releasing funds",
+    "Recover buyer collateral against redeemed letters of credit where applicable"
+  ],
+  "properties": {
+    "service_domain": "Letter of Credit",
+    "api_bian_portal": "Letter of Credit API (https://app.swaggerhub.com/apis/BIAN-3/LetterofCredit/12.0.0)",
+    "individual_analytics": [
+      "letterOfCreditTransactionAccumulators",
+      "letterOfCreditTransactionActivityAnalysis",
+      "letterOfCreditTransactionPerformanceAnalysis",
+      "letterOfCreditTransactionTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "letterOfCreditTransactionPortfolioActivityAnalysis",
+      "letterOfCreditTransactionPortfolioMakeUpAnalysis",
+      "letterOfCreditTransactionPortfolioPerformanceAnalysis"
+    ],
+    "scenarios": [
+      "Receive Shipping Documents from Exporter Bank (views/view_54877.html)",
+      "Process Letter of Credit Settlement Instructions from Importer (views/view_55582.html)",
+      "Update Letter of Credit for Extension of Validity (views/view_55579.html)",
+      "Handle Request to Extend Validity of Letter of Credit (views/view_55634.html)",
+      "Handle Request to Issue Letter of Credit (views/view_55618.html)",
+      "Initiate Letter of Credit (views/view_54819.html)"
+    ],
+    "service_role": "Orchestrate the pricing and issuance of Letters of Credit (typically associated with trade finance activity)",
+    "bian_life_cycle": {
+      "registration_status": "Registered"
+    },
+    "stereotypes": ["ServiceDomain"]
+  },
+  "appears_on": [
+    "BIAN Service Landscape V12.0 Value Chain (views/view_51705.html)",
+    "BIAN Service Landscape V12.0 Matrix View (views/view_51891.html)",
+    "Letter of Credit SD Overview (views/view_51900.html)"
+  ],
+  "relations": {
+    "aggregated_by": [
+      "Wave 6 (object_25.html?object=153745)",
+      "Trade Banking (object_25.html?object=172016)"
+    ],
+    "gets_input_from": [
+      "Session Dialogue (object_23.html?object=48273)"
+    ],
+    "is_equal_to": [
+      "Letter of Credit (object_37.html?object=38419)"
+    ],
+    "is_part_of": [
+      "Trade Banking (object_25.html?object=130655)"
+    ],
+    "sends_output_to": [
+      "Correspondence (object_20.html?object=32927)",
+      "Financial Accounting (object_20.html?object=42346)",
+      "Document Directory (object_22.html?object=44708)"
+    ],
+    "serves": [
+      "Trade Finance Management (object_6.html?object=130830)"
+    ],
+    "triggered_by": [
+      "Letter of Credit (object_21.html?object=38418)"
+    ],
+    "triggers": [
+      "Party Lifecycle Management (object_20.html?object=29780)",
+      "Document Services (object_21.html?object=30399)",
+      "Correspondent Bank Operations (object_21.html?object=32729)",
+      "Correspondence (object_20.html?object=32927)",
+      "Product Directory (object_21.html?object=34953)",
+      "Payment Order (object_21.html?object=35550)",
+      "Market Data Switch Operation (object_21.html?object=35659)",
+      "Sales Product Agreement (object_21.html?object=37916)",
+      "Letter of Credit (object_21.html?object=38418)",
+      "Credit Facility (object_22.html?object=40622)",
+      "Customer Product and Service Directory (object_22.html?object=41591)",
+      "Financial Accounting (object_20.html?object=42346)",
+      "Underwriting (object_22.html?object=44666)",
+      "Document Directory (object_22.html?object=44708)",
+      "Virtual Account (object_22.html?object=45513)"
+    ]
+  },
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_38418.pdf"
+}

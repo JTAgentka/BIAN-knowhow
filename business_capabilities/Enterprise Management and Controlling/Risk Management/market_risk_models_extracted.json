@@ -1,0 +1,46 @@
+{
+  "capability_name": "Market Risk Models",
+  "role_definition": "Develop and maintain a portfolio of market risk models including currency, interest rate, instrument quotes, indices, commodity prices and other market and macro-economic risk factors. Support the use of these models in trading and pricing activity",
+  "folder_name": "Risk Management",
+  "core_business_object": "Market Risk Model Specification",
+  "example_of_use": "Financial engineers assess the coverage and currency of the portfolio of market risk models and update certain models accordingly",
+  "executive_summary": "This capability focuses on developing and maintaining comprehensive market risk models that cover various financial risk factors to support trading and pricing activities across the organization.",
+  "key_features": [
+    "Currency risk modeling",
+    "Interest rate risk modeling",
+    "Instrument quote analysis",
+    "Market indices modeling",
+    "Commodity price risk assessment",
+    "Macro-economic risk factor analysis",
+    "Trading activity support",
+    "Pricing activity support"
+  ],
+  "api_bian_portal_link": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36018",
+  "served_by": [
+    "Models And Analytics"
+  ],
+  "serves": [
+    "Risk Management"
+  ],
+  "triggered_by": [
+    "Asset Securitization",
+    "Market volatility changes",
+    "Trading requirements",
+    "Pricing model updates"
+  ],
+  "triggers": [
+    "Risk model development",
+    "Portfolio assessment",
+    "Model updates and refinements"
+  ],
+  "list_of_scenarios": [
+    "marketRiskModelSpecificationAccumulators",
+    "marketRiskModelSpecificationActivityAnalysis",
+    "marketRiskModelSpecificationPerformanceAnalysis",
+    "marketRiskModelSpecificationTrends&Events",
+    "marketRiskModelSpecificationPortfolioActivityAnalysis",
+    "marketRiskModelSpecificationPortfolioMake-UpAnalysis",
+    "marketRiskModelSpecificationPortfolioPerformanceAnalysis",
+    "Select Buyers for Securitize Assets"
+  ]
+}

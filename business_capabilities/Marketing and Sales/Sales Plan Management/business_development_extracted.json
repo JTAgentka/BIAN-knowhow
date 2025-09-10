@@ -1,0 +1,49 @@
+{
+  "capability_name": "Business Development",
+  "role_definition": "Define, implement, track and assess the new business development plans for the enterprise or specific business divisions. This can cover business activities such as new market segment entry, product coverage and product specification development, brand development, new customer acquisition and existing customer, cross-sell/up-sell and retention.",
+  "folder_name": "Sales Plan Management",
+  "core_business_object": "Business Development Strategy",
+  "example_of_use": "Corporate strategy develops targets for new business acquisition in selected market segments",
+  "executive_summary": "Define, implement, track and assess the new business development plans",
+  "key_features": [
+    "Define governing policies and guidelines",
+    "Define business goals",
+    "Define supporting business development strategies",
+    "Track progress towards goals and direct activity"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/BusinessDevelopment/12.0.0",
+  "served_by": [
+    "Business Development"
+  ],
+  "serves": [
+    "Sales Plan Management"
+  ],
+  "triggered_by": [
+    "Business Development"
+  ],
+  "triggers": [
+    "Term Deposit",
+    "Prospect Campaign Management", 
+    "Business Development",
+    "Market Analysis",
+    "Product Portfolio",
+    "Advertising",
+    "Prospect Campaign Design",
+    "Customer Behavior Models",
+    "Segment Direction",
+    "Customer Portfolio",
+    "Customer Campaign Management",
+    "Customer Campaign Design"
+  ],
+  "list_of_scenarios": [
+    "Analyse Customer Segment Performance",
+    "Develop Advertising Campaign",
+    "Assess Customer Behaviour Model Performance",
+    "Analyse External Campaign Portfolio Performance",
+    "Perform Internal Campaign Development",
+    "Develop External Campaign",
+    "Analyse Internal Campaign Portfolio Performance",
+    "Analyse Competitor Activity",
+    "Analyse Product Portfolio Performance"
+  ]
+}

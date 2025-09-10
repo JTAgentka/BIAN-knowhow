@@ -1,0 +1,62 @@
+{
+  "capability_name": "Correspondent Bank Directory",
+  "role_definition": "This service domain maintains reference details specific to a correspondent banking partner covering payment terms and preferences and security keys. It also consolidates transactional activity as might be needed to track reciprocity with the correspondent bank. Any specific arrangements and terms (e.g. SSIs) that might override market directory details are maintained here as part of the data record.",
+  "folder_name": "Partner Management",
+  "core_business_object": "Correspondent Banking Agreement",
+  "example_of_use": "Correspondent bank (reciprocal) activity is consolidated to support periodic correspondent banking relationship reviews",
+  "executive_summary": "This service domain maintains correspondent bank reference details. This includes correspondent bank payment parameters in particular bank limits and capturing transaction activity to track reciprocity",
+  "key_features": [
+    "Maintain correspondent bank reference data",
+    "Maintain specific correspondent settlement instructions",
+    "Track correspondent bank's service reciprocity"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CorrespondentBankDirectory/12.0.0",
+  "served_by": [
+    "Correspondent Bank Directory Entry Analytics Object",
+    "Correspondent Bank Directory Entry_Invocation",
+    "Correspondent Bank Directory Entry_Instantiation",
+    "Correspondent Bank Directory_SD_Operations",
+    "Correspondent Bank Directory Entry_Reporting",
+    "Correspondent Bank Directory_SD_Service Group"
+  ],
+  "serves": [
+    "Partner Management"
+  ],
+  "triggered_by": [
+    "Payment Order"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Handle Request for Outgoing Credit Transfer",
+    "Handle Request for Outgoing FCY Credit Transfer via SWIFT"
+  ],
+  "individual_analytics": [
+    "correspondentBankDirectoryEntryAccumulators",
+    "correspondentBankDirectoryEntryActivityAnalysis",
+    "correspondentBankDirectoryEntryPerformanceAnalysis",
+    "correspondentBankDirectoryEntryTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "correspondentBankDirectoryEntryPortfolioActivityAnalysis",
+    "correspondentBankDirectoryEntryPortfolioMake-UpAnalysis",
+    "correspondentBankDirectoryEntryPortfolioPerformanceAnalysis"
+  ],
+  "bian_life_cycle": "Registered",
+  "stereotype": "ServiceDomain",
+  "bian_proposed_iso20022_control_record_match": "CorrespondentBankRegistry",
+  "aggregated_by": [
+    "External Agency",
+    "Wave 1",
+    "Clearing And Settlement"
+  ],
+  "is_part_of": "External Agency",
+  "gets_input_from": [
+    "Customer Relationship Management",
+    "Correspondent Bank Operations"
+  ],
+  "sends_output_to": [
+    "Financial Message Analysis",
+    "Correspondent Bank Operations", 
+    "Legal Entity Directory"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "capability_name": "Prospect Campaign Execution",
+  "role_definition": "Handle the deployment, execution and on-going refinement of a prospect campaign. This includes many types of proactive prospect acquisition campaigns. The campaign execution process performs the initial selection and confirmation/validation of candidate lists and includes providing critical feedback on the impact of the campaign to the design unit to support re-calibration and refinement of the specification based on practical experience",
+  "folder_name": "Campaign Management",
+  "core_business_object": "Prospect Campaign (object_26.html?object=40891)",
+  "example_of_use": "A bank implements a targeted take-one mailshot acquisition campaign to attract additional customers",
+  "executive_summary": "Execute a prospect campaign (version) and track and respond to impact",
+  "key_features": [
+    "Candidate prospect selection/identification (list development)",
+    "Prospect interaction and response capture",
+    "Campaign performance analysis and feedback"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN3/ProspectCampaignExecution/12.0.0",
+  "served_by": [
+    "Prospect Campaign Management (object_21.html?object=32462)",
+    "Prospect Campaign Execution (object_22.html?object=47050)"
+  ],
+  "serves": [
+    "Campaign Management (object_6.html?object=130345)"
+  ],
+  "triggered_by": [
+    "Prospect Campaign Management (object_21.html?object=32462)",
+    "Prospect Campaign Execution (object_22.html?object=47050)"
+  ],
+  "triggers": [
+    "Party Lifecycle Management (object_20.html?object=29780)",
+    "Correspondence (object_20.html?object=32927)",
+    "Market Analysis (object_21.html?object=36136)",
+    "Prospect Campaign Design (object_22.html?object=39556)",
+    "Prospect Campaign Execution (object_22.html?object=47050)"
+  ],
+  "list_of_scenarios": [
+    "Execute External Campaign (views/view_55170.html)"
+  ]
+}

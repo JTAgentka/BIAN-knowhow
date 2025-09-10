@@ -1,0 +1,50 @@
+{
+  "capability_name": "Merchandising Loan",
+  "role_definition": "The service domain handles loan fulfillment intended for the purchase of a larger merchandise item such as a car or boat. The item is usually administered as collateral for the loan and the origination and subsequent processing of the loan can include coordination with the merchant for some elements of fulfillment.",
+  "folder_name": "Agreement Management",
+  "core_business_object": "Merchandising Loan Facility",
+  "example_of_use": "A boat retailer coordinates with a bank to offer merchandising loans to bank customers wanting to buy a boat",
+  "executive_summary": "Fulfillment of loan product used in the purchase of a larger merchandise item such as a car or boat. The purchased item is typically treated as collateral for the loan",
+  "key_features": [
+    "Facility maintenance - fees, interest, reporting",
+    "Payments and withdrawals, liens and sweeps",
+    "Collateral tracking and oversight"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/MerchandisingLoan/12.0.0",
+  "served_by": [
+    "Loans and Deposits"
+  ],
+  "serves": [
+    "Agreement Management"
+  ],
+  "triggered_by": [
+    "Servicing Order",
+    "Customer Offer",
+    "Merchandising Loan",
+    "Underwriting"
+  ],
+  "triggers": [
+    "Position Keeping",
+    "Correspondence", 
+    "Legal Advisory",
+    "Customer Workbench",
+    "Collateral Asset Administration",
+    "Sales Product Agreement",
+    "Disbursement",
+    "Merchandising Loan",
+    "Customer Product and Service Directory",
+    "Information Provider Operation",
+    "Financial Accounting",
+    "Underwriting",
+    "Document Directory",
+    "Collateral Allocation Management"
+  ],
+  "list_of_scenarios": [
+    "Process Modification of Merchandising Loan",
+    "Process Closing of Merchandising Loan",
+    "Handle Merchandising Loan Application",
+    "Perform Underwriting for Merchandising Loan",
+    "Disburse Merchandising Loan",
+    "Handle Request for Modification of Merchandising Loan"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "capability_name": "Contribution Models",
+  "role_definition": "Develop and refine contribution models to detect underdeveloped business relationships and other opportunities",
+  "folder_name": "Customer Management",
+  "core_business_object": "Not specified in the PDF",
+  "example_of_use": "Financial engineers evaluate the relative business performance of customers and products to identify patterns that highlight business development opportunities from increased sales, usage activity and/or pricing",
+  "executive_summary": "Not specified in the PDF",
+  "key_features": [
+    "Develop contribution models",
+    "Refine contribution models",
+    "Detect underdeveloped business relationships",
+    "Identify business opportunities"
+  ],
+  "api_bian_portal_link": "Not specified in the PDF",
+  "served_by": [
+    "Not specified in the PDF"
+  ],
+  "serves": [
+    "Customer Management"
+  ],
+  "triggered_by": [
+    "Not specified in the PDF"
+  ],
+  "triggers": [
+    "Not specified in the PDF"
+  ],
+  "list_of_scenarios": [
+    "Individual Analytics: contributionModelSpecificationAccumulators",
+    "Individual Analytics: contributionModelSpecificationActivityAnalysis", 
+    "Individual Analytics: contributionModelSpecificationPerformanceAnalysis",
+    "Individual Analytics: contributionModelSpecificationTrends&Events",
+    "Portfolio Analytics: contributionModelSpecificationPortfolioActivityAnalysis",
+    "Portfolio Analytics: contributionModelSpecificationPortfolioMake-UpAnalysis",
+    "Portfolio Analytics: contributionModelSpecificationPortfolioPerformanceAnalysis"
+  ]
+}

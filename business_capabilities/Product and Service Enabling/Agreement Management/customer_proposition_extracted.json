@@ -1,0 +1,47 @@
+{
+  "capability_name": "Customer Proposition",
+  "role_definition": "This Service Domain enables the bank and customer to establish and maintain product and service fulfillment preferences and requirements that span multiple products",
+  "folder_name": "Agreement Management",
+  "core_business_object": "Customer Proposition Agreement",
+  "example_of_use": "The bank determines that the significant long term value of a customer relationship should ensure that certain standard fees are waived to help retain their business and records this requirement in their proposition agreement",
+  "executive_summary": "This Service Domain maintains bank and customer defined requirements spanning all products and services",
+  "key_features": [
+    "Maintain bank defined service delivery terms",
+    "Maintain customer defined service preference terms"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerProposition/12.0.0",
+  "served_by": [
+    "Relationship Management"
+  ],
+  "serves": [
+    "Agreement Management"
+  ],
+  "triggered_by": [
+    "Business Unit Management",
+    "Business Development",
+    "Sales Product"
+  ],
+  "triggers": [],
+  "list_of_scenarios": [
+    "Notify Customer Proposition Agreement",
+    "Retrieve Bank Defined Product and Service Term",
+    "Request Customer Defined Product and Service Term",
+    "Update Customer Proposition Agreement",
+    "Exchange Customer Defined Product and Service Term",
+    "Request Customer Proposition Agreement",
+    "Control Customer Proposition Agreement",
+    "Exchange Bank Defined Product and Service Term",
+    "Exchange Customer Proposition Agreement",
+    "Request Bank Defined Product and Service Term",
+    "Notify Bank Defined Product and Service Term",
+    "Notify Customer Defined Product and Service Term",
+    "Update Customer Defined Product and Service Term",
+    "Evaluate Customer Proposition Agreement",
+    "Evaluate Bank Defined Product and Service Term",
+    "Retrieve Customer Proposition Agreement",
+    "Evaluate Customer Defined Product and Service Term",
+    "Grant Customer Proposition Agreement",
+    "Retrieve Customer Defined Product and Service Term",
+    "Update Bank Defined Product and Service Term"
+  ]
+}

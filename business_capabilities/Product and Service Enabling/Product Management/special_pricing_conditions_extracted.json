@@ -1,0 +1,39 @@
+{
+  "capability_name": "Special Pricing Conditions",
+  "role_definition": "This service domain allows the bank to apply special pricing terms and conditions that override standard price calculations. These override facilities are to be used in specific situations where a bank level decision is taken to amend prices or pricing terms in response to some major event or business development action",
+  "folder_name": "Product Management",
+  "core_business_object": "Special Pricing Conditions Directory Entry",
+  "example_of_use": "The bank suspends certain product fees during a major brand awareness campaign",
+  "executive_summary": "Maintain a pricing list or conditions (with ranges and optional terms) categorized by various dimensions to impose exceptional product pricing conditions that override standard pricing terms (for special events/situations)",
+  "key_features": [
+    "Capture authorized override bank pricing terms",
+    "Broadcast special terms to interested parties",
+    "Confirm terms applied as required in production"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/SpecialPricingConditions/12.0.0",
+  "served_by": [
+    "Product Management",
+    "Wave 5",
+    "Sales"
+  ],
+  "serves": [
+    "Product Management",
+    "Product Pricing (Determination)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "scenarios": [
+    {
+      "name": "Special Pricing Conditions SD Overview",
+      "link": "views/view_50728.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Value Chain",
+      "link": "views/view_51705.html"
+    },
+    {
+      "name": "BIAN Service Landscape V12.0 Matrix View",
+      "link": "views/view_51891.html"
+    }
+  ]
+}

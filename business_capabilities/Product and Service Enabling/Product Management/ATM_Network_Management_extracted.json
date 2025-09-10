@@ -1,0 +1,62 @@
+{
+  "capability_name": "ATM Network Management",
+  "capability_type": "Service Domain",
+  "role_definition": "Configure the allocation of products and services across the ATM network and oversee ATM access registration & controls",
+  "example_of_use": "A new set of standalone ATM's is installed at an airport and configured with limited services to ensure high availability for cash dispensing",
+  "service_role": "Configure the allocation of products and services across the ATM network and oversee ATM access registration & controls",
+  "bian_lifecycle": {
+    "registration_status": "Registered"
+  },
+  "stereotypes": ["ServiceDomain"],
+  "individual_analytics": [
+    "aTMNetworkManagementPlanAccumulators",
+    "aTMNetworkManagementPlanActivityAnalysis",
+    "aTMNetworkManagementPlanPerformanceAnalysis",
+    "aTMNetworkManagementPlanTrends&Events"
+  ],
+  "portfolio_analytics": [
+    "aTMNetworkManagementPlanPortfolioActivityAnalysis",
+    "aTMNetworkManagementPlanPortfolioMake-UpAnalysis",
+    "aTMNetworkManagementPlanPortfolioPerformanceAnalysis"
+  ],
+  "scenarios": [
+    "Review ATM Float and Outage"
+  ],
+  "appears_on": [
+    "BIAN Service Landscape V12.0 Value Chain",
+    "BIAN Service Landscape V12.0 Matrix View"
+  ],
+  "relations": {
+    "aggregated_by": ["Channel Management"],
+    "is_equal_to": ["ATM Network Management"],
+    "is_part_of": ["Channel Specific"],
+    "realized_by": [
+      "ATM Network Management Plan_ Analytics Object",
+      "ATM Network Management Plan",
+      "ATM Network",
+      "ATM Network Management Plan_Instantiation",
+      "ATM Network Management Plan_Reporting",
+      "ATM Network Management Plan_Invocation",
+      "record ATM Network Management Plan",
+      "notify ATM Network Management Plan",
+      "ATM Network Management_SD_Service Group",
+      "terminate ATM Network Management Plan",
+      "retrieve ATM Network Management Plan",
+      "request ATM Network Management Plan",
+      "configure ATM Network Management Plan",
+      "Manage"
+    ],
+    "serves": [
+      "Product Management",
+      "Product to Channel Association",
+      "Product Association Management"
+    ],
+    "triggers": [
+      "ATM Network Operations",
+      "Branch Currency Management"
+    ]
+  },
+  "business_area": "Product and Service Enabling",
+  "domain": "Product Management",
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_20.html_object_42253.pdf"
+}

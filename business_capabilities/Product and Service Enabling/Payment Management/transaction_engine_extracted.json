@@ -1,0 +1,24 @@
+{
+  "capability_name": "Transaction Engine",
+  "role_definition": "The Service Domain provides a utility/background operational support service to orchestrate a schedule of payment transaction and reporting activities for the fulfillment of certain long term instruments or structured facilities. The Service Domain maintains a link to the associated fulfillment Service Domain and the applicable product instance for reporting and processing issues that may arise.",
+  "folder_name": "Payment Management",
+  "core_business_object": "Transaction Schedule Arrangement (object_26.html?object=35225)",
+  "example_of_use": "The mortgage fulfillment Service Domain delegates repayment processing to the Transaction Engine for its active mortgage product instances",
+  "executive_summary": "Orchestrate a schedule of payment transaction and reporting activities for the fulfillment of certain long term instruments or structured facilities",
+  "key_features": [
+    "Establish the processing schedule for a product instance",
+    "Process transaction and reporting tasks as necessary",
+    "Escalate issues to the product fulfillment Service Domain as necessary",
+    "Report on transaction fulfillment activity"
+  ],
+  "api_bian_portal_link": "Transaction Engine API (https://app.swaggerhub.com/apis/BIAN-3/TransactionEngine/12.0.0)",
+  "served_by": [
+    "Corporate Current Account (object_21.html?object=34221)"
+  ],
+  "serves": [
+    "Payment Management (object_6.html?object=130270)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}

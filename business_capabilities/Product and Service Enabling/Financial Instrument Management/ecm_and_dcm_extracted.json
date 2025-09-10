@@ -1,0 +1,38 @@
+{
+  "capability_name": "ECM And DCM",
+  "role_definition": "The service domain provides fulfillment services for the issuance of primary market equity and debt capital market instruments for corporate customers. It supports both private and public (IPO) placements and covers the specification, pricing and placement activities associated with issuance. (it does not include secondary market trading of the instrument)",
+  "folder_name": "Financial Instrument Management",
+  "core_business_object": "Capital Market Agreement",
+  "example_of_use": "A corporate customer raises capital through issuing corporate debt in the private capital markets",
+  "executive_summary": "Supports the specification, pricing and issuance of equity and debt (bond) primary capital market products for corporate financing services",
+  "key_features": [
+    "Determining and specifying the equity/debt instrument",
+    "Prospectus and pricing",
+    "Road show and placement"
+  ],
+  "api_bian_portal_link": "https://app.swaggerhub.com/apis/BIAN-3/ECMAndDCM/12.0.0",
+  "served_by": [
+    "Customer Relationship Management",
+    "ECM And DCM"
+  ],
+  "serves": [
+    "Financial Instrument Management"
+  ],
+  "triggered_by": [
+    "Customer Relationship Management",
+    "ECM And DCM"
+  ],
+  "triggers": [
+    "Term Deposit",
+    "Interbank Relationship Management",
+    "Payment Order",
+    "Asset And Liability Management",
+    "Suitability Checking",
+    "ECM And DCM",
+    "Guideline Compliance",
+    "Corporate Loan"
+  ],
+  "list_of_scenarios": [
+    "Handle Request for Issuance of Commercial Paper"
+  ]
+}

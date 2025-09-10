@@ -1,0 +1,54 @@
+{
+  "capability_name": "Corporate Trust Services",
+  "capability_type": "Capability",
+  "role_definition": "Provide corporate trust services focused on the independent/fiduciary handling of a broad range of possible corporate debt instruments with investors and supporting escrow account arrangements as necessary",
+  "example_of_use": "A corporate uses the corporate trust services of the bank to manage its investor relations for a major debt issue",
+  "executive_summary": "This Service Domain provides corporate trust services centered on the handling of debt instruments and escrow account support",
+  "key_features": [
+    "Administer financial reporting with bond investors",
+    "Resolve investor issues as an objective/independent party",
+    "Establish and maintain supporting escrow accounts"
+  ],
+  "properties": {
+    "service_domain": "Corporate Trust Services",
+    "api_bian_portal": "Corporate Trust Services API (https://app.swaggerhub.com/apis/BIAN3/CorporateTrustServices/12.0.0)",
+    "individual_analytics": [
+      "trustServicesFulfillmentArrangementAccumulators",
+      "trustServicesFulfillmentArrangementActivityAnalysis",
+      "trustServicesFulfillmentArrangementPerformanceAnalysis",
+      "trustServicesFulfillmentArrangementTrends&Events"
+    ],
+    "portfolio_analytics": [
+      "trustServicesFulfillmentArrangementPortfolioActivityAnalysis",
+      "trustServicesFulfillmentArrangementPortfolioMake-UpAnalysis",
+      "trustServicesFulfillmentArrangementPortfolioPerformanceAnalysis"
+    ],
+    "scenarios": [],
+    "service_role": "Provide the range of fee based trust services, typically offered to high net-worth customers",
+    "bian_life_cycle": {
+      "registration_status": "Registered"
+    },
+    "stereotypes": ["ServiceDomain"]
+  },
+  "appears_on": [
+    "Corporate Trust Services SD Overview (views/view_51498.html)",
+    "BIAN Service Landscape V12.0 Value Chain (views/view_51705.html)",
+    "BIAN Service Landscape V12.0 Matrix View (views/view_51891.html)"
+  ],
+  "relations": {
+    "aggregated_by": [
+      "Wave 6 (object_25.html?object=153745)",
+      "Corporate Banking (object_25.html?object=171979)"
+    ],
+    "is_equal_to": [
+      "Corporate Trust Services (object_38.html?object=46860)"
+    ],
+    "is_part_of": [
+      "Consumer Services (object_25.html?object=130111)"
+    ],
+    "serves": [
+      "Trust Management (object_6.html?object=83321)"
+    ]
+  },
+  "source_file": "https_bian.org_servicelandscape-12-0-0_object_22.html_object_46859.pdf"
+}

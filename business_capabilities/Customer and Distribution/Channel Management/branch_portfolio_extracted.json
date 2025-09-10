@@ -1,0 +1,23 @@
+{
+  "capability_name": "Branch Portfolio",
+  "role_definition": "Evaluate coverage and relative performance of branches. Optimize product allocation and marketing activity across the available branch network.",
+  "folder_name": "Channel Management",
+  "core_business_object": "Branch Network Analysis (object_24.html?object=132919)",
+  "example_of_use": "Business strategists assemble and review the distribution and relative product performance across the network and adjust the allocation accordingly",
+  "executive_summary": "Evaluate coverage and relative performance of branches. Optimize product allocation and marketing activity across the available branch network",
+  "key_features": [
+    "Branch network analysis and evaluation",
+    "Product allocation optimization", 
+    "Marketing activity optimization across branch network",
+    "Performance comparison and coverage assessment"
+  ],
+  "api_bian_portal_link": "Not specified",
+  "served_by": [],
+  "serves": [
+    "Channel Management (object_6.html?object=130032)",
+    "Channel Performance Management (object_6.html?object=130665)"
+  ],
+  "triggered_by": [],
+  "triggers": [],
+  "list_of_scenarios": []
+}
