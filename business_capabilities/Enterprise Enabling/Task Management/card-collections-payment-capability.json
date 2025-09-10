@@ -1,0 +1,41 @@
+{
+  "name": "Card Collections Payment",
+  "description": "Business service for managing payment transactions made against card collections accounts, including acceptance, verification, and processing",
+  "type": "Business Service",
+  "serviceDomain": {
+    "name": "Card Collections",
+    "relatedServices": [
+      "Card Collections Procedure_Invocation",
+      "Delinquent Account Procedure_Invocation"
+    ]
+  },
+  "controlRecords": {
+    "primary": "CardCollectionsPaymentRecord"
+  },
+  "behaviorPatterns": [
+    "Payment Transaction Processing",
+    "Collections Account Management",
+    "Payment Verification and Validation"
+  ],
+  "serviceOperations": [
+    {
+      "name": "ExchangePaymentWorksteps",
+      "userDescription": "accept, verify, etc. a payment transaction made against the account",
+      "technicalName": "ExchangePaymentWorksteps",
+      "identification": "accept, verify, etc. a payment transaction made against the account"
+    }
+  ],
+  "assetTypes": [
+    "Card Collections Payment Records",
+    "Account Transaction Logs",
+    "Payment Verification Results",
+    "Collections Status Updates"
+  ],
+  "functionalRequirements": [
+    "Real-time payment transaction processing for collections accounts",
+    "Payment verification against account balances",
+    "Integration with collections procedures",
+    "Delinquent account payment handling"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_22.html_object_47264.mhtml"
+}

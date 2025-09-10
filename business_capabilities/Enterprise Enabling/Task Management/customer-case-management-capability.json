@@ -1,0 +1,43 @@
+{
+  "name": "Customer Case Management",
+  "description": "Business service for managing customer case management plans, including acceptance, rejection, and management of various aspects of the plan",
+  "type": "Business Service",
+  "serviceDomain": {
+    "name": "Customer Case Management Plan"
+  },
+  "controlRecords": {
+    "primary": "CustomerCaseManagementPlan"
+  },
+  "behaviorPatterns": [
+    "Case Management Planning",
+    "Plan Execution and Monitoring",
+    "Case Resolution Coordination"
+  ],
+  "serviceOperations": [
+    {
+      "name": "AcceptRejectManagementPlan",
+      "userDescription": "Accept, reject, etc. aspects of the management plan",
+      "technicalName": "EcCR",
+      "identification": "Accept, reject, etc. aspects of the management plan"
+    },
+    {
+      "name": "VerifyCustomerCaseAspect",
+      "userDescription": "Accept, verify, reject etc. some aspect of a customer case",
+      "technicalName": "EcCR",
+      "identification": "Accept, verify, reject etc. some aspect of a customer case"
+    }
+  ],
+  "assetTypes": [
+    "Customer Case Management Plans",
+    "Case Records",
+    "Resolution Strategies",
+    "Case Status Tracking"
+  ],
+  "functionalRequirements": [
+    "Comprehensive case management planning",
+    "Multi-aspect case verification",
+    "Plan execution monitoring",
+    "Case resolution tracking"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_20.html_object_42150.mhtml"
+}

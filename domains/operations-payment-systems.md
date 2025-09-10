@@ -1,0 +1,19 @@
+# Operations – Enterprise Enabling
+
+| Oblast | Hodnota |
+|--------|---------|
+| **Stakeholder / Útvar** | Operations – Enterprise Enabling |
+| **Kontakt** | Ladislav Rokos, telefon: 0042 789456143 |
+| **Klíčoví manažeři** | **Task Management**: ServiceIssueManager – [Issue Resolution & Workflow](business_capabilities/Enterprise%20Enabling/Task%20Management), CustomerCaseManager – [Customer Case Procedures](business_capabilities/Enterprise%20Enabling/Task%20Management), RootCauseAnalysisManager – [Analytics & Problem Resolution](business_capabilities/Enterprise%20Enabling/Task%20Management), TaskResolutionManager – [Task Coordination](business_capabilities/Enterprise%20Enabling/Task%20Management), ServicingAnalyticsManager – [Performance Analytics](business_capabilities/Enterprise%20Enabling/Task%20Management)<br>**Legal Support Management**: LegalComplianceManager – [Compliance Assessment](business_capabilities/Enterprise%20Enabling/Legal%20Support%20Management), LegalAdvisoryManager – [Legal Advisory Services](business_capabilities/Enterprise%20Enabling/Legal%20Support%20Management), ComplianceAssessmentManager – [Compliance Evaluation](business_capabilities/Enterprise%20Enabling/Legal%20Support%20Management), LegalDeterminationManager – [Legal Determinations](business_capabilities/Enterprise%20Enabling/Legal%20Support%20Management) |
+| **Perimetr odpovědnosti** | **Task Management**: Servicing Issue Procedure Management, Customer Case Procedure Management, Root Cause Analysis, Issue tracking and resolution workflows, Performance and activity analysis, Portfolio analytics and reporting<br>**Legal Support Management**: Legal Compliance Assessment, Legal Determination Processing, Legal Advisory Services, Compliance Verification and Validation, Legal Documentation Management |
+| **Procesní role** | Owner, Executor, Kontrolor, Legal Advisor, Compliance Assessor |
+| **Cíle / KPI** | Efficient resolution of customer servicing issues, continuous improvement through root cause analysis, minimization of issue recurrence, enhanced customer service quality, operational efficiency optimization, ensure legal and regulatory compliance, provide timely legal advisory services, minimize legal and compliance risks |
+| **Regulační povinnosti** | Statutory compliance requirements, regulatory reporting obligations, legal risk management, documentation and audit trail maintenance, regulatory change management, compliance assessment and evaluation |
+| **Rozpočet / Zdroje** | Task Management: 8 FTE, Legal Support: 5 FTE, kombinovaný roční budget 2.5 mil. Kč |
+| **Klíčové závislosti** | Customer Service Representatives (CSR), Production Support Services, Management oversight functions, Analytics and reporting systems, External legal counsel and advisors, Regulatory bodies and authorities, Business operations requiring legal clearance, Compliance and risk management functions, Document management systems |
+| **Externí SLA / závazky** | Legal determination processing SLA, compliance assessment timelines, regulatory reporting deadlines, servicing issue resolution targets, customer case response times |
+| **Governance & Reporting** | COO, Board Risk Committee, Legal & Compliance Committee |
+| **Maturity / Kompetence týmu** | Nízká úroveň s vysokým technickým dluhem který vytváří mnoho neefektivností |
+| **Probíhající iniciativy** | Replacement of CRM system |
+| **Risk appetite / tolerance** | Nízká tolerance – kontrolováno regulatorními požadavky |
+| **Zapojení do projektu (self-assessment)** | Nutné posoudit během fáze assessment, nikoliv nyní |

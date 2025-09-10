@@ -1,0 +1,37 @@
+{
+  "name": "Payment Worksteps",
+  "description": "Business service for managing payment workstep processes, including transaction verification and account processing workflows",
+  "type": "Business Service",
+  "serviceDomain": {
+    "name": "Payment Processing Worksteps"
+  },
+  "controlRecords": {
+    "primary": "PaymentWorkstepsRecord"
+  },
+  "behaviorPatterns": [
+    "Payment Workflow Management",
+    "Transaction Step Processing",
+    "Payment Verification Sequences"
+  ],
+  "serviceOperations": [
+    {
+      "name": "ProcessPaymentTransaction",
+      "userDescription": "accept, verify, etc. a payment transaction made against the account",
+      "technicalName": "EcBQ",
+      "identification": "accept, verify, etc. a payment transaction made against the account"
+    }
+  ],
+  "assetTypes": [
+    "Payment Workstep Records",
+    "Transaction Processing Logs",
+    "Verification Checkpoints",
+    "Process Status Tracking"
+  ],
+  "functionalRequirements": [
+    "Sequential payment processing workflows",
+    "Transaction verification at each step",
+    "Account balance validation",
+    "Payment processing status tracking"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_20.html_object_41869.mhtml"
+}

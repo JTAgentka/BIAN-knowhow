@@ -1,0 +1,37 @@
+{
+  "name": "Open Item Repayment",
+  "description": "Business service for managing open item repayment transactions, including acceptance, rejection, and confirmation of repayment transactions",
+  "type": "Business Service",
+  "serviceDomain": {
+    "name": "Open Item Repayment"
+  },
+  "controlRecords": {
+    "primary": "RepaymentTransactionRecord"
+  },
+  "behaviorPatterns": [
+    "Repayment Transaction Processing",
+    "Payment Verification and Validation",
+    "Open Item Resolution"
+  ],
+  "serviceOperations": [
+    {
+      "name": "AcceptRejectRepaymentTransaction",
+      "userDescription": "Accept, reject, confirm etc. a repayment transaction",
+      "technicalName": "EcBQ",
+      "identification": "Accept, reject, confirm etc. a repayment transaction"
+    }
+  ],
+  "assetTypes": [
+    "Repayment Transaction Records",
+    "Open Item Records",
+    "Payment Confirmations",
+    "Transaction Status Logs"
+  ],
+  "functionalRequirements": [
+    "Real-time repayment transaction processing",
+    "Payment verification and validation",
+    "Open item tracking and resolution",
+    "Transaction confirmation workflows"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_21.html_object_31686.mhtml"
+}

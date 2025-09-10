@@ -1,0 +1,61 @@
+{
+  "name": "Case Root Cause Analysis",
+  "description": "Root cause analysis business function reviews case reports to identify possible improvements to eliminate/mitigate servicing issues",
+  "type": "Capability",
+  "serviceDomain": {
+    "name": "Case Root Cause Analysis",
+    "apiPortal": "https://app.swaggerhub.com/apis/BIAN-3/CaseRootCauseAnalysis/12.0.0"
+  },
+  "controlRecords": {
+    "primary": "CaseRootCauseAnalysisRecord"
+  },
+  "behaviorPatterns": [
+    "Case Analysis and Review",
+    "Root Cause Investigation",
+    "Process Improvement Identification"
+  ],
+  "serviceOperations": [
+    {
+      "name": "Analyze Case Reports",
+      "description": "Reviews and analyzes customer case reports for patterns and issues"
+    },
+    {
+      "name": "Identify Root Causes",
+      "description": "Determines underlying causes of recurring servicing issues"
+    },
+    {
+      "name": "Recommend Improvements",
+      "description": "Suggests process and training improvements to prevent future issues"
+    }
+  ],
+  "assetTypes": [
+    "Case Reports",
+    "Analysis Results",
+    "Improvement Recommendations",
+    "Performance Metrics"
+  ],
+  "keyFeatures": [
+    "Product and service feature related issue analysis",
+    "Servicing and operational performance issue analysis",
+    "Credit and fraudulent behavior analysis"
+  ],
+  "exampleOfUse": "Contact center case resolution records are reviewed to identify recurring issues that can be resolved with improved servicing representative training and guidelines",
+  "analytics": {
+    "individual": [
+      "customerCaseRootCauseAnalysisAccumulators",
+      "customerCaseRootCauseAnalysisActivityAnalysis", 
+      "customerCaseRootCauseAnalysisPerformanceAnalysis",
+      "customerCaseRootCauseAnalysisTrends&Events"
+    ],
+    "portfolio": [
+      "customerCaseRootCauseAnalysisPortfolioActivityAnalysis"
+    ]
+  },
+  "functionalRequirements": [
+    "Systematic analysis of case resolution records",
+    "Pattern recognition for recurring issues",
+    "Integration with training and guidelines systems",
+    "Performance improvement tracking"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_22.html_object_43455.mhtml"
+}

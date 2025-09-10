@@ -1,0 +1,37 @@
+{
+  "name": "Sweep Agreement Process",
+  "description": "External process for handling requests to add accounts to sweep agreements, managing sweep account relationships and configurations",
+  "type": "External Process",
+  "serviceDomain": {
+    "name": "Sweep Agreement Management"
+  },
+  "controlRecords": {
+    "primary": "SweepAgreementRecord"
+  },
+  "behaviorPatterns": [
+    "Account Addition to Sweep Agreements",
+    "Sweep Configuration Management",
+    "Agreement Request Processing"
+  ],
+  "serviceOperations": [
+    {
+      "name": "HandleAccountAdditionRequest",
+      "userDescription": "Handle Request to Add Account to Sweep Agreement",
+      "technicalName": "EXT Handle Request to Add Account to Sweep Agreement",
+      "identification": "External process for adding accounts to sweep agreements"
+    }
+  ],
+  "assetTypes": [
+    "Sweep Agreement Records",
+    "Account Addition Requests",
+    "Sweep Configuration Data",
+    "Agreement Status Logs"
+  ],
+  "functionalRequirements": [
+    "Account eligibility verification for sweep agreements",
+    "Sweep agreement configuration management",
+    "Request processing and approval workflows",
+    "Account relationship establishment"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_20.html_object_41839.mhtml"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Servicing Issue",
+  "description": "This Service Domain handles production customer servicing issues detected in the customer servicing environment",
+  "type": "Service Domain",
+  "serviceDomain": {
+    "name": "Servicing Issue",
+    "apiPortal": "https://app.swaggerhub.com/apis/BIAN-3/ServicingIssue/12.0.0"
+  },
+  "controlRecords": {
+    "primary": "ServicingIssueRecord"
+  },
+  "behaviorPatterns": [
+    "Issue Detection and Resolution",
+    "Production Environment Monitoring",
+    "Customer Service Quality Assurance"
+  ],
+  "serviceOperations": [
+    {
+      "name": "Detect Servicing Issue",
+      "description": "Identifies and logs production customer servicing issues"
+    },
+    {
+      "name": "Resolve Servicing Issue", 
+      "description": "Manages the resolution process for detected servicing issues"
+    },
+    {
+      "name": "Monitor Issue Status",
+      "description": "Tracks the status and progress of servicing issue resolution"
+    }
+  ],
+  "assetTypes": [
+    "Customer Service Records",
+    "Issue Logs",
+    "Resolution Procedures",
+    "Quality Metrics"
+  ],
+  "functionalRequirements": [
+    "Real-time issue detection in customer servicing environment",
+    "Automated issue classification and prioritization",
+    "Integration with customer service systems",
+    "Issue resolution tracking and reporting"
+  ],
+  "sourceFile": "https_bian.org_servicelandscape-12-0-0_object_20.html_object_33504.mhtml"
+}
