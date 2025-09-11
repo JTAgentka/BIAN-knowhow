@@ -386,15 +386,15 @@ The finalizer context file contains:
 
 ### Czech Document Structure
 The finalizer must generate documents following this exact Czech structure:
-1. **Executive Summary** (Exekutivní Shrnutí)
-2. **Stakeholder Engagement Matrix** (Matice Zapojení Stakeholderů)
-3. **Problem Statement & Motivation** (Definice Problému a Motivace)
-4. **Scope** (Rozsah) - In/Out, Assumptions, Constraints
-5. **As-Is Analysis** (Analýza Současného Stavu)
-6. **To-Be Design + Gap Analysis** (Návrh Cílového Stavu + Gap Analýza)
-7. **Data Impact Assessment & System Impact Matrix** (Hodnocení Dopadu na Data a Systémy)
-8. **Acceptance Criteria** (Kritéria Akceptace)
-9. **Appendices** (Přílohy) - supporting notes, glossary, references
+1. **Executive Summary** (Executive Summary)
+2. **Stakeholder Engagement Matrix** (Stakeholder Engagement Matrix)
+3. **Problem Statement & Motivation** (Problem Statement & Motivation)
+4. **Scope** (Scope) - In/Out, Assumptions, Constraints
+5. **As-Is Analysis** (Current State Analysis)
+6. **To-Be Design + Gap Analysis** (Target State Design + Gap Analysis)
+7. **Data Impact Assessment & System Impact Matrix** (Data Impact Assessment & System Impact Matrix)
+8. **Acceptance Criteria** (Acceptance Criteria)
+9. **Appendices** (Appendices) - supporting notes, glossary, references
 
 ### Document Generation Process
 1. **Context Consolidation**: Gather all artifacts from facilitator and consolidator contexts
