@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "agent_id": "project-definition-consolidator",
+    "session_id": "",
+    "timestamp": "",
+    "version": "1.0",
+    "project_id": ""
+  },
+  "current_state": {
+    "phase": 5,
+    "status": "pending",
+    "last_updated": "",
+    "completed_phases": []
+  },
+  "inputs_from_facilitator": {
+    "stakeholder_engagement_matrix": {},
+    "problem_statement": {},
+    "scope_definition": {},
+    "as_is_analysis": {},
+    "received_timestamp": ""
+  },
+  "phase_outputs": {
+    "phase_5_to_be_design": {
+      "to_be_model": {
+        "process_diagrams": [],
+        "system_architecture": [],
+        "role_definitions": [],
+        "data_flows": []
+      },
+      "gap_analysis": [],
+      "stakeholder_validation": "pending",
+      "timestamp": ""
+    },
+    "phase_6_data_systems_impact": {
+      "data_impact_assessment": [],
+      "system_impact_matrix": [],
+      "integration_requirements": [],
+      "timestamp": ""
+    },
+    "phase_7_acceptance_criteria": {
+      "smart_criteria": [],
+      "stakeholder_validation": "pending",
+      "timestamp": ""
+    }
+  },
+  "handover_to_finalizer": {
+    "ready_for_handover": false,
+    "consolidated_artifacts": {},
+    "validation_summary": "",
+    "timestamp": ""
+  }
+}

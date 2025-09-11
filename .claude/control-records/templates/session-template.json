@@ -1,0 +1,23 @@
+{
+  "session_metadata": {
+    "session_id": "",
+    "start_timestamp": "",
+    "end_timestamp": "",
+    "project_id": "",
+    "jira_epic_id": "",
+    "user_id": ""
+  },
+  "workflow_execution": {
+    "agents_involved": [],
+    "phases_completed": [],
+    "total_duration": "",
+    "quality_gates_passed": []
+  },
+  "context_files_created": [],
+  "performance_metrics": {
+    "total_processing_time": "",
+    "agent_handover_times": [],
+    "validation_cycles": 0,
+    "stakeholder_interactions": 0
+  }
+}

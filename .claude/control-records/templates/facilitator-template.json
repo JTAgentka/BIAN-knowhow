@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "agent_id": "project-definition-facilitator",
+    "session_id": "",
+    "timestamp": "",
+    "version": "1.0",
+    "project_id": ""
+  },
+  "current_state": {
+    "phase": 1,
+    "status": "pending",
+    "last_updated": "",
+    "completed_phases": []
+  },
+  "inputs": {
+    "jira_context": {},
+    "user_instructions": "",
+    "business_requirements": "",
+    "initial_stakeholder_info": ""
+  },
+  "phase_outputs": {
+    "phase_1_stakeholder_mapping": {
+      "stakeholder_engagement_matrix": [],
+      "validation_status": "pending",
+      "timestamp": ""
+    },
+    "phase_2_problem_statement": {
+      "business_pain": "",
+      "change_motivation": "",
+      "high_level_objectives": [],
+      "success_criteria": [],
+      "validation_status": "pending",
+      "timestamp": ""
+    },
+    "phase_3_scope_definition": {
+      "scope_in": [],
+      "scope_out": [],
+      "assumptions": [],
+      "constraints": [],
+      "validation_status": "pending",
+      "timestamp": ""
+    },
+    "phase_4_as_is_analysis": {
+      "current_processes": [],
+      "system_landscape": [],
+      "role_definitions": [],
+      "problem_areas": [],
+      "risk_assessment": [],
+      "validation_status": "pending",
+      "timestamp": ""
+    }
+  },
+  "handover_to_consolidator": {
+    "ready_for_handover": false,
+    "consolidated_artifacts": {},
+    "validation_summary": "",
+    "timestamp": ""
+  }
+}

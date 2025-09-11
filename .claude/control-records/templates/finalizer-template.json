@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "agent_id": "project-definition-finalizer",
+    "session_id": "",
+    "timestamp": "",
+    "version": "1.0",
+    "project_id": ""
+  },
+  "current_state": {
+    "phase": 8,
+    "status": "pending",
+    "last_updated": "",
+    "document_version": "v0.1",
+    "completed_phases": []
+  },
+  "inputs_from_previous_agents": {
+    "facilitator_artifacts": {},
+    "consolidator_artifacts": {},
+    "received_timestamp": ""
+  },
+  "document_versions": {
+    "v0_1_consolidation": {
+      "document_structure": {},
+      "quality_assurance_checklist": {},
+      "traceability_matrix": {},
+      "executive_summary": "",
+      "timestamp": ""
+    },
+    "v0_5_internal_review": {
+      "review_distribution": [],
+      "feedback_register": [],
+      "conflict_resolution": [],
+      "internal_signoffs": [],
+      "timestamp": ""
+    },
+    "v0_8_external_validation": {
+      "validation_sessions": [],
+      "external_feedback": [],
+      "governance_package": {},
+      "stakeholder_confirmations": [],
+      "timestamp": ""
+    },
+    "v1_0_final_approval": {
+      "governance_submission": {},
+      "compliance_verification": {},
+      "approval_records": {},
+      "archive_records": {},
+      "timestamp": ""
+    }
+  },
+  "review_cycles": [],
+  "final_deliverable": {
+    "approved_document": {},
+    "project_authorization": false,
+    "archive_location": "",
+    "timestamp": ""
+  }
+}

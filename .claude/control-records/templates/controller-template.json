@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "agent_id": "jira-project-definition-controller",
+    "session_id": "",
+    "timestamp": "",
+    "version": "1.0",
+    "project_id": "",
+    "jira_epic_id": ""
+  },
+  "current_state": {
+    "phase": "orchestration",
+    "status": "pending",
+    "last_updated": "",
+    "routing_decision": ""
+  },
+  "jira_input": {
+    "epic_description": "",
+    "attachments": [],
+    "comments": []
+  },
+  "parsed_content": {
+    "input_data": "",
+    "user_instructions": "",
+    "stakeholder_info": "",
+    "requirements_summary": ""
+  },
+  "routing_logic": {
+    "decision_rationale": "",
+    "selected_agents": [],
+    "workflow_sequence": [],
+    "expected_phases": []
+  },
+  "agent_handovers": [],
+  "consolidated_outputs": {
+    "deliverables": [],
+    "quality_validation": {},
+    "stakeholder_summary": ""
+  }
+}
