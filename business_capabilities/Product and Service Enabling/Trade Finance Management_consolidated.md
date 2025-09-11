@@ -1,0 +1,6 @@
+# Trade Finance Management - Consolidated Table
+
+| Capability Name | Sub-directory Name | Core Business Object | Example of Use | Executive Summary | Key Features |
+|---|---|---|---|---|---|
+| Bank Guarantee | Trade Finance Management | Not specified | A bank guarantee is provided to a corporate client to cover international trade finance deal | This Service Domain handles the pricing and issuance of a broad range of bank guarantee instruments | • Price and issue bank guarantees for bank customers<br>• Evaluate claims and make payments against the guarantee<br>• Recover collateral against redeemed guarantees where applicable |
+| Letter of Credit | Trade Finance Management | Not specified | A bank issues an LC to a corporate customer to enable them to make a large purchase from an overseas supplier | This Service Domain handles the pricing and issuance of letters of credit to its corporate customers in support of their international trading requirements | • Price and issue letters of credit for bank customers<br>• Evaluate seller claims and make payments against the letter of credit<br>• Evaluate buyer delivery completion prior to releasing funds<br>• Recover buyer collateral against redeemed letters of credit where applicable |

@@ -1,0 +1,182 @@
+[
+  {
+    "capabilityName": "Financial Message Analysis",
+    "folderName": "Fraud Incident Management",
+    "coreBusinessObject": "Financial Network Gateway Analysis",
+    "roleDefinition": "Track and analyze financial message traffic to identify anomalies and potential fraudulent activity",
+    "exampleOfUse": "A pattern of financial message traffic for a major counterparty is analyzed to reveal possible fraudulent behaviors",
+    "executiveSummary": "Not provided in the source document",
+    "keyFeatures": [
+      "Individual Analytics: financialNetworkGatewayAnalysisAccumulators, financialNetworkGatewayAnalysisActivityAnalysis, financialNetworkGatewayAnalysisPerformanceAnalysis, financialNetworkGatewayAnalysisTrends&Events",
+      "Portfolio Analytics: financialNetworkGatewayAnalysisPortfolioActivityAnalysis, financialNetworkGatewayAnalysisPortfolioMake-UpAnalysis, financialNetworkGatewayAnalysisPortfolioPerformanceAnalysis"
+    ],
+    "apiBianPortalLink": "Not provided in the source document",
+    "servedBy": [
+      "Financial Gateway",
+      "Business Unit Management",
+      "Correspondent Bank Operations",
+      "Business Development",
+      "Payment Execution",
+      "Correspondent Bank Directory"
+    ],
+    "serves": [
+      "Fraud Incident Management"
+    ],
+    "triggeredBy": [
+      "Correspondent Bank Operations"
+    ],
+    "triggers": [
+      "Not explicitly specified in the source document"
+    ],
+    "listOfScenarios": [
+      "Handle Request to Issue Guarantee on Request of Another Bank (views/view_54980.html)",
+      "Process Incoming Credit Transfer for Letter of Credit (views/view_55656.html)",
+      "Review Letter of Credit and Pass on to Exporter (views/view_54793.html)"
+    ]
+  },
+  {
+    "capabilityName": "Fraud Diagnosis",
+    "folderName": "Fraud Incident Management",
+    "coreBusinessObject": "Fraud Diagnosis",
+    "roleDefinition": "Analyze suspect transaction with Customer behavior information across product portfolio, using Expert Systems/Artificial Intelligence and/or manual review, including customer contact to determine if transaction is fraudulent. Further apply Economic Model to determine transaction disposition and notify applicable Product Fulfillment SDs.",
+    "exampleOfUse": "Out of pattern card use is detected and the details passed for analysis. The analysis determines there is a high probability of fraud recommending appropriate containment actions",
+    "executiveSummary": "This service domain handles the evaluation of detected possible fraud to support an appropriate response to contain the exposure",
+    "keyFeatures": [
+      "Analyse activity to assess likelihood of customer fraud",
+      "Analyse activity to assess likelihood of merchant fraud",
+      "Analyse activity to assess likelihood of intermediary fraud"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/FraudDiagnosis/12.0.0",
+    "servedBy": [
+      "Not explicitly specified in the source document"
+    ],
+    "serves": [
+      "Fraud Incident Management"
+    ],
+    "triggeredBy": [
+      "Not explicitly specified in the source document"
+    ],
+    "triggers": [
+      "Not explicitly specified in the source document"
+    ],
+    "listOfScenarios": [
+      "Service Role: Handle the assessment, diagnosis and resolution of cases of fraud that have been detected and confirmed in production"
+    ]
+  },
+  {
+    "capabilityName": "Fraud Evaluation",
+    "folderName": "Fraud Incident Management",
+    "coreBusinessObject": "Fraud Evaluation",
+    "roleDefinition": "This service domain handles the structured execution of fraud detection tests/routines that are used to identify possible fraud by detecting out of pattern behaviors. The tests may run in-line with production or may access transaction logs as appropriate. Detected anomalies are passed for further analysis and resolution.",
+    "exampleOfUse": "Card transactions are subjected to an array of fraud pattern test to detect 'out of pattern' behavior - anomalies are highlighted for analysis",
+    "executiveSummary": "The service domain executes fraud behavioral pattern tests to detect possible fraudulent transactions/activity",
+    "keyFeatures": [
+      "Transaction data consolidation",
+      "Fraud detection test execution",
+      "Fraud analysis/diagnosis and reporting"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/FraudEvaluation/12.0.0",
+    "servedBy": [
+      "Issued Device Administration",
+      "Card Clearing",
+      "Card Authorization",
+      "Underwriting",
+      "Card Terminal Operation"
+    ],
+    "serves": [
+      "Fraud Incident Management",
+      "Risk Event Management"
+    ],
+    "triggeredBy": [
+      "Payment Order",
+      "Card Clearing",
+      "Current Account",
+      "Fraud Evaluation",
+      "Credit Management",
+      "Card Authorization",
+      "Underwriting",
+      "Transaction Authorization"
+    ],
+    "triggers": [
+      "Fraud Evaluation",
+      "Fraud Model"
+    ],
+    "listOfScenarios": [
+      "Process Card Clearing by Issuer (views/view_55194.html)",
+      "Authorise Card Use by Acquirer (views/view_55588.html)",
+      "Process Card Clearing by Acquirer (views/view_55404.html)",
+      "Handle Request for Credit Facility (views/view_55481.html)",
+      "Handle Incoming Request for Payment at Debtor Bank (views/view_55467.html)",
+      "Authorise Card Use by Issuer (views/view_55275.html)",
+      "Perform Underwriting for Corporate Loan (views/view_55254.html)",
+      "Handle Request for Payment at Creditor Bank for External Account (views/view_55356.html)",
+      "Perform Underwriting for Syndicated Loan (views/view_55248.html)",
+      "Perform Underwriting Light for Buy Now Pay Later (views/view_55191.html)",
+      "Perform Underwriting for Mortgage Loan (views/view_55392.html)",
+      "Perform Underwriting for Uncollateralised Consumer Loan (views/view_55410.html)",
+      "Perform Underwriting for Renewal of Uncollateralised Consumer Loan (views/view_54892.html)",
+      "Perform Underwriting for Merchandising Loan (views/view_54854.html)",
+      "Handle Request for Outgoing Credit Transfer Related to Request to Pay at Debtor Bank (views/view_54799.html)"
+    ]
+  },
+  {
+    "capabilityName": "Fraud Model",
+    "folderName": "Fraud Incident Management",
+    "coreBusinessObject": "Fraud Model",
+    "roleDefinition": "Analyze history of transactions and fraud cases to discern fraud patterns and develop Rule sets, Decision Trees, and Machine Learning/Predictive models to identify out of pattern transactions or events and their fraud risk score. Support the use of these models and rules in different production contexts and refine the models in response to new and changing patterns",
+    "exampleOfUse": "A customer \"fraudulent card use' algorithm is updated to take account of additional transaction utilization data that is available",
+    "executiveSummary": "This service domain handles the design and maintenance of a portfolio of fraud models used across all production activity to detect potential fraud on the part of customers, merchants and other involved parties",
+    "keyFeatures": [
+      "Determine desired type/coverage for fraud analysis",
+      "Source, define and develop fraud models",
+      "Publish, process feedback and refine/tune models"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/FraudModel/12.0.0",
+    "servedBy": [
+      "Fraud Evaluation"
+    ],
+    "serves": [
+      "Fraud Incident Management"
+    ],
+    "triggeredBy": [
+      "Fraud Evaluation"
+    ],
+    "triggers": [
+      "Not explicitly specified in the source document"
+    ],
+    "listOfScenarios": [
+      "Process Card Clearing by Issuer (views/view_55194.html)"
+    ]
+  },
+  {
+    "capabilityName": "Fraud Resolution",
+    "folderName": "Fraud Incident Management",
+    "coreBusinessObject": "Fraud Case",
+    "roleDefinition": "Setup and update Fraud Case and handle investigation and resolution steps, which may involve initiating containment actions, obtaining documentation, performing forensic investigation and actions, determining liability, initiating resolution actions such as reversals and financial adjustments, subscribing and publishing to Consortia, determining root cause and initiating corrective/preventive actions. The Fraud Case may be opened by Product/Channel Facility, Fraud Diagnosis or by Customer Case.",
+    "exampleOfUse": "A pattern of possible fraud is highlighted in transaction records that is researched and evidence of fraud discovered. Prosecution/resolution activity is initiated",
+    "executiveSummary": "This service domain sets up and processes a fraud case resulting from fraud behavior that has been detected during production processing",
+    "keyFeatures": [
+      "Setup fraud resolution case",
+      "Obtain documentation and evaluate",
+      "Determine and assign liability",
+      "Define and initiate resolution activities"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/FraudResolution/12.0.0",
+    "servedBy": [
+      "Contact Handler",
+      "Session Dialogue"
+    ],
+    "serves": [
+      "Fraud Incident Management"
+    ],
+    "triggeredBy": [
+      "Contact Handler"
+    ],
+    "triggers": [
+      "Not explicitly specified in the source document"
+    ],
+    "listOfScenarios": [
+      "Service Role: Review, diagnose and respond to detected production activity that has been identified as potential fraud/AML behavior"
+    ]
+  }
+]

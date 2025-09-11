@@ -1,0 +1,117 @@
+[
+  {
+    "Role Definition": "Hedge funds group accredited investors as limited partners to the fund with the fund manager as the general partner. As investors are restricted to being accredited a hedge funds is free to make more aggressive investment decisions and can generate higher returns. Fund income combines management and performance fees",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Not explicitly mentioned in the document",
+    "Example of Use": "A bank operates a hedge fund to support its accredited investment customers. The fund targets a market segment of specific interest to its investor membership",
+    "Executive Summary": "The Hedge Fund Administration Service Domain handles all aspects of the set-up and operation of a hedge fund that is offered to accredited investors within the bank's customer base",
+    "Key Features": [
+      "Handle the fund's accounting, tax administration and financial reporting needs",
+      "Manage/develop the fund, investing in alignment with fund policy",
+      "Handle investor inflows and outflow processing to the fund",
+      "Process management and performance fees",
+      "Support/oversee all general investor servicing and process middle and back office functions"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/HedgeFundAdministration/12.0.0",
+    "Served By": ["No specific served by relationships found in the document"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["No specific triggered by relationships found in the document"],
+    "Triggers": ["No specific triggers found in the document"],
+    "List of Scenarios": ["No specific scenarios listed in the document"]
+  },
+  {
+    "Role Definition": "Perform scheduled and ad-hoc performance analysis on a customer's investment portfolio. This can include different types of analysis and performance comparisons",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Investment Portfolio",
+    "Example of Use": "A relationship manager requests an investment portfolio performance analysis prior to a regular client meeting",
+    "Executive Summary": "Assess and report on investment portfolio make-up, valuation and performance",
+    "Key Features": [
+      "Consolidate investment portfolio transaction details and comparative market activity reports",
+      "Select types of performance analysis and apply analyses to the period of transaction data",
+      "Develop portfolio performance comparisons and evaluations/justifications"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioAnalysis/12.0.0",
+    "Served By": ["Customer Relationship Management", "Business Unit Management", "Investment Portfolio Management"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["Customer Relationship Management"],
+    "Triggers": ["Financial Market Analysis", "Financial Market Research", "Investment Account"],
+    "List of Scenarios": ["Process Performance Review", "Process Portfolio Rebalancing"]
+  },
+  {
+    "Role Definition": "Orchestrate the investment/ rebalancing of an investment portfolio to optimize gains remaining within the terms of the portfolio 'charter' or agreement",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Investment Portfolio",
+    "Example of Use": "An investment manager monitoring the markets determines that an identified opportunity can be exploited for the portfolio, remaining in line with the portfolio policies",
+    "Executive Summary": "Manage an investment portfolio, initiating trading to leverage market opportunities, remaining within portfolio trading policies",
+    "Key Features": [
+      "Monitor market for opportunities/threats",
+      "Match identified trading opportunity to investment portfolio policies",
+      "Initiate market trades to rebalance/improve portfolio make-up"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioManagement/12.0.0",
+    "Served By": ["Business Unit Management", "Investment Portfolio Analysis", "Session Dialogue", "Investment Portfolio Planning"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["Customer Relationship Management", "Investment Portfolio Management", "Investment Portfolio Planning"],
+    "Triggers": ["Investment Portfolio Management", "Current Account", "Sales Product", "Customer Position", "Investment Account", "Customer Product and Service Directory", "Product Design", "Product Matching", "Party Reference Data Directory", "Session Dialogue", "Investment Portfolio Planning"],
+    "List of Scenarios": ["Handle Request for Windfall Investment", "Handle Request for Investment Plan", "Process Portfolio Rebalancing", "Conduct Customer Centric Product Manufacturing"]
+  },
+  {
+    "Role Definition": "Agree the customer investment portfolio governing principles, risk appetite, management/trading guidelines and target portfolio profile. Identify any desired/target and 'out of bounds' securities/sectors. Ensure disclosures and related eligibility, suitability and other regulatory obligations are addressed and reflected in the agreement",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Investment Portfolio",
+    "Example of Use": "A relationship manager established the investment agreement for a customer that is setting up a managed investment portfolio",
+    "Executive Summary": "Agree the policies and required make-up of an investment portfolio and ensure all required bank and regulatory terms and conditions are addressed",
+    "Key Features": [
+      "Identify and agree investment portfolio properties and make-up (includes risk appetite)",
+      "Handle regulatory and bank requirements (e.g. disclosures, suitability, eligibility)",
+      "Identify any target and securities to avoid",
+      "Agree key roles and schedules for the investment portfolio handling"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioPlanning/12.0.0",
+    "Served By": ["Customer Relationship Management", "Business Unit Management", "Investment Portfolio Management", "Session Dialogue"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["Customer Relationship Management", "Investment Portfolio Management"],
+    "Triggers": ["Product Expert Sales Support", "Investment Portfolio Management", "Product Directory", "Suitability Checking", "Regulatory Compliance"],
+    "List of Scenarios": ["Handle Request for Windfall Investment", "Process Performance Review", "Handle Request for Investment Plan", "Process Portfolio Rebalancing", "Handle Request for Product Selection"]
+  },
+  {
+    "Role Definition": "Mutual funds provide an investment vehicle to general investors and as such are highly regulated and tend to focus on lower risk/return investments. Mutual funds are allowed to charge investors a management fee, but unlike hedge funds the mutual fund manager is not permitted to share in the fund's performance",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Not explicitly mentioned in the document",
+    "Example of Use": "A bank operates mutual funds to offer its non accredited customers access to suitably structured investment opportunities.",
+    "Executive Summary": "The Mutual Fund Administration Service Domain handles all aspects of the set-up and operation of mutual funds that can be offered to the bank's general (non-accredited) customers",
+    "Key Features": [
+      "Handle the fund's accounting, tax administration and financial reporting needs",
+      "Manage/develop the fund, investing in alignment with fund policy",
+      "Handle investor inflows and outflow processing to the fund",
+      "Process management fees",
+      "Support/oversee all general investor servicing and process middle and back office functions"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/MutualFundAdministration/12.0.0",
+    "Served By": ["No specific served by relationships found in the document"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["No specific triggered by relationships found in the document"],
+    "Triggers": ["No specific triggers found in the document"],
+    "List of Scenarios": ["No specific scenarios listed in the document"]
+  },
+  {
+    "Role Definition": "Unit trusts offer a fixed term investment vehicle for bank customers with terms typically ranging from one to twenty years. Unlike many other types of investment fund the unit trust issues a fixed number of shares and is not actively managed during its term. The fund may exchange severely underperforming assets in rare cases. Investors may be able to exchange shares with other investors within the trust but the fund is essentially 'closed' to the originating investor pool for its full term",
+    "Folder Name": "Investment Portfolio Management",
+    "Core Business Object": "Not explicitly mentioned in the document",
+    "Example of Use": "An investment trust is established and sold to a group of investors",
+    "Executive Summary": "This Service Domain handles the implementation and fulfillment of unit investment trusts",
+    "Key Features": [
+      "Handle the unit trust's accounting, tax administration and financial reporting needs",
+      "Package the initial investment for the trust",
+      "Handle share exchanges between investors in the trust",
+      "Process management fees",
+      "Support/oversee all general investor servicing and process middle and back office functions"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/UnitTrustAdministration/12.0.0",
+    "Served By": ["No specific served by relationships found in the document"],
+    "Serves": ["Investment Portfolio Management"],
+    "Triggered By": ["No specific triggered by relationships found in the document"],
+    "Triggers": ["No specific triggers found in the document"],
+    "List of Scenarios": ["No specific scenarios listed in the document"]
+  }
+]

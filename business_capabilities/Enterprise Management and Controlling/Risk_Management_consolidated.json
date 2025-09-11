@@ -1,0 +1,768 @@
+[
+  {
+    "capabilityName": "Account Recovery",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Account Recovery Procedure",
+    "roleDefinition": "Handles the recovery of distressed accounts that have exceeded standard late/payment handling but have not yet been fully written off and passed to collections. The restructuring can involve partial write downs and leveraging any tax or other program of assistance that can be applied. The situation is managed until the account is recovered or a decision made to pass the account over to collections",
+    "exampleOfUse": "A non-performing customer account is handed over for recovery after the normal relationship management efforts have failed. Additional authority is provided to renegotiate/structure the account to enable the customer to attempt recovery. This restructuring can result in write downs that need to be booked appropriately",
+    "executiveSummary": "This service domain handles the restructuring of a distressed account (loan) after standard recovery procedures have been exhausted",
+    "keyFeatures": [
+      "Account status assessment",
+      "Account recovery planning",
+      "Customer agreement/negotiation",
+      "Account terms amendment/restructuring"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/AccountRecovery/12.0.0",
+    "servedBy": [
+      "Customer Management"
+    ],
+    "serves": [
+      "Financial Account Management",
+      "Risk Management",
+      "Risk Event Management"
+    ],
+    "triggeredBy": [
+      "Credit Card issues",
+      "Customer Case escalations",
+      "Failed standard recovery procedures"
+    ],
+    "triggers": [
+      "Corporate Current Account actions",
+      "Account restructuring processes",
+      "Collection procedures"
+    ],
+    "listOfScenarios": [
+      "accountRecoveryProcedureAccumulators",
+      "accountRecoveryProcedureActivityAnalysis",
+      "accountRecoveryProcedurePerformanceAnalysis",
+      "accountRecoveryProcedureTrends&Events",
+      "accountRecoveryProcedurePortfolioActivityAnalysis",
+      "accountRecoveryProcedurePortfolioMake-UpAnalysis",
+      "accountRecoveryProcedurePortfolioPerformanceAnalysis",
+      "Process Request for Amount Block",
+      "Process Periodic Review of Collection Actions"
+    ]
+  },
+  {
+    "capabilityName": "Business Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Business Operation Risk Model Specification",
+    "roleDefinition": "Develop and maintain models that assess commercial/business exposures",
+    "exampleOfUse": "Financial engineers develop and deploy a collection of business risk models that can run against different failure scenarios to assess exposure and determine mitigation needs",
+    "executiveSummary": "This capability focuses on developing and maintaining comprehensive business risk models that assess commercial and business exposures across various failure scenarios to support risk mitigation strategies.",
+    "keyFeatures": [
+      "Commercial exposure assessment",
+      "Business risk modeling",
+      "Failure scenario analysis",
+      "Risk exposure evaluation",
+      "Mitigation needs determination",
+      "Individual and portfolio analytics",
+      "Performance analysis and trending"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36466",
+    "servedBy": [
+      "Operational Risk"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Transaction Authorization inputs",
+      "Business failure scenarios",
+      "Commercial exposure changes",
+      "Risk assessment requirements"
+    ],
+    "triggers": [
+      "Risk model development",
+      "Exposure assessment",
+      "Mitigation planning activities"
+    ],
+    "listOfScenarios": [
+      "businessOperationRiskModelSpecificationAccumulators",
+      "businessOperationRiskModelSpecificationActivityAnalysis",
+      "businessOperationRiskModelSpecificationPerformanceAnalysis",
+      "businessOperationRiskModelSpecificationTrends&Events",
+      "businessOperationRiskModelSpecificationPortfolioActivityAnalysis",
+      "businessOperationRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "businessOperationRiskModelSpecificationPortfolioPerformanceAnalysis"
+    ]
+  },
+  {
+    "capabilityName": "Continuity Planning",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Enterprise Continuity Assurance Management Plan",
+    "roleDefinition": "Develop, maintain and test continuity plans and supporting facilities for an appropriate range of possible failure scenarios",
+    "exampleOfUse": "A business continuity plan is developed for key business activities and assurance tests performed",
+    "executiveSummary": "This capability focuses on developing, maintaining, and testing continuity plans and supporting facilities for various failure scenarios to ensure business continuity.",
+    "keyFeatures": [
+      "Development of continuity plans for failure scenarios",
+      "Maintenance and testing of continuity plans",
+      "Supporting facilities management",
+      "Assurance testing capabilities",
+      "Individual and portfolio analytics",
+      "Performance analysis and trending"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_20.html_object_29351",
+    "servedBy": [
+      "Corporate Services"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Business continuity requirements",
+      "Failure scenario identification",
+      "Regulatory requirements"
+    ],
+    "triggers": [
+      "Continuity plan development",
+      "Testing activities",
+      "Plan updates and maintenance"
+    ],
+    "listOfScenarios": [
+      "enterpriseContinuityAssuranceManagementPlanAccumulators",
+      "enterpriseContinuityAssuranceManagementPlanActivityAnalysis",
+      "enterpriseContinuityAssuranceManagementPlanPerformanceAnalysis",
+      "enterpriseContinuityAssuranceManagementPlanTrends&Events",
+      "enterpriseContinuityAssuranceManagementPlanPortfolioActivityAnalysis",
+      "enterpriseContinuityAssuranceManagementPlanPortfolioMake-UpAnalysis",
+      "enterpriseContinuityAssuranceManagementPlanPortfolioPerformanceAnalysis"
+    ]
+  },
+  {
+    "capabilityName": "Counterparty Risk",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Counterparty Credit Risk Measurement",
+    "roleDefinition": "Maintain and administer a counterparty risk rating",
+    "exampleOfUse": "A back office function tracks transaction activity and external rating details to maintain counterparty credit ratings",
+    "executiveSummary": "Counterparty Risk capability maintains and administers counterparty risk ratings by tracking transaction activities and external rating details to assess and monitor credit risk exposure to counterparties.",
+    "keyFeatures": [
+      "Counterparty risk rating maintenance",
+      "Credit risk measurement and monitoring",
+      "Transaction activity tracking",
+      "External rating integration",
+      "Risk assessment analytics",
+      "Portfolio risk analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_38665",
+    "servedBy": [
+      "Credit Risk",
+      "Account Management"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Transaction activity changes",
+      "External rating updates",
+      "Credit risk threshold breaches"
+    ],
+    "triggers": [
+      "Risk rating updates",
+      "Credit limit adjustments",
+      "Risk monitoring alerts"
+    ],
+    "listOfScenarios": [
+      "Credit rating maintenance",
+      "Risk assessment update",
+      "Credit risk monitoring"
+    ]
+  },
+  {
+    "capabilityName": "Credit Management",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Credit Position",
+    "roleDefinition": "This service domain supports a central bank credit management function that maintains an overarching credit perspective across all bank activity. Transactions can be re-priced to factor in this credit perspective",
+    "exampleOfUse": "A corporate loan is presented for credit management pricing decisioning prior to completion of the offer process",
+    "executiveSummary": "This service domain provides a bank-wide/oversight function to qualify credit pricing for offered products and services to reflect the bank's appetite to write the business. This decision can override the standard product pricing procedure",
+    "keyFeatures": [
+      "Evaluate a proposed loan's fit to the bank's credit policies and priorities",
+      "Re-price major loans to align to bank policies and priorities",
+      "Bank-wide credit perspective maintenance",
+      "Transaction re-pricing capabilities",
+      "Credit policy compliance assessment",
+      "Pricing decision override functionality"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/CreditManagement/12.0.0",
+    "servedBy": [
+      "Trade Banking",
+      "Wave 1",
+      "Credit Risk"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Customer Relationship Management",
+      "Customer Offer"
+    ],
+    "triggers": [
+      "Fraud Evaluation",
+      "Regulatory Compliance",
+      "Credit Risk Models"
+    ],
+    "listOfScenarios": [
+      "Handle Request for Credit Facility",
+      "Handle Request for Consumer Loan Complete Origination",
+      "Corporate Loan Pricing Decision"
+    ]
+  },
+  {
+    "capabilityName": "Credit Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Credit Risk Model Specification",
+    "roleDefinition": "This service domain handles the development, maintenance and continual assessment and refinement of the collection of credit models that are deployed across the bank. This includes individual credit assessments and more complex analyses for merchants and companies/corporations. The models are used to derive credit scoring and support more involved credit analysis/insight development",
+    "exampleOfUse": "A credit model is used to analyze product activity in order to refine then banks credit assessment of a customer",
+    "executiveSummary": "This service domain handles the design and maintenance of a portfolio of credit models that are used in all aspects of customer credit assessments",
+    "keyFeatures": [
+      "Determine desired type/coverage for credit analysis",
+      "Source, define and develop credit models",
+      "Publish, process feedback and refine/tune models",
+      "Individual credit assessments",
+      "Complex analyses for merchants and companies/corporations",
+      "Credit scoring derivation",
+      "Credit analysis/insight development support"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/CreditRiskModels/12.0.0",
+    "servedBy": [
+      "Credit Risk Model Specification_ Analytics Object",
+      "Credit Risk Model",
+      "Credit Risk Model Specification_Invocation",
+      "Credit Risk Model Specification_Reporting",
+      "Credit Risk Models_SD_Operations",
+      "Credit Risk Model Specification_Instantiation",
+      "Credit Risk Models_SD_Service Group"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Corporate Loan",
+      "Credit Management",
+      "Underwriting",
+      "Asset Securitization"
+    ],
+    "triggers": [
+      "Credit model specification processes",
+      "Credit risk assessments",
+      "Model testing and validation",
+      "Production deployment of models"
+    ],
+    "listOfScenarios": [
+      "Select Buyers for Securitize Assets",
+      "Perform Underwriting for Bank Guarantee",
+      "Process Selection of Loans for Securitization",
+      "Review Borrower Financial Statements",
+      "Handle Request for Credit Facility",
+      "Perform Underwriting for Corporate Loan",
+      "Perform Underwriting for Syndicated Loan",
+      "Perform Underwriting Light for Buy Now Pay Later",
+      "Perform Underwriting for Mortgage Loan",
+      "Perform Underwriting for Uncollateralised Consumer Loan",
+      "Perform Underwriting for Renewal of Uncollateralised Consumer Loan",
+      "Perform Underwriting for Merchandising Loan"
+    ]
+  },
+  {
+    "capabilityName": "Economic Capital",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Economic Capital Analysis",
+    "roleDefinition": "Develop, maintain and apply models that combine the overall risk over different risk types to determine the consolidated risk position for the bank",
+    "exampleOfUse": "Financial engineers define and apply models that consolidate the overall risk exposure for the bank to determine a complete estimate of exposure",
+    "executiveSummary": "Economic Capital capability provides comprehensive risk consolidation across different risk types to determine the bank's overall risk position. It develops and maintains sophisticated models that integrate various risk categories to provide a complete picture of the institution's risk exposure.",
+    "keyFeatures": [
+      "Risk consolidation across different risk types",
+      "Consolidated risk position determination",
+      "Economic capital model development and maintenance",
+      "Complete risk exposure estimation",
+      "Individual analytics including accumulators, activity analysis, performance analysis, and trends & events",
+      "Portfolio analytics for activity, make-up, and performance analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_23.html/object_48771",
+    "servedBy": [
+      "Economic Capital Analysis_ Analytics Object",
+      "Economic Capital",
+      "Economic Capital Analysis",
+      "Economic Capital Analysis_Reporting",
+      "Economic Capital Analysis_Invocation",
+      "Economic Capital Analysis_Instantiation",
+      "Economic Capital_SD_Service Group"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Risk consolidation requirements",
+      "Capital adequacy assessments",
+      "Regulatory reporting needs"
+    ],
+    "triggers": [
+      "Economic capital analysis processes",
+      "Risk position evaluations",
+      "Capital allocation decisions",
+      "Risk exposure assessments"
+    ],
+    "listOfScenarios": [
+      "Overall risk exposure consolidation",
+      "Economic capital model application",
+      "Risk position determination",
+      "Cross-risk type analysis",
+      "Capital adequacy evaluation"
+    ]
+  },
+  {
+    "capabilityName": "Financial Compliance",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Financial Compliance Procedure",
+    "roleDefinition": "Track the resolution of detected non compliance finance activities and instances",
+    "exampleOfUse": "A business unit misses its first qtr targets and reacts with corrective actions that are tracked",
+    "executiveSummary": "Financial Compliance capability tracks and manages the resolution of detected non-compliance financial activities and instances, ensuring corrective actions are properly monitored and resolved.",
+    "keyFeatures": [
+      "Non-compliance detection tracking",
+      "Financial activity monitoring",
+      "Resolution tracking",
+      "Corrective action management",
+      "Financial compliance procedure analytics",
+      "Portfolio compliance analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_38656",
+    "servedBy": [
+      "Financial Control",
+      "Finance"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Non-compliance detection",
+      "Financial target misses",
+      "Compliance violations"
+    ],
+    "triggers": [
+      "Corrective action plans",
+      "Compliance tracking procedures",
+      "Financial compliance reporting"
+    ],
+    "listOfScenarios": [
+      "Target miss response",
+      "Compliance violation resolution",
+      "Financial compliance monitoring"
+    ]
+  },
+  {
+    "capabilityName": "Gap Analysis",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Interest Rate Gap Risk Analysis",
+    "roleDefinition": "Maintain and track projected consolidated cash flows to support evaluation and management of currency and interest rate risk positions, the bank's overall dispositive liquidity risk",
+    "exampleOfUse": "A risk management unit/group treasury assembles and maintains the currency and interest rate maturity ladders for the trading function",
+    "executiveSummary": "Gap Analysis capability maintains and tracks projected consolidated cash flows to support the evaluation and management of currency and interest rate risk positions, supporting the bank's overall liquidity risk management strategy.",
+    "keyFeatures": [
+      "Consolidated cash flow tracking",
+      "Currency risk position management",
+      "Interest rate risk analysis",
+      "Liquidity risk evaluation",
+      "Maturity ladder maintenance",
+      "Risk position analytics"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_39139",
+    "servedBy": [
+      "Market Risk",
+      "Models"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Cash flow projections",
+      "Interest rate changes",
+      "Currency fluctuations",
+      "Liquidity requirements"
+    ],
+    "triggers": [
+      "Risk position updates",
+      "Gap analysis reports",
+      "Liquidity risk assessments"
+    ],
+    "listOfScenarios": [
+      "Maturity ladder maintenance",
+      "Cash flow analysis",
+      "Interest rate gap assessment"
+    ]
+  },
+  {
+    "capabilityName": "Limit and Exposure Management",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Limit And Exposure Management Plan",
+    "roleDefinition": "Oversee corporate limits and exposures for the combined business activity",
+    "exampleOfUse": "Product fulfillment activity triggers limit and exposure checks",
+    "executiveSummary": "Limit and Exposure Management capability provides oversight and control of corporate limits and exposures across all business activities. It ensures that business operations remain within defined risk parameters and exposure limits.",
+    "keyFeatures": [
+      "Corporate limit oversight",
+      "Exposure monitoring and management",
+      "Combined business activity supervision",
+      "Limit and exposure checks triggered by business activities",
+      "Individual analytics for accumulators, activity analysis, performance analysis, and trends & events",
+      "Portfolio analytics for activity, make-up, and performance analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_22.html/object_46631",
+    "servedBy": [
+      "Limit And Exposure Management Plan_ Analytics Object",
+      "Limit And Exposure",
+      "Limit And Exposure Management Plan",
+      "Limit And Exposure Management Plan_Reporting",
+      "Limit And Exposure Management Plan_Instantiation",
+      "Limit And Exposure Management Plan_Invocation"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Collateral Allocation Management",
+      "Corporate Loan"
+    ],
+    "triggers": [
+      "Limit and exposure checks",
+      "Risk parameter validations",
+      "Corporate exposure assessments"
+    ],
+    "listOfScenarios": [
+      "Perform Underwriting for Bank Guarantee",
+      "Product fulfillment limit checks",
+      "Corporate exposure monitoring",
+      "Risk limit validation processes",
+      "Business activity exposure assessment"
+    ]
+  },
+  {
+    "capabilityName": "Liquidity Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Liquidity Risk Model Specification",
+    "roleDefinition": "Develop and maintain models for dispositive and structural liquidity risk management, including liquidity gap analysis, Liquidity at Risk (LaR) and Liquidity Value at Risk (LVaR).",
+    "exampleOfUse": "Financial engineers develop and refine liquidity risk management models",
+    "executiveSummary": "This capability focuses on developing and maintaining comprehensive liquidity risk models for both dispositive and structural liquidity risk management, including advanced analytics like LaR and LVaR.",
+    "keyFeatures": [
+      "Liquidity gap analysis",
+      "Liquidity at Risk (LaR) modeling",
+      "Liquidity Value at Risk (LVaR) modeling",
+      "Dispositive liquidity risk management",
+      "Structural liquidity risk management",
+      "Individual and portfolio analytics",
+      "Performance analysis and trending"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_34224",
+    "servedBy": [
+      "Models And Analytics"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Asset Securitization",
+      "Liquidity risk assessment requirements",
+      "Regulatory compliance needs"
+    ],
+    "triggers": [
+      "Liquidity risk model development",
+      "Gap analysis execution",
+      "Risk metric calculations (LaR, LVaR)"
+    ],
+    "listOfScenarios": [
+      "liquidityRiskModelSpecificationAccumulators",
+      "liquidityRiskModelSpecificationActivityAnalysis",
+      "liquidityRiskModelSpecificationPerformanceAnalysis",
+      "liquidityRiskModelSpecificationTrends&Events",
+      "liquidityRiskModelSpecificationPortfolioActivityAnalysis",
+      "liquidityRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "liquidityRiskModelSpecificationPortfolioPerformanceAnalysis",
+      "Select Buyers for Securitize Assets"
+    ]
+  },
+  {
+    "capabilityName": "Market Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Market Risk Model Specification",
+    "roleDefinition": "Develop and maintain a portfolio of market risk models including currency, interest rate, instrument quotes, indices, commodity prices and other market and macro-economic risk factors. Support the use of these models in trading and pricing activity",
+    "exampleOfUse": "Financial engineers assess the coverage and currency of the portfolio of market risk models and update certain models accordingly",
+    "executiveSummary": "This capability focuses on developing and maintaining comprehensive market risk models that cover various financial risk factors to support trading and pricing activities across the organization.",
+    "keyFeatures": [
+      "Currency risk modeling",
+      "Interest rate risk modeling",
+      "Instrument quote analysis",
+      "Market indices modeling",
+      "Commodity price risk assessment",
+      "Macro-economic risk factor analysis",
+      "Trading activity support",
+      "Pricing activity support"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36018",
+    "servedBy": [
+      "Models And Analytics"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Asset Securitization",
+      "Market volatility changes",
+      "Trading requirements",
+      "Pricing model updates"
+    ],
+    "triggers": [
+      "Risk model development",
+      "Portfolio assessment",
+      "Model updates and refinements"
+    ],
+    "listOfScenarios": [
+      "marketRiskModelSpecificationAccumulators",
+      "marketRiskModelSpecificationActivityAnalysis",
+      "marketRiskModelSpecificationPerformanceAnalysis",
+      "marketRiskModelSpecificationTrends&Events",
+      "marketRiskModelSpecificationPortfolioActivityAnalysis",
+      "marketRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "marketRiskModelSpecificationPortfolioPerformanceAnalysis",
+      "Select Buyers for Securitize Assets"
+    ]
+  },
+  {
+    "capabilityName": "Operational Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Operational Risk Model Specification",
+    "roleDefinition": "Develop and refine operational risk models to detect possible exposures to operational failures",
+    "exampleOfUse": "Financial engineers evaluate the history of operational breaches and issues to determine how well existing operational risk models cover the detection of exposures",
+    "executiveSummary": "Operational Risk Models capability focuses on developing, maintaining, and refining models that detect potential operational failures and exposures. It provides comprehensive analysis of operational breaches and issues to ensure effective risk detection and mitigation.",
+    "keyFeatures": [
+      "Operational risk model development and refinement",
+      "Detection of operational failure exposures",
+      "Historical breach analysis",
+      "Model effectiveness evaluation",
+      "Individual analytics including accumulators, activity analysis, performance analysis, and trends & events",
+      "Portfolio analytics for activity, make-up, and performance analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_23.html/object_47895",
+    "servedBy": [
+      "Operational Risk Model Specification_ Analytics Object",
+      "Operational Risk Model",
+      "Operational Risk Model Specification",
+      "Operational Risk Model Specification_Instantiation",
+      "Operational Risk Model Specification_Reporting",
+      "Operational Risk Model Specification_Invocation",
+      "Operational Risk Models_SD_Service Group"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Financial Message Analysis",
+      "Transaction Authorization"
+    ],
+    "triggers": [
+      "Operational risk assessments",
+      "Model validation processes",
+      "Risk exposure evaluations",
+      "Operational failure detection"
+    ],
+    "listOfScenarios": [
+      "Operational breach history evaluation",
+      "Risk model effectiveness assessment",
+      "Operational failure exposure detection",
+      "Historical analysis of operational issues",
+      "Model refinement based on breach patterns"
+    ]
+  },
+  {
+    "capabilityName": "Production Risk Models",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Production Risk Model Specification",
+    "roleDefinition": "Develop and refine production risk models to detect possible exposures to procedural failures",
+    "exampleOfUse": "Financial engineers respond to an analysis of production issues and develop/refine their production risk models to better detect the root cause",
+    "executiveSummary": "This capability focuses on developing and refining production risk models to identify and detect potential exposures to procedural failures in business operations.",
+    "keyFeatures": [
+      "Development of production risk models",
+      "Refinement of existing risk models",
+      "Detection of procedural failure exposures",
+      "Root cause analysis capabilities",
+      "Individual and portfolio analytics",
+      "Performance analysis and trending"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_20.html_object_42574",
+    "servedBy": [
+      "Operational Risk"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Production issues analysis",
+      "Procedural failure detection",
+      "Risk model update requirements"
+    ],
+    "triggers": [
+      "Risk model development",
+      "Model refinement activities",
+      "Failure exposure detection"
+    ],
+    "listOfScenarios": [
+      "productionRiskModelSpecificationAccumulators",
+      "productionRiskModelSpecificationActivityAnalysis",
+      "productionRiskModelSpecificationPerformanceAnalysis",
+      "productionRiskModelSpecificationTrends&Events",
+      "productionRiskModelSpecificationPortfolioActivityAnalysis",
+      "productionRiskModelSpecificationPortfolioMake-UpAnalysis",
+      "productionRiskModelSpecificationPortfolioPerformanceAnalysis"
+    ]
+  },
+  {
+    "capabilityName": "Security Advisory",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Security Compliance Procedure",
+    "roleDefinition": "Provide specialist security advice and guidance for line management and projects as needed to ensure security arrangements across the organization",
+    "exampleOfUse": "Specialist security advice is sought for a major project",
+    "executiveSummary": "Security Advisory capability provides specialized security guidance and advice to support organizational security arrangements across line management and project implementations.",
+    "keyFeatures": [
+      "Specialist security advice provision",
+      "Line management security guidance",
+      "Project security consultation",
+      "Organization-wide security arrangements",
+      "Security compliance procedure analytics",
+      "Portfolio security analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_21.html_object_36757",
+    "servedBy": [
+      "Corporate Services",
+      "Non-IT and Non-HR Enterprise Services"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Security compliance requirements",
+      "Project security needs",
+      "Management security requests"
+    ],
+    "triggers": [
+      "Security compliance procedure execution",
+      "Security advice delivery",
+      "Security guidance provision"
+    ],
+    "listOfScenarios": [
+      "Security advice request",
+      "Security compliance analysis",
+      "Security portfolio management"
+    ]
+  },
+  {
+    "capabilityName": "Security Assurance",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Security Compliance Assessment",
+    "roleDefinition": "Maintain and apply a portfolio of security assurance checks, target selective assurance tests to ensure security countermeasures are in place and appropriate",
+    "exampleOfUse": "A security check of a new product operation is performed considering multiple threat categories",
+    "executiveSummary": "Security Assurance capability provides comprehensive security testing and validation services to ensure organizational security countermeasures are effective and appropriate. It maintains a portfolio of security checks and performs targeted assurance testing across multiple threat categories.",
+    "keyFeatures": [
+      "Portfolio of security assurance checks",
+      "Selective assurance testing",
+      "Security countermeasure validation",
+      "Multiple threat category assessment",
+      "Security compliance assessment analytics",
+      "Individual analytics including accumulators, activity analysis, performance analysis, and trends & events",
+      "Portfolio analytics for activity, make-up, and performance analysis"
+    ],
+    "apiBianPortalLink": "https://bian.org/servicelandscape-12-0-0/object_22.html/object_46014",
+    "servedBy": [
+      "Security Compliance Assessment_ Analytics Object",
+      "Security Compliance",
+      "Security Compliance Assessment",
+      "Security Compliance Assessment_Reporting",
+      "Security Compliance Assessment_Instantiation",
+      "Security Compliance Assessment_Invocation"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "request Security Compliance Assessment",
+      "retrieve Security Compliance Assessment",
+      "record Security Compliance Assessment",
+      "authorize Security Compliance Assessment",
+      "configure Security Compliance Assessment",
+      "evaluate Security Compliance Assessment"
+    ],
+    "triggers": [
+      "Security compliance assessments",
+      "Security assurance testing",
+      "Threat category evaluations"
+    ],
+    "listOfScenarios": [
+      "Security check of new product operations",
+      "Multiple threat category assessments",
+      "Security countermeasure validation",
+      "Portfolio-based security testing",
+      "Compliance assessment reporting",
+      "Security performance analysis"
+    ]
+  },
+  {
+    "capabilityName": "Underwriting",
+    "folderName": "Risk Management",
+    "coreBusinessObject": "Underwriting Assessment",
+    "roleDefinition": "The underwriting decision considers the ability of the borrower to finance the loan based on their known cash flows and credit worthiness. The underwriting decision refers to specific properties of the proposed loan (amount, term, repayment schedule, collateral etc.), the income and known commitments of the borrower and their credit history with the bank. The decision may factor perceived underwriting risks into the interest rate and/or collateral requirements to obtain approval",
+    "exampleOfUse": "A corporate loan offer is processed and at the appropriate point an underwriting authorization is requested",
+    "executiveSummary": "This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)",
+    "keyFeatures": [
+      "Consolidate underwriting decision materials",
+      "Evaluate cash flow/credit position for proposal",
+      "Make (conditional if needed) underwriting determination",
+      "Risk-based pricing adjustments",
+      "Collateral requirement assessment",
+      "Multiple authorization levels support"
+    ],
+    "apiBianPortalLink": "https://app.swaggerhub.com/apis/BIAN-3/Underwriting/12.0.0",
+    "servedBy": [
+      "Customer Services",
+      "Sales",
+      "Wave 1",
+      "Loans and Deposits"
+    ],
+    "serves": [
+      "Risk Management"
+    ],
+    "triggeredBy": [
+      "Customer Relationship Management",
+      "Mortgage Loan",
+      "Servicing Order",
+      "Letter of Credit",
+      "Customer Offer",
+      "Merchandising Loan",
+      "Consumer Loan",
+      "Bank Guarantee",
+      "Loan Syndication"
+    ],
+    "triggers": [
+      "Document Services",
+      "Customer Relationship Management",
+      "Correspondence",
+      "Party Asset Directory",
+      "Corporate Current Account",
+      "Internal Audit",
+      "Payment Order",
+      "Collateral Asset Administration",
+      "Fraud Evaluation",
+      "Credit Facility",
+      "Customer Position",
+      "Guideline Compliance",
+      "Customer Credit Rating",
+      "Party Reference Data Directory",
+      "Regulatory Compliance",
+      "Credit Risk Models",
+      "Collateral Allocation Management"
+    ],
+    "listOfScenarios": [
+      "Perform Underwriting for Bank Guarantee",
+      "Handle Request for Loan that Requires Syndication",
+      "Handle Request for Corporate Loan",
+      "Perform Underwriting for Mortgage Loan",
+      "Perform Underwriting for Uncollateralised Consumer Loan",
+      "Handle Request for Credit Facility",
+      "Corporate Loan Authorization"
+    ]
+  }
+]

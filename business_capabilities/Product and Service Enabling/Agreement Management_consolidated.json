@@ -1,0 +1,1249 @@
+[
+  {
+    "Role Definition": "A bank offers factoring services to buy a customers' accounts receivable at a discount to provide short term liquidity. The bank will subsequently process the accounts receivable to recover purchase costs. In cases the bank may factor portions of the accounts receivable to a specialist third party",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Factoring Fulfillment Arrangement",
+    "Example of Use": "The Bank buys (factors) a batch of a corporate's customer invoices at a suitable discount to provide short term liquidity to the corporate. The bank processes the subsequent customer payments",
+    "Executive Summary": "This Service Domain supports a factoring service for corporate customers enabling them to convert accounts receivable into immediate funds at a discount",
+    "Key Features": [
+      "Evaluate the quality and make-up of the corporate's account receivable",
+      "Price and negotiate the factoring transaction with the corporate",
+      "Process the factoring transaction",
+      "Process accounts receivable for the purchased invoices",
+      "Factor elements of accounts receivable to specialist agencies"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/Factoring/12.0.0",
+    "Served By": [
+      "Customer Offer"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Corporate Banking requests for factoring services",
+      "Trade Banking operations"
+    ],
+    "Triggers": [
+      "Document Directory processes",
+      "Delinquent Account Handling procedures"
+    ],
+    "List of Scenarios": [
+      "Factoring services allows for a bank to buy a customers sell accounts receivable at discount to provide advanced income to improve short term liquidity",
+      "Account Receivable Factoring Fulfillment",
+      "Accounts Receivable Purchase Fulfillment", 
+      "Account Receivable Processing Fulfillment",
+      "Accounts Receivable Evaluation Fulfillment"
+    ]
+  },
+  {
+    "Role Definition": "This service domain handles the allocation and redemption of rewards points for customer transaction activity. In order to determine the reward point transaction and apply associated costs the service domain will access reward point arrangement agreements with the customers, merchants and related rewards programs. Note that the interactions between reward programs can be quite complex when 3rd party reward programs are integrated with the bank's own reward programs",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Reward Points Transaction",
+    "Example of Use": "A customer redeems bank reward points in order to finance a purchase with a bank associated vendor for air travel. The financial transaction engages the service domain in order to determine redemption requirements and associated payment requirements",
+    "Executive Summary": "Handle the allocation and redemption of rewards points for customer transaction activity",
+    "Key Features": [
+      "Financial transaction evaluation (price to agreements)",
+      "Reward point redemption transaction",
+      "Associated cash payment initiation"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/RewardPointsAwardsAndRedemption/12.0.0",
+    "Served By": [
+      "Operational Services"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [],
+    "Triggers": [],
+    "List of Scenarios": [
+      "Instantiate a new Redemption",
+      "Accept, verify, etc. aspects of Redemption processing",
+      "Accept, verify, etc. aspects of Award processing",
+      "Update details relating to Award",
+      "Retrieve details about any aspect of Award",
+      "Accept, verify, etc. aspects of Reward Points Transaction processing",
+      "Update details relating to Redemption",
+      "Retrieve details about any aspect of Reward Points Transaction",
+      "Instantiate a new Reward Points Transaction",
+      "Update details relating to Reward Points Transaction",
+      "Request manual intervention or a decision with respect to Reward Points Transaction",
+      "Execute an available automated action for Reward Points Transaction",
+      "Instantiate a new Award",
+      "Retrieve details about any aspect of Redemption"
+    ]
+  },
+  {
+    "Role Definition": "The Service Domain provides the financing support to support corporate customers with leasing arrangements for property and equipment. The bank will take a collateral interest in the leased items to underwrite the associated loan(s)",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "A corporate customer establishes a corporate leasing facility with the bank to acquire critical production equipment and facilities under lease",
+    "Executive Summary": "The Corporate Lease product provides corporate customers with loans to support leasing activity for property and equipment under an umbrella leasing arrangement",
+    "Key Features": [
+      "Establish corporate leasing facility",
+      "Process leases under the facility",
+      "Report, analyze and structure leasing arrangements to optimize the customers financial position"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CorporateLease/12.0.0",
+    "Served By": [
+      "Business Unit Management",
+      "Account Recovery",
+      "Session Dialogue"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Not specified in document"
+    ],
+    "Triggers": [
+      "Correspondence",
+      "Corporate Treasury",
+      "Legal Entity Directory",
+      "Customer Billing",
+      "Financial Accounting",
+      "Document Directory",
+      "Collateral Allocation Management",
+      "Customer Event History"
+    ],
+    "List of Scenarios": [
+      "Fulfillment of a range of loan products for corporate clients for the purpose of leasing"
+    ]
+  },
+  {
+    "Role Definition": "The Customer Agreement service domain captures and maintains the master legal terms of conditions in force for a customer (which as noted can be a complex multinational with many underlying product and service specific agreements).",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "CustomerMasterAgreement",
+    "Example of Use": "An new customer's master agreement is established prior to negotiating and setting up the underlying product specific agreements",
+    "Executive Summary": "This service domain maintains the master customer agreement/legal contract. Note that a customer can be a complex corporate entity with many subsidiaries operating in different geopolitical areas. The customer agreement is linked to as many Sales Product Agreements as needed for all in-force products",
+    "Key Features": [
+      "Set-up and maintain the customer master agreement",
+      "Ensure legal, regulatory and corporate considerations are covered in agreement",
+      "Determine if proposed actions are covered by the agreement"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerAgreement/12.0.0",
+    "Served By": [
+      "Party Lifecycle Management",
+      "Payment Initiation",
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Servicing Order",
+      "Corporate Current Account",
+      "Cash Management And Account Services",
+      "Current Account",
+      "Customer Offer",
+      "Credit Card",
+      "Consumer Loan",
+      "Customer Proposition",
+      "Bank Guarantee",
+      "Lead and Opportunity Management",
+      "Limit and Exposure Management"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Party Lifecycle Management",
+      "Payment Initiation", 
+      "Customer Relationship Management",
+      "Mortgage Loan",
+      "Servicing Order",
+      "Corporate Current Account",
+      "Payment Order",
+      "Current Account",
+      "Customer Offer",
+      "Corporate Loan",
+      "Consumer Loan",
+      "Customer Case",
+      "Loan Syndication"
+    ],
+    "Triggers": [
+      "Customer master agreement establishment",
+      "Legal terms evaluation",
+      "Regulatory compliance checks",
+      "Corporate policy updates"
+    ],
+    "List of Scenarios": [
+      "Set Up New Card for Card Application",
+      "Initiate Payment Order",
+      "EXT Handle Request to Move Overdraft Limit between Virtual Accounts",
+      "EXT Handle Request for High Volume Account Opening",
+      "Execute Customer Onboarding API version",
+      "Handle Request for Notional Pooling Agreement",
+      "Handle Request for Loan that Requires Syndication",
+      "Process Closing of Corporate Loan",
+      "EXT Handle Customer Relationships Case",
+      "Handle Request for Corporate Loan",
+      "EXT Handle Bulk Request for Opening Salary Accounts",
+      "Handle Request for Preferential Rates for Corporate Current Account",
+      "EXT Handle Request for High Volume Virtual Account Opening",
+      "Handle Request for Product Selection",
+      "Handle Bulk Request for Opening Salary Accounts",
+      "Process Closing of Mortgage Loan",
+      "EXT Handle Request for Preferential Rates for Corporate Current Account",
+      "Handle Request for Consumer Loan Checks and Options",
+      "EXT Handle Request to Open Corporate Current Account",
+      "EXT Handle Request to Open Virtual Account",
+      "Handle Request to Open Corporate Current Account",
+      "EXT Handle Request to Establish Term Deposit Agreement",
+      "Handle Request to Establish Term Deposit Agreement"
+    ]
+  },
+  {
+    "Role Definition": "The service domain handles loan fulfillment intended for the purchase of a larger merchandise item such as a car or boat. The item is usually administered as collateral for the loan and the origination and subsequent processing of the loan can include coordination with the merchant for some elements of fulfillment.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Merchandising Loan Facility",
+    "Example of Use": "A boat retailer coordinates with a bank to offer merchandising loans to bank customers wanting to buy a boat",
+    "Executive Summary": "Fulfillment of loan product used in the purchase of a larger merchandise item such as a car or boat. The purchased item is typically treated as collateral for the loan",
+    "Key Features": [
+      "Facility maintenance - fees, interest, reporting",
+      "Payments and withdrawals, liens and sweeps",
+      "Collateral tracking and oversight"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/MerchandisingLoan/12.0.0",
+    "Served By": [
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Servicing Order",
+      "Customer Offer",
+      "Merchandising Loan",
+      "Underwriting"
+    ],
+    "Triggers": [
+      "Position Keeping",
+      "Correspondence", 
+      "Legal Advisory",
+      "Customer Workbench",
+      "Collateral Asset Administration",
+      "Sales Product Agreement",
+      "Disbursement",
+      "Merchandising Loan",
+      "Customer Product and Service Directory",
+      "Information Provider Operation",
+      "Financial Accounting",
+      "Underwriting",
+      "Document Directory",
+      "Collateral Allocation Management"
+    ],
+    "List of Scenarios": [
+      "Process Modification of Merchandising Loan",
+      "Process Closing of Merchandising Loan",
+      "Handle Merchandising Loan Application",
+      "Perform Underwriting for Merchandising Loan",
+      "Disburse Merchandising Loan",
+      "Handle Request for Modification of Merchandising Loan"
+    ]
+  },
+  {
+    "Role Definition": "The Corporate Current Account is a financial facility that represents the general checking account facility at the core of corporate banking activity. There is a range of supporting features that make up the standard facility (checks/cheques, standing orders, debit cards, phone and on-line banking services etc.). The fulfillment can include a range of optional services, fees and interest payments and penalties and will often be bundled and or underlie/support other financial facilities and financial transactions",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Current Account Agreement",
+    "Example of Use": "A corporate customer established a corporate current account with the bank and requests a series of services (e.g., request printed statements, initiate a transfer, set up a standing order)",
+    "Executive Summary": "This service domain orchestrates a corporate checking/demand deposit account. The typical range of services and fees covers payments and deposits, standing orders, sweeps, liens, check and debit card access.",
+    "Key Features": [
+      "Set-up corporate current account facilities",
+      "Issue cards, check-books for an account",
+      "Process deposits and withdrawals",
+      "Handle standing orders and direct debits",
+      "Process fees and apply interest charges",
+      "Provide balance/statements and reports"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CorporateCurrentAccount/12.0.0",
+    "Served By": [
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Servicing Order",
+      "Correspondence",
+      "Corporate Current Account",
+      "Account Recovery",
+      "Cash Management And Account Services",
+      "Payment Execution",
+      "Customer Offer",
+      "Customer Position",
+      "Customer Case"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Payment Initiation",
+      "Position Keeping",
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Syndicated Loan",
+      "Servicing Order",
+      "Corporate Payroll Services",
+      "Correspondence",
+      "Processing Order",
+      "Standing Order",
+      "Corporate Current Account",
+      "Payment Order",
+      "Account Recovery",
+      "Syndicate Management",
+      "Direct Debits Service",
+      "Payment Execution",
+      "Payment Instruction",
+      "Customer Offer",
+      "Cash Concentration",
+      "Disbursement",
+      "Financial Accounting",
+      "Corporate Loan",
+      "Underwriting",
+      "Customer Case"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Customer Relationship Management",
+      "Issued Device Administration",
+      "Customer Agreement",
+      "Correspondence",
+      "Standing Order",
+      "Corporate Current Account",
+      "Customer Workbench",
+      "Product Directory",
+      "Payment Order",
+      "Market Data Switch Operation",
+      "Customer Product And Service Eligibility",
+      "Corporate Treasury",
+      "Sales Product Agreement",
+      "Payment Instruction",
+      "Credit Facility",
+      "Guideline Compliance",
+      "Customer Product and Service Directory",
+      "Information Provider Operation",
+      "Financial Accounting",
+      "Document Directory",
+      "Legal Compliance",
+      "Direct Debit Mandate"
+    ],
+    "List of Scenarios": [
+      "Orchestrate a corporate banking account with the standard range of services and fees"
+    ]
+  },
+  {
+    "Role Definition": "The Servicing Mandate service domain maintains an agreement between the bank and an external party that governs/constrains the allowed access given to the bank's products and services. This access permission can be defined at two levels - overall for the service provider and at a more detailed level as applied to a specific customer.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Servicing Mandate",
+    "Example of Use": "A third party provider has accessed the bank on behalf of a customer to initiate payment for a purchased product. The bank checks that the service provider is permitted to perform payments in general and whether there are specific constrains for this customer",
+    "Executive Summary": "This service domain maintains the allowed customer servicing arrangements for a service provider covering general access to the bank's products and services and optionally customer specific arrangements",
+    "Key Features": [
+      "Set-up mandate covering 3rd party access to services",
+      "Set-up provider's customer specific servicing permissions",
+      "Check proposed activity is covered by the mandate",
+      "Maintain/report on 3rd party activity"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/ServicingMandate/12.0.0",
+    "Served By": [
+      "Not specified in document"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Servicing Order",
+      "Contact Handler",
+      "Transaction Authorization"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management"
+    ],
+    "List of Scenarios": [
+      "Create Customer Reports",
+      "1 - Initiate Consent",
+      "3 - Initiate Consent",
+      "Maintain the allowed customer servicing arrangments for a service provider covering allowed general access to products and services and customer specific arrangments"
+    ]
+  },
+  {
+    "Role Definition": "This service domain provides a general customer billing service. The service domain is provided with the applicable fees and charges that are authorized for invoicing typically by a product or service fulfillment service domain. Processing can include verification and authorizations steps and the invoice could be issued as a single transaction or a schedule of transactions.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Invoice",
+    "Example of Use": "An invoice is raised for the fees and commissions applicable to a managed investment portfolio",
+    "Executive Summary": "This service domains provides a central service to compose, issue and track customer billing and invoices",
+    "Key Features": [
+      "Process/issue customer invoices (on request from fulfillment)",
+      "Issue reminders against unpaid invoices",
+      "Track and report on customer payments against invoices"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerBilling/12.0.0",
+    "Served By": [
+      "Corporate Lease",
+      "Trust Services",
+      "Credit Card",
+      "Credit Facility",
+      "Customer Billing",
+      "Brokered Product",
+      "Corporate Loan",
+      "Consumer Loan",
+      "Consumer Advisory Services",
+      "Consumer Investments"
+    ],
+    "Serves": [
+      "Agreement Management",
+      "Agreement Terms and Conditions Management"
+    ],
+    "Triggered By": [
+      "Open Item Management",
+      "Mortgage Loan",
+      "Syndicated Loan",
+      "Servicing Order",
+      "Credit Card",
+      "Disbursement",
+      "Customer Billing",
+      "Corporate Loan",
+      "Consumer Loan"
+    ],
+    "Triggers": [
+      "Direct Debit",
+      "Correspondence",
+      "Customer Billing",
+      "Document Directory"
+    ],
+    "List of Scenarios": [
+      "Process End of Daily Booking Window for Syndicated Loan Payments-III",
+      "Process Syndicated Loan Instalment-I",
+      "Create Customer Reports",
+      "Process Consumer Loan Delinquency First Stage",
+      "EXT Disburse Renewed Uncollateralised Consumer Loan",
+      "Create and Send Loan Installment Invoice",
+      "Process Card Billing",
+      "Process End of Daily Booking Window for Syndicated Loan Payments-II",
+      "Process Syndicated Loan Instalment-II and III",
+      "Process Loans Instalments"
+    ]
+  },
+  {
+    "Role Definition": "The consumer loan product may include different properties/features depending on a bank's preferences and policies. The loan is targeted at consumer customer and may be associated with a type of product and may or may not be secured by collateral.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Consumer Loan Facility",
+    "Example of Use": "A consumer customer applies for and gets a loan to purchase new furniture.",
+    "Executive Summary": "This service domain handles the fulfillment of a consumer loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks",
+    "Key Features": [
+      "Set-up a consumer loan facility",
+      "Handle deposits and withdrawals",
+      "Provide statements and assessment reports on the loan",
+      "Support loan restructuring"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/ConsumerLoan/12.0.0",
+    "Served By": [
+      "Customer Services",
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Servicing Order",
+      "Payment Execution",
+      "Customer Offer",
+      "Consumer Loan",
+      "Underwriting",
+      "Session Dialogue"
+    ],
+    "Triggers": [
+      "Position Keeping",
+      "Open Item Management",
+      "Customer Agreement",
+      "Correspondence",
+      "Customer Workbench",
+      "Payment Order",
+      "Current Account",
+      "Sales Product Agreement",
+      "Guideline Compliance",
+      "Disbursement",
+      "Customer Product and Service Directory",
+      "Customer Billing",
+      "Information Provider Operation",
+      "Financial Accounting",
+      "Consumer Loan",
+      "Underwriting",
+      "Document Directory",
+      "Session Dialogue"
+    ],
+    "List of Scenarios": [
+      "Disburse Uncollateralised Consumer Loan",
+      "Handle Request for Withdrawal from Consumer Loan",
+      "Process Consumer Loan Delinquency First Stage",
+      "Disburse Renewed Uncollateralised Consumer Loan",
+      "Create and Send Loan Installment Invoice",
+      "Perform Closing of Uncollateralised Consumer Loan",
+      "Handle Request for Power of Attorney",
+      "Perform Underwriting for Uncollateralised Consumer Loan",
+      "Handle Request for Renewal of Uncollateralised Consumer Loan",
+      "Process Closing for Renewal of Uncollateralised Consumer Loan",
+      "Perform Underwriting for Renewal of Uncollateralised Consumer Loan",
+      "Handle Request for Uncollateralised Consumer Loan",
+      "Handle Request for Consumer Loan Complete Origination",
+      "Handle Request for Consumer Loan Financial Analysis Reports"
+    ]
+  },
+  {
+    "Role Definition": "The Current Account or Demand Deposit Account as it can be called is a financial facility that represents the general checking account facility at the core of the consumer and small business banking activity. There is a range of supporting features that make up the standard facility (checks/cheques, standing orders, debit cards, phone and on-line banking services etc.). The fulfillment can include a range of optional services, fees and interest payments and penalties and will often be bundled and or underlie/support other financial facilities and financial transactions",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "A customer processes a series of services (e.g., request printed statements, initiate a transfer, set up a standing order) through the call center by accessing their current account",
+    "Executive Summary": "This service domain orchestrates a consumer checking/demand deposit account. The typical range of services and fees covers payments and deposits, standing orders, sweeps, liens, check and debit card access.",
+    "Key Features": [
+      "Set-up current account facilities",
+      "Issue cards, check-books for an account",
+      "Process deposits and withdrawals",
+      "Handle standing orders and direct debits",
+      "Process fees and apply interest charges",
+      "Provide balance/statements and reports"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CurrentAccount/12.0.0",
+    "Served By": [
+      "Business Unit Management",
+      "Investment Portfolio Management",
+      "Servicing Order",
+      "Correspondent Bank Operations",
+      "Trust Services",
+      "Corporate Current Account",
+      "Current Account",
+      "Sales Product",
+      "Payment Execution",
+      "Customer Offer",
+      "Disbursement",
+      "Product Combination",
+      "Customer Proposition",
+      "Card Authorization",
+      "Consumer Investments",
+      "Currency Exchange",
+      "Session Dialogue",
+      "Investment Portfolio Planning",
+      "Transaction Authorization"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Position Keeping",
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Mortgage Loan",
+      "Investment Portfolio Management",
+      "Servicing Order",
+      "Corporate Payroll Services",
+      "Processing Order",
+      "Standing Order",
+      "Party Asset Directory",
+      "Payment Order",
+      "Current Account",
+      "Collateral Asset Administration",
+      "Sales Product",
+      "Payment Execution",
+      "Payment Instruction",
+      "Customer Offer",
+      "Disbursement",
+      "Consumer Loan",
+      "Product Design",
+      "Virtual Account",
+      "Customer Case",
+      "Session Dialogue"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Document Services",
+      "Issued Device Administration",
+      "Customer Agreement",
+      "Correspondence",
+      "Standing Order",
+      "Product Directory",
+      "Payment Order",
+      "Current Account",
+      "Sales Product Agreement",
+      "Payment Instruction",
+      "Fraud Evaluation",
+      "Payment Rail Operations",
+      "Customer Position",
+      "Guideline Compliance",
+      "Customer Product and Service Directory",
+      "Financial Accounting",
+      "Document Directory",
+      "Party Reference Data Directory"
+    ],
+    "List of Scenarios": [
+      "Orchestrate a consumer checking/demand deposit account with typical range of services and fees"
+    ]
+  },
+  {
+    "Role Definition": "The corporate loan product may include different properties/features depending on a bank's preferences and policies. The loan is targeted at corporate customers and may be associated with a type of product and may or may not be secured by collateral.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Loan Agreement",
+    "Example of Use": "A corporate customer applies for and gets a loan to purchase new equipment.",
+    "Executive Summary": "This service domain handles the fulfillment of a corporate loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks",
+    "Key Features": [
+      "Set-up a corporate loan facility",
+      "Handle deposits and withdrawals",
+      "Provide statements and assessment reports on the loan",
+      "Support loan restructuring"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CorporateLoan/12.0.0",
+    "Served By": [
+      "Customer Offer",
+      "ECM And DCM",
+      "Limit and Exposure Management",
+      "Session Dialogue"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Syndicated Loan",
+      "Party Asset Directory",
+      "Collateral Asset Administration",
+      "ECM And DCM",
+      "Disbursement",
+      "Corporate Loan",
+      "Asset Securitization",
+      "Collateral Allocation Management"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Document Services",
+      "Syndicated Loan",
+      "Customer Agreement",
+      "Correspondence",
+      "Corporate Current Account",
+      "Product Directory",
+      "Payment Order",
+      "Corporate Treasury",
+      "Collateral Asset Administration",
+      "Sales Product Agreement",
+      "Credit Facility",
+      "Guideline Compliance",
+      "Disbursement",
+      "Customer Product and Service Directory",
+      "Customer Billing",
+      "Information Provider Operation",
+      "Financial Accounting",
+      "Corporate Loan",
+      "Customer Credit Rating",
+      "Financial Statement Assessment",
+      "Document Directory",
+      "Party Reference Data Directory",
+      "Regulatory Compliance",
+      "Credit Risk Models",
+      "Collateral Allocation Management"
+    ],
+    "List of Scenarios": [
+      "Process End of Daily Booking Window for Syndicated Loan Payments-III",
+      "Process Termination of Syndicated Loan-III",
+      "Process Sales Marketing and Closing",
+      "Process Invocation of Cash Management Service",
+      "Process Closing of Syndicated Loan-I",
+      "Process Closing of Corporate Loan",
+      "Process Disbursement for Modification of Corporate Loan",
+      "Process Termination of Syndicated Loan-II",
+      "Handle Request for Corporate Loan",
+      "Process Cash Management Payments",
+      "Process Selection of Loans for Securitization",
+      "Review Borrower Financial Statements",
+      "Process End of Period Reporting to Investor",
+      "Handle Request from Investor for Loan Portfolio Servicing Agreement",
+      "Process Syndicated Loan Instalment-II and III",
+      "Handle Request for Issuance of Commercial Paper",
+      "Process Opening of Loan Servicing Account",
+      "Process Closing of Syndicated Loan-III",
+      "Process Modification of Corporate Loan",
+      "Process Closing of Syndicated Loan-II",
+      "Conduct Corporate Loan Collateral Due Diligence",
+      "Handle Request for Modification of Corporate Loan",
+      "Process Termination of Syndicated Loan-I",
+      "Disburse Corporate Loan"
+    ]
+  },
+  {
+    "Role Definition": "This Service Domain enables the bank and customer to establish and maintain product and service fulfillment preferences and requirements that span multiple products",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Customer Proposition Agreement",
+    "Example of Use": "The bank determines that the significant long term value of a customer relationship should ensure that certain standard fees are waived to help retain their business and records this requirement in their proposition agreement",
+    "Executive Summary": "This Service Domain maintains bank and customer defined requirements spanning all products and services",
+    "Key Features": [
+      "Maintain bank defined service delivery terms",
+      "Maintain customer defined service preference terms"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CustomerProposition/12.0.0",
+    "Served By": [
+      "Relationship Management"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Business Unit Management",
+      "Business Development",
+      "Sales Product"
+    ],
+    "Triggers": [],
+    "List of Scenarios": [
+      "Notify Customer Proposition Agreement",
+      "Retrieve Bank Defined Product and Service Term",
+      "Request Customer Defined Product and Service Term",
+      "Update Customer Proposition Agreement",
+      "Exchange Customer Defined Product and Service Term",
+      "Request Customer Proposition Agreement",
+      "Control Customer Proposition Agreement",
+      "Exchange Bank Defined Product and Service Term",
+      "Exchange Customer Proposition Agreement",
+      "Request Bank Defined Product and Service Term",
+      "Notify Bank Defined Product and Service Term",
+      "Notify Customer Defined Product and Service Term",
+      "Update Customer Defined Product and Service Term",
+      "Evaluate Customer Proposition Agreement",
+      "Evaluate Bank Defined Product and Service Term",
+      "Retrieve Customer Proposition Agreement",
+      "Evaluate Customer Defined Product and Service Term",
+      "Grant Customer Proposition Agreement",
+      "Retrieve Customer Defined Product and Service Term",
+      "Update Bank Defined Product and Service Term"
+    ]
+  },
+  {
+    "Role Definition": "The Sales Product Agreement service domain captures and maintains the legal terms and conditions in force for a sold product. The product specific terms and conditions are subordinate to the terms of the customer master agreement that is maintained by the Customer Agreement service domain. The product contractual terms and conditions influence product and service fulfillment for example by defining applicable fees/rates/penalties and selected features/options. Note that there can be other product configuration features that are not contractually binding - these features are maintained in the associated product/service fulfillment service domain directly",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Product Sales Agreement",
+    "Example of Use": "An established customer completes the application process for a new lending product and a new sales product agreement is established",
+    "Executive Summary": "This service domain maintains a structured legal agreement defining the contractual terms and conditions for an in-force product for a customer. It is subordinate to the customer's master agreement that is maintained by the Customer Agreement service domain",
+    "Key Features": [
+      "Set-up and maintain the customer sales product agreement",
+      "Ensure legal, regulatory and corporate considerations are covered",
+      "Determine if proposed actions are covered by the agreement"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/SalesProductAgreement/12.0.0",
+    "Served By": [
+      "Not specified in document"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Mortgage Loan",
+      "Servicing Order",
+      "Corporate Payroll Services",
+      "Term Deposit Framework Agreement",
+      "Corporate Current Account",
+      "Current Account",
+      "Letter of Credit",
+      "Direct Debits Service",
+      "Savings Account",
+      "Customer Offer",
+      "Credit Card",
+      "Credit Facility",
+      "Cash Concentration",
+      "Merchandising Loan",
+      "Corporate Loan",
+      "Consumer Loan",
+      "Product Design",
+      "Bank Guarantee",
+      "Virtual Account",
+      "Notional Pooling"
+    ],
+    "Triggers": [
+      "Not specified in document"
+    ],
+    "List of Scenarios": [
+      "Maintain a structured legal agreement defining the contractual terms and conditions an in-force product."
+    ]
+  },
+  {
+    "Role Definition": "The savings account product may share many features with a standard bank current account (e.g. standing orders, direct debits, payments and deposit services) with some constraints/limitations. There can be restrictions on the amount and frequency of withdrawals with an associated fee/penalty structure to offset higher interest benefits. Sweep mechanisms linked to other products (current account) can also be supported.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Savings Account Agreement",
+    "Example of Use": "A customer transfers money from a current account to savings account in order to obtain a better rate of interest.",
+    "Executive Summary": "This service domain orchestrates a consumer savings account. The typical range of services and fees covers payments from and scheduled and ad-hoc deposits to the account, standing orders, sweeps, and liens.",
+    "Key Features": [
+      "Set-up savings account facilities",
+      "Issue cards, check-books, etc. for the account",
+      "Process deposits and withdrawals",
+      "Handle sweeps/liens linked to the account",
+      "Handle standing orders and direct debits linked to the account",
+      "Process fees and apply interest charges",
+      "Provide balance/statements and reports"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/SavingsAccount/12.0.0",
+    "Served By": [
+      "Customer Offer",
+      "Session Dialogue"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Position Keeping",
+      "Customer Relationship Management",
+      "Servicing Order",
+      "Customer Behavior Insights",
+      "Payment Order",
+      "Savings Account",
+      "Customer Offer",
+      "Cash Concentration",
+      "Customer Behavior Models",
+      "Financial Accounting",
+      "Customer Case"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Issued Device Administration",
+      "Correspondence",
+      "Product Directory",
+      "Payment Order",
+      "Sales Product Agreement",
+      "Savings Account",
+      "Guideline Compliance",
+      "Customer Product and Service Directory",
+      "Financial Accounting"
+    ],
+    "List of Scenarios": [
+      "Fulfill a savings account"
+    ]
+  },
+  {
+    "Role Definition": "Fulfillment of an arrangement (such as investment management of a trust fund) on behalf of a customer where the banks acts their trusted proxy and acts in compliance with the specific terms of the fiduciary arrangement",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Fiduciary Relationship Facility",
+    "Example of Use": "A customer established a fiduciary arrangement with the bank to manage an investment portfolio in accordance with agreed investment guidelines",
+    "Executive Summary": "An agreement where the bank agrees to act on behalf of the customer in a financial matter and in accordance with the agreement terms",
+    "Key Features": [
+      "Fiduciary agreement definition",
+      "Fiduciary agreement execution",
+      "Fiduciary agreement fee processing",
+      "Fiduciary agreement assessment and reporting"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/FiduciaryAgreement/12.0.0",
+    "Served By": [
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Offer",
+      "Session Dialogue"
+    ],
+    "Triggers": [
+      "Correspondence",
+      "Customer Tax Handling",
+      "Document Directory",
+      "Customer Event History"
+    ],
+    "List of Scenarios": [
+      "Accept, verify, etc. aspects of Fees processing",
+      "Request manual intervention or a decision with respect to Fulfillment",
+      "Retrieve details about any aspect of Fees",
+      "Retrieve details about any aspect of Fulfillment",
+      "Request manual intervention or a decision with respect to Fees",
+      "Execute an available automated action for Fiduciary Relationship Facility",
+      "Retrieve details about any aspect of Fiduciary Relationship Facility",
+      "Accept, verify, etc. aspects of Fulfillment processing",
+      "Request manual intervention or a decision with respect to Agreement",
+      "Update details relating to Agreement",
+      "Instantiate a new Fiduciary Relationship Facility",
+      "Accept, verify, etc. aspects of Fiduciary Relationship Facility processing",
+      "Retrieve details about any aspect of Agreement",
+      "Accept, verify, etc. aspects of Agreement processing",
+      "Instantiate a new Agreement",
+      "Request manual intervention or a decision with respect to Fiduciary Relationship Facility",
+      "Control the processing of Fiduciary Relationship Facility",
+      "Instantiate a new Assessment and Reporting",
+      "Retrieve details about any aspect of Assessment and Reporting",
+      "Update details relating to Fiduciary Relationship Facility"
+    ]
+  },
+  {
+    "Role Definition": "A Term Deposit is an interest bearing account into which a customer can place a fixed amount of funds for a fixed amount of time. The Service Domain handles the opening, servicing and maturity processing of a Term Deposit. Early closing of a Term Deposit may be allowed by the bank, but in that case penalty interest rates and charges may be applied. NB In BIAN demand deposits are seen as Savings Accounts.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Term Deposit Agreement",
+    "Example of Use": "A customer has excess funds available. They select a standard Term Deposit product from the bank or, in the case of a larger amount, may negotiate specific conditions for a Term Deposit and instruct the bank to transfer an amount into the new Term Deposit account.",
+    "Executive Summary": "A Term Deposit is an interest bearing account into which a customer can place a fixed amount of funds for a fixed amount of time. The Service Domain handles the opening, servicing and maturity processing of a Term Deposit.",
+    "Key Features": [
+      "Initiate the term deposit",
+      "Calculate and apply interest",
+      "Process maturity and rollovers",
+      "Process early maturing"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/TermDeposit/12.0.0",
+    "Served By": [
+      "Term Deposit",
+      "Servicing Order",
+      "Cash Management And Account Services",
+      "Customer Offer",
+      "ECM And DCM"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Syndicated Loan",
+      "Servicing Order",
+      "Business Development",
+      "Customer Offer",
+      "ECM And DCM"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Term Deposit",
+      "Syndicated Loan",
+      "Correspondence",
+      "Corporate Current Account",
+      "Product Directory",
+      "Payment Order",
+      "Current Account",
+      "Sales Product Agreement",
+      "Credit Facility",
+      "Guideline Compliance",
+      "Customer Product and Service Directory",
+      "Financial Accounting",
+      "Document Directory",
+      "Legal Compliance",
+      "Collateral Allocation Management",
+      "Session Dialogue"
+    ],
+    "List of Scenarios": [
+      "Process Termination of Syndicated Loan-III",
+      "Handle Request for Power of Attorney",
+      "Handle Request to Sell Syndicated Loan Participation to Other Bank when Lead Bank Is not Seller or Buyer-III",
+      "Handle Request for Issuance of Commercial Paper",
+      "Process Closing of Syndicated Loan-III",
+      "Analyse Product Portfolio Performance",
+      "Handle Request for Early Closing of Term Deposit",
+      "Handle Request to Change Term Deposit Attached Current Account",
+      "Handle Request to Open Term Deposit under Term Deposit Agreement for Retail Customer",
+      "EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Retail Customer",
+      "Handle Request to Open Term Deposit under Term Deposit Agreement for Corporate Customer",
+      "Process Maturity of Term Deposit",
+      "EXT Handle Request to Change Term Deposit Attached Corporate Current Account",
+      "Handle Request to Change Term Deposit Attached Corporate Current Account",
+      "Handle Request for Early Renewal of Term Deposit",
+      "EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Corporate Customer",
+      "EXT Handle Request for Early Closing of Term Deposit",
+      "EXT Handle Request for Early Renewal of Term Deposit"
+    ]
+  },
+  {
+    "Role Definition": "The Credit Facility Service Domain manages the Credit Facilities that a Corporate Customer has with the bank. A Credit Facility is an agreement between the bank and a (corporate) customer to allow the customer to acquire asset products from the bank up to the limit of the credit facility without the need for a full due diligence and underwriting for each of these products. Credit Facilities can have a hierarchy and they come under the overall Credit Limit for the customer, which is the bank-internal maximum credit exposure that the bank is willing to have with the customer.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Credit Facility Agreement",
+    "Example of Use": "Credit Facilties can typically be used to attach trade financing products and also overdrafts in current account where quick processing is demanded by the customer. A Credit Facility is with one customer, but the overall Credit Limit under which Credit Facilities come, can be for more than one customer, typically belonging to one customer group. Credit Facilities within a Credit Facility hierarchy can be for different, but usually related, customers.",
+    "Executive Summary": "The Credit Facility Service Domain manages the Credit Facilities that a Corporate Customer has with the bank. A Credit Facility is an agreement between the bank and a (corporate) customer to allow the customer to acquire asset products from the bank up to the limit of the credit facility without the need for a full due diligence and underwriting for each of these products.",
+    "Key Features": [
+      "Set up a credit facility agreement with a corporate customer",
+      "Open a credit facility under the customer's credit limit or under an existing credit facility",
+      "Attach a banking product to a an existing credit facility"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/CreditFacility/12.0.0",
+    "Served By": [
+      "Business Unit Management",
+      "Corporate Current Account",
+      "Account Recovery",
+      "Customer Offer",
+      "Limit and Exposure Management",
+      "Session Dialogue"
+    ],
+    "Serves": [
+      "Agreement Management",
+      "Agreement Terms and Conditions Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Term Deposit",
+      "Party Asset Directory",
+      "Corporate Current Account",
+      "Collateral Asset Administration",
+      "Letter of Credit",
+      "Credit Facility",
+      "Corporate Loan",
+      "Bank Guarantee",
+      "Underwriting"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Correspondence",
+      "Payment Order",
+      "Sales Product Agreement",
+      "Credit Facility",
+      "Guideline Compliance",
+      "Customer Product and Service Directory",
+      "Financial Accounting",
+      "Document Directory"
+    ],
+    "List of Scenarios": [
+      "Maintain the availability and allocation of a negotiated credit line or facility for a corporate customer, including subsidiary allocations where appropriate"
+    ]
+  },
+  {
+    "Role Definition": "The loan product represents a generic loan capability that may include different properties/features depending on a bank's preferences and policies. The loan may or may not be secured by collateral.",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Loan Facility",
+    "Example of Use": "An established and valued bank customer applies for and gets a loan for a home improvement project",
+    "Executive Summary": "This service domain handles the fulfillment of a general loan product. This includes the initial set-up of the loan facility and the completion of scheduled and ad-hoc product processing tasks",
+    "Key Features": [
+      "Set-up a loan facility",
+      "Handle deposits and withdrawals",
+      "Provide statements and assessment reports on the loan",
+      "Support loan restructuring"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/Loan/12.0.0",
+    "Served By": [
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Product Combination"
+    ],
+    "Triggers": [],
+    "List of Scenarios": [
+      "Execute a service fee",
+      "Execute Account Statement",
+      "Retrieve details about a disbursement paid against a loan",
+      "Request handling of a withdrawal",
+      "Initiate a loan",
+      "Execute an automated repayment transaction",
+      "Retrieve Interest",
+      "Retrieve details about maintenance processing for a loan",
+      "Retrieve details about a loan repayment",
+      "Accept, reject etc a loan restructuring proposal",
+      "Retrieve details about a loan fees",
+      "Update details of a loan or restructuring activities",
+      "Execute an automated withdrawal against a loan",
+      "Initiate loan account restructuring",
+      "Request a maintenance activity for a consumer load",
+      "Control a loan",
+      "Update details of a withdrawal from a loan",
+      "Update details for an existing loan",
+      "Retrieve details about a loan withdrawal",
+      "Retrieve details about a loan restructuring task",
+      "Update a repayment transaction made to the loan",
+      "Retrieve details about a loan"
+    ]
+  },
+  {
+    "Role Definition": "The service domain handles the fulfillment of a loan product intended for the purchase of a property. Title to the property is usually administered as collateral for the mortgage loan. Note several different financial arrangements can be supported (interest only, variable rate, repayment). Furthermore the administration of the collateral is delegated to the Collateral Administration Service Domain and overseen by this Service Domain",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Loan Fulfillment Arrangement",
+    "Example of Use": "An established bank customer applies for a mortgage to purchase a home - the offer process is completed and the mortgage facility is established and funds disbursed to complete the purchase",
+    "Executive Summary": "Fulfillment of a loan product for the purpose of property purchase. Note different servicing patterns can be applied to interest calculations and principle and interest repayments",
+    "Key Features": [
+      "Mortgage facility maintenance - fees, interest, reporting",
+      "Payments and withdrawals, liens and sweeps",
+      "Collateral tracking and oversight"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/MortgageLoan/12.0.0",
+    "Served By": [
+      "Loans and Deposits",
+      "Wave 5",
+      "Product Fulfillment SDs"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Customer Relationship Management",
+      "Mortgage Loan",
+      "Servicing Order",
+      "Party Asset Directory",
+      "Collateral Asset Administration",
+      "Customer Offer"
+    ],
+    "Triggers": [
+      "Party Lifecycle Management",
+      "Position Keeping",
+      "Document Services",
+      "Mortgage Loan",
+      "Customer Agreement",
+      "Correspondence",
+      "Party Asset Directory",
+      "Product Directory",
+      "Payment Order",
+      "Current Account",
+      "Collateral Asset Administration",
+      "Sales Product Agreement",
+      "Guideline Compliance",
+      "Disbursement",
+      "Customer Product and Service Directory",
+      "Customer Billing",
+      "Information Provider Operation",
+      "Financial Accounting",
+      "Underwriting",
+      "Document Directory",
+      "Regulatory Compliance",
+      "Collateral Allocation Management"
+    ],
+    "List of Scenarios": [
+      "Record Property Details",
+      "Record Collateral Insurance Details",
+      "Verify Payment of Taxes on Property",
+      "Retrieve Loan to Value Ratio",
+      "Conduct Mortgage Loan Processing",
+      "Handle Request for Early Payback of Consumer Mortgage Loan Due to Sale of Property",
+      "Perform Underwriting for Mortgage Loan",
+      "Verify Claims on Collateral",
+      "Process Closing of Mortgage Loan",
+      "Handle Request for Early Payback of Consumer Mortgage Loan Due to Sale of Property for Bank as Servicer",
+      "Handle Mortgage Loan Application",
+      "Process Loans Instalments",
+      "Disburse Mortgage Loan"
+    ]
+  },
+  {
+    "Role Definition": "The Service Domain fulfills a general leasing arrangement for a single leased product or facility. The bank will take a collateral interest in the leased item to underwrite the associated loan/lease arrangement",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Leasing Facility",
+    "Example of Use": "A customer requests a leasing arrangement to support the acquisition of equipment",
+    "Executive Summary": "The leasing products enables customers to finance equipment purchases using the leased item as collateral when necessary",
+    "Key Features": [
+      "Evaluate proposed leasing arrangement",
+      "Review collateral value and title of leased item",
+      "Price/structure the leasing arrangement",
+      "Negotiate and agree leasing arrangement",
+      "Initiate and maintain the leasing arrangement through term"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/Leasing/12.0.0",
+    "Served By": [
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [],
+    "Triggers": [],
+    "List of Scenarios": [
+      "Accept, verify, etc. aspects of Fees processing",
+      "Instantiate a new Fees",
+      "Accept, verify, etc. aspects of Lien processing",
+      "Accept, verify, etc. aspects of Sweep processing",
+      "Update details relating to Fees",
+      "Update details relating to Corporate Action",
+      "Retrieve details about any aspect of Fees",
+      "Retrieve details about any aspect of Lien",
+      "Instantiate a new Collateral",
+      "Request manual intervention or a decision with respect to Fees",
+      "Retrieve Interest",
+      "Update details relating to Deposits",
+      "Request manual intervention or a decision with respect to Collateral",
+      "Retrieve details about any aspect of Withdrawals",
+      "Instantiate a new Corporate Action",
+      "Instantiate a new Financial Instrument",
+      "Update details relating to Financial Instrument",
+      "Update details relating to Sweep",
+      "Update details relating to Withdrawals",
+      "Retrieve details about any aspect of Issued Device",
+      "Accept, verify, etc. aspects of Payments processing",
+      "Retrieve details about any aspect of Payments",
+      "Update details relating to Payments",
+      "Update details relating to Collateral",
+      "Update details relating to Lien",
+      "Instantiate a new Payments",
+      "Instantiate a new Sweep",
+      "Control the processing of Leasing Facility",
+      "Instantiate a new Issued Device",
+      "Instantiate a new Lien",
+      "Instantiate a new Deposits",
+      "Retrieve details about any aspect of Collateral",
+      "Retrieve details about any aspect of Deposits",
+      "Update details relating to Clearing and Settlement",
+      "Execute an available automated action for Leasing Facility",
+      "Update details relating to Issued Device",
+      "Instantiate a new Leasing Facility",
+      "Update Interest",
+      "Instantiate a new Withdrawals",
+      "Accept, verify, etc. aspects of Leasing Facility processing",
+      "Retrieve details about any aspect of Clearing and Settlement",
+      "Retrieve details about any aspect of Sweep",
+      "Retrieve details about any aspect of Corporate Action",
+      "Retrieve details about any aspect of Financial Instrument",
+      "Update details relating to Leasing Facility",
+      "Retrieve details about any aspect of Leasing Facility",
+      "Request manual intervention or a decision with respect to Leasing Facility"
+    ]
+  },
+  {
+    "Role Definition": "This service domain fulfills a syndicated loan, including the coordination with syndicate members and clarification/administration of their obligations under the arrangement. It is assumed the bank is acting as the syndicate lead in this arrangement, coordinating with other lending banks in the syndicate in order to manage the transfer of funds. The syndicated loan can be for a single amount or be implemented as a more general loan facility that the customer can draw upon over its term. Note that initial customer offer processing may have covered many of these tasks informally, but once the syndicated loan initiation is made more formal syndicate arrangements must be established as an aspect of fulfillment handled here",
+    "Folder Name": "Agreement Management",
+    "Core Business Object": "Syndicated Loan Fulfillment Arrangement",
+    "Example of Use": "A major corporate customer obtains a syndicated loan to finance a major project and the bank arranges to distribute the loan with several other interested banks to share the loan exposure",
+    "Executive Summary": "Handle the processing of syndicated loans with the bank playing the lead coordination role with other syndicate bank members. Note some initial preparation may have been made through prior customer offer processing.",
+    "Key Features": [
+      "Negotiate the broad terms of the loan",
+      "Identify and build loan syndicate",
+      "Finalize loan terms and allocations/obligations across the syndicate",
+      "Originate the loan in coordination across the syndicate",
+      "Administer financial transfers, reporting and all other fulfilment actions over the term"
+    ],
+    "API BIAN Portal Link": "https://app.swaggerhub.com/apis/BIAN-3/SyndicatedLoan/12.0.0",
+    "Served By": [
+      "Trade Banking",
+      "Wave 5",
+      "Loans and Deposits"
+    ],
+    "Serves": [
+      "Agreement Management"
+    ],
+    "Triggered By": [
+      "Term Deposit",
+      "Syndicated Loan",
+      "Servicing Order",
+      "Syndicate Management",
+      "Corporate Loan",
+      "Collateral Allocation Management",
+      "Loan Syndication"
+    ],
+    "Triggers": [
+      "Term Deposit",
+      "Syndicated Loan",
+      "Correspondence",
+      "Term Deposit Framework Agreement",
+      "Party Asset Directory",
+      "Corporate Current Account",
+      "Payment Order",
+      "Corporate Treasury",
+      "Disbursement",
+      "Customer Product and Service Directory",
+      "Customer Billing",
+      "Information Provider Operation",
+      "Corporate Loan",
+      "Document Directory",
+      "Regulatory Compliance",
+      "Internal Bank Account",
+      "Collateral Allocation Management"
+    ],
+    "List of Scenarios": [
+      "Process End of Daily Booking Window for Syndicated Loan Payments-III",
+      "Process Termination of Syndicated Loan-III",
+      "Process Syndicated Loan Instalment-I",
+      "Process Closing of Syndicated Loan-I",
+      "Process Termination of Syndicated Loan-II",
+      "Set Up Syndicate and Sign Agreements-I",
+      "Process Recording and Distribution of Collateral",
+      "Process End of Daily Booking Window for Syndicated Loan Payments-II",
+      "Handle Request to Sell Syndicated Loan Participation to other Bank when Lead Bank Is not Seller or Buyer-I",
+      "Handle Request from Lead Bank to Sell Part of Its Syndicated Loan Participation to Other Lender-I",
+      "Handle Request to Sell Syndicated Loan Participation to Other Bank when Lead Bank Is not Seller or Buyer-III",
+      "Process Syndicated Loan Instalment-II and III",
+      "Disburse Syndicated Loan-I",
+      "Set Up Syndicate and Sign Agreements-II",
+      "Set Up Syndicate and Sign Agreements-III",
+      "Process Closing of Syndicated Loan-III",
+      "Process Closing of Syndicated Loan-II",
+      "Disburse Syndicated Loan-II",
+      "Disburse Syndicated Loan-III",
+      "Process Termination of Syndicated Loan-I"
+    ]
+  }
+]

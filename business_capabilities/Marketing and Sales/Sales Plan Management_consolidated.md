@@ -1,0 +1,6 @@
+# Sales Plan Management - Consolidated Capability Table
+
+| Capability Name | Sub-directory Name | Core Business Object | Example of Use | Executive Summary | Key Features |
+|---|---|---|---|---|---|
+| Business Development | Sales Plan Management | Business Development Strategy | Corporate strategy develops targets for new business acquisition in selected market segments | Define, implement, track and assess the new business development plans | Define governing policies and guidelines, Define business goals, Define supporting business development strategies, Track progress towards goals and direct activity |
+| Sales Planning | Sales Plan Management | Marketing And Sales Strategy | Sales management review quarterly performance and pipeline and set sales targets and allocations for the upcoming cycle | Plan, and assess sales activity and re-direct resources and priorities as necessary | Plan sales activity, Assess sales performance, Re-direct resources as necessary, Set priorities for sales activities |

@@ -1,0 +1,98 @@
+[
+  {
+    "Capability Name": "Legal Compliance",
+    "Sub-directory Name": "Legal Support Management",
+    "Core Business Object": "Legal Compliance (object_26.html?object=38586)",
+    "Example of Use": "A new product design is checked against the prevailing financial laws for the target jurisdictions of delivery",
+    "Executive Summary": "Provide specialist legal advice, assess for legal compliance and resolve legal cases as they occur",
+    "Key Features": "Review and interpret the law<br>Provide legal advice/guidance<br>Evaluate and report on bank activity to ensure legality"
+  },
+  {
+    "Capability Name": "Card Collections",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Individual Analytics: cardCollectionsProcedureAccumulators, cardCollectionsProcedureActivityAnalysis, cardCollectionsProcedurePerformanceAnalysis, cardCollectionsProcedureTrends&Events; Portfolio Analytics: cardCollectionsProcedurePortfolioActivityAnalysis, cardCollectionsProcedurePortfolioMake-UpAnalysis, cardCollectionsProcedurePortfolioPerformanceAnalysis",
+    "Example of Use": "A card account is canceled when the age of outstanding balance exceeds policy limits (normally 90 days) or when delinquency management and dunning efforts are determined to be unsuccessful at eliciting payment. The account is then assigned to an internal Collections department or an external Collection Agency for making aggressive attempts at securing the payment of the outstandings.",
+    "Executive Summary": "This service domain administers the recovery of outstanding amounts from cancelled card accounts through internal or external collection agencies. This may involve negotiating payment terms and/or interest write-downs.",
+    "Key Features": "Card collection case classification and assignment<br>Collection payment terms and processing<br>Collection processing resolution/conclusion"
+  },
+  {
+    "Capability Name": "Contact Routing",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Individual Analytics: customerServicingResourceAllocationAccumulators, customerServicingResourceAllocationActivityAnalysis, customerServicingResourceAllocationPerformanceAnalysis, customerServicingResourceAllocationTrends&Events; Portfolio Analytics: customerServicingResourceAllocationPortfolioActivityAnalysis, customerServicingResourceAllocationPortfolioMake-UpAnalysis, customerServicingResourceAllocationPortfolioPerformanceAnalysis",
+    "Example of Use": "A high value customer contacts the bank. They have been flagged as a sales prospect and so are routed to the next available rep that is registered as being skilled in the specific product of interest and also experienced in sales",
+    "Executive Summary": "The Contact Routing service domain tracks servicing resource availability and uses any known details about the customer contact (e.g. identity, indicated purpose of call, status of the relationship) to make an optimal routing decision. The routing selection may include matching the required product knowledge/skills to the available servicing resources.",
+    "Key Features": "Track the status/availability of servicing resources<br>Assign/select resources to match customer servicing needs"
+  },
+  {
+    "Capability Name": "Customer Case Management",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Customer Case Management Plan",
+    "Example of Use": "Customer case handling is assessed over a period and the rules and thresholds guiding resolution decisions recalibrated",
+    "Executive Summary": "Track and assess case load and resolution activity - allocate resources as necessary to optimize case resolution performance",
+    "Key Features": "Define and refine the guiding principles and rules for case resolution<br>Assess effectiveness of the case processing function<br>Determine and monitor staffing levels and utilization"
+  },
+  {
+    "Capability Name": "Card Case",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Card Case (object_26.html?object=47333)",
+    "Example of Use": "A card holder reports a payment dispute to the contact center and a case is initiated. The account is credited and documentation requested from the merchant. The case is finally judged when the documents are available for review and all interested parties are notified of the resolution",
+    "Executive Summary": "This service domain handles the processing of a customer card case, typically a disputed charge",
+    "Key Features": "Consolidation of transaction details<br>Chargeback processing<br>Case decisioning and arbitration<br>Case resolution"
+  },
+  {
+    "Capability Name": "Case Root Cause Analysis",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "Contact center case resolution records are reviewed to identify recurring issues that can be resolved with improved servicing representative training and guidelines",
+    "Executive Summary": "Root cause analysis business function reviews case reports to identify possible improvements to eliminate/mitigate servicing issues",
+    "Key Features": "Product and service feature related issue analysis<br>Servicing and operational performance issue analysis<br>Credit and fraudulent behavior analysis"
+  },
+  {
+    "Capability Name": "Contact Handler",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "CustomerContactSession",
+    "Example of Use": "A customer is self serving on the web and then requests to talk to a servicing representative directory using the VoIP capability presented on the banks web portal.",
+    "Executive Summary": "This service domain handles a customer's interactive contact with the bank. This will typically involve launching of one or more channel/device specific dialogue sessions as necessary within the customer contact.",
+    "Key Features": "Handle customer contacts with the bank<br>Obtain customer identity authentication<br>Consolidate reference information and recent contact activity details<br>Obtain routing decision (select optimal servicing resource)<br>Initiate servicing sessions<br>Log contact activity"
+  },
+  {
+    "Capability Name": "Customer Case",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "A case resolution operator works through the resolution of a case, following the established process for the specific case - in this case a disputed charge that is below a threshold allowing the credit to be charged to the merchant",
+    "Executive Summary": "This service domain handles the initiation, tracking, resolution and reporting on customer cases (issues that typically require corrective response to some financial transaction)",
+    "Key Features": "Customer case capture and classification<br>Case related information consolidation<br>Customer case diagnosis and decisioning<br>Customer case resolution implementation"
+  },
+  {
+    "Capability Name": "Delinquent Account Handling",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "When a Card Account is assessed to be at a high risk of default, such as a Charge Card Account with high out of pattern outstandings or a Credit Card Account with significant aged balances, attempts are made to elicit the payment of the outstanding amounts or to limit further increase in risk through optimal strategies for contacting the customer and inducing payment of the outstanding amount.",
+    "Executive Summary": "This service domain handles delinquent accounts (typically for active credit/charge cards) for follow-up of payments due through periodic review and contacts. This process ends when the account is cancelled and is transferred to Collections",
+    "Key Features": "Delinquent account assessment<br>Account owner contact<br>Account payment processing<br>Delinquent account resolution (re-instated or passed to collections)"
+  },
+  {
+    "Capability Name": "Open Item Management",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Open Item (object_26.html?object=44546)",
+    "Example of Use": "Open items are cleared against an active loan facility",
+    "Executive Summary": "This service domain provides a service for handling the resolution of open items against accounts (such as overdue loan payments)",
+    "Key Features": "Register and classify open items for processing<br>Process/resolve open items<br>Report on open item resolution activity"
+  },
+  {
+    "Capability Name": "Servicing Issue",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "A servicing representative notes that the guidelines for a particular product are confusing and result in frequent customer enquiries. The apparent shortfall is raised to management for review",
+    "Executive Summary": "This Service Domain handles production customer servicing issues detected in the customer servicing environment",
+    "Key Features": "Capture servicing issue details and impact<br>Analyze root cause of the issue<br>Determine remedial actions to resolve issue<br>Propose procedural and systems amendments to mitigate cause"
+  },
+  {
+    "Capability Name": "Servicing Order",
+    "Sub-directory Name": "Task Management",
+    "Core Business Object": "Not specified",
+    "Example of Use": "A customer changes address and requests that all of their product and service arrangements are updated",
+    "Executive Summary": "This service domain handles the processing of a customer servicing request as a predefined procedure. A range of standard servicing requests can be supported. The process can include a check of permissions when the request is made by a third party/service provider",
+    "Key Features": "Support the selection of predefined servicing order<br>Confirm the associated permissions/mandates are in place<br>Orchestrate the work steps/tasks in the servicing order<br>Track and report on servicing order activities"
+  }
+]

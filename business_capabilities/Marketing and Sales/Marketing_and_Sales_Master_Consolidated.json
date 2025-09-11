@@ -1,0 +1,202 @@
+[
+  {
+    "Capability Name": "Brand Management",
+    "Sub-directory Name": "Brand Management",
+    "Core Business Object": "Brand (object_25.html?object=30219)",
+    "Example of Use": "Product design seeks input from the brand management unit to factor the brand into the product marketing materials and ensure alignment",
+    "Executive Summary": "Respond to events that potentially damage the brand or provide an opportunity to strengthen/leverage brand awareness",
+    "Key Features": "Brand definition, Review business development impact and leverage of the brand, Troubleshoot production issues that might impact the brand"
+  },
+  {
+    "Capability Name": "Advertising",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Advertising Campaign Management Plan (object_25.html?object=30184)",
+    "Example of Use": "Business development reviews market research to determine levels of awareness for selected bank products and initiates an advertising campaign to raise awareness",
+    "Executive Summary": "Develop the plan for and oversee advertising campaign activity, including budget and resource management",
+    "Key Features": "Track market/competitor activity, Assess customer segment performance, Assess coverage of advertising campaigns, Direct the development of advertising campaigns, Direct the execution of advertising campaigns"
+  },
+  {
+    "Capability Name": "Customer Campaign Design",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Customer Campaign (object_25.html?object=31474)",
+    "Example of Use": "A retention campaign is updated to provide amended/improved pricing terms that can be offered to targeted customers to help retain their business after a poor response rate has been detected for the campaign",
+    "Executive Summary": "Design and refine customer campaign specifications based on their impact",
+    "Key Features": "Define the target profile/impact of a campaign, Specify a customer campaign, Track the impact of a campaign, Refine/reconfigure a campaign"
+  },
+  {
+    "Capability Name": "Customer Campaign Execution",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Not explicitly specified in the document",
+    "Example of Use": "A bank implements a targeted cross-sell campaign in the customer servicing center to generate additional sales",
+    "Executive Summary": "Execute a customer campaign (version) and track and respond to impact",
+    "Key Features": "Candidate customer selection/identification, Customer interaction and response capture, Campaign performance analysis and feedback"
+  },
+  {
+    "Capability Name": "Customer Campaign Management",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Customer Campaign (object_25.html?object=31474)",
+    "Example of Use": "Customer Campaign Management identifies competitor activity that poses a threat to existing customers. Campaign design is initiated to develop a retention campaign to address the threat",
+    "Executive Summary": "Assess the coverage and impact of internal/customer campaigns and redirect campaign development and execution activity accordingly",
+    "Key Features": "Track market/competitor activity, Assess customer segment performance, Assess coverage of customer campaigns, Direct the development of customer campaigns, Direct the execution of customer campaigns"
+  },
+  {
+    "Capability Name": "Prospect Campaign Design",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Prospect Campaign (object_26.html?object=40891)",
+    "Example of Use": "A prospect acquisition campaign is updated to provide amended/improved pricing terms that can be offered to targeted prospects poor take-up rate has been detected for the campaign",
+    "Executive Summary": "Design and refine prospect campaign specifications based on their impact",
+    "Key Features": "Define the target profile/impact of a campaign, Specify a prospect campaign, Track the impact of a campaign, Refine/reconfigure a campaign"
+  },
+  {
+    "Capability Name": "Prospect Campaign Execution",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Prospect Campaign (object_26.html?object=40891)",
+    "Example of Use": "A bank implements a targeted take-one mailshot acquisition campaign to attract additional customers",
+    "Executive Summary": "Execute a prospect campaign (version) and track and respond to impact",
+    "Key Features": "Candidate prospect selection/identification (list development), Prospect interaction and response capture, Campaign performance analysis and feedback"
+  },
+  {
+    "Capability Name": "Prospect Campaign Management",
+    "Sub-directory Name": "Campaign Management",
+    "Core Business Object": "Prospect Campaign (object_26.html?object=40891)",
+    "Example of Use": "Prospect Campaign Management identifies competitor activity that is targeting an untapped market segment. Campaign design is initiated to develop a competitive acquisition campaign to address the threat",
+    "Executive Summary": "Assess the coverage and impact of external/prospect campaigns and redirect campaign development and execution activity accordingly",
+    "Key Features": "Track market/competitor activity, Assess customer segment performance/opportunities, Assess coverage of prospect campaigns, Direct the development of prospect campaigns, Direct the execution of prospect campaigns"
+  },
+  {
+    "Capability Name": "Event Management",
+    "Sub-directory Name": "Event Management",
+    "Core Business Object": "Promotional Event (object_26.html?object=31724)",
+    "Example of Use": "Business development reviews market research to select promotional events to sponsor to support the bank brand and enhance market awareness",
+    "Executive Summary": "Develop the plan for and oversee promotional event activity, including budget and resource management",
+    "Key Features": "Track market/competitor activity in promotional events, Assess fit of promotional event sponsorship opportunities, Direct the participation in promotional events"
+  },
+  {
+    "Capability Name": "Lead Management",
+    "Sub-directory Name": "Lead Management",
+    "Core Business Object": "SalesLeadManagement",
+    "Example of Use": "A lead is identified during a customer servicing interaction and the lead captured for subsequent follow-up",
+    "Executive Summary": "This service domain captures, classifies and track sales lead/opportunities with established clients for additional products or services. It handles the processing of the opportunity through to the point of formal offer processing.",
+    "Key Features": "Lead/opportunity classification and capture, Lead/opportunity evaluation and confirmation, Verify opportunity, initiate/schedule customer offer processing"
+  },
+  {
+    "Capability Name": "Loyalty Management",
+    "Sub-directory Name": "Loyalty Management",
+    "Core Business Object": "Reward Points (object_24.html?object=55840)",
+    "Example of Use": "A customer transaction that generates reward points is captured on the log, resulting in an increase in their available point balance",
+    "Executive Summary": "Administer the booking and remittance of rewards points",
+    "Key Features": "Capture reward points awards and remittance transactions, Process reward point expiry terms for limited life reward points"
+  },
+  {
+    "Capability Name": "Financial Market Analysis",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Financial Market Analysis (object_24.html?object=38711)",
+    "Example of Use": "A competitor financial pricing analysis is requested for a company issuing corporate paper",
+    "Executive Summary": "Provide different types of financial market analysis using available financial market information and research",
+    "Key Features": "Identify sources of financial market research, Select appropriate analytical algorithms/hypotheses to apply, Consolidate information and apply/refine algorithms, Interpret and present analytical insights"
+  },
+  {
+    "Capability Name": "Financial Market Research",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Financial Market Research (object_26.html?object=31660)",
+    "Example of Use": "An investment portfolio manager obtains financial market research to support portfolio rebalancing decisions",
+    "Executive Summary": "The service domain consolidates external financial market research",
+    "Key Features": "Identify and subscribe to financial market research services, Operate access to financial market research service to obtain reports, Consolidate, classify and maintain research, Provide access to financial market research within the bank (direct and for analysis), Support ad-hoc requests to identify and obtain financial market research"
+  },
+  {
+    "Capability Name": "Market Analysis",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Market Analysis (object_26.html?object=38731)",
+    "Example of Use": "External market research is used to develop competitor analysis for bank products as input to a prospect campaign development",
+    "Executive Summary": "This service domain analyzes internal and external market information sources as necessary to develop specific market insights. It may maintain a collection of predefined market analyses and may also offer specific ad-hoc analysis on request",
+    "Key Features": "Determine the range of standard market analyses reports to support, Support ad-hoc market analysis request, Consolidate market research and internal information sources, Develop market analysis reports, Provide access to market analysis reports"
+  },
+  {
+    "Capability Name": "Market Data Switch Administration",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Information Feed Switch Administrative Plan (object_24.html?object=133284)",
+    "Example of Use": "A new employee is provided with the standard access to information feed at their trading desk",
+    "Executive Summary": "This service domain administers the internal information distribution system with external market information feeds and associated employee access rights, including brokering information access on a first-come-first-serve basis for limited user feeds",
+    "Key Features": "Administer internal information distribution switch, Manage external market information feeds, Control employee access rights, Broker information access for limited user feeds"
+  },
+  {
+    "Capability Name": "Public Reference Data Management",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Global Standard Specification (object_24.html?object=45962)",
+    "Example of Use": "The international ISO standard definitions are maintained and applied across production systems of the bank",
+    "Executive Summary": "Provide structured access to standard 'global' reference data and definitions associated with market activity such as currency, country and segment identifiers.",
+    "Key Features": "Identify global data standards and sources, Arrange for access to external reference data sources, Import and disseminate public/global reference data"
+  },
+  {
+    "Capability Name": "Customer Surveys",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Customer Survey (object_26.html?object=48721)",
+    "Example of Use": "A bank develops a customer questionnaire to obtain feedback from customers that make frequent use of the self-service contact center facility for service improvement suggestions",
+    "Executive Summary": "Define and execute and analyze customer surveys",
+    "Key Features": "Customer survey definition/refinement, Reviewer selection/identification, Customer survey execution, Customer survey analysis and feedback"
+  },
+  {
+    "Capability Name": "Market Data Switch Operation",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Market Information Switch Session (object_25.html?object=30354)",
+    "Example of Use": "A bank trader request access to a market data feed at their dealing position during a trading session",
+    "Executive Summary": "This service domain operates the internal information distribution facility/switch in compliance with administered external subscription information feed service access rights. Note the content is retrieved by the Market Feed Operation service domain from the various external feed services. Internal information can also be published over the switch from various bank sources (such as bank rates provided by treasury).",
+    "Key Features": "Handle access to the information provider (IP) service content, Store and forward (IP) content over the internal switch, Handle internal access to the IP content based on user access rights/requests, Publish internal content over the data switch"
+  },
+  {
+    "Capability Name": "Market Information Management",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Financial Market Information Service (object_26.html?object=45719)",
+    "Example of Use": "The bank consolidates multiple sources of private company merger and acquisition activity in order to maintain a view of private company players in a target sector",
+    "Executive Summary": "Market information management consolidates and improves market information from multiple sources in order to build up a bank knowledge base in targeted areas",
+    "Key Features": "Determine the required scope of market information to be maintained, Source suitable market information sources and consolidate records, Verify and qualify the accuracy of the information, Structure/present the information in reports suited to business analysis and review"
+  },
+  {
+    "Capability Name": "Market Research",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Market Research (object_26.html?object=45160)",
+    "Example of Use": "A market research department handles the access and consolidation and classification of market research",
+    "Executive Summary": "This service domain handles the capture of market research from multiple external sources. This can include live feeds, analysis and reports in any form. The information is classified/catalogued and stored for retrieval.",
+    "Key Features": "Identify and subscribe to market resource services, Operate access to market research service to obtain reports, Consolidate, classify and maintain research, Provide access to market research within the bank (direct and for analysis), Support ad-hoc requests to identify and obtain market research"
+  },
+  {
+    "Capability Name": "Segment Direction",
+    "Sub-directory Name": "Market Management",
+    "Core Business Object": "Market Segment Strategy (object_26.html?object=45112)",
+    "Example of Use": "Corporate direction notifies segment leadership of changed goals and priorities that impact their activity",
+    "Executive Summary": "Define market segments and develop and assess performance against the segment plan's performance goals",
+    "Key Features": "Define governing policies and guidelines, Define business goals, Define supporting business development strategies, Track progress towards goals and direct activity"
+  },
+  {
+    "Capability Name": "Message Management",
+    "Sub-directory Name": "Message Management",
+    "Core Business Object": "Enterprise Communication (object_24.html?object=131303)",
+    "Example of Use": "Press releases are developed to coincide with financial performance reporting",
+    "Executive Summary": "Develop and distribute key corporate messages as needed to support the strategy and maintain the enterprise reputation and brand",
+    "Key Features": "Development of key corporate messages, Distribution of corporate communications, Support for enterprise strategy, Maintenance of enterprise reputation and brand"
+  },
+  {
+    "Capability Name": "Offer Management",
+    "Sub-directory Name": "Offer Management",
+    "Core Business Object": "CustomerOfferManagement",
+    "Example of Use": "An existing customer has discussed short term funding needs with the Financial Advisor and agreed in principle to taking out a corporate loan. The customer offer process is initiated and leads the advisor through the detailed checks, authorizations and documentation needed prior to the final set-up of the Corporate Loan",
+    "Executive Summary": "This service domain orchestrates the processing of a product offer for a new or established customer. The offer process is defined specifically for the product or service being considered and can include actions such as document checks, collateral allocation, credit assessments, underwriting decisions, regulatory and procedural checks, eligibility checks, the use of internal and external specialist services (such as evaluations and legal advice).",
+    "Key Features": "Obtain offer processing requirements for selected product, Confirm customer suitability/eligibility for product, Agree product features, fees and pricing with customer, Obtain documents/signatures and required disclosures, Arrange collateral and obtain underwriting authorizations, Perform any audit and compliance checks, Initiate product set-up"
+  },
+  {
+    "Capability Name": "Business Development",
+    "Sub-directory Name": "Sales Plan Management",
+    "Core Business Object": "Business Development Strategy",
+    "Example of Use": "Corporate strategy develops targets for new business acquisition in selected market segments",
+    "Executive Summary": "Define, implement, track and assess the new business development plans",
+    "Key Features": "Define governing policies and guidelines, Define business goals, Define supporting business development strategies, Track progress towards goals and direct activity"
+  },
+  {
+    "Capability Name": "Sales Planning",
+    "Sub-directory Name": "Sales Plan Management",
+    "Core Business Object": "Marketing And Sales Strategy",
+    "Example of Use": "Sales management review quarterly performance and pipeline and set sales targets and allocations for the upcoming cycle",
+    "Executive Summary": "Plan, and assess sales activity and re-direct resources and priorities as necessary",
+    "Key Features": "Plan sales activity, Assess sales performance, Re-direct resources as necessary, Set priorities for sales activities"
+  }
+]

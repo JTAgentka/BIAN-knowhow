@@ -1,0 +1,258 @@
+[
+  {
+    "Capability Name": "Financial Message Analysis",
+    "Sub-directory Name": "Fraud Incident Management",
+    "Core Business Object": "Financial Network Gateway Analysis",
+    "Example of Use": "A pattern of financial message traffic for a major counterparty is analyzed to reveal possible fraudulent behaviors",
+    "Executive Summary": "Not provided in the source document",
+    "Key Features": "Individual Analytics: financialNetworkGatewayAnalysisAccumulators, financialNetworkGatewayAnalysisActivityAnalysis, financialNetworkGatewayAnalysisPerformanceAnalysis, financialNetworkGatewayAnalysisTrends&Events; Portfolio Analytics: financialNetworkGatewayAnalysisPortfolioActivityAnalysis, financialNetworkGatewayAnalysisPortfolioMake-UpAnalysis, financialNetworkGatewayAnalysisPortfolioPerformanceAnalysis"
+  },
+  {
+    "Capability Name": "Fraud Diagnosis",
+    "Sub-directory Name": "Fraud Incident Management",
+    "Core Business Object": "Fraud Diagnosis",
+    "Example of Use": "Out of pattern card use is detected and the details passed for analysis. The analysis determines there is a high probability of fraud recommending appropriate containment actions",
+    "Executive Summary": "This service domain handles the evaluation of detected possible fraud to support an appropriate response to contain the exposure",
+    "Key Features": "Analyse activity to assess likelihood of customer fraud; Analyse activity to assess likelihood of merchant fraud; Analyse activity to assess likelihood of intermediary fraud"
+  },
+  {
+    "Capability Name": "Fraud Evaluation",
+    "Sub-directory Name": "Fraud Incident Management",
+    "Core Business Object": "Fraud Evaluation",
+    "Example of Use": "Card transactions are subjected to an array of fraud pattern test to detect 'out of pattern' behavior - anomalies are highlighted for analysis",
+    "Executive Summary": "The service domain executes fraud behavioral pattern tests to detect possible fraudulent transactions/activity",
+    "Key Features": "Transaction data consolidation; Fraud detection test execution; Fraud analysis/diagnosis and reporting"
+  },
+  {
+    "Capability Name": "Fraud Model",
+    "Sub-directory Name": "Fraud Incident Management",
+    "Core Business Object": "Fraud Model",
+    "Example of Use": "A customer \"fraudulent card use' algorithm is updated to take account of additional transaction utilization data that is available",
+    "Executive Summary": "This service domain handles the design and maintenance of a portfolio of fraud models used across all production activity to detect potential fraud on the part of customers, merchants and other involved parties",
+    "Key Features": "Determine desired type/coverage for fraud analysis; Source, define and develop fraud models; Publish, process feedback and refine/tune models"
+  },
+  {
+    "Capability Name": "Fraud Resolution",
+    "Sub-directory Name": "Fraud Incident Management",
+    "Core Business Object": "Fraud Case",
+    "Example of Use": "A pattern of possible fraud is highlighted in transaction records that is researched and evidence of fraud discovered. Prosecution/resolution activity is initiated",
+    "Executive Summary": "This service domain sets up and processes a fraud case resulting from fraud behavior that has been detected during production processing",
+    "Key Features": "Setup fraud resolution case; Obtain documentation and evaluate; Determine and assign liability; Define and initiate resolution activities"
+  },
+  {
+    "Capability Name": "Compliance Reporting",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "Compliance Reporting Administrative Plan",
+    "Example of Use": "The financial accounting procedures for a back office function are audited",
+    "Executive Summary": "This service domain administers and orchestrates the tasks required to apply and report on internal audit control and reporting activity",
+    "Key Features": "Consolidate internal compliance/audit reporting materials and assemble reports; Delivery scheduled and ad-hoc reports to internal auditors, highlighting non-compliance; Handle follow up for identified remedial actions for non-compliance; Oversee on-line/production transaction regulatory reporting"
+  },
+  {
+    "Capability Name": "Corporate Policies",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "corporatePolicySpecificationAccumulators, corporatePolicySpecificationActivityAnalysis, corporatePolicySpecificationPerformanceAnalysis, corporatePolicySpecificationTrends&Events, corporatePolicySpecificationPortfolioActivityAnalysis, corporatePolicySpecificationPortfolioMake-UpAnalysis, corporatePolicySpecificationPortfolioPerformanceAnalysis",
+    "Example of Use": "Corporate policies are defined and published across the enterprise",
+    "Executive Summary": "Not explicitly provided in the document",
+    "Key Features": "(None specified)"
+  },
+  {
+    "Capability Name": "Credit and Margin Management",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "credit&MarginsStrategyAccumulators, credit&MarginsStrategyActivityAnalysis, credit&MarginsStrategyPerformanceAnalysis, credit&MarginsStrategyTrends&Events, credit&MarginsStrategyPortfolioActivityAnalysis, credit&MarginsStrategyPortfolioMake-UpAnalysis, credit&MarginsStrategyPortfolioPerformanceAnalysis",
+    "Example of Use": "Senior policy makers interpret the financial and risk strategies of the bank to determine specific credit and margin rules and policies",
+    "Executive Summary": "Not explicitly provided in the document",
+    "Key Features": "(None specified)"
+  },
+  {
+    "Capability Name": "Guideline Compliance",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "guidelineComplianceAssessmentAccumulators, guidelineComplianceAssessmentActivityAnalysis, guidelineComplianceAssessmentPerformanceAnalysis, guidelineComplianceAssessmentTrends&Events, guidelineComplianceAssessmentPortfolioActivityAnalysis, guidelineComplianceAssessmentPortfolioMake-UpAnalysis, guidelineComplianceAssessmentPortfolioPerformanceAnalysis",
+    "Example of Use": "A loan origination process is submitted for guideline compliance checks prior to completing the origination/loan closure process",
+    "Executive Summary": "This service domain develops and applies a portfolio of guideline compliance tests to confirm adherence to bank and regulator imposed internal procedures. Tests may be made on complete transaction data or a meaningful samples as appropriate to mitigate exposure to non-compliant behaviors. Compliance checks may be in response to a schedule, a specific request as part of normal processing or may be initiated randomly as an oversight activity",
+    "Key Features": "Schedule/target compliance checks; Consolidate documents/activity pertaining to compliance tests; Provide advice/guidance for achieving compliance; Evaluate and report on activity for compliance; Notify and track responses for detected compliance failures"
+  },
+  {
+    "Capability Name": "Internal Audit",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "Internal Audit Assessment",
+    "Example of Use": "A periodic audit of a processing unit is undertaken and remedial corrections to procedures recommended to improve compliance",
+    "Executive Summary": "Maintain and portfolio of internal audit checks. Select and execute a meaningful sample of checks and identify and resolve non-compliance",
+    "Key Features": "Schedule/target internal audit reviews; Consolidate documents/activity pertaining to the audit; Provide advice/guidance for achieving guideline/policy compliance; Evaluate and report on activity for regulatory compliance; Notify and track responses for detected procedural failures"
+  },
+  {
+    "Capability Name": "IT Standards And Guidelines",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "Technology Standards Specification",
+    "Example of Use": "A review of available IT tooling is performed to identify recommended tooling for application development",
+    "Executive Summary": "Define and apply comprehensive IT architectures, policies and standards as appropriate. Also define the IT usage guidelines and procedures governing systems use across the enterprise",
+    "Key Features": "Define IT Policies and Guidelines; Select and apply IT standards; Select technology platforms and technology for development and production; Select preferred IT tools and utilities for development and production"
+  },
+  {
+    "Capability Name": "Management Manual",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "Management Manual Specification",
+    "Example of Use": "Operational procedures to be followed when handling sensitive customer information are amended to reflect updated regulatory requirements",
+    "Executive Summary": "Develop, maintain and promulgate the management manual of required procedures and guidelines. Provide support in its reference and interpretation as appropriate",
+    "Key Features": "Determine the required/scope or coverage of the procedures manual; Review current procedures against prevailing best practices and refine the manual as necessary; Maintain procedure classification and indexing to support access; Clarify obligations and accountability for adopting procedures across all banking activities"
+  },
+  {
+    "Capability Name": "Regulatory And Legal Authority",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "regulatory&LegalAuthorityRelationshipManagementPlanAccumulators, regulatory&LegalAuthorityRelationshipManagementPlanActivityAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPerformanceAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanT, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioActivityAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioMake-UpAnalysis, regulatory&LegalAuthorityRelationshipManagementPlanPortfolioPerformanceAnalysis",
+    "Example of Use": "The bank's contact with regulators is leveraged to streamline the resolution of compliance issues to the bank's benefit",
+    "Executive Summary": "Maintain effective relations with regulators, accounting and government agencies. Oversee interactions and reporting as necessary",
+    "Key Features": "Identify and establish contacts; Assign relationship managers; Schedule contacts and briefings; Handle issues as they arise"
+  },
+  {
+    "Capability Name": "Regulatory Compliance",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "regulatoryComplianceAssessmentAccumulators, regulatoryComplianceAssessmentActivityAnalysis, regulatoryComplianceAssessmentPerformanceAnalysis, regulatoryComplianceAssessmentTrends&Events, regulatoryComplianceAssessmentPortfolioActivityAnalysis, regulatoryComplianceAssessmentPortfolioMake-UpAnalysis, regulatoryComplianceAssessmentPortfolioPerformanceAnalysis",
+    "Example of Use": "A new customer's details are passed for regulatory watch list checks. A subsequent transaction is reported for regulatory compliance checks",
+    "Executive Summary": "This service domain provides a service to interpret regulatory requirements, provide guidance and define and implement a portfolio of regulatory compliance tests across all appropriate bank activities",
+    "Key Features": "Schedule/target regulatory checks; Consolidate documents/activity pertaining to regulatory tests; Provide advice/guidance for achieving regulatory compliance; Evaluate and report on activity for regulatory compliance; Notify and track responses for detected regulatory failures"
+  },
+  {
+    "Capability Name": "Regulatory Reporting",
+    "Sub-directory Name": "Policy Management",
+    "Core Business Object": "Regulatory Report",
+    "Example of Use": "Trading activity is reported to the exchange to comply with regulatory reporting requirements",
+    "Executive Summary": "This service domain administers and orchestrates the tasks required to meet the bank's regulatory reporting obligations",
+    "Key Features": "Consolidate regulatory reporting materials and assemble reports; Delivery scheduled and ad-hoc reports to regulators; Handle regulator's reporting requests and responses; Oversee on-line/production transaction regulatory reporting"
+  },
+  {
+    "Capability Name": "Account Recovery",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Account Recovery Procedure",
+    "Example of Use": "A non-performing customer account is handed over for recovery after the normal relationship management efforts have failed. Additional authority is provided to renegotiate/structure the account to enable the customer to attempt recovery. This restructuring can result in write downs that need to be booked appropriately",
+    "Executive Summary": "This service domain handles the restructuring of a distressed account (loan) after standard recovery procedures have been exhausted",
+    "Key Features": "Account status assessment; Account recovery planning; Customer agreement/negotiation; Account terms amendment/restructuring"
+  },
+  {
+    "Capability Name": "Business Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Business Operation Risk Model Specification",
+    "Example of Use": "Financial engineers develop and deploy a collection of business risk models that can run against different failure scenarios to assess exposure and determine mitigation needs",
+    "Executive Summary": "This capability focuses on developing and maintaining comprehensive business risk models that assess commercial and business exposures across various failure scenarios to support risk mitigation strategies.",
+    "Key Features": "Commercial exposure assessment; Business risk modeling; Failure scenario analysis; Risk exposure evaluation; Mitigation needs determination; Individual and portfolio analytics; Performance analysis and trending"
+  },
+  {
+    "Capability Name": "Continuity Planning",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Enterprise Continuity Assurance Management Plan",
+    "Example of Use": "A business continuity plan is developed for key business activities and assurance tests performed",
+    "Executive Summary": "This capability focuses on developing, maintaining, and testing continuity plans and supporting facilities for various failure scenarios to ensure business continuity.",
+    "Key Features": "Development of continuity plans for failure scenarios; Maintenance and testing of continuity plans; Supporting facilities management; Assurance testing capabilities; Individual and portfolio analytics; Performance analysis and trending"
+  },
+  {
+    "Capability Name": "Counterparty Risk",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Counterparty Credit Risk Measurement",
+    "Example of Use": "A back office function tracks transaction activity and external rating details to maintain counterparty credit ratings",
+    "Executive Summary": "Counterparty Risk capability maintains and administers counterparty risk ratings by tracking transaction activities and external rating details to assess and monitor credit risk exposure to counterparties.",
+    "Key Features": "Counterparty risk rating maintenance; Credit risk measurement and monitoring; Transaction activity tracking; External rating integration; Risk assessment analytics; Portfolio risk analysis"
+  },
+  {
+    "Capability Name": "Credit Management",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Credit Position",
+    "Example of Use": "A corporate loan is presented for credit management pricing decisioning prior to completion of the offer process",
+    "Executive Summary": "This service domain provides a bank-wide/oversight function to qualify credit pricing for offered products and services to reflect the bank's appetite to write the business. This decision can override the standard product pricing procedure",
+    "Key Features": "Evaluate a proposed loan's fit to the bank's credit policies and priorities; Re-price major loans to align to bank policies and priorities; Bank-wide credit perspective maintenance; Transaction re-pricing capabilities; Credit policy compliance assessment; Pricing decision override functionality"
+  },
+  {
+    "Capability Name": "Credit Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Credit Risk Model Specification",
+    "Example of Use": "A credit model is used to analyze product activity in order to refine then banks credit assessment of a customer",
+    "Executive Summary": "This service domain handles the design and maintenance of a portfolio of credit models that are used in all aspects of customer credit assessments",
+    "Key Features": "Determine desired type/coverage for credit analysis; Source, define and develop credit models; Publish, process feedback and refine/tune models; Individual credit assessments; Complex analyses for merchants and companies/corporations; Credit scoring derivation; Credit analysis/insight development support"
+  },
+  {
+    "Capability Name": "Economic Capital",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Economic Capital Analysis",
+    "Example of Use": "Financial engineers define and apply models that consolidate the overall risk exposure for the bank to determine a complete estimate of exposure",
+    "Executive Summary": "Economic Capital capability provides comprehensive risk consolidation across different risk types to determine the bank's overall risk position. It develops and maintains sophisticated models that integrate various risk categories to provide a complete picture of the institution's risk exposure.",
+    "Key Features": "Risk consolidation across different risk types; Consolidated risk position determination; Economic capital model development and maintenance; Complete risk exposure estimation; Individual analytics including accumulators, activity analysis, performance analysis, and trends & events; Portfolio analytics for activity, make-up, and performance analysis"
+  },
+  {
+    "Capability Name": "Financial Compliance",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Financial Compliance Procedure",
+    "Example of Use": "A business unit misses its first qtr targets and reacts with corrective actions that are tracked",
+    "Executive Summary": "Financial Compliance capability tracks and manages the resolution of detected non-compliance financial activities and instances, ensuring corrective actions are properly monitored and resolved.",
+    "Key Features": "Non-compliance detection tracking; Financial activity monitoring; Resolution tracking; Corrective action management; Financial compliance procedure analytics; Portfolio compliance analysis"
+  },
+  {
+    "Capability Name": "Gap Analysis",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Interest Rate Gap Risk Analysis",
+    "Example of Use": "A risk management unit/group treasury assembles and maintains the currency and interest rate maturity ladders for the trading function",
+    "Executive Summary": "Gap Analysis capability maintains and tracks projected consolidated cash flows to support the evaluation and management of currency and interest rate risk positions, supporting the bank's overall liquidity risk management strategy.",
+    "Key Features": "Consolidated cash flow tracking; Currency risk position management; Interest rate risk analysis; Liquidity risk evaluation; Maturity ladder maintenance; Risk position analytics"
+  },
+  {
+    "Capability Name": "Limit and Exposure Management",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Limit And Exposure Management Plan",
+    "Example of Use": "Product fulfillment activity triggers limit and exposure checks",
+    "Executive Summary": "Limit and Exposure Management capability provides oversight and control of corporate limits and exposures across all business activities. It ensures that business operations remain within defined risk parameters and exposure limits.",
+    "Key Features": "Corporate limit oversight; Exposure monitoring and management; Combined business activity supervision; Limit and exposure checks triggered by business activities; Individual analytics for accumulators, activity analysis, performance analysis, and trends & events; Portfolio analytics for activity, make-up, and performance analysis"
+  },
+  {
+    "Capability Name": "Liquidity Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Liquidity Risk Model Specification",
+    "Example of Use": "Financial engineers develop and refine liquidity risk management models",
+    "Executive Summary": "This capability focuses on developing and maintaining comprehensive liquidity risk models for both dispositive and structural liquidity risk management, including advanced analytics like LaR and LVaR.",
+    "Key Features": "Liquidity gap analysis; Liquidity at Risk (LaR) modeling; Liquidity Value at Risk (LVaR) modeling; Dispositive liquidity risk management; Structural liquidity risk management; Individual and portfolio analytics; Performance analysis and trending"
+  },
+  {
+    "Capability Name": "Market Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Market Risk Model Specification",
+    "Example of Use": "Financial engineers assess the coverage and currency of the portfolio of market risk models and update certain models accordingly",
+    "Executive Summary": "This capability focuses on developing and maintaining comprehensive market risk models that cover various financial risk factors to support trading and pricing activities across the organization.",
+    "Key Features": "Currency risk modeling; Interest rate risk modeling; Instrument quote analysis; Market indices modeling; Commodity price risk assessment; Macro-economic risk factor analysis; Trading activity support; Pricing activity support"
+  },
+  {
+    "Capability Name": "Operational Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Operational Risk Model Specification",
+    "Example of Use": "Financial engineers evaluate the history of operational breaches and issues to determine how well existing operational risk models cover the detection of exposures",
+    "Executive Summary": "Operational Risk Models capability focuses on developing, maintaining, and refining models that detect potential operational failures and exposures. It provides comprehensive analysis of operational breaches and issues to ensure effective risk detection and mitigation.",
+    "Key Features": "Operational risk model development and refinement; Detection of operational failure exposures; Historical breach analysis; Model effectiveness evaluation; Individual analytics including accumulators, activity analysis, performance analysis, and trends & events; Portfolio analytics for activity, make-up, and performance analysis"
+  },
+  {
+    "Capability Name": "Production Risk Models",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Production Risk Model Specification",
+    "Example of Use": "Financial engineers respond to an analysis of production issues and develop/refine their production risk models to better detect the root cause",
+    "Executive Summary": "This capability focuses on developing and refining production risk models to identify and detect potential exposures to procedural failures in business operations.",
+    "Key Features": "Development of production risk models; Refinement of existing risk models; Detection of procedural failure exposures; Root cause analysis capabilities; Individual and portfolio analytics; Performance analysis and trending"
+  },
+  {
+    "Capability Name": "Security Advisory",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Security Compliance Procedure",
+    "Example of Use": "Specialist security advice is sought for a major project",
+    "Executive Summary": "Security Advisory capability provides specialized security guidance and advice to support organizational security arrangements across line management and project implementations.",
+    "Key Features": "Specialist security advice provision; Line management security guidance; Project security consultation; Organization-wide security arrangements; Security compliance procedure analytics; Portfolio security analysis"
+  },
+  {
+    "Capability Name": "Security Assurance",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Security Compliance Assessment",
+    "Example of Use": "A security check of a new product operation is performed considering multiple threat categories",
+    "Executive Summary": "Security Assurance capability provides comprehensive security testing and validation services to ensure organizational security countermeasures are effective and appropriate. It maintains a portfolio of security checks and performs targeted assurance testing across multiple threat categories.",
+    "Key Features": "Portfolio of security assurance checks; Selective assurance testing; Security countermeasure validation; Multiple threat category assessment; Security compliance assessment analytics; Individual analytics including accumulators, activity analysis, performance analysis, and trends & events; Portfolio analytics for activity, make-up, and performance analysis"
+  },
+  {
+    "Capability Name": "Underwriting",
+    "Sub-directory Name": "Risk Management",
+    "Core Business Object": "Underwriting Assessment",
+    "Example of Use": "A corporate loan offer is processed and at the appropriate point an underwriting authorization is requested",
+    "Executive Summary": "This service domain manages the underwriting decision process for products as appropriate (including many loan types and some insurance products)",
+    "Key Features": "Consolidate underwriting decision materials; Evaluate cash flow/credit position for proposal; Make (conditional if needed) underwriting determination; Risk-based pricing adjustments; Collateral requirement assessment; Multiple authorization levels support"
+  }
+]

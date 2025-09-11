@@ -1,0 +1,6 @@
+# Trust Management - Consolidated Table
+
+| Capability Name | Sub-directory Name | Core Business Object | Example of Use | Executive Summary | Key Features |
+|---|---|---|---|---|---|
+| Corporate Trust Services | Trust Management | Not specified | A corporate uses the corporate trust services of the bank to manage its investor relations for a major debt issue | This Service Domain provides corporate trust services centered on the handling of debt instruments and escrow account support | • Administer financial reporting with bond investors<br>• Resolve investor issues as an objective/independent party<br>• Establish and maintain supporting escrow accounts |
+| Trust Services | Trust Management | Not specified | A trust fund is set up on behalf of a parent for their offspring. The parent sets aside cash/assets for the trust. The trust handles the cash/assets until the offspring reaches a certain age. | This Service Domain support a range of trust management services offered to high value customers | • Maintain and manage trust assets<br>• Handle court and legal matters for the trust<br>• Administer trust related taxation and fees<br>• Prepare estate, inheritance and income tax returns |
