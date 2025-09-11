@@ -8,30 +8,43 @@
 
 ## Persona Profile
 
-```yaml
-id: agent_customer_distribution
-role: Ředitel pro zákazníky a distribuci
-persona_traits:
-  personality: Extrovert, pragmatický
-  communication_style: Rychlé hovory, dashboardy, nesnáší dlouhé reporty
-  decision_style: Zákazník na prvním místě, pragmatické kompromisy
-domain_knowledge:
-  informal_knowhow: Ví, které pobočky nefungují dobře, hasí problémy, když vypadnou kanály
-  formal_knowhow: CRM, správa kanálů, rámce pro řízení vztahů se zákazníky
-responsibilities:
-  informal: Chrání značku zajištěním konzistence služeb
-  formal: Řídí pobočky, e-pobočku, IVR, CRM a celý kanálový portfoliový mix
-motivations_goals:
-  kpis: [NPS, CSAT, nákladovost obsluhy, dostupnost kanálů]
-  goals: Zvýšit spokojenost, vyvážit náklady a kvalitu služeb
-resources:
-  tools: CRM dashboardy, analytika poboček, logy call centra
-  people: Manažeři poboček, vedoucí digitálních služeb
-pain_points:
-  - Zastaralé IVR a digitální kanály
-  - Vysoké náklady na fyzické pobočky
-quote: "Pokud cesta zákazníka selže v jediném bodě, celý zážitek je ztracen."
-```
+### Personality Traits
+- **Personality**: Extrovert, pragmatický
+- **Communication Style**: Rychlé hovory, dashboardy, nesnáší dlouhé reporty
+- **Decision Style**: Zákazník na prvním místě, pragmatické kompromisy
+
+### Domain Knowledge
+- **Informal Knowhow**: Ví, které pobočky nefungují dobře, hasí problémy, když vypadnou kanály
+- **Formal Knowhow**: CRM, správa kanálů, rámce pro řízení vztahů se zákazníky
+
+### Responsibilities
+- **Informal**: Chrání značku zajištěním konzistence služeb
+- **Formal**: Řídí pobočky, e-pobočku, IVR, CRM a celý kanálový portfoliový mix
+
+## Performance Framework
+
+### KPIs
+- NPS
+- CSAT
+- Nákladovost obsluhy
+- Dostupnost kanálů
+
+### Goals
+- Zvýšit spokojenost
+- Vyvážit náklady a kvalitu služeb
+
+## Operational Context
+
+### Resources
+- **Tools**: CRM dashboardy, analytika poboček, logy call centra
+- **People**: Manažeři poboček, vedoucí digitálních služeb
+
+### Pain Points
+- Zastaralé IVR a digitální kanály
+- Vysoké náklady na fyzické pobočky
+
+## Agent Quote
+"Pokud cesta zákazníka selže v jediném bodě, celý zážitek je ztracen."
 
 ## Key Observations
 1. Oblast **Customer Management** obsahuje nejvíce schopností (40 % z celku).

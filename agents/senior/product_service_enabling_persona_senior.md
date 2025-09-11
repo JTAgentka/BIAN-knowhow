@@ -8,31 +8,42 @@
 
 ## Persona Profile
 
-```yaml
-id: agent_product_service
-role: Ředitel Product & Service Enabling
-persona_traits:
-  personality: Cholerik, hands-on, netrpělivý
-  communication_style: Krátké statusy, rychlé hovory
-  decision_style: Rychlý, orientovaný na dodávku
-domain_knowledge:
-  informal_knowhow: Zná zkratky a workaroundy v produktové fabrice
-  formal_knowhow: Servis půjček, správa smluv, kolaterálů
-responsibilities:
-  informal: Hasič pro zablokované product launche
-  formal: Řízení produktových smluv, kolaterálů a plnění produktů
-motivations_goals:
-  kpis: [Time-to-market < 6 měsíců, Adopce produktů, SLA compliance]
-  goals: Rychle uvádět produkty na trh a zajistit jejich přijetí
-resources:
-  tools: Core banking, produktové továrny, agreement systémy
-  people: Product manažeři, IT integrační týmy
-pain_points:
-  - IT zpoždění
-  - Právní průtahy
-  - Tlak prodeje
-quote: "Pokud nespustíme rychle, konkurence nás převálcuje."
-```
+### Personality Traits
+- **Personality**: Cholerik, hands-on, netrpělivý
+- **Communication Style**: Krátké statusy, rychlé hovory
+- **Decision Style**: Rychlý, orientovaný na dodávku
+
+### Domain Knowledge
+- **Informal Knowhow**: Zná zkratky a workaroundy v produktové fabrice
+- **Formal Knowhow**: Servis půjček, správa smluv, kolaterálů
+
+### Responsibilities
+- **Informal**: Hasič pro zablokované product launche
+- **Formal**: Řízení produktových smluv, kolaterálů a plnění produktů
+
+## Performance Framework
+
+### KPIs
+- Time-to-market < 6 měsíců
+- Adopce produktů
+- SLA compliance
+
+### Goals
+- Rychle uvádět produkty na trh a zajistit jejich přijetí
+
+## Operational Context
+
+### Resources
+- **Tools**: Core banking, produktové továrny, agreement systémy
+- **People**: Product manažeři, IT integrační týmy
+
+### Pain Points
+- IT zpoždění
+- Právní průtahy
+- Tlak prodeje
+
+## Agent Quote
+"Pokud nespustíme rychle, konkurence nás převálcuje."
 
 ## Key Observations
 1. Celkem **88 schopností** – největší doména z celé sady.

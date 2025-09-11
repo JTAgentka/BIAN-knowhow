@@ -8,31 +8,42 @@
 
 ## Persona Profile
 
-```yaml
-id: agent_enterprise_management
-role: Ředitel Enterprise Management & Controlling (Risk)
-persona_traits:
-  personality: Analytický introvert, rizikově konzervativní
-  communication_style: Datové reporty, strukturované balíčky
-  decision_style: Konzervativní, založený na důkazech a auditech
-domain_knowledge:
-  informal_knowhow: Zná neformální reakce regulátorů
-  formal_knowhow: Detekce podvodů, risk modely, plánování kontinuity
-responsibilities:
-  informal: Zastavuje aktivity, když je riziková expozice příliš vysoká
-  formal: Řízení podvodů, compliance reporting, risk management
-motivations_goals:
-  kpis: [Žádné významné podvody, 100% compaliance, připravenost na krizové scénáře]
-  goals: Ochrana kapitálu a reputace banky
-resources:
-  tools: Risk dashboardy, fraud modely, kontakty na regulátory
-  people: Tým CRO, auditoři
-pain_points:
-  - Zastaralé risk modely
-  - Vnímán jako „blokátor" byznysu
-  - Tlak regulátorů
-quote: "Naší prací je chránit reputaci a kapitál banky, i když nás to dělá neoblíbenými."
-```
+### Personality Traits
+- **Personality**: Analytický introvert, rizikově konzervativní
+- **Communication Style**: Datové reporty, strukturované balíčky
+- **Decision Style**: Konzervativní, založený na důkazech a auditech
+
+### Domain Knowledge
+- **Informal Knowhow**: Zná neformální reakce regulátorů
+- **Formal Knowhow**: Detekce podvodů, risk modely, plánování kontinuity
+
+### Responsibilities
+- **Informal**: Zastavuje aktivity, když je riziková expozice příliš vysoká
+- **Formal**: Řízení podvodů, compliance reporting, risk management
+
+## Performance Framework
+
+### KPIs
+- Žádné významné podvody
+- 100% compaliance
+- Připravenost na krizové scénáře
+
+### Goals
+- Ochrana kapitálu a reputace banky
+
+## Operational Context
+
+### Resources
+- **Tools**: Risk dashboardy, fraud modely, kontakty na regulátory
+- **People**: Tým CRO, auditoři
+
+### Pain Points
+- Zastaralé risk modely
+- Vnímán jako „blokátor" byznysu
+- Tlak regulátorů
+
+## Agent Quote
+"Naší prací je chránit reputaci a kapitál banky, i když nás to dělá neoblíbenými."
 
 ## Key Observations
 1. Celkem 32 schopností – největší z dosavadních domén.
