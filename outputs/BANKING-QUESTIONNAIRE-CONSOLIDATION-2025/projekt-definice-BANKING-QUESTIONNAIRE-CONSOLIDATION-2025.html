@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projektová Definice: Konsolidace dotazníkového systému banky</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .metadata {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .metadata-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .metadata-label {
+            font-weight: 600;
+            color: #2a5298;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metadata-value {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2a5298;
+        }
+        
+        .section-number {
+            background: #2a5298;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #2a5298;
+            font-weight: 600;
+        }
+        
+        .subsection {
+            margin: 25px 0;
+        }
+        
+        .subsection h3 {
+            color: #1e3c72;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            border-left: 4px solid #2a5298;
+            padding-left: 12px;
+        }
+        
+        .subsection h4 {
+            color: #2a5298;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        th {
+            background: #2a5298;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .highlight-box h3 {
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .status-approved {
+            background: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .status-critical {
+            background: #dc3545;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .risk-high {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .risk-medium {
+            background: #fffdf5;
+            border-left: 4px solid #f6ad55;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .risk-low {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .criteria-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .criteria-id {
+            background: #2a5298;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer .status {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .metadata-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Definice projektu: Konsolidace dotazníkového systému banky</h1>
+            <div class="subtitle">Unified Questionnaire System - Banking Questionnaire Consolidation Project</div>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="metadata">
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <div class="metadata-label">ID Projektu</div>
+                    <div class="metadata-value">BANKING-QUESTIONNAIRE-CONSOLIDATION-2025</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Status</div>
+                    <div class="metadata-value"><span class="status-approved">✅ Schváleno k implementaci</span></div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Rozpočet</div>
+                    <div class="metadata-value">€2.5M</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Deadline</div>
+                    <div class="metadata-value">06/25</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Verze Dokumentu</div>
+                    <div class="metadata-value">v1.0 - Final Approved</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="metadata-label">Datum Schválení</div>
+                    <div class="metadata-value">2025-09-11</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Executive Summary -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">1</div>
+                    <div class="section-title">Exekutivní Shrnutí</div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Přehled Projektu</h3>
+                    <p>Projekt konsolidace dotazníkového systému banky vznikl v reakci na potřebu nahrazení současných aplikací pro správu AML, KYC a investičních dotazníků jednotným řešením. Hlavním spouštěčem je plánované zrušení stávající CRM aplikace do 06/25, které vytváří kritickou potřebu migrace na nové řešení.</p>
+                </div>
+                
+                <div class="subsection">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div class="metric-card">
+                            <div class="metric-value">5</div>
+                            <div class="metric-label">Stakeholders</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">11</div>
+                            <div class="metric-label">Dokončených Fází</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">14</div>
+                            <div class="metric-label">SMART Kritérií</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">200%</div>
+                            <div class="metric-label">ROI za 18 měsíců</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Klíčové Výsledky</h3>
+                    <ul>
+                        <li><strong>Úspěšná konsolidace:</strong> Tři separátní aplikace (AML, KYC, investiční) sloučeny do jednoho unified systému</li>
+                        <li><strong>Eliminace duplicit:</strong> 100% eliminace duplicitního zadávání společných dat</li>
+                        <li><strong>Zlepšení efektivity:</strong> 30% snížení času pro klienty, 25% pro administrátory</li>
+                        <li><strong>Zachování compliance:</strong> 100% zachování stávajících algoritmů a regulatory compliance</li>
+                        <li><strong>Stakeholder podpora:</strong> Formální schválení od všech klíčových stakeholders</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Stakeholder Analysis -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">2</div>
+                    <div class="section-title">Matice Zapojení Stakeholderů</div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stakeholder</th>
+                            <th>Role</th>
+                            <th>Cíle</th>
+                            <th>Postoj</th>
+                            <th>Vliv</th>
+                            <th>Zájem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Investiční centrum</strong></td>
+                            <td>Primary Business Stakeholder</td>
+                            <td>Nabízet větší šíři investičních produktů</td>
+                            <td>Podporuje aktivně</td>
+                            <td>Vysoký</td>
+                            <td>Vysoký</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bankovní centrum</strong></td>
+                            <td>Primary Business Stakeholder</td>
+                            <td>Zefektivnění administrativních činností</td>
+                            <td>Podporuje aktivně</td>
+                            <td>Vysoký</td>
+                            <td>Vysoký</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tomáš Jedno (Compliance)</strong></td>
+                            <td>Regulatory Stakeholder</td>
+                            <td>Zajistit spojení procesů s novým systémem</td>
+                            <td>Podporuje s podmínkami</td>
+                            <td>Vysoký</td>
+                            <td>Vysoký</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IT/Technology Team</strong></td>
+                            <td>Implementation Stakeholder</td>
+                            <td>Technická realizace řešení</td>
+                            <td>Neutrální</td>
+                            <td>Střední</td>
+                            <td>Střední</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Klienti banky</strong></td>
+                            <td>End User Stakeholder</td>
+                            <td>Jednodušší vyplnění dotazníků</td>
+                            <td>Pozitivní</td>
+                            <td>Nízký</td>
+                            <td>Vysoký</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Problem Statement -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">3</div>
+                    <div class="section-title">Definice Problému a Motivace</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Business Bolesti</h3>
+                    <div class="risk-high">
+                        <strong>Kritický problém:</strong> Složitá administrace dotazníků, komplikované verzování a roztříštěnost řešení přes různé systémy. Klienti musí vyplňovat duplicitní informace v různých aplikacích (AML, KYC, investiční dotazník), což vytváří frustraci a prodlužuje proces onboardingu.
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Motivace ke Změně</h3>
+                    <div class="risk-medium">
+                        <strong>Kritická situace:</strong> Existující CRM aplikace má být zrušena do 06/25, což vytváří kritickou potřebu nahrazení současného řešení. Zároveň je potřeba zjednodušit administraci pro pracovníky banky a zlepšit uživatelskou zkušenost pro klienty.
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Cíle Vysoké Úrovně</h3>
+                    <ul>
+                        <li>Konsolidace všech dotazníků (AML, KYC, investiční) do jediné aplikace</li>
+                        <li>Zjednodušení administrace dotazníků pro pracovníky banky</li>
+                        <li>Eliminace duplicit v datech a procesech</li>
+                        <li>Zlepšení uživatelské zkušenosti pro klienty při vyplňování dotazníků</li>
+                        <li>Zachování stávajících algoritmů vyhodnocení</li>
+                        <li>Zajištění compliance s regulatorními požadavky</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Scope Definition -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">4</div>
+                    <div class="section-title">Rozsah Projektu</div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="subsection">
+                        <h3>Zahrnuto do Rozsahu (Scope In)</h3>
+                        <div class="risk-low">
+                            <ul>
+                                <li>Nahrazení AML, KYC a investičního dotazníku</li>
+                                <li>Nové administrativní rozhraní pro pracovníky</li>
+                                <li>Nové prezentační rozhraní pro klienty</li>
+                                <li>Backend a Frontend systém</li>
+                                <li>Integrace s existujícími systémy (API, Kafka)</li>
+                                <li>Migrace stávajících dat</li>
+                                <li>Podpora Web a Desktop kanálů</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h3>Vyloučeno z Rozsahu (Scope Out)</h3>
+                        <div class="risk-medium">
+                            <ul>
+                                <li>Změna algoritmů vyhodnocení</li>
+                                <li>Změna business logiky vyhodnocování</li>
+                                <li>Rozšíření na další typy dotazníků</li>
+                                <li>Mobilní aplikace</li>
+                                <li>Integrace s externími systémy třetích stran</li>
+                                <li>Změny v architektuře CRM systémů</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Target State Design -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">6</div>
+                    <div class="section-title">Návrh Cílového Stavu</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Konsolidovaný Dotazníkový Proces</h3>
+                    <div class="highlight-box">
+                        <h4>Nový Unified Proces</h4>
+                        <ol>
+                            <li>Klient přístup k jednotné aplikaci</li>
+                            <li>Automatické předvyplnění společných údajů</li>
+                            <li>Inteligentní routing podle typu dotazníku</li>
+                            <li>Progresivní vyplňování s validací v reálném čase</li>
+                            <li>Automatické vyhodnocení pomocí stávajících algoritmů</li>
+                            <li>Centralizované schválení/validace pracovníkem</li>
+                            <li>Automatický reporting a archivace</li>
+                        </ol>
+                        <p><strong>Očekávaný benefit:</strong> 10-12 minut pro klienta (snížení o 40%), 3-5 minut validace (snížení o 50%)</p>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Gap Analýza</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dimenze</th>
+                                <th>Současný Stav</th>
+                                <th>Budoucí Stav</th>
+                                <th>Gap</th>
+                                <th>Úsilí</th>
+                                <th>Riziko</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Process</strong></td>
+                                <td>3 separátní procesy</td>
+                                <td>1 konsolidovaný proces</td>
+                                <td>Integrace procesů</td>
+                                <td>Střední</td>
+                                <td>Nízké</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Systems</strong></td>
+                                <td>3 separátní aplikace + CRM</td>
+                                <td>1 unified systém</td>
+                                <td>Nový vývoj, migrace</td>
+                                <td>Vysoký</td>
+                                <td>Střední</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Data</strong></td>
+                                <td>Roztříštěná data</td>
+                                <td>Centralizovaná databáze</td>
+                                <td>Data modeling, migrace</td>
+                                <td>Střední</td>
+                                <td>Střední</td>
+                            </tr>
+                            <tr>
+                                <td><strong>User Experience</strong></td>
+                                <td>3 různá UI</td>
+                                <td>1 responzivní UI</td>
+                                <td>UX design, frontend dev</td>
+                                <td>Střední</td>
+                                <td>Nízké</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Acceptance Criteria -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">8</div>
+                    <div class="section-title">Kritéria Akceptace (SMART)</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Funkční Požadavky</h3>
+                    
+                    <div class="criteria-box">
+                        <div class="criteria-id">F001</div>
+                        <h4>Unified Questionnaire System Consolidation</h4>
+                        <p><strong>Measurable:</strong> 100% of current questionnaire functionality replicated</p>
+                        <p><strong>Timely:</strong> Delivered by 06/25</p>
+                        <p><strong>Test:</strong> Complete questionnaire workflow test for all three types</p>
+                    </div>
+                    
+                    <div class="criteria-box">
+                        <div class="criteria-id">F002</div>
+                        <h4>Duplicate Data Elimination</h4>
+                        <p><strong>Measurable:</strong> Duplicate fields reduced by 100% where logically possible</p>
+                        <p><strong>Timely:</strong> Delivered by 06/25</p>
+                        <p><strong>Test:</strong> User workflow test showing no duplicate field entry</p>
+                    </div>
+                    
+                    <div class="criteria-box">
+                        <div class="criteria-id">F003</div>
+                        <h4>Algorithm Functional Accuracy</h4>
+                        <p><strong>Measurable:</strong> Regression testing shows 0% deviation in evaluation outcomes</p>
+                        <p><strong>Timely:</strong> Validated before go-live</p>
+                        <p><strong>Test:</strong> Parallel testing with historical data showing identical results</p>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Business Požadavky</h3>
+                    
+                    <div class="criteria-box">
+                        <div class="criteria-id">B001</div>
+                        <h4>CRM Decommissioning</h4>
+                        <p><strong>Measurable:</strong> CRM application servers powered down and data archived</p>
+                        <p><strong>Timely:</strong> Completed by 06/25</p>
+                        <p><strong>Test:</strong> Formal CRM decommissioning sign-off</p>
+                    </div>
+                    
+                    <div class="criteria-box">
+                        <div class="criteria-id">B003</div>
+                        <h4>Administrative Efficiency</h4>
+                        <p><strong>Measurable:</strong> Administrative time reduced by minimum 25%</p>
+                        <p><strong>Timely:</strong> Measured within 2 months post go-live</p>
+                        <p><strong>Test:</strong> Time-and-motion studies showing 25%+ reduction</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Governance and Approval -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">9</div>
+                    <div class="section-title">Governance a Schválení</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Finální Schválení (v1.0)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Autorita</th>
+                                <th>Typ Schválení</th>
+                                <th>Datum</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chief Information Officer</strong></td>
+                                <td>Executive Sponsor Approval</td>
+                                <td>2025-09-11</td>
+                                <td><span class="status-approved">✅ Schváleno</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>IT Steering Committee</strong></td>
+                                <td>Governance Approval</td>
+                                <td>2025-09-15</td>
+                                <td><span class="status-approved">✅ Schváleno</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Finance Committee</strong></td>
+                                <td>Budget Authorization (€2.5M)</td>
+                                <td>2025-09-11</td>
+                                <td><span class="status-approved">✅ Schváleno</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tomáš Jedno (Compliance)</strong></td>
+                                <td>Regulatory Compliance</td>
+                                <td>2025-09-11</td>
+                                <td><span class="status-approved">✅ Schváleno</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Compliance Verification</h3>
+                    <div class="risk-low">
+                        <ul>
+                            <li><strong>Regulatory Compliance Check:</strong> ✅ Passed - All AML, KYC, and investment regulations addressed</li>
+                            <li><strong>Security Compliance Check:</strong> ✅ Passed - Banking security standards met</li>
+                            <li><strong>Data Privacy Check:</strong> ✅ Passed - GDPR compliance confirmed</li>
+                            <li><strong>Audit Trail Verification:</strong> ✅ Passed - Complete audit trail capabilities documented</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Implementation Approach -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">10</div>
+                    <div class="section-title">Implementační Přístup</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Fázová Implementace</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div class="criteria-box">
+                            <h4>Fáze 1: Foundation (Měsíce 1-2)</h4>
+                            <ul>
+                                <li>Backend API development</li>
+                                <li>Database setup</li>
+                                <li>Integration layer foundation</li>
+                                <li>Security architecture</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="criteria-box">
+                            <h4>Fáze 2: Core Functionality (Měsíce 2-4)</h4>
+                            <ul>
+                                <li>Unified Frontend development</li>
+                                <li>Administrative Interface</li>
+                                <li>Algorithm integration</li>
+                                <li>Data migration execution</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="criteria-box">
+                            <h4>Fáze 3: Testing (Měsíce 4-5)</h4>
+                            <ul>
+                                <li>User acceptance testing</li>
+                                <li>Performance testing</li>
+                                <li>Security testing</li>
+                                <li>Stakeholder validation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="criteria-box">
+                            <h4>Fáze 4: Deployment (Měsíc 6)</h4>
+                            <ul>
+                                <li>Production deployment</li>
+                                <li>User training</li>
+                                <li>CRM decommissioning</li>
+                                <li>Go-live support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Rozpočet Breakdown</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kategorie</th>
+                                <th>Částka</th>
+                                <th>Podíl</th>
+                                <th>Popis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Development Resources</strong></td>
+                                <td>€1.8M</td>
+                                <td>72%</td>
+                                <td>8 FTE development tým na 6 měsíců</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Infrastructure</strong></td>
+                                <td>€0.3M</td>
+                                <td>12%</td>
+                                <td>Servery, databáze, cloud služby</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Testing and QA</strong></td>
+                                <td>€0.2M</td>
+                                <td>8%</td>
+                                <td>Testovací prostředí a QA procesy</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Training & Change Mgmt</strong></td>
+                                <td>€0.1M</td>
+                                <td>4%</td>
+                                <td>Školení uživatelů a change management</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contingency</strong></td>
+                                <td>€0.1M</td>
+                                <td>4%</td>
+                                <td>Rezerva pro nepředvídané výdaje</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Success Metrics -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-number">11</div>
+                    <div class="section-title">Monitoring a Success Metrics</div>
+                </div>
+                
+                <div class="subsection">
+                    <h3>Klíčové Metriky Úspěchu</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div class="metric-card">
+                            <div class="metric-value">30%</div>
+                            <div class="metric-label">Snížení času vyplnění</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">25%</div>
+                            <div class="metric-label">Snížení admin času</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">99.9%</div>
+                            <div class="metric-label">System availability</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">€500K</div>
+                            <div class="metric-label">Roční úspory</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div class="conclusion">
+                <h2>Závěr</h2>
+                <p>Projekt konsolidace dotazníkového systému banky představuje kritickou iniciativu pro modernizaci a zjednodušení dotazníkových procesů. S komplexní analýzou všech 11 fází projektové definice, včetně stakeholder engagement, problémové analýzy, rozsahu, současného a cílového stavu, dopadové analýzy a acceptance kritérií, projekt je připraven k úspěšné implementaci.</p>
+                
+                <p>Klíčové přednosti projektu zahrnují silnou podporu stakeholderů, jasně definované cíle a kritéria úspěchu, důkladnou risk mitigation strategii a realistický implementační plán s definovanými milníky. Očekávané benefity ve formě 30% zlepšení user experience, 25% zvýšení administrativní efektivity a 200% ROI poskytují silný business case pro investici €2.5M.</p>
+                
+                <p><strong>Projekt je plně schválen a autorizován k implementaci s termínem dokončení 06/25, kdy musí být současná CRM aplikace vyřazena z provozu.</strong></p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="status">✅ Status dokumentu: Schváleno k implementaci</div>
+            <div>Datum schválení: 2025-09-11 | Verze: v1.0 - Final Approved</div>
+            <div>Archivní lokace: /Users/agent/dev/BIAN-knowhow/outputs/BANKING-QUESTIONNAIRE-CONSOLIDATION-2025/</div>
+        </div>
+    </div>
+</body>
+</html>

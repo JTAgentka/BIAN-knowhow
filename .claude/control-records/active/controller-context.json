@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "agent_id": "jira-project-definition-controller",
+    "session_id": "session_20250911_135955",
+    "timestamp": "2025-09-11T11:59:55.3NZ",
+    "version": "1.0",
+    "project_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025",
+    "jira_epic_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025"
+  },
+  "current_state": {
+    "phase": "orchestration",
+    "status": "active",
+    "last_updated": "2025-09-11T11:59:55.3NZ",
+    "routing_decision": "full_lifecycle"
+  },
+  "jira_input": {
+    "epic_description": "Czech banking requirement for consolidating questionnaire administration applications",
+    "attachments": [],
+    "comments": ["Please provide complete project definition analysis using the full lifecycle workflow for this banking questionnaire consolidation system"]
+  },
+  "parsed_content": {
+    "input_data": "Comprehensive Czech banking requirement for replacing multiple questionnaire applications (AML, KYC, investment questionnaire) with a unified system. Includes business objectives, stakeholder perspectives, and scope definition.",
+    "user_instructions": "Execute complete project definition workflow (all phases 1-11) and generate Czech analytical documents",
+    "stakeholder_info": "Investment Center, Banking Center, Compliance (Tomáš Jedno)",
+    "requirements_summary": "Consolidate questionnaire administration, eliminate duplications, improve client experience, maintain existing evaluation algorithms"
+  },
+  "routing_logic": {
+    "decision_rationale": "User explicitly requested complete project definition analysis using full lifecycle workflow. Input contains comprehensive business requirements covering all aspects needed for complete project definition.",
+    "selected_agents": ["project-definition-facilitator", "project-definition-consolidator", "project-definition-finalizer"],
+    "workflow_sequence": ["phases_1-4", "phases_5-7", "phases_8-11"],
+    "expected_phases": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  },
+  "agent_handovers": [
+    {
+      "agent": "project-definition-facilitator",
+      "start_time": "2025-09-11T12:00:00.0NZ",
+      "end_time": "2025-09-11T12:25:00.0NZ",
+      "phases_completed": [1, 2, 3, 4],
+      "status": "completed",
+      "artifacts_delivered": ["stakeholder_engagement_matrix", "problem_statement", "scope_definition", "as_is_analysis"]
+    },
+    {
+      "agent": "project-definition-consolidator",
+      "start_time": "2025-09-11T12:25:00.0NZ",
+      "end_time": "2025-09-11T12:45:00.0NZ",
+      "phases_completed": [5, 6, 7],
+      "status": "completed",
+      "artifacts_delivered": ["to_be_design", "gap_analysis", "data_systems_impact", "acceptance_criteria"]
+    },
+    {
+      "agent": "project-definition-finalizer",
+      "start_time": "2025-09-11T12:45:00.0NZ",
+      "end_time": "2025-09-11T13:10:00.0NZ",
+      "phases_completed": [8, 9, 10, 11],
+      "status": "completed",
+      "artifacts_delivered": ["document_consolidation", "internal_review", "external_validation", "final_approval"]
+    }
+  ],
+  "consolidated_outputs": {
+    "deliverables": [
+      "Czech project definition document (MD)",
+      "Czech project definition document (HTML)",
+      "Complete project definition with all 11 phases",
+      "Stakeholder approvals and governance sign-offs",
+      "Implementation plan and budget authorization"
+    ],
+    "quality_validation": {
+      "all_phases_completed": true,
+      "stakeholder_approvals": true,
+      "compliance_verification": true,
+      "governance_approval": true,
+      "document_quality": "excellent",
+      "traceability_maintained": true
+    },
+    "stakeholder_summary": "All stakeholders (Investment Center, Banking Center, Compliance) have formally approved the project. Executive sponsorship from CIO secured. IT Steering Committee and Finance Committee approvals obtained. Project authorized for implementation with €2.5M budget and 06/25 deadline."
+  }
+}

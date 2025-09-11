@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "agent_id": "project-definition-facilitator",
+    "session_id": "QUESTIONNAIRE-ADMIN-2024-SESSION",
+    "timestamp": "2025-09-11T00:00:00Z",
+    "version": "1.0",
+    "project_id": "QUESTIONNAIRE-ADMIN-2024"
+  },
+  "current_state": {
+    "phase": 4,
+    "status": "completed",
+    "last_updated": "2025-09-11T01:00:00Z",
+    "completed_phases": [1, 2, 3, 4]
+  },
+  "inputs": {
+    "jira_context": {
+      "epic_description": "Aplikace poskytne admin FE prostředí pro správu dotazníků business uživatelem/vlastníkem",
+      "detailed_requirements": [
+        "Vytvoření nové šablony dotazníku",
+        "Struktura ze známých elementů / sekce / otázky odpovědi / řídící otázky / řazení",
+        "Bez dopadů do algoritmu vyhodnocení",
+        "Typologie dotazníku (typ, jazyk, verze, metadata)",
+        "Aktivace / Deaktivace šablony dotazníku",
+        "Preview funkce",
+        "Kopírování šablon",
+        "Export šablon dotazníku",
+        "Editace dotazníku",
+        "Vždy nová verze šablony publikovaná / nepublikovaná",
+        "Možnost zneplatnit původní verze",
+        "Uživatelský changelog na šabloně",
+        "Porovnání verzí více šablon",
+        "Smazání verzí - pouze skrze možnost Deaktivace",
+        "Přístup přes role a přístupová práva s AD integrací",
+        "Funkční moduly a obrazovky pro obsluhu klientů, správu dotazníků, audit"
+      ]
+    },
+    "user_instructions": "Complete project definition analysis using full lifecycle workflow",
+    "business_requirements": "Admin frontend environment for questionnaire template management with comprehensive CRUD operations, versioning, preview, export, role-based access, and audit capabilities",
+    "initial_stakeholder_info": "Business users/owners, admin users, clients"
+  },
+  "phase_outputs": {
+    "phase_1_stakeholder_mapping": {
+      "stakeholder_engagement_matrix": [
+        {
+          "stakeholder": "Business Users/Owners",
+          "role": "Primary End Users",
+          "objectives": "Efficient questionnaire template management, easy editing, version control",
+          "attitude": "Supportive - seeking solution to current pain points",
+          "influence": "High",
+          "interest": "High",
+          "engagement_strategy": "Active collaboration, regular feedback sessions, UAT participation"
+        },
+        {
+          "stakeholder": "Admin Users",
+          "role": "System Administration",
+          "objectives": "Secure role-based access, AD integration, user management",
+          "attitude": "Supportive - need robust admin tools",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "Requirements validation, security review, training planning"
+        },
+        {
+          "stakeholder": "End Clients",
+          "role": "Questionnaire Recipients",
+          "objectives": "Simple, intuitive questionnaire experience",
+          "attitude": "Neutral - indirect impact",
+          "influence": "Low",
+          "interest": "Medium",
+          "engagement_strategy": "User experience feedback via business users"
+        },
+        {
+          "stakeholder": "IT Development Team",
+          "role": "Technical Implementation",
+          "objectives": "Scalable architecture, maintainable code, integration capabilities",
+          "attitude": "Supportive - technical challenge",
+          "influence": "High",
+          "interest": "High",
+          "engagement_strategy": "Technical workshops, architecture review, implementation planning"
+        },
+        {
+          "stakeholder": "Security/Compliance Team",
+          "role": "Access Control Oversight",
+          "objectives": "AD integration compliance, role-based security, audit trail",
+          "attitude": "Cautious - security requirements",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "Security requirements review, compliance validation"
+        },
+        {
+          "stakeholder": "Internal Systems Teams",
+          "role": "Integration Partners",
+          "objectives": "Seamless iframe integration, API compatibility",
+          "attitude": "Neutral to Supportive",
+          "influence": "Medium",
+          "interest": "Medium",
+          "engagement_strategy": "Integration requirements gathering, technical coordination"
+        },
+        {
+          "stakeholder": "Audit Team",
+          "role": "Compliance Monitoring",
+          "objectives": "Complete audit trail, version tracking, change logging",
+          "attitude": "Supportive - enhanced audit capabilities",
+          "influence": "Low",
+          "interest": "Medium",
+          "engagement_strategy": "Audit requirements definition, reporting needs assessment"
+        },
+        {
+          "stakeholder": "Quality Assurance Team",
+          "role": "Testing & Validation",
+          "objectives": "Comprehensive test coverage, bug-free delivery",
+          "attitude": "Supportive - quality focus",
+          "influence": "Medium",
+          "interest": "Medium",
+          "engagement_strategy": "Test planning, acceptance criteria definition"
+        },
+        {
+          "stakeholder": "Business Analysts",
+          "role": "Requirements Bridge",
+          "objectives": "Clear requirements, stakeholder alignment",
+          "attitude": "Supportive - process improvement",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "Requirements elicitation, documentation, validation workshops"
+        }
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T00:15:00Z"
+    },
+    "phase_2_problem_statement": {
+      "business_pain": "Manual questionnaire management processes, version control issues, limited collaboration tools, inconsistent access control, insufficient audit capabilities, integration gaps, and operational inefficiencies in template lifecycle management",
+      "change_motivation": "Digital transformation initiative to move from manual to automated questionnaire management, improve operational efficiency, meet compliance requirements, enhance user experience, and enable seamless system integration",
+      "high_level_objectives": [
+        "Streamline Template Management - Provide comprehensive CRUD operations for questionnaire templates",
+        "Implement Version Control - Enable proper versioning with publish/unpublish capabilities", 
+        "Enhance User Experience - Create intuitive admin frontend for business users",
+        "Ensure Security & Compliance - Implement role-based access with AD integration",
+        "Enable System Integration - Support iframe integration with internal systems",
+        "Provide Audit Capabilities - Comprehensive logging and change tracking"
+      ],
+      "success_criteria": [
+        "Operational: 80% reduction in template creation time, 90% reduction in manual errors, 100% audit trail coverage",
+        "User Satisfaction: 95% user satisfaction score, 100% of users trained within 1 hour",
+        "Technical: 99.5% availability, <2s response times, successful integration with all internal systems",
+        "Compliance: 100% AD integration compliance, complete role-based access implementation, full audit trail"
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T00:30:00Z"
+    },
+    "phase_3_scope_definition": {
+      "scope_in": [
+        "Admin Frontend Environment - Web-based administration interface for business users",
+        "Template Management System - Complete CRUD operations for questionnaire templates",
+        "Template Structure Management - Support for sections, questions, answers, control questions, and ordering",
+        "Template Metadata Management - Type, language, version, and metadata handling",
+        "Version Control System - Template versioning with published/unpublished states",
+        "Template Operations - Preview, copy, export, edit functionality",
+        "Version Management - Ability to invalidate previous versions, maintain compatibility",
+        "Change Tracking - User changelog on templates, version comparison capabilities",
+        "Access Control - Role-based access with Active Directory integration",
+        "Functional Modules - Client handling, questionnaire management, audit screens",
+        "System Integration - iframe integration capability for internal systems",
+        "Audit Trail - Comprehensive logging and tracking of all system activities"
+      ],
+      "scope_out": [
+        "Algorithm Development - No impact on existing evaluation algorithms",
+        "End-user Questionnaire Interface - Only admin interface, not client-facing questionnaire UI",
+        "Questionnaire Response Collection - No handling of actual questionnaire responses",
+        "Data Analytics/Reporting - No advanced analytics on questionnaire data",
+        "Mobile Applications - Web-only solution, no native mobile apps",
+        "Third-party Integrations - Beyond specified internal systems via iframe",
+        "Advanced Workflow Engine - No complex approval workflows for template changes",
+        "Multi-language Content Management - Template metadata supports language, but no content translation",
+        "Real-time Collaboration - No simultaneous editing capabilities",
+        "Advanced Template Designer - Basic template structure, not drag-and-drop designer"
+      ],
+      "assumptions": [
+        "Active Directory infrastructure is available and accessible for integration",
+        "Target deployment infrastructure is available and specified",
+        "Modern web browsers are used by end users",
+        "APIs/interfaces for iframe integration are documented and available",
+        "Appropriate database infrastructure is available for deployment",
+        "Business users are available for requirements validation and training",
+        "Existing questionnaire templates can be identified and structured for migration",
+        "Questionnaire business rules and validation logic are documented",
+        "Change approval process for templates is defined",
+        "Ongoing maintenance and support resources will be allocated"
+      ],
+      "constraints": [
+        "Technical: Must integrate with existing AD, support iframe embedding, meet browser compatibility, achieve <2s response times, comply with security policies",
+        "Business: Project must deliver within budget and timeline constraints, limited user availability, established change control process, regulatory compliance requirements",
+        "Operational: Limited deployment windows, minimal acceptable downtime, no data loss during implementation, maintain user productivity during transition"
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T00:45:00Z"
+    },
+    "phase_4_as_is_analysis": {
+      "current_processes": [
+        "Manual Template Creation - Business users create templates using Word/Excel with no standardized structure",
+        "File-based Version Management - Manual versioning with inconsistent naming conventions",
+        "Email-based Template Distribution - Manual copying and distribution to multiple systems",
+        "Ad-hoc Change Management - No formal change requests or impact analysis process",
+        "Basic Access Control - File system permissions with limited audit trail"
+      ],
+      "system_landscape": [
+        "File Storage System - Network drives or SharePoint for template storage",
+        "Email System - Primary communication and distribution method",
+        "Office Applications - Word/Excel for template creation and editing", 
+        "Active Directory - User authentication system (available for integration)",
+        "Internal Business Systems - Various systems requiring questionnaire integration",
+        "Basic Database Systems - Limited questionnaire data storage capabilities"
+      ],
+      "role_definitions": [
+        "Business Users/Template Owners - Create, maintain, review, and distribute questionnaire templates",
+        "IT Support Staff - Manage file storage, access permissions, and provide technical support",
+        "End Users/Clients - Receive, complete, and return questionnaires manually",
+        "Audit/Compliance Staff - Manually track versions, review processes, ensure compliance"
+      ],
+      "problem_areas": [
+        "Version Control Chaos - Multiple versions in circulation, unclear authoritative version",
+        "Manual Process Inefficiencies - Time-consuming creation, manual distribution, high error risk",
+        "Limited Collaboration - No structured collaboration, inefficient email-based reviews",
+        "Security and Access Issues - Inconsistent access control, limited audit trail",
+        "Integration Challenges - Manual data entry, inconsistent formats, limited synchronization",
+        "Scalability Limitations - Process doesn't scale with growth, resource-intensive management"
+      ],
+      "risk_assessment": [
+        "High Priority: Compliance Risk - Inadequate audit trail and version control",
+        "High Priority: Operational Risk - Manual processes prone to errors and delays", 
+        "High Priority: Security Risk - Uncontrolled access and limited authentication",
+        "High Priority: Business Continuity Risk - Dependency on manual processes",
+        "Medium Priority: Integration Risk - Difficulty connecting with business systems",
+        "Medium Priority: Scalability Risk - Current processes won't support growth",
+        "Medium Priority: User Satisfaction Risk - Inefficient tools causing frustration"
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T01:00:00Z"
+    }
+  },
+  "handover_to_consolidator": {
+    "ready_for_handover": true,
+    "consolidated_artifacts": {
+      "stakeholder_engagement_matrix": "9 key stakeholders identified with engagement strategies",
+      "problem_statement": "Clear business pain and motivation documented with success criteria",
+      "scope_definition": "Comprehensive scope in/out analysis with assumptions and constraints",
+      "as_is_analysis": "Current state processes, systems, and risks identified"
+    },
+    "validation_summary": "All Phase 1-4 artifacts completed and validated. Ready for consolidator agent to proceed with Phases 5-8 (Solution Design, Implementation Planning, Resource Planning, Risk Management).",
+    "timestamp": "2025-09-11T01:00:00Z"
+  }
+}
