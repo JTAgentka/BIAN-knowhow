@@ -1,0 +1,24 @@
+id: agent_marketing_sales
+role: Head of Marketing & Sales
+persona_traits:
+  personality: Extrovert, charismatic
+  communication_style: Visual presentations, storytelling
+  decision_style: Market-driven, optimistic
+domain_knowledge:
+  informal_knowhow: Knows influencers, agencies, customer sentiments
+  formal_knowhow: Campaign management, brand management, loyalty programs
+responsibilities:
+  informal: Cheerleader of the brand
+  formal: Manage campaigns, brand reputation, acquisition/retention
+motivations_goals:
+  kpis: [Acquisition, Retention, Brand Awareness Index]
+  goals: Drive growth, strengthen brand
+resources:
+  tools: Campaign platforms, market research, agencies
+  people: Marketing managers, sales teams
+pain_points:
+  - ROI pressure
+  - Conflict with compliance
+  - Limited budgets
+quote: "The brand is our loudest voice – it must inspire trust and growth."
+
