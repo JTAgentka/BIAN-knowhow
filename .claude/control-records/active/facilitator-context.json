@@ -1,0 +1,294 @@
+{
+  "metadata": {
+    "agent_id": "project-definition-facilitator",
+    "session_id": "session_20250911_135955",
+    "timestamp": "2025-09-11T11:59:55.3NZ",
+    "version": "1.0",
+    "project_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025"
+  },
+  "current_state": {
+    "phase": 4,
+    "status": "completed",
+    "last_updated": "2025-09-11T12:20:00.0NZ",
+    "completed_phases": [1, 2, 3, 4]
+  },
+  "inputs": {
+    "jira_context": {
+      "project_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025",
+      "business_requirement": "Nahrazení aplikací pro správu dotazníků novou aplikací, která všechny konsoliduje",
+      "business_goal": "Zjednodušení administrace dotazníků, eliminace duplicit a zjednodušení vyplnění pro klienta",
+      "deadline": "06/25"
+    },
+    "user_instructions": "Execute complete project definition workflow (all phases 1-11) and generate Czech analytical documents",
+    "business_requirements": "Comprehensive Czech banking requirement for replacing multiple questionnaire applications (AML, KYC, investment questionnaire) with a unified system. Includes business objectives, stakeholder perspectives, and scope definition.",
+    "initial_stakeholder_info": "Investment Center, Banking Center, Compliance (Tomáš Jedno)"
+  },
+  "phase_outputs": {
+    "phase_1_stakeholder_mapping": {
+      "stakeholder_engagement_matrix": [
+        {
+          "stakeholder": "Investiční centrum",
+          "role": "Primary Business Stakeholder",
+          "objectives": "Nabízet větší šíři investičních produktů díky lepší kontrole nad otázkami a lepšímu flow",
+          "attitude": "Podporuje aktivně",
+          "influence": "Vysoký",
+          "interest": "Vysoký",
+          "engagement_strategy": "Pravidelné konzultace a validace investičního dotazníku"
+        },
+        {
+          "stakeholder": "Bankovní centrum",
+          "role": "Primary Business Stakeholder",
+          "objectives": "Zefektivnění administrativních činností, snížení nákladů a zlepšení doby odezvy pro klienty",
+          "attitude": "Podporuje aktivně",
+          "influence": "Vysoký",
+          "interest": "Vysoký", 
+          "engagement_strategy": "Koordinace změn v bankovních procesech a školení uživatelů"
+        },
+        {
+          "stakeholder": "Tomáš Jedno (Compliance)",
+          "role": "Regulatory and Compliance Stakeholder",
+          "objectives": "Zajistit spojení všech procesů s novým systémem a jejich efektivní fungování",
+          "attitude": "Podporuje s podmínkami",
+          "influence": "Vysoký",
+          "interest": "Vysoký",
+          "engagement_strategy": "Validace compliance požadavků a kontrola regulatorní shody"
+        },
+        {
+          "stakeholder": "IT/Technology Team",
+          "role": "Implementation Stakeholder",
+          "objectives": "Technická realizace konsolidovaného řešení",
+          "attitude": "Neutrální",
+          "influence": "Střední",
+          "interest": "Střední",
+          "engagement_strategy": "Technické specifikace a implementační plán"
+        },
+        {
+          "stakeholder": "Klienti banky",
+          "role": "End User Stakeholder", 
+          "objectives": "Jednodušší a rychlejší vyplnění dotazníků",
+          "attitude": "Pozitivní",
+          "influence": "Nízký",
+          "interest": "Vysoký",
+          "engagement_strategy": "User testing a feedback sběr"
+        }
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T12:05:00.0NZ"
+    },
+    "phase_2_problem_statement": {
+      "business_pain": "Složitá administrace dotazníků, komplikované verzování a roztříštěnost řešení přes různé systémy. Klienti musí vyplňovat duplicitní informace v různých aplikacích (AML, KYC, investiční dotazník), což vytváří frustraci a prodlužuje proces onboardingu.",
+      "change_motivation": "Existující CRM aplikace má být zrušena do 06/25, což vytváří kritickou potřebu nahrazení současného řešení. Zároveň je potřeba zjednodušit administraci pro pracovníky banky a zlepšit uživatelskou zkušenost pro klienty.",
+      "high_level_objectives": [
+        "Konsolidace všech dotazníků (AML, KYC, investiční) do jediné aplikace",
+        "Zjednodušení administrace dotazníků pro pracovníky banky",
+        "Eliminace duplicit v datech a procesech",
+        "Zlepšení uživatelské zkušenosti pro klienty při vyplňování dotazníků",
+        "Zachování stávajících algoritmů vyhodnocení",
+        "Zajištění compliance s regulatorními požadavky"
+      ],
+      "success_criteria": [
+        "Úspěšné nahrazení stávajících aplikací před termínem 06/25",
+        "Snížení času potřebného pro vyplnění dotazníků o minimálně 30%",
+        "Eliminace duplicitních dat napříč systémy",
+        "Zachování 100% funkcionality stávajících algoritmů vyhodnocení", 
+        "Pozitivní feedback od stakeholderů (investiční centrum, bankovní centrum, compliance)",
+        "Bezproblémová migrace stávajících dat"
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T12:10:00.0NZ"
+    },
+    "phase_3_scope_definition": {
+      "scope_in": [
+        "Nahrazení AML dotazníku novou aplikací",
+        "Nahrazení KYC dotazníku novou aplikací", 
+        "Nahrazení investičního dotazníku novou aplikací",
+        "Zajištění přístupu k administraci pro pracovníky banky",
+        "Nové administrativní rozhraní pro pracovníky banky",
+        "Nové prezentační rozhraní pro klienty",
+        "Backend systém pro konsolidovanou aplikaci",
+        "Frontend systém pro konsolidovanou aplikaci",
+        "Integrace s existujícími systémy (API, Kafka)",
+        "Migrace stávajících odpovědí do nového formátu",
+        "Podpora kanálů: Web, Desktop (klient-web, banka-web, banka-desktop)"
+      ],
+      "scope_out": [
+        "Změna algoritmů vyhodnocení dotazníků",
+        "Změna business logiky vyhodnocování", 
+        "Rozšíření na další typy dotazníků (mimo AML, KYC, investiční)",
+        "Mobilní aplikace",
+        "Změny v regulatorních požadavcích",
+        "Integrace s externími systémy třetích stran",
+        "Změny v architektuře stávajících CRM systémů"
+      ],
+      "assumptions": [
+        "Stávající CRM musí zůstat funkční do 06/25",
+        "Stávající algoritmy vyhodnocení zůstávají beze změny",
+        "Stakeholders jsou k dispozici pro validaci během vývoje",
+        "Technická infrastruktura je připravena pro novou aplikaci",
+        "Data ze stávajících systémů jsou dostupná pro migraci"
+      ],
+      "constraints": [
+        "Deadline dokončení: 06/25",
+        "Zachování 100% funkcionality stávajících algoritmů vyhodnocení",
+        "Nutnost zajistit kontinuitu služeb během migrace",
+        "Compliance s bankovními a regulatorními standardy",
+        "Omezené rozpočtové prostředky",
+        "Závislost na zrušení stávající CRM aplikace"
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T12:15:00.0NZ"
+    },
+    "phase_4_as_is_analysis": {
+      "current_processes": [
+        {
+          "process_name": "AML dotazník proces",
+          "description": "Klient vyplňuje AML dotazník v separátní aplikaci, pracovník banky validuje a vyhodnocuje odpovědi",
+          "steps": ["Klient přístup k AML aplikaci", "Vyplnění dotazníku", "Odeslání", "Validace pracovníkem", "Vyhodnocení algoritmem"],
+          "touchpoints": ["Klient-web", "Banka-desktop"],
+          "duration": "15-20 minut pro klienta, 5-10 minut validace"
+        },
+        {
+          "process_name": "KYC dotazník proces", 
+          "description": "Separátní KYC proces s vlastní aplikací a workflow",
+          "steps": ["Klient přístup k KYC aplikaci", "Vyplnění dotazníku", "Odeslání", "Compliance kontrola", "Schválení/Zamítnutí"],
+          "touchpoints": ["Klient-web", "Banka-web"],
+          "duration": "10-15 minut pro klienta, 10-15 minut kontrola"
+        },
+        {
+          "process_name": "Investiční dotazník proces",
+          "description": "Proces pro investiční poradenství s vlastní logikou a aplikací",
+          "steps": ["Klient přístup k investiční aplikaci", "Vyplnění dotazníku", "Simulace", "Vyhodnocení profilu", "Doporučení produktů"],
+          "touchpoints": ["Klient-web", "Banka-web", "Banka-desktop"],
+          "duration": "20-25 minut pro klienta, 15-20 minut analýza"
+        }
+      ],
+      "system_landscape": [
+        {
+          "system_name": "CRM aplikace",
+          "description": "Stávající CRM systém, který má být zrušen do 06/25",
+          "current_functions": ["Správa klientských dat", "Workflow management", "Reporting"],
+          "integration_points": ["AML systém", "KYC systém", "Investiční systém"],
+          "status": "K zrušení 06/25"
+        },
+        {
+          "system_name": "AML systém",
+          "description": "Specializovaný systém pro AML compliance",
+          "current_functions": ["AML dotazník", "AML vyhodnocení", "Reporting do regulátora"],
+          "integration_points": ["CRM", "Core banking"],
+          "status": "Aktivní, vyžaduje novou integraci"
+        },
+        {
+          "system_name": "KYC systém",
+          "description": "Systém pro Know Your Customer procesy", 
+          "current_functions": ["KYC dotazník", "Identifikace klienta", "Risk scoring"],
+          "integration_points": ["CRM", "Core banking"],
+          "status": "Aktivní, vyžaduje novou integraci"
+        },
+        {
+          "system_name": "Investiční systém",
+          "description": "Systém pro investiční poradenství",
+          "current_functions": ["Investiční dotazník", "Risk profiling", "Produktové doporučení"],
+          "integration_points": ["CRM", "Portfolio management"],
+          "status": "Aktivní, vyžaduje novou integraci"
+        }
+      ],
+      "role_definitions": [
+        {
+          "role": "Klient banky",
+          "responsibilities": ["Vyplňování dotazníků", "Poskytování požadovaných informací"],
+          "current_pain_points": ["Duplicitní vyplňování", "Různé aplikace", "Časová náročnost"],
+          "systems_used": ["AML aplikace", "KYC aplikace", "Investiční aplikace"]
+        },
+        {
+          "role": "Pracovník investičního centra",
+          "responsibilities": ["Validace investičních dotazníků", "Investiční poradenství", "Správa dotazníků"],
+          "current_pain_points": ["Složitá administrace", "Komplikované verzování", "Různé systémy"],
+          "systems_used": ["CRM", "Investiční systém", "Reporting nástroje"]
+        },
+        {
+          "role": "Pracovník bankovního centra", 
+          "responsibilities": ["Validace všech typů dotazníků", "Klientský servis", "Procesní podpora"],
+          "current_pain_points": ["Administrativní náročnost", "Chybějící integrace", "Pomalé odezvy"],
+          "systems_used": ["CRM", "AML systém", "KYC systém"]
+        },
+        {
+          "role": "Compliance officer",
+          "responsibilities": ["Kontrola compliance", "Regulatorní reporting", "Risk management"],
+          "current_pain_points": ["Roztříštěná data", "Manuální kontroly", "Reporting z více systémů"],
+          "systems_used": ["AML systém", "KYC systém", "Reporting nástroje"]
+        }
+      ],
+      "problem_areas": [
+        {
+          "area": "Duplicitní data a procesy",
+          "description": "Klienti musí opakovaně vyplňovat podobné informace v různých dotaznících",
+          "impact": "Vysoký - frustruje klienty a prodlužuje onboarding",
+          "affected_stakeholders": ["Klienti", "Pracovníci center"]
+        },
+        {
+          "area": "Roztříštěnost systémů",
+          "description": "Tři separátní aplikace pro různé typy dotazníků bez integrace",
+          "impact": "Střední - komplikuje administraci a reporting",
+          "affected_stakeholders": ["Všichni pracovníci", "IT tým"]
+        },
+        {
+          "area": "Složitá administrace",
+          "description": "Komplikované verzování a správa dotazníků napříč systémy",
+          "impact": "Střední - zvyšuje administrativní zátěž",
+          "affected_stakeholders": ["Investiční centrum", "Bankovní centrum"]
+        },
+        {
+          "area": "Závislost na CRM",
+          "description": "Kritická závislost na CRM aplikaci, která má být zrušena",
+          "impact": "Kritický - hrozí výpadek služeb",
+          "affected_stakeholders": ["Všichni stakeholders"]
+        }
+      ],
+      "risk_assessment": [
+        {
+          "risk": "Nedodržení deadline 06/25",
+          "probability": "Střední",
+          "impact": "Kritický",
+          "mitigation": "Postupná implementace s pilotní fází, pravidelné milníky"
+        },
+        {
+          "risk": "Ztráta dat při migraci",
+          "probability": "Nízká",
+          "impact": "Vysoký", 
+          "mitigation": "Důkladné testování migračních skriptů, backup strategie"
+        },
+        {
+          "risk": "Odpor stakeholders ke změnám",
+          "probability": "Nízká",
+          "impact": "Střední",
+          "mitigation": "Aktivní zapojení stakeholders do designu, školení"
+        },
+        {
+          "risk": "Technické komplikace při integraci",
+          "probability": "Střední",
+          "impact": "Vysoký",
+          "mitigation": "Důkladné technické analýzy, proof of concept"
+        },
+        {
+          "risk": "Compliance nebo regulatorní problémy",
+          "probability": "Nízká",
+          "impact": "Kritický",
+          "mitigation": "Úzká spolupráce s compliance, externí audit"
+        }
+      ],
+      "validation_status": "completed",
+      "timestamp": "2025-09-11T12:20:00.0NZ"
+    }
+  },
+  "handover_to_consolidator": {
+    "ready_for_handover": true,
+    "consolidated_artifacts": {
+      "stakeholder_engagement_matrix": "Completed - 5 stakeholders identified and analyzed",
+      "problem_statement": "Completed - Business pain, motivation, objectives and success criteria defined",
+      "scope_definition": "Completed - Clear scope boundaries, assumptions and constraints established",
+      "as_is_analysis": "Completed - Current processes, systems, roles, problems and risks documented"
+    },
+    "validation_summary": "All phases 1-4 completed successfully with comprehensive documentation of current state, stakeholders, problem definition, and project scope. Ready for to-be design phase.",
+    "timestamp": "2025-09-11T12:25:00.0NZ"
+  }
+}

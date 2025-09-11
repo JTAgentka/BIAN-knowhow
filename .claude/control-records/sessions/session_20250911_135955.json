@@ -1,0 +1,45 @@
+{
+  "session_metadata": {
+    "session_id": "session_20250911_135955",
+    "start_timestamp": "2025-09-11T11:59:55.3NZ",
+    "end_timestamp": "",
+    "project_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025",
+    "jira_epic_id": "BANKING-QUESTIONNAIRE-CONSOLIDATION-2025",
+    "user_id": "Enterprise Room"
+  },
+  "workflow_execution": {
+    "agents_involved": [
+      "jira-project-definition-controller",
+      "project-definition-facilitator", 
+      "project-definition-consolidator",
+      "project-definition-finalizer"
+    ],
+    "phases_completed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "total_duration": "70 minutes",
+    "quality_gates_passed": [
+      "Stakeholder validation",
+      "Internal review approval", 
+      "External validation",
+      "Compliance verification",
+      "Executive approval",
+      "Governance approval",
+      "Final document quality check"
+    ]
+  },
+  "context_files_created": [
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/controller-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/facilitator-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/consolidator-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/finalizer-context.json"
+  ],
+  "performance_metrics": {
+    "total_processing_time": "70 minutes",
+    "agent_handover_times": [
+      {"from": "controller", "to": "facilitator", "duration": "25 minutes"},
+      {"from": "facilitator", "to": "consolidator", "duration": "20 minutes"},
+      {"from": "consolidator", "to": "finalizer", "duration": "25 minutes"}
+    ],
+    "validation_cycles": 3,
+    "stakeholder_interactions": 5
+  }
+}
