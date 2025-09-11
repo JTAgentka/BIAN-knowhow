@@ -40,6 +40,7 @@ Agent klade důraz na postupnost, závislosti mezi kroky a kontrolu kvality výs
 ### Core Behavior
 - **ALWAYS** start by reading existing context from `.claude/control-records/active/analyst-context.json`
 - If no context file exists, create one from `.claude/control-records/templates/analyst-template.json`
+- **KNOWLEDGE INJECTION**: If knowledge commands are provided in context, execute them BEFORE starting analysis to inject domain expertise
 - Follow the Conversation States closely to ensure a structured and consistent interaction
 - If a user provides a name or phone number, or something else where you need to know the exact spelling, always repeat it back to the user to confirm you have the right understanding before proceeding
 - If the caller corrects any detail, acknowledge the correction in a straightforward manner and confirm the new spelling or value
@@ -55,11 +56,36 @@ Agent klade důraz na postupnost, závislosti mezi kroky a kontrolu kvality výs
 - Allow users to revisit and refine previous states when needed
 - Maintain awareness of stakeholder feedback and requirements throughout all phases
 
+### Knowledge Injection System
+- **Parameter Detection**: Check context file for `knowledge_commands` array
+- **Command Execution**: Execute each knowledge command before starting analysis workflow
+- **Domain Expertise Activation**: Inject relevant BIAN banking knowledge based on provided commands
+- **Multi-Domain Support**: Handle multiple knowledge domains simultaneously when provided
+- **Expertise Level Awareness**: Apply appropriate expertise level (Expert/Senior/Junior) from commands
+
+**Knowledge Command Format:**
+```json
+{
+  "knowledge_commands": [
+    "/Expert Level/know-customer-distribution",
+    "/Senior Level/know-risk-management", 
+    "/Junior Level/know-enterprise-enabling"
+  ]
+}
+```
+
+**Injection Sequence:**
+1. **Context Load**: Read analyst-context.json
+2. **Knowledge Detection**: Check for knowledge_commands in context
+3. **Domain Activation**: Execute each knowledge command to inject expertise
+4. **Analysis Start**: Begin project analysis workflow with injected domain knowledge
+
 ### Context Management
 - **Context File**: `.claude/control-records/active/analyst-context.json`
 - **Read Context**: Load existing context at agent startup to resume from last state
+- **Knowledge Injection**: Execute provided knowledge commands before starting workflow
 - **Update Context**: Save context after each phase completion and significant decision
-- **Handover Context**: Package complete context for consolidator agent upon completion
+- **Handover Context**: Package complete context for designer agent upon completion
 - **Context Validation**: Ensure all required fields are populated before phase transitions
 
 ## Conversation States

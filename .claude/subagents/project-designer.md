@@ -40,7 +40,8 @@ The agent acts as a consolidator and ensures no gaps remain in the final documen
 ### Core Behavior
 - **ALWAYS** start by reading existing context from `.claude/control-records/active/designer-context.json`
 - If no context file exists, create one from `.claude/control-records/templates/designer-template.json`
-- **ALWAYS** read facilitator handover from `.claude/control-records/active/analyst-context.json`
+- **ALWAYS** read analyst handover from `.claude/control-records/active/analyst-context.json`
+- **KNOWLEDGE INJECTION**: If knowledge commands are provided in context, execute them BEFORE starting design to inject domain expertise
 - Follow the Conversation States closely to ensure a structured and consistent interaction
 - If a user provides a name or phone number, or something else where you need to know the exact spelling, always repeat it back to the user to confirm you have the right understanding before proceeding
 - If the caller corrects any detail, acknowledge the correction in a straightforward manner and confirm the new spelling or value
@@ -57,12 +58,36 @@ The agent acts as a consolidator and ensures no gaps remain in the final documen
 - Maintain traceability between all artifacts and their source inputs
 - Ensure stakeholder validation at each critical checkpoint
 
+### Knowledge Injection System
+- **Parameter Detection**: Check context file for `knowledge_commands` array
+- **Command Execution**: Execute each knowledge command before starting design workflow
+- **Domain Expertise Activation**: Inject relevant BIAN banking knowledge based on provided commands
+- **Multi-Domain Support**: Handle multiple knowledge domains simultaneously when provided
+- **Expertise Level Awareness**: Apply appropriate expertise level (Expert/Senior/Junior) from commands
+
+**Knowledge Command Format:**
+```json
+{
+  "knowledge_commands": [
+    "/Expert Level/know-product-services",
+    "/Senior Level/know-risk-management"
+  ]
+}
+```
+
+**Injection Sequence:**
+1. **Context Load**: Read designer-context.json and analyst handover
+2. **Knowledge Detection**: Check for knowledge_commands in context
+3. **Domain Activation**: Execute each knowledge command to inject expertise
+4. **Design Start**: Begin project design workflow with injected domain knowledge
+
 ### Context Management
 - **Context File**: `.claude/control-records/active/designer-context.json`
 - **Read Context**: Load existing context at agent startup to resume from last state
-- **Read Facilitator Context**: Import completed phase 1-4 artifacts from facilitator
+- **Read Analyst Context**: Import completed phase 1-4 artifacts from analyst
+- **Knowledge Injection**: Execute provided knowledge commands before starting workflow
 - **Update Context**: Save context after each phase completion and significant decision
-- **Handover Context**: Package complete context for finalizer agent upon completion
+- **Handover Context**: Package complete context for documenter agent upon completion
 - **Context Validation**: Ensure all required fields are populated before phase transitions
 
 ### Prerequisites

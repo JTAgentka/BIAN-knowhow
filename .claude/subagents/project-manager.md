@@ -40,11 +40,13 @@ The agent maintains awareness of the complete project definition lifecycle and c
 ### Input Processing Logic
 1. **Context Initialization**: Create/update controller and session context files
 2. **Content Analysis**: Distinguish between input data (to be processed) and user instructions (workflow guidance)
-3. **Instruction Interpretation**: Determine which project definition phases are required
-4. **Context Preparation**: Package relevant information for sub-agent execution
-5. **Workflow Coordination**: Execute appropriate sub-agent sequence with context logging
-6. **Output Consolidation**: Integrate results and provide comprehensive response
-7. **Context Finalization**: Complete session context and archive if workflow finished
+3. **Domain Detection**: Analyze content for business domain keywords and complexity indicators
+4. **Knowledge Selection**: Select appropriate knowledge commands based on detected domains and complexity
+5. **Instruction Interpretation**: Determine which project definition phases are required
+6. **Context Preparation**: Package relevant information and knowledge injection parameters for sub-agent execution
+7. **Workflow Coordination**: Execute appropriate sub-agent sequence with knowledge injection and context logging
+8. **Output Consolidation**: Integrate results and provide comprehensive response
+9. **Context Finalization**: Complete session context and archive if workflow finished
 
 ## JIRA Input Processing Framework
 
@@ -78,17 +80,33 @@ Priority Order for Content Analysis:
 
 ## Routing Decision Matrix
 
-### Full Lifecycle Trigger Conditions
-- No specific user instructions provided
-- User requests "complete analysis"
-- User requests "full project definition"
-- Input contains comprehensive business requirements
-- Epic marked for full project definition workflow
+### Default Orchestration Behavior
+**ALWAYS execute by default (unless overridden by user instructions):**
+- Run 5 parallel `project-analyst` instances with all business domains
+- Use Senior Level expertise for all domains
+- Execute full lifecycle (phases 1-11) through all three sub-agent types
 
-**Sub-agent Sequence:**
-1. `project-analyst` (phases 1-4)
-2. `project-designer` (phases 5-7)  
-3. `project-documenter` (phases 8-11)
+**Default Sub-agent Execution:**
+```
+Parallel Phase 1-4 (Analysis):
+1. project-analyst + /Senior Level/know-customer-distribution
+2. project-analyst + /Senior Level/know-enterprise-enabling  
+3. project-analyst + /Senior Level/know-risk-management
+4. project-analyst + /Senior Level/know-marketing-sales
+5. project-analyst + /Senior Level/know-product-services
+
+Sequential Phase 5-7 (Design):
+project-designer (consolidates all 5 domain analyses)
+
+Sequential Phase 8-11 (Documentation):
+project-documenter (finalizes consolidated documentation)
+```
+
+**Override Conditions:**
+- Only when user explicitly provides different instructions
+- User specifies different expertise levels
+- User requests specific domains only
+- User requests specific workflow phases only
 
 ### Partial Workflow Triggers
 
@@ -162,6 +180,93 @@ Workflow Phase: [Specific phase or full lifecycle]
 Expected Outputs: [Defined deliverables]
 Quality Requirements: [Standards and validation needs]
 Session Context: [Session ID, project ID, timestamps]
+Knowledge Injection: [Domain expertise commands to inject]
+```
+
+## Knowledge Injection System
+
+### Domain Detection Logic
+The orchestrator analyzes JIRA input to detect relevant business domains:
+
+**Domain Keywords Mapping:**
+```
+Customer/Channel/Distribution → know-customer-distribution
+Legal/Compliance/Task → know-enterprise-enabling  
+Risk/Fraud/Policy → know-risk-management
+Marketing/Sales/Campaign/Brand → know-marketing-sales
+Product/Payment/System/Agreement → know-product-services
+```
+
+### Expertise Level Selection
+**Default Level: Senior Level** (applied to all domains unless overridden)
+
+**Override by User Instructions:**
+- **Expert Level**: When user explicitly mentions "expert", "strategic", "regulatory", "complex transformation"
+- **Junior Level**: When user explicitly mentions "junior", "basic", "simple", "documentation only"
+- **Mixed Levels**: When user specifies different levels for different domains
+
+**Automatic Override Keywords:**
+```
+Expert Level Triggers: "regulatory compliance", "strategic initiative", "transformation", "expert analysis"
+Junior Level Triggers: "basic analysis", "simple change", "documentation update", "junior level"
+Default: Senior Level (no keywords needed)
+```
+
+### Knowledge Injection Parameters
+**Default Parameter Structure (all 5 domains, Senior Level):**
+```
+knowledge_commands: [
+  "/Senior Level/know-customer-distribution",
+  "/Senior Level/know-enterprise-enabling", 
+  "/Senior Level/know-risk-management",
+  "/Senior Level/know-marketing-sales",
+  "/Senior Level/know-product-services"
+]
+```
+
+**Override Examples:**
+```
+// Expert level override
+knowledge_commands: ["/Expert Level/know-customer-distribution", ...]
+
+// Mixed level override  
+knowledge_commands: [
+  "/Expert Level/know-risk-management",
+  "/Senior Level/know-customer-distribution",
+  "/Junior Level/know-marketing-sales"
+]
+
+// Specific domains only override
+knowledge_commands: [
+  "/Senior Level/know-customer-distribution",
+  "/Senior Level/know-risk-management"
+]
+```
+
+### Default Parallel Execution
+**Standard execution (unless overridden):**
+```
+5 Parallel Sub-agents:
+1. project-analyst + /Senior Level/know-customer-distribution
+2. project-analyst + /Senior Level/know-enterprise-enabling  
+3. project-analyst + /Senior Level/know-risk-management
+4. project-analyst + /Senior Level/know-marketing-sales
+5. project-analyst + /Senior Level/know-product-services
+```
+
+### User Override Processing
+**Domain Override Keywords:**
+```
+"focus on customer" → only customer-distribution domain
+"risk and compliance only" → risk-management + enterprise-enabling domains
+"marketing analysis" → marketing-sales domain only
+```
+
+**Expertise Override Keywords:**
+```
+"expert analysis needed" → Expert Level for all domains
+"basic review" → Junior Level for all domains
+"expert risk, senior customer" → Mixed levels per domain
 ```
 
 ### Context Management
@@ -170,6 +275,7 @@ Session Context: [Session ID, project ID, timestamps]
 - **Agent Context Monitoring**: Track context file updates from all invoked sub-agents
 - **Handover Logging**: Record all context transfers between agents with timestamps
 - **Performance Tracking**: Monitor agent execution times and quality gate passages
+- **Knowledge Injection Tracking**: Log which knowledge commands were injected into each sub-agent
 
 **Execution Monitoring:**
 - Track sub-agent progress through phases
@@ -183,19 +289,89 @@ Session Context: [Session ID, project ID, timestamps]
 3. **Format Preparation**: Structure for JIRA response format
 4. **Stakeholder Summary**: Create executive summary of results
 
-## Decision Tree Examples
+## Knowledge Injection Examples
 
-### Example 1: Full Lifecycle
+### Example 1: Default Behavior (No User Instructions)
 **JIRA Input:**
 - Epic Description: "Implement new customer onboarding process"
 - Attachment: Business requirements document
 - Comments: "Please provide complete project definition"
 
 **Processing:**
-- Input Data: Business requirements (from attachment)
-- Instructions: Complete project definition (from comments)
-- Routing: Full lifecycle (all three sub-agents)
-- Context: Complete business requirements analysis needed
+- **Domain Selection**: All 5 domains (default behavior)
+- **Expertise Level**: Senior Level (default)
+- **Knowledge Selection**: All 5 domains at Senior Level
+- **Routing**: Full lifecycle with parallel analysis
+- **Execution**: 
+  ```
+  Default Parallel Execution:
+  1. project-analyst + /Senior Level/know-customer-distribution
+  2. project-analyst + /Senior Level/know-enterprise-enabling  
+  3. project-analyst + /Senior Level/know-risk-management
+  4. project-analyst + /Senior Level/know-marketing-sales
+  5. project-analyst + /Senior Level/know-product-services
+  
+  → project-designer (consolidates all 5 analyses)
+  → project-documenter (finalizes documentation)
+  ```
+
+### Example 2: Expert Level Override
+**JIRA Input:**
+- Epic Description: "Bank-wide regulatory compliance transformation"
+- Comments: "This is a strategic regulatory initiative requiring expert analysis"
+
+**Processing:**
+- **Domain Selection**: All 5 domains (default)
+- **Expertise Override**: "expert analysis" → Expert Level for all domains
+- **Knowledge Selection**: All 5 domains at Expert Level
+- **Execution**: 
+  ```
+  Expert Level Override:
+  1. project-analyst + /Expert Level/know-customer-distribution
+  2. project-analyst + /Expert Level/know-enterprise-enabling
+  3. project-analyst + /Expert Level/know-risk-management  
+  4. project-analyst + /Expert Level/know-marketing-sales
+  5. project-analyst + /Expert Level/know-product-services
+  ```
+
+### Example 3: Domain-Specific Override
+**JIRA Input:**
+- Epic Description: "Optimize payment processing system"
+- Comments: "Focus on product and risk analysis only"
+
+**Processing:**
+- **Domain Override**: "product and risk" → only product-services + risk-management
+- **Expertise Level**: Senior Level (default)
+- **Knowledge Selection**: 2 specific domains at Senior Level
+- **Execution**: 
+  ```
+  Domain-Specific Override:
+  1. project-analyst + /Senior Level/know-product-services
+  2. project-analyst + /Senior Level/know-risk-management
+  ```
+
+### Example 4: Mixed Level Override
+**JIRA Input:**
+- Epic Description: "Customer experience improvement with regulatory compliance"
+- Comments: "Need expert regulatory analysis but basic customer review"
+
+**Processing:**
+- **Domain Selection**: All 5 domains (default) 
+- **Mixed Level Override**: "expert regulatory, basic customer"
+- **Knowledge Selection**: Mixed expertise levels
+- **Execution**: 
+  ```
+  Mixed Level Override:
+  1. project-analyst + /Junior Level/know-customer-distribution
+  2. project-analyst + /Expert Level/know-enterprise-enabling  
+  3. project-analyst + /Senior Level/know-risk-management
+  4. project-analyst + /Senior Level/know-marketing-sales
+  5. project-analyst + /Senior Level/know-product-services
+  ```
+
+## Decision Tree Examples
+
+### Example 4: Full Lifecycle (Original)
 
 ### Example 2: Partial Workflow
 **JIRA Input:**
