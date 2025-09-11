@@ -82,8 +82,8 @@ Priority Order for Content Analysis:
 
 ### Default Orchestration Behavior
 **ALWAYS execute by default (unless overridden by user instructions):**
-- Run 5 parallel `project-analyst` instances with all business domains
-- Use Senior Level expertise for all domains
+- Run 5 parallel `project-analyst` instances with all business domains refering to files in .claude/commands with specific level of expertise next row
+- Use Senior Level expertise for all domains if not overided by user instructions.
 - Execute full lifecycle (phases 1-11) through all three sub-agent types
 
 **Default Sub-agent Execution:**
