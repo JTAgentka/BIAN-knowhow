@@ -1,17 +1,17 @@
 {
   "metadata": {
     "agent_id": "jira-project-definition-controller",
-    "session_id": "session_20250912_113926",
-    "timestamp": "2025-09-12T11:39:26Z",
-    "version": "1.0",
+    "session_id": "session_20250912_121644",
+    "timestamp": "2025-09-12T12:16:44Z",
+    "version": "2.0",
     "project_id": "BRQ202-SURVEY-MANAGEMENT",
     "jira_epic_id": "BRQ202"
   },
   "current_state": {
-    "phase": "orchestration",
-    "status": "in_progress",
-    "last_updated": "2025-09-12T11:39:26Z",
-    "routing_decision": "junior_level_full_lifecycle"
+    "phase": "completed",
+    "status": "success",
+    "last_updated": "2025-09-12T12:16:44Z",
+    "routing_decision": "senior_level_full_lifecycle_rerun"
   },
   "jira_input": {
     "epic_description": "BRQ202 - Správa dotazníků uživatelem/vlastníkem - Survey management application providing admin FE environment for business users/owners with capabilities for creating templates, survey typology, template management, survey editing with versioning, role-based access with AD integration, and functional modules.",

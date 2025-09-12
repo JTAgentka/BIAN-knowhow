@@ -1,22 +1,425 @@
 {
   "project_id": "BRQ202",
-  "project_name": "Survey Management System",
+  "project_name": "Survey Management System - Správa dotazníků uživatelem/vlastníkem",
   "domain_focus": "Customer Distribution",
-  "analyst_level": "Junior Level",
+  "analyst_level": "Senior Level",
   "analyst_persona": {
-    "id": "agent_customer_distribution",
-    "role": "Head of Customer & Distribution",
-    "experience_years": "2-5",
-    "bian_service_domains": ["Channel Management", "Customer Management", "Contact Center Operations"],
-    "communication_style": "curious_collaborative",
-    "expertise_depth": "basic_understanding",
-    "pain_points": ["Legacy IVR and digital channels", "High physical branch costs"]
+    "id": "agent_customer_distribution", 
+    "role": "Director of Customer & Distribution",
+    "experience_years": "8-12",
+    "bian_service_domains": ["Channel Management", "Customer Management", "Interaction Management", "Partner Management"],
+    "communication_style": "professional_balanced",
+    "expertise_depth": "solid_practical_experience",
+    "pain_points": ["Legacy IVR and digital channels", "High physical branch costs"],
+    "kpis": ["NPS", "CSAT", "Cost-to-serve", "Channel availability"],
+    "goals": ["Increase satisfaction", "Balance cost and service quality"]
   },
   "knowledge_commands": [
-    "/Junior Level/know-customer-distribution"
+    "/Senior Level/know-customer-distribution"
   ],
   "workflow_state": "1_kickoff_stakeholders",
   "created_timestamp": "2025-09-12T00:00:00Z",
   "last_updated": "2025-09-12T00:00:00Z",
-  "artifacts": {}
+  "project_requirements": {
+    "czech_title": "BRQ202 - Správa dotazníků uživatelem/vlastníkem",
+    "english_title": "BRQ202 - Survey Management by User/Owner",
+    "core_functionality": {
+      "admin_fe_environment": "Application provides admin FE environment for survey management by business user/owner",
+      "template_creation": "Creation of new survey template",
+      "structure_elements": "Structure from known elements / sections / questions answers / control questions / sorting",
+      "no_algorithm_impact": "Without impacts to evaluation algorithm",
+      "survey_typology": "Survey typology (type, language, version, metadata)",
+      "activation_deactivation": "Activation / Deactivation of survey template",
+      "preview_function": "Preview function",
+      "template_copying": "Template copying",
+      "template_export": "Survey template export",
+      "survey_editing": "Survey editing",
+      "version_management": "Always new template version published / unpublished",
+      "version_invalidation": "Ability to invalidate original versions - unification of version compatibility (impact vs non-impact change) into evaluation algorithm",
+      "user_changelog": "User changelog on template",
+      "version_comparison": "Comparison of multiple template versions",
+      "version_deletion": "Version deletion - Only through Deactivation option",
+      "access_control": "Access through roles and access rights with AD integration",
+      "functional_modules": [
+        "Client service - can be further propagated to other internal systems via FE iframe",
+        "Survey management",
+        "Audit"
+      ]
+    }
+  },
+  "artifacts": {
+    "stakeholder_engagement_matrix": {
+      "created": "2025-09-12T00:00:00Z",
+      "status": "completed",
+      "internal_stakeholders": [
+        {
+          "name": "Customer Experience Manager",
+          "role": "Channel Operations", 
+          "objectives": "Improve CSAT/NPS through systematic feedback collection",
+          "attitude": "Supportive",
+          "influence": "High",
+          "interest": "High",
+          "engagement_strategy": "Active collaboration - key ally for channel integration",
+          "bian_domain_relevance": "Channel Management"
+        },
+        {
+          "name": "Branch Network Director",
+          "role": "Channel Management",
+          "objectives": "Streamline customer feedback processes across branches", 
+          "attitude": "Neutral-Supportive",
+          "influence": "High",
+          "interest": "Medium",
+          "engagement_strategy": "Strategic alignment meetings - show cost-to-serve benefits",
+          "bian_domain_relevance": "Channel Management"
+        },
+        {
+          "name": "Digital Channels Manager", 
+          "role": "eBranch Operations",
+          "objectives": "Integrate surveys into digital customer journey",
+          "attitude": "Supportive",
+          "influence": "Medium", 
+          "interest": "High",
+          "engagement_strategy": "Technical workshops - leverage iframe functionality",
+          "bian_domain_relevance": "Channel Management"
+        },
+        {
+          "name": "Call Center Operations Manager",
+          "role": "Advanced Voice Services",
+          "objectives": "Embed survey capabilities in IVR and agent workflows",
+          "attitude": "Neutral",
+          "influence": "Medium",
+          "interest": "Medium", 
+          "engagement_strategy": "Pilot program approach - demonstrate efficiency gains",
+          "bian_domain_relevance": "Channel Management"
+        },
+        {
+          "name": "Customer Relationship Managers",
+          "role": "Customer Management", 
+          "objectives": "Use survey insights for relationship development",
+          "attitude": "Neutral",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "Training sessions - show customer intelligence value",
+          "bian_domain_relevance": "Customer Management"
+        },
+        {
+          "name": "Compliance Officer",
+          "role": "Risk/Compliance",
+          "objectives": "Ensure survey data handling meets regulations",
+          "attitude": "Cautious", 
+          "influence": "High",
+          "interest": "Low",
+          "engagement_strategy": "Regular reviews - address privacy/security concerns",
+          "bian_domain_relevance": "Partner Management"
+        },
+        {
+          "name": "IT Architecture Team",
+          "role": "Technology",
+          "objectives": "Integrate with existing customer systems and AD",
+          "attitude": "Neutral",
+          "influence": "High",
+          "interest": "Medium",
+          "engagement_strategy": "Technical coordination - leverage AD integration benefits",
+          "bian_domain_relevance": "Interaction Management"
+        },
+        {
+          "name": "Business Users/Survey Owners", 
+          "role": "Operations",
+          "objectives": "Daily survey template management and analysis",
+          "attitude": "Supportive",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "User acceptance testing - ensure intuitive admin interface",
+          "bian_domain_relevance": "Customer Management"
+        }
+      ],
+      "external_stakeholders": [
+        {
+          "name": "Bank Customers",
+          "role": "Service Recipients",
+          "objectives": "Convenient, relevant survey experience", 
+          "attitude": "Neutral-Negative",
+          "influence": "Low",
+          "interest": "Low",
+          "engagement_strategy": "Channel-optimized deployment - minimize friction",
+          "bian_domain_relevance": "Customer Management"
+        },
+        {
+          "name": "Partner Organizations",
+          "role": "External Integration",
+          "objectives": "Seamless survey embedding via iframe",
+          "attitude": "Neutral",
+          "influence": "Medium", 
+          "interest": "Medium",
+          "engagement_strategy": "API documentation - enable easy integration",
+          "bian_domain_relevance": "Partner Management"
+        },
+        {
+          "name": "Audit Team",
+          "role": "Control Function",
+          "objectives": "Comprehensive audit trail for survey activities",
+          "attitude": "Supportive",
+          "influence": "Medium",
+          "interest": "High",
+          "engagement_strategy": "Detailed logging requirements - ensure compliance",
+          "bian_domain_relevance": "Interaction Management"
+        }
+      ],
+      "key_insights": [
+        "Channel Integration Critical: iframe functionality supports Partner Management capabilities",
+        "Customer Experience Focus: aligns with KPIs (NPS, CSAT) for measurable improvements", 
+        "Cost-to-Serve Optimization: automated survey management reduces manual intervention",
+        "Multi-Channel Deployment: must integrate with existing channel infrastructure"
+      ]
+    },
+    "problem_statement": {
+      "created": "2025-09-12T00:00:00Z", 
+      "status": "completed",
+      "business_pain_points": [
+        "Fragmented Feedback Collection: disparate, manual processes across different channels prevent holistic customer insights",
+        "Inconsistent Survey Experience: lack of standardized templates negatively impacts CSAT scores",
+        "Manual Survey Administration: no proper version control, audit trails, or centralized administration",
+        "Limited Channel Integration: existing solutions cannot be embedded across channel ecosystem", 
+        "Data Silos and Analytics Gaps: survey data not integrated with CRM systems"
+      ],
+      "change_motivation": {
+        "customer_experience_excellence": "Systematic feedback collection supports NPS and CSAT improvement goals",
+        "operational_efficiency": "Centralized survey management reduces cost-to-serve across all channels",
+        "channel_integration": "iframe functionality enables seamless deployment across digital ecosystem",
+        "data_driven_relationship_management": "Survey insights enhance Customer Relationship Management capabilities"
+      },
+      "problem_statement": "Our current customer feedback collection is fragmented across channels, manually intensive, and fails to provide actionable insights for relationship development. This prevents us from achieving our customer experience excellence goals and limits our ability to optimize channel performance and cost-to-serve metrics. We need a centralized, multi-channel survey management system that integrates with our existing customer interaction infrastructure and provides business users with professional-grade survey administration capabilities.",
+      "high_level_objectives": [
+        "Centralize Survey Management: Provide business users with comprehensive survey template lifecycle management",
+        "Enable Multi-Channel Deployment: Integrate survey capabilities across all customer touchpoints",
+        "Improve Customer Intelligence: Generate actionable insights for relationship development and channel optimization", 
+        "Ensure Operational Excellence: Implement proper version control, audit trails, and compliance measures"
+      ],
+      "success_criteria": {
+        "nps_score": {
+          "current": "Baseline TBD",
+          "target": "+15 points", 
+          "measurement": "Quarterly customer surveys"
+        },
+        "csat_score": {
+          "current": "Baseline TBD",
+          "target": "+20% improvement",
+          "measurement": "Post-interaction surveys"
+        },
+        "survey_response_rate": {
+          "current": "<15% (estimated)",
+          "target": ">30%",
+          "measurement": "System analytics"
+        },
+        "cost_to_serve": {
+          "current": "Current baseline", 
+          "target": "-25% for feedback collection",
+          "measurement": "Operational cost analysis"
+        },
+        "channel_availability": {
+          "current": "99.5%",
+          "target": "99.7% (including survey components)",
+          "measurement": "System monitoring"
+        },
+        "survey_deployment_time": {
+          "current": "2-3 weeks manual",
+          "target": "2-3 days automated", 
+          "measurement": "Process measurement"
+        },
+        "compliance_audit_score": {
+          "current": "Baseline TBD",
+          "target": "95%+",
+          "measurement": "Compliance review"
+        }
+      }
+    },
+    "scope_definition": {
+      "created": "2025-09-12T00:00:00Z",
+      "status": "completed", 
+      "capability_impacts": {
+        "channel_management": [
+          "eBranch Operations: iframe integration for web-based survey deployment",
+          "Interactive Help: contextual feedback collection capabilities", 
+          "Channel Activity Analysis: enhanced customer behavior monitoring",
+          "Branch Location Operations: integrated feedback at physical touchpoints"
+        ],
+        "customer_management": [
+          "Customer Relationship Management: survey insights for relationship development",
+          "Customer Access Entitlement: survey-based service optimization and access refinement"
+        ],
+        "interaction_management": [
+          "Session Dialogue: survey integration in customer interaction workflows", 
+          "Customer Relationship Management (interaction): feedback-driven interaction improvements"
+        ],
+        "partner_management": [
+          "Corporate Alliance and Stakeholder: survey sharing with partner organizations via iframe"
+        ]
+      },
+      "scope_matrix": {
+        "scope_in": [
+          "Core Survey Management System: Admin FE environment, template creation/management, versioning/lifecycle",
+          "Channel Integration: iframe functionality, FE integration with internal systems, multi-language support", 
+          "Version Control and Audit: template version management, user changelog, comprehensive audit trails",
+          "Access Control and Security: AD-based authentication/authorization, role-based access, template activation controls",
+          "Basic Operations: template copying/export, preview capabilities, basic template comparison"
+        ],
+        "scope_out": [
+          "Third-party Survey Platform Integration: external survey providers (SurveyMonkey, etc.)",
+          "Legacy System Replacement: replacement of existing feedback systems, historical data migration",
+          "Advanced Workflow Automation: automated triggering, advanced approval workflows, external compliance integration",
+          "Advanced Personalization: AI-driven personalization, advanced segmentation, dynamic content", 
+          "Advanced Integration Services: external APIs, webhook notifications, advanced data export"
+        ],
+        "assumptions": [
+          "AD Integration Available: existing AD infrastructure can support role-based access",
+          "Channel Infrastructure Ready: current channel systems can embed iframes, availability standards maintained",
+          "Compliance Framework Established: audit requirements defined, data retention policies established",
+          "Security Standards Met: current security standards apply, encryption standards maintained",
+          "Support Structure Available: IT support team training, business continuity procedures updated"
+        ],
+        "constraints": [
+          "Budget Limitation TBD, Development timeline: 6-9 months, Resource allocation: 2-3 developers + 1 UX designer",
+          "Technology Limitations: must work with existing tech stack, AD integration mandatory, browser compatibility required",
+          "Operational Constraints: training required for business users, change management process needed, phased rollout required", 
+          "Regulatory Compliance: GDPR compliance mandatory, banking regulations compliance, privacy impact assessment required",
+          "Performance Requirements: 99.7% availability minimum, response time <2 seconds, concurrent user limit: 50+ admin users"
+        ]
+      },
+      "critical_decisions": {
+        "key_inclusions": [
+          "iframe Integration: essential for Partner Management strategy and multi-channel deployment",
+          "AD Integration: leverages existing infrastructure and ensures proper access control",
+          "Version Management: critical for operational excellence and compliance in banking",
+          "Multi-language Support: necessary for diverse customer base"
+        ],
+        "key_exclusions": [
+          "Third-party Platform Integration: additional complexity and vendor dependencies", 
+          "Mobile Native Apps: current focus on web-based deployment through existing channels",
+          "Advanced Analytics: can be addressed in Phase 2 with specialized BI tools",
+          "Legacy Data Migration: risk mitigation - start fresh with standardized approach"
+        ]
+      },
+      "risk_assessment": {
+        "high_risk_assumptions": [
+          "AD integration complexity may exceed estimates",
+          "Channel systems iframe compatibility may require additional development", 
+          "Business user adoption may be slower than anticipated"
+        ],
+        "mitigation_strategies": [
+          "Early technical proof-of-concept for AD integration",
+          "Channel compatibility testing in pilot phase",
+          "Comprehensive training program and change management"
+        ]
+      }
+    },
+    "as_is_analysis": {
+      "created": "2025-09-12T00:00:00Z",
+      "status": "completed",
+      "current_processes": {
+        "branch_network_feedback": {
+          "process_flow": "Customer Transaction → Manual Paper Survey → Branch Staff Collection → Manual Data Entry → Local Reports → Regional Aggregation → Monthly Reports",
+          "issues": ["Manual paper-based process", "Inconsistent deployment", "Data quality problems", "4-6 week response cycle", "Limited analytics"],
+          "pain_points": ["<5% response rate", "Staff resistance", "No real-time visibility", "Inconsistent questions"],
+          "bian_capability_impact": "Branch Location Operations"
+        },
+        "digital_channel_feedback": {
+          "process_flow": "Customer Session → Pop-up Survey → Direct Database → Weekly Export → Manual Reports → Limited Distribution",
+          "issues": ["Basic surveys only", "No template management", "Poor timing", "Limited integration", "Technical debt"],
+          "pain_points": ["Workflow interruption", "No customization", "No version control", "Development dependencies"],
+          "bian_capability_impact": "eBranch Operations"
+        },
+        "call_center_feedback": {
+          "process_flow": "Customer Call → Agent Manual Offer → Phone Survey → Agent Recording → Call Center Database → Monthly Aggregation",
+          "issues": ["Inconsistent offering", "Manual recording", "Limited questions", "No IVR integration", "Data silos"],
+          "pain_points": ["Increased agent workload", "Customer reluctance", "No integration", "Inconsistent application"],
+          "bian_capability_impact": "Advanced Voice Services Operations"
+        },
+        "partner_channel_integration": {
+          "process_flow": "Partner Request → Manual Survey Creation → Email Distribution → Manual Collection → Excel Analysis → Manual Report",
+          "issues": ["No automation", "Inconsistent branding", "Manual distribution", "No real-time data", "Limited customization"],
+          "pain_points": ["Manual processes", "Low response rates", "Delayed reporting", "Limited partner support"],
+          "bian_capability_impact": "Corporate Alliance and Stakeholder"
+        }
+      },
+      "system_landscape": {
+        "current_architecture": "Branch Systems (Isolated) ←→ Core Banking System ←→ Digital Banking Platform (Basic Survey Module)",
+        "technical_issues": ["Fragmented systems", "Legacy integration challenges", "No API framework", "Limited security", "Data inconsistency"],
+        "bian_capability_gaps": ["Channel Portfolio management", "Interactive Help integration", "Channel Activity Analysis", "Session Dialogue enhancement"]
+      },
+      "critical_problems": {
+        "customer_experience_impact": [
+          "Inconsistent survey experience degrades overall customer satisfaction",
+          "Poor survey timing interrupts customer workflows", 
+          "Low response rates indicate customer survey fatigue"
+        ],
+        "operational_inefficiency": [
+          "Manual processes consume significant staff time across all channels",
+          "Duplicate efforts in survey creation and management",
+          "Slow feedback loop prevents timely customer issue resolution"
+        ],
+        "data_quality_integration": [
+          "Fragmented data sources prevent holistic customer insight",
+          "Manual data entry introduces errors and delays",
+          "Limited analytics capabilities restrict business value"
+        ],
+        "compliance_audit_risks": [
+          "No proper version control for survey content",
+          "Limited audit trail for survey administration", 
+          "Inconsistent data handling across channels"
+        ],
+        "strategic_limitations": [
+          "Cannot support data-driven customer relationship management",
+          "Limited ability to measure and improve channel performance",
+          "No capability for strategic partner collaboration on feedback"
+        ]
+      },
+      "risk_assessment": {
+        "high_risk_areas": [
+          "Compliance Risk: No proper audit trails for customer data collection",
+          "Customer Experience Risk: Poor survey experience damages brand reputation", 
+          "Operational Risk: Manual processes prone to errors and delays",
+          "Strategic Risk: Limited customer intelligence affects competitive positioning"
+        ],
+        "medium_risk_areas": [
+          "Technology Risk: Legacy systems difficult to maintain and enhance",
+          "Resource Risk: Staff time consumed by manual survey processes",
+          "Integration Risk: Disconnected systems prevent comprehensive analysis"
+        ]
+      },
+      "baseline_metrics": {
+        "overall_response_rate": {
+          "current": "<15% (estimated across all channels)",
+          "issues": "Poor customer experience, timing issues"
+        },
+        "survey_deployment_time": {
+          "current": "2-3 weeks (manual creation to deployment)", 
+          "issues": "Manual processes, multiple approvals"
+        },
+        "data_processing_time": {
+          "current": "4-6 weeks (collection to insights)",
+          "issues": "Manual aggregation, Excel-based analysis"
+        },
+        "channel_coverage": {
+          "current": "60% (not all touchpoints covered)",
+          "issues": "Inconsistent deployment, technical limitations"
+        },
+        "survey_standardization": {
+          "current": "20% (minimal consistency across channels)",
+          "issues": "No centralized template management"
+        },
+        "audit_compliance": {
+          "current": "40% (limited audit trails)", 
+          "issues": "Manual processes, no version control"
+        }
+      }
+    },
+    "workflow_completion": {
+      "phases_completed": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+      "analysis_level": "Senior Level",
+      "domain_focus": "Customer Distribution", 
+      "completion_timestamp": "2025-09-12T00:00:00Z",
+      "ready_for_handover": true,
+      "next_phase": "Design and Solution Architecture"
+    }
+  }
 }

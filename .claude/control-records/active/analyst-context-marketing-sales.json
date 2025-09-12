@@ -3,19 +3,67 @@
   "project_name": "Survey Management System",
   "analyst_persona": {
     "domain": "Marketing and Sales",
-    "level": "Junior",
+    "level": "Senior",
     "agent_id": "agent_marketing_sales",
-    "role": "Head of Marketing & Sales",
-    "experience_years": "2-5",
-    "knowledge_commands": ["/Junior Level/know-marketing-sales"]
+    "role": "Director of Marketing & Sales",
+    "experience_years": "8-12",
+    "knowledge_commands": ["/Senior Level/know-marketing-sales"],
+    "bian_domains": ["Brand Management", "Campaign Management", "Market Management"],
+    "communication_style": "Professional, balanced expertise, practical experience insights",
+    "upgrade_from": "Junior Level analysis"
   },
   "current_state": "1_kickoff_stakeholders",
   "workflow_progress": {
-    "1_kickoff_stakeholders": "in_progress",
+    "1_kickoff_stakeholders": "in_progress", 
     "2_problem_statement": "pending",
-    "3_scope_definition": "pending", 
+    "3_scope_definition": "pending",
     "4_as_is_analysis": "pending"
   },
+  "performance_framework": {
+    "kpis": ["Number of new clients", "Retention", "Brand awareness", "Campaign ROI"],
+    "goals": ["Client base growth", "Brand strengthening"],
+    "pain_points": ["ROI pressure", "Conflicts with compliance", "Limited budgets vs ambitious goals"]
+  },
   "created_timestamp": "2025-09-12T00:00:00Z",
-  "last_updated": "2025-09-12T00:00:00Z"
+  "last_updated": "2025-09-12T00:00:00Z",
+  "deliverables": {
+    "state_1": {
+      "status": "completed",
+      "stakeholder_matrix_created": true,
+      "domain_impact_analysis": "High impact on Customer Campaign Design, Market Research, Advertising capabilities",
+      "key_stakeholders": ["Marketing Campaign Manager", "Brand Manager", "Market Research Analyst", "Digital Marketing Specialist"],
+      "strategic_insights": ["ROI measurement integration", "Multi-channel consistency", "Real-time analytics", "Compliance risk management", "Budget efficiency"]
+    },
+    "state_2": {
+      "status": "completed",
+      "problem_statement": "Campaign effectiveness measurement gap and fragmented customer insights preventing marketing ROI optimization",
+      "business_motivations": ["Competitive pressure", "Budget accountability", "Customer experience focus", "Digital transformation"],
+      "primary_goals": ["Campaign ROI improvement 40%", "Systematic feedback collection", "60% process efficiency gain", "Brand health monitoring"],
+      "success_criteria": "25% response rate increase, hours vs days deployment, 90% team adoption, 2-week feedback cycle"
+    }, 
+    "state_3": {
+      "status": "completed", 
+      "scope_matrix": {
+        "scope_in": ["Survey template creation", "Multi-language support", "Campaign deployment", "Real-time analytics", "Brand perception libraries", "Customer segmentation integration", "Marketing platform APIs", "ROI dashboards"],
+        "scope_out": ["Product development surveys", "HR surveys", "Regulatory compliance reporting", "Advanced AI/ML", "Third-party tool replacement", "Customer service surveys", "Financial advisory surveys"],
+        "assumptions": ["Marketing team adoption", "Customer participation", "Integration capability", "Brand compliance", "Data quality", "Budget availability"],
+        "constraints": ["Regulatory compliance", "Brand standards", "Budget limits", "Campaign timeline pressures", "Customer contact frequency", "Platform dependencies", "Data privacy"]
+      },
+      "strategic_priorities": "Focus on campaign effectiveness measurement and brand health monitoring with clear marketing domain boundaries"
+    },
+    "state_4": {
+      "status": "completed",
+      "as_is_analysis": {
+        "current_process": "Manual survey creation, email distribution, disparate data collection, delayed analysis",
+        "technology_stack": ["Adobe Campaign", "Salesforce CRM", "SurveyMonkey", "Google Forms", "Excel"],
+        "critical_issues": ["ROI measurement gap", "Brand consistency failure", "Process inefficiency", "Data quality issues", "Compliance risk"],
+        "cycle_times": "2-3 days creation, 1-2 weeks analysis, 40% admin time for campaign managers",
+        "risk_assessment": "High regulatory/competitive risk, medium resource/data risk"
+      },
+      "completion_timestamp": "2025-09-12T00:00:00Z"
+    }
+  },
+  "workflow_status": "completed",
+  "ready_for_handover": true
+  }
 }

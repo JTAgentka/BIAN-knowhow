@@ -1,0 +1,53 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System",
+  "domain_focus": "Risk Management",
+  "analyst_level": "Senior Level",
+  "analyst_persona": {
+    "id": "agent_enterprise_management",
+    "role": "Director of Enterprise Management & Controlling (Risk)",
+    "experience_years": "8-12",
+    "bian_service_domains": ["Fraud Incident Management", "Policy Management", "Risk Management"],
+    "communication_style": "professional_experienced",
+    "expertise_depth": "solid_practical_expertise",
+    "pain_points": ["Outdated risk models", "Perceived as business blocker", "Regulatory pressure"],
+    "kpis": ["No significant fraud", "100% compliance", "Crisis scenario readiness"],
+    "goals": ["Protection of bank capital and reputation"]
+  },
+  "knowledge_commands": [
+    "/Senior Level/know-risk-management"
+  ],
+  "workflow_state": "completed",
+  "created_timestamp": "2025-09-12T00:00:00Z",
+  "last_updated": "2025-09-12T00:00:00Z",
+  "artifacts": {
+    "stakeholder_matrix": {
+      "high_risk_stakeholders": ["Data Protection Officer", "Compliance Manager", "IT Security Manager", "Chief Risk Officer"],
+      "primary_risk_areas": ["Data Privacy Risk", "Operational Risk", "Compliance Risk", "Fraud Risk", "Reputational Risk"],
+      "risk_governance_approach": "Risk Committee oversight with quarterly reviews"
+    },
+    "problem_statement": {
+      "business_pain": "Fragmented survey operations without standardized risk controls",
+      "change_motivation": "Mitigate operational risk and ensure regulatory compliance",
+      "success_criteria": {
+        "compliance_violations": "Zero violations target",
+        "data_breaches": "Zero security incidents",
+        "system_availability": ">99.5% uptime",
+        "audit_readiness": "100% traceable actions"
+      }
+    },
+    "scope_definition": {
+      "scope_in": ["Survey Template Management with Risk Controls", "Access Control & Security", "Audit & Compliance", "Data Protection", "Fraud Prevention", "Business Continuity"],
+      "scope_out": ["Survey Response Analysis", "External Survey Distribution", "Mobile Applications", "CRM Integration", "Advanced Workflow Engine"],
+      "critical_constraints": ["Regulatory Compliance", "Security Standards", "Data Residency"],
+      "risk_priority": "MUST HAVE: Access controls, Audit logging, Data encryption, Basic fraud prevention"
+    },
+    "as_is_analysis": {
+      "current_risk_level": "HIGH",
+      "primary_vulnerabilities": ["Data Privacy Risk", "Operational Risk", "Security Risk"],
+      "compliance_gaps": ["GDPR Article 32", "GDPR Article 5", "Banking Regulations", "Internal Audit Requirements"],
+      "business_continuity_risk": "HIGH - Single points of failure and no formal recovery procedures",
+      "immediate_risk_mitigation": ["Emergency access controls", "Data inventory", "Risk assessment", "Incident response procedures"]
+    }
+  }
+}

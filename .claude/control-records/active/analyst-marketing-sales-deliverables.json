@@ -1,0 +1,325 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System",
+  "analysis_type": "Senior Level Marketing Sales Domain Analysis",
+  "analyst_persona": {
+    "role": "Director of Marketing & Sales",
+    "level": "Senior",
+    "experience": "8-12 years",
+    "domain_expertise": ["Brand Management", "Campaign Management", "Market Management"],
+    "upgrade_from": "Junior Level analysis"
+  },
+  "deliverables": {
+    "stakeholder_engagement_matrix": {
+      "primary_stakeholders": [
+        {
+          "name": "Marketing Campaign Manager",
+          "role": "Primary User",
+          "objectives": "Campaign effectiveness measurement, customer feedback analysis",
+          "attitude": "Highly Supportive",
+          "influence": "High",
+          "interest": "Very High",
+          "engagement_strategy": "Active collaboration - key user requirements"
+        },
+        {
+          "name": "Brand Manager", 
+          "role": "Strategic User",
+          "objectives": "Brand perception monitoring, reputation tracking",
+          "attitude": "Supportive",
+          "influence": "High", 
+          "interest": "High",
+          "engagement_strategy": "Regular consultation on brand metrics"
+        },
+        {
+          "name": "Digital Marketing Specialist",
+          "role": "Technical User",
+          "objectives": "Multi-channel campaign tracking, conversion analysis", 
+          "attitude": "Highly Supportive",
+          "influence": "Medium",
+          "interest": "Very High",
+          "engagement_strategy": "Technical requirements gathering"
+        }
+      ],
+      "secondary_stakeholders": [
+        {
+          "name": "Market Research Analyst",
+          "role": "Data Consumer",
+          "objectives": "Customer insights, competitive intelligence",
+          "attitude": "Supportive",
+          "influence": "Medium",
+          "interest": "High", 
+          "engagement_strategy": "Include in design sessions for analytics"
+        },
+        {
+          "name": "Sales Team Leaders",
+          "role": "Secondary User", 
+          "objectives": "Lead quality assessment, customer satisfaction",
+          "attitude": "Neutral/Supportive",
+          "influence": "Medium",
+          "interest": "Medium",
+          "engagement_strategy": "Training and adoption support needed"
+        }
+      ],
+      "governance_stakeholders": [
+        {
+          "name": "Compliance Officer",
+          "role": "Governance",
+          "objectives": "GDPR compliance, data privacy, regulatory adherence",
+          "attitude": "Neutral/Critical", 
+          "influence": "High",
+          "interest": "Medium",
+          "engagement_strategy": "Early engagement for regulatory alignment"
+        }
+      ]
+    },
+    "problem_statement": {
+      "business_pain": "Campaign effectiveness measurement gap and fragmented customer insights preventing marketing ROI optimization",
+      "primary_motivations": [
+        "Competitive pressure requiring faster campaign iteration",
+        "Budget accountability demanding demonstrated marketing ROI",
+        "Customer experience focus requiring systematic feedback",
+        "Digital transformation incompatible with manual processes"
+      ],
+      "strategic_goals": [
+        {
+          "goal": "Campaign ROI improvement",
+          "target": "40% increase in campaign effectiveness measurement"
+        },
+        {
+          "goal": "Systematic feedback collection", 
+          "target": "Customer feedback collection across 100% of major campaigns"
+        },
+        {
+          "goal": "Process efficiency",
+          "target": "60% reduction in survey creation and deployment time"
+        },
+        {
+          "goal": "Brand health monitoring",
+          "target": "Continuous brand perception tracking implementation"
+        }
+      ],
+      "success_criteria": {
+        "quantitative": [
+          "Campaign response rates increase by 25%",
+          "Survey deployment time reduced from days to hours", 
+          "Customer satisfaction tracking across 100% of major campaigns",
+          "Brand awareness measurement frequency increased to monthly"
+        ],
+        "qualitative": [
+          "Marketing team adoption rate >90%",
+          "Integration with existing marketing platforms",
+          "Compliance approval for customer data handling",
+          "Customer feedback incorporated into next campaign cycle within 2 weeks"
+        ]
+      }
+    },
+    "scope_definition": {
+      "scope_in": [
+        {
+          "item": "Survey Template Creation & Management",
+          "justification": "Essential for campaign standardization and brand consistency",
+          "capability_impact": "Customer Campaign Design"
+        },
+        {
+          "item": "Multi-language Survey Support", 
+          "justification": "Required for international marketing campaigns",
+          "capability_impact": "Brand Management"
+        },
+        {
+          "item": "Campaign-specific Survey Deployment",
+          "justification": "Core functionality for post-campaign feedback collection",
+          "capability_impact": "Advertising"
+        },
+        {
+          "item": "Real-time Response Analytics",
+          "justification": "Needed for agile campaign optimization decisions",
+          "capability_impact": "Market Research"
+        },
+        {
+          "item": "Brand Perception Question Libraries",
+          "justification": "Standardized brand health monitoring across campaigns", 
+          "capability_impact": "Brand Management"
+        },
+        {
+          "item": "Marketing Platform API Integration",
+          "justification": "Connect with existing campaign management and CRM systems",
+          "capability_impact": "Customer Campaign Design"
+        },
+        {
+          "item": "ROI Measurement Dashboards",
+          "justification": "Essential for demonstrating marketing budget effectiveness",
+          "capability_impact": "Advertising"
+        }
+      ],
+      "scope_out": [
+        {
+          "item": "Product Development Surveys",
+          "reason": "Outside marketing domain - belongs to Product Services",
+          "risk": "Scope creep, conflicting requirements"
+        },
+        {
+          "item": "HR Employee Satisfaction Surveys",
+          "reason": "Different domain with different compliance requirements", 
+          "risk": "Resource dilution, wrong user base"
+        },
+        {
+          "item": "Advanced AI/ML Survey Personalization",
+          "reason": "Phase 2 enhancement, not core MVP requirement",
+          "risk": "Budget overrun, timeline risk"
+        },
+        {
+          "item": "Third-party Survey Tool Replacement",
+          "reason": "Focus on internal bank surveys, not external market research",
+          "risk": "Integration complexity"
+        }
+      ],
+      "assumptions": [
+        "Marketing team will actively use the system for campaign feedback",
+        "Existing customers will engage with surveys at current or improved rates",
+        "Current marketing platforms have API connectivity for data integration",
+        "All surveys will maintain consistent brand visual and messaging standards",
+        "Marketing budget allocation includes ongoing system operational costs"
+      ],
+      "constraints": [
+        "All customer communication must comply with banking regulations and GDPR",
+        "Survey design must adhere to corporate brand guidelines",
+        "Solution cost must fit within approved marketing technology budget",
+        "System deployment cannot disrupt ongoing campaign schedules",
+        "Integration limited by existing marketing technology architecture"
+      ]
+    },
+    "as_is_analysis": {
+      "current_process_flow": [
+        {
+          "phase": "Campaign Planning",
+          "activities": ["Manual identification of survey needs", "Email/meeting communication of requirements"],
+          "problems": ["No standardized decision criteria", "Delayed survey planning"]
+        },
+        {
+          "phase": "Survey Creation",
+          "activities": ["Manual template creation in generic tools", "Individual question development"],
+          "problems": ["2-3 days average creation time", "Brand inconsistency", "Question duplication"],
+          "tools": ["SurveyMonkey", "Google Forms"]
+        },
+        {
+          "phase": "Deployment & Distribution", 
+          "activities": ["Manual customer list export", "Email-based distribution"],
+          "problems": ["Channel fragmentation", "Timing issues", "Limited reach"],
+          "cycle_time": "Often deployed too late after campaign completion"
+        },
+        {
+          "phase": "Data Collection & Analysis",
+          "activities": ["Manual data consolidation", "Excel-based analysis"],
+          "problems": ["1-2 weeks turnaround time", "Limited analytics", "Disparate data sources"],
+          "impact": "Delayed insights, missed optimization opportunities"
+        }
+      ],
+      "current_technology_stack": [
+        {
+          "category": "Marketing Automation",
+          "tools": ["Adobe Campaign", "Salesforce Marketing Cloud"],
+          "integration_status": "Not connected to survey processes"
+        },
+        {
+          "category": "CRM System", 
+          "tools": ["Salesforce", "Microsoft Dynamics"],
+          "integration_status": "Manual export for survey distribution"
+        },
+        {
+          "category": "Survey Tools",
+          "tools": ["SurveyMonkey", "Google Forms"],
+          "integration_status": "Standalone, no integration"
+        },
+        {
+          "category": "Analytics",
+          "tools": ["Adobe Analytics", "Google Analytics"], 
+          "integration_status": "Separate from survey data"
+        }
+      ],
+      "critical_issues": [
+        {
+          "issue": "ROI Measurement Gap",
+          "current_state": "No systematic connection between campaign investment and customer feedback",
+          "impact": "Unable to optimize marketing budget allocation", 
+          "risk": "Continued investment in low-performing campaign types"
+        },
+        {
+          "issue": "Brand Consistency Failure",
+          "current_state": "Each survey has different look/feel, question phrasing",
+          "impact": "Inconsistent brand experience, reduced customer trust",
+          "risk": "Brand dilution across customer touchpoints"
+        },
+        {
+          "issue": "Process Inefficiency", 
+          "current_state": "2-3 days survey creation + 1-2 weeks analysis",
+          "impact": "Campaigns end before insights can influence next iteration",
+          "risk": "Competitive disadvantage in campaign agility"
+        },
+        {
+          "issue": "Compliance Risk",
+          "current_state": "Ad-hoc survey creation without compliance review", 
+          "impact": "Potential GDPR violations, customer privacy concerns",
+          "risk": "Regulatory penalties, reputation damage"
+        }
+      ],
+      "role_impact_analysis": [
+        {
+          "role": "Marketing Campaign Manager",
+          "current_state": "Spends 40% of time on survey administration vs. strategy",
+          "pain_points": ["Manual survey creation", "Limited analytics capabilities", "Delayed insights"],
+          "desired_state": "Focus on strategic campaign optimization"
+        },
+        {
+          "role": "Brand Manager", 
+          "current_state": "Reactive brand review rather than proactive template creation",
+          "pain_points": ["No standardized oversight", "Inconsistent brand application", "Disconnected from feedback"],
+          "desired_state": "Proactive brand consistency management"
+        },
+        {
+          "role": "Market Research Analyst",
+          "current_state": "60% time on data processing vs. analysis",
+          "pain_points": ["Manual data consolidation", "Multiple data sources", "Limited strategic analysis time"],
+          "desired_state": "Real-time insights and strategic recommendations"
+        }
+      ]
+    }
+  },
+  "strategic_recommendations": {
+    "immediate_priorities": [
+      "Standardized survey template creation system",
+      "Brand-compliant survey design framework", 
+      "Marketing platform API integration planning",
+      "Compliance and data privacy framework establishment"
+    ],
+    "success_factors": [
+      "Marketing team early adoption and training",
+      "Integration with existing marketing technology stack",
+      "Compliance approval for customer data handling processes",
+      "Real-time analytics and reporting capabilities"
+    ],
+    "risk_mitigation": [
+      "Early compliance engagement to prevent regulatory issues",
+      "Phased rollout to ensure marketing team adoption",
+      "Brand guideline integration to maintain consistency",
+      "Budget controls to prevent scope creep"
+    ]
+  },
+  "domain_specific_insights": {
+    "bian_capability_impacts": {
+      "high_impact": ["Customer Campaign Design", "Market Research", "Advertising"],
+      "medium_impact": ["Brand Management", "Segment Direction"], 
+      "low_impact": ["Other marketing capabilities through indirect benefits"]
+    },
+    "marketing_operational_context": {
+      "kpis_affected": ["Number of new clients", "Retention", "Brand awareness", "Campaign ROI"],
+      "goals_supported": ["Client base growth", "Brand strengthening"],
+      "pain_points_addressed": ["ROI pressure", "Limited budgets vs ambitious goals", "Compliance conflicts"]
+    }
+  },
+  "completion_summary": {
+    "analysis_completed": "2025-09-12T00:00:00Z",
+    "workflow_states_completed": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+    "ready_for_handover": true,
+    "next_phase": "Design phase with Marketing Sales domain insights"
+  }
+}
