@@ -1,17 +1,17 @@
 {
   "metadata": {
     "agent_id": "jira-project-definition-controller",
-    "session_id": "session_20250912_000648",
-    "timestamp": "2025-09-12T00:06:48Z",
-    "version": "1.0",
+    "session_id": "session_20250912_091117",
+    "timestamp": "2025-09-12T09:11:17Z",
+    "version": "1.1",
     "project_id": "BRQ202-SURVEY-MANAGEMENT",
     "jira_epic_id": "BRQ202"
   },
   "current_state": {
     "phase": "orchestration",
-    "status": "pending",
-    "last_updated": "2025-09-12T00:06:48Z",
-    "routing_decision": "junior_level_full_lifecycle"
+    "status": "in_progress",
+    "last_updated": "2025-09-12T09:11:17Z",
+    "routing_decision": "expert_level_full_lifecycle"
   },
   "jira_input": {
     "epic_description": "BRQ202 - Správa dotazníků uživatelem/vlastníkem - Comprehensive survey management application providing admin FE environment for business users/owners with capabilities for creating templates, survey typology, template management, survey editing with versioning, role-based access with AD integration, and functional modules.",
@@ -20,12 +20,12 @@
   },
   "parsed_content": {
     "input_data": "Survey management application with admin frontend, template creation, versioning, role-based access, AD integration, audit modules",
-    "user_instructions": "Execute with Junior Level expertise instead of default Senior Level across all 5 domains",
+    "user_instructions": "Execute with Expert Level expertise across all 5 domains for complex survey management system with advanced versioning and compliance requirements",
     "stakeholder_info": "Business users/owners, administrators, client service teams",
     "requirements_summary": "Comprehensive survey management system with template management, versioning, access control, and audit capabilities"
   },
   "routing_logic": {
-    "decision_rationale": "User explicitly requested Junior Level expertise override. Detected multiple business domains: customer service, enterprise enabling, risk management, marketing/sales, and product services. Full lifecycle execution required.",
+    "decision_rationale": "User explicitly requested Expert Level expertise override. Detected multiple business domains: customer service, enterprise enabling, risk management, marketing/sales, and product services. Complex system requires Expert Level analysis for versioning, compliance, and AD integration. Full lifecycle execution required.",
     "selected_agents": [
       "project-analyst",
       "project-designer", 

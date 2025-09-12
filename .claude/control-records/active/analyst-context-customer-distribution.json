@@ -8,10 +8,10 @@
     "jira_epic_id": "BRQ202"
   },
   "persona_injection": {
-    "knowledge_commands": ["/Junior Level/know-customer-distribution"],
-    "active_persona": "Junior Level Customer Distribution Head",
+    "knowledge_commands": ["/Expert Level/know-customer-distribution"],
+    "active_persona": "Expert Level Director of Customer & Distribution",
     "domain_focus": "customer-distribution",
-    "expertise_level": "Junior Level"
+    "expertise_level": "Expert Level"
   },
   "project_context": {
     "requirement": "BRQ202 - Správa dotazníků uživatelem/vlastníkem - Comprehensive survey management application providing admin FE environment for business users/owners",
