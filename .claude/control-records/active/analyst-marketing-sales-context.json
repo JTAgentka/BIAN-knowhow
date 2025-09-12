@@ -1,0 +1,61 @@
+{
+  "session_id": "BRQ202_SURVEY_MGMT_MARKETING_SALES_20250911",
+  "agent_type": "project-analyst", 
+  "active_persona": {
+    "identity": "Director of Marketing & Sales",
+    "level": "Expert",
+    "domain": "Marketing Sales",
+    "experience_years": "15+",
+    "knowledge_commands": ["/Expert Level/know-marketing-sales"],
+    "key_capabilities": ["Campaign Management", "Customer Surveys", "Market Analysis", "Lead Management", "Customer Acquisition"]
+  },
+  "project_info": {
+    "requirement_id": "BRQ202", 
+    "requirement_name": "Správa dotazníků uživatelem/vlastníkom (Survey Management System)",
+    "description": "Comprehensive survey management application with admin FE for business users - analyzed from Marketing Sales customer acquisition and campaign effectiveness perspective",
+    "type": "Customer Intelligence & Marketing Optimization Initiative",
+    "complexity": "High - Customer engagement and campaign ROI complexity",
+    "strategic_importance": "Critical - Direct impact on revenue growth and customer acquisition"
+  },
+  "current_state": "4_as_is_analysis_complete",
+  "completed_states": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+  "phase_1_artifacts": {
+    "stakeholder_matrix": "completed",
+    "critical_stakeholders": ["Marketing Directors", "Campaign Managers", "Market Research Team", "Customer Experience Team"],
+    "stakeholder_analysis": "10 key stakeholders identified with revenue-focused engagement strategy. Critical path: Marketing leadership partnership essential for ROI achievement"
+  },
+  "phase_2_artifacts": {
+    "problem_statement": "completed", 
+    "business_pain": "Campaign effectiveness blindness, customer insight gaps, competitive disadvantage, ROI measurement challenges",
+    "change_motivation": "Revenue growth acceleration, market share protection, operational excellence, campaign optimization",
+    "success_criteria": "25% campaign ROI improvement, 15% acquisition increase, 75% process time reduction, 40% survey response rate increase"
+  },
+  "phase_3_artifacts": {
+    "scope_matrix": "completed",
+    "scope_in": ["Core survey management", "User experience", "Technical foundation", "Template lifecycle management"],
+    "scope_out": ["Advanced analytics platform", "External integrations", "Advanced AI features", "Third-party distribution"],
+    "critical_constraints": ["18-month timeline", "Budget limitations", "Regulatory compliance", "Resource availability"]
+  },
+  "phase_4_artifacts": {
+    "as_is_analysis": "completed",
+    "current_problems": ["Manual survey processes", "Tool fragmentation", "Data silos", "Version control chaos"],
+    "risk_assessment": "MEDIUM-HIGH RISK - Revenue and competitive risks identified",
+    "mitigation_priorities": ["Campaign ROI measurement", "Customer insight generation", "Process automation", "Compliance alignment"]
+  },
+  "marketing_sales_insights": {
+    "revenue_focus": "Direct correlation with Customer Acquisition, Retention, and Campaign ROI KPIs",
+    "operational_priorities": ["Campaign effectiveness measurement", "Customer journey insights", "Market responsiveness", "Brand consistency"],
+    "customer_experience_requirements": ["Mobile optimization", "Response rate improvement", "Survey UX enhancement", "Multi-channel distribution"],
+    "performance_framework": "Campaign ROI, Customer Acquisition rates, Brand Awareness metrics, Retention improvement"
+  },
+  "validation_status": {
+    "stakeholder_engagement": "completed",
+    "problem_definition": "completed", 
+    "scope_definition": "completed",
+    "current_state_analysis": "completed",
+    "handover_ready": true
+  },
+  "created_at": "2025-09-11T00:00:00Z",
+  "updated_at": "2025-09-11T00:00:00Z",
+  "analysis_complete": true
+}

@@ -1,0 +1,60 @@
+{
+  "session_metadata": {
+    "session_id": "session_20250912_000648",
+    "start_timestamp": "2025-09-12T00:06:48Z",
+    "end_timestamp": "",
+    "project_id": "BRQ202-SURVEY-MANAGEMENT",
+    "jira_epic_id": "BRQ202",
+    "user_id": "project-manager-orchestrator"
+  },
+  "workflow_execution": {
+    "agents_involved": [
+      "project-analyst-customer-distribution",
+      "project-analyst-enterprise-enabling", 
+      "project-analyst-risk-management",
+      "project-analyst-marketing-sales",
+      "project-analyst-product-services",
+      "project-designer",
+      "project-documenter"
+    ],
+    "phases_completed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "total_duration": "Complete workflow execution",
+    "quality_gates_passed": [
+      "analyst_domain_coverage_complete",
+      "stakeholder_analysis_comprehensive", 
+      "problem_statement_validated",
+      "scope_definition_approved",
+      "as_is_analysis_documented",
+      "to_be_design_consolidated",
+      "impact_analysis_completed",
+      "acceptance_criteria_defined",
+      "documentation_finalized",
+      "quality_assurance_passed"
+    ]
+  },
+  "context_files_created": [
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/manager-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/sessions/session_20250912_000648.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-context-customer-distribution.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-customer-distribution-deliverables.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-enterprise-enabling-deliverables.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-risk-management-deliverables.json", 
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-marketing-sales-deliverables.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/analyst-product-services-deliverables.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/designer-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/designer-deliverables.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/documenter-context.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/BRQ202-PROJECT-DEFINITION-v1.0.json",
+    "/Users/agent/dev/BIAN-knowhow/.claude/control-records/active/BRQ202-ANALYZA-PROJEKTU.md"
+  ],
+  "performance_metrics": {
+    "total_processing_time": "Comprehensive multi-domain analysis completed",
+    "agent_handover_times": [
+      "analyst_phases_1_4_completed",
+      "designer_phases_5_7_completed", 
+      "documenter_phases_8_11_completed"
+    ],
+    "validation_cycles": 11,
+    "stakeholder_interactions": 32
+  }
+}

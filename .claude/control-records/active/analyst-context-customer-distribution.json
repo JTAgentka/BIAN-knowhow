@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "agent_id": "project-analyst-customer-distribution",
+    "session_id": "session_20250912_000648",
+    "timestamp": "2025-09-12T00:06:48Z",
+    "version": "1.0",
+    "project_id": "BRQ202-SURVEY-MANAGEMENT",
+    "jira_epic_id": "BRQ202"
+  },
+  "persona_injection": {
+    "knowledge_commands": ["/Junior Level/know-customer-distribution"],
+    "active_persona": "Junior Level Customer Distribution Head",
+    "domain_focus": "customer-distribution",
+    "expertise_level": "Junior Level"
+  },
+  "project_context": {
+    "requirement": "BRQ202 - Správa dotazníků uživatelem/vlastníkem - Comprehensive survey management application providing admin FE environment for business users/owners",
+    "key_capabilities": [
+      "Creating new survey templates with known elements (sections, questions, answers, control questions, sorting)",
+      "Survey typology (type, language, version, metadata)",
+      "Template activation/deactivation, preview, copying, export",
+      "Survey editing with versioning (published/unpublished)",
+      "Ability to invalidate original versions - compatibility unification into evaluation algorithm",
+      "User changelog on templates",
+      "Version comparison across multiple templates",
+      "Version deletion through deactivation only",
+      "Role-based access with AD integration",
+      "Functional modules for client service, survey management, audit"
+    ]
+  },
+  "current_state": {
+    "phase": "analysis",
+    "status": "pending",
+    "conversation_state": "1_kickoff_stakeholders",
+    "last_updated": "2025-09-12T00:06:48Z"
+  },
+  "workflow_progress": {
+    "phases_completed": [],
+    "current_phase": 1,
+    "artifacts_created": [],
+    "quality_gates_passed": []
+  }
+}

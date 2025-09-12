@@ -1,0 +1,250 @@
+{
+  "analysis_metadata": {
+    "persona": "Junior Level Risk Management Head",
+    "domain_focus": "risk-management", 
+    "expertise_level": "Junior Level",
+    "phases_covered": "1-4",
+    "project_id": "BRQ202-SURVEY-MANAGEMENT"
+  },
+  "phase_1_stakeholder_mapping": {
+    "stakeholder_engagement_matrix": [
+      {
+        "stakeholder": "Chief Risk Officer (CRO)",
+        "role": "Strategic Risk Oversight",
+        "objectives": "Ensure survey system doesn't introduce new operational or reputational risks",
+        "attitude": "Cautious - requires comprehensive risk assessment",
+        "influence": "High",
+        "interest": "High",
+        "engagement_strategy": "Risk assessment presentation and ongoing risk monitoring framework"
+      },
+      {
+        "stakeholder": "Fraud Detection Team",
+        "role": "Security Monitoring",
+        "objectives": "Monitor survey system for potential fraud vectors and data breaches",
+        "attitude": "Highly cautious - concerned about new attack surfaces",
+        "influence": "Medium",
+        "interest": "High", 
+        "engagement_strategy": "Security controls review and fraud monitoring integration"
+      },
+      {
+        "stakeholder": "Risk Analysts",
+        "role": "Risk Assessment",
+        "objectives": "Evaluate and model risks introduced by survey system",
+        "attitude": "Neutral - focused on thorough risk analysis",
+        "influence": "Medium",
+        "interest": "Medium",
+        "engagement_strategy": "Risk modeling workshops and assessment methodology alignment"
+      },
+      {
+        "stakeholder": "Compliance Reporting Team",
+        "role": "Regulatory Reporting",
+        "objectives": "Ensure survey data doesn't create additional regulatory reporting burden",
+        "attitude": "Cautious - concerned about reporting complexity",
+        "influence": "Medium",
+        "interest": "High",
+        "engagement_strategy": "Regulatory impact assessment and reporting integration planning"
+      },
+      {
+        "stakeholder": "Business Continuity Team",
+        "role": "Operational Resilience",
+        "objectives": "Ensure survey system has appropriate backup and recovery capabilities",
+        "attitude": "Supportive but thorough - needs continuity planning",
+        "influence": "Medium",
+        "interest": "Medium",
+        "engagement_strategy": "Business continuity planning and disaster recovery integration"
+      },
+      {
+        "stakeholder": "External Auditors",
+        "role": "Independent Validation",
+        "objectives": "Validate that survey system maintains appropriate risk controls",
+        "attitude": "Neutral - requires evidence of proper controls",
+        "influence": "High",
+        "interest": "Medium",
+        "engagement_strategy": "Control documentation and audit trail preparation"
+      }
+    ],
+    "domain_specific_insights": {
+      "operational_risk": "New survey system introduces potential operational risks through increased data collection and processing",
+      "reputational_risk": "Customer survey data mishandling could significantly impact bank reputation",
+      "fraud_risk": "Survey system creates new potential vectors for social engineering and data theft"
+    }
+  },
+  "phase_2_problem_statement": {
+    "business_pain": {
+      "current_challenges": [
+        "No systematic risk assessment for customer survey data collection",
+        "Manual monitoring of survey-related security incidents",
+        "Lack of fraud detection integration for survey system activities", 
+        "Inconsistent business continuity planning for customer feedback systems",
+        "Potential regulatory risks from uncontrolled customer data aggregation"
+      ],
+      "risk_management_pain_points": [
+        "Outdated risk models don't account for modern survey system vulnerabilities",
+        "Seen as blocker when surveys need rapid deployment for business needs",
+        "Regulatory pressure to demonstrate comprehensive data protection",
+        "Difficulty quantifying reputational risk from survey system failures"
+      ]
+    },
+    "change_motivation": {
+      "primary_drivers": [
+        "Protect capital and reputation through systematic survey risk management",
+        "Achieve zero fraud incidents above threshold through comprehensive monitoring",
+        "Maintain 100% compliance with data protection and privacy regulations",
+        "Ensure continuity readiness for customer feedback operations"
+      ],
+      "risk_management_drivers": [
+        "Transform from blocker to enabler through automated risk controls",
+        "Protect bank reputation by preventing survey-related data incidents", 
+        "Maintain regulatory confidence through proactive risk management",
+        "Enable business growth while maintaining appropriate risk boundaries"
+      ]
+    },
+    "success_criteria": {
+      "high_level_objectives": [
+        "Zero fraud incidents related to survey system above risk threshold",
+        "100% compliance with risk management policies and procedures",
+        "Achieve full business continuity readiness for survey operations",
+        "Maintain risk-adjusted profitability through controlled survey expansion"
+      ],
+      "risk_management_kpis": [
+        "Zero fraud > threshold maintained through comprehensive monitoring",
+        "100% compliance with risk assessment and reporting requirements",
+        "Continuity readiness validated through regular testing and updates",
+        "Capital and reputation protection through systematic risk controls"
+      ]
+    }
+  },
+  "phase_3_scope_definition": {
+    "scope_matrix": {
+      "scope_in": [
+        "Comprehensive risk assessment framework for survey operations",
+        "Fraud detection integration and monitoring for survey activities",
+        "Business continuity planning for survey system availability",
+        "Risk-based access controls and authentication mechanisms",
+        "Data loss prevention controls for survey customer data",
+        "Incident response procedures for survey-related security events",
+        "Risk reporting dashboard for survey system monitoring",
+        "Regulatory risk assessment and ongoing compliance monitoring"
+      ],
+      "scope_out": [
+        "Advanced predictive fraud modeling specific to surveys",
+        "Custom risk analytics platform development", 
+        "Third-party risk management platform integrations",
+        "Automated regulatory reporting beyond standard requirements",
+        "Advanced threat detection and response automation",
+        "Cross-system risk correlation analysis",
+        "Complex derivatives risk modeling for survey impact"
+      ],
+      "assumptions": [
+        "Existing risk management framework can accommodate survey system risks",
+        "Fraud detection systems have capacity for additional monitoring",
+        "Business continuity infrastructure can support survey system requirements",
+        "Risk appetite statements include customer data collection activities",
+        "Regulatory expectations for survey risk management are documented",
+        "Risk reporting systems can incorporate survey system metrics"
+      ],
+      "constraints": [
+        "Cannot exceed established risk appetite limits for operational risk",
+        "Must align with existing fraud detection and prevention frameworks",
+        "Business continuity requirements must meet regulatory standards",
+        "Risk controls cannot significantly impact survey system performance",
+        "Implementation must not create additional regulatory capital requirements",
+        "All risk management activities must be fully auditable and documented"
+      ]
+    },
+    "risk_management_considerations": {
+      "risk_appetite_alignment": "Survey system risks must stay within board-approved risk appetite parameters",
+      "regulatory_expectations": "Risk controls must meet or exceed regulatory expectations for customer data systems",
+      "capital_impact": "Risk management approach should minimize regulatory capital implications"
+    }
+  },
+  "phase_4_as_is_analysis": {
+    "current_state_assessment": {
+      "existing_processes": {
+        "risk_assessment": "Manual risk evaluation for new systems through committee review",
+        "fraud_monitoring": "Basic monitoring through existing fraud detection systems",
+        "incident_response": "General incident response procedures without survey-specific protocols",
+        "compliance_reporting": "Manual compilation of risk metrics and regulatory reports",
+        "business_continuity": "High-level continuity planning with limited survey system coverage"
+      },
+      "current_system_landscape": {
+        "risk_dashboards": "Existing risk monitoring with limited survey system visibility",
+        "fraud_detection_systems": "Core fraud systems without survey-specific rules",
+        "compliance_systems": "Separate compliance monitoring with minimal survey integration",
+        "continuity_systems": "Basic backup and recovery without survey-specific procedures"
+      },
+      "problem_areas_identified": [
+        {
+          "area": "Operational Risk Management",
+          "problems": ["No survey-specific risk assessment", "Manual risk monitoring", "Limited risk quantification"],
+          "risks": ["Unidentified operational risks", "Inadequate risk response", "Regulatory scrutiny"]
+        },
+        {
+          "area": "Fraud Prevention",
+          "problems": ["No fraud detection for survey activities", "Limited monitoring coverage", "Manual incident response"],
+          "risks": ["Survey-based fraud attacks", "Data theft through surveys", "Customer financial losses"]
+        },
+        {
+          "area": "Business Continuity",
+          "problems": ["No survey system continuity planning", "Limited backup procedures", "Unclear recovery priorities"],
+          "risks": ["Extended survey outages", "Customer service disruption", "Reputational damage"]
+        },
+        {
+          "area": "Risk Reporting",
+          "problems": ["No survey risk metrics", "Manual report compilation", "Limited trend analysis"],
+          "risks": ["Inadequate risk visibility", "Missed risk indicators", "Regulatory reporting gaps"]
+        }
+      ],
+      "manual_activities": [
+        "Manual risk assessment for each new survey initiative",
+        "Hand-compiled risk reports for survey-related activities",
+        "Manual monitoring of survey system for security incidents",
+        "Case-by-case business continuity impact assessment",
+        "Manual fraud investigation for survey-related incidents"
+      ],
+      "duplications_identified": [
+        "Repeated risk assessments for similar survey types",
+        "Duplicate security monitoring across multiple systems",
+        "Redundant continuity planning documentation",
+        "Multiple manual risk reporting processes"
+      ]
+    },
+    "risk_management_specific_analysis": {
+      "risk_exposure_gaps": {
+        "operational_risk": "Limited visibility into survey system operational risk exposure",
+        "fraud_risk": "Inadequate fraud monitoring and prevention for survey activities",
+        "reputational_risk": "No systematic approach to managing survey-related reputational risks"
+      },
+      "control_deficiencies": [
+        "Lack of automated risk controls for survey system operations",
+        "Insufficient fraud detection coverage for survey-related activities", 
+        "Limited business continuity planning for customer feedback operations"
+      ],
+      "regulatory_concerns": [
+        "Potential gaps in demonstrating adequate risk management to regulators",
+        "Limited audit trail for survey-related risk decisions and actions",
+        "Unclear regulatory reporting implications of expanded survey activities"
+      ]
+    }
+  },
+  "handover_preparation": {
+    "key_insights_for_designer": [
+      "Risk-first design approach required with comprehensive risk assessment framework",
+      "Integration with existing fraud detection and business continuity systems essential",
+      "Automated risk monitoring and reporting capabilities must be built-in", 
+      "Security controls and incident response procedures need survey-specific adaptations"
+    ],
+    "domain_specific_requirements": [
+      "Risk Management KPI alignment (zero fraud > threshold, 100% compliance, continuity readiness)",
+      "Comprehensive risk assessment and monitoring framework for survey operations",
+      "Integration with existing risk management and fraud prevention infrastructure",
+      "Capital and reputation protection through systematic risk controls and monitoring"
+    ],
+    "quality_validation": {
+      "stakeholder_coverage": "Complete - all risk management and security roles identified",
+      "problem_statement_clarity": "Clear risk and security pain points defined", 
+      "scope_boundaries": "Well-defined with risk management constraints",
+      "as_is_documentation": "Comprehensive analysis of current risk management limitations"
+    }
+  }
+}
