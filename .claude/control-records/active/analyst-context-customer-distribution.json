@@ -1,0 +1,83 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System - Správa dotazníků uživatelem/vlastníkem",
+  "domain_focus": "Customer Distribution",
+  "analyst_level": "Expert Level",
+  "analyst_persona": {
+    "id": "agent_customer_distribution",
+    "role": "Director of Customer & Distribution",
+    "experience_years": "15+",
+    "bian_service_domains": ["Channel Management", "Customer Management", "Interaction Management", "Partner Management"],
+    "communication_style": "authoritative_strategic",
+    "expertise_depth": "comprehensive_c_level",
+    "pain_points": ["Legacy IVR and digital channels", "High physical branch costs"],
+    "kpis": ["NPS", "CSAT", "Cost-to-serve", "Channel availability"],
+    "goals": ["Increase satisfaction", "Balance cost and service quality"],
+    "strategic_capabilities": ["Regulatory frameworks expertise", "Digital transformation leadership", "Customer analytics mastery", "Market competitive intelligence"]
+  },
+  "knowledge_commands": [
+    "/Expert Level/know-customer-distribution"
+  ],
+  "workflow_state": "4_as_is_analysis",
+  "created_timestamp": "2025-09-12T12:30:00Z",
+  "last_updated": "2025-09-12T12:30:00Z",
+  "project_requirements": {
+    "czech_title": "BRQ202 - Správa dotazníků uživatelem/vlastníkem",
+    "english_title": "BRQ202 - Survey Management by User/Owner",
+    "core_functionality": {
+      "admin_fe_environment": "Application provides admin FE environment for survey management by business user/owner",
+      "template_creation": "Creation of new survey template",
+      "structure_elements": "Structure from known elements / sections / questions answers / control questions / sorting",
+      "no_algorithm_impact": "Without impacts to evaluation algorithm",
+      "survey_typology": "Survey typology (type, language, version, metadata)",
+      "activation_deactivation": "Activation / Deactivation of survey template",
+      "preview_function": "Preview function",
+      "template_copying": "Template copying",
+      "template_export": "Survey template export",
+      "survey_editing": "Survey editing",
+      "version_management": "Always new template version published / unpublished",
+      "version_invalidation": "Ability to invalidate original versions - unification of version compatibility (impact vs non-impact change) into evaluation algorithm",
+      "user_changelog": "User changelog on template",
+      "version_comparison": "Comparison of multiple template versions",
+      "version_deletion": "Version deletion - Only through Deactivation option",
+      "access_control": "Access through roles and access rights with AD integration",
+      "functional_modules": [
+        "Client service - can be further propagated to other internal systems via FE iframe",
+        "Survey management",
+        "Audit"
+      ]
+    }
+  },
+  "strategic_context": {
+    "market_positioning": "Digital-first banking transformation with customer-centric feedback loop as competitive differentiator",
+    "regulatory_landscape": ["GDPR Article 6 & 7 compliance", "PCI DSS for payment card surveys", "Banking Act customer protection", "MiFID II investor feedback requirements"],
+    "competitive_intelligence": "Leading banks implementing real-time feedback systems show 25% improvement in customer retention",
+    "transformation_alignment": "Core component of digital transformation strategy and customer experience excellence program"
+  },
+  "artifacts": {
+    "strategic_stakeholder_analysis": {
+      "completed": true,
+      "status": "Expert Level analysis with C-suite and regulatory stakeholder mapping"
+    },
+    "strategic_problem_statement": {
+      "completed": true, 
+      "status": "Enterprise-level business case with competitive intelligence and regulatory framework"
+    },
+    "strategic_scope_definition": {
+      "completed": true,
+      "status": "API-first architecture scope with partnership enablement and regulatory compliance"
+    },
+    "strategic_as_is_analysis": {
+      "completed": true,
+      "status": "Pre-digital architecture assessment with strategic risk evaluation and transformation baseline"
+    },
+    "workflow_completion": {
+      "phases_completed": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+      "analysis_level": "Expert Level",
+      "domain_focus": "Customer Distribution Strategic Analysis",
+      "completion_timestamp": "2025-09-12T12:35:00Z",
+      "ready_for_handover": true,
+      "next_phase": "Strategic Solution Architecture Design"
+    }
+  }
+}

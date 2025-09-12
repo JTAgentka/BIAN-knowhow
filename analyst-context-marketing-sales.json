@@ -1,0 +1,106 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System - Marketing Sales Strategic Analysis",
+  "domain_focus": "Marketing & Sales",
+  "analyst_level": "Expert Level",
+  "analyst_persona": {
+    "id": "agent_marketing_sales",
+    "role": "Director of Marketing & Sales",
+    "experience_years": "15+",
+    "bian_service_domains": ["Brand Management", "Campaign Management", "Event Management", "Lead Management", "Loyalty Management", "Market Management", "Message Management", "Offer Management", "Sales Plan Management"],
+    "communication_style": "strategic_authoritative",
+    "expertise_depth": "comprehensive_executive_expertise",
+    "pain_points": ["ROI pressure", "Conflicts with compliance", "Limited budgets vs. ambitious goals"],
+    "kpis": ["Number of new clients", "Retention", "Brand awareness", "Campaign ROI"],
+    "goals": ["Client base growth", "Brand strengthening"]
+  },
+  "knowledge_commands": [
+    "/Expert Level/know-marketing-sales"
+  ],
+  "workflow_state": "completed",
+  "current_phase": "4_as_is_analysis",
+  "created_timestamp": "2025-09-12T00:00:00Z",
+  "last_updated": "2025-09-12T00:00:00Z",
+  "strategic_context": {
+    "marketing_transformation_opportunity": "HIGH - Customer intelligence platform for competitive advantage",
+    "brand_positioning_impact": "CRITICAL - Voice of customer insights for brand strategy",
+    "competitive_intelligence_value": "STRATEGIC - Market research automation and competitive benchmarking",
+    "customer_lifecycle_enhancement": "TRANSFORMATIONAL - Data-driven personalization at scale"
+  },
+  "artifacts": {
+    "stakeholder_matrix": {
+      "executive_stakeholders": ["Chief Marketing Officer", "Chief Revenue Officer", "Head of Digital Marketing", "Director of Customer Analytics"],
+      "operational_stakeholders": ["Brand Manager", "Campaign Manager", "Market Research Manager", "Lead Generation Manager", "Customer Experience Manager"],
+      "technology_partners": ["Marketing Technology Manager", "Data Protection Officer", "IT Security Manager"],
+      "primary_marketing_domains_impact": ["Market Management", "Campaign Management", "Brand Management", "Lead Management", "Message Management", "Loyalty Management"],
+      "strategic_positioning": "Competitive intelligence and customer voice integration platform",
+      "marketing_transformation_scope": "Real-time customer insights, automated market research, predictive analytics"
+    },
+    "problem_statement": {
+      "business_pain": "Marketing intelligence fragmentation limiting competitive advantage and customer experience optimization",
+      "change_motivation": "Transform marketing capabilities through integrated customer intelligence platform for market leadership",
+      "strategic_drivers": {
+        "marketing_technology_evolution": "Integrated customer intelligence platform driving personalized marketing at scale",
+        "competitive_market_dynamics": "Proactive competitive intelligence with continuous market pulse",
+        "customer_experience_excellence": "360-degree customer voice integration across all marketing touchpoints"
+      },
+      "success_criteria": {
+        "campaign_roi": "4.5x average (from 3.2x)",
+        "brand_awareness": "75% aided awareness (from 67%)",
+        "new_client_acquisition": "11,000/quarter (from 8,500)",
+        "customer_retention": "92.0% (from 89.3%)",
+        "market_research_cycle": "2-3 weeks (from 6-8 weeks)",
+        "revenue_growth": "15-20% increase in marketing-driven revenue"
+      }
+    },
+    "scope_definition": {
+      "scope_in": {
+        "core_marketing_capabilities": ["Market Management - Customer Surveys", "Campaign Management - Real-time Feedback", "Brand Management - Perception Monitoring", "Lead Management - Qualification Integration", "Message Management - Effectiveness Testing", "Loyalty Management - NPS Measurement"],
+        "technology_integration": ["Marketing Automation Integration", "Customer Data Platform Connectivity", "Predictive Analytics Engine", "Real-time Dashboard", "Multi-channel Distribution", "Advanced Segmentation"],
+        "strategic_priority": "Customer intelligence platform for competitive advantage"
+      },
+      "scope_out": {
+        "excluded_areas": ["External Market Research Procurement", "Advanced AI/ML Model Development", "Social Media Sentiment Integration", "Mobile Application Development", "Customer Acquisition Channel Analytics", "Competitive Intelligence Automation"],
+        "future_phases": ["Phase 2: External vendor integration", "Phase 3: Advanced AI capabilities", "Parallel: Marketing attribution platform"]
+      },
+      "critical_assumptions": {
+        "technology": ["MarTech Stack API Compatibility", "Data Governance Framework Support", "GDPR Compliance Accommodation", "Marketing Team 20% Additional Capacity"],
+        "business_process": ["Campaign Workflow Integration Capability", "Brand Measurement Framework Compatibility", "Optimal Survey Frequency Balance", "Performance KPI Enhancement Alignment"]
+      },
+      "strategic_constraints": {
+        "budget_resources": ["Marketing Budget Allocation", "Technical Resource Availability", "Change Management Capacity", "Vendor Selection Timeline"],
+        "regulatory_compliance": ["GDPR Data Processing", "Banking Regulatory Oversight", "Data Residency Requirements", "Third-party Data Sharing Restrictions"],
+        "competitive_market": ["Customer Survey Fatigue", "Competitive Intelligence Sensitivity", "Market Research Vendor Relationships", "Brand Positioning Consistency"]
+      }
+    },
+    "as_is_analysis": {
+      "current_state_assessment": "FRAGMENTED - Marketing intelligence capabilities scattered across multiple platforms with significant integration gaps",
+      "primary_problem_areas": {
+        "market_research_operations": "Siloed research with 6-8 week turnaround, manual data integration, limited customer voice coverage",
+        "campaign_management": "Reactive optimization, delayed feedback loops, limited A/B testing capabilities",
+        "brand_management": "Quarterly monitoring with 2-month delays, no continuous brand health tracking",
+        "technology_infrastructure": "Multiple disconnected vendors, no automated survey data integration"
+      },
+      "critical_gaps": [
+        "Customer Intelligence Centralization",
+        "Real-time Campaign Optimization", 
+        "Continuous Brand Monitoring",
+        "Integrated Customer 360",
+        "Marketing Research Automation",
+        "Competitive Intelligence Acceleration"
+      ],
+      "strategic_risks": {
+        "competitive_intelligence_lag": "HIGH - Lost market opportunities and reactive positioning",
+        "customer_experience_blindspots": "HIGH - Brand reputation damage and customer churn",
+        "campaign_roi_suboptimization": "MEDIUM - Budget inefficiency and missed revenue targets",
+        "brand_positioning_misalignment": "MEDIUM - Market share erosion and competitive disadvantage"
+      },
+      "current_technology_gaps": {
+        "survey_platform": "FRAGMENTED - Multiple vendors with no integration",
+        "customer_database": "ADEQUATE - Limited survey data integration",
+        "marketing_automation": "STRONG - No survey trigger capabilities",
+        "analytics_platform": "GOOD - Manual survey data processing"
+      }
+    }
+  }
+}

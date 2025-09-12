@@ -1,78 +1,37 @@
 {
-  "agent_id": "agent_analyst_product_services", 
-  "agent_name": "Project Analyst - Product Services Domain",
-  "analysis_timestamp": "2025-09-12T00:00:00Z",
-  "project_code": "BRQ202",
-  "project_name": "Survey Management System",
-  "domain": "Product Services",
-  "expertise_level": "Senior Level",
-  "persona_identity": "Director of Product & Service Enabling",
-  "knowledge_commands": ["/Senior Level/know-product-services"],
-  "current_conversation_state": "4_as_is_analysis",
-  "conversation_states": {
-    "1_kickoff_stakeholders": {
-      "status": "completed",
-      "started_at": "2025-09-12T00:00:00Z",
-      "completed_at": "2025-09-12T00:15:00Z",
-      "artifacts": {
-        "stakeholder_engagement_matrix": "Product services stakeholder analysis completed with 8 key stakeholders identified"
-      }
-    },
-    "2_problem_statement": {
-      "status": "completed", 
-      "started_at": "2025-09-12T00:15:00Z",
-      "completed_at": "2025-09-12T00:30:00Z",
-      "artifacts": {
-        "problem_statement": "Product delivery and service enablement challenges identified with focus on launch speed, user adoption, and operational support"
-      }
-    },
-    "3_scope_definition": {
-      "status": "completed",
-      "started_at": "2025-09-12T00:30:00Z",
-      "completed_at": "2025-09-12T00:45:00Z",
-      "artifacts": {
-        "scope_matrix": "Product services scope boundaries defined with clear IN/OUT scope, assumptions and constraints"
-      }
-    },
-    "4_as_is_analysis": {
-      "status": "completed",
-      "started_at": "2025-09-12T00:45:00Z",
-      "completed_at": "2025-09-12T12:00:00Z",
-      "artifacts": {
-        "as_is_documentation": "Senior Level strategic analysis completed with comprehensive system architecture assessment, performance gap analysis, technical debt evaluation, and strategic recommendations"
-      }
-    }
+  "project": {
+    "id": "BRQ202",
+    "name": "Survey Management System - Expert Level Product Services Analysis",
+    "description": "Správa dotazníků uživatelem/vlastníkom - Expert Level strategic product and technology architecture analysis",
+    "created": "2025-09-12",
+    "domain": "Product Services",
+    "analysis_level": "Expert Level"
   },
-  "stakeholder_analysis": {
-    "completed": true,
-    "key_stakeholders": 8,
-    "high_influence_stakeholders": ["Product Manager", "Integration Team", "IT Operations"],
-    "engagement_focus": "Product delivery and service enablement"
+  "analyst": {
+    "agent_id": "agent_product_service",
+    "role": "Director of Product & Service Enabling",
+    "level": "Expert",
+    "experience_years": "15+",
+    "expertise_domains": ["Agreement Management", "Product Management", "Product Portfolio Management", "Payment Execution", "Financial Instrument Management", "Issued Device Administration"],
+    "persona_active": true,
+    "knowledge_commands": [
+      "/Expert Level/know-product-services"
+    ]
   },
-  "problem_statement": {
-    "completed": true,
-    "focus": "Product launch delays, service delivery challenges, integration bottlenecks",
-    "goals": "6-month launch, 80% adoption, SLA compliance"
+  "workflow": {
+    "current_state": "completed",
+    "completed_states": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+    "pending_states": []
   },
-  "scope_definition": {
-    "completed": true, 
-    "scope_in_items": 14,
-    "scope_out_items": 13,
-    "key_constraints": "6-month timeline, existing tech stack, business hours support"
+  "deliverables": {
+    "stakeholder_matrix": "completed",
+    "problem_statement": "completed",
+    "scope_matrix": "completed",
+    "as_is_analysis": "completed",
+    "expert_deliverables_package": "analyst-product-services-deliverables.json"
   },
-  "as_is_analysis": {
-    "completed": true,
-    "current_process_steps": 5,
-    "major_issues": 6,
-    "performance_gaps": "Creation 2-5 days vs target hours (85-90% improvement needed), approval 1-2 weeks vs target 1-2 days (70-85% improvement needed)",
-    "strategic_assessment": {
-      "system_fragmentation": "4+ different survey creation methods across organization",
-      "technical_debt": "Legacy dependencies, limited API maturity, scattered database schemas",
-      "compliance_risks": "Audit trail deficiency, data security gaps, inconsistent regulatory handling"
-    }
-  },
-  "project_context": {
-    "requirement": "BRQ202 - Survey Management Application providing admin FE environment for business users/owners with survey template creation, management, versioning, and role-based access",
-    "domain_focus": "Product Services aspects including product lifecycle support, service delivery, system integrations, and operational procedures"
+  "session_data": {
+    "started": "2025-09-12T12:00:00Z",
+    "last_updated": "2025-09-12T12:00:00Z"
   }
 }
