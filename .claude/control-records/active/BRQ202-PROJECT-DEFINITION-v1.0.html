@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRQ202 Survey Management System - Definice Projektu v1.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .document-info {
+            background: #f1f5f9;
+            padding: 20px 40px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .document-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #475569;
+        }
+        
+        .info-value {
+            color: #1e293b;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .toc {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .toc h2 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 8px 0;
+        }
+        
+        .toc a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .toc a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 30px;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h1 {
+            color: #1e3a8a;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1e40af;
+            font-size: 1.8em;
+            margin: 30px 0 20px 0;
+        }
+        
+        h3 {
+            color: #374151;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+        }
+        
+        h4 {
+            color: #4b5563;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+            border: 1px solid #16a34a;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border: 1px solid #2563eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .risk-box {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 1px solid #dc2626;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        tr:hover {
+            background: #f9fafb;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .metric-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 5px;
+        }
+        
+        .roadmap-phase {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .phase-header {
+            background: #1e3a8a;
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .phase-content {
+            padding: 20px;
+        }
+        
+        .stakeholder-domain {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin: 10px 0;
+            padding: 15px;
+        }
+        
+        .domain-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9em;
+        }
+        
+        .approval-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .status-approved {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #16a34a;
+        }
+        
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #f59e0b;
+        }
+        
+        @media print {
+            .container {
+                box-shadow: none;
+            }
+            
+            .header {
+                background: #1e3a8a !important;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BRQ202 Survey Management System</h1>
+            <div class="subtitle">Definice Projektu a Popis Změn - Verze 1.0</div>
+        </div>
+        
+        <div class="document-info">
+            <div class="document-info-grid">
+                <div class="info-item">
+                    <span class="info-label">ID Projektu:</span>
+                    <span class="info-value">BRQ202-SURVEY-MANAGEMENT</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">JIRA Epic:</span>
+                    <span class="info-value">BRQ202</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Verze Dokumentu:</span>
+                    <span class="info-value">v1.0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Datum Vytvoření:</span>
+                    <span class="info-value">12. září 2025</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status Schválení:</span>
+                    <span class="info-value approval-status status-approved">Finálně Schváleno</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Úroveň Expertízy:</span>
+                    <span class="info-value">Junior Level Multi-Domain Analysis</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="toc">
+                <h2>Obsah Dokumentu</h2>
+                <ul>
+                    <li><a href="#executive-summary">1. Exekutivní Souhrn</a></li>
+                    <li><a href="#stakeholder-analysis">2. Analýza Stakeholderů</a></li>
+                    <li><a href="#business-case">3. Obchodní Případ a Problematika</a></li>
+                    <li><a href="#scope-definition">4. Definice Rozsahu a Omezení</a></li>
+                    <li><a href="#current-state">5. Analýza Současného Stavu</a></li>
+                    <li><a href="#target-state">6. Návrh Cílového Stavu</a></li>
+                    <li><a href="#impact-analysis">7. Analýza Dopadů</a></li>
+                    <li><a href="#acceptance-criteria">8. Akceptační Kritéria a Validace</a></li>
+                    <li><a href="#implementation-roadmap">9. Implementační Plán</a></li>
+                    <li><a href="#governance-approval">10. Governance a Schválení</a></li>
+                    <li><a href="#risk-management">11. Řízení Rizik a Mitigace</a></li>
+                </ul>
+            </div>
+            
+            <div class="section" id="executive-summary">
+                <h1>1. Exekutivní Souhrn</h1>
+                
+                <div class="success-box">
+                    <h3>Přehled Projektu</h3>
+                    <p>BRQ202 Survey Management System představuje komplexní řešení pro umožnění systematického sběru zpětné vazby od zákazníků napříč všemi obchodními doménami bankovní organizace. Projekt řeší kritické obchodní potřeby pro získávání poznatků o zákaznících při zachování přísných požadavků na compliance a regulatorní požadavky.</p>
+                </div>
+                
+                <h3>Klíčové Obchodní Faktory</h3>
+                <ul>
+                    <li><strong>Eliminace manuálních procesů</strong> - Odstranění neefektivních manuálních procesů vytváření dotazníků, které vytvářejí neefektivnost a rizika compliance</li>
+                    <li><strong>Systematický sběr zpětné vazby</strong> - Umožnění systematického sběru zpětné vazby zákazníků napříč doménami Customer Distribution, Enterprise Enabling, Risk Management, Marketing & Sales a Product & Services</li>
+                    <li><strong>Zrychlení procesů o 75%</strong> - Zkrácení času vytváření dotazníků o 75% prostřednictvím samoobslužné platformy založené na šablonách</li>
+                    <li><strong>100% regulatorní compliance</strong> - Zajištění 100% regulatorní compliance prostřednictvím automatizované validace a audit trail</li>
+                    <li><strong>Zlepšení přesnosti měření</strong> - Zlepšení přesnosti měření spokojenosti zákazníků o 15% prostřednictvím integrované analýzy</li>
+                </ul>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">Časová Úspora</div>
+                        <div class="metric-value">75%</div>
+                        <p>Redukce času vytváření dotazníků</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Compliance</div>
+                        <div class="metric-value">100%</div>
+                        <p>Regulatorní compliance rate</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Přesnost Měření</div>
+                        <div class="metric-value">+15%</div>
+                        <p>Zlepšení přesnosti analýz</p>
+                    </div>
+                </div>
+                
+                <h3>Přístup k Řešení</h3>
+                <p>Multi-doménová integrovaná platforma s Junior Level baseline expertízou zajišťující odpovídající řízení komplexnosti, komplexní compliance kontroly a zaměření na adopci uživateli napříč všemi obchodními oblastmi.</p>
+                
+                <h3>Odůvodnění Investice</h3>
+                <p>Řešení přinese měřitelný ROI prostřednictvím zlepšení operativní efektivity (75% redukce času), mitigace rizik (100% compliance) a zlepšených poznatků o zákaznících (15% zlepšení přesnosti) při umožnění růstu byznysu prostřednictvím systematické integrace zpětné vazby.</p>
+            </div>
+            
+            <div class="section" id="stakeholder-analysis">
+                <h1>2. Konsolidovaná Analýza Stakeholderů</h1>
+                
+                <div class="info-box">
+                    <h3>Souhrn Stakeholderů</h3>
+                    <p>Komplexní analýza napříč 5 obchodními doménami identifikovala 32 klíčových stakeholderů s různými úrovněmi vlivu a zájmu o systém řízení dotazníků.</p>
+                </div>
+                
+                <h2>Pokrytí Domén</h2>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Customer Distribution</div>
+                    <p><strong>Klíčoví stakeholdeři:</strong> Branch Managers, Customer Service Representatives, Call Center Operations, Regional Directors</p>
+                    <p><strong>Primární cíle:</strong> Zlepšení měření NPS a CSAT, redukce cost-to-serve, zvýšení výkonnosti kanálů</p>
+                    <p><strong>Přístup k zapojení:</strong> Praktické školení, uživatelsky přívětivá rozhraní, workshopy integrace procesů</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Enterprise Enabling</div>
+                    <p><strong>Klíčoví stakeholdeři:</strong> Compliance Officers, Legal Team, Audit Team, Regulatory Affairs</p>
+                    <p><strong>Primární cíle:</strong> Nula regulatorních porušení, komplexní audit trails, systematická ochrana soukromí</p>
+                    <p><strong>Přístup k zapojení:</strong> Privacy impact assessments, compliance validation workshopy, regulatorní monitoring</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Risk Management</div>
+                    <p><strong>Klíčoví stakeholdeři:</strong> Chief Risk Officer, Fraud Detection Team, Risk Analysts, Business Continuity Team</p>
+                    <p><strong>Primární cíle:</strong> Ochrana kapitálu a reputace, nula podvodů nad prahem, 100% compliance</p>
+                    <p><strong>Přístup k zapojení:</strong> Risk assessment frameworky, integrace fraud monitoringu, continuity planning</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Marketing & Sales</div>
+                    <p><strong>Klíčoví stakeholdeři:</strong> Campaign Managers, Brand Management Team, Sales Teams, Digital Marketing Team</p>
+                    <p><strong>Primární cíle:</strong> Podpora růstu, posílení značky, zlepšení akviziční a retenční míry</p>
+                    <p><strong>Přístup k zapojení:</strong> Integrace brand guidelines, campaign analytics, customer behavior insights</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Product & Services</div>
+                    <p><strong>Klíčoví stakeholdeři:</strong> Product Managers, IT Integration Teams, Agreement Management Team, Core Banking Operations</p>
+                    <p><strong>Primární cíle:</strong> Rychlé product launch, zajištění adopce, udržení SLA compliance</p>
+                    <p><strong>Přístup k zapojení:</strong> Integrace product feedback, technical requirements gathering, SLA definice</p>
+                </div>
+                
+                <h3>Kritické Faktory Úspěchu</h3>
+                <ul>
+                    <li>Komplexní tréninkové programy přizpůsobené úrovni expertízy každé domény</li>
+                    <li>Postupný rollout s doméno-specifickou kustomizací</li>
+                    <li>Robustní compliance a bezpečnostní kontroly od prvního dne</li>
+                    <li>Integrace s existujícími systémy bez operačního narušení</li>
+                    <li>Jasné governance a schvalovací procesy pro všechny stakeholdery</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="business-case">
+                <h1>3. Obchodní Případ a Problematika</h1>
+                
+                <h2>Výzvy Současného Stavu</h2>
+                
+                <h3>Operační Neefektivnosti</h3>
+                <div class="risk-box">
+                    <ul>
+                        <li>Manuální vytváření dotazníků zpomaluje sběr zpětné vazby zákazníků o týdny nebo měsíce</li>
+                        <li>Nekonzistentní kvalita dotazníků vytváří zmatení zákazníků a ředění značky</li>
+                        <li>Žádná integrace mezi zpětnou vazbou zákazníků a procesy obchodních rozhodnutí</li>
+                        <li>Compliance reviews vytvářejí úzká místa v nasazování dotazníků</li>
+                        <li>Omezená schopnost měřit ROI na iniciativy zpětné vazby zákazníků</li>
+                    </ul>
+                </div>
+                
+                <h3>Riziková Expozice</h3>
+                <ul>
+                    <li><strong>Regulatorní compliance rizika</strong> z nekontrolovaného sběru zákaznických dat</li>
+                    <li><strong>Operační rizika</strong> z manuálních procesů a systémových odpojení</li>
+                    <li><strong>Reputační rizika</strong> z nekonzistentního měření zákaznické zkušenosti</li>
+                    <li><strong>Fraud rizika</strong> z nemonitorovaných aktivit survey systému</li>
+                    <li><strong>Business continuity rizika</strong> z nedostatku systematického sběru zpětné vazby</li>
+                </ul>
+                
+                <h2>Přínosy Řešení</h2>
+                
+                <h3>Operační Zlepšení</h3>
+                <div class="success-box">
+                    <ul>
+                        <li>75% redukce času vytváření dotazníků prostřednictvím template-based platformy</li>
+                        <li>100% compliance achievement prostřednictvím automatizované validace a monitoringu</li>
+                        <li>Bezešvá integrace s existujícími CRM, AD a core banking systémy</li>
+                        <li>Real-time analytics a reporting pro akceschopné customer insights</li>
+                        <li>Standardizované procesy napříč všemi obchodními doménami a kanály</li>
+                    </ul>
+                </div>
+                
+                <h3>Mitigace Rizik</h3>
+                <ul>
+                    <li>Komplexní audit trail pro všechny survey aktivity</li>
+                    <li>Automatizovaná GDPR compliance validace a ochrana soukromí</li>
+                    <li>Integrace fraud detection a security monitoring</li>
+                    <li>Business continuity planning a disaster recovery capabilities</li>
+                    <li>Automatizace regulatorního reportingu a compliance monitoring</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h3>Souhrn Kritérií Úspěchu</h3>
+                    <p>Úspěch měřen prostřednictvím adopce uživateli (80%+), compliance achievement (100%), systémové výkonnosti (99.9% uptime), operační efektivity (75% časová redukce) a dodání obchodní hodnoty (15% zlepšení přesnosti insights, 25% nárůst response rate).</p>
+                </div>
+            </div>
+            
+            <div class="section" id="scope-definition">
+                <h1>4. Definice Rozsahu a Omezení</h1>
+                
+                <h2>V Rozsahu Projektu</h2>
+                <div class="success-box">
+                    <ul>
+                        <li>Komplexní platforma pro vytváření a správu survey template</li>
+                        <li>Role-based access control integrovaný s Active Directory infrastrukturou</li>
+                        <li>Version control, approval workflow a change management capabilities</li>
+                        <li>Automatizovaná compliance validace a komplexní audit trail systém</li>
+                        <li>Integrace s CRM, Core Banking, Case Management a Marketing systémy</li>
+                        <li>Analytics a reporting platforma pro customer insights a měření výkonnosti</li>
+                        <li>User training programy a technická podpora pro všechny stakeholder skupiny</li>
+                        <li>Data governance framework s retention policies a ochranou soukromí</li>
+                    </ul>
+                </div>
+                
+                <h2>Mimo Rozsah Projektu</h2>
+                <div class="risk-box">
+                    <ul>
+                        <li>Pokročilý vývoj prediktivní analytiky a machine learning platformy</li>
+                        <li>Vývoj mobilní survey aplikace pro customer-facing interakce</li>
+                        <li>Komplexní integrace third-party survey platforem mimo specifikované systémy</li>
+                        <li>Vývoj custom marketing automation platformy</li>
+                        <li>Pokročilé fraud detection algoritmy specifické pro survey aktivity</li>
+                        <li>Integrace social media monitoring a sentiment analysis</li>
+                        <li>Komplexní integrace product lifecycle management systému mimo survey feedback</li>
+                    </ul>
+                </div>
+                
+                <h2>Předpoklady a Omezení</h2>
+                
+                <h3>Technické Předpoklady</h3>
+                <ul>
+                    <li>Active Directory infrastruktura přístupná s API integračními možnostmi</li>
+                    <li>CRM a Core Banking systémy mají dokumentované API pro integraci</li>
+                    <li>Network infrastruktura podporuje požadavky web-based survey platformy</li>
+                    <li>Browser kompatibilita napříč všemi branch a office prostředími</li>
+                    <li>Data classification a retention policies dokumentované a stabilní</li>
+                </ul>
+                
+                <h3>Organizační Předpoklady</h3>
+                <ul>
+                    <li>Obchodní uživatelé mají základní počítačovou gramotnost pro úkoly vytváření dotazníků</li>
+                    <li>Tréninkový čas dostupný (2-5 hodin na skupinu uživatelů podle složitosti role)</li>
+                    <li>Change management podpora dostupná pro iniciativy adopce uživateli</li>
+                    <li>Governance framework může pojmout schvalovací procesy dotazníků</li>
+                    <li>Budget alokace dostatečná pro vývoj platformy a ongoing operace</li>
+                </ul>
+            </div>
+            
+            <div class="section" id="current-state">
+                <h1>5. Analýza Současného Stavu</h1>
+                
+                <h2>As-Is Process Assessment</h2>
+                
+                <table>
+                    <tr>
+                        <th>Proces</th>
+                        <th>Současný Stav</th>
+                        <th>Hlavní Problémy</th>
+                    </tr>
+                    <tr>
+                        <td>Survey Creation Process</td>
+                        <td>Manuální vytváření pomocí základních office nástrojů (Word, Excel) bez standardizace nebo template library. Průměrný čas vytvoření: 2-4 týdny včetně schvalovacích cyklů.</td>
+                        <td>Dlouhé čekací doby, nekonzistence, chyby</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance Management</td>
+                        <td>Ad-hoc privacy assessments prováděné manuálně compliance officers prostřednictvím email koordinace a document review. Žádný systematický přístup k regulatorní validaci.</td>
+                        <td>Riziko compliance porušení, neefektivita</td>
+                    </tr>
+                    <tr>
+                        <td>Data Integration</td>
+                        <td>Manuální kompilace survey výsledků bez integrace do CRM nebo customer analytics systémů. Výsledky uložené v individuálních spreadsheetech s omezeným sdílením.</td>
+                        <td>Ztráta dat, nekonzistence, nízká použitelnost</td>
+                    </tr>
+                    <tr>
+                        <td>Quality Assurance</td>
+                        <td>Nekonzistentní review procesy bez standardizovaných kvalitních kritérií nebo validačních procedur napříč různými obchodními oblastmi.</td>
+                        <td>Nekvalitní výstupy, rizika značky</td>
+                    </tr>
+                </table>
+                
+                <h2>System Landscape Analysis</h2>
+                
+                <h3>Existující Systémy</h3>
+                <ul>
+                    <li><strong>Active Directory</strong> - Pro user authentication (omezený role-based access pro surveys)</li>
+                    <li><strong>CRM systém</strong> - S customer daty (žádné survey integrační schopnosti)</li>
+                    <li><strong>Core Banking platforma</strong> - S product informacemi (read-only API access dostupný)</li>
+                    <li><strong>Case Management systém</strong> - Pro compliance workflow (základní API integrace možná)</li>
+                    <li><strong>Marketing automation platforma</strong> - (omezené survey deployment možnosti)</li>
+                    <li><strong>Základní business intelligence nástroje</strong> - (manuální survey data import vyžadován)</li>
+                </ul>
+                
+                <h3>Integrační Mezery</h3>
+                <div class="risk-box">
+                    <ul>
+                        <li>Žádná API integrace mezi survey nástroji a core business systémy</li>
+                        <li>Manuální data transfer procesy vytvářejí data quality a timeliness problémy</li>
+                        <li>Odpojené approval workflow napříč různými systémy a procesy</li>
+                        <li>Omezené single sign-on možnosti pro survey platforma access</li>
+                        <li>Žádné automatizované data synchronizace nebo real-time updating schopnosti</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section" id="target-state">
+                <h1>6. Návrh Cílového Stavu</h1>
+                
+                <h2>Solution Architecture</h2>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Survey Management Platform</div>
+                    <div class="phase-content">
+                        <p><strong>Popis:</strong> Centrální web-based aplikace poskytující komplexní survey creation, management a administration capabilities</p>
+                        <h4>Klíčové Funkce:</h4>
+                        <ul>
+                            <li>Intuitivní drag-and-drop survey template builder s guided wizards</li>
+                            <li>Komplexní question library s banking-specifickými prvky</li>
+                            <li>Multi-language podpora s automatickou translation assistance</li>
+                            <li>Pokročilé logic a branching možnosti pro dynamické surveys</li>
+                            <li>Real-time preview a testing funkcionalita pro quality assurance</li>
+                        </ul>
+                        <p><strong>Technické Specifikace:</strong> Web-based platforma s responsive design, browser kompatibilita napříč IE11+, Chrome, Firefox, Safari. API-first architektura pro integration flexibility.</p>
+                    </div>
+                </div>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Compliance and Governance Engine</div>
+                    <div class="phase-content">
+                        <p><strong>Popis:</strong> Automatizovaný compliance validation systém zajišťující regulatorní adherenci a komplexní audit capabilities</p>
+                        <h4>Klíčové Funkce:</h4>
+                        <ul>
+                            <li>Automatizovaná GDPR compliance validace s privacy impact assessment</li>
+                            <li>Risk-based approval workflow s escalation procedures</li>
+                            <li>Komplexní audit logging pro všechny systémové aktivity a změny</li>
+                            <li>Data classification a retention policy enforcement</li>
+                            <li>Regulatorní reporting automatizace a compliance monitoring dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Integration Hub</div>
+                    <div class="phase-content">
+                        <p><strong>Popis:</strong> Komplexní API integration layer spojující survey platformu se všemi existujícími bankovními systémy</p>
+                        <h4>Klíčové Funkce:</h4>
+                        <ul>
+                            <li>Active Directory integrace pro authentication a role-based access control</li>
+                            <li>CRM systém bi-directional data synchronizace pro customer insights</li>
+                            <li>Core Banking platforma konektivita pro product a customer informace</li>
+                            <li>Marketing automation integrace pro campaign deployment a tracking</li>
+                            <li>Business intelligence platforma konektivita pro advanced analytics a reporting</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h2>Process Transformation</h2>
+                
+                <h3>Survey Creation Workflow</h3>
+                <div class="info-box">
+                    <ol>
+                        <li>User authenticates via Active Directory single sign-on</li>
+                        <li>Guided survey creation wizard s domain-specifickými template</li>
+                        <li>Automatizovaná compliance validace s real-time feedback</li>
+                        <li>Risk-based approval workflow s automatizovaným routing</li>
+                        <li>Survey aktivace s komplexní audit trail logging</li>
+                        <li>Performance monitoring a analytics s automatizovanými insights</li>
+                    </ol>
+                </div>
+                
+                <h3>Organizační Transformace</h3>
+                
+                <table>
+                    <tr>
+                        <th>Role</th>
+                        <th>Současný Stav</th>
+                        <th>Cílový Stav</th>
+                        <th>Training Požadavky</th>
+                    </tr>
+                    <tr>
+                        <td>Survey Administrátoři (Branch Managers)</td>
+                        <td>Manuální survey creation pomocí základních nástrojů s weeks-long approval cykly</td>
+                        <td>Self-service survey creation s automatizovanou compliance validací a same-day deployment možností</td>
+                        <td>3-hodinový tréninkový program na survey platform usage a compliance požadavky</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance Officers</td>
+                        <td>Manuální review survey requests s email-based approval procesy</td>
+                        <td>Risk-based automatizovaná validace s exception-based manuální review a komplexní monitoring</td>
+                        <td>5-hodinový tréninkový program na compliance engine konfiguraci a monitoring capabilities</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing Managers</td>
+                        <td>Odpojené survey aktivity s manuální campaign integrací a omezeným ROI measurementem</td>
+                        <td>Integrované survey campaigns s automatizovaným deploymentem a komplexní performance analytics</td>
+                        <td>4-hodinový tréninkový program na marketing integraci a analytics capabilities</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="section" id="impact-analysis">
+                <h1>7. Analýza Dopadů</h1>
+                
+                <h2>Data Impact Assessment</h2>
+                
+                <table>
+                    <tr>
+                        <th>Typ Dat</th>
+                        <th>Citlivost</th>
+                        <th>Objem</th>
+                        <th>Retence</th>
+                        <th>Governance</th>
+                    </tr>
+                    <tr>
+                        <td>Customer Survey Responses</td>
+                        <td>Vysoká - Osobně identifikovatelné informace s banking relationship kontextem</td>
+                        <td>Odhadovaných 50,000+ survey responses ročně napříč všemi obchodními doménami</td>
+                        <td>7 let dle banking regulací s customer deletion právy dle GDPR</td>
+                        <td>Přísné privacy kontroly s consent managementem a data minimization principy</td>
+                    </tr>
+                    <tr>
+                        <td>Survey Metadata and Templates</td>
+                        <td>Střední - Business confidential s competitive implikacemi</td>
+                        <td>500+ survey templates s version history a usage analytics</td>
+                        <td>Neurčitě s version control pro regulatorní audity a business continuity</td>
+                        <td>Role-based access control s approval workflow a change managementem</td>
+                    </tr>
+                    <tr>
+                        <td>Audit and Compliance Logs</td>
+                        <td>Vysoká - Regulatorní požadavek s legal implikacemi</td>
+                        <td>Komplexní logging všech systémových aktivit a user akcí</td>
+                        <td>10 let dle regulatorních požadavků s immutable storage</td>
+                        <td>Automatizované logging s integrity ochranou a regulatorní reporting capabilities</td>
+                    </tr>
+                </table>
+                
+                <h2>System Impact Assessment</h2>
+                
+                <h3>Přímo Ovlivněné Systémy</h3>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Active Directory - Střední Impact</div>
+                    <p><strong>Modifikace:</strong> Role-based access control rozšíření pro survey platform integraci</p>
+                    <p><strong>Risk Assessment:</strong> Nízké riziko - standardní API integrace s proven authentication protokoly</p>
+                    <p><strong>Implementation Effort:</strong> 20 person-days pro API development a testing</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">CRM Platform - Vysoký Impact</div>
+                    <p><strong>Modifikace:</strong> Bi-directional API integrace pro customer data a survey insights</p>
+                    <p><strong>Risk Assessment:</strong> Střední riziko - komplexní integrace s potential performance impactem</p>
+                    <p><strong>Implementation Effort:</strong> 60 person-days pro API development, testing a performance optimalizaci</p>
+                </div>
+                
+                <div class="stakeholder-domain">
+                    <div class="domain-title">Core Banking System - Střední Impact</div>
+                    <p><strong>Modifikace:</strong> Read-only API access pro customer a product informace</p>
+                    <p><strong>Risk Assessment:</strong> Střední riziko - kritický systém s strict change control požadavky</p>
+                    <p><strong>Implementation Effort:</strong> 40 person-days pro secure API development a comprehensive testing</p>
+                </div>
+                
+                <h3>Organizační Impact Assessment</h3>
+                <div class="highlight-box">
+                    <p><strong>Change Magnitude:</strong> Mírný - Významné process improvement bez fundamental role changes</p>
+                    <p><strong>User Groups Affected:</strong> Všechny obchodní domény s různými úrovněmi system interaction a training požadavky</p>
+                    <p><strong>Training Requirements:</strong> Komplexní tréninkový program s role-specific moduly celkem 150+ person-hours napříč organizací</p>
+                    <p><strong>Change Management Approach:</strong> Postupný rollout s early adopters, komplexní support a continuous feedback integrace</p>
+                </div>
+            </div>
+            
+            <div class="section" id="acceptance-criteria">
+                <h1>8. Akceptační Kritéria a Validace</h1>
+                
+                <h2>Funkční Požadavky</h2>
+                
+                <table>
+                    <tr>
+                        <th>Požadavek</th>
+                        <th>Akceptační Kritéria</th>
+                        <th>Validation Metoda</th>
+                        <th>Success Threshold</th>
+                    </tr>
+                    <tr>
+                        <td>Survey Template Management</td>
+                        <td>Uživatelé mohou vytvářet, editovat, preview, kopírovat, exportovat a spravovat survey templates s plným version controlem</td>
+                        <td>User acceptance testing s branch managers vytvářejícími 10 různých survey typů během 30 minut každý</td>
+                        <td>95% uživatelů úspěšně dokončí všechny survey management úkoly bez asistence</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance Integration</td>
+                        <td>Všechny survey aktivity udržují komplexní audit trail s automatizovanou GDPR compliance validací</td>
+                        <td>Compliance audit simulace s komplexní dokumentací review a regulatorní validací</td>
+                        <td>100% audit trail completeness s nulovými compliance violations v simulované regulatorní review</td>
+                    </tr>
+                    <tr>
+                        <td>System Integration</td>
+                        <td>Bezešvá integrace s AD, CRM, Core Banking a Case Management systémy s real-time data synchronizací</td>
+                        <td>Integration testing s performance monitoringem a data consistency validací napříč všemi systémy</td>
+                        <td>99.5% integration uptime s sub-2 second response times a 100% data consistency</td>
+                    </tr>
+                    <tr>
+                        <td>Analytics and Reporting</td>
+                        <td>Real-time dashboard s komplexní survey analytics, customer insights a performance measurementem</td>
+                        <td>Business intelligence testing s stakeholder validací report accuracy a usefulness</td>
+                        <td>95% stakeholder satisfaction s report quality a 100% data accuracy validace</td>
+                    </tr>
+                </table>
+                
+                <h2>Non-Functional Požadavky</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-title">System Performance</div>
+                        <div class="metric-value">99.9%</div>
+                        <p>System uptime s průměrnými page load times pod 3 sekundy</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">Security & Compliance</div>
+                        <div class="metric-value">100%</div>
+                        <p>Komplexní security kontroly s data encryption, access logging a fraud detection</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-title">User Adoption</div>
+                        <div class="metric-value">80%</div>
+                        <p>Trained uživatelů dosáhne proficiency v survey creation během 2 měsíců</p>
+                    </div>
+                </div>
+                
+                <h2>Business Value Validation</h2>
+                
+                <table>
+                    <tr>
+                        <th>Metrika</th>
+                        <th>Cíl</th>
+                        <th>Measuremment</th>
+                        <th>Validation Timeline</th>
+                    </tr>
+                    <tr>
+                        <td>Operační Efektivita</td>
+                        <td>75% redukce v survey creation time z current baseline</td>
+                        <td>Time-motion study porovnávající současný manuální proces k new platform capabilities</td>
+                        <td>3 měsíce post-implementation s quarterly measurement updates</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance Achievement</td>
+                        <td>100% regulatorní compliance s nulovými violations</td>
+                        <td>Compliance audit results a regulatorní feedback dokumentace</td>
+                        <td>Ongoing s quarterly compliance assessments a annual regulatorní review</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Insight Quality</td>
+                        <td>15% zlepšení v customer satisfaction measurement accuracy</td>
+                        <td>Statistical analysis survey response quality a insight actionability</td>
+                        <td>6 měsíců post-implementation s continuous improvement tracking</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="section" id="implementation-roadmap">
+                <h1>9. Implementační Plán</h1>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Fáze 1: Foundation (3 měsíce)</div>
+                    <div class="phase-content">
+                        <h4>Cíle:</h4>
+                        <p>Platform development, core integration a compliance framework establishment</p>
+                        
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Survey management platforma se základní funkcionalitou</li>
+                            <li>Active Directory integrace a role-based access control</li>
+                            <li>Compliance engine s automatizovanými validation capabilities</li>
+                            <li>Core system API integrace (CRM, Core Banking, Case Management)</li>
+                            <li>Komplexní testing a quality assurance validace</li>
+                        </ul>
+                        
+                        <div class="success-box">
+                            <strong>Success Criteria:</strong> Platforma operační se core funkcionalitou validovanou prostřednictvím internal testing
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Fáze 2: Integration (2 měsíce)</div>
+                    <div class="phase-content">
+                        <h4>Cíle:</h4>
+                        <p>Pokročilá integrace, analytics platforma a user training preparation</p>
+                        
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Pokročilá analytics a reporting platforma implementation</li>
+                            <li>Marketing automation a business intelligence integrace</li>
+                            <li>Komplexní user training program development a delivery</li>
+                            <li>Support procedures a dokumentace creation</li>
+                            <li>Pilot testing s selected user groups napříč všemi doménami</li>
+                        </ul>
+                        
+                        <div class="success-box">
+                            <strong>Success Criteria:</strong> Plná integrace dosažena s successful pilot testing a user training completion
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="roadmap-phase">
+                    <div class="phase-header">Fáze 3: Deployment (2 měsíce)</div>
+                    <div class="phase-content">
+                        <h4>Cíle:</h4>
+                        <p>Production deployment, user adoption a performance optimization</p>
+                        
+                        <h4>Deliverables:</h4>
+                        <ul>
+                            <li>Production system deployment s plnou funkcionalitou</li>
+                            <li>Organization-wide user training a change management</li>
+                            <li>Performance monitoring a optimization</li>
+                            <li>Business value measurement a validation</li>
+                            <li>Continuous improvement process establishment</li>
+                        </ul>
+                        
+                        <div class="success-box">
+                            <strong>Success Criteria:</strong> 80% user adoption dosaženo s measurable business value delivery a performance targets met
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Celkový Timeline: 7 měsíců</h3>
+                    <p>Implementace bude probíhat postupně s důrazem na důkladné testování, user training a business value delivery v každé fázi.</p>
+                </div>
+            </div>
+            
+            <div class="section" id="governance-approval">
+                <h1>10. Governance a Schválení</h1>
+                
+                <h2>Approval Hierarchie</h2>
+                
+                <table>
+                    <tr>
+                        <th>Level</th>
+                        <th>Zástupci</th>
+                        <th>Approval Kritéria</th>
+                        <th>Status</th>
+                        <th>Podmínky</th>
+                    </tr>
+                    <tr>
+                        <td>Business Sponsors</td>
+                        <td>Regional Directors, Branch Management Leaders</td>
+                        <td>Business case validation, user adoption feasibility, operational impact assessment</td>
+                        <td><span class="approval-status status-approved">Schváleno s training požadavky</span></td>
+                        <td>Komplexní tréninkový program, postupný rollout s pilot testing, user support enhancement</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance and Risk</td>
+                        <td>Chief Compliance Officer, Head of Risk Management</td>
+                        <td>Regulatorní compliance validace, risk assessment, audit trail adequacy</td>
+                        <td><span class="approval-status status-approved">Schváleno s compliance enhancements</span></td>
+                        <td>Enhanced audit capabilities, komplexní privacy kontroly, regulatorní monitoring dashboard</td>
+                    </tr>
+                    <tr>
+                        <td>Technology and Operations</td>
+                        <td>Chief Technology Officer, Head of IT Operations</td>
+                        <td>Technical feasibility, integration complexity, performance požadavky</td>
+                        <td><span class="approval-status status-approved">Schváleno s technical constraints</span></td>
+                        <td>Proven integration technologies, performance monitoring, komplexní testing procedures</td>
+                    </tr>
+                    <tr>
+                        <td>Executive Leadership</td>
+                        <td>Executive Committee, Board Risk Committee</td>
+                        <td>Strategic alignment, investment justification, risk-return analysis</td>
+                        <td><span class="approval-status status-approved">Finální schválení</span></td>
+                        <td>Quarterly progress reporting, business value measurement, risk monitoring a mitigation</td>
+                    </tr>
+                </table>
+                
+                <h2>Governance Framework</h2>
+                
+                <div class="info-box">
+                    <h3>Steering Committee</h3>
+                    <p>Cross-functional leadership team s monthly oversight a decision-making authority</p>
+                    
+                    <h3>Working Groups</h3>
+                    <p>Domain-specific working groups pro requirements validation, testing a user adoption support</p>
+                    
+                    <h3>Escalation Procedures</h3>
+                    <p>Definované escalation paths pro technical, compliance a business issues s clear resolution timelines</p>
+                    
+                    <h3>Change Control</h3>
+                    <p>Formální change request process s impact assessment a stakeholder approval požadavky</p>
+                </div>
+            </div>
+            
+            <div class="section" id="risk-management">
+                <h1>11. Řízení Rizik a Mitigace</h1>
+                
+                <h2>Identifikovaná Rizika</h2>
+                
+                <table>
+                    <tr>
+                        <th>Riziko</th>
+                        <th>Pravděpodobnost</th>
+                        <th>Dopad</th>
+                        <th>Mitigace</th>
+                        <th>Contingency</th>
+                    </tr>
+                    <tr>
+                        <td>User Adoption Challenges</td>
+                        <td>Střední</td>
+                        <td>Vysoký</td>
+                        <td>Komplexní tréninkový program, postupný rollout, dedicated user support, continuous feedback integrace</td>
+                        <td>Extended training period, additional support resources, simplified user interfaces</td>
+                    </tr>
+                    <tr>
+                        <td>Integration Complexity</td>
+                        <td>Vysoká</td>
+                        <td>Střední</td>
+                        <td>Dedicated integration team, proven technologies, komplexní testing, postupný integration approach</td>
+                        <td>Simplified integration scope, manual workarounds, extended timeline pro complex integrations</td>
+                    </tr>
+                    <tr>
+                        <td>Regulatory Compliance Issues</td>
+                        <td>Nízká</td>
+                        <td>Vysoký</td>
+                        <td>Automatizovaná compliance validace, komplexní audit trails, regular compliance reviews, legal validation</td>
+                        <td>Manual compliance procedures, enhanced legal review, regulatorní engagement a clarification</td>
+                    </tr>
+                    <tr>
+                        <td>Performance and Scalability</td>
+                        <td>Střední</td>
+                        <td>Střední</td>
+                        <td>Performance testing, scalable architecture, monitoring a alerting, optimization procedures</td>
+                        <td>Performance tuning, infrastructure scaling, usage limitation během peak periods</td>
+                    </tr>
+                </table>
+                
+                <h2>Success Factors</h2>
+                
+                <div class="success-box">
+                    <ul>
+                        <li><strong>Silné executive sponsorship</strong> a cross-functional collaboration</li>
+                        <li><strong>Komplexní user training</strong> a change management support</li>
+                        <li><strong>Robustní compliance framework</strong> s automatizovanou validací</li>
+                        <li><strong>Proven integration technologies</strong> s komplexním testingem</li>
+                        <li><strong>Clear governance structure</strong> s definovanou decision-making autoritou</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Klíčové Monitorovací Metriky</h3>
+                    <ul>
+                        <li>User adoption rate (cíl: 80%+ během 3 měsíců)</li>
+                        <li>System performance (cíl: 99.9% uptime)</li>
+                        <li>Compliance score (cíl: 100% bez violations)</li>
+                        <li>Business value delivery (cíl: 75% time reduction, 15% accuracy improvement)</li>
+                        <li>Stakeholder satisfaction (cíl: 85%+ satisfaction score)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>BRQ202 Survey Management System - Project Definition Document v1.0</strong></p>
+            <p>Vygenerováno dne: 12. září 2025 | Status: Finálně Schváleno | Úroveň Expertizy: Junior Level Multi-Domain Analysis</p>
+            <p>© 2025 BIAN Banking Organization - Všechna práva vyhrazena</p>
+        </div>
+    </div>
+</body>
+</html>
