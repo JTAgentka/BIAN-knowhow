@@ -5,12 +5,13 @@ Master orchestrator command that processes JIRA Epic descriptions and coordinate
 
 ## Usage
 ```
-/orchestrate-project-analysis [requirement] [expertise-level]
+/orchestrate-project-analysis [requirement] [expertise-level] [user-instructions]
 ```
 
 **Parameters:**
-- `requirement`: JIRA Epic description or project requirement text
+- `requirement`: JIRA Epic description or project requirement text (REQUIRED)
 - `expertise-level`: Optional expertise level override (Junior/Senior/Expert, defaults to Senior)
+- `user-instructions`: Optional specific instructions for analysts (e.g., "focus on compliance", "prioritize customer experience")
 
 ## Orchestration Logic
 
@@ -118,24 +119,50 @@ When this command is invoked, the main context should execute:
 
 2. **Execute Parallel Analysis Phase (1-4)**
 ```
-Launch 5 parallel Task calls:
-- Task(project-analyst, "Customer Distribution Analysis", prompt_with_knowledge_injection)
-- Task(project-analyst, "Enterprise Enabling Analysis", prompt_with_knowledge_injection) 
-- Task(project-analyst, "Risk Management Analysis", prompt_with_knowledge_injection)
-- Task(project-analyst, "Marketing Sales Analysis", prompt_with_knowledge_injection)
-- Task(project-analyst, "Product Services Analysis", prompt_with_knowledge_injection)
+Launch 5 parallel Task calls with proper handover structure:
+- Task(project-analyst, "Customer Distribution Analysis", {
+    user_requirements: parsed_requirement,
+    user_instructions: parsed_instructions,
+    knowledge_commands: ["/[Level]/know-customer-distribution"],
+    domain: "customer-distribution"
+  })
+- Task(project-analyst, "Enterprise Enabling Analysis", {
+    user_requirements: parsed_requirement,
+    user_instructions: parsed_instructions, 
+    knowledge_commands: ["/[Level]/know-enterprise-enabling"],
+    domain: "enterprise-enabling"
+  })
+- [... similar for other 3 domains]
+
+Collect handover results from all 5 analysts before proceeding.
 ```
 
 3. **Execute Sequential Design Phase (5-7)**
 ```
-After all analysts complete:
-- Task(project-designer, "Consolidate Design", prompt_with_consolidated_context)
+After ALL analysts complete and return handover results:
+- Read all analyst context files: analyst-context-{domain}.json (5 files)
+- Read all analyst deliverables: analyst-{domain}-deliverables.json (5 files)
+- Task(project-designer, "Consolidate Design", {
+    analyst_contexts: [list of 5 context files],
+    analyst_deliverables: [list of 5 deliverable files], 
+    user_requirements: original_requirement,
+    user_instructions: original_instructions,
+    consolidation_summary: combined_analyst_findings
+  })
 ```
 
 4. **Execute Sequential Documentation Phase (8-11)**
 ```
-After designer completes:
-- Task(project-documenter, "Finalize Documentation", prompt_with_design_context)
+After designer completes and returns handover results:
+- Read designer context: designer-context.json
+- Read designer deliverables: designer-deliverables.json
+- Task(project-documenter, "Finalize Documentation", {
+    designer_context: designer_context_file,
+    designer_deliverables: designer_deliverables_file,
+    analyst_contexts: [list of 5 analyst context files],
+    user_requirements: original_requirement,
+    user_instructions: original_instructions
+  })
 ```
 
 5. **Consolidate and Report**
@@ -149,14 +176,17 @@ After designer completes:
 ## Quality Gates and Validation
 
 ### Phase Completion Validation
-- Ensure all 5 domain analyses complete before proceeding to design
-- Validate designer output before proceeding to documentation
-- Confirm all required artifacts are generated
+- **Analysis Phase**: Collect handover results from all 5 analysts before proceeding to design
+- **Design Phase**: Validate designer handover result before proceeding to documentation  
+- **Documentation Phase**: Confirm all required artifacts are generated and final handover received
+- **Context File Validation**: Verify all context files exist and contain required sections
 
 ### Context Transfer Validation
-- Verify context files are properly created and populated
-- Ensure knowledge injection commands are executed
-- Validate handover between agents includes all required data
+- **Analyst Handover**: Each analyst must return structured handover JSON with completion status
+- **File Creation**: Verify context files are properly created and populated
+- **Knowledge Injection**: Ensure knowledge injection commands are executed by each agent
+- **Sequential Dependencies**: Designer reads ALL analyst outputs, documenter reads designer + analyst outputs
+- **User Requirements Flow**: Original requirements and instructions passed to each agent
 
 ### Output Quality Assurance
 - Check completeness of stakeholder analysis across all domains
@@ -212,9 +242,30 @@ Upon successful completion, the following files should be created:
 /orchestrate-project-analysis "BRQ202 Survey Management System..." junior
 ```
 
-### Expert Level Override  
+### Expert Level with Specific Instructions
 ```
-/orchestrate-project-analysis "Complex transformation initiative..." expert
+/orchestrate-project-analysis "Complex transformation initiative..." expert "focus on regulatory compliance and risk mitigation"
 ```
+
+### Complete Parameter Example
+```
+/orchestrate-project-analysis "BRQ202 Survey Management - admin FE environment for survey template management, versioning, AD integration, audit capabilities" senior "prioritize customer experience and operational efficiency"
+```
+
+## Implementation Notes
+
+### Critical Workflow Fixes
+1. **Proper Handover Chain**: Each agent returns structured JSON result to orchestrator
+2. **Sequential Dependencies**: Designer reads ALL 5 analyst outputs before starting
+3. **User Requirements Flow**: Original requirements and instructions passed through entire chain
+4. **Context File Organization**: Domain-specific context files prevent conflicts
+5. **Quality Gates**: Orchestrator validates each phase completion before proceeding
+
+### Orchestrator Responsibilities
+- **Collect Handover Results**: Wait for all analyst handovers before design phase
+- **File Validation**: Verify all required context and deliverable files exist
+- **Context Integration**: Pass consolidated analyst findings to designer
+- **Requirements Continuity**: Ensure user requirements and instructions reach all agents
+- **Final Consolidation**: Aggregate all results and provide comprehensive project summary
 
 This command enables efficient parallel execution of multi-domain project analysis directly from the main context, eliminating sub-agent nesting complexity while maintaining comprehensive workflow orchestration capabilities.
