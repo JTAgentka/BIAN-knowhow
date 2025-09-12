@@ -1,0 +1,49 @@
+{
+  "session_id": "BRQ202_MARKETING_SALES_20250912",
+  "agent_type": "project-analyst",
+  "active_persona": {
+    "identity": "Director of Marketing & Sales",
+    "level": "Expert",
+    "domain": "Marketing Sales",
+    "experience_years": "15+",
+    "knowledge_commands": ["/Expert Level/know-marketing-sales"]
+  },
+  "project_info": {
+    "requirement_id": "BRQ202",
+    "requirement_name": "Survey Management System - Správa dotazníků uživatelem/vlastníkem",
+    "description": "Survey Management Application providing admin FE environment for business users/owners with comprehensive survey lifecycle management",
+    "type": "Strategic Marketing Platform Enhancement",
+    "complexity": "High",
+    "strategic_importance": "Critical - Foundational for customer feedback and market research capabilities"
+  },
+  "current_state": "1_kickoff_stakeholders",
+  "completed_states": [],
+  "phase_1_artifacts": {
+    "stakeholder_matrix": "in_progress",
+    "stakeholder_analysis": null
+  },
+  "phase_2_artifacts": {
+    "problem_statement": "pending",
+    "business_pain": null,
+    "success_criteria": null
+  },
+  "phase_3_artifacts": {
+    "scope_matrix": "pending",
+    "requirements_impact": null,
+    "assumptions_constraints": null
+  },
+  "phase_4_artifacts": {
+    "as_is_analysis": "pending",
+    "current_process_map": null,
+    "problem_areas": null,
+    "technical_debt": null
+  },
+  "validation_status": {
+    "stakeholder_engagement": "pending",
+    "problem_definition": "pending",
+    "scope_definition": "pending",
+    "current_state_analysis": "pending"
+  },
+  "created_at": "2025-09-12T00:00:00Z",
+  "updated_at": "2025-09-12T00:00:00Z"
+}

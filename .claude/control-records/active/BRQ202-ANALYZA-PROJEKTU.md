@@ -1,202 +1,313 @@
-# BRQ202 - Správa dotazníků uživatelem/vlastníkem
-## Analýza a definice projektu
+# BRQ202 - Analýza Projektu: Správa Dotazníků Uživatelem/Vlastníkem
 
-### Metadata dokumentu
-- **Projekt ID**: BRQ202-SURVEY-MANAGEMENT
-- **JIRA Epic**: BRQ202
-- **Verze dokumentu**: v1.0
-- **Datum vytvoření**: 2025-09-12
-- **Úroveň expertízy**: Junior Level Multi-doménová analýza
-- **Status schválení**: Finálně schváleno
+**Projekt ID:** BRQ202-SURVEY-MANAGEMENT  
+**Verze:** v1.0  
+**Datum:** 12. září 2025  
+**Úroveň Expertise:** Junior Level  
+**Složitost:** Střední  
+**Strategická Důležitost:** Vysoká - Podpora podnikání napříč doménami
 
----
+## Shrnutí Projektu
 
-## Shrnutí projektu
+Projekt BRQ202 představuje komplexní řešení pro správu dotazníků, které umožňuje samoobslužné vytváření šablon průzkumů s automatickou validací souladu s předpisy, komplexní audit trail a integraci napříč systémy. Řešení pokrývá pět klíčových podnikových domén a přináší měřitelnou hodnotu prostřednictvím 70% snížení času nasazení průzkumů a 25% zvýšení míry odpovědí zákazníků.
 
-### Přehled projektu
-BRQ202 Systém správy dotazníků představuje komplexní řešení pro systematické shromažďování zpětné vazby od zákazníků napříč všemi obchodními doménami v rámci bankovní organizace. Projekt řeší kritické obchodní potřeby pro zákaznické poznatky při zachování přísných požadavků na compliance a regulace.
+### Klíčové Obchodní Přínosy
 
-### Klíčové obchodní faktory
-- **Eliminace manuálních procesů** vytváření dotazníků, které vytvářejí neefektivnosti a rizika v oblasti compliance
-- **Umožnění systematického sběru** zpětné vazby napříč doménami Customer Distribution, Enterprise Enabling, Risk Management, Marketing & Sales a Product & Services
-- **Snížení času vytváření dotazníků o 75%** prostřednictvím samoobslužné platformy založené na šablonách
-- **Zajištění 100% regulatorního souladu** prostřednictvím automatizované validace a audit trail
-- **Zlepšení přesnosti měření spokojenosti zákazníků o 15%** prostřednictvím integrované analytiky
+- **Operační Efektivita:** Snížení času nasazení průzkumů ze 15-25 dní na 3-7 dní
+- **Zákaznická Zkušenost:** 25% zvýšení míry odpovědí zákazníků díky kvalitní šablonám
+- **Compliance:** 100% soulad s GDPR a bankovními regulacemi
+- **Růst Obchodu:** 15% zlepšení akvizice zákazníků informovanými kampaněmi
+- **Řízení Rizik:** Nula regulatorních porušení díky systematickému řízení průzkumů
 
-### Přístup k řešení
-Multi-doménová integrovaná platforma s Junior Level základnou expertízy zajišťující odpovídající řízení složitosti, komplexní kontroly compliance a zaměření na adopci uživatelů napříč všemi obchodními oblastmi.
+## Analýza Stakeholderů
 
----
+### Celková Struktura Stakeholderů
+- **Celkem Stakeholderů:** 32 napříč všemi doménami
+- **Primární Stakeholdeři:** 5 klíčových vedoucích rolí
+- **Sekundární Stakeholdeři:** 27 operačních a podpůrných rolí
 
-## Analýza stakeholderů
+### Klíčoví Stakeholdeři podle Domén
 
-### Pokrytí domén
-Komplexní analýza napříč 5 obchodními doménami identifikovala 32 klíčových stakeholderů s různou úrovní vlivu a zájmu o systém správy dotazníků.
+#### 1. Customer Distribution (Distribuce Zákazníků)
+- **Vedoucí Stakeholder:** Manažeři Poboček
+- **Role:** Administrátoři Průzkumů
+- **Kritéria Úspěchu:** 80% míra adopce během 30 dní, samoobslužné vytváření průzkumů
+- **Klíčové Požadavky:** Intuitivní rozhraní, integrace s CRM, školení do 3 hodin
 
-#### Customer Distribution
-- **Klíčoví stakeholdeři**: Vedoucí poboček, zástupci zákaznického servisu, operace call centra, regionální ředitelé
-- **Primární cíle**: Zlepšení měření NPS a CSAT, snížení nákladů na službu, zlepšení výkonnosti kanálů
-- **Přístup k zapojení**: Praktické školení, uživatelsky přívětivá rozhraní, workshopy integrace procesů
+#### 2. Enterprise Enabling (Podniková Podpora)
+- **Vedoucí Stakeholder:** Compliance Officеři
+- **Role:** Ochránci Ochrany Dat
+- **Kritéria Úspěchu:** <48h SLA schválení průzkumů, 100% míra úspěšnosti compliance
+- **Klíčové Požadavky:** Automatická GDPR validace, audit trails, workflow schvalování
 
-#### Enterprise Enabling  
-- **Klíčoví stakeholdeři**: Compliance officers, právní tým, auditní tým, regulatorní záležitosti
-- **Primární cíle**: Nulové regulatorní porušení, komplexní audit trails, systematická ochrana soukromí
-- **Přístup k zapojení**: Posouzení dopadu na soukromí, workshopy validace compliance, regulatorní monitoring
+#### 3. Risk Management (Řízení Rizik)
+- **Vedoucí Stakeholder:** Chief Risk Officer
+- **Role:** Strategický Dohled nad Riziky
+- **Kritéria Úspěchu:** Nula podvodných incidentů nad prahem, připravenost business continuity
+- **Klíčové Požadavky:** Framework posouzení rizik, monitoring podvodů, bezpečnostní kontroly
 
-#### Risk Management
-- **Klíčoví stakeholdeři**: Chief Risk Officer, tým detekce podvodů, rizikoví analytici, tým kontinuity podnikání
-- **Primární cíle**: Ochrana kapitálu a reputace, nulové podvody nad prahem, 100% compliance
-- **Přístup k zapojení**: Rámce hodnocení rizik, integrace monitoringu podvodů, plánování kontinuity
+#### 4. Marketing & Sales (Marketing a Prodej)
+- **Vedoucí Stakeholder:** Manažeři Kampaní
+- **Role:** Exekutoři Průzkumových Kampaní
+- **Kritéria Úspěchu:** 15% zlepšení akvizice zákazníků, 100% konzistence značky
+- **Klíčové Požadavky:** Integrace s kampaněmi, brand guidelines, ROI měření
 
-#### Marketing & Sales
-- **Klíčoví stakeholdeři**: Manažeři kampaní, tým správy značky, prodejní týmy, tým digitálního marketingu
-- **Primární cíle**: Podpora růstu, posílení značky, zlepšení míry akvizice a retence
-- **Přístup k zapojení**: Integrace směrnic značky, analytika kampaní, poznatky o chování zákazníků
+#### 5. Product Services (Produktové Služby)
+- **Vedoucí Stakeholder:** Product Portfolio Manager
+- **Role:** Vlastník Životního Cyklu Produktu
+- **Kritéria Úspěchu:** 70% snížení času nasazení, 99.5% uptime, <2s doba odezvy
+- **Klíčové Požadavky:** API-first architektura, iframe embedding, vysoký výkon
 
-#### Product & Services
-- **Klíčoví stakeholdeři**: Produktoví manažeři, týmy IT integrace, tým správy smluv, operace core bankingu
-- **Primární cíle**: Rychlé spuštění produktů, zajištění adopce, udržení SLA compliance
-- **Přístup k zapojení**: Integrace zpětné vazby produktů, shromažďování technických požadavků, definice SLA
+## Obchodní Požadavky
 
----
+### Funkční Požadavky
 
-## Obchodní případ a problémové prohlášení
+#### Správa Průzkumů
+- Drag-and-drop rozhraní pro vytváření šablon průzkumů
+- Verzování s trackováním změn a možností rollback
+- Aktivace/deaktivace šablon s analýzou dopadů
+- Náhled a export funkcionalita
+- Kopírování a customizace šablon
 
-### Aktuální výzvy
-- **Operační neefektivnosti**: Manuální vytváření dotazníků zpožduje sběr zpětné vazby o týdny nebo měsíce
-- **Rizikové expozice**: Regulatorní rizika z nekontrolovaného sběru zákaznických dat
-- **Konkurenční nevýhody**: Pomalejší reakce na potřeby zákazníků ve srovnání s konkurencí
+#### Compliance a Governance
+- Automatické posouzení dopadu na soukromí pro všechny šablony
+- GDPR compliance validace s integrací consent mechanismů
+- Role-based přístupová kontrola s AD integrací
+- Komplexní audit trail pro všechny aktivity průzkumů
+- Automatický compliance approval workflow s <48h SLA
 
-### Přínosy řešení
-- **75% snížení času** vytváření dotazníků prostřednictvím platformy založené na šablonách
-- **100% dosažení compliance** prostřednictvím automatizované validace a monitoringu
-- **15% zlepšení přesnosti** měření spokojenosti zákazníků
+#### Rizika a Bezpečnost
+- Framework posouzení rizik pro operace průzkumů
+- Integrace fraud detection s monitoring schopnostmi
+- Business continuity plánování s 99.5% uptime cílem
+- Data loss prevention kontroly pro zákaznická data
+- Incident response procedury pro bezpečnostní události
 
----
+#### Marketing Integrace
+- Vynucení brand guidelines v designu průzkumů
+- Integrace s platformami pro správu kampaní
+- Integrace customer behavior analytics
+- ROI tracking a měřící schopnosti
+- Konektivita s marketing automation platformami
 
-## Definice rozsahu
+#### Technické Schopnosti
+- API-first architektura pro iframe embedding
+- Cross-domain bezpečné nasazení průzkumů
+- Real-time performance monitoring
+- Automatické backup a disaster recovery
+- Integrace s existujícími enterprise systémy
 
-### Zahrnuté funkcionality
-- Komplexní platforma pro vytváření a správu šablon dotazníků
-- Řízení přístupu na základě rolí integrované s infrastrukturou Active Directory
-- Kontrola verzí, workflow schvalování a možnosti změnového managementu
-- Automatizovaná validace compliance a komplexní systém audit trail
-- Integrace s CRM, Core Banking, Case Management a marketingovými systémy
+### Non-Funkční Požadavky
 
-### Vyloučené funkcionality
-- Pokročilé prediktivní analýzy a vývoj platformy strojového učení
-- Vývoj mobilní aplikace dotazníků pro zákaznické interakce
-- Komplexní integrace třetích stran mimo specifikované systémy
+#### Výkon
+- <2 sekundy doba odezvy pro všechny operace
+- 99.5% dostupnost systému
+- Podpora 1000-5000 denních odpovědí na průzkumy
+- Concurrent user podpora pro všechny business uživatele
 
----
+#### Bezpečnost
+- AES-256 šifrování pro data at rest
+- TLS 1.3 šifrování pro data in transit
+- Active Directory integrace pro autentifikaci
+- Role-based autorizace s hierarchickými permissions
 
-## Analýza současného stavu
+#### Compliance
+- GDPR compliance s automatickými privacy kontrolami
+- Soulad s bankovními regulacemi s audit trails
+- 10-letá retence dat pro regulatory compliance
+- Immutable audit logging s tamper protection
 
-### Hodnocení procesů
-- **Proces vytváření dotazníků**: Manuální vytváření pomocí základních nástrojů bez standardizace
-- **Správa compliance**: Ad-hoc posouzení soukromí prováděná manuálně compliance officers
-- **Integrace dat**: Manuální kompilace výsledků dotazníků bez integrace do CRM systémů
+#### Použitelnost
+- Intuitivní rozhraní vyžadující <3 hodiny školení na skupinu uživatelů
+- Samoobslužné schopnosti pro non-technické business uživatele
+- Responsive design podporující desktop a tablet zařízení
+- Accessibility compliance pro inclusive uživatelskou zkušenost
 
-### Analýza systémové krajiny
-- **Existující systémy**: Active Directory (omezený role-based přístup), CRM systém (bez integrace dotazníků), Core Banking platforma (read-only API přístup dostupný)
-- **Integrační mezery**: Žádná API integrace mezi nástroji dotazníků a klíčovými obchodními systémy
+## Technická Architektura
 
----
+### Hlavní Komponenty Řešení
 
-## Design cílového stavu
+#### Presentation Layer (Prezentační Vrstva)
+- **Admin Frontend:** React 18+ s Material-UI pro správu šablon průzkumů
+- **Embedded Components:** Iframe-embeddable komponenty pro cross-domain nasazení
 
-### Architektura řešení
-- **Survey Management Platform**: Centrální webová aplikace poskytující komplexní možnosti vytváření, správy a administrace dotazníků
-- **Compliance a Governance Engine**: Automatizovaný systém validace compliance zajišťující dodržování regulatorních předpisů
-- **Integration Hub**: Komplexní API integrační vrstva propojující survey platformu se všemi existujícími bankovními systémy
-- **Analytics a Reporting Platform**: Pokročilý analytický engine poskytující komplexní poznatky a možnosti měření výkonnosti
+#### Application Services (Aplikační Služby)
+- **Survey Management Service:** Node.js/Express pro CRUD operace šablon
+- **Compliance Service:** Automatický workflow engine pro GDPR validaci
+- **Risk Management Service:** Platform pro monitoring a posouzení rizik
+- **Analytics Service:** Engine pro analytics a reporting
 
-### Transformace procesů
-1. Uživatel se autentizuje prostřednictvím Active Directory single sign-on
-2. Průvodce vytvářením dotazníků s doménově specifickými šablonami
-3. Automatizovaná validace compliance s real-time zpětnou vazbou
-4. Risk-based workflow schvalování s automatizovaným směrováním
-5. Aktivace dotazníků s komplexním logováním audit trail
-6. Monitoring výkonnosti a analytika s automatizovanými poznatky
+#### Integration Layer (Integrační Vrstva)
+- **API Gateway:** RESTful API s OAuth 2.0 pro routing a zabezpečení
+- **Event Bus:** RabbitMQ nebo Azure Service Bus pro asynchronní zpracování
 
----
+#### Data Layer (Datová Vrstva)
+- **Survey Database:** PostgreSQL s audit extensions pro storage šablon
+- **Compliance Database:** Bezpečný store pro compliance data a audit trails
 
-## Analýza dopadů
+### Externí Integrace
 
-### Hodnocení dopadů na data
-- **Nové kategorie dat**: Odpovědi zákazníků na dotazníky (vysoká citlivost - PII), metadata dotazníků (střední citlivost), audit a compliance logy (vysoká citlivost)
-- **Transformace datových toků**: Tok zákaznických dat z Core Banking a CRM systémů do survey platformy pro personalizaci
+1. **Active Directory** (LDAP/SAML) - 2 týdny, nízká složitost
+2. **CRM Systémy** (REST API) - 6-8 týdnů, střední složitost
+3. **Case Management** (Workflow API) - 8-10 týdnů, vysoká složitost
+4. **Marketing Automation** (API/Webhook) - 6 týdnů, střední složitost
+5. **Fraud Detection** (Event Streaming) - 4-6 týdnů, střední složitost
+6. **Brand Management** (Asset API) - 3-4 týdny, nízká složitost
 
-### Hodnocení dopadů na systémy
-- **Přímo ovlivněné systémy**: Active Directory (střední dopad), CRM platforma (vysoký dopad), Core Banking systém (střední dopad)
-- **Složitost integrace**: Vysoká - integrace více systémů s požadavky na synchronizaci dat v reálném čase
+## Design Obchodních Procesů
 
----
+### Workflow Vytvoření Průzkumu
+- **Současný Stav:** Manuální vytváření pomocí Word/základních nástrojů, 15-25 denní cyklus
+- **Cílový Stav:** Automatizované vytváření šablon s drag-drop rozhraním, 2-3 denní cyklus
+- **Úroveň Automatizace:** 70% automatizované s lidským dohledem
 
-## Akceptační kritéria a validace
+### Compliance Approval Workflow
+- **Současný Stav:** Manuální privacy assessments, email-based schvalování
+- **Cílový Stav:** Automatická compliance validace, <48h SLA
+- **Úroveň Automatizace:** 80% automatizované
 
-### Funkcionální požadavky
-- **Správa šablon dotazníků**: Uživatelé mohou vytvářet, editovat, prohlížet, kopírovat, exportovat a spravovat šablony dotazníků s plnou kontrolou verzí
-- **Integrace compliance**: Všechny aktivity dotazníků udržují komplexní audit trail s automatizovanou validací GDPR compliance
-- **Systémová integrace**: Bezproblémová integrace s AD, CRM, Core Banking a Case Management systémy
+### Survey Deployment Workflow
+- **Současný Stav:** Manuální distribuce, žádné tracking schopnosti
+- **Cílový Stav:** API-first nasazení, real-time monitoring
+- **Úroveň Automatizace:** 90% automatizované
 
-### Nefunkcionální požadavky
-- **Výkonnost systému**: 99,9% dostupnost systému s průměrnými časy načítání stránek pod 3 sekundy
-- **Bezpečnost a compliance**: Komplexní bezpečnostní kontroly s šifrováním dat a detekcí podvodů
-- **Adopce uživatelů**: 80% vyškolených uživatelů dosáhne zdatnosti ve vytváření a správě dotazníků do 2 měsíců
+## Dopady na Data a Systémy
 
----
+### Datové Domény
+1. **Customer Personal Data:** Vysoká citlivost - PII pod GDPR
+2. **Survey Metadata:** Střední citlivost - Business confidential
+3. **Compliance and Audit Data:** Vysoká citlivost - Regulatory requirement
+4. **User Activity Data:** Střední citlivost - Security monitoring
+5. **Marketing Campaign Data:** Střední citlivost - Business insights
 
-## Implementační roadmapa
+### Systémové Dopady
+- **AD:** Střední dopad, 2 týdny, nízké riziko
+- **CRM:** Střední dopad, 6-8 týdnů, střední riziko
+- **Case Management:** Vysoký dopad, 8-10 týdnů, vysoké riziko
+- **Marketing Automation:** Střední dopad, 6 týdnů, střední riziko
+- **Fraud Detection:** Střední dopad, 4-6 týdnů, střední riziko
+- **Brand Management:** Nízký dopad, 3-4 týdny, nízké riziko
 
-### Fáze 1: Základ (3 měsíce)
-- Vývoj platformy, základní integrace a ustanovení compliance frameworku
-- Survey management platforma se základními funkcionalitami
-- Integrace Active Directory a role-based řízení přístupu
+## Akceptační Kritéria (SMART)
 
-### Fáze 2: Integrace (2 měsíce) 
-- Pokročilá integrace, analytická platforma a příprava školení uživatelů
-- Implementace pokročilé analytiky a reportingové platformy
-- Pilotní testování s vybranými skupinami uživatelů
+### Customer Distribution
+- **CD-001:** 80% manažerů poboček úspěšně vytvoří šablony bez IT podpory do 30 dní
+- **CD-002:** 25% zvýšení míry odpovědí zákazníků na průzkumy do 90 dní
 
-### Fáze 3: Nasazení (2 měsíce)
-- Produkční nasazení, adopce uživatelů a optimalizace výkonnosti
-- Nasazení produkčního systému s plnou funkcionalitou
-- Organizace-široké školení uživatelů a change management
+### Enterprise Enabling
+- **EE-001:** Schválení průzkumů dokončeno do 48 hodin SLA od go-live
+- **EE-002:** 100% průzkumů projde compliance validací bez regulatory violations
 
----
+### Risk Management
+- **RM-001:** Nula podvodných incidentů nad definovaným prahem od go-live
+- **RM-002:** 99.5% uptime s <2 hodiny recovery time objective do 60 dní
 
-## Governance a schválení
+### Marketing & Sales
+- **MS-001:** 15% zvýšení customer acquisition rates do 12 měsíců
+- **MS-002:** 100% průzkumů splňuje brand guidelines od go-live
 
-### Hierarchie schvalování
-- **Obchodní sponzoři**: Schváleno s požadavky na školení
-- **Compliance a Risk**: Schváleno s vylepšeními compliance
-- **Technologie a operace**: Schváleno s technickými omezeními
-- **Výkonné vedení**: Finální schválení čekající
+### Product Services
+- **PS-001:** 70% snížení času nasazení průzkumů (ze 15-25 na 3-7 dní) do 3 měsíců
+- **PS-002:** <2 sekundy doba odezvy, 99.5% uptime od production nasazení
 
-### Governance framework
-- **Řídící výbor**: Cross-funkcionální leadership tým s měsíčním dohledem
-- **Pracovní skupiny**: Doménově specifické pracovní skupiny pro validaci požadavků
-- **Postupy eskalace**: Definované eskalační cesty pro technické, compliance a obchodní problémy
+## Implementační Roadmapa
 
----
+### Fázový Přístup - 6 měsíců
 
-## Řízení rizik a mitigace
+#### Fáze 1: Foundation (Měsíce 1-3)
+- **Rozsah:** Core survey management platform se základní compliance
+- **Deliverables:** Survey template engine, user management, basic workflow, compliance framework
+- **Kritéria Úspěchu:** Core funkcionalita operační se základním školením uživatelů
 
-### Identifikovaná rizika
-- **Výzvy adopce uživatelů** (střední pravděpodobnost, vysoký dopad): Komplexní program školení, postupné zavádění
-- **Složitost integrace** (vysoká pravděpodobnost, střední dopad): Dedikovaný integrační tým, osvědčené technologie
-- **Problémy s regulatorním compliance** (nízká pravděpodobnost, vysoký dopad): Automatizovaná validace compliance
+#### Fáze 2: Integrace (Měsíce 2-4)
+- **Rozsah:** Externí systémové integrace a pokročilá compliance
+- **Deliverables:** CRM integrace, case management workflow, compliance automatizace, risk monitoring
+- **Kritéria Úspěchu:** Všechny externí integrace operační s compliance SLA dosaženou
 
-### Faktory úspěchu
-- Silné executive sponsorship a cross-funkcionální spolupráce
-- Komplexní školení uživatelů a podpora change managementu
-- Robustní compliance framework s automatizovanou validací
+#### Fáze 3: Optimalizace (Měsíce 3-6)
+- **Rozsah:** Performance optimalizace a pokročilé funkce
+- **Deliverables:** Marketing integrace, pokročilé analytics, mobile optimalizace, performance tuning
+- **Kritéria Úspěchu:** Všechny performance cíle dosažené s plnou adopcí uživatelů
 
----
+### Klíčové Milníky
+1. **Schválení Architektury** (Měsíc 1)
+2. **Core Platform Delivery** (Měsíc 3)
+3. **Dokončení Integrace** (Měsíc 4)
+4. **Production Go-Live** (Měsíc 6)
+
+## Řízení Rizik
+
+### Identifikovaná Rizika
+1. **Technické:** Složitost AD integrace - střední pravděpodobnost, vysoký dopad
+2. **Obchodní:** Odpor uživatelů k adopci - střední pravděpodobnost, střední dopad
+3. **Compliance:** Změny regulatory požadavků - nízká pravděpodobnost, vysoký dopad
+4. **Integrace:** Dostupnost a výkon externích API - střední pravděpodobnost, střední dopad
+5. **Timeline:** Tlak na 6měsíční dodání - střední pravděpodobnost, střední dopad
+
+### Strategie Mitigace
+- Early technical validation s AD týmem
+- Komplexní školící program a super user identifikace
+- Flexibilní compliance framework design
+- API testování early v projektu
+- Fázový delivery přístup s prioritizací rozsahu
+
+## Metriky Úspěchu
+
+### Business KPIs
+1. **Survey Creation Cycle Time Reduction:** 70% snížení z 15-25 na 3-7 dní
+2. **User Adoption Rate:** 80% adopce mezi manažery poboček do 30 dní
+3. **Compliance Approval SLA:** <48 hodin pro standardní schvalování průzkumů
+4. **System Uptime:** 99.5% dostupnost s <2 hodiny recovery
+5. **Customer Feedback Response Rate:** 25% zvýšení míry odpovědí
+6. **Customer Acquisition Improvement:** 15% zvýšení prostřednictvím informovaných kampaní
+
+### Operační Metriky
+1. **System Response Time:** <2 sekundy pro všechny operace
+2. **API Availability:** 99.9% API uptime
+3. **Security Incident Count:** Nula kritických bezpečnostních incidentů
+4. **Compliance Breach Count:** Nula regulatory breaches
+5. **User Training Completion:** 95% míra dokončení školení
+
+## Governance Framework
+
+### Schvalovací Hierarchie
+1. **Technické Schválení:** Solution Architect, Security Architect, Database Administrator
+2. **Obchodní Schválení:** Business Stakeholders, Compliance Officer, Risk Manager
+3. **Executive Schválení:** IT Director, Chief Risk Officer, Business Line Director
+
+### Change Management
+- **Change Control Board:** Cross-functional tým se zastoupením všech domén
+- **Change Approval Process:** Risk-based schvalování s automatizací low-risk změn
+- **Documentation Requirements:** Kompletní impact assessment pro všechny změny
+
+## Školení a Change Management
+
+### Skupiny Uživatelů
+1. **Manažeři Poboček:** 2-3 hodiny, interaktivní workshopy s hands-on praxí
+2. **Compliance Officеři:** 2 hodiny, technické školení s process walkthroughs
+3. **Manažeři Kampaní:** 2 hodiny, marketing-focused workshopy s příklady kampaní
+4. **IT Support Teams:** 4 hodiny, technické školení s operačními procedurami
+
+### Change Management Přístup
+- **Communication Strategy:** Pravidelné updaty prostřednictvím multiple kanálů
+- **Resistance Mitigation:** Early engagement, super user program, continuous feedback
+- **Success Measurement:** Training completion rates, user adoption metrics, satisfaction surveys
 
 ## Závěr
 
-BRQ202 Systém správy dotazníků představuje strategickou investici do systematického sběru zpětné vazby od zákazníků s jasným obchodním přínosem, komplexními kontrolami compliance a realistickým implementačním plánem. S Junior Level přístupem napříč všemi obchodními doménami projekt zajišťuje vhodnou složitost a zaměření na adopci uživatelů při dosahování měřitelných obchodních výsledků.
+Projekt BRQ202 představuje komplexní řešení, které transformuje správu průzkumů z manuálního, fragmentovaného procesu na integrovanou, automatizovanou platformu. S Junior Level přístupem se zaměřením na praktickou implementaci a standard business practices, projekt přináší měřitelnou hodnotu napříč pěti klíčovými podnikatelskými doménami.
 
-**Doporučení**: Pokračovat s implementací dle definované roadmapy s důrazem na důkladné školení uživatelů, postupné zavádění a kontinuální monitoring compliance a výkonnosti.
+**Klíčové Faktory Úspěchu:**
+- Cross-domain stakeholder engagement s jasně definovanými rolemi a odpovědnostmi
+- Phased implementation approach s realistickými timeline expectations
+- Comprehensive compliance a risk management controls
+- Strong governance framework s clear approval hierarchies
+- Robust training and change management program
+
+**Expected ROI:** Demonstratable within 12 months through operational efficiency gains, compliance cost avoidance, and revenue enhancement opportunities.
+
+**Next Steps:** Executive approval a resource allocation pro zahájení Fáze 1 (Foundation) implementace.
+
+---
+
+*Dokument vygenerován Claude Code s Junior Level expertisou napříč Customer Distribution, Enterprise Enabling, Risk Management, Marketing & Sales, a Product Services doménami.*

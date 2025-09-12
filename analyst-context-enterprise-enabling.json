@@ -1,0 +1,33 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System",
+  "domain": "Enterprise Enabling",
+  "expertise_level": "Junior Level",
+  "persona_identity": "Head of Enterprise Enabling",
+  "analysis_timestamp": "2025-09-12",
+  "current_state": "1_kickoff_stakeholders",
+  "knowledge_commands": ["/Junior Level/know-enterprise-enabling"],
+  "project_description": "Survey Management Application providing admin FE environment for business users/owners with survey template creation, typology management, activation/deactivation, copying/export, versioning, role-based access, and audit capabilities",
+  "workflow_states": {
+    "1_kickoff_stakeholders": {
+      "status": "in_progress",
+      "artifacts": {},
+      "timestamp": "2025-09-12"
+    },
+    "2_problem_statement": {
+      "status": "pending",
+      "artifacts": {},
+      "timestamp": null
+    },
+    "3_scope_definition": {
+      "status": "pending", 
+      "artifacts": {},
+      "timestamp": null
+    },
+    "4_as_is_analysis": {
+      "status": "pending",
+      "artifacts": {},
+      "timestamp": null
+    }
+  }
+}

@@ -1,64 +1,104 @@
 {
-  "metadata": {
-    "agent_id": "project-designer",
-    "session_id": "session_20250912_000648",
-    "timestamp": "2025-09-12T00:06:48Z",
-    "version": "1.0",
+  "session_metadata": {
+    "session_id": "BRQ202-DESIGN-20250912",
     "project_id": "BRQ202-SURVEY-MANAGEMENT",
-    "jira_epic_id": "BRQ202"
+    "agent_type": "project-designer",
+    "created_at": "2025-09-12T00:00:00Z",
+    "updated_at": "2025-09-12T00:00:00Z"
   },
+  "expertise_level": "Junior Level",
   "knowledge_commands": [
-    "/Expert Level/know-customer-distribution",
-    "/Expert Level/know-enterprise-enabling", 
-    "/Expert Level/know-risk-management",
-    "/Expert Level/know-marketing-sales",
-    "/Expert Level/know-product-services"
+    "/Junior Level/know-customer-distribution",
+    "/Junior Level/know-enterprise-enabling", 
+    "/Junior Level/know-risk-management",
+    "/Junior Level/know-marketing-sales",
+    "/Junior Level/know-product-services"
   ],
-  "analyst_handover": {
-    "phases_completed": [1, 2, 3, 4],
-    "domain_analyses": [
-      "customer-distribution",
-      "enterprise-enabling", 
-      "risk-management",
-      "marketing-sales",
-      "product-services"
-    ],
-    "consolidated_inputs": {
-      "stakeholder_engagement_matrix": "Complete across all 5 domains with 32 stakeholders identified",
-      "problem_statement": "Defined from 5 domain perspectives with clear business pain and success criteria",
-      "scope_definition": "Comprehensive scope matrix with domain-specific considerations",
-      "as_is_analysis": "Detailed current state assessment across all business domains"
+  "project_context": {
+    "requirement_id": "BRQ202",
+    "requirement_name": "Správa dotazníků uživatelem/vlastníkom - Survey Management System",
+    "description": "Survey Management Application providing admin FE environment for business users/owners with template creation, versioning, role-based access, and audit capabilities",
+    "complexity": "Medium",
+    "strategic_importance": "High - Cross-domain business enablement"
+  },
+  "current_workflow_state": {
+    "phase": "design_consolidation_complete",
+    "status": "completed",
+    "completed_phases": ["1_kickoff_stakeholders", "2_problem_definition", "3_scope_definition", "4_as_is_analysis", "5_to_be_design", "6_data_systems", "7_acceptance_consolidation"],
+    "next_phases": ["8_documentation", "9_implementation_planning", "10_change_management", "11_handover"]
+  },
+  "domain_analysis_inputs": {
+    "customer_distribution": {
+      "key_insights": "Customer-facing survey system requires high usability for non-technical branch staff with CRM integration",
+      "success_kpis": ["80% adoption rate among branch managers", "25% increase in customer feedback response rates", "NPS/CSAT improvement"],
+      "critical_requirements": ["Survey template creation interface", "AD integration", "CRM dashboard integration", "Branch manager self-service"]
+    },
+    "enterprise_enabling": {
+      "key_insights": "Compliance-first design required with automated privacy checks and comprehensive audit trails",
+      "success_kpis": ["100% survey compliance review pass rate", "<48h survey approval SLA", "Zero regulatory breaches"],
+      "critical_requirements": ["Automated privacy impact assessment", "GDPR compliance mechanisms", "Audit trail logging", "Case management integration"]
+    },
+    "risk_management": {
+      "key_insights": "Risk-first design approach with comprehensive risk assessment framework and fraud detection integration",
+      "success_kpis": ["Zero fraud incidents above threshold", "100% compliance with risk policies", "Business continuity readiness"],
+      "critical_requirements": ["Risk assessment framework", "Fraud detection integration", "Business continuity planning", "Security controls"]
+    },
+    "marketing_sales": {
+      "key_insights": "Brand-first design with comprehensive brand guideline integration and campaign management connectivity",
+      "success_kpis": ["15% customer acquisition improvement", "10% retention improvement", "85% brand awareness index"],
+      "critical_requirements": ["Brand-consistent templates", "Campaign management integration", "Customer behavior analytics", "ROI measurement"]
+    },
+    "product_services": {
+      "key_insights": "API-first architecture required for iframe embedding with advanced versioning and high-performance requirements",
+      "success_kpis": ["70% reduction in survey deployment time", "150% increase in utilization", "99.5% uptime", "<2s response times"],
+      "critical_requirements": ["API-first architecture", "Advanced versioning", "Iframe embedding", "Performance optimization"]
     }
   },
-  "current_state": {
-    "phase": "design",
-    "status": "completed", 
-    "conversation_state": "7_acceptance_consolidation",
-    "last_updated": "2025-09-12T00:00:00Z"
-  },
-  "workflow_progress": {
-    "phases_completed": [1, 2, 3, 4, 5, 6, 7],
-    "current_phase": 7,
-    "artifacts_created": [
-      "phase_5_to_be_design",
-      "phase_6_data_systems_impact", 
-      "phase_7_acceptance_consolidation",
-      "designer_deliverables_comprehensive"
+  "stakeholder_consolidation": {
+    "primary_stakeholders": [
+      "Branch Managers (Customer Distribution)",
+      "Compliance Officers (Enterprise Enabling)",
+      "Chief Risk Officer (Risk Management)", 
+      "Campaign Managers (Marketing & Sales)",
+      "Product Portfolio Manager (Product Services)"
     ],
-    "quality_gates_passed": [
-      "analyst_handover_received",
-      "knowledge_injection_completed",
-      "to_be_design_validated",
-      "data_systems_impact_assessed",
-      "acceptance_criteria_defined",
-      "final_consolidation_completed"
+    "secondary_stakeholders": [
+      "Customer Service Representatives",
+      "IT Support Teams",
+      "Legal Team",
+      "Fraud Detection Team",
+      "Brand Management Team"
     ]
   },
-  "design_completion": {
-    "expert_level_consolidation": "completed",
-    "multi_domain_integration": "completed",
-    "acceptance_criteria_count": 20,
-    "stakeholder_coverage": "32+ across 5 domains",
-    "ready_for_handover": true
+  "consolidated_problem_statement": {
+    "business_pain": [
+      "Manual survey creation leads to inconsistent customer feedback collection",
+      "No standardized compliance review process creates regulatory risks",
+      "Limited customer insight collection impacts campaign effectiveness and business growth",
+      "Manual processes create operational inefficiencies and bottlenecks",
+      "Lack of integrated audit trails and version control"
+    ],
+    "success_vision": "Unified survey management system enabling self-service survey creation with automated compliance, integrated risk controls, brand consistency, and comprehensive audit capabilities"
+  },
+  "design_constraints": {
+    "technical": [
+      "Must integrate with existing AD infrastructure",
+      "API-first architecture required for iframe embedding",
+      "Performance SLA: <2 second response time",
+      "99.5% uptime requirement",
+      "Cross-domain security compliance"
+    ],
+    "regulatory": [
+      "GDPR compliance mandatory",
+      "Banking data privacy regulations",
+      "Comprehensive audit trail requirements",
+      "Regulatory reporting capabilities"
+    ],
+    "business": [
+      "Must maintain brand consistency",
+      "Cannot disrupt existing operations",
+      "ROI demonstrable within 12 months",
+      "Training limited to 2-3 hours per user group"
+    ]
   }
 }

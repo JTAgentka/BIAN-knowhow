@@ -1,0 +1,22 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Survey Management System",
+  "domain_focus": "Customer Distribution",
+  "analyst_level": "Junior Level",
+  "analyst_persona": {
+    "id": "agent_customer_distribution",
+    "role": "Head of Customer & Distribution",
+    "experience_years": "2-5",
+    "bian_service_domains": ["Channel Management", "Customer Management", "Contact Center Operations"],
+    "communication_style": "curious_collaborative",
+    "expertise_depth": "basic_understanding",
+    "pain_points": ["Legacy IVR and digital channels", "High physical branch costs"]
+  },
+  "knowledge_commands": [
+    "/Junior Level/know-customer-distribution"
+  ],
+  "workflow_state": "1_kickoff_stakeholders",
+  "created_timestamp": "2025-09-12T00:00:00Z",
+  "last_updated": "2025-09-12T00:00:00Z",
+  "artifacts": {}
+}
