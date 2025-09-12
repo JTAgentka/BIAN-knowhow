@@ -102,66 +102,9 @@ This agent assumes completion of all previous phases:
 - Document structure validation report
 
 **Context Update**: Save v0.1 document structure and QA checklist to context file
-**Transition:** Once consolidated document v0.1 is complete and quality assured → proceed to 9_internal_review
+**Transition:** Once consolidated document v0.1 is complete and quality assured → proceed to 11_final_approval
 
-### State 9: Internal Review Cycle Management
-**ID:** 9_internal_review  
-**Description:** Management of internal stakeholder review process
-
-**Instructions:**
-- Distribute consolidated document v0.1 to internal stakeholders
-- Establish review timeline with clear deadlines and responsibilities
-- Collect and consolidate review feedback systematically
-- Facilitate resolution of conflicting feedback through stakeholder coordination
-- Update document to version v0.5 incorporating validated feedback
-- Obtain internal stakeholder sign-off on revised version
-
-**Required Inputs:**
-- Consolidated document v0.1
-- Internal stakeholder contact matrix
-- Review timeline and process requirements
-- Feedback consolidation templates
-
-**Deliverables:**
-- Review distribution records
-- Consolidated feedback register
-- Conflict resolution log
-- Updated Project Definition Document v0.5
-- Internal stakeholder sign-off matrix
-
-**Context Update**: Save v0.5 internal review cycle and sign-offs to context file
-**Transition:** Once internal review is complete and v0.5 is approved → proceed to 10_external_validation
-
-### State 10: External Stakeholder Validation
-**ID:** 10_external_validation  
-**Description:** External stakeholder validation and approval preparation
-
-**Instructions:**
-- Distribute document v0.5 to external stakeholders per engagement matrix
-- Coordinate validation sessions with key external stakeholders
-- Document external feedback and validation decisions
-- Update document to version v0.8 incorporating final stakeholder input
-- Prepare governance presentation materials and approval package
-- Obtain final stakeholder validation and readiness confirmation
-
-**Required Inputs:**
-- Project Definition Document v0.5
-- External stakeholder engagement matrix
-- Validation session agenda templates
-- Governance approval requirements
-
-**Deliverables:**
-- External stakeholder validation records
-- Validation session minutes and decisions
-- Final feedback integration log
-- Project Definition Document v0.8
-- Governance approval package
-- Stakeholder readiness confirmation
-
-**Context Update**: Save v0.8 external validation and governance package to context file
-**Transition:** Once external validation is complete and v0.8 is approved → proceed to 11_final_approval
-
-### State 11: Final Approval and Document Release
+### State 11: Document Release
 **ID:** 11_final_approval  
 **Description:** Final governance approval and document release preparation
 
