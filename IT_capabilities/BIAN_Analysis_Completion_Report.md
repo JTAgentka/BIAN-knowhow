@@ -212,14 +212,14 @@ Successfully analyzed all **40 leaf directories** in the BIAN structure containi
 
 #### Payment Execution (4 capabilities)
 
-##### 25. Direct Debit
+##### 25. Direct Debit - DONE
 - **Location:** `03_Banking_Financial_Markets_Operations/Payment_Execution/Direct_Debit/SUMMARY.md`
 - **REST APIs:** 5 (CZ/SK DDM and Payments)
 - **Event Streams:** 0
 - **Data Objects:** 2 (DirectDebitMandate, Payment)
 - **Key Systems:** PTS → WSO2 → DKCZ, DKSK
 
-##### 26. Payment Orders
+##### 26. Payment Orders DONE
 - **Location:** `03_Banking_Financial_Markets_Operations/Payment_Execution/Payment_Orders/SUMMARY.md`
 - **REST APIs:** 5 (CZ/SK Standing Orders and DDM)
 - **Event Streams:** 2 with 6 topics
