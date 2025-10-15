@@ -1,37 +1,71 @@
 {
   "project": {
     "id": "BRQ202",
-    "name": "Survey Management System - Expert Level Product Services Analysis",
-    "description": "Správa dotazníků uživatelem/vlastníkom - Expert Level strategic product and technology architecture analysis",
+    "name": "Survey Management System - Senior Level Product Services Analysis",
+    "description": "Admin FE prostředí pro správa dotazníků - Senior Level capability impact analysis",
     "created": "2025-09-12",
-    "domain": "Product Services",
-    "analysis_level": "Expert Level"
+    "domain": "product-services",
+    "analysis_level": "Senior Level"
   },
+  "user_requirements": "Aplikace poskytne admin FE prostředí pro správa dotazníků business uživatelem/vlastníkem. Vytvoření nové šablony dotazníku, struktura ze známých elementů, bez dopadů do algoritmu vyhodnocení, typologie dotazníku, activace/deaktivace, preview funkce, kopírování šablon, export šablon, editace dotazníku, nová verze šablony, uživatelský changelog, porovnání verzí, smazání verzí pouze skrze deaktivaci, přístup přes role a AD integraci, funkční moduly pro obsluhu klientů a správu dotazníků, audit.",
+  "user_instructions": "dont not forget on IT operations part",
+  "knowledge_commands": ["/Senior Level/know-product-services"],
   "analyst": {
     "agent_id": "agent_product_service",
     "role": "Director of Product & Service Enabling",
-    "level": "Expert",
-    "experience_years": "15+",
-    "expertise_domains": ["Agreement Management", "Product Management", "Product Portfolio Management", "Payment Execution", "Financial Instrument Management", "Issued Device Administration"],
+    "level": "Senior",
+    "experience_years": "8-12",
+    "expertise_domains": ["Agreement Management", "Collateral Management", "Financial Instrument Management"],
     "persona_active": true,
-    "knowledge_commands": [
-      "/Expert Level/know-product-services"
+    "persona_injected": true,
+    "kpis": ["Time-to-market < 6 months", "Product adoption", "SLA compliance"],
+    "pain_points": ["IT delays", "Legal delays", "Sales pressure"]
+  },
+  "instruction_analysis": {
+    "focus_areas": ["IT operational implications", "Technical infrastructure needs", "System administration requirements", "IT service management aspects"],
+    "approach_adjustments": ["Expand to include IT operational requirements", "Emphasize technical service delivery aspects", "Capture operational procedures alongside business changes", "Include system administration and maintenance requirements"]
+  },
+  "epic_requirements": {
+    "A": "Admin Frontend Environment - Provide administrative frontend environment for survey management by business users/owners",
+    "B": "Survey Template Creation - Creation of new survey templates with structure from known elements, without impact on evaluation algorithm",
+    "C": "Survey Typology Management - Survey typology definition and management capabilities", 
+    "D": "Activation/Deactivation Controls - Survey template activation and deactivation functionality",
+    "E": "Preview Functionality - Survey preview capabilities for template validation",
+    "F": "Template Operations - Template copying and export functionality",
+    "G": "Survey Editing Capabilities - Survey template editing and modification features",
+    "H": "Version Management - New survey template version creation with user changelog",
+    "I": "Version Comparison - Comparison capabilities between different template versions",
+    "J": "Version Lifecycle Management - Version deletion only through deactivation (soft delete)",
+    "K": "Access Control Integration - Role-based access through AD integration",
+    "L": "Functional Modules - Functional modules for client service and survey management operations",
+    "M": "Audit Capabilities - Complete audit trail and logging functionality"
+  },
+  "capability_impact_analysis": {
+    "management_groups_impacted": 7,
+    "individual_capabilities_impacted": 15,
+    "total_new_requirements": 41,
+    "impact_complexity": "High",
+    "priority_distribution": {
+      "critical": 6,
+      "high": 18,
+      "medium": 15,
+      "low": 2
+    },
+    "most_impacted_capability": "Product Directory",
+    "key_findings": [
+      "Product Management domain requires 26 of 41 total requirements (63%)",
+      "Critical audit requirements span across all management groups", 
+      "High concentration in Product Directory (10 requirements) indicates new product category",
+      "IT operations emphasis captured through device management and transaction authorization"
     ]
   },
   "workflow": {
     "current_state": "completed",
-    "completed_states": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
+    "completed_states": ["1_context_setup", "2_instructions_analysis", "3_epic_requirements", "4_capability_impact"],
     "pending_states": []
   },
-  "deliverables": {
-    "stakeholder_matrix": "completed",
-    "problem_statement": "completed",
-    "scope_matrix": "completed",
-    "as_is_analysis": "completed",
-    "expert_deliverables_package": "analyst-product-services-deliverables.json"
-  },
   "session_data": {
-    "started": "2025-09-12T12:00:00Z",
-    "last_updated": "2025-09-12T12:00:00Z"
+    "started": "2025-09-12T14:00:00Z",
+    "last_updated": "2025-09-12T14:00:00Z"
   }
 }

@@ -1,233 +1,500 @@
 {
-  "project_id": "BRQ202",
-  "domain": "Marketing & Sales",
-  "analyst_level": "Expert Level",
-  "analysis_completion_date": "2025-09-12T00:00:00Z",
-  "analyst_persona": "Director of Marketing & Sales with 15+ years strategic marketing transformation expertise",
-  
-  "executive_summary": {
-    "strategic_opportunity": "Transform fragmented marketing intelligence into unified customer voice platform for competitive advantage and revenue growth",
-    "business_impact": "15-20% increase in marketing-driven revenue through real-time customer insights and campaign optimization",
-    "investment_justification": "Critical infrastructure for marketing leadership and customer experience excellence in competitive banking market",
-    "risk_mitigation": "Address HIGH risk of competitive intelligence lag and customer experience blind spots"
+  "agent_type": "project-analyst",
+  "domain": "marketing-sales",
+  "expertise_level": "Expert",
+  "completion_status": "completed",
+  "context_file": ".claude/control-records/active/analyst-context.json",
+  "deliverables_file": "analyst-marketing-sales-deliverables.json",
+  "steps_completed": [1, 2, 3, 4],
+  "key_findings": {
+    "epic_requirements_count": 9,
+    "management_groups_impacted": 4,
+    "individual_capabilities_impacted": 9,
+    "total_new_requirements_generated": 45,
+    "impact_complexity": "High"
   },
-
-  "phase_1_stakeholder_analysis": {
-    "stakeholder_engagement_matrix": {
-      "executive_champions": [
-        {
-          "stakeholder": "Chief Marketing Officer",
-          "role": "Executive Sponsor", 
-          "attitude": "Champion",
-          "influence": "Very High",
-          "interest": "Very High",
-          "engagement_strategy": "Executive Partnership - Joint ownership of strategic outcomes"
-        },
-        {
-          "stakeholder": "Chief Revenue Officer",
-          "role": "Strategic Advisor",
-          "attitude": "Supportive", 
-          "influence": "Very High",
-          "interest": "High",
-          "engagement_strategy": "Revenue Impact Alignment - Demonstrate clear ROI pathways"
-        }
-      ],
-      "operational_stakeholders": [
-        {
-          "stakeholder": "Campaign Manager",
-          "role": "Campaign Intelligence",
-          "attitude": "Supportive",
-          "influence": "High", 
-          "interest": "Very High",
-          "engagement_strategy": "Campaign Performance - A/B testing and optimization capabilities"
-        },
-        {
-          "stakeholder": "Market Research Manager", 
-          "role": "Research Operations",
-          "attitude": "Champion",
-          "influence": "Medium",
-          "interest": "Very High", 
-          "engagement_strategy": "Research Efficiency - Cost reduction and speed improvements"
-        }
-      ],
-      "marketing_domains_impact": [
-        "Market Management - PRIMARY IMPACT",
-        "Campaign Management - HIGH IMPACT", 
-        "Brand Management - HIGH IMPACT",
-        "Lead Management - REVENUE IMPACT",
-        "Message Management - STRATEGIC",
-        "Loyalty Management - RETENTION"
-      ]
+  "hierarchical_requirements_table": [
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "Target group definition",
+      "epic_id": "MS_CM_CCD-A.00",
+      "business_process_change": "Establish business user access workflows for campaign questionnaire template administration",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "Campaign design methodologies",
+      "epic_id": "MS_CM_CCD-B.01",
+      "business_process_change": "Implement campaign-specific questionnaire template creation processes with target group alignment",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "Template lifecycle management",
+      "epic_id": "MS_CM_CCD-C.02",
+      "business_process_change": "Deploy campaign template lifecycle management for seasonal and product-specific surveys",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "Results measurement frameworks",
+      "epic_id": "MS_CM_CCD-D.03",
+      "business_process_change": "Integrate campaign questionnaire versioning with campaign iteration cycles",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "Campaign team management",
+      "epic_id": "MS_CM_CCD-G.04",
+      "business_process_change": "Create functional modules for campaign team questionnaire management and client interaction tracking",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Design",
+      "key_features": "ROI analysis compliance",
+      "epic_id": "MS_CM_CCD-H.05",
+      "business_process_change": "Implement audit trails for campaign questionnaire changes to support ROI analysis and compliance",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Execution",
+      "key_features": "Customer selection processes",
+      "epic_id": "MS_CM_CCE-A.06",
+      "business_process_change": "Establish execution team admin access for real-time questionnaire deployment during campaigns",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Execution",
+      "key_features": "AD authentication",
+      "epic_id": "MS_CM_CCE-F.07",
+      "business_process_change": "Integrate role-based access for campaign execution teams with AD authentication for customer data protection",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Execution",
+      "key_features": "Client service modules",
+      "epic_id": "MS_CM_CCE-G.08",
+      "business_process_change": "Deploy client service modules for questionnaire administration during customer interactions",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Execution",
+      "key_features": "Interaction tracking",
+      "epic_id": "MS_CM_CCE-H.09",
+      "business_process_change": "Implement comprehensive audit logging for customer interaction questionnaires and response tracking",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Execution",
+      "key_features": "System availability",
+      "epic_id": "MS_CM_CCE-I.10",
+      "business_process_change": "Establish IT operations support for questionnaire system availability during critical campaign periods",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Management",
+      "key_features": "Administrative control",
+      "epic_id": "MS_CM_CCM-A.11",
+      "business_process_change": "Provide campaign managers administrative control over questionnaire strategy and deployment oversight",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Management",
+      "key_features": "Coverage management",
+      "epic_id": "MS_CM_CCM-C.12",
+      "business_process_change": "Implement template lifecycle controls aligned with campaign coverage management and market monitoring",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Management",
+      "key_features": "Version management",
+      "epic_id": "MS_CM_CCM-D.13",
+      "business_process_change": "Deploy questionnaire version management supporting campaign iteration and performance optimization",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Management",
+      "key_features": "Audit trails",
+      "epic_id": "MS_CM_CCM-E.14",
+      "business_process_change": "Establish version control policies ensuring campaign questionnaire audit trails for regulatory compliance",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Customer Campaign Management",
+      "key_features": "Management dashboards",
+      "epic_id": "MS_CM_CCM-H.15",
+      "business_process_change": "Implement management-level audit dashboards for questionnaire performance and campaign effectiveness tracking",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Prospect Campaign Design",
+      "key_features": "Target profile definition",
+      "epic_id": "MS_CM_PCD-A.16",
+      "business_process_change": "Enable business users to design acquisition questionnaires with administrative oversight and approval workflows",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Prospect Campaign Design",
+      "key_features": "Acquisition strategies",
+      "epic_id": "MS_CM_PCD-B.17",
+      "business_process_change": "Create prospect-specific questionnaire templates aligned with target profile definitions and acquisition strategies",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Prospect Campaign Design",
+      "key_features": "Lifecycle management",
+      "epic_id": "MS_CM_PCD-C.18",
+      "business_process_change": "Deploy prospect questionnaire lifecycle management supporting result-based campaign adjustments",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Prospect Campaign Design",
+      "key_features": "Performance optimization",
+      "epic_id": "MS_CM_PCD-D.19",
+      "business_process_change": "Implement version control for prospect questionnaires enabling iterative design improvements based on performance data",
+      "impact_level": "Low",
+      "stakeholder_priority": "Medium"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Campaign Management",
+      "individual_capability": "Prospect Campaign Design",
+      "key_features": "Interaction management",
+      "epic_id": "MS_CM_PCD-G.20",
+      "business_process_change": "Establish functional modules for prospect interaction management and questionnaire administration",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Survey management",
+      "epic_id": "MS_MM_CS-A.21",
+      "business_process_change": "Establish market research team administrative access for comprehensive customer survey questionnaire management",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Template creation",
+      "epic_id": "MS_MM_CS-B.22",
+      "business_process_change": "Deploy customer survey template creation with market research methodology integration and statistical validity",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Survey lifecycle",
+      "epic_id": "MS_MM_CS-C.23",
+      "business_process_change": "Implement survey lifecycle management including activation scheduling, preview validation, and template standardization",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Version control",
+      "epic_id": "MS_MM_CS-D.24",
+      "business_process_change": "Create survey version control supporting longitudinal market research and trend analysis capabilities",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Audit trails",
+      "epic_id": "MS_MM_CS-E.25",
+      "business_process_change": "Establish survey version audit trails supporting market research data integrity and regulatory compliance requirements",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Role-based access",
+      "epic_id": "MS_MM_CS-F.26",
+      "business_process_change": "Integrate role-based access ensuring market research data confidentiality and team collaboration security",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Client service modules",
+      "epic_id": "MS_MM_CS-G.27",
+      "business_process_change": "Deploy specialized client service modules for survey administration and customer engagement management",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "Audit functionality",
+      "epic_id": "MS_MM_CS-H.28",
+      "business_process_change": "Implement comprehensive audit functionality for survey data quality, response tracking, and market research validation",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Customer Surveys",
+      "key_features": "IT operations",
+      "epic_id": "MS_MM_CS-I.29",
+      "business_process_change": "Establish IT operations support ensuring survey system reliability during critical market research periods",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Analysis",
+      "key_features": "Access controls",
+      "epic_id": "MS_MM_MA-F.30",
+      "business_process_change": "Implement secure access controls for market analysis questionnaire data integration with internal/external sources",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Analysis",
+      "key_features": "Audit trails",
+      "epic_id": "MS_MM_MA-H.31",
+      "business_process_change": "Deploy audit trails for market analysis questionnaire data supporting analytical integrity and source validation",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Analysis",
+      "key_features": "IT monitoring",
+      "epic_id": "MS_MM_MA-I.32",
+      "business_process_change": "Establish IT operations monitoring for questionnaire data feeds supporting market analysis workflows",
+      "impact_level": "Low",
+      "stakeholder_priority": "Medium"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Research",
+      "key_features": "Administrative access",
+      "epic_id": "MS_MM_MR-A.33",
+      "business_process_change": "Provide research team administrative access for questionnaire-based market research project management",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Research",
+      "key_features": "Access management",
+      "epic_id": "MS_MM_MR-F.34",
+      "business_process_change": "Integrate secure access management for external research vendor collaboration and data sharing protocols",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Research",
+      "key_features": "Functional modules",
+      "epic_id": "MS_MM_MR-G.35",
+      "business_process_change": "Deploy research-specific functional modules for questionnaire administration and vendor coordination",
+      "impact_level": "Low",
+      "stakeholder_priority": "Medium"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Research",
+      "key_features": "Research audit trails",
+      "epic_id": "MS_MM_MR-H.36",
+      "business_process_change": "Implement research audit trails supporting methodology validation and external compliance requirements",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Market Management",
+      "individual_capability": "Market Research",
+      "key_features": "IT operations",
+      "epic_id": "MS_MM_MR-I.37",
+      "business_process_change": "Establish IT operations support for research questionnaire systems and external data integration reliability",
+      "impact_level": "Low",
+      "stakeholder_priority": "Medium"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Lead Management",
+      "individual_capability": "Lead Management",
+      "key_features": "Lead qualification",
+      "epic_id": "MS_LM_LM-A.38",
+      "business_process_change": "Enable sales teams to administer lead qualification questionnaires with business user oversight and approval",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Lead Management",
+      "individual_capability": "Lead Management",
+      "key_features": "Role-based access",
+      "epic_id": "MS_LM_LM-F.39",
+      "business_process_change": "Implement role-based access for lead questionnaire data ensuring sales team collaboration and data security",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Lead Management",
+      "individual_capability": "Lead Management",
+      "key_features": "Functional modules",
+      "epic_id": "MS_LM_LM-G.40",
+      "business_process_change": "Deploy functional modules for lead questionnaire administration during client qualification and handover processes",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Lead Management",
+      "individual_capability": "Lead Management",
+      "key_features": "Process audit",
+      "epic_id": "MS_LM_LM-H.41",
+      "business_process_change": "Create audit trails for lead qualification questionnaires supporting sales process optimization and compliance",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Offer Management",
+      "individual_capability": "Offer Management",
+      "key_features": "Access controls",
+      "epic_id": "MS_OM_OM-F.42",
+      "business_process_change": "Integrate secure access controls for offer-related questionnaire data supporting eligibility assessment and compliance",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Offer Management",
+      "individual_capability": "Offer Management",
+      "key_features": "Functional modules",
+      "epic_id": "MS_OM_OM-G.43",
+      "business_process_change": "Deploy offer management functional modules for questionnaire administration during customer offer processes",
+      "impact_level": "Medium",
+      "stakeholder_priority": "High"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Offer Management",
+      "individual_capability": "Offer Management",
+      "key_features": "Compliance audit",
+      "epic_id": "MS_OM_OM-H.44",
+      "business_process_change": "Implement comprehensive audit trails for offer questionnaires supporting compliance documentation and regulatory requirements",
+      "impact_level": "High",
+      "stakeholder_priority": "Critical"
+    },
+    {
+      "context": "marketing-sales",
+      "management_group": "Offer Management",
+      "individual_capability": "Offer Management",
+      "key_features": "IT operations",
+      "epic_id": "MS_OM_OM-I.45",
+      "business_process_change": "Establish IT operations support ensuring questionnaire system availability during critical offer processing periods",
+      "impact_level": "Low",
+      "stakeholder_priority": "Medium"
     }
+  ],
+  "structured_requirements_summary": {
+    "total_requirements": 45,
+    "high_impact_requirements": 23,
+    "medium_impact_requirements": 19,
+    "low_impact_requirements": 3,
+    "most_impacted_capability": "Customer Surveys",
+    "stakeholder_priority_distribution": {
+      "critical_priority": 19,
+      "high_priority": 19,
+      "medium_priority": 4,
+      "low_priority": 3
+    },
+    "top_stakeholder_priorities": [
+      "MS_MM_CS-A.21: Market research team administrative access for customer survey management",
+      "MS_MM_CS-B.22: Customer survey template creation with market research methodology integration",
+      "MS_CM_CCD-A.00: Business user access workflows for campaign questionnaire template administration",
+      "MS_CM_CCD-B.01: Campaign-specific questionnaire template creation with target group alignment",
+      "MS_CM_CCM-A.11: Campaign managers administrative control over questionnaire strategy"
+    ]
   },
-
-  "phase_2_problem_statement": {
-    "business_pain_analysis": {
-      "primary_pain": "Marketing intelligence fragmentation limiting competitive advantage and customer experience optimization",
-      "pain_details": [
-        "Market Intelligence Fragmentation - Scattered research across multiple vendors with delayed insights",
-        "Customer Voice Disconnect - No unified platform for feedback across touchpoints", 
-        "Campaign Performance Opacity - Limited real-time feedback preventing dynamic optimization",
-        "Competitive Intelligence Gaps - Manual processes creating delays in market response"
-      ]
-    },
-    "strategic_change_drivers": {
-      "marketing_technology_evolution": "Integrated customer intelligence platform driving personalized marketing at scale - 40-60% campaign ROI improvement",
-      "competitive_market_dynamics": "Proactive competitive intelligence with continuous market pulse - Weeks vs months response time",
-      "customer_experience_excellence": "360-degree customer voice integration across all touchpoints - Measurable brand strengthening"
-    },
-    "success_criteria_framework": {
-      "primary_marketing_kpis": {
-        "campaign_roi": "4.5x average (from 3.2x current)",
-        "brand_awareness": "75% aided awareness (from 67% current)",
-        "new_client_acquisition": "11,000/quarter (from 8,500 current)", 
-        "customer_retention": "92.0% (from 89.3% current)"
-      },
-      "operational_excellence": {
-        "market_research_cycle": "2-3 weeks (from 6-8 weeks current)",
-        "campaign_feedback_integration": "Real-time (from quarterly manual)",
-        "customer_voice_coverage": "85% touchpoints (from 35% current)",
-        "competitive_intelligence": "Weekly updates (from monthly)"
-      },
-      "strategic_outcomes": {
-        "revenue_growth": "15-20% increase in marketing-driven revenue",
-        "market_position": "Leadership in customer-centric banking innovation", 
-        "competitive_advantage": "Industry-leading customer intelligence capabilities",
-        "brand_equity": "Measurable improvement in brand perception and loyalty"
-      }
-    }
-  },
-
-  "phase_3_scope_definition": {
-    "strategic_scope_matrix": {
-      "scope_in_core_capabilities": [
-        "Market Management - Customer Survey Creation & Evaluation (PRIMARY CAPABILITY)",
-        "Campaign Management - Real-time Campaign Feedback Integration (HIGH IMPACT)",
-        "Brand Management - Brand Perception Measurement & Monitoring (CRITICAL)", 
-        "Lead Management - Lead Qualification Survey Integration (REVENUE IMPACT)",
-        "Message Management - Message Effectiveness Testing (STRATEGIC)",
-        "Loyalty Management - Customer Satisfaction & NPS Measurement (RETENTION)"
-      ],
-      "advanced_technology_integration": [
-        "Marketing Automation Integration - Seamless MarTech stack connectivity",
-        "Customer Data Platform Connectivity - Unified customer 360-degree view", 
-        "Predictive Analytics Engine - AI-driven customer behavior prediction",
-        "Real-time Dashboard & Reporting - Executive-level marketing intelligence",
-        "Multi-channel Survey Distribution - Email, web, mobile, in-branch integration",
-        "Advanced Segmentation Capabilities - Dynamic customer segmentation"
-      ],
-      "strategic_exclusions": [
-        "External Market Research Procurement (Phase 2)",
-        "Advanced AI/ML Model Development (Phase 2)", 
-        "Social Media Sentiment Integration (Phase 3)",
-        "Mobile Application Development (Phase 2)",
-        "Customer Acquisition Channel Analytics (Parallel Initiative)",
-        "Competitive Intelligence Automation (Phase 3)"
-      ]
-    },
-    "critical_assumptions": {
-      "technology_assumptions": [
-        "MarTech Stack API Compatibility - Current marketing automation supports integration",
-        "Data Governance Framework Support - Existing governance accommodates survey data",
-        "GDPR Compliance Accommodation - Framework supports expanded data collection",
-        "Marketing Team Capacity - 20% additional capacity for adoption and training"
-      ],
-      "business_process_assumptions": [
-        "Campaign Workflow Integration - Current processes accommodate real-time feedback",
-        "Brand Measurement Compatibility - Existing tracking supports continuous measurement", 
-        "Customer Communication Balance - Optimal survey frequency maintains experience",
-        "Performance KPI Alignment - Marketing metrics enhance without disruption"
-      ]
-    },
-    "strategic_constraints": {
-      "budget_resources": ["Marketing Budget Allocation - Phased ROI demonstration", "Technical Resource Availability - IT partnership required"],
-      "regulatory_compliance": ["GDPR Data Processing - Enhanced consent management", "Banking Regulatory Oversight - Communication compliance"],
-      "competitive_market": ["Customer Survey Fatigue - Industry research increase", "Competitive Intelligence Sensitivity - Regulatory restrictions"]
-    }
-  },
-
-  "phase_4_as_is_analysis": {
-    "current_state_assessment": {
-      "overall_maturity": "FRAGMENTED - Marketing intelligence capabilities scattered across multiple platforms with significant integration gaps",
-      "strategic_risk_level": "HIGH - Competitive disadvantage due to delayed insights and reactive positioning"
-    },
-    "primary_problem_areas": {
-      "market_research_operations": {
-        "current_state": "Siloed operations with 6-8 week research cycles",
-        "pain_points": ["Multiple vendor management", "Manual data consolidation", "Inconsistent methodologies"],
-        "business_impact": "Delayed market response and budget inefficiencies"
-      },
-      "campaign_management": {
-        "current_state": "Reactive optimization with post-campaign analysis only", 
-        "pain_points": ["No real-time feedback integration", "Limited A/B testing", "Static customer segmentation"],
-        "business_impact": "Suboptimal campaign ROI and missed optimization opportunities"
-      },
-      "brand_management": {
-        "current_state": "Quarterly brand tracking with 2-month reporting delays",
-        "pain_points": ["No continuous monitoring", "Limited competitive intelligence", "Reactive brand management"],
-        "business_impact": "Slow response to brand threats and competitive positioning changes"
-      },
-      "technology_infrastructure": {
-        "current_state": "Multiple disconnected survey platforms with no automation",
-        "pain_points": ["Manual data integration", "No MarTech stack integration", "Limited customer 360 view"],
-        "business_impact": "Operational inefficiency and lost customer intelligence opportunities"
-      }
-    },
-    "critical_capability_gaps": [
-      "Customer Intelligence Centralization - Unified platform for all customer feedback",
-      "Real-time Campaign Optimization - Dynamic campaign adjustment capabilities",
-      "Continuous Brand Monitoring - Automated brand health tracking", 
-      "Integrated Customer 360 - Survey data integration with customer profiles",
-      "Marketing Research Automation - Self-service survey capabilities",
-      "Competitive Intelligence Acceleration - Faster market research cycles"
-    ],
-    "strategic_risk_assessment": {
-      "competitive_intelligence_lag": {
-        "risk_level": "HIGH",
-        "impact": "Lost market opportunities and reactive positioning",
-        "probability": "Very High"
-      },
-      "customer_experience_blindspots": {
-        "risk_level": "HIGH", 
-        "impact": "Brand reputation damage and customer churn",
-        "probability": "High"
-      },
-      "campaign_roi_suboptimization": {
-        "risk_level": "MEDIUM",
-        "impact": "Budget inefficiency and missed revenue targets", 
-        "probability": "Very High"
-      }
-    },
-    "technology_gap_analysis": {
-      "survey_platform": "FRAGMENTED - Multiple vendors (SurveyMonkey, Qualtrics) with no integration",
-      "customer_database": "ADEQUATE - Salesforce CRM with limited survey data integration",
-      "marketing_automation": "STRONG - HubSpot Enterprise with no survey trigger capabilities",
-      "analytics_platform": "GOOD - Google Analytics + Tableau with manual survey data processing"
-    }
-  },
-
-  "strategic_recommendations": {
-    "immediate_priorities": [
-      "Unified Survey Platform Implementation - Centralize all marketing research capabilities",
-      "Marketing Automation Integration - Enable real-time campaign optimization",
-      "Customer 360 Enhancement - Integrate survey insights with customer profiles", 
-      "Brand Monitoring Automation - Continuous brand health tracking"
-    ],
-    "transformation_roadmap": {
-      "phase_1": "Core platform implementation with basic integration (6 months)",
-      "phase_2": "Advanced analytics and external vendor integration (3 months)",
-      "phase_3": "AI-powered predictive capabilities and competitive intelligence (6 months)"
-    },
-    "success_metrics": {
-      "short_term": "Platform deployment, basic integration, team training completion",
-      "medium_term": "Campaign ROI improvement, research cycle reduction, brand monitoring automation",
-      "long_term": "Revenue growth achievement, market leadership position, competitive advantage realization"
-    }
-  },
-
-  "next_steps": {
-    "handover_preparation": "Complete strategic marketing analysis ready for designer agent solution architecture",
-    "required_artifacts": "All phase 1-4 deliverables completed with strategic marketing focus",
-    "designer_briefing": "Marketing transformation requirements, technology integration needs, and competitive positioning objectives"
-  }
+  "ready_for_next_phase": true,
+  "handover_summary": "Completed comprehensive hierarchical capability impact analysis for Marketing Sales domain covering 4 management groups and 9 individual capabilities, generating 45 structured requirements with 19 critical priority items aligned with Marketing Sales Performance Framework KPIs focusing on client growth, retention, brand awareness, and campaign ROI objectives."
 }

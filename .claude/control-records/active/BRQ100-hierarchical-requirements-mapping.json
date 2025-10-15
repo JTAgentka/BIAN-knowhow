@@ -1,0 +1,853 @@
+{
+  "project_id": "BRQ100",
+  "project_name": "Survey Management System",
+  "domain": "Customer-Distribution",
+  "analyst_persona": {
+    "role": "Director of Customer & Distribution",
+    "level": "Senior",
+    "expertise_years": "8-12",
+    "domain_focus": "Channel Management, Customer Management, Interaction Management, Partner Management"
+  },
+  "hierarchical_requirements_mapping": {
+    "mapping_format": "INDIVIDUAL_CAPABILITY_LEVEL",
+    "id_format": "[CONTEXT_MGMT_CAPABILITY-EPIC.XX]",
+    "business_process_focus": true,
+    "complete_hierarchy_table": {
+      "context": "Customer-Distribution",
+      "management_groups": {
+        "Channel_Management": {
+          "individual_capabilities": {
+            "Advanced_Voice_Services_Management": {
+              "key_features": [
+                "Platform configuration determination",
+                "Upgrade oversight", 
+                "Availability monitoring"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_AVSM-A.00",
+                  "description": "Integration of survey triggers into voice platform configuration",
+                  "business_process_change": "Voice services will automatically trigger customer satisfaction surveys post-interaction",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_AVSM-B.00", 
+                  "description": "Voice channel availability monitoring with survey integration",
+                  "business_process_change": "System availability metrics will trigger automated service quality surveys",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Advanced_Voice_Services_Operations": {
+              "key_features": [
+                "Incoming call handling",
+                "Outgoing connections",
+                "Incident reporting and resolution"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_AVSO-A.00",
+                  "description": "Post-call survey automation for all voice interactions",
+                  "business_process_change": "Every call resolution will trigger contextual survey delivery",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_AVSO-B.00",
+                  "description": "Incident resolution feedback collection",
+                  "business_process_change": "Incident resolution processes will include mandatory feedback collection",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Branch_Location_Operations": {
+              "key_features": [
+                "Staff allocation",
+                "Cash management",
+                "Security"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_BLO-A.00",
+                  "description": "Branch visit experience survey automation",
+                  "business_process_change": "All branch transactions will trigger post-visit experience surveys",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_BLO-B.00",
+                  "description": "Staff performance feedback integration",
+                  "business_process_change": "Staff allocation decisions will be informed by customer feedback data",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Branch_Portfolio": {
+              "key_features": [
+                "Network analysis",
+                "Product optimization", 
+                "Marketing coordination"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_BP-A.00",
+                  "description": "Branch performance analytics with customer feedback integration",
+                  "business_process_change": "Branch network optimization will incorporate customer satisfaction metrics",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_BP-B.00",
+                  "description": "Product placement feedback collection",
+                  "business_process_change": "Product optimization decisions will be driven by branch-specific feedback",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Channel_Activity_Analysis": {
+              "key_features": [
+                "Fraud analysis",
+                "Device and bot error detection",
+                "Customer behavior monitoring"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_CAA-A.00",
+                  "description": "Behavioral pattern analysis with survey correlation",
+                  "business_process_change": "Fraud detection algorithms will incorporate customer satisfaction anomalies",
+                  "impact_level": "MEDIUM"
+                },
+                "B": {
+                  "id": "CD_CHM_CAA-B.00",
+                  "description": "Error detection feedback loop",
+                  "business_process_change": "System errors will trigger immediate customer impact surveys",
+                  "impact_level": "LOW"
+                }
+              }
+            },
+            "Channel_Portfolio": {
+              "key_features": [
+                "Coverage analysis",
+                "Performance evaluation",
+                "Customer experience improvement"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_CP-A.00",
+                  "description": "Multi-channel experience measurement",
+                  "business_process_change": "Channel performance evaluation will be based on integrated customer feedback",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_CP-B.00",
+                  "description": "Coverage optimization with satisfaction metrics",
+                  "business_process_change": "Channel coverage decisions will incorporate satisfaction and effort scores",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "eBranch_Operations": {
+              "key_features": [
+                "Website support",
+                "Registration management",
+                "Customer routing"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_EBO-A.00",
+                  "description": "Digital journey feedback integration",
+                  "business_process_change": "All digital interactions will include contextual micro-surveys",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_EBO-B.00",
+                  "description": "Registration process experience tracking",
+                  "business_process_change": "New customer onboarding will include progressive satisfaction measurement",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Interactive_Help": {
+              "key_features": [
+                "Help management and selection",
+                "Usability improvement",
+                "Feedback collection"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CHM_IH-A.00",
+                  "description": "Help effectiveness measurement",
+                  "business_process_change": "Help system usage will automatically trigger effectiveness surveys",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CHM_IH-B.00",
+                  "description": "Usability feedback automation",
+                  "business_process_change": "System usability improvements will be driven by continuous feedback collection",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            }
+          }
+        },
+        "Customer_Management": {
+          "individual_capabilities": {
+            "Customer_Access_Entitlement": {
+              "key_features": [
+                "Access profile management",
+                "Authorized access control"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CM_CAE-A.00",
+                  "description": "Access experience satisfaction tracking",
+                  "business_process_change": "Access provisioning will include experience validation surveys",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Customer_Credit_Rating": {
+              "key_features": [
+                "Access to external agencies",
+                "Data consolidation",
+                "Rating creation"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CM_CCR-A.00",
+                  "description": "Credit process experience feedback",
+                  "business_process_change": "Credit assessment processes will include customer experience measurement",
+                  "impact_level": "LOW"
+                }
+              }
+            },
+            "Customer_Relationship_Management": {
+              "key_features": [
+                "Plan creation",
+                "Advisory and care",
+                "Product matching",
+                "Problem resolution"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_CM_CRM-A.00",
+                  "description": "Relationship development feedback integration",
+                  "business_process_change": "All relationship management activities will incorporate continuous feedback loops",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_CM_CRM-B.00",
+                  "description": "Advisory service satisfaction measurement",
+                  "business_process_change": "Advisory interactions will include immediate satisfaction and effectiveness surveys",
+                  "impact_level": "HIGH"
+                },
+                "C": {
+                  "id": "CD_CM_CRM-C.00",
+                  "description": "Problem resolution effectiveness tracking",
+                  "business_process_change": "Problem resolution workflows will mandate follow-up satisfaction surveys",
+                  "impact_level": "HIGH"
+                }
+              }
+            }
+          }
+        },
+        "Interaction_Management": {
+          "individual_capabilities": {
+            "Customer_Relationship_Management_Interaction": {
+              "key_features": [
+                "Relationship plan",
+                "Customer contact",
+                "Problem resolution"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_IM_CRMI-A.00",
+                  "description": "Interaction quality measurement",
+                  "business_process_change": "Every customer interaction will include real-time quality assessment",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_IM_CRMI-B.00",
+                  "description": "Contact effectiveness feedback",
+                  "business_process_change": "Customer contact strategies will be optimized based on satisfaction feedback",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Session_Dialogue": {
+              "key_features": [
+                "Information consolidation",
+                "Dialogue structuring",
+                "Action initiation"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_IM_SD-A.00",
+                  "description": "Session experience optimization",
+                  "business_process_change": "Customer sessions will include micro-feedback for dialogue effectiveness",
+                  "impact_level": "MEDIUM"
+                },
+                "B": {
+                  "id": "CD_IM_SD-B.00",
+                  "description": "Action completion satisfaction tracking",
+                  "business_process_change": "Action initiation workflows will validate customer satisfaction",
+                  "impact_level": "LOW"
+                }
+              }
+            }
+          }
+        },
+        "Partner_Management": {
+          "individual_capabilities": {
+            "Corporate_Alliance_and_Stake_Holder": {
+              "key_features": [
+                "Alliance management",
+                "Information sharing",
+                "Relationship development"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_PM_CASH-A.00",
+                  "description": "Partner satisfaction measurement integration",
+                  "business_process_change": "Alliance management will include systematic partner satisfaction surveys",
+                  "impact_level": "MEDIUM"
+                },
+                "B": {
+                  "id": "CD_PM_CASH-B.00",
+                  "description": "Information sharing effectiveness feedback",
+                  "business_process_change": "Partner communication processes will incorporate feedback mechanisms",
+                  "impact_level": "LOW"
+                }
+              }
+            },
+            "Merchant_Acquiring_Facility": {
+              "key_features": [
+                "Account setup and maintenance",
+                "Chargeback processing",
+                "Settlement and fees"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_PM_MAF-A.00",
+                  "description": "Merchant experience optimization",
+                  "business_process_change": "Merchant onboarding and service delivery will include systematic feedback collection",
+                  "impact_level": "HIGH"
+                },
+                "B": {
+                  "id": "CD_PM_MAF-B.00",
+                  "description": "Service quality measurement for merchants",
+                  "business_process_change": "Merchant service processes will integrate continuous satisfaction monitoring",
+                  "impact_level": "MEDIUM"
+                }
+              }
+            },
+            "Correspondent_Bank_Operations": {
+              "key_features": [
+                "Payment processing",
+                "Shadow accounting",
+                "SWIFT messages"
+              ],
+              "epic_mapping": {
+                "A": {
+                  "id": "CD_PM_CBO-A.00",
+                  "description": "Correspondent bank relationship feedback",
+                  "business_process_change": "Bank-to-bank operations will include relationship satisfaction measurement",
+                  "impact_level": "LOW"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "summary_statistics": {
+      "total_individual_capabilities": 13,
+      "total_epic_mappings": 24,
+      "impact_distribution": {
+        "HIGH": 12,
+        "MEDIUM": 10,
+        "LOW": 2
+      },
+      "management_group_coverage": {
+        "Channel_Management": 8,
+        "Customer_Management": 3,
+        "Interaction_Management": 2,
+        "Partner_Management": 3
+      }
+    },
+    "key_business_process_changes": [
+      "Automated post-interaction survey triggers across all channels",
+      "Integration of customer satisfaction metrics into operational decision-making",
+      "Real-time feedback loops for continuous service improvement",
+      "Partner and merchant relationship management enhancement",
+      "Multi-channel experience measurement and optimization"
+    ]
+  },
+  "stakeholder_priority_assessment": {
+    "kpi_framework_basis": {
+      "nps_impact": "Net Promoter Score - customer loyalty and satisfaction",
+      "csat_impact": "Customer Satisfaction Score - immediate satisfaction measurement",
+      "cost_to_serve_impact": "Operational efficiency and cost optimization",
+      "channel_availability_impact": "Channel uptime and service reliability"
+    },
+    "priority_levels": {
+      "CRITICAL": "Direct impact on primary KPIs, high customer visibility, competitive advantage",
+      "HIGH": "Strong KPI alignment, significant customer impact, operational improvement",
+      "MEDIUM": "Moderate KPI support, operational efficiency gains, quality enhancement",
+      "LOW": "Minimal KPI impact, internal process improvement, future foundation"
+    },
+    "detailed_requirements_with_priorities": [
+      {
+        "requirement_id": "CD_CHM_AVSM-A.00",
+        "capability": "Advanced Voice Services Management",
+        "description": "Integration of survey triggers into voice platform configuration",
+        "business_process_change": "Voice services will automatically trigger customer satisfaction surveys post-interaction",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Channel availability"],
+          "priority_rationale": "Direct CSAT measurement capability enables immediate relationship development and NPS improvement through voice channel satisfaction tracking"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_AVSM-B.00",
+        "capability": "Advanced Voice Services Management",
+        "description": "Voice channel availability monitoring with survey integration",
+        "business_process_change": "System availability metrics will trigger automated service quality surveys",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["Channel availability", "CSAT"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Channel availability directly impacts customer experience and enables proactive service quality management"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_AVSO-A.00",
+        "capability": "Advanced Voice Services Operations",
+        "description": "Post-call survey automation for all voice interactions",
+        "business_process_change": "Every call resolution will trigger contextual survey delivery",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Universal post-call feedback enables immediate CSAT measurement and NPS improvement through comprehensive voice interaction tracking"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_AVSO-B.00",
+        "capability": "Advanced Voice Services Operations",
+        "description": "Incident resolution feedback collection",
+        "business_process_change": "Incident resolution processes will include mandatory feedback collection",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": ["Channel availability"],
+          "priority_rationale": "Incident resolution effectiveness measurement improves CSAT and reduces cost-to-serve through better problem resolution"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_BLO-A.00",
+        "capability": "Branch Location Operations",
+        "description": "Branch visit experience survey automation",
+        "business_process_change": "All branch transactions will trigger post-visit experience surveys",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Branch experience directly impacts NPS and CSAT as primary customer touchpoint, critical for relationship development"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_BLO-B.00",
+        "capability": "Branch Location Operations",
+        "description": "Staff performance feedback integration",
+        "business_process_change": "Staff allocation decisions will be informed by customer feedback data",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve", "CSAT"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Staff optimization improves cost-to-serve efficiency and customer satisfaction through better resource allocation"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_BP-A.00",
+        "capability": "Branch Portfolio",
+        "description": "Branch performance analytics with customer feedback integration",
+        "business_process_change": "Branch network optimization will incorporate customer satisfaction metrics",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve", "CSAT"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Network optimization based on satisfaction data improves cost-to-serve and CSAT through strategic branch placement"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_BP-B.00",
+        "capability": "Branch Portfolio",
+        "description": "Product placement feedback collection",
+        "business_process_change": "Product optimization decisions will be driven by branch-specific feedback",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Product placement optimization improves CSAT and operational efficiency through data-driven decisions"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_CAA-A.00",
+        "capability": "Channel Activity Analysis",
+        "description": "Behavioral pattern analysis with survey correlation",
+        "business_process_change": "Fraud detection algorithms will incorporate customer satisfaction anomalies",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve"],
+          "secondary_kpis": ["CSAT"],
+          "priority_rationale": "Enhanced fraud detection reduces cost-to-serve and prevents customer satisfaction issues from security breaches"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_CAA-B.00",
+        "capability": "Channel Activity Analysis",
+        "description": "Error detection feedback loop",
+        "business_process_change": "System errors will trigger immediate customer impact surveys",
+        "impact_level": "LOW",
+        "stakeholder_priority": "LOW",
+        "kpi_alignment": {
+          "primary_kpis": ["Channel availability"],
+          "secondary_kpis": ["CSAT"],
+          "priority_rationale": "Error impact measurement supports channel availability monitoring but has limited direct KPI impact"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_CP-A.00",
+        "capability": "Channel Portfolio",
+        "description": "Multi-channel experience measurement",
+        "business_process_change": "Channel performance evaluation will be based on integrated customer feedback",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS", "Cost-to-serve"],
+          "secondary_kpis": ["Channel availability"],
+          "priority_rationale": "Multi-channel experience measurement is foundational for all KPIs - directly impacts CSAT, NPS, and enables cost optimization"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_CP-B.00",
+        "capability": "Channel Portfolio",
+        "description": "Coverage optimization with satisfaction metrics",
+        "business_process_change": "Channel coverage decisions will incorporate satisfaction and effort scores",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve", "CSAT"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Coverage optimization balances cost-to-serve with customer satisfaction, enabling strategic channel investment"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_EBO-A.00",
+        "capability": "eBranch Operations",
+        "description": "Digital journey feedback integration",
+        "business_process_change": "All digital interactions will include contextual micro-surveys",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Digital journey optimization directly impacts CSAT and NPS as primary modern customer touchpoint"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_EBO-B.00",
+        "capability": "eBranch Operations",
+        "description": "Registration process experience tracking",
+        "business_process_change": "New customer onboarding will include progressive satisfaction measurement",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Onboarding experience is critical for NPS and early CSAT, setting foundation for customer relationship"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_IH-A.00",
+        "capability": "Interactive Help",
+        "description": "Help effectiveness measurement",
+        "business_process_change": "Help system usage will automatically trigger effectiveness surveys",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Help effectiveness directly improves CSAT and reduces cost-to-serve through better self-service capabilities"
+        }
+      },
+      {
+        "requirement_id": "CD_CHM_IH-B.00",
+        "capability": "Interactive Help",
+        "description": "Usability feedback automation",
+        "business_process_change": "System usability improvements will be driven by continuous feedback collection",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": [],
+          "priority_rationale": "Usability improvements support CSAT and cost reduction through better user experience design"
+        }
+      },
+      {
+        "requirement_id": "CD_CM_CAE-A.00",
+        "capability": "Customer Access Entitlement",
+        "description": "Access experience satisfaction tracking",
+        "business_process_change": "Access provisioning will include experience validation surveys",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Access experience measurement improves CSAT but has limited broader KPI impact"
+        }
+      },
+      {
+        "requirement_id": "CD_CM_CCR-A.00",
+        "capability": "Customer Credit Rating",
+        "description": "Credit process experience feedback",
+        "business_process_change": "Credit assessment processes will include customer experience measurement",
+        "impact_level": "LOW",
+        "stakeholder_priority": "LOW",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT"],
+          "secondary_kpis": [],
+          "priority_rationale": "Credit process feedback has minimal direct impact on primary KPIs, limited to process improvement"
+        }
+      },
+      {
+        "requirement_id": "CD_CM_CRM-A.00",
+        "capability": "Customer Relationship Management",
+        "description": "Relationship development feedback integration",
+        "business_process_change": "All relationship management activities will incorporate continuous feedback loops",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["NPS", "CSAT"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Relationship management is core to NPS and CSAT improvement, fundamental to customer satisfaction strategy"
+        }
+      },
+      {
+        "requirement_id": "CD_CM_CRM-B.00",
+        "capability": "Customer Relationship Management",
+        "description": "Advisory service satisfaction measurement",
+        "business_process_change": "Advisory interactions will include immediate satisfaction and effectiveness surveys",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Advisory service quality directly drives NPS and CSAT through personalized customer interaction"
+        }
+      },
+      {
+        "requirement_id": "CD_CM_CRM-C.00",
+        "capability": "Customer Relationship Management",
+        "description": "Problem resolution effectiveness tracking",
+        "business_process_change": "Problem resolution workflows will mandate follow-up satisfaction surveys",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Problem resolution effectiveness is critical for CSAT recovery and NPS improvement after service failures"
+        }
+      },
+      {
+        "requirement_id": "CD_IM_CRMI-A.00",
+        "capability": "Customer Relationship Management (Interaction)",
+        "description": "Interaction quality measurement",
+        "business_process_change": "Every customer interaction will include real-time quality assessment",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "CRITICAL",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "NPS"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Real-time interaction quality assessment enables immediate CSAT improvement and NPS optimization"
+        }
+      },
+      {
+        "requirement_id": "CD_IM_CRMI-B.00",
+        "capability": "Customer Relationship Management (Interaction)",
+        "description": "Contact effectiveness feedback",
+        "business_process_change": "Customer contact strategies will be optimized based on satisfaction feedback",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Contact optimization improves CSAT efficiency and reduces cost-to-serve through better targeting"
+        }
+      },
+      {
+        "requirement_id": "CD_IM_SD-A.00",
+        "capability": "Session Dialogue",
+        "description": "Session experience optimization",
+        "business_process_change": "Customer sessions will include micro-feedback for dialogue effectiveness",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT"],
+          "secondary_kpis": ["Cost-to-serve"],
+          "priority_rationale": "Session optimization improves CSAT through better dialogue management but has moderate overall impact"
+        }
+      },
+      {
+        "requirement_id": "CD_IM_SD-B.00",
+        "capability": "Session Dialogue",
+        "description": "Action completion satisfaction tracking",
+        "business_process_change": "Action initiation workflows will validate customer satisfaction",
+        "impact_level": "LOW",
+        "stakeholder_priority": "LOW",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT"],
+          "secondary_kpis": [],
+          "priority_rationale": "Action completion tracking provides limited KPI improvement beyond basic satisfaction measurement"
+        }
+      },
+      {
+        "requirement_id": "CD_PM_CASH-A.00",
+        "capability": "Corporate Alliance and Stake Holder",
+        "description": "Partner satisfaction measurement integration",
+        "business_process_change": "Alliance management will include systematic partner satisfaction surveys",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve"],
+          "secondary_kpis": ["CSAT"],
+          "priority_rationale": "Partner satisfaction impacts cost-to-serve through better alliance management but has indirect customer impact"
+        }
+      },
+      {
+        "requirement_id": "CD_PM_CASH-B.00",
+        "capability": "Corporate Alliance and Stake Holder",
+        "description": "Information sharing effectiveness feedback",
+        "business_process_change": "Partner communication processes will incorporate feedback mechanisms",
+        "impact_level": "LOW",
+        "stakeholder_priority": "LOW",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve"],
+          "secondary_kpis": [],
+          "priority_rationale": "Information sharing optimization has minimal direct impact on primary customer-facing KPIs"
+        }
+      },
+      {
+        "requirement_id": "CD_PM_MAF-A.00",
+        "capability": "Merchant Acquiring Facility",
+        "description": "Merchant experience optimization",
+        "business_process_change": "Merchant onboarding and service delivery will include systematic feedback collection",
+        "impact_level": "HIGH",
+        "stakeholder_priority": "HIGH",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": ["NPS"],
+          "priority_rationale": "Merchant experience directly impacts our service quality reputation and operational efficiency in payments ecosystem"
+        }
+      },
+      {
+        "requirement_id": "CD_PM_MAF-B.00",
+        "capability": "Merchant Acquiring Facility",
+        "description": "Service quality measurement for merchants",
+        "business_process_change": "Merchant service processes will integrate continuous satisfaction monitoring",
+        "impact_level": "MEDIUM",
+        "stakeholder_priority": "MEDIUM",
+        "kpi_alignment": {
+          "primary_kpis": ["CSAT", "Cost-to-serve"],
+          "secondary_kpis": [],
+          "priority_rationale": "Merchant service quality measurement supports operational efficiency and service reputation"
+        }
+      },
+      {
+        "requirement_id": "CD_PM_CBO-A.00",
+        "capability": "Correspondent Bank Operations",
+        "description": "Correspondent bank relationship feedback",
+        "business_process_change": "Bank-to-bank operations will include relationship satisfaction measurement",
+        "impact_level": "LOW",
+        "stakeholder_priority": "LOW",
+        "kpi_alignment": {
+          "primary_kpis": ["Cost-to-serve"],
+          "secondary_kpis": [],
+          "priority_rationale": "Correspondent bank feedback has limited direct impact on customer-facing KPIs, primarily internal operational improvement"
+        }
+      }
+    ],
+    "priority_distribution_summary": {
+      "CRITICAL": {
+        "count": 8,
+        "percentage": "33%",
+        "requirements": [
+          "CD_CHM_AVSM-A.00 - Voice survey integration",
+          "CD_CHM_AVSO-A.00 - Post-call survey automation",
+          "CD_CHM_BLO-A.00 - Branch visit surveys",
+          "CD_CHM_CP-A.00 - Multi-channel experience measurement",
+          "CD_CHM_EBO-A.00 - Digital journey feedback",
+          "CD_CM_CRM-A.00 - Relationship feedback integration",
+          "CD_CM_CRM-B.00 - Advisory service measurement",
+          "CD_CM_CRM-C.00 - Problem resolution tracking",
+          "CD_IM_CRMI-A.00 - Interaction quality measurement"
+        ]
+      },
+      "HIGH": {
+        "count": 7,
+        "percentage": "29%",
+        "requirements": [
+          "CD_CHM_AVSM-B.00 - Channel availability monitoring",
+          "CD_CHM_AVSO-B.00 - Incident resolution feedback",
+          "CD_CHM_BP-A.00 - Branch performance analytics",
+          "CD_CHM_CP-B.00 - Coverage optimization",
+          "CD_CHM_EBO-B.00 - Registration experience tracking",
+          "CD_CHM_IH-A.00 - Help effectiveness measurement",
+          "CD_IM_CRMI-B.00 - Contact effectiveness feedback",
+          "CD_PM_MAF-A.00 - Merchant experience optimization"
+        ]
+      },
+      "MEDIUM": {
+        "count": 7,
+        "percentage": "29%",
+        "requirements": [
+          "CD_CHM_BLO-B.00 - Staff performance feedback",
+          "CD_CHM_BP-B.00 - Product placement feedback",
+          "CD_CHM_CAA-A.00 - Behavioral pattern analysis",
+          "CD_CHM_IH-B.00 - Usability feedback automation",
+          "CD_CM_CAE-A.00 - Access experience tracking",
+          "CD_IM_SD-A.00 - Session experience optimization",
+          "CD_PM_CASH-A.00 - Partner satisfaction measurement",
+          "CD_PM_MAF-B.00 - Merchant service quality"
+        ]
+      },
+      "LOW": {
+        "count": 4,
+        "percentage": "17%",
+        "requirements": [
+          "CD_CHM_CAA-B.00 - Error detection feedback",
+          "CD_CM_CCR-A.00 - Credit process feedback",
+          "CD_IM_SD-B.00 - Action completion tracking",
+          "CD_PM_CASH-B.00 - Information sharing feedback",
+          "CD_PM_CBO-A.00 - Correspondent bank feedback"
+        ]
+      }
+    },
+    "stakeholder_strategic_insights": {
+      "nps_improvement_focus": "8 CRITICAL requirements directly enable NPS improvement through comprehensive customer touchpoint feedback",
+      "csat_optimization_priority": "15 HIGH/CRITICAL requirements focus on immediate satisfaction measurement and improvement",
+      "cost_efficiency_balance": "7 requirements strategically balance cost-to-serve optimization with service quality enhancement",
+      "channel_excellence_foundation": "Multi-channel experience measurement (CRITICAL) provides foundational capability for all KPI improvements"
+    }
+  },
+  "analysis_timestamp": "2025-09-12T17:15:00Z",
+  "analyst_validation": "Complete hierarchical requirements mapping with stakeholder priority assessment based on Performance Framework KPIs alignment"
+}

@@ -1,0 +1,452 @@
+{
+  "project": {
+    "id": "BRQ202", 
+    "name": "Survey Management System - Senior Level Product Services Analysis",
+    "domain": "product-services",
+    "analyst_level": "Senior",
+    "completion_date": "2025-09-12"
+  },
+  "analysis_summary": {
+    "epic_requirements_count": 13,
+    "management_groups_impacted": 7,
+    "individual_capabilities_impacted": 15, 
+    "total_new_requirements_generated": 41,
+    "impact_complexity": "High"
+  },
+  "hierarchical_requirements": [
+    {
+      "context": "Product-Services",
+      "management_group": "Agreement Management", 
+      "individual_capability": "Customer Agreement",
+      "key_features": "Master agreement setup and legal assurance",
+      "epic_id": "PS_AGM_CA-K.00",
+      "business_process_change": "Establish master agreement procedures for survey platform access permissions and data usage rights",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Agreement Management",
+      "individual_capability": "Customer Agreement", 
+      "key_features": "Audit requirements",
+      "epic_id": "PS_AGM_CA-M.01",
+      "business_process_change": "Implement audit trail requirements within customer master agreements for survey data collection and retention",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Agreement Management",
+      "individual_capability": "Sales Product Agreement",
+      "key_features": "Product agreement setup", 
+      "epic_id": "PS_AGM_SPA-A.02",
+      "business_process_change": "Create sales product agreement procedures for admin frontend platform subscription services",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services", 
+      "management_group": "Agreement Management",
+      "individual_capability": "Sales Product Agreement",
+      "key_features": "Contractual terms coverage",
+      "epic_id": "PS_AGM_SPA-L.03", 
+      "business_process_change": "Define contractual terms for functional modules within client service agreements",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Agreement Management",
+      "individual_capability": "Sales Product Agreement",
+      "key_features": "Audit and data governance",
+      "epic_id": "PS_AGM_SPA-M.04",
+      "business_process_change": "Establish audit requirements and data governance clauses in product agreements",
+      "impact_level": "High", 
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Financial Instrument Management",
+      "individual_capability": "Financial Instrument Reference Data Management",
+      "key_features": "Reference data consolidation",
+      "epic_id": "PS_FIM_FIRDM-B.05",
+      "business_process_change": "Create reference data management procedures for survey template elements and structures",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Financial Instrument Management", 
+      "individual_capability": "Financial Instrument Reference Data Management",
+      "key_features": "Data classification",
+      "epic_id": "PS_FIM_FIRDM-C.06",
+      "business_process_change": "Establish survey typology reference data classification and organization procedures", 
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Financial Instrument Management",
+      "individual_capability": "Financial Instrument Reference Data Management",
+      "key_features": "Data handling validation",
+      "epic_id": "PS_FIM_FIRDM-F.07",
+      "business_process_change": "Implement template export/import reference data handling and validation procedures",
+      "impact_level": "Medium", 
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Investment Portfolio Management",
+      "individual_capability": "Investment Portfolio Planning", 
+      "key_features": "Portfolio properties identification",
+      "epic_id": "PS_IPM_IPP-C.08",
+      "business_process_change": "Define survey typology planning procedures similar to portfolio property identification",
+      "impact_level": "Low",
+      "stakeholder_priority": "LOW"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Investment Portfolio Management",
+      "individual_capability": "Investment Portfolio Planning",
+      "key_features": "Planning procedures", 
+      "epic_id": "PS_IPM_IPP-H.09",
+      "business_process_change": "Implement version management planning procedures for survey templates analogous to portfolio planning",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Investment Portfolio Management",
+      "individual_capability": "Investment Portfolio Planning",
+      "key_features": "Comparison procedures",
+      "epic_id": "PS_IPM_IPP-I.10", 
+      "business_process_change": "Create version comparison procedures for evaluating survey template changes",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Investment Portfolio Management",
+      "individual_capability": "Investment Portfolio Analysis",
+      "key_features": "Performance analysis",
+      "epic_id": "PS_IPM_IPA-I.11",
+      "business_process_change": "Implement survey template version comparison analysis procedures similar to portfolio analysis",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services", 
+      "management_group": "Investment Portfolio Management",
+      "individual_capability": "Investment Portfolio Analysis", 
+      "key_features": "Reporting procedures",
+      "epic_id": "PS_IPM_IPA-M.12",
+      "business_process_change": "Create audit reporting procedures for survey template performance and usage analytics",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Issued Device Management", 
+      "individual_capability": "Issued Device Administration",
+      "key_features": "Device registration and permissions",
+      "epic_id": "PS_IDM_IDA-K.13",
+      "business_process_change": "Establish user device and access token administration procedures for AD integration",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Issued Device Management",
+      "individual_capability": "Issued Device Administration",
+      "key_features": "Module access permissions", 
+      "epic_id": "PS_IDM_IDA-L.14",
+      "business_process_change": "Create functional module device access permission management procedures",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services", 
+      "management_group": "Issued Device Management",
+      "individual_capability": "Issued Device Tracking",
+      "key_features": "Access tracking",
+      "epic_id": "PS_IDM_IDT-K.15",
+      "business_process_change": "Implement user access tracking procedures for role-based survey platform access",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Issued Device Management",
+      "individual_capability": "Issued Device Tracking",
+      "key_features": "Audit tracking",
+      "epic_id": "PS_IDM_IDT-M.16", 
+      "business_process_change": "Create audit tracking procedures for all device and access activities within survey platform",
+      "impact_level": "High", 
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Money Movement Management",
+      "individual_capability": "Transaction Authorization",
+      "key_features": "Transaction consolidation",
+      "epic_id": "PS_MMM_TA-K.17",
+      "business_process_change": "Establish transaction authorization procedures for role-based survey operations", 
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Money Movement Management",
+      "individual_capability": "Transaction Authorization", 
+      "key_features": "Activity analysis", 
+      "epic_id": "PS_MMM_TA-M.18",
+      "business_process_change": "Implement audit trail procedures for all survey management transaction activities",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Payment Management",
+      "individual_capability": "Payment Order",
+      "key_features": "Regulatory checks",
+      "epic_id": "PS_PM_PO-L.19", 
+      "business_process_change": "Create payment processing procedures for survey platform functional module services",
+      "impact_level": "Low",
+      "stakeholder_priority": "LOW"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Payment Management", 
+      "individual_capability": "Payment Order",
+      "key_features": "Audit procedures",
+      "epic_id": "PS_PM_PO-M.20",
+      "business_process_change": "Establish audit procedures for all payment transactions related to survey services", 
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Operational requirements",
+      "epic_id": "PS_PM_PD-A.21",
+      "business_process_change": "Create product directory entries for admin frontend survey management capabilities",
+      "impact_level": "High", 
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service definitions",
+      "epic_id": "PS_PM_PD-B.22", 
+      "business_process_change": "Establish survey template creation service definitions within product directory",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service catalog",
+      "epic_id": "PS_PM_PD-C.23",
+      "business_process_change": "Define survey typology management services in product catalog",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management", 
+      "individual_capability": "Product Directory",
+      "key_features": "Service definitions",
+      "epic_id": "PS_PM_PD-D.24",
+      "business_process_change": "Create activation/deactivation service definitions for survey templates",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service specifications",
+      "epic_id": "PS_PM_PD-E.25", 
+      "business_process_change": "Establish preview functionality service specifications in product directory",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management", 
+      "individual_capability": "Product Directory",
+      "key_features": "Catalog entries",
+      "epic_id": "PS_PM_PD-F.26",
+      "business_process_change": "Define template operations (copy/export) service catalog entries",
+      "impact_level": "Medium", 
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service definitions",
+      "epic_id": "PS_PM_PD-G.27",
+      "business_process_change": "Create survey editing capability service definitions", 
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service specifications",
+      "epic_id": "PS_PM_PD-H.28",
+      "business_process_change": "Establish version management service specifications",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory", 
+      "key_features": "Catalog entries",
+      "epic_id": "PS_PM_PD-I.29",
+      "business_process_change": "Define version comparison service catalog entries",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Directory",
+      "key_features": "Service definitions",
+      "epic_id": "PS_PM_PD-J.30", 
+      "business_process_change": "Create version lifecycle management service definitions",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Sales Product",
+      "key_features": "Product packaging",
+      "epic_id": "PS_PM_SP-A.31",
+      "business_process_change": "Create sales product packaging for admin frontend survey management platform", 
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Sales Product",
+      "key_features": "Service linking",
+      "epic_id": "PS_PM_SP-L.32",
+      "business_process_change": "Establish functional module service feature linking procedures",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Sales Product", 
+      "key_features": "Audit features",
+      "epic_id": "PS_PM_SP-M.33",
+      "business_process_change": "Implement audit capability service feature definitions",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Portfolio",
+      "key_features": "Performance tracking",
+      "epic_id": "PS_PM_PP-H.34", 
+      "business_process_change": "Create performance tracking procedures for survey template version management",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Portfolio",
+      "key_features": "Performance analysis",
+      "epic_id": "PS_PM_PP-I.35",
+      "business_process_change": "Implement performance analysis procedures for version comparison activities", 
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Portfolio",
+      "key_features": "Reporting procedures",
+      "epic_id": "PS_PM_PP-M.36",
+      "business_process_change": "Establish audit performance reporting procedures for survey platform usage",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services", 
+      "management_group": "Product Management",
+      "individual_capability": "Product Inventory Item Management",
+      "key_features": "Inventory management",
+      "epic_id": "PS_PM_PIIM-B.37",
+      "business_process_change": "Create survey template inventory management procedures",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Inventory Item Management", 
+      "key_features": "Distribution procedures",
+      "epic_id": "PS_PM_PIIM-F.38",
+      "business_process_change": "Establish template distribution procedures for copy/export operations",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Product Inventory Item Management",
+      "key_features": "Inventory control",
+      "epic_id": "PS_PM_PIIM-G.39", 
+      "business_process_change": "Implement survey editing inventory control procedures",
+      "impact_level": "Medium",
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Brokered Product",
+      "key_features": "Quality monitoring",
+      "epic_id": "PS_PM_BP-K.40",
+      "business_process_change": "Create 3rd party AD integration service quality monitoring procedures",
+      "impact_level": "High", 
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Product-Services",
+      "management_group": "Product Management",
+      "individual_capability": "Brokered Product",
+      "key_features": "Service conformance",
+      "epic_id": "PS_PM_BP-L.41",
+      "business_process_change": "Establish functional module 3rd party service conformance procedures",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    }
+  ],
+  "priority_analysis": {
+    "critical_requirements": 6,
+    "high_priority_requirements": 18, 
+    "medium_priority_requirements": 15,
+    "low_priority_requirements": 2,
+    "stakeholder_alignment": "High - 24 of 41 requirements (59%) align with time-to-market and SLA compliance KPIs"
+  },
+  "key_insights": [
+    "Product Management domain dominance (63% of requirements) indicates this is fundamentally a new product launch requiring full lifecycle management",
+    "Critical audit requirements span all management groups, reflecting regulatory compliance needs", 
+    "Product Directory is most impacted capability (10 requirements), suggesting need for comprehensive service catalog updates",
+    "IT operations emphasis successfully captured through device management and transaction authorization capabilities",
+    "High stakeholder priority alignment with Performance Framework KPIs supporting time-to-market objectives"
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "project_id": "BRQ202",
+  "domain": "risk-management",
+  "analysis_type": "capability_impact_analysis",
+  "persona": {
+    "level": "Senior",
+    "role": "Director of Enterprise Management & Controlling (Risk)",
+    "expertise_years": "8-12"
+  },
+  "hierarchical_requirements_table": [
+    {
+      "context": "Risk-Management",
+      "management_group": "Fraud Incident Management", 
+      "individual_capability": "Fraud Diagnosis",
+      "key_features": "Analysis activities",
+      "epic_id": "A",
+      "requirement_id": "RM_FIM_FD-A.00",
+      "business_process_change": "Implement fraud monitoring workflows for admin user activities",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Fraud Incident Management",
+      "individual_capability": "Fraud Diagnosis", 
+      "key_features": "Assessment capabilities",
+      "epic_id": "G",
+      "requirement_id": "RM_FIM_FD-G.01",
+      "business_process_change": "Establish fraud risk assessment for AD access patterns",
+      "impact_level": "High",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Fraud Incident Management",
+      "individual_capability": "Fraud Diagnosis",
+      "key_features": "Analysis workflows", 
+      "epic_id": "I",
+      "requirement_id": "RM_FIM_FD-I.02",
+      "business_process_change": "Deploy audit trail analysis for suspicious activity detection",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management", 
+      "management_group": "Fraud Incident Management",
+      "individual_capability": "Fraud Diagnosis",
+      "key_features": "Detection workflows",
+      "epic_id": "J", 
+      "requirement_id": "RM_FIM_FD-J.03",
+      "business_process_change": "Configure IT operations fraud incident response capabilities",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Fraud Incident Management",
+      "individual_capability": "Fraud Model",
+      "key_features": "Model design",
+      "epic_id": "I",
+      "requirement_id": "RM_FIM_FM-I.04",
+      "business_process_change": "Develop fraud models for survey data integrity validation",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Fraud Incident Management", 
+      "individual_capability": "Fraud Model",
+      "key_features": "Model monitoring",
+      "epic_id": "J",
+      "requirement_id": "RM_FIM_FM-J.05",
+      "business_process_change": "Implement model performance monitoring in IT operations",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management",
+      "individual_capability": "Compliance Reporting",
+      "key_features": "Report consolidation",
+      "epic_id": "F",
+      "requirement_id": "RM_PM_CR-F.06",
+      "business_process_change": "Establish version control compliance reporting procedures",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management",
+      "individual_capability": "Compliance Reporting",
+      "key_features": "Auditor delivery",
+      "epic_id": "I",
+      "requirement_id": "RM_PM_CR-I.07", 
+      "business_process_change": "Implement comprehensive audit reporting for regulatory compliance",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management",
+      "individual_capability": "Compliance Reporting",
+      "key_features": "Monitoring actions",
+      "epic_id": "J",
+      "requirement_id": "RM_PM_CR-J.08",
+      "business_process_change": "Configure IT operations compliance monitoring and reporting",
+      "impact_level": "High", 
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management",
+      "individual_capability": "Guideline Compliance",
+      "key_features": "Control planning",
+      "epic_id": "G",
+      "requirement_id": "RM_PM_GC-G.09",
+      "business_process_change": "Deploy compliance controls for AD integration and access",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management", 
+      "individual_capability": "Guideline Compliance",
+      "key_features": "Compliance testing",
+      "epic_id": "I", 
+      "requirement_id": "RM_PM_GC-I.10",
+      "business_process_change": "Implement compliance testing for audit trail integrity",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Policy Management",
+      "individual_capability": "Guideline Compliance",
+      "key_features": "Error notification", 
+      "epic_id": "J",
+      "requirement_id": "RM_PM_GC-J.11",
+      "business_process_change": "Establish IT operations compliance monitoring with error alerts",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Business Risk Models",
+      "key_features": "Scenario modeling",
+      "epic_id": "A",
+      "requirement_id": "RM_RM_BRM-A.12",
+      "business_process_change": "Model operational risk from admin privilege escalation", 
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Business Risk Models",
+      "key_features": "Exposure evaluation",
+      "epic_id": "D",
+      "requirement_id": "RM_RM_BRM-D.13",
+      "business_process_change": "Assess data export risk scenarios and mitigation controls",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Business Risk Models",
+      "key_features": "Risk modeling",
+      "epic_id": "J",
+      "requirement_id": "RM_RM_BRM-J.14",
+      "business_process_change": "Develop IT operations risk models for availability/security",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Continuity Planning",
+      "key_features": "Plan creation",
+      "epic_id": "J",
+      "requirement_id": "RM_RM_CP-J.15",
+      "business_process_change": "Create business continuity plans for IT operations infrastructure",
+      "impact_level": "High",
+      "stakeholder_priority": "CRITICAL"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Continuity Planning",
+      "key_features": "Testing procedures",
+      "epic_id": "H",
+      "requirement_id": "RM_RM_CP-H.16",
+      "business_process_change": "Establish resilience testing for survey management modules",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Continuity Planning",
+      "key_features": "Capacity management",
+      "epic_id": "A",
+      "requirement_id": "RM_RM_CP-A.17",
+      "business_process_change": "Implement disaster recovery for admin environment availability",
+      "impact_level": "Medium",
+      "stakeholder_priority": "HIGH"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Credit Risk Models",
+      "key_features": "Analysis procedures",
+      "epic_id": "I",
+      "requirement_id": "RM_RM_CRM-I.18",
+      "business_process_change": "Establish risk analysis for survey data quality and integrity",
+      "impact_level": "Low", 
+      "stakeholder_priority": "MEDIUM"
+    },
+    {
+      "context": "Risk-Management",
+      "management_group": "Risk Management",
+      "individual_capability": "Credit Risk Models",
+      "key_features": "Risk monitoring",
+      "epic_id": "J",
+      "requirement_id": "RM_RM_CRM-J.19",
+      "business_process_change": "Implement risk monitoring in IT operations for performance",
+      "impact_level": "Low",
+      "stakeholder_priority": "MEDIUM"
+    }
+  ],
+  "analysis_summary": {
+    "total_requirements": 19,
+    "high_impact_requirements": 9,
+    "medium_impact_requirements": 8,
+    "low_impact_requirements": 2,
+    "most_impacted_capability": "Fraud Diagnosis",
+    "stakeholder_priority_distribution": {
+      "critical_priority": 9,
+      "high_priority": 8,
+      "medium_priority": 2,
+      "low_priority": 0
+    },
+    "top_stakeholder_priorities": [
+      "RM_FIM_FD-A.00: Admin fraud monitoring",
+      "RM_PM_CR-I.07: Audit reporting",
+      "RM_RM_BRM-A.12: Privilege escalation risk modeling", 
+      "RM_RM_CP-J.15: IT operations continuity planning"
+    ]
+  },
+  "completion_timestamp": "2025-09-12T14:15:00Z"
+}

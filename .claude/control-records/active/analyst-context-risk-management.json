@@ -1,142 +1,58 @@
 {
-  "agent_id": "agent_enterprise_management",
+  "agent_type": "project-analyst",
+  "domain": "risk-management", 
+  "expertise_level": "Senior",
   "persona": {
     "domain": "Enterprise Management and Controlling (Risk Management)",
-    "level": "Expert",
+    "level": "Senior", 
     "role": "Director of Enterprise Management & Controlling (Risk)",
-    "experience_years": "15+",
-    "expertise_areas": ["fraud_incident_management", "policy_management", "risk_management", "basel_compliance", "regulatory_stress_testing", "quantitative_risk_modeling"],
-    "knowledge_commands": ["/Expert Level/know-risk-management"],
-    "injected_timestamp": "2025-09-12T12:00:00Z"
+    "experience_years": "8-12",
+    "expertise_areas": ["fraud_incident_management", "policy_management", "risk_management"],
+    "knowledge_commands": ["/Senior Level/know-risk-management"],
+    "injected_timestamp": "2025-09-12T14:00:00Z"
   },
   "project": {
     "id": "BRQ202",
     "name": "Survey Management System",
-    "description": "Survey Management Application providing admin FE environment for business users/owners",
-    "analysis_start": "2025-09-12T00:00:00Z"
+    "description": "Admin FE environment for survey management with comprehensive risk controls",
+    "analysis_start": "2025-09-12T14:00:00Z"
   },
+  "user_requirements": "Aplikace poskytne admin FE prostředí pro správa dotazníků business uživatelem/vlastníkem. Vytvoření nové šablony dotazníku, struktura ze známých elementů, bez dopadů do algoritmu vyhodnocení, typologie dotazníku, activace/deaktivace, preview funkce, kopírování šablon, export šablon, editace dotazníku, nová verze šablony, uživatelský changelog, porovnání verzí, smazání verzí pouze skrze deaktivaci, přístup přes role a AD integraci, funkční moduly pro obsluhu klientů a správu dotazníků, audit.",
+  "user_instructions": "dont not forget on IT operations part",
   "workflow_state": {
-    "current_state": "COMPLETED",
-    "completed_states": ["1_kickoff_stakeholders", "2_problem_statement", "3_scope_definition", "4_as_is_analysis"],
-    "state_history": [
-      {
-        "state": "1_kickoff_stakeholders",
-        "completed_timestamp": "2025-09-12T12:15:00Z",
-        "artifacts_created": ["stakeholder_engagement_matrix"],
-        "key_insights": ["Strategic risk implications identified", "Regulatory compliance requirements mapped", "Risk triumvirate stakeholder alliance identified"]
-      },
-      {
-        "state": "2_problem_statement", 
-        "completed_timestamp": "2025-09-12T12:30:00Z",
-        "artifacts_created": ["problem_statement_document"],
-        "key_insights": ["Basel III/IV compliance drivers identified", "Zero tolerance risk metrics defined", "Strategic risk transformation objectives established"]
-      },
-      {
-        "state": "3_scope_definition",
-        "completed_timestamp": "2025-09-12T12:45:00Z", 
-        "artifacts_created": ["scope_definition_matrix"],
-        "key_insights": ["Risk domain boundaries established", "Critical assumptions and constraints defined", "Risk dependencies mapped"]
-      },
-      {
-        "state": "4_as_is_analysis",
-        "completed_timestamp": "2025-09-12T13:00:00Z",
-        "artifacts_created": ["as_is_analysis_documentation"],
-        "key_insights": ["HIGH risk rating assigned", "Critical control gaps identified", "Immediate mitigation priorities established"]
-      }
+    "current_state": "4_capability_impact",
+    "completed_states": ["1_context_setup", "2_instructions_analysis", "3_epic_requirements", "4_capability_impact"],
+    "completion_status": "completed"
+  },
+  "epic_requirements": [
+    "A. Admin FE environment provision for survey management by business users/owners with role-based access control",
+    "B. Creation of new survey templates with structured elements and without algorithm evaluation impacts",
+    "C. Survey template management including activation/deactivation, preview functions, and template copying capabilities", 
+    "D. Survey template export functionality with data integrity and security controls",
+    "E. Survey editing capabilities with version control and user changelog tracking",
+    "F. Version comparison functionality with audit trail maintenance and controlled deletion through deactivation",
+    "G. Role-based access control integration with Active Directory authentication systems",
+    "H. Functional modules for client handling and survey management with operational oversight", 
+    "I. Comprehensive audit capabilities for regulatory compliance and risk monitoring",
+    "J. IT operations infrastructure supporting system availability, security, and business continuity"
+  ],
+  "capability_impact_analysis": {
+    "management_groups_impacted": 3,
+    "individual_capabilities_impacted": 5,
+    "total_new_requirements_generated": 19,
+    "impact_complexity": "High",
+    "stakeholder_priority_distribution": {
+      "critical_priority": 9,
+      "high_priority": 8, 
+      "medium_priority": 2,
+      "low_priority": 0
+    },
+    "top_stakeholder_priorities": [
+      "RM_FIM_FD-A.00: Admin fraud monitoring",
+      "RM_PM_CR-I.07: Audit reporting", 
+      "RM_RM_BRM-A.12: Privilege escalation risk modeling",
+      "RM_RM_CP-J.15: IT operations continuity planning"
     ]
   },
-  "analysis_artifacts": {
-    "stakeholder_matrix": {
-      "total_stakeholders": 10,
-      "high_influence_count": 4,
-      "risk_critical_stakeholders": ["CRO", "Compliance Manager", "IT Security Manager", "Data Protection Officer"],
-      "key_risk_concerns": ["regulatory_compliance", "data_integrity", "operational_resilience", "technology_security"],
-      "completion_timestamp": "2025-09-12T12:15:00Z"
-    },
-    "problem_statement": {
-      "primary_business_pains": [
-        "Regulatory compliance efficiency gap",
-        "Operational risk from manual processes", 
-        "Fraud detection and data integrity risks",
-        "Information security and access control deficiencies"
-      ],
-      "change_motivation": "Basel III/IV compliance and operational resilience requirements",
-      "strategic_objectives": [
-        "Regulatory compliance assurance",
-        "Operational risk mitigation", 
-        "Fraud prevention and data integrity",
-        "Information security enhancement"
-      ],
-      "success_criteria": {
-        "zero_tolerance_metrics": ["fraud_incidents", "regulatory_findings", "security_breaches"],
-        "operational_targets": ["99.9% availability", "<2hr recovery", "100% AD integration"],
-        "strategic_enhancements": ["risk_model_quality", "regulatory_efficiency", "compliance_automation"]
-      },
-      "completion_timestamp": "2025-09-12T12:30:00Z"
-    },
-    "scope_definition": {
-      "scope_in_domains": [
-        "Fraud Incident Management (fraud models, detection, investigation)",
-        "Policy Management (compliance, audit, regulatory reporting)",
-        "Risk Management (operational risk, security assurance, business risk)",
-        "Data Governance (quality, retention, integrity, audit trails)"
-      ],
-      "scope_out_domains": [
-        "Financial Risk Models (credit, market, liquidity)",
-        "External Regulatory Relations", 
-        "Broader Enterprise Systems (core banking, payments)",
-        "Advanced Analytics (beyond fraud detection)"
-      ],
-      "critical_assumptions": [
-        "Regulatory stability during implementation",
-        "Technology security framework adequacy",
-        "Operational continuity maintenance", 
-        "Data quality standards establishment"
-      ],
-      "critical_constraints": [
-        "100% regulatory compliance maintenance",
-        "Operational risk appetite limits",
-        "Cybersecurity policy compliance",
-        "Limited risk team resources"
-      ],
-      "risk_dependencies": {
-        "phase_1": ["Compliance framework", "Security architecture", "Fraud detection requirements"],
-        "phase_2": ["Risk model integration", "Audit trail implementation", "Security testing"],
-        "phase_3": ["Regulatory approval", "Risk validation", "Production readiness"]
-      },
-      "completion_timestamp": "2025-09-12T12:45:00Z"
-    },
-    "as_is_analysis": {
-      "current_process_maturity": "Basic/Manual",
-      "critical_risk_exposures": [
-        "Operational risk failures (manual errors, process failures)",
-        "Information security vulnerabilities (unencrypted data, access control gaps)",
-        "Fraud and data integrity risks (no validation, manipulation possible)",
-        "Regulatory compliance gaps (GDPR violations, audit trail deficiencies)",
-        "Business continuity risks (key person dependencies, no disaster recovery)"
-      ],
-      "overall_risk_rating": "HIGH - Immediate action required",
-      "risk_control_maturity": {
-        "preventive_controls": "IMMATURE",
-        "detective_controls": "BASIC", 
-        "corrective_controls": "REACTIVE",
-        "compliance_controls": "INADEQUATE"
-      },
-      "immediate_priorities": [
-        "Implement comprehensive security framework",
-        "Establish fraud detection capabilities", 
-        "Deploy compliance automation",
-        "Create operational resilience"
-      ],
-      "completion_timestamp": "2025-09-12T13:00:00Z"
-    }
-  },
-  "risk_management_focus": {
-    "security_risks": [],
-    "data_protection": [],
-    "operational_risks": [],
-    "compliance_requirements": [],
-    "system_availability": [],
-    "risk_mitigation": []
-  }
+  "last_updated": "2025-09-12T14:15:00Z"
 }

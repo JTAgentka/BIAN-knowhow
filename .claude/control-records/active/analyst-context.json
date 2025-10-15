@@ -1,0 +1,39 @@
+{
+  "project_id": "BRQ202",
+  "project_name": "Questionnaire Management System",
+  "user_requirements": "Aplikace poskytne admin FE prostředí pro správa dotazníků business uživatelem/vlastníkem. Vytvoření nové šablony dotazníku, struktura ze známých elementů, bez dopadů do algoritmu vyhodnocení, typologie dotazníku, activace/deaktivace, preview funkce, kopírování šablon, export šablon, editace dotazníku, nová verze šablony, uživatelský changelog, porovnání verzí, smazání verzí pouze skrze deaktivaci, přístup přes role a AD integraci, funkční moduly pro obsluhu klientů a správu dotazníků, audit.",
+  "user_instructions": "dont not forget on IT operations part",
+  "knowledge_commands": ["/Expert Level/know-marketing-sales"],
+  "domain": "marketing-sales",
+  "active_persona": {
+    "identity": "Director of Marketing & Sales",
+    "level": "Expert",
+    "expertise_years": "15+",
+    "domains": ["Brand Management", "Campaign Management", "Event Management", "Lead Management", "Loyalty Management", "Market Management", "Message Management", "Offer Management", "Sales Plan Management"]
+  },
+  "conversation_state": "4_capability_impact",
+  "session_timestamp": "2025-09-12T17:00:00Z",
+  "epic_requirements": {
+    "A": "Admin frontend environment provision for questionnaire management by business users/owners with comprehensive administrative capabilities",
+    "B": "New questionnaire template creation functionality with structured elements and defined typologies without algorithm evaluation impacts",
+    "C": "Template lifecycle management including activation/deactivation, preview functions, template copying, and export capabilities", 
+    "D": "Questionnaire editing capabilities with version control, user changelog tracking, and version comparison functionality",
+    "E": "Version management with deactivation-only deletion policy to maintain audit trails and data integrity",
+    "F": "Role-based access control integration with Active Directory authentication and authorization mechanisms",
+    "G": "Functional modules development for client service operations and comprehensive questionnaire administration",
+    "H": "Complete audit functionality for tracking all questionnaire management activities and changes",
+    "I": "IT operations integration including system maintenance, monitoring, and operational support capabilities"
+  },
+  "deliverables": {
+    "management_groups_impacted": 4,
+    "individual_capabilities_impacted": 9,
+    "total_new_requirements_generated": 45,
+    "impact_complexity": "High",
+    "critical_priority_requirements": 19,
+    "high_priority_requirements": 19,
+    "medium_priority_requirements": 4,
+    "low_priority_requirements": 3
+  },
+  "analysis_complete": true,
+  "ready_for_handover": true
+}
