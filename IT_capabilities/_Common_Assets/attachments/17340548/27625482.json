@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "http://acmark.com/jtb/MktListTopicSchema.json",
+  "title": "MarketingList",
+  "type": "object",
+  "required": [
+    "marketingListId",
+    "state",
+    "timestamp",
+    "isDynamic"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+    },
+    "action": {
+      "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",      
+      "type": "string",
+      "format": "date-time"              
+    },
+    "marketingListId": {
+      "type": "string",
+      "description": "Interní CRM GUID primární klíč, vždy vyplněno",
+      "format": "uuid"
+    },
+    "listName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Název MKT seznamu"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Popis MKT seznamu"
+    },
+    "memberCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "description": "Počet členů pro statické MKT seznamy"
+    },
+    "isDynamic": {
+      "type": [
+        "boolean"
+      ],
+      "description": "Přiznak, zda se jedná o dynamický seznam"
+    },
+    "memberPartyType": {
+      "title": "Typ odběratelů listu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "account",
+        "contact"
+      ]
+    },
+    "mailmanId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ID z apliakce Mailman"
+    },
+    "bankNewsIdentifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ID bankovní rozesílky, aby se určilo, jak provolat metody (un)subscribe"
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode",
+        "anonymized",
+        "deleted",
+        "merged"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": [
+            "boolean"
+          ]
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}

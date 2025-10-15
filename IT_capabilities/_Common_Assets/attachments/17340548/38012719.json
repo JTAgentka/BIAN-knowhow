@@ -1,0 +1,201 @@
+{
+  "title": "statement",
+  "description": "Statement schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "statementId",
+    "owner",
+    "documentLanguage",
+    "generatedDate",
+    "insertedDate",
+    "businessChangeDate",
+    "statementTypeCodeId",
+    "stateId",
+    "managingCompanyTag"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "description": "Korelační identifikátor, povinné pro INIT a RECON",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "accountId": {
+      "description": "Unique account identifier",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 0,
+      "maxLength": 20
+    },
+    "statementId": {
+      "description": "ID dokumentu",
+      "type": "integer"
+    },
+    "accountNumber": {
+      "description": "Hlavní část účtu dle BBAN formátu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 0,
+      "maxLength": 10
+    },
+    "owner": {
+      "type": "object",
+      "required": [
+        "crmId"
+      ],
+      "properties": {
+        "quaestorId": {
+          "description": "Unique Quaestor identifier",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 0,
+          "maxLength": 10
+        },
+        "crmId": {
+          "description": "Unique CRM identifier",
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10
+        }
+      }
+    },
+    "quaestorStatementId": {
+      "description": "ID výpisu v quaestoru",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 0,
+      "maxLength": 20
+    },
+    "portfolioIds": {
+      "type": "object",
+      "properties": {
+        "taId": {
+          "description": "Identifikace Účtu podílníka v TA",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "topasId": {
+          "description": "Identifikace Portfolia v TOPAS (KID)",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "documentLanguage": {
+      "description": "Jazyk dokumentu - CZE, ENG, SLO",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "generatedDate": {
+      "description": "Čas vygenerování dokumentu",
+      "type": "string",
+      "format": "date-time"
+    },
+    "insertedDate": {
+      "description": "Čas vložení záznamu do db",
+      "type": "string",
+      "format": "date-time"
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "startDate": {
+      "description": "Datum prvního dne výpisu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "finalDate": {
+      "description": "Datum posledního dne výpisu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "statementTypeCodeId": {
+      "description": "Typ výpisu",
+      "type": "string"
+    },
+    "documentTitle": {
+      "description": "Popis výpisu (lokalizovaný)",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "perex": {
+      "description": "Definice perex v PK",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stateId": {
+      "description": "Status zpracování - status = 9 (posláno do CRM)  nebo 10 (chyba), ostatní nejsou relevantní",
+      "type": "integer"
+    },
+    "managingCompanyTag": {
+      "description": "Příslušnost portfolia ke společnosti - barva klienta. silver - J&T ČR, green - J&T SR",
+      "type": "string",
+      "enum": [
+        "SILVER",
+        "GREEN"
+      ]
+    },
+    "invStatementVersions": {
+      "description": "Verze investičních výpisů",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "files": {
+      "description": "Soubory které jsou součástí výpisu",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "contentType",
+          "fileName"
+        ],
+        "properties": {
+          "contentType": {
+            "description": "Content type",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 20
+          },
+          "fileName": {
+            "description": "Jméno souboru",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,455 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "FxRates Reconciliation",
+		"description": "The service is used to reconcile either all historical values of exchange rates or values according to specified input parameters.",
+		"version": "v1"
+	},
+	"paths": {
+		"/{entityType}/fullSync": {
+			"get": {
+				"description": "The method is used to reconcile all historical values.",
+				"parameters": [{
+						"name": "X-Correlation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "entityType",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"FxRateList",
+									"FxRateInstant",
+									"FxRateDaily"
+								]
+							}
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"204": {
+						"description": "No Content"
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		},
+		"/fxRates/instant": {
+			"get": {
+				"description": "The method is used to reconcile values of exchange rates according to specified input parameters.",
+				"parameters": [{
+						"name": "X-Correlation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "from",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "to",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "bid",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "mode",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"sync",
+									"async"
+								]
+							}
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/instantSyncResponse"
+								}
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		},
+		"/fxRates/daily": {
+			"get": {
+				"description": "The method is used to reconcile values of exchange rates according to specified input parameters.",
+				"parameters": [{
+						"name": "X-Correlation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "from",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "to",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "bid",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "mode",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"sync",
+									"async"
+								]
+							}
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/dailySyncResponse"
+								}
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"instantSyncResponse": {
+				"type": "object",
+				"properties": {
+					"fxRateListId": {
+						"type": "string",
+						"title": "Id",
+						"description": "Exchange rate list identifier",
+						"minLength": 1,
+						"maxLength": 30
+					},
+					"validityDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Validity date",
+						"description": "The date and time of the beginning of the exchange rate list validity"
+					},
+					"obchodniCurrencyRates": {
+						"type": "array",
+						"description": "Exchange rate list identifier",
+						"items": {
+							"$ref": "#/components/schemas/instantCurrencyRate"
+						}
+					}
+				}
+			},
+			"dailySyncResponse": {
+				"type": "object",
+				"properties": {
+					"fxRateListId": {
+						"type": "string",
+						"title": "Id",
+						"description": "Exchange rate list identifier",
+						"minLength": 1,
+						"maxLength": 30
+					},
+					"validityDate": {
+						"type": "string",
+						"format": "date",
+						"title": "Validity date",
+						"description": "The date and time of the beginning of the exchange rate list validity"
+					},
+					"businessChangeDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Validity date",
+						"description": "The date and time of the beginning of the exchange rate list validity"
+					},
+					"cnbCurrencyRates": {
+						"type": "array",
+						"description": "Exchange rate list identifier",
+						"items": {
+							"$ref": "#/components/schemas/dailyCurrencyRate"
+						}
+					}
+				}
+			},
+			"instantCurrencyRate": {
+				"type": "object",
+				"required": [
+					"valuedCurrency",
+					"valuedAmount",
+					"valuingCurrency"
+				],
+				"properties": {
+					"valuedCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code",
+						"title": "Band ceiling currency"
+					},
+					"valuedAmount": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"valuingCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code",
+						"title": "Band ceiling currency"
+					},
+					"buy": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"middle": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"sell": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"buyRefDeviation": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"middleRefDeviation": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"sellRefDeviation": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"buyPrevDiff": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"middlePrevDiff": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					},
+					"sellPrevDiff": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Band ceiling value"
+					}
+				}
+			},
+			"dailyCurrencyRate": {
+				"type": "object",
+				"required": [
+					"valuedCurrency",
+					"valuedAmount",
+					"valuingCurrency"
+				],
+				"properties": {
+					"currencyRate": {
+						"type": "object",
+						"required": [
+							"valuedCurrency",
+							"valuedAmount",
+							"middle"
+						],
+						"properties": {
+							"valuedCurrency": {
+								"type": "string",
+								"pattern": "^[A-Z]{3}$",
+								"description": "ISO 4217 currency code",
+								"title": "Band ceiling currency"
+							},
+							"valuedAmount": {
+								"type": "number",
+								"description": "The amount in the specified currency",
+								"title": "Band ceiling value"
+							},
+							"valuingCurrency": {
+								"type": "string",
+								"pattern": "^[A-Z]{3}$",
+								"description": "ISO 4217 currency code",
+								"title": "Band ceiling currency"
+							},
+							"middle": {
+								"type": "number",
+								"description": "The amount in the specified currency",
+								"title": "Band ceiling value"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+{
+  "title": "ApplicationStateNotification_v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Notifkace o změně stavu žádosti",
+  "type": "object",
+  "required": [
+    "businessChangeDate",
+    "applicationCreatedDate",
+    "applicationIds",
+    "applicationState"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor povinný pro inicializaci a rekonciliaci"
+    },
+    "businessChangeDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Datum a cas posledni zmeny entity"
+    },
+    "applicationCreatedDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Datum a čas přechodu žádosti do stavu plně podepsaná"
+    },
+    "applicationIds": {
+      "description": "Identifikátory žádosti",
+      "type": "object",
+      "required": [
+        "applicationConsumerId",
+        "camundaId"
+      ],
+      "properties": {
+        "applicationConsumerId": {
+          "type": "string",
+          "description": "Identifikátor instance žádosti volajícího, který bude očekávat odpověď v topicu jako Consumer"
+        },
+        "camundaId": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Identifikace žádosti v Camunda"
+        }
+      }
+    },
+	"owner": {
+	  "description": "Objekt s identifikátory klienta",
+	  "type": "object",
+	  "required": [
+		"crmId"
+	  ],
+	  "properties": {
+		"crmId": {
+		  "description": "Identifikátor klienta v CRM, pro kterého je vyplňován dotazník",
+		  "type": "string",
+		  "minLength": 10,
+		  "maxLength": 10
+		}
+	  }
+	},
+    "applicationKey": {
+      "type": "string",
+      "description": "Klíč definice procesu (Číselník applicationType > applicationKey)"
+    },
+    "applicationType": {
+      "type": "string",
+      "description": "Typ žádosti určuje, na jakou řešitelskou skupinu bude přiřazena (číselník applicationType > id)"
+    },
+    "applicationState": {
+      "type": "string",
+      "description": "Stav žádosti (číselník applicationState > id)"
+    },
+    "applicationTaskUrl": {
+      "type": "string",
+      "description": "Odkaz na uživatelský úkol v Camundě"
+    },
+    "callingSystem": {
+      "type": "string",
+      "description": "Identifikátor volajícího systému, který založil žádost v Camundě (číselník enterpriseSystemList > id)"
+    }
+  }
+}

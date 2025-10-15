@@ -1,0 +1,60 @@
+{
+	"X-Correlation-ID": "15f87563-7ce3-4587-b44f-1cbcc4f9b037",
+	"action": "update",
+	"timestamp": "'2022-12-07T00:00:00.000Z'",
+	"state": {
+		"statecode": {
+			"value": 0,
+			"label": "Aktivní"
+		},
+		"statuscode": {
+			"value": 1,
+			"label": "Aktivní"
+		},
+		"anonymized": false,
+		"deleted": false,
+		"merged": true,
+		"masterid": "004637d0-001e-4c89-abb7-0ae9cd8e6ed7"
+	},
+	"contractId": "b25e5021-b6b1-4522-9526-dae3cf4c0cc1",
+	"before": {
+		"contractNumber": "1000001778",
+		"accountId": "825d6026-3085-4120-bcb7-8130f89257b4",
+		"location": {
+            "value": 500000000,
+            "label": "CZ"
+        },
+		"contractType": "CI",
+		"validFrom": "2022-02-21T23:00:00.000Z",
+		"validTo": null,
+		"contractStatus": {
+			"value": 500000002,
+			"label": "k podpisu v bance"
+		},
+		"conclusionType": {
+			"value": 500000000,
+			"label": "Tváří v tvář"
+		},
+		"reservedBankAccountNumber": "CZ1350518312983557889746"
+	},
+	"after": {
+		"contractNumber": "1000001778",
+		"accountId": "825d6026-3085-4120-bcb7-8130f89257b4",
+		"location": {
+            "value": 500000000,
+            "label": "CZ"
+        },
+		"contractType": "CI",
+		"validFrom": "2022-02-21T23:00:00.000Z",
+		"validTo": null,
+		"contractStatus": {
+			"value": 500000003,
+			"label": "podepsaná"
+		},
+		"conclusionType": {
+			"value": 500000000,
+			"label": "Tváří v tvář"
+		},
+		"reservedBankAccountNumber": "CZ1350518312983557889746"
+	}
+}

@@ -1,0 +1,172 @@
+{
+  "title": "FxRatesInstant",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Bank instant exchange rates",
+  "type": "object",
+  "required": [
+    "fxRateListId",
+    "validityDate",
+    "businessChangeDate"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Correlation identifier"
+    },
+    "fxRateListId": {
+      "type": "string",
+      "title": "FxRate Id",
+      "description": "Exchange rate list identifier",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "validityDate": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Validity date",
+      "description": "The date and time of the beginning of the exchange rate list validity"
+    },
+    "businessChangeDate": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Business change date",
+      "description": "Date and time of publication of the change"
+    },
+    "status": {
+      "title": "Code book status",
+      "description": "Code book status",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    },
+    "currencyRates": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Currency rates",
+      "items": {
+        "$ref": "#/definitions/currencyRate"
+      }
+    }
+  },
+  "definitions": {
+    "currencyRate": {
+      "type": "object",
+      "required": [
+        "baseCurrency",
+        "baseAmount",
+        "quoteCurrency"
+      ],
+      "properties": {
+        "baseCurrency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "description": "ISO 4217 currency code of base currency",
+          "title": "Base currency"
+        },
+        "baseAmount": {
+          "type": "integer",
+          "description": "The amount of base currency",
+          "title": "Base amount"
+        },
+        "quoteCurrency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "description": "ISO 4217 currency code of quote currency",
+          "title": "Quote currency"
+        },
+        "buy": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Buying rate",
+          "title": "Buy"
+        },
+        "middle": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Middle rate",
+          "title": "Middle"
+        },
+        "sell": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Selling rate",
+          "title": "Sell"
+        },
+        "refRateValidityDate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date",
+		  "description": "Refererence rate validity date",
+          "title": "RefRateValidityDate"
+        },
+        "buyRefDeviation": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Buying exchange rate deviation from reference value (ECB exchange rate) in percent",
+          "title": "Buy reference deviation"
+        },
+        "middleRefDeviation": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "The amount in the specified currency",
+          "title": "Middle exchange rate deviation from reference value (ECB exchange rate) in percent"
+        },
+        "sellRefDeviation": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "The amount in the specified currency",
+          "title": "Selling exchange rate deviation from reference value (ECB exchange rate) in percent"
+        },
+        "buyPrevDiff": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Buying exchange rate change from the last value of previous day in percent",
+          "title": "Buy previous difference"
+        },
+        "middlePrevDiff": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Middle exchange rate change from the last value of previous day in percent",
+          "title": "Middle previous difference"
+        },
+        "sellPrevDiff": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Selling exchange rate change from the last value of previous day in percent",
+          "title": "Sell previous difference"
+        }
+      }
+    }
+  }
+}

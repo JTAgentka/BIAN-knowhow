@@ -1,0 +1,189 @@
+{
+    "title": "CardDetail",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Card detail",
+    "type": "object",
+    "required": [
+        "eventTimestamp",
+        "cardGroup",
+        "cardType",
+        "cardAccountState",
+        "dateOpen",
+        "cardIdentification",
+        "cardCurrency",
+        "owner",
+        "masterAccountIdentification",
+        "reissuenceFlag",
+        "accountBalanceViewFlag"
+    ],
+    "properties": {
+        "X-Correlation-ID": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Correlation identifier"
+        },
+        "eventTimestamp": {
+            "description": "Date and time of inserting into event table in BISQ",
+            "type": "string",
+            "format": "date-time"
+        },
+        "cardGroup": {
+            "type": "string",
+            "description": "Codebook of card groups from product catalogue. (CardGroup)",
+            "minLength": 3,
+            "maxLength": 3
+        },
+        "cardType": {
+            "type": "string",
+            "description": "Card kind. (Codebook CardType)"
+        },
+        "cardAccountState": {
+            "type": "string",
+            "description": "Card account state",
+            "enum": [
+                "A",
+                "C",
+                "OO",
+                "OB",
+                "OC",
+                "OD",
+                "T"
+            ]
+        },
+        "dateOpen": {
+            "type": "string",
+            "format": "date",
+            "description": "Open date of card account in BISQ."
+        },
+        "dateClose": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "date",
+            "description": "Card account close date."
+        },
+        "cardIdentification": {
+            "description": "Set of card identification parametrs",
+            "$ref": "#/definitions/cardIdentification"
+        },
+        "cardHolder": {
+            "$ref": "#/definitions/person"
+        },
+        "cardCurrency": {
+            "description": "Currency of card account, alfa 3 code",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+        },
+        "owner": {
+            "$ref": "#/definitions/person"
+        },
+        "masterAccountIdentification": {
+            "$ref": "#/definitions/accountIdentification"
+        },
+        "reissuenceFlag": {
+            "type": "boolean",
+            "description": "Card automatic renewal"
+        },
+        "additionalServices": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Codebook of posible priority pass types ()"
+        },
+        "accountBalanceViewFlag": {
+            "type": "boolean",
+            "description": "Is possible to show account balance?"
+        }
+    },
+    "definitions": {
+        "cardIdentification": {
+            "type": "object",
+            "required": [
+                "pPan",
+                "aPan",
+                "cardExpiration",
+                "cardId"
+            ],
+            "properties": {
+                "pPan": {
+                    "type": "string",
+                    "description": "Card number on card which status have changed. CardNumber and MbrNum together are unique key"
+                },
+                "aPan": {
+                    "type": "string",
+                    "description": "Card number on card which status have changed. CardNumber and MbrNum together are unique key"
+                },
+                "cardExpiration": {
+                    "type": "string",
+                    "description": "Date of expiration in YYMM format."
+                },
+                "cardId": {
+                    "type": "string",
+                    "minLength": 20,
+                    "maxLength": 20,
+                    "description": "Primary card key in Quaestor"
+                }
+            }
+        },
+        "person": {
+            "type": "object",
+            "required": [
+                "crmId"
+            ],
+            "properties": {
+                "crmId": {
+                    "type": "string",
+                    "description": "Unique CRM identifier",
+                    "minLength": 10,
+                    "maxLength": 10
+                }
+            }
+        },
+        "accountIdentification": {
+            "type": "object",
+            "required": [
+                "accountId",
+                "accountKind"
+            ],
+            "properties": {
+                "accountId": {
+                    "type": "string",
+                    "description": "Quaestor account number assigned to card"
+                },
+                "accountKind": {
+                    "description": "Account kind",
+                    "type": "string",
+                    "enum": [
+                        "CUA",
+                        "CCR",
+                        "LOA",
+                        "RDA",
+                        "NWB",
+                        "CRD"
+                    ]
+                }
+            }
+        },
+        "creditCard": {
+            "type": "object",
+            "required": [
+                "creditAccountId"
+            ],
+            "properties": {
+                "creditAccountId": {
+                    "type": "string",
+                    "description": "Quaestor id of account"
+                },
+                "minimumPayment": {
+                    "type": "string",
+                    "description": "Minimum payment for card."
+                }
+            }
+        }
+    }
+}

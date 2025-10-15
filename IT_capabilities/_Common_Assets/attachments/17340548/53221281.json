@@ -1,0 +1,180 @@
+{
+  "title": "MarketSettings",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Přehled nastavení přímého přístupu na burzu (DMA) a přístupu k real-time datům jednotlivých burz",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "owner",
+    "directMarketAccess",
+    "realTimeData",
+    "state"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "description": "Korelační identifikátor povinný pro inicializaci a rekonciliaci",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",
+      "type": "string",
+      "format": "date-time"
+    },
+    "owner": {
+      "description": "Objekt s identifikátory klienta",
+      "type": "object",
+      "required": [
+        "crmId"
+      ],
+      "properties": {
+        "crmId": {
+          "description": "Identifikátor klienta v CRM (KLID), pro kterého je evidováno nastavení",
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10
+        }
+      }
+    },
+    "directMarketAccess": {
+      "description": "Objekt s nastavením DMA",
+      "type": "object",
+      "required": [
+        "enabled",
+        "modifiedOn"
+      ],
+      "properties": {
+        "enabled": {
+          "description": "Příznak, zdali je zapnuto (true) či vypnuto (false)",
+          "type": "boolean"
+        },
+        "modifiedOn": {
+          "description": "Datum a čas změny nastavení",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "realTimeData": {
+      "description": "Pole s položkami vázajících se ke klientovi a jeho nastavení",
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "description": "Objekt položek nastavení pro příslušnou burzu",
+        "type": "object",
+        "properties": {
+          "setting": {
+            "description": "Položka nastavení pro příslušnou burzu",
+            "type": "object",
+            "required": [
+              "marketId",
+              "enabled",
+              "modifiedOn"
+            ],
+            "properties": {
+              "marketId": {
+                "description": "Identifikátor trhu, pro který je přístup k real-time datům relevantní",
+                "type": "string"
+              },
+              "enabled": {
+                "description": "Příznak, zdali je zapnuto (true) či vypnuto (false)",
+                "type": "boolean"
+              },
+              "modifiedOn": {
+                "description": "Datum a čas změny nastavení",
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": "boolean"
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": "boolean"
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": "boolean"
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://acmark.com/jtb/BankNewsSettingsSchema.json",
+  "description": "BankNewsList je entita pro příjem seznamu rozesílek ze CRM",
+  "type": "object",
+  "required": [
+    "state",
+    "messageFromBankId",
+    "timestamp"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+    },
+    "action": {
+      "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",
+      "type": "string",
+      "format": "date-time"
+    },
+    "messageFromBankId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "unikatni identifikator nastaveni rozesilek pro jednu osobu; identifikátor lze získat po zavolání API MarketingList members"
+    },
+    "identifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid",
+      "description": "identifikator kontaktu/accountu v CRM"
+    },
+    "identifierType": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "typ identifikatoru",
+      "enum": [
+        "account",
+        "contact"
+      ]
+    },
+    "bankNewsSettings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "list rozesilek a informace, zde je klient k nim prihlasen",
+      "items": {
+        "type": "object",
+        "required": [ "value" ],
+        "properties": {
+          "bankNewsIdentifier": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "identifier"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "popisek rozesilky"
+          },
+          "value": {
+            "type": "boolean",
+            "description": "informace, zda je klient k dané rozesílce prihlasen, nebo ne"
+          }
+        }
+      }
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode",
+        "anonymized",
+        "deleted",
+        "merged"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": [
+            "boolean"
+          ]
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}

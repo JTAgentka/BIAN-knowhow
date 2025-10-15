@@ -1,0 +1,276 @@
+# 2022-11-23 – 0.0.1 - Vít Joachymstál - Initial version
+# 2023-01-13 – 0.0.2 - Vít Joachymstál - Error handling version changed from 2 to 1
+openapi: 3.0.0
+info:
+  title: InstrumentMarketRegistration Reconciliation
+  description: Service is used to reconcile values of instrument market registration according to specified input parameters.
+  version: 0.0.2
+paths:
+  /InstrumentMarketRegistration/query:
+    post:
+      tags: 
+        - InstrumentMarketRegistration
+      description: The method is used to reconcile values of instrument market registration according to specified input parameters.
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          schema:
+            $ref: "#/components/headers/X-Correlation-ID"
+        - name: traceparent
+          in: header
+          required: true
+          description: "Tracing parameter according to W3C Trace Context standard."
+          schema:
+            $ref: "#/components/schemas/traceparent"
+        - name: X-Request-ID
+          in: header
+          required: true
+          schema:
+            $ref: "#/components/headers/X-Request-ID"
+      requestBody:
+        description: portfolioOverviewRequest
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InstrumentMarketRegistrationRQ'
+      responses:
+        "204":
+          description: OK
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+        "400":
+          description: >-
+            Bad Request
+
+
+            List of possible external error:
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |400|Bad Request|
+
+            List of possible internal errors:
+
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |XCORRELATIONID_IS_MISSING|X-Correlation-ID is missing - required|
+              |XREQUESTID_IS_MISSING|X-Request-ID is missing - required|
+              |TRACEPARENT_IS_MISSING|traceparent is missing - required|              
+              |BUSINESSCHANGEDATESTART_WRONG_FORMAT|businessChangeDateStart is in wrong format |
+              |BUSINESSCHANGEDATEEND_WRONG_FORMAT|businessChangeDateEnd is in wrong format |         
+          headers:
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: >-
+            Not Found
+
+
+            List of possible external error:
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |404|Not Found|
+
+            List of possible internal errors:
+
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |CCPID_NOT_FOUND|instrument ccpId not found|
+             |MARKETID_NOT_FOUND|marketId not found|
+          headers:
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "422":
+          description: >-
+            Unprocessable Entity
+
+
+            List of possible external error:
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |422| Unprocessable Entity|
+
+            List of possible internal errors:
+
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |DB_ERROR|DB exception: <exception text>|
+          headers:
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: >-
+            Internal server error
+            
+            List of possible external error:
+             |Code                          |Message                         |
+             |-------------------------------|--------------------------------|
+             |500| Internal server error|
+
+            List of possible internal errors:
+
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |ERROR|Unexpected error: \<Technical Details\>|
+              |SYS_ERROR                        |Unexpected error: \<Technical Details\>|
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+        '503':
+          description:  >-
+            Service Unavailable
+
+
+            List of possible external error:
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |503| Service Unavailable|
+
+            List of possible internal errors:
+
+             | Code                          | Message                         | 
+             |-------------------------------|--------------------------------|
+             |DB_UNAVAILABLE|Unable to connect to DB server|
+          headers: 
+            X-Request-ID:
+              $ref: "#/components/headers/X-Request-ID"
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    InstrumentMarketRegistrationRQ:
+      type: object
+      properties:
+        businessChangeDateStart:
+            $ref: "#/components/schemas/businessChangeDateStartDef"
+        businessChangeDateEnd:
+            $ref: "#/components/schemas/businessChangeDateEndDef"
+        instrumentIds:
+            description: Instrument identifiers
+            type: object
+            properties:
+              ccpId:
+                type: integer
+                description: Instrument identification in CCP
+        marketId:
+          type: string
+          description: Market identification
+    businessChangeDateStartDef:
+      description: Date and time of publication of the change - Start
+      type: string
+      format: date-time
+      example: "2022-04-25T22:09:34+02:00"
+    businessChangeDateEndDef:
+      description: Date and time of publication of the change - End
+      type: string
+      format: date-time
+      example: "2022-04-25T22:09:34+02:00"
+    Error: 
+      required: 
+        - "code"
+        - "message"
+      type: object
+      properties: 
+        code: 
+          type: integer
+          format: int32
+          description: "RFC 7231 error code"
+          example: "123"
+        message: 
+          type: string
+          description: "The content of the attribute is a combination of a generally defined error and a description of a generally defined error according to the type and sensitivity of the service."
+          example: "Daily limit is exceeded"
+        timestamp: 
+          type: string
+          format: date-time
+          description: "Date and time of the error according to RFC5424"
+          example: "2022-01-12T23:20:50.52+02:00"
+        index:
+          type: string
+          description: "Contains information about the X-Correlation-ID or Elastic Search index"
+          example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+        internal:
+          type: object
+          properties:
+            code:
+              type: string
+              description: "Internal error code according to the application / system which is the service provider."
+              example: "DAILY_LIMIT_IS_EXCEEDED"
+            message:
+              type: string
+              description: "Internal description of the error according to the application / system which is the service provider."
+              example: "Daily limit is exceeded"
+    traceparent: 
+      description: "Tracing parameter according to W3C Trace Context standard."
+      maxLength: 55
+      type: string
+      example: "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01"
+  headers:
+    X-Correlation-ID: 
+      description: "Unique operation identifier."
+      required: true
+      style: "simple"
+      explode: false
+      schema: 
+        maxLength: 36
+        type: "string"
+        format: "uuid"
+      example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+    X-Request-ID:
+      description: "Unique HTTP request identifier."
+      required: true
+      style: "simple"
+      explode: false
+      schema:
+        maxLength: 36
+        type: "string"
+      example: "8sddff95-essf-4125-bd39-cvgaf63305a9"
+    traceparent: 
+      description: "Tracing parameter according to W3C Trace Context standard."
+      required: true
+      schema: 
+        $ref: "#/components/schemas/traceparent"              

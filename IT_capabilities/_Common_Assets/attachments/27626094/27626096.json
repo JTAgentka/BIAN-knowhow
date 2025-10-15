@@ -1,0 +1,90 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Product Reconciliation",
+		"description": "The service is used to reconcile products according to specified input parameters.",
+		"version": "v1"
+	},
+	"paths": {
+		"/product/": {
+			"get": {
+				"description": "The method is used to reconcile products.",
+				"parameters": [{
+						"name": "X-Corellation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "entityType",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/asyncResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"asyncResponse": {
+				"type": "object",
+				"properties": {
+					"StatusCode": {
+						"title": "StatusCode",
+						"enum": ["The request has been accepted for processing"],
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}

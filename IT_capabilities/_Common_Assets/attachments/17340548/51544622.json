@@ -1,0 +1,773 @@
+{
+  "title": "InvestmentNewOrder",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Investment order - type New",
+  "type": "object",
+  "required": [
+    "businessChangeDate",
+    "orderIds",
+    "status",
+    "instrumentIds",
+    "portfolioIds",
+    "orderStatusId",
+    "marketId",
+    "communicationChannelId",
+    "insertingAppId",
+    "processingMode",
+    "submitter",
+    "submissionDate",
+    "sideId",
+    "quantityMode",
+    "auctionOnly",
+    "priceMode",
+    "timeInForce",
+    "orderCurrency"
+  ],
+  "allOf": [
+    {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "quantityMode": {
+                "enum": [
+                  "objem"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "volume"
+            ],
+            "not": {
+              "required": [
+                "quantity"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "quantityMode": {
+                "enum": [
+                  "kusy"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "quantity"
+            ],
+            "not": {
+              "required": [
+                "volume"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "quantityMode": {
+                "enum": [
+                  "vse"
+                ]
+              }
+            }
+          },
+          "then": {
+            "allOf": [
+              {
+                "not": {
+                  "required": [
+                    "quantity"
+                  ]
+                }
+              },
+              {
+                "not": {
+                  "required": [
+                    "volume"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "if": {
+        "properties": {
+          "priceMode": {
+            "enum": [
+              "limit"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "limitPriceType",
+          "limitPrice"
+        ]
+      },
+      "else": {
+        "allOf": [
+          {
+            "not": {
+              "required": [
+                "limitPriceType"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "limitPrice"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "timeInForce": {
+            "enum": [
+              "gtd"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "validTo"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "validTo"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "acceptingTrader": {
+            "properties": {
+              "actorType": {
+                "enum": [
+                  "trader"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "acceptingTrader": {
+            "required": [
+              "traderDomainName"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Korelační identifikátor, povinné pro INIT a RECON"
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "orderIds": {
+      "type": "object",
+      "description": "Identifikátory pokynu",
+      "$ref": "#/definitions/orderIds"
+    },
+    "status": {
+      "description": "Reflektuje stav fyzické existence záznamu: active - aktivní, deleted - samzáno",
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    },
+    "instrumentIds": {
+      "type": "object",
+      "description": "Identifikátory CP",
+      "$ref": "#/definitions/instrumentIds"
+    },
+    "targetInstrumentIds": {
+      "type": "object",
+      "description": "Identifikátory cílového CP - směr Výměna",
+      "$ref": "#/definitions/targetInstrumentIds"
+    },
+    "portfolioIds": {
+      "type": "object",
+      "description": "Identifkátory portfolia",
+      "$ref": "#/definitions/portfolioIds"
+    },
+    "orderStatusId": {
+      "description": "Aplikační kód stavu pokynu z číselníku InvOrderStatuses",
+      "type": "string"
+    },
+    "validationResultCode": {
+      "description": "Kód výsledku validace",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "Y",
+        "N",
+        "nedostatecne_zadani",
+        "validuj_rucne",
+        "chyba",
+        "neuspech_prevodu_penez"
+      ]
+    },
+    "marketId": {
+      "description": "Identifikace trhu. Zdroj: eBroker.Instituce.Apl_Kod. Číselník InvExchanges.",
+      "type": "string"
+    },
+    "executionMarketId": {
+      "description": "Identifikace trhu spuštění/fáze trhu. Číselník InvExchanges.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "executionDealerId": {
+      "description": "Identifikace dealera, číselník CommunicationChannel",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "communicationChannelId": {
+      "description": "Aplikační kód komunikačního kanálu použitého pro podání pokynu - číselník CommunicationChannel.",
+      "type": "string"
+    },
+    "insertingAppId": {
+      "description": "Kód aplikace vkládající pokyn do eBrokeru. Číselník InvOrderApps.",
+      "type": "string"
+    },
+    "processingMode": {
+      "description": "Způsob zpracování pokynu",
+      "type": "string",
+      "enum": [
+        "auto",
+        "man"
+      ]
+    },
+    "submitter": {
+      "description": "Detail uživatele podávajícího pokyn",
+      "type": "object",
+      "oneOf": [
+        {
+          "required": [
+            "crmId"
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "required": [
+                "traderDomainName",
+                "traderId"
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "crmId": {
+          "type": "string",
+          "description": "Unique CRM identifier",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "traderDomainName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "intermediary": {
+      "description": "Detail zprostředkovatele",
+      "type": "object",
+      "$ref": "#/definitions/intermediary"
+    },
+    "receivingTrader": {
+      "description": "Přebírající makléř",
+      "type": "object",
+      "required": [
+        "traderDomainName",
+        "traderId"
+      ],
+      "properties": {
+        "traderDomainName": {
+          "type": "string",
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": "integer",
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "acceptingTrader": {
+      "description": "Přijímající makléř",
+      "type": "object",
+      "required": [
+        "actorType",
+        "traderId"
+      ],
+      "properties": {
+        "actorType": {
+          "description": "Typ aktéra",
+          "type": "string",
+          "enum": [
+            "trader",
+            "system",
+            "other"
+          ]
+        },
+        "traderDomainName": {
+          "type": "string",
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": "integer",
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "submissionDate": {
+      "description": "Datum podání pokynu",
+      "type": "string",
+      "format": "date-time"
+    },
+    "acceptingDate": {
+      "description": "Datum přijetí pokynu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "sideId": {
+      "description": "Apl kód směru pokynu z číselníku InvOrderDirections",
+      "type": "string"
+    },
+    "quantityMode": {
+      "description": "Způsob zadání množství",
+      "type": "string",
+      "enum": [
+        "kusy",
+        "objem",
+        "vse"
+      ]
+    },
+    "volume": {
+      "description": "Množství objem, povinné pokud quantityMode=objem, jinak zakázaný",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "quantity": {
+      "description": "Počet kusů, povinné pokud quantityMode=kusy, jinak zakázaný",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "minQuantity": {
+      "description": "Minimální počet kusů ke zobchodování",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "icebergQuantity": {
+      "description": "Počet kusů ke zobrazení trhu - iceberg",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "auctionOnly": {
+      "description": "Příznak zobchodování pouze v aukci",
+      "type": "boolean"
+    },
+    "priceMode": {
+      "description": "Cenová dispozice",
+      "type": "string",
+      "enum": [
+        "trh",
+        "limit"
+      ]
+    },
+    "limitPriceType": {
+      "description": "Jednotka limitní ceny, , povinné pokud priceMode=limit, jinak zakázané",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "abs",
+        "pct"
+      ]
+    },
+    "limitPrice": {
+      "description": "Limitní cena, povinné pokud priceMode=limit, jinak zakázané",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "stopPrice": {
+      "description": "Stop cena",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "unitAi": {
+      "description": "Kusové aúv v měně CP k datu plánovaného vypořádání",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "volumeAi": {
+      "description": "Celkové aúv v měně CP k datu plánovaného vypořádání",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "timeInForce": {
+      "description": "Časová dispozice pokynu z číselníku InvValidityTypes",
+      "type": "string"
+    },
+    "validTo": {
+      "description": "Datum exspirace, povinné pokud timeInForce=gtd, jinak zakázané",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "settlementDate": {
+      "description": "Datum plánovaného vypořádání",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "lastTradeDate": {
+      "description": "Datum zobchodování posledního obchodu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "filledQuantity": {
+      "description": "Realizovaný počet kusů",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "filledVolume": {
+      "description": "Realizovaný objem v měně pokynu",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "filledPrice": {
+      "description": "Průměrná cena realizací",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "instructionStatusId": {
+      "description": "Aplikační kód stavu poslední Instrukce pokynu, číselník InvOrderInstructionStatus",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rejectReasonId": {
+      "description": "Aplikační kód důvodu odmítnutí pokynu, číselník InvOrderRejectReason",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "depositoryAccTypeId": {
+      "description": "Apl kód depozitáře z číselníku DepositoryAccType. Zdroj: Apl_Kod Sloupce stavu CP - EBROKER.SL_STAVU_CP.APL_KOD.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bankAccount": {
+      "description": "Běžný účet klient pro převod prostředků na investiční účet ve formátu BBAN/bankCode",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reservationVolume": {
+      "description": "Objem rezervace v měně platby - payCurrency",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "fees": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Poplatky",
+      "items": {
+        "type": "object",
+        "required": [
+          "amount",
+          "feeType"
+        ],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Částka poplatku v měně pokynu - currency"
+          },
+          "feeType": {
+            "type": "string",
+            "description": "Typ poplatku - brokerFee = A_OBCHOD.POPL_BRO_L, tradeFee = A_OBCHOD.POPL_TRH_L, serviceFee = A_OBCHOD.POPL_SLUZ_L, tax = A_OBCHOD.POPL_DAN_L",
+            "enum": [
+              "brokerFee",
+              "tradeFee",
+              "serviceFee",
+              "tax"
+            ]
+          }
+        }
+      }
+    },
+    "orderCurrency": {
+      "description": "Měna pokynu - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": "string"
+    },
+    "paymentCurrency": {
+      "description": "Měna platby - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fxRate": {
+      "description": "Kurz pro přepočet z Měny pokynu do Měny platby",
+      "type": "object",
+      "required": [
+        "orderCurrencyAmount",
+        "paymentCurrencyRate",
+        "isInverted"
+      ],
+      "properties": {
+        "orderCurrencyAmount": {
+          "type": "integer",
+          "description": "isInverted=false => počet jednotek orderCurrency, isInverted=true =>počet jednotek paymentCurrency"
+        },
+        "paymentCurrencyRate": {
+          "type": "number",
+          "description": "isInverted=false => cena orderCurrencyAmount jednotek orderCurrency vyjádřená v paymentCurrency, isInverted=true => cena orderCurrencyAmount jednotek paymentCurrency vyjádřená v orderCurrency"
+        },
+        "isInverted": {
+          "type": "boolean",
+          "description": "isInverted=true => objem platby = objem pokynu * (paymentCurrencyRate / orderCurrencyAmount), isInverted=false => objem platby = objem pokynu / (paymentCurrencyRate / orderCurrencyAmount)"
+        }
+      }
+    },
+    "clientNote": {
+      "description": "Poznámka příchozí - klient",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brokerNote": {
+      "description": "Poznámka odchozí - makléř",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "definitions": {
+    "orderIds": {
+      "description": "Identifikátory pokynu",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace pokynu v eBroker"
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace pokynu v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace operace v TA"
+        }
+      }
+    },
+    "instrumentIds": {
+      "description": "Identifikátory CP",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace CP v eBroker"
+        },
+        "ccpId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v CCP."
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TA"
+        }
+      }
+    },
+    "targetInstrumentIds": {
+      "description": "Identifikátory cílového CP - směr Výměna",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace CP v eBroker"
+        },
+        "ccpId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v CCP."
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TA"
+        }
+      }
+    },
+    "portfolioIds": {
+      "description": "Identifkátory portfolia",
+      "type": "object",
+      "required": [
+        "ebrokerId",
+        "topasId",
+        "taId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace portfolia v eBroker"
+        },
+        "topasId": {
+          "type": "integer",
+          "description": "Identifikace portfolia v TOPAS (KID)"
+        },
+        "taId": {
+          "type": "integer",
+          "description": "Identifikace účtu podílníka v TA"
+        }
+      }
+    },
+    "intermediary": {
+      "description": "intermediary",
+      "type": "object",
+      "properties": {
+        "crmId": {
+          "type": "string",
+          "description": "Unique CRM identifier",
+          "minLength": 10,
+          "maxLength": 10
+        }
+      }
+    }
+  }
+}

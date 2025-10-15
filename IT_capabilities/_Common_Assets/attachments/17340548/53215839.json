@@ -1,0 +1,142 @@
+{
+	"title": "Bond",
+	"$schema": "https://json-schema.org/draft/2023-02/schema",
+	"description": "Bond price data ",
+	"type": "object",
+	"required": [
+		"businessChangeDate",
+		"bondPriceDataId",
+		"validityDateStart",
+		"validityDateEnd",
+		"priceBid",
+		"priceAsk",
+		"ytmBid",
+		"ytmAsk",
+		"portfolioIds",
+		"isin"
+	],
+	"properties": {
+		"X-Correlation-ID": {
+			"type": [
+				"string",
+				"null"
+			],
+			"description": "Korelační identifikátor, povinné pro INIT a RECON"
+		},
+		"businessChangeDate": {
+			"type": "string",
+			"format": "date-time",
+			"description": "Datum a čas poslední změny entity"
+		},
+		"bondPriceDataId": {
+			"type": "string",
+			"description": "Unikatní identikátor dluhopisu"
+		},
+		"validityDateStart": {
+			"type": "string",
+			"format": "date-time",
+			"description": "Definice platosti od"
+		},
+		"validityDateEnd": {
+			"type": "string",
+			"format": "date-time",
+			"description": "Definice platné do"
+		},
+		"priceBid": {
+			"type": "number",
+			"description": "BID cena v %"
+		},
+		"priceAsk": {
+			"type": "number",
+			"description": "ASK cena v %"
+		},
+		"ytmBid": {
+			"type": "number",
+			"description": "BID - výnos do splatnosti v % p.a."
+		},
+		"ytmAsk": {
+			"type": "number",
+			"description": "ASK - výnos do splatnosti v % p.a."
+		},
+		"sizeIoi": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Indication of Interest (IOI) pro dluhopisy"
+		},
+		"spread": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Spread mezi bid a ask v %"
+		},
+		"limitAmount": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Limitní množství  v %"
+		},
+		"positionPc": {
+			"type": [
+				"integer",
+				"null"
+			],
+			"description": "Kusů v pozici"
+		},
+		"positionAmount": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Pozice - množství v měně bondu"
+		},
+		"positionAmountCzk": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Pozice - množství v CZK"
+		},
+		"duration": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Durace dluhopisu je doba určitá váženým průměrem dob, za které dojde k jednotlivým budoucím tokům"
+		},
+		"portfolioIds": {
+			"type": "object",
+			"$ref": "#/definitions/portfolioIds",
+			"description": "Identifkátor portfolia"
+		},
+		"dailyChange": {
+			"type": [
+				"number",
+				"null"
+			],
+			"description": "Denní změna indikuje změny v pozici na dluhopisu za daný den v měně bondu"
+		},
+		"isin": {
+			"type": "string",
+			"description": "ISIN"
+		}
+	},
+	"definitions": {
+		"portfolioIds": {
+			"description": "Identifkátor portfolia",
+			"type": "object",
+			"required": [
+				"topasId"
+			],
+			"properties": {
+				"topasId": {
+					"type": "integer",
+					"description": "Identifikace portfolia v TOPAS (KID)"
+				}
+			}
+		}
+	}
+}

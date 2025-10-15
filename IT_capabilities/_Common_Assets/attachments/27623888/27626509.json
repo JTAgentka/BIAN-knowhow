@@ -1,0 +1,410 @@
+{
+    "X-Correlation-ID": "6b03a50c-9fae-4c68-9ffa-63f0c8b05287",
+    "action": "update",
+    "timestamp": "2022-07-14T10:18:25.781Z",
+    "klientData": {
+        "accountId": "fb8f6147-bbb6-420d-9c09-174f541c0b11",
+        "general": {
+            "info": {
+                "nameSurname": "Flinta",
+                "firstName": "Marek",
+                "middleName": null,
+                "degreeBeforeId": "APICODE",
+                "degreeAfterId": "APICODE",
+                "businessName": null
+            },
+            "identification": {
+                "identifierType": {
+                    "value": 500000009,
+                    "label": "RC"
+                },
+                "clientStatus": {
+                    "value": 500000003,
+                    "label": "Aktivní klient - smlouva"
+                },
+                "location": {
+                    "value": 500000000,
+                    "label": "CZ"
+                },
+                "legalStatus": {
+                    "value": 500000000,
+                    "label": "0 - Fyzická osoba"
+                },
+                "icrc": "123000101",
+                "dic": "2958513308",
+                "leiCode": "529900T8BM49AURSDO55",
+                "leiCodeValidTo": "2022-07-14T10:18:25.781Z",
+                "icdph": null,
+                "klientId": "1000003284",
+                "vatPayer": false,
+                "bisnodeIdentifier": "2759300500"
+            },
+            "relationships": {
+                "primaryContactId": "1404fc34-3081-44d5-ae7c-5d3db7aa44ac"
+            },
+            "contacts": {
+                "phonePrimary": "+420666222111",
+                "phoneMobile": "+420666222333",
+                "emailPrimary": "email@email.cz"
+            }
+        },
+        "service": {
+            "internalInfo": {
+                "bankerId": "JTBA\\JT8100008",
+                "serviceLevel": {
+                    "value": 500000002,
+                    "label": "CD/Komfort"
+                },
+                "segmentId": "APICODE",
+                "subsegmentId": "APICODE",
+                "existingClient": {
+                    "value": 500000000,
+                    "label": "Klient bez nároku na bonus"
+                },
+                "bankerAlternateId": "JTBA\\JT8100009",
+                "contactPersonId": "APICODE",
+                "primaryAdministrator": {
+                    "value": 500000001,
+                    "label": "Bankéř"
+                },
+                "brokerId": "22947da7-3557-4462-8c61-1c1ca3339faa",
+                "brokerAdvisorId": "073b4f47-9262-4e90-9bbc-15130c3ab488",
+                "brokerContract": "1000000000/CZ/XY/987"
+            },
+            "marketingConsent": {
+                "email": false,
+                "phone": true,
+                "post": false
+            }
+        },
+        "state": {
+            "statecode": {
+                "value": 0,
+                "label": "Aktivní"
+            },
+            "statuscode": {
+                "value": 1,
+                "label": "Aktivní"
+            },
+            "anonymized": false,
+            "deleted": false,
+            "merged": false,
+            "masterid": "b7003382-3d43-4532-8a93-d9ff6ac162d8"
+        },
+        "preferences": {
+            "additionalInfo": {
+                "establishedDate": "1995-12-17T00:00:00.000Z",
+                "registeredIn": "Brno",
+                "businessRegisterCourt": null,
+                "businessRegisterSection": null,
+                "taxDomicileId": "APICODE",
+                "taxGroupCzId": "D02",
+                "taxGroupSkId": null,
+                "lawFormCzId": "APICODE",
+                "lawFormSkId": "APICODE",
+                "naceId": "014600",
+                "industryId": "0036",
+                "mifidCategory": {
+                    "value": 500000001,
+                    "label": "P - profesionál"
+                },
+                "prevailingIncomeKind": {
+                    "value": 500000002,
+                    "label": "Finanční entita"
+                },
+                "esaCodeId": "2503",
+                "snaCodeId": "2203",
+                "preferredLanguageId": "cs",
+                "businessScope": "Chov prasat"
+            },
+            "relationships": {
+                "clientRelationship": {
+                    "external": false,
+                    "group": false,
+                    "partner": false
+                },
+                "relationshipType": {
+                    "client": true,
+                    "disponent": true,
+                    "ess": false,
+                    "beneficient": true,
+                    "counterparty": true,
+                    "employee": false,
+                    "formerEmployee": false,
+                    "mortgageBrokerage": false,
+                    "relatedParty": false,
+                    "magnus": false,
+                    "broker": false,
+                    "boundRepresentative": false,
+                    "testClient": false
+                }
+            }
+        },
+        "addresses": {
+            "permanentAddress": {
+                "street": "Za rohem",
+                "houseNumber": "21",
+                "postalCode": "60200",
+                "city": "Brno",
+                "countryId": "CZE",
+                "orientationNumber": "6",
+                "regionId": "CZ064"
+            },
+            "mailingAddress": {
+                "street": "Za bukem",
+                "houseNumber": "321",
+                "postalCode": "98521",
+                "city": "Stromořadí",
+                "countryId": "CZE",
+                "copyFromPermanentAddress": false,
+                "orientationNumber": "24"
+            }
+        },
+        "acquisition": {
+            "segmentation": {
+                "cooperationReasons": {
+                    "value": 500000002,
+                    "label": "Významné společenské postavení"
+                },
+                "acquisitionMethod": {
+                    "value": 500000000,
+                    "label": "Průběžný"
+                },
+                "recommendedBy": null,
+                "prevailingCharacteristics": {
+                    "value": 500000013,
+                    "label": "Bussiness Man"
+                },
+                "clientInfluence": {
+                    "value": 500000001,
+                    "label": "Široká skupina osob, akcionáři, členové, správní rada atp."
+                },
+                "campaign": {
+                    "value": 500000003,
+                    "label": "kampan 4"
+                }
+            },
+            "characteristics": {
+                "microsegment": null,
+                "grouping": {
+                    "value": 500000000,
+                    "label": "Samostatná společnost"
+                },
+                "financialTurnaround": 1000000000,
+                "employeesNumber": {
+                    "value": 500000005,
+                    "label": "20 - 24 zaměstnanců"
+                },
+                "orientation": {
+                    "value": 500000001,
+                    "label": "Výroba"
+                }
+            },
+            "expectedServiceRange": {
+                "bankServices": true,
+                "propertyProtection": false,
+                "assetAppreciation": false,
+                "financing": true,
+                "regularInvestments": false,
+                "assetsProtectionWithRegularPayment": true,
+                "assetAppreciationWithHigherPayout": false,
+                "speculation": false,
+                "other": false,
+                "comment": null
+            }
+        },
+        "property": {
+            "propertyFoFop": {
+                "totalFinancialAssets": 34900.75,
+                "totalEstimatedAssets": 732000.25,
+                "totalRealEstateProperty": 5470.0,
+                "otherAssets": 82004.75,
+                "annualIncomeEstimate": 4700.5,
+                "note": null
+            },
+            "propertyPo": {
+                "totalAssets": 34900.5,
+                "totalLiabilities": 684.75,
+                "financialAssets": 97.25,
+                "ownersProperty": 100004.0,
+                "reservesAccordingLaw": 60000000.25,
+                "otherPermanentFreeResources": 537.5,
+                "seasonalFreeResources": 964.75,
+                "operationalAnnualProfit": 24.0,
+                "note": null
+            },
+            "servicesOutsideJTB": {
+                "noOtherBanks": false,
+                "bank1": {
+                    "bankId": "8090",
+                    "financialInstitution": null,
+                    "mainBank": true,
+                    "services": {
+                        "bankServices": true,
+                        "deposits": true,
+                        "loans": false,
+                        "investment": true,
+                        "fund": true,
+                        "bond": false,
+                        "stocks": false,
+                        "gold": true,
+                        "certificates": true,
+                        "other": false,
+                        "dontKnow": false
+                    }
+                },
+                "bank2": {
+                    "bankId": "8170",
+                    "financialInstitution": null,
+                    "mainBank": false,
+                    "services": {
+                        "bankServices": true,
+                        "deposits": false,
+                        "loans": true,
+                        "investment": false,
+                        "fund": false,
+                        "bond": true,
+                        "stocks": true,
+                        "gold": true,
+                        "certificates": false,
+                        "other": true,
+                        "dontKnow": true
+                    }
+                }
+            }
+        },
+        "aml": {
+            "clientOverallRisk": 5
+        },
+        "addons": {
+            "kiid": {
+                "kiidConsent": {
+                    "value": 500000002,
+                    "label": "Bez vyjádření"
+                },
+                "kiidConsentDate": null
+            },
+            "consent": {
+                "finalIncomeRecipient": false,
+                "finalIncomeRecipientDeclaration": null,
+                "consentGivenBy": null
+            },
+            "autosweep": {
+                "autosweepCzActive": true,
+                "autosweepCzDate": "ABCDEFGHIJKLMNOPQRSTUVWXYZABC",
+                "autosweepSkActive": false,
+                "autosweepSkDate": "2010-08-07T22:00:00.000Z"
+            }
+        },
+        "additionalInformationAndDates": {
+            "actualizationDate": "2021-09-04T22:00:00.000Z",
+            "nextActualizationDate": "2022-11-12T22:00:00.000Z",
+            "approvalStatus": {
+                "value": 500000001,
+                "label": "Zařazení CI/PI"
+            },
+            "amlVerificationDate": "2022-01-01T23:00:00.000Z",
+            "autoAML": true,
+            "approvalDate": "2022-01-01T23:00:00.000Z",
+            "sanctionListCheckResult": {
+                "value": 500000000,
+                "label": "Prošel"
+            },
+            "sanctionListCheckDate": "2022-01-02T23:00:00.000Z",
+            "sanctionListCheckUser": "JTBA\\crm_admin",
+            "transactionCurrency": "CZK"
+        },
+        "typology": {
+            "preferredServiceJTBA": {
+                "mobileApplication": true,
+                "internetBanking": false,
+                "telephoneBanking": false,
+                "faceToFace": false,
+                "dontKnow": false
+            },
+            "preferredServicePrimaryBank": {
+                "mobileApplication": true,
+                "internetBanking": true,
+                "telephoneBanking": false,
+                "faceToFace": false,
+                "dontKnow": false
+            },
+            "clientAdviceFrom": {
+                "selfStudy": true,
+                "bankerJT": true,
+                "professionalAdvisor": true,
+                "familyAndFriends": true,
+                "ownTeam": false,
+                "dontKnow": true
+            },
+            "currentEconomicActivity": {
+                "value": 500000002,
+                "label": "OSVČ"
+            },
+            "clientCycle": {
+                "value": 500000001,
+                "label": "Kumulace"
+            },
+            "scoreByBanker": {
+                "value": 500000003,
+                "label": "Risk taker"
+            },
+            "clientEconomicActivity": {
+                "function": null,
+                "profession": "APICODE",
+                "education": {
+                    "value": 500000002,
+                    "label": "vysokoškolské"
+                }
+            },
+            "hobby": {
+                "sport": {
+                    "cycling": true,
+                    "cars": false,
+                    "football": true,
+                    "golf": false,
+                    "hiking": false,
+                    "hockey": true,
+                    "horses": false,
+                    "chess": false,
+                    "poker": false,
+                    "rugby": false,
+                    "tennis": true,
+                    "volleyball": true,
+                    "winterSports": false,
+                    "yachting": true,
+                    "otherSports": true
+                },
+                "art": {
+                    "collecting": false,
+                    "collectingAntique": false,
+                    "collectingCars": true,
+                    "collectingJewelry": false,
+                    "collectingPreciousMetal": true,
+                    "collectingNumismatics": false,
+                    "collectingPaintings": false,
+                    "collectingStamps": true,
+                    "collectingWatches": true,
+                    "collectingWine": true,
+                    "exhibition": true,
+                    "investing": true,
+                    "music": false,
+                    "theatre": false,
+                    "other": true
+                },
+                "other": {
+                    "balls": false,
+                    "nobleAlcohol": true,
+                    "fashion": true,
+                    "gastronomy": true,
+                    "hunting": true,
+                    "literature": false,
+                    "travelling": true,
+                    "wine": true,
+                    "other": false,
+                    "dontKnow": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+openapi: 3.0.2
+info:
+  title: investmentFxRate
+  description: fasáda pro zjištování kurzu investice
+  version: 1.0.0
+servers:
+  - url: https://api-devint.jtfgtest.com/investmentFxRate/v1
+security:
+  - default: []
+paths:
+  /fxRate:
+    post:
+      tags:
+        - fxRate
+      summary: zjištování kurzu investice
+      description: zjištování kurzu investice
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          style: simple
+          explode: false
+          description: "Unique request's/operation's identifier."
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        description: FxRate
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/fxRateRequest'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/fxRateResponse"
+        '400':
+          description: Bad Request - JT code - 9903 ; Mising or invalid element.
+                                                
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+        '503':
+          description: Service Unavailable
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Error"
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+components:
+  schemas:
+    fxRateRequest:
+      type: object
+      properties:
+        currency:
+          type: string
+          description: Kod meny. CZK pro centralu a EUR pro pobocku.
+          example: 'CZK'
+          enum:
+            - 'CZK'
+            - 'EUR'
+        buyCurrency:
+          type: string
+          description: Nakupovana mena (z pohledu banky) ISO 4217.
+          example: 'EUR'
+        sellCurrency:
+          type: string
+          description: Prodávaná mena (z pohledu banky) ISO 4217.
+          example: 'USD'
+        buyVolume:
+          type: string
+          description: Objem transakce v nakupni mene (mel by byt uveden bud nakupni nebo prodejni objem)
+          example: '48970'
+        sellVolume:
+          type: string
+          description: Objem transakce v prodejni mene (mel by byt uveden bud nakupni nebo prodejni objem)
+          example: '6497'
+    fxRateResponse:
+      type: object
+      properties:
+        exchangeRate:
+          type: number
+          description: Kurz směny
+          example: 27.50
+        baseAmount:
+          type: integer
+          description: množství Měny oceňované
+          example: 1000
+        isInvert:
+          type: boolean
+          description: false - pokud kurz říká, kolik jednotek prodávané měny je za uvedený počet jednotek nakupované měny	 true - pokud kurz říká, kolik jednotek nakupované měny je za uvedený počet jednotek prodávané měny
+          example: true
+        buy:
+          type: number
+          description: Kurz nakupovane meny vuci domaci mene
+          example: 27.50
+        sell:
+          type: number
+          description: Kurz prodavane meny vuci domaci mene
+          example: 27.50
+        rateCategory:
+          type: integer
+          description: 1 - standard, 2 - premium, 3 - vip
+          example: 1
+          enum:
+            - 1
+            - 2
+            - 3
+        rateValidityDate:
+          type: string
+          format: date
+          description: Kurz platný pro den
+          example: '2022-11-25'
+    Error:
+      required:
+        - code
+        - timestamp
+        - index
+        - version
+        - errors
+      type: object
+      properties:
+        code:
+          description: RFC 7231 error code
+          type: string
+          example: 400
+        timestamp:
+          description: Date and time of the error according to RFC5424
+          type: string
+          format: date-time
+          example: 2022-01-12T23:20:50.52
+        index:
+          description: Contains information about the X-Correlation-ID or Elastic Search index.
+          type: string
+          example: 4adde395-ebef-4552-bd39-cbdaf63305a9
+        version:
+          description: Version of the error response structure
+          type: string
+          enum:
+           - '2.0'
+          example: 2.0
+        errors:
+          description: Array of errors
+          type: array
+          items:
+            type: object
+            required:
+              - jtCode
+              - message
+            properties:
+              jtCode:
+                description: Business error code if defined in CSC or RFC 7231 error code
+                type: string
+                example: 1101
+              message:
+                description: Error description defined in CSC according to the type and sensitivity of the service.
+                type: string
+                example: Daily limit is exceeded.
+              location:
+                description: The path to the element in the request message that is causing the error.
+                type: string
+                example: amount/instructedAmount/currency
+              severity:
+                description: Exception severity
+                type: string
+                enum:
+                  - error
+                  - warning
+                example: error
+              params:
+                description: Array of message parameters
+                type: array
+                items:
+                  type: object
+                  required:
+                    - paramName
+                    - paramValue
+                  properties:
+                    paramName:
+                      description: The name of the parameter in the message string, e.g. 'Insufficient funds – account number %1.' -> paramName = 1
+                      type: string
+                      example: 1
+                    paramValue:
+                      description: The value of the parameter in the message string, e.g. 'Insufficient funds – account number 15-135169.' -> paramValue = 15-135169
+                      type: string
+                      example: 123456789
+        internalErrors:
+          description: Array of internal error codes and error descriptions according to the service provider
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                description: Internal error code according to the application / system which is the service provider.
+                type: string
+                example: 1092092
+              message:
+                description: Internal description of the error according to the application / system which is the service provider.
+                type: string
+                example: PTS daily limit is exceeded.
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://api-devint.jtfgtest.com/authorize
+          scopes: {}

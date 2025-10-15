@@ -1,0 +1,246 @@
+openapi: 3.0.1
+info:
+  title: ACMARK CRM DIGI API
+  description: API rozhraní pro integraci CRM s DIGI.
+  contact:
+    name: Martin Veselý
+    email: mvesely@acmark.com
+  version: '1.0'
+paths:
+  /api/v1/Account/query:
+    post:
+      tags:
+        - Account
+      summary: Account reconciliation
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          description: Correlation identifier for request and response pairing.
+          schema:
+            $ref: "#/components/schemas/X-Correlation-ID"
+        - name: from
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: to
+          in: query
+          schema:
+            type: string
+            format: date-time
+        - name: location
+          in: query
+          description: <p>Variants:</p><ul></ul>
+          required: false
+          explode: false
+          schema:
+            type: string
+            description: <p>Members:</p><ul></ul>
+            enum:
+              - cz
+              - sk
+        - name: mode
+          in: query
+          description: <p>Variants:</p><ul></ul>
+          required: true
+          schema:
+            enum:
+              - sync
+              - async
+            type: string
+            description: <p>Members:</p><ul></ul>
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CheckKlientRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CheckKlientRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CheckKlientRequest'
+      responses:
+        '200':
+          description: Success
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckKlientResponse'
+        '204':
+          description: No Content
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+        '400':
+          description: <br>***400*** - Bad Request.
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '401':
+          description: Prázdný nebo chybný token. Detail případně v hlavičce www-authenticate.
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: "<br>***ERR404-0*** - Account not found.\r\n<br>***404*** - Not Found."
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: <br>***500*** - Internal Server Error.
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"          
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    CheckKlientRequest:
+      type: object
+      properties:
+        accountGUID:
+          type: string
+          format: uuid
+        accountKLID:
+          type: string
+          nullable: true
+        rc:
+          type: string
+          nullable: true
+        ico:
+          type: string
+          nullable: true
+        nid:
+          type: string
+          nullable: true
+        vid:
+          type: string
+          nullable: true
+        zam:
+          type: string
+          nullable: true
+      additionalProperties: false
+    CheckKlientResponse:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: Jméno
+          nullable: true
+        nameSurname:
+          type: string
+          description: Název/příjmení
+          nullable: true
+        identifierType:
+          $ref: '#/components/schemas/CrmOptionSet'
+        identifier:
+          type: string
+          description: Hodnota identifikátoru
+          nullable: true
+        klientId:
+          type: string
+          description: Klient ID (KLID)
+          nullable: true
+        location:
+          $ref: '#/components/schemas/CrmOptionSet'
+        banker:
+          type: string
+          description: Bankéř (API Code)
+          nullable: true
+        clientStatus:
+          $ref: '#/components/schemas/CrmOptionSet'
+      additionalProperties: false
+    CrmOptionSet:
+      type: object
+      properties:
+        value:
+          type: integer
+          format: int32
+        label:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Error: 
+      required: 
+        - "code"
+        - "message"
+      type: object
+      properties: 
+        code: 
+          type: integer
+          format: int32
+          description: "RFC 7231 error code"
+          example: "1234"
+        message: 
+          type: string
+          description: "The content of the attribute is a combination of a generally defined error and a description of a generally defined error according to the type and sensitivity of the service."
+          example: "Daily limit is exceeded."
+        timestamp: 
+          type: string
+          description: "Date and time of the error according to RFC5424"
+          example: "2022-01-12T23:20:50.52"
+        index:
+          type: string
+          description: "Contains information about the X-Correlation-ID or Elastic Search index"
+          example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+        internal:
+          type: object
+          properties:
+            code:
+              type: string
+              description: "Internal error code according to the application / system which is the service provider."
+              example: "1092092"
+            message:
+              type: string
+              description: "Internal description of the error according to the application / system which is the service provider."
+              example: "Daily limit is exceeded."
+    X-Correlation-ID:
+      description: "Correlation identifier for request and response pairing."
+      type: string
+      format: uuid
+      example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+
+  headers: 
+    X-Correlation-ID: 
+      description: "Correlation identifier for request and response pairing."
+      required: true
+      schema: 
+        $ref: "#/components/schemas/X-Correlation-ID"
+
+  securitySchemes:
+    Bearer:
+      type: http
+      description: '**_CRM JWT Auth Token_** (Server To Server Authentication, JWT Token is encrypted).</br>Enter CRM JWT Bearer token **_only_**'
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - Bearer: []

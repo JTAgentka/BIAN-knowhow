@@ -1,0 +1,276 @@
+# 2022-12-01 – 0.0.1 - Vít Joachymstál - Initial version
+openapi: 3.0.0
+info:
+  title: Collection Account to Collection Account
+  description: Money transfer service between collection accounts
+  version: 0.0.1
+paths:
+  /collectionAccountToCollectionAccount:
+    post:
+      tags: 
+        - collectionAccountToCollectionAccount
+      description: The method is used to transfer money between collection accounts
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          schema:
+            $ref: "#/components/schemas/X-Correlation-ID"
+        - name: traceparent
+          in: header
+          required: true
+          description: "Tracing parameter according to W3C Trace Context standard."
+          schema:
+            $ref: "#/components/schemas/traceparent"
+      requestBody:
+        description: collAccToCollAccRequest
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/collAccToCollAccRequest'
+      responses:
+        "200":
+          description: OK
+          headers:  
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/collAccToCollAccResponse"
+        "400":
+          description: >-
+            Bad Request
+
+             | title                   | detail                                                             |
+             |-------------------------|--------------------------------------------------------------------|
+             | AMOUNT_MUST_BE POSITIVE | Amount is mandatory and positive number                            |
+             | ILLEGAL_CURRENCY        | Currency must be either debtor account or creditoraccount currency |
+
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: >-
+            Not Found
+
+             | title                       | detail                                                                   |
+             |-----------------------------|--------------------------------------------------------------------------|
+             | PORTFOLIO_NOT_FOUND         | Portfolio does not exist                                                 |
+             | DEBTORACC_ DOES_NOT_EXIST   | Debtor account does not exist or does not match the currency             |
+             | CREDITORACC_ DOES_NOT_EXIST | Creditor account does not exist or does not match the currency           |
+             | FXRATE_DOES_NOT_EXIST	FX | Rate does not exist (pro uvedený měnový pár není možné provést konverzi) |
+
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "409":
+          description: >-
+            Conflict
+
+             | title                          | detail                               | 
+             |--------------------------------|--------------------------------------|
+             | DEBIT_AND_CREDIT_ACC_ARE_EQUAL |	Debt account equal to credit account |
+             
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: >-
+            Internal server error
+
+             | title                      | detail                                   | 
+             |----------------------------|------------------------------------------|
+             | GEN_ERROR                  | Unexpected error - <Technical Details>   |
+             | PAYCRETOPAS_<Code>_<Title> | PayCreTOPAS - <Received Response Detail> |
+
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    collAccToCollAccRequest:
+      required: 
+        - "portfolioIds"
+        - "debtorAccount"
+        - "creditorAccount"
+        - "amount"
+      type: object
+      properties:
+        portfolioIds:
+          description: Portfolio identifiers
+          type: object
+          required:
+          - topasId
+          properties:
+            topasId:
+              type: integer
+              description: Portfolio identification in TOPAS
+        debtorAccount:
+          "$ref": "#/components/schemas/accountElement"
+        creditorAccount:
+          "$ref": "#/components/schemas/accountElement"
+        amount:
+          description: Payment amount and currency
+          required:
+          - instructedAmount
+          type: object
+          properties:
+            instructedAmount:
+              "$ref": "#/components/schemas/valueAndCurrency"
+        fxRate:
+          description: Agreed exchange rate, where if beInverted=false, then creditedAmount = amount * fxRate. When beInverted=true, creditedAmount = amount / fxRate
+          type: number
+        beInverted:
+          description: Indication of how to deal with the agreed exchange rate
+          type: boolean
+    accountElement:
+      required:
+        - currency
+      type: object
+      properties:
+        identification:
+          "$ref": "#/components/schemas/accountIdentification"
+        currency:
+          "$ref": "#/components/schemas/currency"
+    accountIdentification:      
+      description: Account identification
+      anyOf:
+        - $ref: "#/components/schemas/iban"
+        - $ref: "#/components/schemas/bban"
+    iban:
+      minLength: 1
+      maxLength: 34
+      type: string
+      description: Collection account number in IBAN format
+    bban:
+      description: Collection account number in BBAN format
+      required:
+        - accountNumber
+        - bankCode
+      type: object
+      properties:
+        accountNumberPrefix:
+          description: Prefix of account number in BBAN format
+          type: string
+          maxLength: 6
+        accountNumber:
+          description: Account number in BBAN format
+          type: string
+          maxLength: 10
+        bankCode:
+          description: Bank code
+          type: string
+          maxLength: 4
+    currency:
+      description: Payment currency code according to ISO 4217 = 3 capital letters
+      type: string
+      pattern: '[A-Z]{3,3}'
+    valueAndCurrency:
+      type: object
+      properties:
+        value:
+          description: Amount value
+          multipleOf: 0.01
+          type: number
+        currency:
+          "$ref": "#/components/schemas/currency"      
+    collAccToCollAccResponse:
+      required: 
+        - "tradeNumber"
+      type: object
+      properties:
+        tradeIds:
+          description: IDs obchodu
+          type: object
+          properties:
+            topasIdNumber:
+              description: ID čísla výsledku v Topas
+              type: integer
+            topasIdSeq:
+              description: ID pořadí výsledku v Topas
+              type: integer
+        fxRate:
+          description: "Exchange rate used in TOPAS for FX conversion"
+          type: number
+        debitAamount:
+          description: Debit amount and currency
+          "$ref": "#/components/schemas/valueAndCurrency"
+        creditAamount:
+          description: Credit amount and currency
+          "$ref": "#/components/schemas/valueAndCurrency"
+    Error:
+      type: object
+      properties:
+        timestamp: 
+          type: string
+          description: ""
+          example: "1512713804164"
+        title:
+          type: string
+          description: ""
+          example: "GEN_ERROR"
+        detail: 
+          type: string
+          description: ""
+          example: "Unexpected error: Not enough memory"
+        uuid: 
+          type: string
+          description: ""
+          example: "<UUID>"
+        requestId: 
+          type: string
+          description: ""
+          example: "<requestId>"   
+        path: 
+          type: string
+          description: ""
+          example: "/some-dummy-url"
+    X-Correlation-ID:
+      description: "Correlation identifier for request and response pairing."
+      type: string
+      format: uuid
+      example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+    traceparent: 
+      description: "Tracing parameter according to W3C Trace Context standard."
+      maxLength: 55
+      type: string
+      example: "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01"
+  headers:
+    X-Correlation-ID: 
+      description: "Correlation identifier for request and response pairing."
+      required: true
+      schema: 
+        $ref: "#/components/schemas/X-Correlation-ID"
+    traceparent: 
+      description: "Tracing parameter according to W3C Trace Context standard."
+      required: true
+      schema: 
+        $ref: "#/components/schemas/traceparent"

@@ -1,0 +1,220 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema",
+	"$id": "http://acmark.com/jtb/ConnectionSchema.json",
+	"description": "Informace o relaci v CRM",
+	"type": "object",
+	"required": [ "connectionId", "relatedConnectionId", "state", "timestamp" ],
+	"properties": {
+		"X-Correlation-ID": {
+			"type": "string",
+			"description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+		},
+		"action": {
+			"description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+			"anyOf": [
+				{
+					"type": "string",
+					"enum": [ "create", "update", "delete" ]
+				},
+				{
+					"type": "null"
+				}
+			]
+		},
+		"timestamp": {
+			"description": "Datum a čas operace",
+			"type": "string",
+			"format": "date-time"
+		},
+		"connectionId": {
+			"type": "string",
+			"format": "uuid",
+			"description": "GUID relace v CRM"
+		},
+		"relatedConnectionId": {
+			"type": "string",
+			"format": "uuid",
+			"description": "GUID zrcadlově obrácené relace v CRM"
+		},
+		"before": {
+			"description": "Stav záznamu před provedením změn. NULL při vytvoření záznamu a při rekonciliaci/inicializaci.",
+			"oneOf": [
+				{
+					"type": "null"
+				},
+				{
+					"$ref": "#/definitions/ConnectionData"
+				}
+			]
+		},
+		"after": {
+			"description": "Stav záznamu po provedení změn. NULL při smazání záznamu.",
+			"oneOf": [
+				{
+					"type": "null"
+				},
+				{
+					"$ref": "#/definitions/ConnectionData"
+				}
+			]
+		},
+		"state": {
+			"description": "Technický stav záznamu",
+			"type": "object",
+			"required": [
+				"statecode",
+				"statuscode",
+				"anonymized",
+				"deleted",
+				"merged"
+			],
+			"properties": {
+				"statecode": {
+					"description": "Statecode",
+					"type": "object",
+					"required": [ "value", "label" ],
+					"properties": {
+						"value": {
+							"description": "Hodnota CRM enumerátoru/OptionSetu",
+							"type": "integer",
+							"examples": [ 0, 1 ]
+						},
+						"label": {
+							"description": "Popisek číselníkové hodnoty z CRM",
+							"type": "string",
+							"examples": [ "Aktivní", "Neaktivní" ]
+						}
+					}
+				},
+				"statuscode": {
+					"description": "Statuscode",
+					"type": "object",
+					"required": [ "value", "label" ],
+					"properties": {
+						"value": {
+							"description": "Hodnota CRM enumerátoru/OptionSetu",
+							"type": "integer",
+							"examples": [ 1, 2 ]
+						},
+						"label": {
+							"description": "Popisek číselníkové hodnoty z CRM",
+							"type": "string",
+							"examples": [ "Aktivní", "Neaktivní" ]
+						}
+					}
+				},
+				"anonymized": {
+					"description": "Záznam byl anonymizován",
+					"type": "boolean"
+				},
+				"deleted": {
+					"description": "Záznam byl smazán",
+					"type": "boolean"
+				},
+				"merged": {
+					"description": "Záznam byl sloučen a deaktivován",
+					"type": "boolean"
+				},
+				"masterid": {
+					"description": "GUID vítězného záznamu při slučování",
+					"type": [ "string", "null" ],
+					"format": "uuid"
+				}
+			}
+		}
+	},
+	"definitions": {
+		"ConnectionData": {
+			"type": [ "object", "null" ],
+			"required": [
+				"record1Entity",
+				"record1Type",
+				"record1Role",
+				"record2Entity",
+				"record2Type",
+				"record2Role"
+			],
+			"properties": {
+				"record1Entity": {
+					"description": "Propojeno od",
+					"$ref": "#/definitions/EntityReference"
+				},
+				"record1Type": {
+					"description": "Typ propojeného záznamu od.",
+					"$ref": "#/definitions/RecordType"
+				},
+				"record1Role": {
+					"description": "",
+					"$ref": "#/definitions/ConnectionRoleReference"
+				},
+				"record2Entity": {
+					"description": "",
+					"$ref": "#/definitions/EntityReference"
+				},
+				"record2Type": {
+					"description": "Typ propojeného záznamu do.",
+					"$ref": "#/definitions/RecordType"
+				},
+				"record2Role": {
+					"description": "Propojeno do",
+					"$ref": "#/definitions/ConnectionRoleReference"
+				},
+				"validFrom": {
+					"description": "Datum platnosti od",
+					"type": [ "string", "null" ],
+					"format": "date-time"
+				},
+				"validTo": {
+					"description": "Datum platnosti do",
+					"type": [ "string", "null" ],
+					"format": "date-time"
+				},
+				"description": {
+					"description": "Popis vztahu",
+					"type": [ "string", "null" ]
+				}
+			},
+			"description": "Data relace."
+		},
+		"EntityReference": {
+			"type": [ "object", "null" ],
+			"required": [ "id", "name" ],
+			"properties": {
+				"id": {
+					"type": "string",
+					"format": "uuid",
+					"description": "GUID záznamu v CRM."
+				},
+				"klid": {
+					"type": "string",
+					"description": "KLID záznamu, je-li k dispozici."
+				},
+				"name": {
+					"type": "string",
+					"description": "Název (label) záznamu v CRM."
+				}
+			},
+			"description": "Informace o návazném záznamu."
+		},
+		"ConnectionRoleReference": {
+			"type": [ "object", "null" ],
+			"required": [ "id", "name" ],
+			"properties": {
+				"id": {
+					"type": "string",
+					"format": "uuid",
+					"description": "GUID propojovací role v CRM/CSC."
+				},
+				"name": {
+					"type": "string",
+					"description": "Název propojovací role v CRM."
+				}
+			},
+			"description": "Informace o propojovací roli."
+		},
+		"RecordType": {
+			"type": "string",
+			"enum": [ "account", "contact", "systemuser" ]
+		}
+	}
+}

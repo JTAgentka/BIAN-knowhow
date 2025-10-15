@@ -1,0 +1,299 @@
+{
+    "$id": "http://acmark.com/jtb/MagnusSchema.json",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "description": "Root Schema",
+    "type": "object",
+    "required": [
+        "magnusBenefitId",
+        "state",
+        "timestamp"
+    ],
+    "properties": {
+        "X-Correlation-ID": {
+            "type": [
+                "string",
+                "null"
+              ],
+            "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+        },
+        "action": {
+            "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "create",
+                        "update",
+                        "delete"
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "timestamp": {
+            "description": "Datum a čas operace",
+            "type": "string",
+            "format": "date-time"
+        },
+        "magnusBenefitId": {
+            "description": "The magnusBenefitId Schema",
+            "type": "string"
+        },
+        "before": {
+            "description": "Stav záznamu před provedením změn. NULL při vytvoření záznamu a při rekonciliaci/inicializaci.",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/MagnusData"
+                }
+            ]
+        },
+        "after": {
+            "description": "Stav záznamu po provedení změn. NULL při smazání záznamu.",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/MagnusData"
+                }
+            ]
+        },
+        "state": {
+            "description": "Technický stav záznamu",
+            "type": "object",
+          "required": [
+            "statecode",
+            "statuscode",
+            "anonymized",
+            "deleted",
+            "merged"
+          ],
+            "properties": {
+                "statecode": {
+                    "description": "Statecode",
+                    "type": "object",
+                    "required": [
+                        "value",
+                        "label"
+                    ],
+                    "properties": {
+                        "value": {
+                            "description": "Hodnota CRM enumerátoru/OptionSetu",
+                            "type": "integer",
+                            "examples": [
+                                0,
+                                1
+                            ]
+                        },
+                        "label": {
+                            "description": "Popisek číselníkové hodnoty z CRM",
+                            "type": "string",                                
+                            "examples": [
+                                "Aktivní",
+                                "Neaktivní"
+                            ]
+                        }
+                    }
+                },
+                "statuscode": {
+                    "description": "Statuscode",
+                    "type": "object",
+                    "required": [
+                        "value",
+                        "label"
+                    ],
+                    "properties": {
+                        "value": {
+                            "description": "Hodnota CRM enumerátoru/OptionSetu",
+                            "type": "integer",
+                            "examples": [
+                                1,
+                                2
+                            ]
+                        },
+                        "label": {
+                            "description": "Popisek číselníkové hodnoty z CRM",
+                            "type": "string",
+                            "examples": [
+                                "Aktivní",
+                                "Neaktivní"
+                            ]
+                        }
+                    }
+                },
+                "anonymized": {
+                    "description": "Záznam byl anonymizován",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "deleted": {
+                    "description": "Záznam byl smazán",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "merged": {
+                    "description": "Záznam byl sloučen a deaktivován",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "masterid": {
+                    "description": "GUID vítězného záznamu při slučování",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uuid"
+                }
+            }
+        }
+    },
+    "definitions": {
+        "MagnusData": {
+            "properties": {
+                "accountId": {
+                    "description": "GUID klienta, jemuž záznam patří",
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "klientId": {
+                    "description": "Klient ID (KLID)",
+                    "type": "string",
+                    "examples": [
+                        1000018856
+                    ]
+                },
+                "publicCardNumber": {
+                    "description": "Anonymizované číslo benefitní karty (zahvězdičkované)",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "examples": [
+                        "1111********4444"
+                    ]
+                },
+                "vopAgreeDate": {
+                    "description": "Datum souhlasu s VOP",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "date-time"
+                },
+                "magnusPoints": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Počet Magnus bodů evidovaných v CRM"
+                },
+                "yesterdayMagnusPoints": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "Včerejší zůstatek Magnus bodů z AXA"
+                },
+                "offersCz": {
+                    "description": "Nabídky Česko",
+                    "required": [
+                        "clientPb",
+                        "clientPrb",
+                        "clientCd",
+                        "clientFt",
+                        "clientBp",
+                        "employee",
+                        "ro",
+                        "test"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "clientPb": {
+                            "description": "54-ČR klient PB",
+                            "type": "boolean"
+                        },
+                        "clientPrb": {
+                            "description": "55-ČR klient PRB",
+                            "type": "boolean"
+                        },
+                        "clientCd": {
+                            "description": "56-ČR klient CD",
+                            "type": "boolean"
+                        },
+                        "clientFt": {
+                            "description": "57-ČR klient FT",
+                            "type": "boolean"
+                        },
+                        "clientBp": {
+                            "description": "58-ČR klient BP",
+                            "type": "boolean"
+                        },
+                        "employee": {
+                            "description": "74-ČR zaměstnanec",
+                            "type": "boolean"
+                        },
+                        "ro": {
+                            "description": "78-ČR ŘO",
+                            "type": "boolean"
+                        },
+                        "test": {
+                            "description": "99-Testovací",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "offersSk": {
+                    "description": "Nabídky Slovensko",
+                    "required": [
+                        "employee",
+                        "clientPb",
+                        "clientPrb",
+                        "clientCampaign",
+                        "clientFt",
+                        "clientBp",
+                        "vouchersPb"
+                    ],
+                    "type": "object",
+                    "properties": {
+                        "employee": {
+                            "description": "11-SR zaměstnanec",
+                            "type": "boolean"
+                        },
+                        "clientPb": {
+                            "description": "13-SR klient PB",
+                            "type": "boolean"
+                        },
+                        "clientPrb": {
+                            "description": "14-SR klient PRB",
+                            "type": "boolean"
+                        },
+                        "clientCampaign": {
+                            "description": "35-SR klient kampaň",
+                            "type": "boolean"
+                        },
+                        "clientFt": {
+                            "description": "36-SR klient FT",
+                            "type": "boolean"
+                        },
+                        "clientBp": {
+                            "description": "37-SR klient BP",
+                            "type": "boolean"
+                        },
+                        "vouchersPb": {
+                            "description": "77-PB - vouchre",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

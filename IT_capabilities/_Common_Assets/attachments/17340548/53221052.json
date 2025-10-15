@@ -1,0 +1,227 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "$id": "http://acmark.com/jtb/PersonalBankerSchema.json",
+    "description": "Informace o bankéři/makléři",
+    "type": "object",
+    "required": [
+        "accountId",
+        "state",
+        "timestamp"
+    ],
+    "properties": {
+        "X-Correlation-ID": {
+            "type": "string",
+            "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+        },
+        "action": {
+            "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+            "anyOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "create",
+                        "update",
+                        "delete"
+                    ]
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "timestamp": {
+            "description": "Datum a čas operace",
+            "type": "string",
+            "format": "date-time"
+        },
+        "accountId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Klient/firma (GUID klienta/firmy v CRM)"
+        },
+        "klientId": {
+            "description": "Klient ID (KLID)",
+            "type": "string",
+            "examples": [
+                1000018856
+            ]
+        },
+        "banker": {
+            "description": "Bankéř nebo poradce klienta",
+            "$ref": "#/definitions/bankerOrBrokerDef"
+        },
+        "broker": {
+            "description": "Makléř",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "$ref": "#/definitions/bankerOrBrokerDef"
+                }
+            ]
+        },
+        "state": {
+            "description": "Technický stav záznamu",
+            "type": "object",
+          "required": [
+            "statecode",
+            "statuscode",
+            "anonymized",
+            "deleted",
+            "merged"
+          ],
+            "properties": {
+                "statecode": {
+                    "description": "Statecode",
+                    "type": "object",
+                    "required": [
+                        "value",
+                        "label"
+                    ],
+                    "properties": {
+                        "value": {
+                            "description": "Hodnota CRM enumerátoru/OptionSetu",
+                            "type": "integer",
+                            "examples": [
+                                0,
+                                1
+                            ]
+                        },
+                        "label": {
+                            "description": "Popisek číselníkové hodnoty z CRM",
+                            "type": "string",
+                            "examples": [
+                                "Aktivní",
+                                "Neaktivní"
+                            ]
+                        }
+                    }
+                },
+                "statuscode": {
+                    "description": "Statuscode",
+                    "type": "object",
+                    "required": [
+                        "value",
+                        "label"
+                    ],
+                    "properties": {
+                        "value": {
+                            "description": "Hodnota CRM enumerátoru/OptionSetu",
+                            "type": "integer",
+                            "examples": [
+                                1,
+                                2
+                            ]
+                        },
+                        "label": {
+                            "description": "Popisek číselníkové hodnoty z CRM",
+                            "type": "string",
+                            "examples": [
+                                "Aktivní",
+                                "Neaktivní"
+                            ]
+                        }
+                    }
+                },
+                "anonymized": {
+                    "description": "Záznam byl anonymizován",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "deleted": {
+                    "description": "Záznam byl smazán",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "merged": {
+                    "description": "Záznam byl sloučen a deaktivován",
+                    "type": [
+                        "boolean"
+                    ]
+                },
+                "masterid": {
+                    "description": "GUID vítězného záznamu při slučování",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "uuid"
+                }
+            }
+        }
+    },
+    "definitions": {
+        "bankerOrBrokerDef": {
+            "type": [
+                "object",
+                "null"
+            ],
+            "required": [
+                "showClientCenter",
+                "name",
+                "surname",
+                "primePhone",
+                "cellPhone",
+                "email"
+            ],
+            "properties": {
+                "showClientCenter": {
+                    "type": "boolean",
+                    "description": "Příznak určující, že klient je spravován klientským centrem"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Jméno bankéře nebo poradce zprostředkovatele"
+                },
+                "surname": {
+                    "type": "string",
+                    "description": "Příjmení bankéře nebo poradce zprostředkovatele"
+                },
+                "agentName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Název zprostředkovatele (pouze pro externí klienty)"
+                },
+                "street": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Ulice (Adresa poradce, pouze pro externí klienty)"
+                },
+                "city": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "Obec (Adresa poradce, pouze pro externí klienty)"
+                },
+                "zip": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "PSČ (Adresa poradce, pouze pro externí klienty)"
+                },
+                "primePhone": {
+                    "type": "string",
+                    "description": "Primární telefon"
+                },
+                "cellPhone": {
+                    "type": "string",
+                    "description": "Mobilní telefon"
+                },
+                "email": {
+                    "type": "string",
+                    "description": "E-mail"
+                }
+            },
+            "description": "Informace o bankéři/makléři"
+        }
+    }
+}

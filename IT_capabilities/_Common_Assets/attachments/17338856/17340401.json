@@ -1,0 +1,498 @@
+{
+   "title":"Payment",
+   "$schema":"https://json-schema.org/draft/2020-12/schema",
+   "description":"Celá kolekce se bude posílat v jedné události.",
+   "type":"object",
+   "properties":{
+      "X-Correlation-Id": {
+      "type": "string",
+      "title": "X-Correlation-Id",
+      "description": "Correlation identifier"
+      },    
+      "ptsId":{
+         "type":"integer",
+         "title":"ptsId",
+         "description":"id platby PTS"
+      },
+      "identification":{
+         "type":"object",
+         "title":"identification",
+         "description":"identification",
+         "properties":{
+            "instructionIdentification":{
+               "type":"string",
+               "title":"instructionIdentification",
+               "description":"ID platby zaslané do PTS"
+            },
+            "operationId":{
+               "type":"string",
+               "title":"operationId",
+               "description":"operation ID zasílané z externího systému"
+            },
+            "clientId":{
+               "type":"string",
+               "title":"clientId",
+               "description":"identifikace klienta (KLID), který platbu inicioval"
+            }
+         }
+      },
+      "channel":{
+         "type":"string",
+         "title":"channel",
+         "description":"komunikační kanál"
+      },
+      "chargeBearer":{
+         "type":"string",
+         "title":"chargeBearer",
+         "description":"kód poplatku"
+      },
+      "instructionPriority":{
+         "type":"string",
+         "title":"instructionPriority",
+         "description":"priorita"
+      },
+      "type":{
+         "type":"string",
+         "title":"type",
+         "description":"typ platby"
+      },
+      "state":{
+         "type":"string",
+         "title":"state",
+         "description":"status platby"
+      },
+      "endToEndIdentification":{
+         "type":"string",
+         "title":"endToEndIdentification",
+         "description":"end to end ID"
+      },
+      "symbols":{
+         "type":"object",
+         "title":"symbols",
+         "description":"symbols",
+         "properties":{
+            "variableSymbol":{
+               "type":"string",
+               "title":"variableSymbol",
+               "description":"vs"
+            },
+            "constantSymbol":{
+               "type":"string",
+               "title":"constantSymbol",
+               "description":"ks"
+            },
+            "specificSymbol":{
+               "type":"string",
+               "title":"specificSymbol",
+               "description":"ss"
+            }
+         }
+      },
+      "requestedExecutionDate":{
+         "type":"string",
+         "title":"requestedExecutionDate",
+         "description":"datum splatnosti"
+      },
+      "productId":{
+         "type":"object",
+         "title":"productId",
+         "description":"standingOrderId nebo ddmId",
+         "properties":{
+            "standingOrderId":{
+               "type":"integer",
+               "title":"standingOrderId",
+               "description":"id trvalého příkazu"
+            },
+            "ddmId":{
+               "type":"integer",
+               "title":"ddmId",
+               "description":"id inkasa"
+            }
+         }
+      },
+      "statementType":{
+         "type":"string",
+         "title":"statementType",
+         "description":"pole pro klientský název operace"
+      },
+      "created":{
+         "type":"object",
+         "title":"created",
+         "description":"vytvoření",
+         "properties":{
+            "date":{
+               "type":"string",
+               "title":"date",
+               "description":"datum vytvoření platby"
+            },
+            "user":{
+               "type":"string",
+               "title":"user",
+               "description":"název uživatele, který vyvořil platbu"
+            }
+         }
+      },
+      "verified":{
+         "type":"object",
+         "title":"verified",
+         "description":"autorizace",
+         "properties":{
+            "date":{
+               "type":"string",
+               "title":"date",
+               "description":"datum autorizace"
+            },
+            "user":{
+               "type":"string",
+               "title":"user",
+               "description":"název uživatele, který autorizoval platbu"
+            }
+         }
+      },
+      "charges":{
+         "type":"array",
+         "title":"charges",
+         "description":"poplatky"
+      },
+      "intermediaryBIC":{
+         "type":"string",
+         "title":"intermediaryBIC",
+         "description":"bic prostředníka"
+      },
+      "receiveDate":{
+         "type":"string",
+         "title":"receiveDate",
+         "description":"datum a čas přijetí platby. Pro příchozí platby"
+      },
+      "instructedAmount":{
+         "type":"object",
+         "title":"instructedAmount",
+         "description":"instructedAmount",
+         "properties":{
+            "value":{
+               "type":"number",
+               "title":"value",
+               "description":"částka platby"
+            },
+            "currency":{
+               "type":"string",
+               "title":"currency",
+               "description":"měna platby"
+            }
+         }
+      },
+      "repeatPaymentDays":{
+         "type":"integer",
+         "title":"repeatPaymentDays",
+         "description":"počet dnů opakování, pokud se nepodaří validovat platbu"
+      },
+      "debtor":{
+         "type":"object",
+         "title":"debtor",
+         "description":"debtor",
+         "properties":{
+            "account":{
+               "type":"object",
+               "title":"account",
+               "description":"account",
+               "properties":{
+                  "other":{
+                     "type":"object",
+                     "title":"other",
+                     "description":"other",
+                     "properties":{
+                        "identification":{
+                           "type":"string",
+                           "title":"identification",
+                           "description":"QSTID odesílatele"
+                        }
+                     }
+                  }
+               },
+               "bban":{
+                  "type":"string",
+                  "title":"bban",
+                  "description":"bban odesílatele"
+               },
+               "iban":{
+                  "type":"string",
+                  "title":"iban",
+                  "description":"iban odesílatele"
+               },
+               "currency":{
+                  "type":"string",
+                  "title":"currency",
+                  "description":"měna účtu odesílatele"
+               }
+            }
+         },
+         "bank":{
+            "type":"object",
+            "title":"bank",
+            "description":"bank",
+            "properties":{
+               "bic":{
+                  "type":"string",
+                  "title":"bic",
+                  "description":"BIC banky odesílatele"
+               },
+               "bankcode":{
+                  "type":"string",
+                  "title":"bankcode",
+                  "description":"kód banky odesílatele"
+               },
+               "name":{
+                  "type":"string",
+                  "title":"name",
+                  "description":"název banky odesílatele"
+               },
+               "postalAddress":{
+                  "type":"object",
+                  "title":"postalAddress",
+                  "description":"postalAddress",
+                  "properties":{
+                     "addressLine":{
+                        "type":"string",
+                        "title":"addressLine",
+                        "description":"adresa banky odesílatele"
+                     },
+                     "country":{
+                        "type":"string",
+                        "title":"country",
+                        "description":"kód země banky odesílatele"
+                     }
+                  }
+               }
+            }
+         },
+         "name":{
+            "type":"string",
+            "title":"name",
+            "description":"jméno odesílatele"
+         },
+         "postalAddress":{
+            "type":"object",
+            "title":"postalAddress",
+            "description":"postalAddress",
+            "properties":{
+               "addressLine":{
+                  "type":"string",
+                  "title":"addressLine",
+                  "description":"adresa odesílatele"
+               },
+               "country":{
+                  "type":"string",
+                  "title":"country",
+                  "description":"kód země odesílatele"
+               }
+            }
+         },
+         "note":{
+            "type":"string",
+            "title":"note",
+            "description":"poznámka pro odesílatele"
+         },
+         "amount":{
+            "type":"object",
+            "title":"amount",
+            "description":"amount",
+            "properties":{
+               "value":{
+                  "type":"number",
+                  "title":"value",
+                  "description":"částka v měně odesílatele"
+               },
+               "currency":{
+                  "type":"string",
+                  "title":"currency",
+                  "description":"měna odesílatele"
+               },
+               "conversionDeviation":{
+                  "type":"number",
+                  "title":"conversionDeviation",
+                  "description":"odchylka od kurzu střed vyjádřená v částce měně účtu"
+               }
+            }
+         },
+         "rate":{
+            "type":"object",
+            "title":"rate",
+            "description":"rate",
+            "properties":{
+               "exchangeRate":{
+                  "type":"number",
+                  "title":"exchangeRate",
+                  "description":"směnný kurz"
+               },
+               "ccyPair":{
+                  "type":"string",
+                  "title":"ccyPair",
+                  "description":"měnový pár"
+               },
+               "isIndividual":{
+                  "type":"boolean",
+                  "title":"isIndividual",
+                  "description":"informace o nastavení indiviálního kurzu"
+               }
+            }
+         }
+      },
+      "creditor":{
+         "type":"object",
+         "title":"creditor",
+         "description":"creditor",
+         "properties":{
+            "account":{
+               "type":"object",
+               "title":"account",
+               "description":"account",
+               "properties":{
+                  "other":{
+                     "type":"object",
+                     "title":"other",
+                     "description":"other",
+                     "properties":{
+                        "identification":{
+                           "type":"string",
+                           "title":"identification",
+                           "description":"QSTID příjemce"
+                        }
+                     }
+                  },
+                  "bban":{
+                     "type":"string",
+                     "title":"bban",
+                     "description":"bban příjemce"
+                  },
+                  "iban":{
+                     "type":"string",
+                     "title":"iban",
+                     "description":"iban příjemce"
+                  },
+                  "currency":{
+                     "type":"string",
+                     "title":"currency",
+                     "description":"měna účtu příjemce"
+                  }
+               }
+            },
+            "bank":{
+               "type":"object",
+               "title":"bank",
+               "description":"bank",
+               "properties":{
+                  "bic":{
+                     "type":"string",
+                     "title":"bic",
+                     "description":"BIC banky příjemce"
+                  },
+                  "bankcode":{
+                     "type":"string",
+                     "title":"bankcode",
+                     "description":"kód banky příjemce"
+                  },
+                  "name":{
+                     "type":"string",
+                     "title":"name",
+                     "description":"název banky příjemce"
+                  },
+                  "postalAddress":{
+                     "type":"object",
+                     "title":"postalAddress",
+                     "description":"postalAddress",
+                     "properties":{
+                        "addressLine":{
+                           "type":"string",
+                           "title":"addressLine",
+                           "description":"adresa banky příjemce"
+                        },
+                        "country":{
+                           "type":"string",
+                           "title":"country",
+                           "description":"kód země banky příjemce"
+                        }
+                     }
+                  }
+               }
+            },
+            "note":{
+               "type":"string",
+               "title":"note",
+               "description":"note"
+            },
+            "name":{
+               "type":"string",
+               "title":"name",
+               "description":"name"
+            },
+            "postalAddress":{
+               "type":"object",
+               "title":"postalAddress",
+               "description":"jméno příjemce",
+               "properties":{
+                  "addressLine":{
+                     "type":"string",
+                     "title":"addressLine",
+                     "description":"adresa příjemce"
+                  },
+                  "country":{
+                     "type":"string",
+                     "title":"country",
+                     "description":"kód země příjemce"
+                  }
+               }
+            },
+            "note":{
+               "type":"string",
+               "title":"note",
+               "description":"poznámka pro příjemce"
+            },
+            "amount":{
+               "type":"object",
+               "title":"amount",
+               "description":"amount",
+               "properties":{
+                  "value":{
+                     "type":"number",
+                     "title":"value",
+                     "description":"částka v měně příjemce"
+                  },
+                  "currency":{
+                     "type":"string",
+                     "title":"currency",
+                     "description":"měna příjemce"
+                  },
+                  "conversionDeviation":{
+                     "type":"number",
+                     "title":"conversionDeviation",
+                     "description":"odchylka od kurzu střed vyjádřená částkou v měně účtu"
+                  }
+               }
+            },
+            "rate":{
+               "type":"object",
+               "title":"rate",
+               "description":"rate",
+               "properties":{
+                  "value":{
+                     "type":"number",
+                     "title":"value",
+                     "description":"směnný kurz"
+                  },
+                  "ccyPair":{
+                     "type":"string",
+                     "title":"ccyPair",
+                     "description":"měnový pár"
+                  },
+                  "isIndividual":{
+                     "type":"boolean",
+                     "title":"isIndividual",
+                     "description":"informace o nastavení indiviálního kurzu"
+                  }
+               }
+            }
+         }
+      }
+   },
+   "additionalProperties":false
+}

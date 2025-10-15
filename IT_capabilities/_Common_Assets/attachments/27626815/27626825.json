@@ -1,0 +1,99 @@
+{
+   "title":"InstrumentMarketPriceInstantDelayed",
+   "$schema":"https://json-schema.org/draft/2020-12/schema",
+   "description":"Kurzy CP aktualni nezpozdene; Topic bude zasilan se zmenou nektereho z atributu topicu, minimalne jednou za den. Topic bude obsahovat kurzove ceny z dane burzy (identifikace trhu)",
+   "type":"object",
+   "required":[
+      "instrumentId",
+      "marketId",
+      "validityDate ",
+      "businessChangeDate ",
+      "status",
+      "isin"
+   ],
+   "properties":{
+      "X-Correlation-ID":{
+         "type":"string",
+         "title":"X-Correlation-ID",
+         "description":"Correlation identifier"
+      },
+	  "instrumentId":{
+         "type":"integer",
+         "title":"instrumentId",
+         "description":"ID instrumentu / CP"
+      },
+      "marketId":{
+         "type":"string",
+         "title":"marketId",
+         "description":"identifikace trhu - zkratka burzy. Pro podrobnejsi info je mozne novy topic s ciselnikem trhu. Aktualne JTB rozhoduje o atributech, ktere budou zobrazeny na FE. V topicu bude chodit apl_code."
+      },
+      "datafeedId":{
+         "type":"string",
+         "title":"datafeedId",
+         "description":"identifikace datafeedu DK CZ - nelze resit v BE systemu stanoveni ceny za market? Pokud Ne, kde je datum ze zmeny na marketu, podle ktereho by DK CZ mohlo nabizet hodnotu na FE klientovi. SiteOne: K jednomu cennemu papiru datafeed Bloomberg doda cenu posledniho obchodu (lastTradeDate 12.05.2022 16:50) 64 USD, ale datafeed IDC se stejnym datem 65 USD. Jak se v tomto pripade rozhodnout? V CCP je ulozeno datum platnosti ceny, ale ne vzdy ho CCP ziska z burzy. Pokud nema datum z burzy, je v CCP ulozena datum stazeni z burzy. Podle tohoto data by bylo mozne na FE rozhodnout, kterou hodnotu klientovi nabidnout."
+      },
+      "validityDate ":{
+         "type":"string",
+         "format":"date-time",
+         "title":"validityDate",
+         "description":"Datum a cas platnosti ceny"
+      },
+      "businessChangeDate ":{
+         "type":"string",
+         "format":"date-time",
+         "title":"businessChangeDate",
+         "description":"Datum a cas posledni zmeny entity"
+      },
+      "status":{
+         "type":"string",
+         "title":"status",
+         "enum":[
+            "active",
+            "deleted"
+         ],
+         "description":"Stav businessove platnosti entity, active - aktivni, deleted - info o zrusenem zaznamu"
+      },
+      "isin":{
+         "type":"string",
+         "title":"isin",
+         "description":"isin CP"
+      },
+      "currency":{
+         "type":"string",
+         "title":"currency",
+         "description":"Mena pro cenu ISO alpha(3)"
+      },
+      "buyPrice":{
+         "type":"number",
+         "title":"buyPrice",
+         "description":"aktualni kurzova cena pro nakup CP v mene obchodovani (za 1 ks)"
+      },
+      "sellPrice":{
+         "type":"number",
+         "title":"sellPrice",
+         "description":"aktualni kurzova cena pro prodej CP v mene obchodovani (za 1 ks)"
+      },
+      "lastTradePrice":{
+         "type":"number",
+         "title":"lastTradePrice",
+         "description":"cena CP z posledniho obchodu (na burze) v mene obchodovani fond - zaviraci cena fondu (NAV)"
+      },
+      "lastTradeDate":{
+         "type":"string",
+         "format":"date-time",
+         "title":"lastTradeDate",
+         "description":"Datum a cas posledniho obchodu na burze Je-li lastTradePrice stanovena na zaklade ClosePrice, je datum bez casu. fond - datum stanoveni zaviraci ceny fondu (NAV)"
+      },
+      "prevClosePrice":{
+         "type":"number",
+         "title":"prevClosePrice",
+         "description":"Zaviraci cena z predchoziho dne "
+      },
+      "prevCloseDate":{
+         "type":"string",
+         "format":"date",
+         "title":"prevCloseDate",
+         "description":"Datum a cas predchozi close ceny"
+      }
+   }
+}

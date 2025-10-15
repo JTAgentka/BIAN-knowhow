@@ -1,0 +1,52 @@
+{
+  "title": "List of Codebooks",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "List of Codebooks schema",
+  "type": "object",
+  "properties": {
+    "listOfCodebooks": {
+      "type": "object",
+      "properties": {
+        "codebookId": {
+          "type": "string",
+          "description": "Unique identifier of the codebook"
+        },
+        "businessChangeDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of publication of the change"
+        },
+        "codebookItems": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "codebookItemId": {
+                "type": "string",
+                "description": "Unique identifier of the codebook item"
+              },
+              "topic": {
+                "type": "string",
+                "description": "The name of the topic, to which codebook is published"
+              }
+            },
+            "required": [
+              "codebookItemId",
+              "topic"
+            ]
+          }
+        }
+      },
+      "required": [
+        "codebookId",
+        "businessChangeDate"
+      ]
+    }
+  },
+  "required": [
+    "listOfCodebooks"
+  ]
+}

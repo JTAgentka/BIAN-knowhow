@@ -1,0 +1,40 @@
+{
+	"X-Correlation-ID": "565afab0-5f4e-41af-b0d0-8298f5eaf8b3",
+	"action": "update",
+	"timestamp": "2022-14-07T23:00:00.000Z",
+	"state": {
+		"statecode": {
+			"value": 0,
+			"label": "Aktivní"
+		},
+		"statuscode": {
+			"value": 1,
+			"label": "Aktivní"
+		},
+		"anonymized": false,
+		"deleted": false,
+		"merged": false,
+		"masterid": null
+	},
+	"autosweepId": "6fbde3b9-f6fd-4778-8e10-1c088de32d70",
+	"before": {
+		"accountId": "2eda0088-da2f-4e16-8a12-32bf8543b1da",
+		"location": {
+			"value": 500000000,
+			"label": "CZ"
+		},
+		"currency": "CZK",
+		"iban": "CZ9750519157277622988319",
+		"bban": "HZSZ5508196178493"
+	},
+	"after": {
+		"accountId": "2eda0088-da2f-4e16-8a12-32bf8543b1da",
+		"location": {
+			"value": 500000000,
+			"label": "CZ"
+		},
+		"currency": "EUR",
+		"iban": "CZ9750519157277622988319",
+		"bban": "HZSZ5508196178493"
+	}
+}

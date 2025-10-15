@@ -1,0 +1,189 @@
+{
+	"title": "ManagedClientPortfolio",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "A managed client portfolio",
+	"type": "object",
+	"required": [
+		"businessChangeDate",
+		"portfolioName",
+		"portfolioValuationDate",
+		"portfolioStatus",
+		"portfolioIds",
+		"owner",
+		"pfCurrency",
+		"pfTotalValue",
+		"monthToDateYield",
+		"inceptionToDateYield"
+	],
+	"properties": {
+		"X-Correlation-ID": {
+			"description": "Korelační identifikátor, povinné pro INIT a RECON",
+			"type": [
+				"string",
+				"null"
+			]
+		},
+		"businessChangeDate": {
+			"description": "Datum a čas poslední změny entity",
+			"type": "string",
+			"format": "date-time"
+		},
+		"portfolioName": {
+			"type": "string",
+			"example": "SKP",
+			"description": "Název portfolia"
+		},
+		"portfolioValuationDate": {
+			"type": "string",
+			"pattern": "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+			"example": "2023-04-01",
+			"description": "Datum, ke kterému došlo k ocenění portfolia"
+		},
+		"portfolioStatus": {
+			"type": "string",
+			"description": "Stav portfolia. Odkaz na číselníkovou hodnotu v číselníku portfolioStatus"
+		},
+		"portfolioIds": {
+			"type": "object",
+			"description": "Portfolio identifiers",
+			"required": [
+				"topasId"
+			],
+			"properties": {
+				"topasId": {
+					"type": "integer",
+					"description": "Identifikace Portfolia v TOPAS (KID)"
+				}
+			}
+		},
+		"owner": {
+			"type": "object",
+			"description": "Owner details",
+			"required": [
+				"crmId"
+			],
+			"properties": {
+				"crmId": {
+					"type": "string",
+					"description": "Unique CRM identifier",
+					"minLength": 10,
+					"maxLength": 10
+				}
+			}
+		},
+		"pfCurrency": {
+			"type": "number",
+			"description": "Měna portfolia. Odkaz na číselníkovou hodnotu v číselníku Currencies"
+		},
+		"pfTotalValue": {
+			"type": "object",
+			"description": "Celková hodnota portfolia",
+			"required": [
+				"totalValuePfCurrency",
+				"totalValueCZK",
+				"totalValueEUR",
+				"totalValueUSD"
+			],
+			"properties": {
+				"totalValuePfCurrency": {
+					"type": "number",
+					"description": "Celková hodnota v měně portfolia"
+				},
+				"totalValueCZK": {
+					"type": "number",
+					"description": "Celková hodnota portfolia v CZK"
+				},
+				"totalValueEUR": {
+					"type": "number",
+					"description": "Celková hodnota portfolia v EUR"
+				},
+				"totalValueUSD": {
+					"type": "number",
+					"description": "Celková hodnota portfolia v USD"
+				}
+			}
+		},
+		"monthToDateYield": {
+			"type": "object",
+			"description": "Výkonnost investičního portfolia od začátku měsíce do konce měsíce",
+			"required": [
+				"totalValuePfCurrency",
+				"pfValuePercentage"
+			],
+			"properties": {
+				"totalValuePfCurrency": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od začátku měsíce do konce měsíce v měně portfolia"
+				},
+				"pfValuePercentage": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od začátku měsíce do konce měsíce v procentech"
+				}
+			}
+		},
+		"yearToDateYield": {
+			"type": [
+				"object",
+				"null"
+			],
+			"description": "Výkonnost investičního portfolia od začátku kalendářního roku do konce měsíce",
+			"properties": {
+				"totalValuePfCurrency": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od začátku kalendářního roku do konce měsíce v měně portfolia"
+				},
+				"pfValuePercentage": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od data jeho založení nebo začátku do konce měsíce"
+				}
+			}
+		},
+		"inceptionToDateYield": {
+			"type": "object",
+			"description": "Výkonnost investičního portfolia od data jeho založení nebo začátku do konce měsíce v měně portfolia",
+			"required": [
+				"totalValuePfCurrency",
+				"pfValuePercentage"
+			],
+			"properties": {
+				"totalValuePfCurrency": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od data jeho založení nebo začátku do konce měsíce v měně portfolia"
+				},
+				"pfValuePercentage": {
+					"type": "number",
+					"description": "Výkonnost investičního portfolia od data jeho založení nebo začátku do konce měsíce v procentech"
+				}
+			}
+		},
+		"portfolioComposition": {
+			"type": [
+				"array",
+				"null"
+			],
+			"description": "Kolekce portfolii",
+			"items": {
+				"type": "object",
+				"required": [
+					"entityType",
+					"valueCurrency",
+					"valuePercentage"
+				],
+				"properties": {
+					"entityType": {
+						"type": "string",
+						"description": "Typ finančního instrumentu. Odkaz na číselníkovou hodnotu v číselníku entityType"
+					},
+					"valueCurrency": {
+						"type": "number",
+						"description": "Celková hodnota finančního instrumentu v měně portfolia"
+					},
+					"valuePercentage": {
+						"type": "number",
+						"description": "Celková hodnota finančního instrumentu v procentech"
+					}
+				}
+			}
+		}
+	}
+}

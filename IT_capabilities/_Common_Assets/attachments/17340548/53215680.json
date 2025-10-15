@@ -1,0 +1,138 @@
+{
+  "title": "InstrumentEvent",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Instrument event",
+  "type": "object",
+  "required": [
+    "instrumentIds",
+    "validityDate",
+    "businessChangeDate",
+    "status",
+    "eventType"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Korelační identifikátor, povinné pro INIT a RECON"
+    },
+    "instrumentIds": {
+      "type": "object",
+      "description": "Identifikátory CP",
+      "$ref": "#/definitions/instrumentIds"
+    },
+    "validityDate": {
+      "description": "Datum platnosti. Pokud eventType = coupon - validityDate = datum výplaty kupónu = couponPeriodEnd.",
+      "type": "string",
+      "format": "date"
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "Reflektuje stav fyzické existence záznamu: active - aktivní, deleted - samzáno",
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    },
+    "eventType": {
+      "description": "Druh události",
+      "type": "string",
+      "enum": [
+        "coupon"
+      ]
+    },
+    "couponDetail": {
+      "type": "object",
+      "description": "Detail kupónu",
+      "$ref": "#/definitions/couponDetail"
+    }
+  },
+  "definitions": {
+    "instrumentIds": {
+      "description": "Identifikátory CP",
+      "type": "object",
+      "required": [
+        "ccpId"
+      ],
+      "properties": {
+        "ccpId": {
+          "type": "integer",
+          "description": "Identifikace CP v CCP."
+        },
+        "ebrokerId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v eBroker"
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TA"
+        }
+      }
+    },
+    "couponDetail": {
+      "description": "Detail kupónu",
+      "type": "object",
+      "required": [
+        "currency",
+        "nominalValue",
+        "couponValue",
+        "couponRate",
+        "aICalculationStandard",
+        "couponPeriodStart"
+      ],
+      "properties": {
+        "exCouponDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Rozhodný datum pro výplatu kupónu."
+        },
+        "currency": {
+          "type": "string",
+          "description": "Měna vypláceného kupónu. ISO 4217 abecední kód (3 znaky). Číselník Currencies."
+        },
+        "nominalValue": {
+          "type": "number",
+          "description": "Nominální hodnota"
+        },
+        "couponValue": {
+          "type": "number",
+          "description": "Hodnota kupónu"
+        },
+        "couponRate": {
+          "type": "number",
+          "description": "Úroková sazba pro výpočet hodnoty kupónu"
+        },
+        "aICalculationStandard": {
+          "type": "string",
+          "description": "Způsob výpočtu AÚV"
+        },
+        "couponPeriodStart": {
+          "type": "string",
+          "format": "date",
+          "description": "První den období kupónu"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "title": "InstrumentMarketRegistration",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Instrument market registration schema",
+  "required": [
+    "businessChangeDate",
+    "instrumentIds",
+    "marketId",
+    "isPreferred",
+    "tradingCurrency",
+    "status"
+  ],
+  "type": "object",
+  "properties": {
+    "X-Correlation-ID": {
+      "description": "Korelační identifikátor, povinné pro INIT a RECON",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "instrumentIds": {
+      "type": "object",
+      "description": "Instrument identifiers",
+      "$ref": "#/definitions/instrumentIds"
+    },
+    "marketId": {
+      "description": "Identifikace trhu. Zdroj: eBroker.Instituce.Apl_Kod",
+      "type": "string"
+    },
+    "isPreferred": {
+      "description": "Příznak preferovaného trhu",
+      "type": "boolean"
+    },
+    "tradingCurrency": {
+      "description": "Měna obchodování stanovena jako Měna trhu, pokud neexistuje tak Měna CP (ta existuje vždy).",
+      "type": "string"
+    },
+    "status": {
+      "description": "Reflektuje stav fyzické existence záznamu: active - aktivní, deleted - samzáno",
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    }
+  },
+  "definitions": {
+    "instrumentIds": {
+      "description": "Instrument identifiers",
+      "type": "object",
+      "required": [
+        "ebrokerId",
+        "ccpId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Instrument identification in eBroker"
+        },
+        "ccpId": {
+          "type": "integer",
+          "description": "Instrument identification in CCP"
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Instrument identification in TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Instrument identification in TA"
+        }
+      }
+    }
+  }
+}

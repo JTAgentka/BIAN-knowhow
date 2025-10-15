@@ -1,0 +1,48 @@
+{
+  "title": "EnrollmentDigitalChannels",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Informace o zakládání klienta v Digitálních kanálech",
+  "type": "object",
+  "required": [
+    "enrollmentData"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "description": "Korelaèní identifikátor povinný pro inicializaci a rekonciliaci",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "enrollmentData": {
+      "description": "Objekt s údaji o zakládání klienta v Digitálních kanálech",
+      "type": "object",
+      "required": [
+        "crmId",
+        "state",
+        "stateChangeDate"
+      ],
+      "properties": {
+        "crmId": {
+          "description": "Identifikátor klienta v CRM (KLID), který je zakládán v Digitálních kanálech",
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "state": {
+          "description": "Koncový stav procesu zakládání v Digitálních kanálech",
+          "type": "string",
+          "enum": [
+            "Finished",
+            "Error"
+          ]
+        },
+        "stateChangeDate": {
+          "description": "Datum a èas zmìny stavu zakládání v Digitálních kanálech",
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

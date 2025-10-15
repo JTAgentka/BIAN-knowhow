@@ -1,0 +1,95 @@
+{
+    "businessChangeDate": "2022-07-21T09:41:13.022Z",
+    "businessStatus": "active",
+    "identifier": "8e61b79f-ad8e-4771-b793-94cbbd483add",
+    "X-Correlation-ID": "69d09d55-6baa-4d8d-8bf2-f26ac8118f36",
+    "messageFromBankId": "31be2285-c90e-4527-9a0f-50636e3e3dc7",
+    "identifierType": "account",
+    "bankNewsSettings": [
+        {
+            "identifier": "acm_news_sk_info",
+            "description": "SK Informačné správy",
+            "value": true
+        },
+        {
+            "identifier": "acm_news_sk_products",
+            "description": "SK Produktové novinky",
+            "value": true
+        },
+        {
+            "identifier": "acm_news_cz_jt98_print",
+            "description": "CZ JT 98 tištěné",
+            "value": false
+        },
+        {
+            "identifier": "acm_news_cz_jt98_online",
+            "description": "CZ JT 98 online",
+            "value": false
+        },
+        {
+            "identifier": "acm_news_cz_magnus_magazine",
+            "description": "CZ Magnus Magazín",
+            "value": false
+        },
+        {
+            "identifier": "acm_news_cz_art_world_investment",
+            "description": "CZ Investice ve světě umění",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_sk_dailynews",
+            "description": "SK Denná správa z trhov",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_bondweekly",
+            "description": "CZ Týdenní dluhopisové zprávy",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_monthlysummary",
+            "description": "CZ Měsíční report",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_daily_news_summary",
+            "description": "CZ Denní přehled zpráv",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_pse_company_news",
+            "description": "CZ Zprávy o firmách na PSE",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_pse_flash_news",
+            "description": "CZ Bleskové zprávy na PSE",
+            "value": false
+        },
+        {
+            "identifier": "acm_report_cz_pse_makro_news",
+            "description": "CZ Makroekonomické zprávy",
+            "value": false
+        },
+        {
+            "identifier": "acm_invitation_action",
+            "description": "Na akce",
+            "value": false
+        },
+        {
+            "identifier": "acm_magnus_news",
+            "description": "SK Newsletter Magnus",
+            "value": false
+        },
+        {
+            "identifier": "acm_concierge_news",
+            "description": "Newsletter Concierge",
+            "value": false
+        },
+        {
+            "identifier": "acm_administrationsr_news",
+            "description": "Newsletter administrácia SR (GGS)",
+            "value": true
+        }
+    ]
+}

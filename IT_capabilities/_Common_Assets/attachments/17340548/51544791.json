@@ -1,0 +1,266 @@
+{
+  "type": "object",
+  "title": "RealTimeDataAccess",
+  "description": "Přístup k aktuálním (nezpožděným) cenám na burzovním trhu",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "http://acmark.com/jtb/RealTimeDataAccessSchema.json",
+  "required": [
+    "clientRealTimeData",
+    "applicationData",
+    "market"
+  ],
+  "properties": {
+    "market": {
+      "type": "object",
+      "description": "Skupina dat vázajících se k burze a jejímu uživateli",
+      "required": [
+        "marketFormId",
+        "language"
+      ],
+      "properties": {
+        "questionnaireItems": {
+          "description": "Pole s položkami dotazníku pro příslušnou burzu",
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "description": "Objekt položek dotazníku pro příslušnou burzu",
+                "properties": {
+                  "questionnaireItem": {
+                    "type": "object",
+                    "description": "Položka dotazníku pro příslušnou burzu",
+                    "required": [
+                      "questionKey",
+                      "questionAnswer"
+                    ],
+                    "properties": {
+                      "questionKey": {
+                        "type": "string",
+                        "description": "Kód otázky v rámci položky dotazníku"
+                      },
+                      "questionAnswer": {
+                        "type": "string",
+                        "description": "Odpověď v rámci položky dotazníku"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "marketFormId": {
+          "type": "string",
+          "description": "Identifikátor dotazníku pro příslušnou burzu, pro který jsou uvedená data relevantní"
+        },
+        "language": {
+          "type": "string",
+          "description": "Jazyk dotazníku burzy"
+        }
+      }
+    },
+    "X-Correlation-ID": {
+      "description": "Korelační identifikátor povinný pro inicializaci a rekonciliaci",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "clientRealTimeData": {
+      "type": "object",
+      "description": "Skupina dat vázajících se ke klientovi a jeho nastavení",
+      "required": [
+        "owner",
+        "rtDataAccess",
+        "rtDataAccessChangeWhen",
+        "previousRtDataAccess"
+      ],
+      "properties": {
+        "owner": {
+          "type": "object",
+          "description": "Objekt s identifikátory klienta",
+          "required": [
+            "crmId"
+          ],
+          "properties": {
+            "crmId": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10,
+              "description": "Identifikátor klienta v CRM, pro kterého je vyplňován dotazník"
+            }
+          }
+        },
+        "firstname": {
+          "description": "Křestní jméno klienta (v případě právnické osoby prázdné)",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "degreeAfterId": {
+          "description": "Titul za jménem klienta (v případě právnické osoby prázdné)",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "surname": {
+          "description": "Příjmení klienta (v případě právnické osoby prázdné)",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "previousRtDataAccess": {
+          "description": "Předchozí hodnota atributu rtDataAccess. Zejména z důvodu reportingu, abychom zbytečně nereportovali zapnuto dne 1.8.2022 a po znovuvyplnění opět zapnuto 5.8.2022 atd.",
+          "type": "boolean"
+        },
+        "degreeBeforeId": {
+          "description": "Titul před jménem klienta (v případě právnické osoby prázdné)",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "businessName": {
+          "description": "Název právnické osoby (v případě fyzické osoby prázdné)",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rtDataAccess": {
+          "description": "Vyhodnocení, zda má (true) nebo nemá (false) klient zapnutá RT data",
+          "type": "boolean"
+        },
+        "rtDataAccessChangeWhen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Datum a čas změny atributu rtDataAccess, tedy od kdy má klient nastaven danou hodnotu"
+        }
+      }
+    },
+    "applicationData": {
+      "type": "object",
+      "description": "Skupina dat vázajících se k žádosti",
+      "required": [
+        "applicationIds",
+        "isClientRequest",
+        "filledBy",
+        "filledWhen",
+        "autoEval",
+        "processEndWhen"
+      ],
+      "properties": {
+        "isClientRequest": {
+          "description": "Příznak, zda je událost generována na základě žádosti klienta (true) nebo na základě nastavení v CRM",
+          "type": "boolean"
+        },
+        "autoEval": {
+          "description": "Příznak, zda byl přístup k datům vyhodnocen automaticky",
+          "type": "boolean"
+        },
+        "processEndWhen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Datum a čas vyhodnocení (v Camunda)"
+        },
+        "filledWhen": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Datum a čas odeslání formuláře"
+        },
+        "manualEvalBy": {
+          "description": "Doménové jméno uživatele, JTXXX",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "formVersion": {
+          "description": "Verze formuláře, kterou klient vyplnil",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "filledBy": {
+          "type": "object",
+          "description": "Objekt s identifikátory osoby, která vyplnila dotazník",
+          "required": [
+            "crmId"
+          ],
+          "properties": {
+            "crmId": {
+              "type": "string",
+              "minLength": 10,
+              "maxLength": 10,
+              "description": "Identifikátor osoby v CRM, která vyplnila dotazník"
+            }
+          }
+        },
+        "applicationIds": {
+          "type": "object",
+          "description": "Objekt s identifikátory žádosti",
+          "required": [
+            "crmApplicationId"
+          ],
+          "properties": {
+            "camundaId": {
+              "description": "ID instance procesu z business process managementu, šlo-li o manuální workflow",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "crmApplicationId": {
+              "type": "string",
+              "description": "Identifikátor žádosti v CRM (instance formuláře)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

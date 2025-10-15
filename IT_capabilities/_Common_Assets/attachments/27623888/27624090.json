@@ -1,0 +1,28 @@
+{
+  "X-Correlation-ID": "5404a523-b39e-4cc2-9a3d-cf653b13f522",
+  "BOOK_ID": "20200204161502336817",
+  "EVENT_TIMESTAMP": "2022-12-14T11:11:08.828Z",
+  "ACT_ID": "20200204161501336761",
+  "STATE": "B",
+  "IND_DC": "C",
+  "ACT_TYPE": "TLM32000",
+  "STM_TYPE": "AT_STM_ATTC_TLM32000",
+  "PC_ID": "20130308145001813113",
+  "PR_NUMBER": "0002129000",
+  "BOOK_DATE": "2020-02-04",
+  "VALUE_DATE": "2020-02-04",
+  "EFFECTIVE_DATE": "2020-02-04",
+  "ACT_SEC_NUM": 6,
+  "ACC_AMOUNT": -500,
+  "ACC_CURRENCY": "CZK",
+  "TRN_AMOUNT": 500,
+  "TRN_CURRENCY": "CZK",
+  "ORDERER": {
+    "NAME": "Olga Priebrachová",
+    "ADDRESS": "Hornická 1695, Tachov",
+    "ID_NUM": "6755111649",
+    "ID_CARD": "202069545"
+  },
+  "CASHIER": "Prepazka 1",
+  "DESCRIPTION": "6. splátka - Olga Priebrachová"
+}

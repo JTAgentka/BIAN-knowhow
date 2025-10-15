@@ -1,0 +1,369 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "FxRates Reconciliation",
+		"description": "The service is used to reconcile values of exchange rates according to specified input parameters.",
+		"version": "v1"
+	},
+	"paths": {
+		"/fxRatesInstant/recon": {
+			"get": {
+				"description": "The method is used to reconcile values of Instant exchange rates according to specified input parameters.",
+				"parameters": [{
+						"name": "X-Corellation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "validityStartDate",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "validityEndDate",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "mode",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"sync",
+									"async"
+								]
+							}
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/instantSyncResponse"
+								}
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		},
+		"/fxRatesDaily/recon": {
+			"get": {
+				"description": "The method is used to reconcile values of Daily exchange rates according to specified input parameters.",
+				"parameters": [{
+						"name": "X-Corellation-Id",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Unique request ID. If the same request is sent again, this ID does not change"
+						}
+					},
+					{
+						"name": "traceparent",
+						"in": "header",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"description": "Parameter for central logging, corresponding to the W3C Trace Context standard."
+						}
+					},
+					{
+						"name": "validityStartDate",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "validityEndDate",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "string",
+							"format": "date-time"
+						}
+					},
+					{
+						"name": "mode",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"enum": [
+									"sync",
+									"async"
+								]
+							}
+						}
+					},
+					{
+						"name": "channel",
+						"in": "query",
+						"required": false,
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"nullable": true,
+								"enum": [
+									"CZ",
+									"SK"
+								]
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/dailySyncResponse"
+								}
+							}
+						}
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"500": {
+						"description": "Internal server error"
+					},
+					"503": {
+						"description": "Service Unavailable"
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"instantSyncResponse": {
+				"type": "object",
+				"properties": {
+					"fxRateListId": {
+						"type": "string",
+						"title": "FxRate Id",
+						"description": "Exchange rate list identifier",
+						"minLength": 1,
+						"maxLength": 30
+					},
+					"validityDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Validity date",
+						"description": "The date and time of the beginning of the exchange rate list validity"
+					},
+					"businessChangeDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Business change date",
+						"description": "Date and time of publication of the change"
+					},
+					"instantCurrencyRates": {
+						"type": "array",
+						"description": "Exchange rate list identifier",
+						"items": {
+							"$ref": "#/components/schemas/instantCurrencyRate"
+						}
+					}
+				}
+			},
+			"dailySyncResponse": {
+				"type": "object",
+				"properties": {
+					"fxRateListId": {
+						"type": "string",
+						"title": "FxRate Id",
+						"description": "Exchange rate list identifier",
+						"minLength": 1,
+						"maxLength": 30
+					},
+					"validityDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Validity date",
+						"description": "The date and time of the beginning of the exchange rate list validity"
+					},
+					"businessChangeDate": {
+						"type": "string",
+						"format": "date-time",
+						"title": "Business change date",
+						"description": "Date and time of publication of the change"
+					},
+					"dailyCurrencyRates": {
+						"type": "array",
+						"description": "Exchange rate list identifier",
+						"items": {
+							"$ref": "#/components/schemas/dailyCurrencyRate"
+						}
+					}
+				}
+			},
+			"instantCurrencyRate": {
+				"type": "object",
+				"required": [
+					"baseCurrency",
+					"baseAmount",
+					"quoteCurrency"
+				],
+				"properties": {
+					"baseCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code of base currency",
+						"title": "Base currency"
+					},
+					"baseAmount": {
+						"type": "integer",
+						"description": "The amount of base currency",
+						"title": "Base amount"
+					},
+					"quoteCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code of quote currency",
+						"title": "Quote currency"
+					},
+					"buy": {
+						"type": "number",
+						"description": "Buying rate",
+						"title": "Buy"
+					},
+					"middle": {
+						"type": "number",
+						"description": "Middle rate",
+						"title": "Middle"
+					},
+					"sell": {
+						"type": "number",
+						"description": "Selling rate",
+						"title": "Sell"
+					},
+					"buyRefDeviation": {
+						"type": "number",
+						"description": "Buying exchange rate deviation from reference value (ECB exchange rate) in percent",
+						"title": "Buy reference deviation"
+					},
+					"middleRefDeviation": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Middle exchange rate deviation from reference value (ECB exchange rate) in percent"
+					},
+					"sellRefDeviation": {
+						"type": "number",
+						"description": "The amount in the specified currency",
+						"title": "Selling exchange rate deviation from reference value (ECB exchange rate) in percent"
+					},
+					"buyPrevDiff": {
+						"type": "number",
+						"description": "Buying exchange rate change from the last value of previous day in percent",
+						"title": "Buy previous difference"
+					},
+					"middlePrevDiff": {
+						"type": "number",
+						"description": "Middle exchange rate change from the last value of previous day in percent",
+						"title": "Middle previous difference"
+					},
+					"sellPrevDiff": {
+						"type": "number",
+						"description": "Selling exchange rate change from the last value of previous day in percent",
+						"title": "Sell previous difference"
+					}
+				}
+			},
+			"dailyCurrencyRate": {
+				"type": "object",
+				"required": [
+					"baseCurrency",
+					"baseAmount",
+					"quoteCurrency",
+					"middle"
+				],
+				"properties": {
+					"baseCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code of base currency",
+						"title": "Base currency"
+					},
+					"baseAmount": {
+						"type": "integer",
+						"description": "The amount of base currency",
+						"title": "Base amount"
+					},
+					"quoteCurrency": {
+						"type": "string",
+						"pattern": "^[A-Z]{3}$",
+						"description": "ISO 4217 currency code of quote currency",
+						"title": "Quote currency"
+					},
+					"middle": {
+						"type": "number",
+						"description": "Middle rate",
+						"title": "Middle"
+					}
+				}
+			}
+		}
+	}
+}

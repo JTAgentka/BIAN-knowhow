@@ -1,0 +1,188 @@
+{
+	"title": "Account",
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"description": "Current account",
+	"type": "object",
+	"required": [
+		"accountId",
+		"accountKind",
+		"eventTimestamp",
+		"accountNumberPrefix",
+		"accountNumber",
+		"bankCode",
+		"iban",
+		"bic",
+		"accountCurrency",
+		"accountName",
+		"accountType",
+		"accountState",
+		"creationDate",
+		"owner",
+		"interestCreditRate",
+		"interestDebitRate",
+		"productId"
+	],
+	"properties": {
+		"X-Correlation-ID": {
+			"type": "string",
+			"description": "Correlation identifier"
+		},
+		"accountId": {
+			"description": "Unique account identifier",
+			"type": "string"
+		},
+		"accountKind": {
+			"description": "Account kind",
+			"type": "string",
+			"enum": [
+				"CUA",
+				"CCR",
+				"LOA",
+				"RDA",
+				"NWB",
+				"CRD"
+			]
+		},
+		"eventTimestamp": {
+			"description": "Date and time of inserting into event table in BISQ",
+			"type": "string",
+			"format": "date-time"
+		},
+		"accountNumberPrefix": {
+			"type": "string",
+			"maxlength": 6,
+			"description": "Account prefix in BBAN format."
+		},
+		"accountNumber": {
+			"type": "string",
+			"maxlength": 10,
+			"description": "Account number in BBAN format."
+		},
+		"bankCode": {
+			"type": "string",
+			"maxlength": 4,
+			"description": "Code of the bank."
+		},
+		"iban": {
+			"type": "string",
+			"maxlength": 34,
+			"description": "Account number in IBAN format."
+		},
+		"bic": {
+			"type": "string",
+			"description": "Bank BIC code issued by Swift."
+		},
+		"accountCurrency": {
+			"type": "string",
+			"description": "Account currency."
+		},
+		"accountDescription": {
+			"type": "string",
+			"maxlength": 35,
+			"description": "Account description"
+		},
+		"accountName": {
+			"type": "string",
+			"description": "Account name"
+		},
+		"accountType": {
+			"type": "string",
+			"description": "Account type ID"
+		},
+		"accountState": {
+			"description": "Account status",
+			"type": "string",
+			"enum": [
+				"A",
+				"C",
+				"OO",
+				"OB",
+				"OC",
+				"OD"
+			]
+		},
+		"creationDate": {
+			"type": "string",
+			"format": "date",
+			"description": "Creation date"
+		},
+		"clearDate": {
+			"type": [
+				"string",
+				"null"
+			],
+			"format": "date",
+			"description": "Clear date"
+		},
+		"owner": {
+			"$ref": "#/definitions/person"
+		},
+		"maximalDebitLimit": {
+			"type": "number",
+			"description": "Maximal debit limit"
+		},
+		"maximalDebitLimitCurrency": {
+			"type": "string",
+			"description": "Maximal debit limit currency"
+		},
+		"interestCreditRate": {
+			"type": "number",
+			"description": "Interest rate of account (credit)."
+		},
+		"interestDebitRate": {
+			"type": "number",
+			"description": "Interest rate of account (debit)."
+		},
+		"productId": {
+			"type": "string",
+			"minLength": 20,
+			"maxLength": 20,
+			"description": "productId in BISQ."
+		},
+		"coowner": {
+			"$ref": "#/definitions/person"
+		}
+	},
+	"definitions": {
+		"person": {
+			"type": "object",
+			"required": [
+				"quaestorId",
+				"crmId",
+				"personType",
+				"personIdentificationNumber",
+				"personFullName"
+			],
+			"properties": {
+				"quaestorId": {
+					"type": "string",
+					"description": "Unique Quaestor identifier",
+					"minLength": 10,
+					"maxLength": 10
+				},
+				"crmId": {
+					"type": "string",
+					"description": "Unique CRM identifier",
+					"minLength": 10,
+					"maxLength": 10
+				},
+				"personType": {
+					"type": "string",
+					"description": "Person type (LP = Právnická osoba, IP = fyzická osoba)",
+					"enum": [
+						"LP",
+						"IP"
+					]
+				},
+				"personIdentificationNumber": {
+					"type": "string",
+					"description": "Person identification depending on the personType value"
+				},
+				"personFullName": {
+					"type": "string",
+					"description": "Full name of person"
+				}
+			}
+		}
+	}
+}

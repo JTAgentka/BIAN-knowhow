@@ -1,0 +1,148 @@
+{
+  "title": "Controll message",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "The controll message is created at the end of initialization, reconciliation or asynchronous reply",
+  "type": "object",
+  "required": [
+    "X-Correlation-ID",
+    "timestamp",
+    "topicName",
+    "key"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "title": "X-Correlation-ID",
+      "description": "correlation identifier",
+      "type": "string"
+    },
+    "timestamp": {
+      "title": "date time of control event the creation ",
+      "description": "The date and time of the beginning of the exchange rate list code book validity. The date follows ISO 8601, time zone is expected",
+      "type": "string",
+      "format": "date-time"
+    },
+    "topicName": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Topic name"
+    },
+    "key": {
+      "description": "event key",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "index": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Contains information about the X-Correlation-ID or Elastic Search index."
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Version of the error response structure"
+  	},
+    "errors": {
+      "type": ["array","null"],
+      "description": "Array of errors",  
+      "items": {
+        "type": "object",
+        "properties": {
+          "jtCode": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Business error code if defined in CSC or RFC 7231 error code"
+          },
+          "message": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Error description defined in CSC according to the type and sensitivity of the service."
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The path to the element in the request message that is causing the error."
+          },
+          "severity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "error",
+                  "warning"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Exception severity"
+          },
+          "params:": {
+            "type": ["array","null"],
+            "description": "Array of errors",  
+            "items": {
+              "type": "object",
+              "properties": {
+                "paramName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "The name of the parameter in the message string, e.g. 'Insufficient funds – account number %1.' -> paramName = 1"
+                },
+                "paramValue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                   "description": "The value of the parameter in the message string, e.g. 'Insufficient funds – account number 15-135169.' -> paramValue = 15-135169"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "internalErrors": {
+      "type": ["array","null"],
+      "description": "Array of internal error codes and error descriptions according to the service provider",  
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Internal error code according to the application / system which is the service provider."
+          },
+          "message": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Internal description of the error according to the application / system which is the service provider."
+          }
+        }
+      }
+    }
+  }
+}

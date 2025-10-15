@@ -1,0 +1,302 @@
+DK CZ - 4 metody
+post /validate validace platby
+{
+  "operationId": "s@@s+Os$.PW'/:>|Xj'T",
+  "sourceChannel": "18",
+  "paymentIdentification": {
+    "instructionIdentification": "string",
+    "endToEndIdentification": "vN)x(L1vB5(M?QFEQdUGL)KqrOP}vpX78+w"
+  },
+  "paymentTypeInformation": {
+    "instructionPriority": "INST"
+  },
+  "amount": {
+    "instructedAmount": {
+      "value": 0.01,
+      "currency": "ZUT"
+    }
+  },
+  "requestedExecutionDate": "2022-05-10",
+  "chargeBearer": "CRED",
+NOT OK  "ultimateDebtor": {
+    "name": "2:JVWh4JN&6[n+2sI]N%#6G1;!&@26Bhu)/:DPo4ihxP",
+    "postalAddress": {
+      "streetName": "d`*$a3=p1P/cyiymqGI\\G6Dh'6~Su|3gE,x7XKEJ8@9CLLT3zr hWa!6D\"O0 8R`s~$khn",
+      "buildingNumber": "Eoh)'`m$H_Lijnr4",
+      "postCode": "Xt|G4'v5^Q&\"OeOf",
+      "townName": "Y>c%W;Ax@1PTDD8SDb]@>L*XsAepRTlp'eY",
+      "country": "BF",
+      "addressLine": "2y=qgKU7R9MH\"2PTchc>Y!gQ\\X,<JC-}r3s'9LNROA_-W1lbhZtiW9DY9PiRQR=pYW|8i\\H(uqkzsr\";p>t68z[AKkyDHsvBY;[pc<.o-bR/3mmIQgnAfPZ'&a.,\"v4j\"tiwqsdR=$nv"
+    },
+    "identification": {
+      "organisationIdentification": {
+NOT OK        "bicOrBei": "TEOZNJV2"
+      }
+    }
+  },
+NOT OK  "debtorAccount": {
+    "identification": {
+      "bankcode": "7262",
+      "iban": "ZA22BWdCcAXnqjF5gwd8yDcx"
+    },
+    "currency": "BQB"
+  },
+NOT OK  "creditorAgent": {
+    "financialInstitutionIdentification": {
+      "bic": "RDULLYRU",
+      "clearingSystemMemberIdentification": {
+        "clearingSystemIdentification": {
+          "code": "string",
+          "proprietary": "string"
+        },
+        "memberIdentification": "string"
+      },
+      "name": "Yi<C)T*0^#0YPW[4>^FW4]W1D\\?\"5+KCpE!?u!L'IEwVmzkI|99s*N\"E@~7iZK,",
+      "postalAddress": {
+        "streetName": "mU+|rHejs>g?@Is[]i-[5:FA?%[T4{dX)bI3}>MYOmF~{VSQ-OVd,X}\"Q(?MER8uo\"8_N{",
+        "buildingNumber": "2,Xn%|w~/TB2nDg|",
+        "postCode": "b_-kW2?Gx5@?~+y)",
+        "townName": "yKK}<%:_:1f%F3,aqVQ.Cp>:$a[v\\1Py?jc",
+        "country": "EP",
+        "addressLine": "pTsI:r'w`p8*Bv)2h3/HjK1F=j4,E=!x-'hR3IGX1sEATci,2a9KiO2G/SX\"HWtMqsTaDX!\"TE7p'1`42!s{zO*MsUj5_(!ego/y\"pr}M$vYeTuSm_39SYRrjo.Au?Wu)a}PH,>MsX.:"
+      }
+    }
+  },
+  "creditor": {
+    "name": "DY3;5A@7TBkD'$,5uD(m8c[.D3@qA}}@Ssx<~kTMnsI'xsYW\"X'*+(r<f7mqVTCKnNQ's9",
+    "postalAddress": {
+      "streetName": "%vOGrM+9~PqLdJ,u+qijOa[5Y^)A@$sKF/G&j{w>%./%x.X#TteCTey=A)-2B43vIlMU5d",
+      "buildingNumber": "0e=nG\\X=v6itj_,Z",
+      "postCode": "?^5M\"_JXk#_yzHE7",
+      "townName": ",7oIu>0qs.JS}X/>jcgx>^sEpK=UpZ,tONB",
+      "country": "HX",
+      "addressLine": "97Fak+'mUwypKm.PW:qph?~p][nU4b&-=)g[-(^xT}_+K56a:qmQ`W`szG!(U%yahB\"u~(r.Mpg3BHe&]NDc8\"gmy.z0gzKHNzWG^U8,& ej&{Mkk`9+%oy5pPMmkT[C[ofVkv0SZ&7="
+    }
+  },
+NOT OK  "creditorAccount": {
+    "identification": {
+      "bankcode": "8166",
+      "iban": "UQ89iUXyl98S70RWX"
+    },
+    "currency": "GSA"
+  },
+NOT OK  "ultimateCreditor": {
+    "name": "Trp?.,ta{old{'-yn,b4lC3(q&wTN(IOoOp$r4I*]_n#ZcrP+%.)pV[`Ob~:DX\\<$`w[dZ",
+    "postalAddress": {
+      "streetName": "QL5f*n`J(44a%!s~@tci2L9;@]5Z+Xw?2&,0[P\\G.t:gFdy;T^=:haW66xN\\I}{ksr`4i`",
+      "buildingNumber": "5\\tzvo|[CikRR0|9",
+      "postCode": "!~?o(\"!U']^J:|:<",
+      "townName": ".ukh$[,]Ky]O:14]cDG>y4L0zC/U9jG@&k?",
+      "country": "BK",
+      "addressLine": "R[a((Wo~{)h;\\Vr>$e%r./ x -\\i pMV|X#4X;~x>Y/bK:P"
+    },
+    "identification": {
+      "organisationIdentification": {
+        "bicOrBei": "VLDPDOWERP8"
+      }
+    }
+  },
+  "purpose": {
+    "code": "e'J6"
+  },
+  "remittanceInformation": {
+    "structured": {
+      "creditorReferenceInformation": {
+        "reference": [
+          "KS:05556"
+        ]
+      }
+    },
+    "unstructured": "3D5Q7o:<^):(#FO\\JA6_Fu(2Mpw^DnuUxGHF:xh@G4$5LG0<d4e($@^hNn2 `ztWi1(opg)Ako'YBMrmz8[a@J,'Ln!)]/j4WcTHBob"
+  },
+  "debtorNote": "string"
+}
+
+response
+{
+NOT OK  "validationStatus": true,
+NOT OK  "validationError": {
+    "errorCode": "NARATIVE",
+    "errorScope": "string",
+    "errorMsg": "string"
+  },
+NOT OK  "instructionStatus": {
+    "code": "146",
+    "description": "Transakce úspěšně předána do CBS"
+  },
+NOT OK  "serviceLevel": "DMCT",
+  "amount": {
+    "debtorCcyAmount": {
+      "value": 0.01,
+      "currency": "LMB"
+    },
+    "creditorCcyAmount": {
+      "value": 0.01,
+      "currency": "VPP"
+    }
+  },
+  "charges": {
+NOT OK     "accountCcyAmount": {
+      "value": 0.01,
+      "currency": "BAQ"
+    },
+NOT OK     "instructionCcyAmount": {
+      "value": 0.01,
+      "currency": "EHR"
+    },
+NOT OK     "conversionAccountCcyAmount": {
+      "value": 0.01,
+      "currency": "YIY"
+    }
+  },
+  "exchangeRate": 0
+}
+
+////
+post /payment zalozeni platby
+{
+  "operationId": "(vmK\"f|]p3KB \"tz1-2%",
+  "sourceChannel": "FBL",
+  "paymentIdentification": {
+    "instructionIdentification": "string",
+    "endToEndIdentification": "'1Vge%,S81G,%fgV+c]P0E%>5*4vgQNH1m^"
+  },
+  "paymentTypeInformation": {
+    "instructionPriority": "INST"
+  },
+  "amount": {
+    "instructedAmount": {
+      "value": 0.01,
+      "currency": "PIF"
+    }
+  },
+  "requestedExecutionDate": "2022-05-10",
+  "chargeBearer": "CRED",
+NOT OK   "ultimateDebtor": {
+    "name": "2JQf:'JnaVP+M7;-~\\YYtN",
+    "postalAddress": {
+      "streetName": "!AI(F{w`4PBea='bhUFz;A=v1e,Ai=NDoxt]#k0Dr,J31l`W!(<],u^eu9U%%@\"-m/_]01",
+      "buildingNumber": "y(Vgw,mw$P4YZ?n7",
+      "postCode": ">y!s<4a\\{\"z#E+A%",
+      "townName": "pMj4C!Zf:*p/+7R?Q#B<_!{RPA0kfLx\\sMa",
+      "country": "WE",
+      "addressLine": "oA=72Rzm!p<Bp!:Vx.sY} |~"
+    },
+    "identification": {
+      "organisationIdentification": {
+        "bicOrBei": "ASNDXKXQDVF"
+      }
+    }
+  },
+NOT OK   "debtorAccount": {
+    "identification": {
+      "bankcode": "1486",
+      "iban": "FR92XCNnFGktGVIF59K3KYQO"
+    },
+    "currency": "ZMZ"
+  },
+NOT OK   "creditorAgent": {
+    "financialInstitutionIdentification": {
+      "bic": "URCBPTKFQT5",
+      "clearingSystemMemberIdentification": {
+        "clearingSystemIdentification": {
+          "code": "string",
+          "proprietary": "string"
+        },
+        "memberIdentification": "string"
+      },
+      "name": "Vj0~TABmO`8yvynZ3z-;`iIx09*#]s&5O(Y/.V8QjnOi-5wPoh(s9g/ff:S)n27Sk^W/:(",
+      "postalAddress": {
+        "streetName": "KTJIL*F|@M:_-[XL6'Tqtt)K~H`7Y7MbZ$7-Fk\\5eG5j<TNf6nKn,(nmz%C-ymMZUjN'%<",
+        "buildingNumber": "03fgTvPa$#rk\"An(",
+        "postCode": "VB;MLB__axjC\\vc{",
+        "townName": "p@)hlY?8IHieYETZZLM'|hYCh8R@te3dfKn",
+        "country": "CD",
+        "addressLine": "Ub3sSZ4?gz|M/(*P[CjX_Lz$cvi(u<fYazgDm8{*b1-+_|7-[xm>r9B>'sONo!m[OXEA0Mv9]z\"u`J_.f<(.s.]k8Kf[m'uXrqs,hQ8[fI_w{-kQs+]=['q5x5-7Z8~H>2vOcu8"
+      }
+    }
+  },
+  "creditor": {
+    "name": "z6rH*J/'J~cp;Y#gF>#fRC)lx|.emLkxzW[:o#FDS:N$|hn<X8b?}WW46V^=|Ze?8#b9H!",
+    "postalAddress": {
+      "streetName": "DrLm!QB\"u&2j_2V*0Z+c-8k(IH&Nk)JCLy=Cf2-r8-h+N-?g6er?\"x7_RW!4e'OnJaS9,g",
+      "buildingNumber": "nh45a&?Q4lz01}Ng",
+      "postCode": "Ke8hsNH\\v<`\\$&pO",
+      "townName": "M`itRB[H.o<kT`j-p.]V`z-|qwEozOsQt@J",
+      "country": "UH",
+      "addressLine": "$*IR_GV=_v\\$5G7HEKA!-2{~!:G%"
+    }
+  },
+NOT OK   "creditorAccount": {
+    "identification": {
+      "bankcode": "6056",
+      "iban": "XV161dShqes0CHfXLjRJ"
+    },
+    "currency": "IOW"
+  },
+NOT OK   "ultimateCreditor": {
+    "name": ")y:6<^5n\"3<-6=g(p^x[Xg.8s<|D,TnqYwp1{5F)g`P0pP=1D.cGJeM,Icb[2:TrwG0skI",
+    "postalAddress": {
+      "streetName": "VyO<Yk~Q4gy=:u{zY??so>+G%_a_Ck;tt_JS>b-`B,Zd|p?'NGp*~+0V!L{MNyEO@aSK]v",
+      "buildingNumber": "y3&S&mwKLtw-8=aP",
+      "postCode": "E/`'aXX~h(mDnKUq",
+      "townName": ":qdC<*!<3H(R;qg#]M*>DTtv=?i7x'|D^F;",
+      "country": "FR",
+      "addressLine": "%?w]7h1G&MX{~'$qk\\Gp.:d(Ej&.BT1:4,)mkatwh/e"
+    },
+    "identification": {
+      "organisationIdentification": {
+        "bicOrBei": "KPZKDP39"
+      }
+    }
+  },
+  "purpose": {
+    "code": ">ke2"
+  },
+NOT OK   "remittanceInformation": {
+    "structured": {
+      "creditorReferenceInformation": {
+        "reference": [
+          "SS:1019069"
+        ]
+      }
+    },
+    "unstructured": "ji6!(dt.wTj;6.NWq.T3W.*lhGLB'E7=[aZQ**v$-Z0`^;G'T.fk<[(Eg+(CGpqpTeP/f%:*kfrQbLCJql7CTUd`LI-\\8&4:7Rzao.1{30G#qC!"
+  },
+NOT OK   "debtorNote": "string"
+}
+
+response
+{
+NOT OK   "instructionResult": "OK",
+  "validationError": {
+    "errorCode": "NARATIVE",
+    "errorScope": "string",
+    "errorMsg": "string"
+  },
+NOT OK   "instructionStatus": {
+    "code": "146",
+    "description": "Transakce úspěšně předána do CBS"
+  },
+NOT OK   "serviceLevel": "DMCT",
+  "paymentIdentification": {
+    "instructionIdentification": "string",
+    "endToEndIdentification": "stm;p.wRtx0R?5UCx2^z&>NKt|,J#-#1lYR",
+    "operationId": "%M#NAD!jJ?=TUV3_eL\"(",
+    "PTSId": 0
+  }
+}
+
+
+get /payment/{ptsId} stav platby
+{
+  "PTSId": 0,
+  "instructionStatus": { - chybejici element/object
+    "code": "146",
+    "description": "Transakce úspěšně předána do CBS"
+  }
+}
+
+
+delete /payment/{ptsId} zruseni platby
+OK

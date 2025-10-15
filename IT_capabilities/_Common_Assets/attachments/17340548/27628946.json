@@ -1,0 +1,76 @@
+{
+    "title": "Closing Balance",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Closing Balance",
+    "type": "object",
+    "required": [
+        "accountId",
+        "eventTimestamp",
+        "closingBalance",
+		"accountKind"
+    ],
+    "properties": {
+        "X-Correlation-ID": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "title": "X-Correlation-ID",
+            "description": "Correlation identifier"
+        },
+        "accountId": {
+            "type": "string",
+            "title": "accountId",
+            "description": "Internal account identification."
+        },
+        "accountKind": {
+            "description": "Account kind.",
+            "type": "string",
+            "title": "accountKind",
+            "minLength": 3,
+            "maxLength": 3,
+            "enum": [
+                "CUA",
+                "CCR",
+                "LOA",
+                "RDA",
+                "NWB",
+				"CRD"
+            ]
+        },
+        "eventTimestamp": {
+            "title": "Event timestamp",
+            "description": "Date and time of inserting into event table in BISQ",
+            "type": "string",
+            "format": "date-time"
+        },
+        "closingBalance": {
+            "type": "array",
+            "title": "Closing balance",
+            "description": "Closing balance",
+            "items": {
+                "$ref": "#/definitions/closingBalance"
+            }
+        }
+    },
+    "definitions": {
+        "closingBalance": {
+            "type": "object",
+            "required": [
+                "closingBalance",
+                "closingBalanceDate"
+            ],
+            "properties": {
+                "closingBalance": {
+                    "type": "number",
+                    "title": "Closing balance."
+                },
+                "closingBalanceDate": {
+                    "type": "string",
+                    "format": "date",
+                    "title": "Booking day."
+                }
+            }
+        }
+    }
+}

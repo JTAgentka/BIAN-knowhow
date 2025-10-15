@@ -1,0 +1,719 @@
+{
+  "title": "InstrumentTransaction",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Realized transaction on portfolio",
+  "type": "object",
+  "required": [
+    "businessChangeDate",
+    "status",
+    "tradeIds",
+    "portfolioIds",
+    "instrumentIds",
+    "positionCode",
+    "transactionCategory",
+    "instrumentTransactionTypeId",
+    "direction",
+    "isComposite",
+    "unitPrice",
+    "totalPriceTradeCurrency",
+    "totalPriceTraded",
+    "totalPriceSettled",
+    "marketId",
+    "tradeCurrency",
+    "instrumentCurrency",
+    "pfCurrency",
+    "isTraded",
+    "isSettled"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "direction": {
+            "enum": [
+              "B"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "creditDepositoryAccTypeId",
+          "debitDepositoryAccTypeId"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "direction": {
+            "enum": [
+              "N"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "creditDepositoryAccTypeId"
+        ],
+        "not": {
+          "required": [
+            "debitDepositoryAccTypeId"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "direction": {
+            "enum": [
+              "P"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "debitDepositoryAccTypeId"
+        ],
+        "not": {
+          "required": [
+            "creditDepositoryAccTypeId"
+          ]
+        }
+      }
+    }
+  ],
+  "if": {
+    "properties": {
+      "isComposite": {
+        "const": false
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "quantity",
+      "instrumentIds"
+    ],
+    "properties": {
+      "instrumentIds": {
+        "required": [
+          "ccpId"
+        ]
+      }
+    }
+  },
+  "else": {
+    "allOf": [
+      {
+        "not": {
+          "required": [
+            "quantity"
+          ]
+        }
+      },
+      {
+        "not": {
+          "required": [
+            "compositeTradeEbrokerId"
+          ]
+        }
+      }
+    ]
+  },
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Korelační identifikátor, povinné pro INIT a RECON"
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "Reflektuje stav fyzické existence záznamu: active - aktivní, deleted - samzáno",
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    },
+    "tradeIds": {
+      "type": "object",
+      "description": "Identifikátory obchodu",
+      "$ref": "#/definitions/tradeIds"
+    },
+    "orderIds": {
+      "type": "object",
+      "description": "Identifikátory pokynu",
+      "$ref": "#/definitions/orderIds"
+    },
+    "portfolioIds": {
+      "type": "object",
+      "description": "Identifkátory portfolia",
+      "$ref": "#/definitions/portfolioIds"
+    },
+    "instrumentIds": {
+      "type": "object",
+      "description": "Identifikátory cenných papírů",
+      "$ref": "#/definitions/instrumentIds"
+    },
+    "positionCode": {
+      "description": "Pozice: A - Aktiva, C - Cross Currency Swap, D - Deriváty, J - CP, Přijaté jako zajištění, K - Kapitál, L - Listinné CP, P - Pasiva, R - Reverzní REPO, T - Termínovaný vklad, V - Vlastní, Z - REPO",
+      "type": "string",
+      "enum": [
+        "A",
+        "C",
+        "D",
+        "J",
+        "K",
+        "L",
+        "P",
+        "R",
+        "T",
+        "V",
+        "Z"
+      ]
+    },
+    "direction": {
+      "description": "Směr obchodu",
+      "type": "string",
+      "enum": [
+        "N",
+        "P",
+        "B"
+      ]
+    },
+    "creditDepositoryAccTypeId": {
+      "description": "Apl kod kreditovaného depozitáře z číselníku DepositoryAccType. Zdroj: Apl_Kod Sloupce stavu CP - EBROKER.SL_STAVU_CP.APL_KOD. Povinný pro direction N a B, jinak je zakázaný",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "debitDepositoryAccTypeId": {
+      "description": "Apl kod debitovaného depozitáře z číselníku DepositoryAccType. Zdroj: Apl_Kod Sloupce stavu CP - EBROKER.SL_STAVU_CP.APL_KOD. Povinný pro direction P a B, jinak je zakázaný.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transactionCategory": {
+      "description": "Kategorie obchodu",
+      "type": "string",
+      "enum": [
+        "vkl_vyb",
+        "obchod",
+		"tech"
+      ]
+    },
+    "instrumentTransactionTypeId": {
+      "description": "Id typu obchodu z číselníku InstrumentTransactionType",
+      "type": "string"
+    },
+    "isComposite": {
+      "description": "Příznak zda se jedná o obchod se složeným produktem",
+      "type": "boolean"
+    },
+    "compositeTradeEbrokerId": {
+      "description": "Odkaz dílčího obchodu na obchod se složeným produktem. Zakázané pro isComposite = true. Nepovinné pro isComposite = false.",
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "quantity": {
+      "description": "Množství. Pokud isComposite = false, pak povinný, jinak zakázaný.",
+      "type": "number"
+    },
+    "unitPrice": {
+      "type": "object",
+      "description": "Kusová cena",
+      "$ref": "#/definitions/unitPrice"
+    },
+    "totalPriceTradeCurrency": {
+      "description": "Celková cena v měně obchodu",
+      "type": "object",
+      "required": [
+        "net",
+        "ai"
+      ],
+      "properties": {
+        "net": {
+          "type": "number",
+          "description": "Celková cena bez poplatků a AÚV v měně obchodu"
+        },
+        "ai": {
+          "type": "number",
+          "description": "Celkové pořizovací AÚV v měně obchodu"
+        }
+      }
+    },
+    "totalPriceTraded": {
+      "type": "object",
+      "description": "Celková cena při zobchodování",
+      "$ref": "#/definitions/totalPriceTraded"
+    },
+    "totalPriceSettled": {
+      "type": "object",
+      "description": "Celková cena při vypořádání",
+      "$ref": "#/definitions/totalPriceSettled"
+    },
+    "fees": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "description": "Poplatky",
+      "items": {
+        "type": "object",
+        "required": [
+          "amount",
+          "feeType"
+        ],
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "Částka poplatku v měně poplatku - feeCurrency"
+          },
+          "feeType": {
+            "description": "Typ poplatku - brokerFee = A_OBCHOD.POPL_BRO_L, tradeFee = A_OBCHOD.POPL_TRH_L, serviceFee = A_OBCHOD.POPL_SLUZ_L, tax = A_OBCHOD.POPL_DAN_L",
+            "type": "string",
+            "enum": [
+              "brokerFee",
+              "tradeFee",
+              "serviceFee",
+              "tax"
+            ]
+          }
+        }
+      }
+    },
+    "marketId": {
+      "description": "Identifikace trhu. Zdroj: eBroker.Instituce.Apl_Kod. Číselník InvExchanges.",
+      "type": "string"
+    },
+    "tradeCurrency": {
+      "description": "Měna obchodu - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": "string"
+    },
+    "paymentCurrency": {
+      "description": "Měna platby - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "feeCurrency": {
+      "description": "Měna poplatku - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "instrumentCurrency": {
+      "description": "Měna obchodování CP - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": "string"
+    },
+    "pfCurrency": {
+      "description": "Měna portfolia - ISO 4217 abecední kód (3 znaky). Číselník Currencies.",
+      "type": "string"
+    },
+    "fxRate": {
+      "description": "FX kurz pro přepočet z měny obchodu do měny platby v efektivním formátu.",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tradeDate": {
+      "description": "Datum zobchodování",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "settlementDate": {
+      "description": "Datum vypořádání",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "isTraded": {
+      "description": "Příznak zobchodování",
+      "type": "boolean"
+    },
+    "isSettled": {
+      "description": "Příznak vypořádání",
+      "type": "boolean"
+    }
+  },
+  "definitions": {
+    "tradeIds": {
+      "description": "Identifikátory obchodu",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace obchodu v eBroker"
+        },
+        "topasIdNumber": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "ID čísla výsledku v TOPAS."
+        },
+        "topasIdSeq": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "ID pořadí Výsledku v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "ID Transakce v TA"
+        }
+      }
+    },
+    "orderIds": {
+      "description": "Identifikátory pokynu",
+      "type": "object",
+      "properties": {
+        "ebrokerId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace pokynu v eBroker"
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace pokynu v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace operace v TA"
+        }
+      }
+    },
+    "portfolioIds": {
+      "description": "Identifkátory portfolia",
+      "type": "object",
+      "required": [
+        "ebrokerId",
+        "topasId",
+        "taId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace portfolia v eBroker"
+        },
+        "topasId": {
+          "type": "integer",
+          "description": "Identifikace portfolia v TOPAS (KID)"
+        },
+        "taId": {
+          "type": "integer",
+          "description": "Identifikace účtu podílníka v TA"
+        }
+      }
+    },
+    "instrumentIds": {
+      "description": "Identifikátory cenných papírů",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace CP v eBroker"
+        },
+        "ccpId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v CCP.  Povinné pokud isComposite=false."
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace CP v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace Finančního instrumentu v TA"
+        }
+      }
+    },
+    "unitPrice": {
+      "description": "Kusová cena",
+      "type": "object",
+      "required": [
+        "unitPriceTradeCurrency"
+      ],
+      "properties": {
+        "unitPriceTradeCurrency": {
+          "type": "object",
+          "description": "Kusová cena v měně obchodu",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Kusová cena bez poplatků a AÚV v měně obchodu"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Kusové pořizovací AÚV v měně obchodu"
+            }
+          }
+        },
+        "unitPricePercent": {
+          "type": "object",
+          "description": "Kusová cena v procentech",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Kusová cena bez poplatků a AÚV v procentech"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Kusové pořizovací AÚV v procentech"
+            }
+          }
+        }
+      }
+    },
+    "totalPriceTraded": {
+      "description": "Celková cena při zobchodování",
+      "type": "object",
+      "properties": {
+        "totalPriceInstrCurrency": {
+          "type": "object",
+          "description": "Celková cena při zobchodování v měně CP",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při zobchodování bez poplatků a AÚV v měně CP"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v měně CP"
+            }
+          }
+        },
+        "totalPricePfCurrency": {
+          "type": "object",
+          "description": "Celková cena při zobchodování v měně portfolia",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při zobchodování bez poplatků a AÚV v měně portfolia"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v měně portfolia"
+            }
+          }
+        },
+        "totalPriceCZK": {
+          "type": "object",
+          "description": "Celková cena při zobchodování v CZK",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při zobchodování bez poplatků a AÚV v CZK"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v CZK"
+            }
+          }
+        },
+        "totalPriceEUR": {
+          "type": "object",
+          "description": "Celková cena při zobchodování v EUR",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při zobchodování bez poplatků a AÚV v EUR"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v EUR"
+            }
+          }
+        },
+        "totalPriceUSD": {
+          "type": "object",
+          "description": "Celková cena při zobchodování v USD",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při zobchodování bez poplatků a AÚV v USD"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v USD"
+            }
+          }
+        }
+      }
+    },
+    "totalPriceSettled": {
+      "description": "Celková cena při vypořádání",
+      "type": "object",
+      "properties": {
+        "totalPriceInstrCurrency": {
+          "type": "object",
+          "description": "Celková cena při vypořádání v měně CP",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při vypořádání bez poplatků a AÚV v měně CP"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v měně CP"
+            }
+          }
+        },
+        "totalPricePfCurrency": {
+          "type": "object",
+          "description": "Celková cena při vypořádání v měně portfolia",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při vypořádání bez poplatků a AÚV v měně portfolia"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v měně portfolia"
+            }
+          }
+        },
+        "totalPriceCZK": {
+          "type": "object",
+          "description": "Celková cena při vypořádání v CZK",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při vypořádání bez poplatků a AÚV v CZK"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v CZK"
+            }
+          }
+        },
+        "totalPriceEUR": {
+          "type": "object",
+          "description": "Celková cena při vypořádání v EUR",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při vypořádání bez poplatků a AÚV v EUR"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v EUR"
+            }
+          }
+        },
+        "totalPriceUSD": {
+          "type": "object",
+          "description": "Celková cena při vypořádání v USD",
+          "required": [
+            "net",
+            "ai"
+          ],
+          "properties": {
+            "net": {
+              "type": "number",
+              "description": "Celková cena při vypořádání bez poplatků a AÚV v USD"
+            },
+            "ai": {
+              "type": "number",
+              "description": "Celkové pořizovací AÚV v USD"
+            }
+          }
+        }
+      }
+    }
+  }
+}

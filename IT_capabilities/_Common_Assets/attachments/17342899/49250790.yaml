@@ -1,0 +1,607 @@
+# 2023-01-31 - 1.0.0 - Pavel Hrdlička - Deleted not implemented method /cid
+openapi: 3.0.3
+info:
+  title: directDebitMandates
+  version: '1.0'
+  description: API pro validaci, vytvoření, smazaní a zjištění stavu DDM v PTS
+paths:
+  /validate:
+    post:
+      summary: Validace DDM
+      description: Vrací výsledek validace DDM
+      parameters:
+        - $ref: '#/components/parameters/XCorrelationIDParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DDMRequest'
+      responses:
+        '204':
+          $ref: '#/components/responses/NoContent'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /ddm:
+    post:
+      summary: Založení DDM
+      description: Vrací výsledek založení DDM
+      parameters:
+        - $ref: '#/components/parameters/XCorrelationIDParam'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DDMRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /ddm/{ptsId}:
+    parameters:
+      - $ref: '#/components/parameters/PTSIDParam'
+      - $ref: '#/components/parameters/XCorrelationIDParam'
+    get:
+      summary: Stav DDM
+      description: Vrací stav DDM
+      responses:
+        '200':
+          $ref: '#/components/responses/GetStatusOK'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Editace DDM
+      description: Vrací výsledek editace DDM
+      parameters:
+        - name: businessChangeDate
+          in: query
+          description: Timestamp poslední změny DDM
+          required: false
+          schema:
+            type: string
+            format: date-time
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DDMRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/OK'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Zrušení DDM
+      description: Vrací výsledek zrušení DDM
+      responses:
+        '204':
+          $ref: '#/components/responses/NoContent'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '409':
+          $ref: '#/components/responses/Conflict'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  headers:
+    X-Correlation-ID:
+      description: X-Correlation-ID
+      required: true
+      schema:
+        type: string
+  parameters:
+    XCorrelationIDParam:
+      name: X-Correlation-ID
+      in: header
+      description: X-Correlation-ID
+      required: true
+      schema:
+        type: string
+    PTSIDParam:
+      name: ptsId
+      in: path
+      description: id DDM
+      required: true
+      schema:
+        $ref: '#/components/schemas/PTSId'
+  schemas:
+    BadRequestErrorModel:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: RFC 7231 - code
+              enum:
+                - 400
+            message:
+              type: string
+              description: RFC 7231 - mesage or J&T extension code; J&T mesage
+              enum:
+                - 9903; Missing or invalid element
+            timestamp:
+              $ref: '#/components/schemas/ErrorTimestamp'
+            index:
+              $ref: '#/components/schemas/ErrorIndex'
+            internal:
+              type: object
+              properties:
+                code:
+                  $ref: '#/components/schemas/BadRequestPTSCode'
+                message:
+                  type: string
+                  description: message + scope
+                  minLength: 1
+              required:
+                - code
+                - message
+          required:
+            - code
+            - message
+            - timestamp
+            - index
+            - internal
+      required:
+        - error
+    ForbiddenErrorModel:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: RFC 7231 - code
+              enum:
+                - 403
+            message:
+              type: string
+              description: RFC 7231 - mesage or J&T extension code; J&T mesage
+              enum:
+                - Forbidden
+            timestamp:
+              $ref: '#/components/schemas/ErrorTimestamp'
+            index:
+              $ref: '#/components/schemas/ErrorIndex'
+            internal:
+              $ref: '#/components/schemas/BusinessInternal'
+          required:
+            - code
+            - message
+            - timestamp
+            - index
+            - internal
+      required:
+        - error
+    NotFoundErrorModel:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: RFC 7231 - code
+              enum:
+                - 404
+            message:
+              type: string
+              description: RFC 7231 - mesage or J&T extension code; J&T mesage
+              enum:
+                - Not Found
+            timestamp:
+              $ref: '#/components/schemas/ErrorTimestamp'
+            index:
+              $ref: '#/components/schemas/ErrorIndex'
+            internal:
+              $ref: '#/components/schemas/BusinessInternal'
+          required:
+            - code
+            - message
+            - timestamp
+            - index
+            - internal
+      required:
+        - error
+    ConflictErrorModel:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: RFC 7231 - code
+              enum:
+                - 409
+            message:
+              type: string
+              description: RFC 7231 - mesage or J&T extension code; J&T mesage
+              enum:
+                - Conflict
+            timestamp:
+              $ref: '#/components/schemas/ErrorTimestamp'
+            index:
+              $ref: '#/components/schemas/ErrorIndex'
+            internal:
+              $ref: '#/components/schemas/BusinessInternal'
+          required:
+            - code
+            - message
+            - timestamp
+            - index
+            - internal
+      required:
+        - error
+    InternalServerErrorModel:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+              description: RFC 7231 - code
+              enum:
+                - 500
+            message:
+              type: string
+              description: RFC 7231 - mesage or J&T extension code; J&T mesage
+              enum:
+                - Internal Server Error
+            timestamp:
+              $ref: '#/components/schemas/ErrorTimestamp'
+            index:
+              $ref: '#/components/schemas/ErrorIndex'
+            internal:
+              type: object
+              properties:
+                code:
+                  $ref: '#/components/schemas/InternalServerErrorPTSCode'
+                message:
+                  type: string
+                  description: message
+                  minLength: 1
+              required:
+                - code
+                - message
+          required:
+            - code
+            - message
+            - timestamp
+            - index
+            - internal
+      required:
+        - error
+    ErrorTimestamp:
+      type: string
+      format: date-time
+      description: ''
+    ErrorIndex:
+      type: string
+      description: X-corelation-ID
+    BadRequestPTSCode:
+      type: string
+      description: Textový kód chyby
+      enum:
+        - SYNTAX_ERROR
+        - FIELD_MISSING
+        - FIELD_INVALID
+    InternalServerErrorPTSCode:
+      type: string
+      description: Textový kód chyby
+      enum:
+        - SQL_ERROR
+        - FATAL_ERROR
+    BusinessInternal:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Textový kód chyby
+          enum:
+            - BUSINESS_ERROR
+        message:
+          type: string
+          description: message + scope
+          minLength: 1
+      required:
+        - code
+        - message
+    AmtValue:
+      type: number
+      description: Hodnota částky
+      minimum: 0.01
+      exclusiveMinimum: false
+    Currency:
+      type: string
+      description: Kod meny podle ISO 4217 = 3 velka pismena
+      pattern: '[A-Z]{3,3}'
+    DDMRequest:
+      type: object
+      properties:
+        operationId:
+          $ref: '#/components/schemas/OperationId'
+        sourceChannel:
+          $ref: '#/components/schemas/SourceChannel'
+        directDebitMandateIdentification:
+          $ref: '#/components/schemas/DirectDebitMandateIdentification'
+        directDebitMandate:
+          $ref: '#/components/schemas/DirectDebitMandate'
+        requestedExecutionDate:
+          $ref: '#/components/schemas/RequestedExecutionDate'
+        debtorAccount:
+          $ref: '#/components/schemas/AccountElement'
+        note:
+          $ref: '#/components/schemas/Max70Text'
+      required:
+        - operationId
+        - sourceChannel
+        - directDebitMandateIdentification
+        - directDebitMandate
+        - debtorAccount
+    CreateOKResponse:
+      type: object
+      properties:
+        businessChangeDate:
+          $ref: '#/components/schemas/BusinessChangeDate'
+        directDebitMandateIdentification:
+          allOf:
+            - $ref: '#/components/schemas/DirectDebitMandateIdentification'
+            - type: object
+              properties:
+                operationId:
+                  $ref: '#/components/schemas/OperationId'
+                PTSDdmId:
+                  $ref: '#/components/schemas/PTSId'
+              required:
+                - operationId
+                - PTSDdmId
+      required:
+        - businessChangeDate
+        - directDebitMandateIdentification
+    OperationId:
+      type: string
+      description: Systémové ID DDM
+      minLength: 1
+      maxLength: 20
+      pattern: \S+.+
+    SourceChannel:
+      type: string
+      description: Zdroj DDM- kod aplikace/rozhraní, která/é zakládá DDM
+      pattern: '[A-Z0-9]{2,3}'
+    PTSId:
+      type: integer
+      format: int64
+      description: Unikatni PTS ID
+    BusinessChangeDate:
+      type: string
+      format: date-time
+      description: Datum business změny stavu datové entity
+    CID:
+      type: string
+      minLength: 9
+      maxLength: 35
+      pattern: '[A-Z0-9]'
+    DirectDebitMandate:
+      type: object
+      description: ''
+      properties:
+        mandateId:
+          type: string
+          minLength: 1
+          maxLength: 50
+          pattern: ([A-Za-z0-9] \.,-\/\+\?:\(\)\')*
+        cid:
+          $ref: '#/components/schemas/CID'
+        alias:
+          type: string
+        scheme:
+          type: string
+          enum:
+            - CORE
+            - B2B
+          default: CORE
+        limit:
+          type: object
+          description: ''
+          properties:
+            amountSingleLimit:
+              $ref: '#/components/schemas/AmtValue'
+            amountSumLimit:
+              $ref: '#/components/schemas/AmtValue'
+            maxIterations:
+              type: integer
+              description: maximální počet opakování inkasa
+              minimum: 1
+        validity:
+          type: object
+          properties:
+            lastExecutionDate:
+              type: string
+              format: date
+              description: platné do
+          required:
+            - lastExecutionDate
+        isRepeat:
+          type: boolean
+          description: opakované inkaso
+        referredDocumentInformation:
+          type: object
+          properties:
+            referredDocument:
+              $ref: '#/components/schemas/Max35Text'
+            dateOfSignature:
+              type: string
+              description: Datum podpisu
+              format: date
+      required:
+        - scheme
+    RequestedExecutionDate:
+      type: string
+      description: Datum splatnosti
+      format: date
+    DirectDebitMandateIdentification:
+      type: object
+      properties:
+        instructionIdentification:
+          type: string
+          description: Unikátní ID DDM
+          minLength: 1
+          maxLength: 35
+      required:
+        - instructionIdentification
+    AccountElement:
+      type: object
+      description: ''
+      properties:
+        identification:
+          $ref: '#/components/schemas/AccountIdentification'
+        currency:
+          $ref: '#/components/schemas/Currency'
+    AccountIdentification:
+      anyOf:
+        - type: object
+          properties:
+            iban:
+              type: string
+              description: IBAN
+              pattern: '[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}'
+          required:
+            - iban
+        - type: object
+          description: Jina identifikace uctu
+          properties:
+            other:
+              type: object
+              properties:
+                identification:
+                  type: string
+                  description: Quaestor ID nebo cislo uctu
+                  minLength: 1
+                  maxLength: 34
+              required:
+                - identification
+          required:
+            - other
+        - type: object
+          properties:
+            bban:
+              type: string
+              description: Cislo uctu v tuzemskem tvaru
+              pattern: '[0-9]{1,16}'
+          required:
+            - bban
+    Max35Text:
+      type: string
+      minLength: 1
+      maxLength: 35
+      pattern: \S+.*
+    Max70Text:
+      type: string
+      minLength: 1
+      maxLength: 70
+      pattern: \S+.*
+  responses:
+    OK:
+      description: OK
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CreateOKResponse'
+    GetStatusOK:
+      description: Status OK
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              businessState:
+                type: string
+                description: Status DDM
+                enum:
+                  - ACTIVE
+                  - CANCELLED
+                  - EXPIRED
+                  - MODIFIED
+                  - UNKNOWN
+            required:
+              - businessState
+    NoContent:
+      description: OK
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+    BadRequest:
+      description: Syntaktická chyba requestu
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/BadRequestErrorModel'
+    NotFound:
+      description: DDM nenalezeno pro dané PTS ID
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotFoundErrorModel'
+    Forbidden:
+      description: DDM není dostupné pro změny
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ForbiddenErrorModel'
+    Conflict:
+      description: Business validace neproběhla v pořádku
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ConflictErrorModel'
+    InternalServerError:
+      description: Chyba na serveru
+      headers:
+        X-Correlation-ID:
+          $ref: '#/components/headers/X-Correlation-ID'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InternalServerErrorModel'

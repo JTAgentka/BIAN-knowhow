@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="osobaService" targetNamespace="http://trading.cs/core-integr/ws/ep/v1.0/osoba.php" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://trading.cs/core-integr/ws/ep/v1.0/osoba.php" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://trading.cs/core-integr/ws/ep/v1.0/osoba.php">
+			<xsd:element name="klientId" type="xsd:string"/>
+			<xsd:element name="idPortfolio" type="xsd:int"/>
+			<xsd:element name="item" type="xsd:string"/>
+			<xsd:complexType name="PravaType">
+				<xsd:sequence>
+					<xsd:element name="item" type="xsd:string" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="prava" type="tns:PravaType"/>
+			<xsd:element name="request">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="tns:klientId"/>
+						<xsd:element ref="tns:idPortfolio"/>
+						<xsd:element ref="tns:prava"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="OsobaRequest">
+		<wsdl:part name="parameters" element="tns:request"/>
+	</wsdl:message>
+	<wsdl:message name="OsobaResponse">
+		<wsdl:part name="result" element="tns:zapisPravaPristupovehoUctuKPfDKResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="osobaPortType">
+		<wsdl:operation name="zapisPravaPristupovehoUctuKPfDK">
+			<wsdl:input message="tns:OsobaRequest"/>
+			<wsdl:output message="tns:OsobaResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="osobaBinding" type="tns:osobaPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="zapisPravaPristupovehoUctuKPfDK">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="osobaService">
+		<wsdl:port name="osobaPort" binding="tns:osobaBinding">
+			<soap:address location="http://trading.cs/core-integr/ws/ep/v1.0/osoba.php"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

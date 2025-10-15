@@ -1,0 +1,351 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "http://acmark.com/jtb/ContractTopicSchema.json",
+  "description": "CRM Contract Schema",
+  "type": "object",
+  "required": [
+    "state",
+    "timestamp"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+    },
+    "action": {
+      "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",
+      "type": "string",
+      "format": "date-time"
+    },
+    "contractId": {
+      "description": "Interní CRM GUID primární klíč, vždy vyplněno",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adpContractType": {
+      "description": "Typ smlouvy pro ADP, logika plnění odpovídá GetClient() pro ePortál. Nutno brát v potaz i lokaci smlouvy.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "ignore",
+            "consign",
+            "framework",
+            "custody",
+            "management"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "before": {
+      "description": "Stav záznamu před provedením změn. NULL při vytvoření záznamu a při rekonciliaci/inicializaci.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/definitions/ContractData"
+        }
+      ]
+    },
+    "after": {
+      "description": "Stav záznamu po provedení změn. NULL při smazání záznamu.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/definitions/ContractData"
+        }
+      ]
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode",
+        "anonymized",
+        "deleted",
+        "merged"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": [
+            "boolean"
+          ]
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ContractData": {
+      "type": "object",
+      "required": [
+        "contractNumber",
+        "accountId",
+        "location"
+      ],
+      "properties": {
+        "accountId": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Klient/firma (GUID klienta/firmy v CRM)"
+        },
+        "klientId": {
+          "description": "Klient ID (KLID)",
+          "type": [
+            "string",
+            "null"
+          ],
+          "examples": [
+            1000018856
+          ]
+        },
+        "contractNumber": {
+          "type": "string",
+          "title": "Číslo smlouvy/pokynu",
+          "maxLength": 40
+        },
+        "contractType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Typ smlouvy (apicode)",
+          "examples": [
+            "CI",
+            "PI",
+            "SI",
+            "SE"
+          ],
+          "maxLength": 2
+        },
+        "location": {
+          "description": "Lokace smlouvy, smlouva nemůže mít obojetnou lokaci CZ i SK",
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "value",
+                "label"
+              ],
+              "properties": {
+                "value": {
+                  "description": "Hodnota CRM enumerátoru/OptionSetu",
+                  "type": "integer",
+                  "examples": [
+                    500000000
+                  ]
+                },
+                "label": {
+                  "description": "Popisek číselníkové hodnoty z CRM",
+                  "type": "string",
+                  "examples": [
+                    "CZ",
+                    "SK"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "validFrom": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Platnost od",
+          "format": "date-time"
+        },
+        "validTo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Platnost do",
+          "format": "date-time"
+        },
+        "contractStatus": {
+          "description": "Stav uzavření",
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "value",
+                "label"
+              ],
+              "properties": {
+                "value": {
+                  "description": "Hodnota CRM enumerátoru/OptionSetu",
+                  "type": "integer",
+                  "examples": [
+                    500000000
+                  ]
+                },
+                "label": {
+                  "description": "Popisek číselníkové hodnoty z CRM",
+                  "type": "string",
+                  "examples": [
+                    "nová",
+                    "čeká na ověřovací platbu",
+                    "k podpisu u klienta",
+                    "k podpisu v bance",
+                    "podepsaná",
+                    "stornovaná"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "conclusionType": {
+          "description": "Způsob uzavření",
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "value",
+                "label"
+              ],
+              "properties": {
+                "value": {
+                  "description": "Hodnota CRM enumerátoru/OptionSetu",
+                  "type": "integer",
+                  "examples": [
+                    500000000
+                  ]
+                },
+                "label": {
+                  "description": "Popisek číselníkové hodnoty z CRM",
+                  "type": "string",
+                  "examples": [
+                    "Kurýrem",
+                    "Na dálku",
+                    "Tváří v tvář",
+                    "Přes e-Portál",
+                    "On-line"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reservedBankAccountNumber": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 100,
+          "description": "Rezervované číslo účtu"
+        }
+      }
+    }
+  }
+}

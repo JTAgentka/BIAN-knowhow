@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "http://acmark.com/jtb/ActivitySMSSchema.json",
+  "description": "CRM SMS Activity Schema",
+  "type": "object",
+  "required": [
+    "activityIds",
+    "timestamp",
+    "smsData",
+    "state"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+    },
+    "activityIds": {
+      "type": "object",
+      "properties": {
+        "crmActivityId": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Interní CRM GUID primární klíč, vždy vyplněno"
+        },
+        "dcActivityId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Identifikátor aktivity v digitálních kanálech"
+        }
+      },
+      "required": ["crmActivityId"],
+      "description": "Objekt s identifikátory aktivity"
+    },
+    "action": {
+      "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        {"type": "null"}
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",
+      "type": "string",
+      "format": "date-time"
+    },
+    "smsData": {
+      "description": "Data e-mailu call centra",
+      "type": "object",
+      "required": [
+        "ownerId",
+        "subject"
+      ],
+      "properties": {
+        "subject": {
+          "description": "Předmět",
+          "type": "string"
+        },
+        "regardingObjectIds": {
+          "description": "Identifikace záznamu, kterého se aktivita týká.",
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/definitions/EntityReference"}
+          ]
+        },
+        "ownerId": {
+          "type": "string",
+          "description": "Vlastník aktivity (bankéř, apicode)",
+          "examples": ["JTBA\\JT8100008"]
+        },
+        "scheduledEnd": {
+          "description": "Termín splnění",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "phoneNumber": {
+          "description": "Telefonní číslo",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "messageText": {
+          "description": "Celý text zprávy",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "description": "Popis",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": "boolean"
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": "boolean"
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": "boolean"
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "EntityReference": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "idValue",
+        "idType"
+      ],
+      "properties": {
+        "idValue": {
+          "type": "string",
+          "format": "uuid",
+          "description": "GUID záznamu v CRM."
+        },
+        "idType": {
+          "type": "string",
+          "enum": [
+            "account",
+            "contact",
+            "systemuser"
+          ],
+          "description": "Typ návazného záznamu v CRM."
+        },
+        "crmId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "KLID záznamu, je-li k dispozici."
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Název (label) záznamu v CRM."
+        }
+      },
+      "description": "Informace o návazném záznamu."
+    }
+  }
+}

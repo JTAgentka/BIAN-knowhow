@@ -1,0 +1,113 @@
+# 2022-09-01 - 1.1.0 - Pavel Hrdlička - deleted 200 response code, 204 response - removed content, removed location
+openapi: 3.0.0
+info:
+  title: Balance Reconciliation
+  description: The service is used to reconcile values of balance according to specified input parameters.
+  version: 1.1.0
+paths:
+  /balance/{accountId}:
+    get:
+      description: The method is used to reconcile values of balance according to specified input parameters.
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          description: Correlation identifier for request and response pairing.
+          schema:
+            $ref: "#/components/schemas/X-Correlation-ID"
+        - name: accountId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No Content
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+        '400':
+          description: Bad Request
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+        '404':
+          description: Not Found
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+        '500':
+          description: Internal Server Error
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Service Unavailable
+          headers: 
+            X-Correlation-ID: 
+              $ref: "#/components/headers/X-Correlation-ID"
+          content: 
+            application/json: 
+              schema: 
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Error: 
+      required: 
+        - "code"
+        - "message"
+      type: object
+      properties: 
+        code: 
+          type: integer
+          format: int32
+          description: "RFC 7231 error code"
+          example: "1234"
+        message: 
+          type: string
+          description: "The content of the attribute is a combination of a generally defined error and a description of a generally defined error according to the type and sensitivity of the service."
+          example: "Daily limit is exceeded."
+        timestamp: 
+          type: string
+          description: "Date and time of the error according to RFC5424"
+          example: "2022-01-12T23:20:50.52"
+        index:
+          type: string
+          description: "Contains information about the X-Correlation-ID or Elastic Search index"
+          example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+        internal:
+          type: object
+          properties:
+            code:
+              type: string
+              description: "Internal error code according to the application / system which is the service provider."
+              example: "1092092"
+            message:
+              type: string
+              description: "Internal description of the error according to the application / system which is the service provider."
+              example: "Daily limit is exceeded."
+    X-Correlation-ID:
+      description: "Correlation identifier for request and response pairing."
+      type: string
+      format: uuid
+      example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+
+  headers: 
+    X-Correlation-ID: 
+      description: "Correlation identifier for request and response pairing."
+      required: true
+      schema: 
+        $ref: "#/components/schemas/X-Correlation-ID"
+            

@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "$id": "http://acmark.com/jtb/MktListMemberTopicSchema.json",
+  "description": "MarketingListMember",
+  "type": "object",
+  "required": [
+    "marketingListId",
+    "memberId",
+    "memberType",
+    "state",
+    "timestamp"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Korelační identifikátor pro inicializaci a rekonciliaci"
+    },
+    "action": {
+      "description": "Typ operace. NULL pro rekonciliaci/inicializaci.",
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "create",
+            "update",
+            "delete"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "timestamp": {
+      "description": "Datum a čas operace",
+      "type": "string",
+      "format": "date-time"
+    },
+    "marketingListId": {
+      "type": "string",
+      "description": "CRM GUID MKT seznamu",
+      "format": "uuid"
+    },
+    "memberId": {
+      "description": "GUID člena MKT seznamu = accountId|contactId → GUID",
+      "type": "string",
+      "format": "uuid"
+    },
+    "memberType": {
+      "description": "Typ člena MKT seznamu",
+      "type": "string",
+      "enum": [
+        "account",
+        "contact"
+      ]
+    },
+    "firstName": {
+      "description": "Jméno",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nameSurname": {
+      "description": "Příjmení",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "klientId": {
+      "description": "Klient ID (KLID)",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "emailPrimary": {
+      "description": "E-mail",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "location": {
+      "description": "Lokace",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gender": {
+      "description": "Pohlaví",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "salutationCZ": {
+      "description": "Oslovení klienta v CZ",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "salutationSK": {
+      "description": "Oslovení klienta v SK",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "serviceLevel": {
+      "description": "Úroveň obsluhy",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bankerName": {
+      "description": "Jméno bankéře",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bankerSurname": {
+      "description": "Příjmení bankéře",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bankerEmail": {
+      "description": "E-mail bankéře",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bankerPhone": {
+      "description": "Telefon bankéře",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preferredLanguage": {
+      "description": "Preferovaný jazyk",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "magnusPoints": {
+      "description": "Počet Magnus bodů evidovaných v CRM",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "yesterdayMagnusPoints": {
+      "description": "Včerejší zůstatek Magnus bodů z AXA",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "phonePrimary": {
+      "description": "Primární telefon",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "messageFromBankId": {
+      "description": "GUID klientovy entity s nastavením zpráv z banky",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uuid"
+    },
+    "state": {
+      "description": "Technický stav záznamu",
+      "type": "object",
+      "required": [
+        "statecode",
+        "statuscode",
+        "anonymized",
+        "deleted",
+        "merged"
+      ],
+      "properties": {
+        "statecode": {
+          "description": "Statecode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                0,
+                1
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "statuscode": {
+          "description": "Statuscode",
+          "type": "object",
+          "required": [
+            "value",
+            "label"
+          ],
+          "properties": {
+            "value": {
+              "description": "Hodnota CRM enumerátoru/OptionSetu",
+              "type": "integer",
+              "examples": [
+                1,
+                2
+              ]
+            },
+            "label": {
+              "description": "Popisek číselníkové hodnoty z CRM",
+              "type": "string",
+              "examples": [
+                "Aktivní",
+                "Neaktivní"
+              ]
+            }
+          }
+        },
+        "anonymized": {
+          "description": "Záznam byl anonymizován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "deleted": {
+          "description": "Záznam byl smazán",
+          "type": [
+            "boolean"
+          ]
+        },
+        "merged": {
+          "description": "Záznam byl sloučen a deaktivován",
+          "type": [
+            "boolean"
+          ]
+        },
+        "masterid": {
+          "description": "GUID vítězného záznamu při slučování",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uuid"
+        }
+      }
+    }
+  }
+}

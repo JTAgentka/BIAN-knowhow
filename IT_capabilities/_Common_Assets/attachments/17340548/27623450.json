@@ -1,0 +1,371 @@
+{
+    "definitions": {
+        "COUNTERPARTY": {
+            "description": "Counterparty",
+            "type": "object",
+            "properties": {
+                "PC_ID": {
+                    "description": "Destination Quaestor account internal identification",
+                    "type": "string",
+                    "minLength": 20,
+                    "maxLength": 20
+                },
+                "ACC_NUM": {
+                    "description": "Destination Account Number",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 35
+                },
+                "NCSC": {
+                    "description": "Destination numeric bank code",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 4,
+                    "maxLength": 4
+                },
+                "ADDRESS": {
+                    "description": "Destination address",
+                    "type": [
+                        "array",
+                        "null"
+                    ],
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "maxItems": 4
+                },
+                "COUNTRY": {
+                    "description": "Destination country",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 2,
+                    "maxLength": 2
+                },
+                "BIC": {
+                    "description": "Destination BIC",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 11,
+                    "maxLength": 11
+                }
+            },
+            "required": [
+                "ACC_NUM"
+            ]
+        },
+        "SYMBOLS": {
+            "description": "Payment symbols",
+            "type": "object",
+            "properties": {
+                "CS": {
+                    "description": "Constant symbol",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
+                },
+                "SS": {
+                    "description": "Specific symbol",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
+                },
+                "VS": {
+                    "description": "Variable symbol",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 1,
+                    "maxLength": 10
+                }
+            }
+        },
+        "TRN_MESSAGES": {
+            "description": "Messages - O2B,S2R,ETE",
+            "type": "object",
+            "properties": {
+                "O2B": {
+                    "description": "Orderer to bank message",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 0,
+                    "maxLength": 210
+                },
+                "O2R": {
+                    "description": "Orderer to receiver message",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 0,
+                    "maxLength": 210
+                },
+                "S2R": {
+                    "description": "Sender to receiver message",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 0,
+                    "maxLength": 210
+                },
+                "ETE": {
+                    "description": "End to end identification",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "minLength": 0,
+                    "maxLength": 210
+                }
+            }
+        },
+        "XRATE": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "title": "XRATE",
+            "description": "Used xrates",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "CURRENCY": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "minLength": 3,
+                        "maxLength": 3,
+                        "title": "CURRENCY",
+                        "description": "exchange rate currency"
+                    },
+                    "EXCHANGE_RATE": {
+                        "type": "number",
+                        "title": "EXCHANGE_RATE",
+                        "description": "exchange rate"
+                    },
+                    "QUOTATION_UNIT": {
+                        "type": [
+                            "number",
+                            "null"
+                        ],
+                        "title": "QUOTATION_UNIT",
+                        "description": "quotation unit"
+                    }
+                }
+            },
+            "required": [
+                "EXCHANGE_RATE"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "X-Correlation-ID": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "title": "X-Correlation-ID",
+            "description": "Correlation identifier"
+        },
+        "BOOK_ID": {
+            "description": "BISQ booking internal ID",
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 20
+        },
+        "EVENT_TIMESTAMP": {
+            "description": "Date and time of inserting into event table in BISQ",
+            "type": "string",
+            "format": "date-time"
+        },
+        "ACT_ID": {
+            "description": "BISQ activity internal ID",
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 20
+        },
+        "STATE": {
+            "description": "BISQ activity state (A)Authorised, (B)Booked, (S)Reversed",
+            "type": "string",
+            "enum": [
+                "A",
+                "B",
+                "S"
+            ]
+        },
+        "IND_DC": {
+            "description": "Indicator (C)Credit, (D)Debit",
+            "type": "string",
+            "enum": [
+                "C",
+                "D"
+            ]
+        },
+        "REF_ID": {
+            "description": "BISQ FCP activity REF_ORIGIN_ID",
+            "type": [
+                "string",
+                "null"
+            ],
+            "minLength": 0,
+            "maxLength": 16
+        },
+        "REF_ACC_NUM": {
+            "description": "BISQ FCP activity REF_ACCOUNT",
+            "type": [
+                "string",
+                "null"
+            ],
+            "minLength": 0,
+            "maxLength": 35
+        },
+        "ACT_TYPE": {
+            "description": "BISQ activity type code\nPTS97100 - Zahranicní platba banky\nPTS97200 - Zahranicní platba klienta\nPTS98100 - Zahranicní platba banky - príchozí\nPTS98200 - Zahranicní platba klienta - príchozí",
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 8
+        },
+        "STM_TYPE": {
+            "description": "Statement type code",
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 20
+        },
+        "KIND": {
+            "description": "BISQ FCP activity KIND\nBI - Bank Incoming\nBT - Bank Transfer\nCI - Customer Incoming\nCT - Customer Transfer",
+            "type": "string",
+            "enum": [
+                "BI",
+                "BT",
+                "CI",
+                "CT"
+            ]
+        },
+        "PC_ID": {
+            "description": "BISQ product contract internal ID",
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 20
+        },
+        "PR_NUMBER": {
+            "description": "BISQ product number",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 35
+        },
+        "COUNTERPARTY": {
+            "$ref": "#/definitions/COUNTERPARTY"
+        },
+        "BOOK_DATE": {
+            "description": "Booing date",
+            "type": "string",
+            "format": "date"
+        },
+        "VALUE_DATE": {
+            "description": "Value date",
+            "type": "string",
+            "format": "date"
+        },
+        "EFFECTIVE_DATE": {
+            "description": "Effective date",
+            "type": "string",
+            "format": "date"
+        },
+        "ACC_AMOUNT": {
+            "description": "Booking amount",
+            "type": "number"
+        },
+        "ACC_CURRENCY": {
+            "description": "Booking currency",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+        },
+        "TRN_AMOUNT": {
+            "description": "Transaction amount",
+            "type": "number"
+        },
+        "TRN_CURRENCY": {
+            "description": "Transaction currency",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+        },
+        "XRATE": {
+            "$ref": "#/definitions/XRATE"
+        },
+        "XRATE_DEVIATION": {
+            "description": "exchange rate deviation against the ECB",
+            "type": [
+                "number",
+                "null"
+            ]
+        },
+        "MSGS": {
+            "$ref": "#/definitions/TRN_MESSAGES"
+        },
+        "SYMBOLS": {
+            "$ref": "#/definitions/SYMBOLS"
+        },
+        "PTS_ID": {
+            "description": "Payment portal identification",
+            "type": [
+                "number",
+                "null"
+            ]
+        },
+        "PRODUCT_KIND": {
+            "description": "Product kind",
+            "type": "string",
+            "enum": [
+                "CUA",
+                "CCR",
+                "LOA",
+                "RDA",
+                "NWB",
+                "CRD"
+            ]
+        }
+    },
+    "required": [
+        "BOOK_ID",
+        "EVENT_TIMESTAMP",
+        "ACT_ID",
+        "STATE",
+        "IND_DC",
+        "ACT_TYPE",
+        "STM_TYPE",
+        "KIND",
+        "PC_ID",
+        "PR_NUMBER",
+        "COUNTERPARTY",
+        "BOOK_DATE",
+        "VALUE_DATE",
+        "EFFECTIVE_DATE",
+        "ACC_AMOUNT",
+        "ACC_CURRENCY",
+        "TRN_AMOUNT",
+        "TRN_CURRENCY",
+        "PRODUCT_KIND"
+    ]
+}

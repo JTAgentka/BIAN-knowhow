@@ -1,0 +1,248 @@
+{
+  "title": "InvestmentCancelOrder",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Investment order - type Cancel",
+  "type": "object",
+  "required": [
+    "businessChangeDate",
+    "orderIds",
+    "status",
+    "referencedOrderIds",
+    "orderStatusId",
+    "communicationChannelId",
+    "insertingAppId",
+    "submitter",
+    "submissionDate"
+  ],
+  "if": {
+    "properties": {
+      "acceptingTrader": {
+        "properties": {
+          "actorType": {
+            "enum": [
+              "trader"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "acceptingTrader": {
+        "required": [
+          "traderDomainName"
+        ]
+      }
+    }
+  },
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Korelační identifikátor, povinné pro INIT a RECON"
+    },
+    "businessChangeDate": {
+      "description": "Datum a čas poslední změny entity",
+      "type": "string",
+      "format": "date-time"
+    },
+    "orderIds": {
+      "type": "object",
+      "description": "Identifikátory pokynu",
+      "$ref": "#/definitions/orderIds"
+    },
+    "status": {
+      "description": "Reflektuje stav fyzické existence záznamu: active - aktivní, deleted - samzáno",
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ]
+    },
+    "referencedOrderIds": {
+      "type": "object",
+      "description": "Identifikátory rušeného pokynu",
+      "$ref": "#/definitions/referencedOrderIds"
+    },
+    "orderStatusId": {
+      "description": "Aplikační kód stavu pokynu z číselníku InvOrderStatuses",
+      "type": "string"
+    },
+    "communicationChannelId": {
+      "description": "Aplikační kód komunikačního kanálu použitého pro podání pokynu - číselník CommunicationChannel.",
+      "type": "string"
+    },
+    "insertingAppId": {
+      "description": "Kód aplikace vkládající pokyn do eBrokeru. Číselník InvOrderApps.",
+      "type": "string"
+    },
+    "submitter": {
+      "description": "Detail uživatele podávajícího pokyn",
+      "type": "object",
+      "oneOf": [
+        {
+          "required": [
+            "crmId"
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "required": [
+                "traderDomainName",
+                "traderId"
+              ]
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "crmId": {
+          "type": "string",
+          "description": "Unique CRM identifier",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "traderDomainName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "receivingTrader": {
+      "description": "Přebírající makléř",
+      "type": "object",
+      "required": [
+        "traderDomainName",
+        "traderId"
+      ],
+      "properties": {
+        "traderDomainName": {
+          "type": "string",
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": "integer",
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "acceptingTrader": {
+      "description": "Přijímající makléř",
+      "type": "object",
+      "required": [
+        "actorType",
+        "traderId"
+      ],
+      "properties": {
+        "actorType": {
+          "description": "Typ aktéra",
+          "type": "string",
+          "enum": [
+            "trader",
+            "system",
+            "other"
+          ]
+        },
+        "traderDomainName": {
+          "type": "string",
+          "description": "Doménové jméno."
+        },
+        "traderId": {
+          "type": "integer",
+          "description": "ID operátora v eBroker."
+        }
+      }
+    },
+    "submissionDate": {
+      "description": "Datum podání pokynu",
+      "type": "string",
+      "format": "date-time"
+    },
+    "acceptingDate": {
+      "description": "Datum přijetí pokynu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },	
+    "rejectReasonId": {
+      "description": "Aplikační kód důvodu odmítnutí pokynu, číselník InvOrderRejectReason",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "clientNote": {
+      "description": "Poznámka příchozí - klient",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "brokerNote": {
+      "description": "Poznámka odchozí - makléř",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "definitions": {
+    "orderIds": {
+      "description": "Identifikátory pokynu",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace pokynu v eBroker"
+        }
+      }
+    },
+    "referencedOrderIds": {
+      "description": "Identifikátory rušeného pokynu",
+      "type": "object",
+      "required": [
+        "ebrokerId"
+      ],
+      "properties": {
+        "ebrokerId": {
+          "type": "integer",
+          "description": "Identifikace pokynu v eBroker"
+        },
+        "topasId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace pokynu v TOPAS"
+        },
+        "taId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Identifikace operace v TA"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+	"X-Correlation-ID": "d40dbe5d-7011-4d7c-ade3-214ac42aff58",
+	"accountId": "6e35d3fc-fafe-4a25-a256-46dd56cdcb70",
+	"action": "update",
+	"timestamp": "2022-07-15T13:11:00.745Z",
+	"investmentQuestionnaireDataId": "e46ddf4c-0fe5-4965-8df4-b51fe9aa267c",
+	"before": {
+		"clientQuestionnaireId": "5c50d00f-6ad2-471c-9ce6-dbbcb4631817",
+		"questionnaireState": {
+			"value": 500000003,
+			"label": "Autorizovaný"
+		},
+		"name": "Flinta, Marek",
+		"version": "v6.0 CZ FO",
+		"type": "cz_fo",
+		"clientCategory": {
+			"value": 500000003,
+			"label": "Způsobilá protistrana"
+		},
+		"derivates": {
+			"value": 500000001,
+			"label": "Pouze hedging"
+		},
+		"experience": {
+			"value": 500000001,
+			"label": "Základní investor"
+		},
+		"liquidity": {
+			"value": 500000001,
+			"label": "střední, je v souladu s finančním zázemím"
+		},
+		"lossResistance": true,
+		"marginTrading": false,
+		"riskCapacity": {
+			"value": 500000001,
+			"label": "střední, je v souladu s finančním zázemím vzhledem k oč. kolísání"
+		},
+		"riskTolerance": {
+			"value": 500000003,
+			"label": "6-7"
+		},
+		"riskWillingness": {
+			"value": 500000000,
+			"label": "nízká, je v souladu s očekáváním klienta"
+		},
+		"investmentHorizon": {
+			"value": 500000002,
+			"label": "5 a více let, je v souladu s očkáváním klienta"
+		},
+		"investmentPreference": {
+			"value": 500000001,
+			"label": "Růst"
+		},
+		"cashPooling": false,
+		"filledOn": "2020-07-20T13:11:00.745Z",
+		"sentOn": "2020-07-20T13:11:00.745Z",
+		"validFrom": "2020-07-20T13:11:00.745Z",
+		"validTo": "2022-07-18T13:11:00.745Z"
+	},
+	"after": {
+		"clientQuestionnaireId": "b418d24f-1eee-4caa-980f-4c01fc4d2953",
+		"questionnaireState": {
+			"value": 500000003,
+			"label": "Autorizovaný"
+		},
+		"name": "Flinta, Marek",
+		"version": "v7.0 CZ FO",
+		"type": "cz_fo",
+		"clientCategory": {
+			"value": 500000003,
+			"label": "Způsobilá protistrana"
+		},
+		"derivates": {
+			"value": 500000002,
+			"label": "Lze spekulování i hedging"
+		},
+		"experience": {
+			"value": 500000002,
+			"label": "Informovaný investor"
+		},
+		"liquidity": {
+			"value": 500000002,
+			"label": "vysoká, je v souladu s finančním zázemím"
+		},
+		"lossResistance": false,
+		"marginTrading": false,
+		"riskCapacity": {
+			"value": 500000005,
+			"label": "vysoká, není v souladu s finančním zázemím vzhledem k oč. kolísání - nízká"
+		},
+		"riskTolerance": {
+			"value": 500000001,
+			"label": "4"
+		},
+		"riskWillingness": {
+			"value": 500000004,
+			"label": "nízká, není v souladu s očekáváním klienta"
+		},
+		"investmentHorizon": {
+			"value": 500000001,
+			"label": "3 - 5 let, je v souladu s očkáváním klienta"
+		},
+		"investmentPreference": {
+			"value": 500000001,
+			"label": "Růst"
+		},
+		"cashPooling": false,
+		"filledOn": "2022-07-18T13:11:00.745Z",
+		"sentOn": "2022-07-18T13:11:00.745Z",
+		"validFrom": "2022-07-18T13:11:00.745Z",
+		"validTo": "2025-07-18T13:11:00.745Z"
+	},
+	"state": {
+		"statecode": {
+			"value": 0,
+			"label": "Aktivní"
+		},
+		"statuscode": {
+			"value": 1,
+			"label": "Aktivní"
+		},
+		"anonymized": false,
+		"deleted": false,
+		"merged": false,
+		"masterid": null
+	},
+	"klientId": "1000003284"
+}

@@ -1,0 +1,90 @@
+{
+  "X-Correlation-ID": "6b8e6467-7e26-4485-a160-595a39d207c4",
+  "accountId": "87f78b95-ee99-49f4-8b23-05b6ff922506",
+  "klientId": "1000003284",
+  "action": "create",
+  "timestamp": "2022-07-18T13:11:00.745Z",
+  "clientQuestionnaireId": "d4a0e31c-418b-43de-a2c2-35b0458b1f8f",
+  "clientAnswers": [{
+    "questionId": "cd182205-0644-4921-8429-623d15dd6763",
+    "answers": [{
+        "answerId": "3798aac2-f602-4a6d-af69-c3d18f89e52b",
+        "crmEntityName": null,
+        "note": null
+    }]
+  },
+  {
+    "questionId": "3ff62e2a-1d58-49a5-87cb-23a43b219882",
+    "answers": [{
+        "answerId": "6301946a-59ae-4396-a05f-16db9ed3eb87",
+        "crmEntityName": null,
+        "note": "125000"
+    }]
+  },
+  {
+    "questionId": "beeb811c-eb78-4596-889e-aab2c03684db",
+    "answers": [{
+        "answerId": "c2ff7c5f-7a81-40a6-9196-ffa3a31cf3e2",
+        "crmEntityName": null,
+        "note": null
+    },
+    {
+        "answerId": "d5ff4e02-332b-4b06-bc73-2b45db767a6c",
+        "crmEntityName": null,
+        "note": null
+    },
+    {
+        "answerId": "739a8d1b-6a0a-4f1e-a914-e0c60f516fbc",
+        "crmEntityName": null,
+        "note": null
+    }]
+  },
+  {
+    "questionId": "b7cb9db2-dd8b-4f5b-8e7e-2182ea2b3b7b",
+    "answers": [{
+        "answerId": "b0ceec3f-3df3-4ed6-8889-5ff0254f526f",
+        "crmEntityName": "acm_listcountries",
+        "note": "Indie"
+    }]
+  }],
+  "evaluationVector": {
+    "evaluationVectorId": "d598bd8d-eadf-458a-a503-d2881f8ce9fa",
+    "clientAcquaintedOn": "2022-07-18T13:11:00.745Z",
+    "filledOn": "2022-07-18T13:11:00.745Z",
+    "sentOn": "2022-07-18T13:11:00.745Z",
+    "questionnaireState": {
+      "value": 500000000,
+      "label": "Draft"
+    },
+    "clientCategory": {
+        "value": 500000003,
+        "label": "Způsobilá protistrana"
+    },
+    "derivates": {
+        "value": 500000002,
+        "label": "Lze spekulování i hedging"
+    },
+    "experience": {
+        "value": 500000002,
+        "label": "Informovaný investor"
+    },
+    "liquidity": {
+        "value": 500000002,
+        "label": "vysoká, je v souladu s finančním zázemím"
+    },
+    "lossResistance": false,
+    "marginTrading": false,
+    "riskCapacity": {
+        "value": 500000005,
+        "label": "vysoká, není v souladu s finančním zázemím vzhledem k oč. kolísání - nízká"
+    },
+    "riskTolerance": {
+        "value": 500000001,
+        "label": "4"
+    },
+    "riskWillingness": {
+        "value": 500000004,
+        "label": "nízká, není v souladu s očekáváním klienta"
+    }
+  }
+}

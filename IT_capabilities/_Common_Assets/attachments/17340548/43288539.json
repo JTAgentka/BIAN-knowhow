@@ -1,0 +1,79 @@
+{
+  "title": "Card Status",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "description": "Card Status",
+  "type": "object",
+  "required": [
+    "institutionId",
+    "aPan",
+    "pPan",
+    "aCardExpiration",
+    "pCardExpiration",
+    "oldCardStatus",
+    "newCardStatus",
+    "changeTime"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Correlation identifier"
+    },
+    "institutionId": {
+      "type": "string",
+      "title": "institutionId",
+      "description": "Institution Id of bank which issue the card"
+    },
+    "aPan": {
+      "type": "string",
+      "title": "cardNumber",
+      "description": "Card number on card which status have changed. CardNumber and MbrNum together are unique key"
+    },
+    "pPan": {
+      "type": "string",
+      "title": "cardNumber",
+      "description": "Card number on card which status have changed. CardNumber and MbrNum together are unique key"
+    },
+    "aCardExpiration": {
+      "type": "string",
+      "title": "cardExpiration",
+	  "minLength": 4,
+	  "maxLength": 4,
+      "description": "Card expiration - MMYY format"
+    },
+    "pCardExpiration": {
+      "type": "string",
+      "title": "cardExpiration",
+      "minLength": 4,
+      "maxLength": 4,
+      "description": "Card expiration - MMYY format"
+    },
+    "oldCardStatus": {
+      "type": "string",
+      "title": "oldCardStatus",
+      "description": "Old card status"
+    },
+    "newCardStatus": {
+      "type": "string",
+      "title": "newCardStatus",
+      "description": "New card status"
+    },
+    "changeTime": {
+      "title": "changeTime",
+      "description": "Message generation timestamp",
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "source",
+      "description": "Source of the Indicates system in which change was performed"
+    }
+  }
+}

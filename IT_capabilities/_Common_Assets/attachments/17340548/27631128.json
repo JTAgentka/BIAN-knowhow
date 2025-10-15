@@ -1,0 +1,181 @@
+{
+  "title": "InstrumentMarketPriceDaily",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Kurzy CP denni; Topic bude obsahovat OHLC kurzove ceny CP (pro vsechny CP, ktere jsou v JTB evidovany) z burzy na konci obchodniho dne.",
+  "type": "object",
+  "required": [
+    "instrumentId",
+    "marketId",
+    "validityDate",
+    "businessChangeDate",
+    "status",
+    "isin"
+  ],
+  "properties": {
+    "X-Correlation-ID": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "X-Correlation-ID",
+      "description": "Correlation identifier"
+    },
+    "instrumentId": {
+      "type": "integer",
+      "title": "instrumentId",
+      "description": "ID instrumentu / CP"
+    },
+    "marketId": {
+      "type": "string",
+      "title": "marketId",
+      "description": "identifikace trhu - zkratka burzy. Pro podrobnejsi info je mozne novy topic s ciselnikem trhu. Zjistuje eBroker, pres jakou hodnotu se na detail dostaneme."
+    },
+    "datafeedId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "datafeedId",
+      "description": "identifikace datafeedu"
+    },
+    "validityDate": {
+      "type": "string",
+      "format": "date",
+      "title": "validityDate",
+      "description": "Datum platnosti oteviraci ceny/zaviraci ceny z burzy ve formatu DATE"
+    },
+    "businessChangeDate": {
+      "type": "string",
+      "format": "date-time",
+      "title": "businessChangeDate",
+      "description": "Datum a cas posledni zmeny ceny v CCP"
+    },
+    "status": {
+      "type": "string",
+      "title": "status",
+      "enum": [
+        "active",
+        "deleted"
+      ],
+      "description": "Stav businessove platnosti entity active - aktivni , deleted - info o zrusenem zaznamu"
+    },
+    "isin": {
+      "type": "string",
+      "title": "isin",
+      "description": "Pro moznost vyhledani v PK. Do budoucna bude stacit instrument_id."
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "title": "currency",
+      "description": "Mena pro cenu"
+    },
+    "nominalValue": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "nominalValue",
+      "description": "Ceny pro Amortizovane dluhopisy - zalezi od zpusobu vyporadani instrumentu (standard T+2, ale muze byt taky T+3) - podle logiky ocenovani portfolia (novy pozadavek ze schuzky 24.3.2022 - info doda p.Obrcian). "
+    },
+    "openPrice": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "openPrice",
+      "description": "Oteviraci kurzova cena z burzy"
+    },
+    "lowPrice": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "lowPrice",
+      "description": "Low value kurzovni cena za obchodni den (close_date)."
+    },
+    "highPrice": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "highPrice",
+      "description": "High value kurzovni cena za obchodni den (close_date)"
+    },
+    "closePrice": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "closePrice",
+      "description": "akcie, dluhopisy, inv.certifikaty - hodnota zaviraci kurzove ceny CP v mene obchodovani (na konci dne) fond - aktualni hodnota fondu na konci dne. "
+    },
+    "buyQuantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "buyQuantity",
+      "description": "eBroker - Mame jen celkovy a jen u nekterych zdroju. Nikdy nemame zaroven Quantity a Volume."
+    },
+    "sellQuantity": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "sellQuantity",
+      "description": "eBroker - Mame jen celkovy a jen u nekterych zdroju. Nikdy nemame zaroven Quantity a Volume."
+    },
+    "buyVolume": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "buyVolume",
+      "description": "eBroker - Mame jen celkovy a jen u nekterych zdroju. Nikdy nemame zaroven Quantity a Volume."
+    },
+    "sellVolume": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "sellVolume",
+      "description": "eBroker - Mame jen celkovy a jen u nekterych zdroju. Nikdy nemame zaroven Quantity a Volume."
+    },
+    "prevClosePrice": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "prevClosePrice",
+      "description": "Zaviraci kurzova cena z predchoziho dne "
+    },
+    "prevCloseDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "title": "prevCloseDate",
+      "description": "Datum zaviraci ocenovaci cena CP z predchoziho obchodniho dne "
+    },
+    "closeChangeAbs": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "changeValue",
+      "description": "hodnota zmeny zaviraci kurzove ceny vuci zaviraci cenne (closePrice/lastClosePrice) predchoziho dne v mene CP"
+    },
+    "closeChangePct": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "title": "changeValuePerc",
+      "description": "procentualni vyjadreni zmeny zaviraci kurzove ceny vuci zaviraci kurzove cenne (closePrice/lastClosePrice) predchoziho obchodniho dne v mene CP"
+    }
+  }
+}

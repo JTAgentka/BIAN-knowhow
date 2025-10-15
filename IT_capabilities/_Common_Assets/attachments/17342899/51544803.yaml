@@ -1,0 +1,163 @@
+openapi: 3.0.0
+info:
+  title: Cancellation of Client Disponent Bond 
+  version: 1.0.0
+
+paths:
+  /cancelClientDisponentBond:
+    put:
+      summary: Cancellation of Client Disponent Bond
+      operationId: cancelClientDisponentBond
+      parameters:
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          description: "Correlation identifier for request and response pairing."
+          schema:
+            $ref: "#/components/schemas/X-Correlation-ID"        
+        - name: traceparent
+          in: header
+          required: true
+          description: "Tracing parameter according to W3C Trace Context standard."
+          schema:
+            $ref: "#/components/schemas/traceparent"
+      requestBody:
+        description: The request body for cancelling the client/disponent bond
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cancelSezam:
+                  type: boolean
+                klientId:
+                  type: string
+                disponentId:
+                  type: string
+                lokace:
+                  type: string
+              required:
+                - cancelSezam
+                - klientId
+                - disponentId
+                - lokace
+      responses:
+        '204':
+          description: OK
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+        '400':
+          description: Bad Request
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '404':
+          description: Not Found
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '500':
+          description: Internal Server Error
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '503':
+          description: Service Unavailable
+          headers:
+            X-Correlation-ID:
+              $ref: "#/components/headers/X-Correlation-ID"
+            traceparent:
+              $ref: "#/components/headers/traceparent"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Error:
+      required:
+        - "code"
+        - "message"
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+          description: "RFC 7231 error code"
+          example: "503"
+        message:
+          type: string
+          description: "The content of the attribute is a combination of a generally defined error and a description of a generally defined error according to the type and sensitivity of the service."
+          example: "Bad Request"
+        timestamp:
+          type: string
+          description: "Date and time of the error according to RFC5424"
+          example: "2022-08-24T05:14:15+02:00"
+        index:
+          type: string
+          description: "Contains information about the X-Correlation-ID or Elastic Search index"
+          example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+        internal:
+          type: object
+          properties:
+            code:
+              type: string
+              description: "Internal error code according to the application / system which is the service provider."
+              example: "1092092"
+            message:
+              type: string
+              description: "Internal description of the error according to the application / system which is the service provider."
+              example: "Daily limit is exceeded."
+    X-Correlation-ID:
+      description: "Correlation identifier for request and response pairing."
+      type: string
+      example: "4adde395-ebef-4552-bd39-cbdaf63305a9"
+    traceparent:
+      description: "Tracing parameter according to W3C Trace Context standard."
+      type: string
+      maxLength: 55
+      example: "00-0af7651916cd43dd8448eb211c80319c-b7ad6b7169203331-01"
+  headers:
+    X-Correlation-ID:
+      required: true
+      schema:
+        $ref: "#/components/schemas/X-Correlation-ID"
+    traceparent:
+      required: true
+      schema:
+        $ref: "#/components/schemas/traceparent"
+  parameters:
+    X-Correlation-ID:
+      name: X-Correlation-ID
+      in: header
+      required: true
+      schema:
+        $ref: "#/components/schemas/X-Correlation-ID"
+    traceparent:
+      name: traceparent
+      in: header
+      required: true
+      schema:
+        $ref: "#/components/schemas/traceparent"
