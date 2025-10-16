@@ -1,0 +1,58 @@
+### Promotional Events
+
+#### role_definition
+
+Develop and execute promotional events covering brand development and advertizing. This can include participation in sporting/entertainment events or more general promotional activity
+
+#### core_business_object
+
+Promotional Event (object_26.html?object=31724)
+
+#### key_features
+
+- Track market/competitor activity in promotional events
+- Assess fit of promotional event sponsorship opportunities
+- Direct the participation in promotional events
+
+#### example_of_use
+
+Business development reviews market research to select promotional events to sponsor to support the bank brand and enhance market awareness
+
+#### triggered_by
+
+- Market research findings
+- Promotional event opportunities
+- Brand development requirements
+- Competitor promotional activities
+
+#### triggers
+
+- Promotional event participation plans
+- Market tracking activities
+- Impact assessments
+- Event management plan creation
+
+#### list_of_scenarios
+
+- Request manual intervention in the market tracking
+- Update details of the market tracking activity
+- Update the event participation schedule
+- Retrieve details about the market tracking activity
+- Create promotional event participation plan
+- Obtain a permission grant against the plan
+- Execute an automated task for the tracking activity
+- Update details of the promotional event management plan
+- Request manual intervention to an impact assessment
+- Retrieve details about the promotional event management plan
+- Execute an automated action for an impact assessment
+- Request manual intervention to the schedules
+- Create and invoke the promotional event management plan
+- Create an impact assessment of the promotional event activity
+- Retrieve details about promotional event participation activity
+- Request manual intervention in the event plan
+- Update details of promotional event impact assessment
+- Retrieve details about promotional event impact assessment activity
+
+#### api_bian_portal_link
+
+https://app.swaggerhub.com/apis/BIAN-3/PromotionalEvents/12.0.0
