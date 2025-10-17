@@ -51,94 +51,14 @@ An established customer transfers an amount from their current account to an ove
 #### api_bian_portal_link
 Payment Initiation API (https://app.swaggerhub.com/apis/BIAN-3/PaymentInitiation/12.0.0)
 
----
-
-### Direct Debit
-
-#### role_definition
-This service domain processes the creditor side of direct debit processing. Typically a creditor will submit a batch of direct debit requests. The process checks the required service mandates are in place and initiates the payment processing. It tracks payment and reports on completion or other processing issues that might arise (such as insufficient funds available).
-
-#### core_business_object
-Direct Debit Instruction (object_26.html?object=31882)
-
-#### key_features
-- Confirm direct debit mandates are in place
-- Confirm funds available
-- Initiate direct debit payment
-- Track direct debit (include customer acceptance if required)
-- Report on direct debit processing
-
-#### example_of_use
-A corporate customer submits a batch of direct debit instructions for customers with accounts held at the bank
-
-#### triggered_by
-- Payment Initiation (object_20.html?object=29967)
-- Servicing Order (object_21.html?object=32295)
-- Direct Debit (object_21.html?object=32677)
-- Correspondent Bank Operations (object_21.html?object=32729)
-- ACH Operations (object_21.html?object=36614)
-- Direct Debits Service (object_21.html?object=38821)
-- Credit Card (object_22.html?object=40448)
-- Customer Billing (object_20.html?object=42033)
-
-#### triggers
-- Direct Debit (object_21.html?object=32677)
-- Correspondent Bank Operations (object_21.html?object=32729)
-- Correspondence (object_20.html?object=32927)
-- Payment Order (object_21.html?object=35550)
-- ACH Operations (object_21.html?object=36614)
-- Direct Debit Mandate (object_22.html?object=46204)
-- Regulatory Compliance (object_22.html?object=46420)
-
-#### list_of_scenarios
-- Handle Request for Refund of Incoming Direct Debit at Debtor Bank (views/view_55452.html)
-- Handle Request for Refund of Internal Direct Debit (views/view_55239.html)
-- Process Receipt of Payment for Outgoing Direct Debit at Creditor Bank (views/view_55676.html)
-- Handle Request from Debtor to Debtor Bank for Advance Refusal of Direct Debit Collection (views/view_55681.html)
-- Process Request from Debtor Bank for Refund of Unauthorised Transaction at Creditor Bank (views/view_55690.html)
-- Process Request from Creditor to Creditor Bank for Reversal of Direct Debit Collection (views/view_55693.html)
-- Process Response from Creditor Bank for Refund of Unauthorised Transaction at Debtor Bank (views/view_55687.html)
-- Handle Request for Refund of Unauthorised Incoming Direct Debit at Debtor Bank (views/view_54934.html)
-- Process Incoming Direct Debit Reversal at Debtor Bank (views/view_54796.html)
-- Process Request for Refund of Outgoing Direct Debit at Creditor Bank (views/view_54637.html)
-- Process Rejection Message for Outgoing Direct Debit at Creditor Bank (views/view_54628.html)
-- Process Loans Instalments (views/view_54986.html)
-- Process Internal Direct Debit Request from Creditor at Creditor Bank (views/view_54607.html)
-
-#### api_bian_portal_link
-Direct Debit API (https://app.swaggerhub.com/apis/BIAN-3/DirectDebit/12.0.0)
-
----
-
-### Accounts Receivable
-
-#### role_definition
-Manage the tracking, chasing and receipt of scheduled payments against issued invoices. For the significant majority accounts are likely to be settled in compliance with established arrangements. For late payment the Service Domain includes actions to negotiate with the customer and handle defaulted payments
-
-#### core_business_object
-Invoice (object_26.html?object=35368)
-
-#### key_features
-- Account assessment
-- Account owner contact
-- Account payment processing
-- Account writedown or recovery initiation
-- Delinquent account resolution (re-instated or passed to collections)
-
-#### example_of_use
-A product business unit submits an invoice to a customer for services rendered that requires customer payment from an account not managed by the bank.
-
-#### triggered_by
-[]
-
-#### triggers
-[]
-
-#### list_of_scenarios
-[]
-
-#### api_bian_portal_link
-Accounts Receivable API (https://app.swaggerhub.com/apis/BIAN-3/AccountsReceivable/12.0.0)
+##### IT details
+- REST APIs:  validatePayment
+- Key API Operations: FE validation controls (valid IBAN, ...)
+- Event Streams:  
+- Core System: DKCZ/DKSK
+- Data Objects:  PaymentOrder
+- Key Systems flow: DKCZ/DKSK -> ESBW -> PTS
+- Data Quality: 
 
 ---
 
@@ -253,6 +173,15 @@ A customer transaction results in the generation of a payment order to transfer 
 #### api_bian_portal_link
 Payment Order API (https://app.swaggerhub.com/apis/BIAN-3/PaymentOrder/12.0.0)
 
+##### IT details
+- REST APIs:  PTSCZStandingOrders, PTSSKStandingOrders, PTSCZPayments, PTSSKPayments
+- Key API Operations: Create/Modify/Cancel/Validate/Get Payment (Standing) Order
+- Event Streams:  JTB-CZ_PAYMENTS_STANDING-ORDER_EVENT_GNR, JTB-SK_PAYMENTS_STANDING-ORDER_EVENT_GNR, JTB-CZ_PAYMENTS_PAYMENT_EVENT_GNR, JTB-SK_PAYMENTS_PAYMENT_EVENT_GNR
+- Core System: PTSCZ and PTSSK
+- Data Objects:  StandingOrder, PaymentOrder > DMCT (domestic), DICT (domestic instant), ESCT (SEPA), EXCT (cross-border EEP), IBCT (internal), NXCT (cross-border non-EEP), XBCT (cross-border)
+- Key Systems flow: DKCZ/DKSK → PTS ↔ BISQ → DKCZ, DKSK
+- Data Quality: 
+
 ---
 
 ### Payment Execution
@@ -322,6 +251,15 @@ Funds are transferred from a customer's account with the bank to a payee account
 #### api_bian_portal_link
 Payment Execution API (https://app.swaggerhub.com/apis/BIAN-3/PaymentExecution/12.0.0)
 
+##### IT details
+- REST APIs:  batch integration
+- Key API Operations: Create/Modify/Cancel/Validate/Get Payment (Standing) Instruction
+- Event Streams:  batch integration
+- Core System: PTSCZ and PTSSK
+- Data Objects:  StandingOrder, PaymentOrder > DMCT (domestic), DICT (domestic instant), ESCT (SEPA), EXCT (cross-border EEP), IBCT (internal), NXCT (cross-border non-EEP), XBCT (cross-border)
+- Key Systems flow:  PTS ↔ BISQ 
+- Data Quality: 
+
 ---
 
 ### Transaction Engine
@@ -352,6 +290,41 @@ The mortgage fulfillment Service Domain delegates repayment processing to the Tr
 
 #### api_bian_portal_link
 Transaction Engine API (https://app.swaggerhub.com/apis/BIAN-3/TransactionEngine/12.0.0)
+
+##### IT details
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams:  
+            JTB-CZ_POSITION-KEEPING_CRD-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_CRD-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_TLM-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_TLM-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_GEN-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_GEN-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_FCP-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_FCP-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_LCP-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_LCP-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_CTI-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_CTI-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_CRD-RES-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_CRD-RES-TRANSACTION_EVENT_GNR,
+            JTB-CZ_POSITION-KEEPING_SEPA-RES-TRANSACTION_EVENT_GNR,
+            JTB-SK_POSITION-KEEPING_SEPA-RES-TRANSACTION_EVENT_GNR
+- Core System: 
+- Data Objects:  
+            Transaction - Base transaction entity with common attributes across all transaction types,
+            CRD Transaction (Card Transactions) - Real-time publication, of payment card deposit and withdrawal transactions,
+            TLM Transaction - Terminal-based transaction events,
+            GEN Transaction - General banking transaction events,
+            FCP Transaction - (Fees/Charges Processing),
+            LCP Transaction - Loan and credit transaction events,
+            CTI Transaction - Cross-transaction and internal transfer events,
+            CRD-RES Reservation - Card transaction reservations,
+            SEPA Reservation - SEPA transactions 
+- Key Systems flow: PTS ↔ BISQ → DKCZ, DKSK
+- Data Quality: Questor CZ and Questor SK
 
 ---
 
@@ -415,33 +388,74 @@ Disbursement API (https://app.swaggerhub.com/apis/BIAN-3/Disbursement/12.0.0)
 
 ---
 
-### Cheque Lock Box
+### Direct Debit
 
 #### role_definition
-A service where the bank handles paper cheques on behalf of a corporate customer in order to expedite processing
+This service domain processes the creditor side of direct debit processing. Typically a creditor will submit a batch of direct debit requests. The process checks the required service mandates are in place and initiates the payment processing. It tracks payment and reports on completion or other processing issues that might arise (such as insufficient funds available).
 
 #### core_business_object
-Lock Box Facility
+Direct Debit Instruction (object_26.html?object=31882)
 
 #### key_features
-[]
+- Confirm direct debit mandates are in place
+- Confirm funds available
+- Initiate direct debit payment
+- Track direct debit (include customer acceptance if required)
+- Report on direct debit processing
 
 #### example_of_use
-A batch of checks are processed for a corporate customer with a lock box payment facility
+A corporate customer submits a batch of direct debit instructions for customers with accounts held at the bank
 
 #### triggered_by
-[]
+- Payment Initiation (object_20.html?object=29967)
+- Servicing Order (object_21.html?object=32295)
+- Direct Debit (object_21.html?object=32677)
+- Correspondent Bank Operations (object_21.html?object=32729)
+- ACH Operations (object_21.html?object=36614)
+- Direct Debits Service (object_21.html?object=38821)
+- Credit Card (object_22.html?object=40448)
+- Customer Billing (object_20.html?object=42033)
 
 #### triggers
-[]
+- Direct Debit (object_21.html?object=32677)
+- Correspondent Bank Operations (object_21.html?object=32729)
+- Correspondence (object_20.html?object=32927)
+- Payment Order (object_21.html?object=35550)
+- ACH Operations (object_21.html?object=36614)
+- Direct Debit Mandate (object_22.html?object=46204)
+- Regulatory Compliance (object_22.html?object=46420)
 
 #### list_of_scenarios
-[]
+- Handle Request for Refund of Incoming Direct Debit at Debtor Bank (views/view_55452.html)
+- Handle Request for Refund of Internal Direct Debit (views/view_55239.html)
+- Process Receipt of Payment for Outgoing Direct Debit at Creditor Bank (views/view_55676.html)
+- Handle Request from Debtor to Debtor Bank for Advance Refusal of Direct Debit Collection (views/view_55681.html)
+- Process Request from Debtor Bank for Refund of Unauthorised Transaction at Creditor Bank (views/view_55690.html)
+- Process Request from Creditor to Creditor Bank for Reversal of Direct Debit Collection (views/view_55693.html)
+- Process Response from Creditor Bank for Refund of Unauthorised Transaction at Debtor Bank (views/view_55687.html)
+- Handle Request for Refund of Unauthorised Incoming Direct Debit at Debtor Bank (views/view_54934.html)
+- Process Incoming Direct Debit Reversal at Debtor Bank (views/view_54796.html)
+- Process Request for Refund of Outgoing Direct Debit at Creditor Bank (views/view_54637.html)
+- Process Rejection Message for Outgoing Direct Debit at Creditor Bank (views/view_54628.html)
+- Process Loans Instalments (views/view_54986.html)
+- Process Internal Direct Debit Request from Creditor at Creditor Bank (views/view_54607.html)
 
 #### api_bian_portal_link
-Cheque Lock Box API (https://app.swaggerhub.com/apis/BIAN-3/ChequeLockBox/12.0.0)
+Direct Debit API (https://app.swaggerhub.com/apis/BIAN-3/DirectDebit/12.0.0)
+
+##### IT details
+- REST APIs: PTSSKDirectDebitMandate, PTSCZDirectDebitMandate 
+- Key API Operations: Create Direct Debit Mandate, Modify Direct Debit Mandate, Cancel Direct Debit Mandate, Validate DDM, Get DDM Status
+- Event Streams:  JTB-SK_PAYMENTS_DDM_EVENT_GNR 
+- Core System: PTSCZ and PTS SK
+- Data Objects:  DirectDebitMandate, MandateStatus, CreditorInformation, DebtorInformation
+- Key Systems flow: DKCZ, DKSK → ESB WSO2 → PTS → EI KAFKA →  DKCZ, DKSK
+- Data Quality: 
+
 
 ---
+
+
 
 ### Direct Debit Mandate
 

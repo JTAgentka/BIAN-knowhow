@@ -41,6 +41,18 @@ A tracking service notifies the bank that one of its issued authentication devic
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/IssuedDeviceTracking/12.0.0
 
+##### IT details
+- REST APIs:  Card
+- Key API Operations: 
+    STav karty
+- Event Streams:  
+    JTB-CZ_CARDS_CARD-STATUS_SYNC_GNR
+    JTB-SK_CARDS_CARD-STATUS_SYNC_GNR
+- Core System: NEXI, Card Gateway 
+- Data Objects:  CardLimit
+- Key Systems flow: NEXI -> CGW -> ESBW -> QST -> EI KAFKA -> DKCZ/DKSK
+- Data Quality: poor - multiple hops with asyn and sync integration. Make very difficult to rely on data.
+
 ---
 
 ### Issued Device Administration
@@ -136,93 +148,19 @@ A card is cancelled and a replacement card is generated and issued for a custome
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/IssuedDeviceAdministration/12.0.0
 
----
 
-### Cheque Processing
+##### IT details
+- REST APIs:  CardDetail, CardLimit, Card
+- Key API Operations: 
+    Detail karty, Změna limitu na kartě, Nastavení 3DS kontaktu, Bezkontaktní funkce (kontaktless on/off), Tokenizace karty (Apple Pay, Google Pay)
+- Event Streams:  
+    JTB-CZ_CARDS_CARD-LIMIT_SYNC_GNR
+    JTB-SK_CARDS_CARD-LIMIT_SYNC_GNR
+    JTB-CZ_CARDS_CARD-TOKEN_SYNC_GNR
+    JTB-SK_CARDS_CARD-TOKEN_SYNC_GNR
+- Core System: NEXI, Card Gateway 
+- Data Objects:  CardLimit
+- Key Systems flow: NEXI -> CGW -> ESBW -> QST -> EI KAFKA -> DKCZ/DKSK
+- Data Quality: poor - multiple hops with asyn and sync integration. Make very difficult to rely on data.
 
-#### role_definition
-This service domains handles the processing of paper checks, performing the necessary checks and extracting the transaction details required to create a payment transaction record stream. This includes MICR number processing and character recognition facilities
 
-#### core_business_object
-Not specified
-
-#### key_features
-- Paper cheque scanning and content verification
-- Cancelled cheque identification
-- Financial transaction generation
-
-#### example_of_use
-A batch of paper cheques captured at a merchant location is processed to initiate settlement processing
-
-#### triggered_by
-- Not explicitly specified
-
-#### triggers
-- Not explicitly specified
-
-#### list_of_scenarios
-- Not explicitly specified in the document
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/ChequeProcessing/12.0.0
-
----
-
-### Card Terminal Administration
-
-#### role_definition
-This service domain is responsible for the allocation of the Point of Sale Terminal of Authorization Link interface to the Merchant, configuring and activating the device or interface, and managing its ongoing status, including replacement of faulty devices or interfaces. The Acquiring Bank configures the terminal or the interface to meet the specific requirements of the Merchant depending on the merchant type, risk and other terms and conditions.
-
-#### core_business_object
-Card POS Device Allocation (object_26.html?object=44298)
-
-#### key_features
-- POS inventory administration
-- Merchant POS/Interface registration/configuration
-- Merchant POS/Interface status maintenance
-
-#### example_of_use
-A Merchant is assigned one or more devices or interfaces for processing Card Charge authorization and submission when an Acquiring Bank sets up a new Merchant Account. (Note this can involve a Point of Sale Terminal or an Authorization Link interface to the merchant's own cash register system).
-
-#### triggered_by
-- Card Terminal Operation (object_22.html?object=45274)
-
-#### triggers
-- Not explicitly specified
-
-#### list_of_scenarios
-- Authorise Card Use by Acquirer (views/view_55588.html)
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/CardTerminalAdministration/12.0.0
-
----
-
-### Bank Drafts
-
-#### role_definition
-This Service Domain handles the pricing and issuance of various forms of bank guaranteed payment vehicles, including bank drafts, wire transfers, certified checks and travelers checks. The transaction combines extracting the principal amount and fees from the buyer's account and creating and registering the physical bearer document using any suitable media and security mechanisms. The bank guaranteed funds are held on a holding account pending the deposit of the draft by the payee.
-
-#### core_business_object
-Not explicitly specified
-
-#### key_features
-- Agree mechanism and terms for the bank guaranteed payment
-- Calculate and obtain payment from the payer
-- Generate and register the bearer document
-- Process remittance of the bearer document
-
-#### example_of_use
-A customer purchases a bank draft in order to meet the requirements of a merchant from which they wish to make a major purchase
-
-#### triggered_by
-- Not explicitly specified
-
-#### triggers
-- Not explicitly specified
-
-#### list_of_scenarios
-- Not explicitly specified in the document
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/BankDrafts/12.0.0

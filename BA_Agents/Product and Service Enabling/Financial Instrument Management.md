@@ -2,126 +2,6 @@
 
 ## Service Domains
 
-### ATM Network Operations
-
-#### role_definition
-This service domain handles all automated aspects of operating the ATM network. This includes tracking the movement of cash and documents through the network and its ATM devices. It also handles the detection and response to device errors and alerts, including overseeing the physical movement of cash and documents and the handling of device alerts and outages
-
-#### core_business_object
-ATM Network Operations (object_37.html?object=43392)
-
-#### key_features
-- Handle the distribution/deposit of cash through the ATM network
-- Handle the capture and generation of ATM transaction related documentation
-- Detect and respond to ATM device errors and outages
-
-#### example_of_use
-A bank tracks the distribution and retrieval of cash inventory across its ATM network of operations
-
-#### triggered_by
-- ATM Network Management
-
-#### triggers
-(None specified)
-
-#### list_of_scenarios
-- Review ATM Float and Outage
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/ATMNetworkOperations/12.0.0
-
----
-
-### Branch Currency Distribution
-
-#### role_definition
-This service domain handles the scheduling and secure distribution of currency throughout the branch network (for bank branches and remote ATM locations). It ensures the required float is maintained at locations and undertakes the movement into and out of central currency holding facilities as necessary to ensure cash availability
-
-#### core_business_object
-Cash Distribution Procedure
-
-#### key_features
-- Distribution vehicle fleet administration
-- Distribution planning and scheduling
-- Distribution activity monitoring and control
-- Central cash access coordination
-
-#### example_of_use
-ATMs at a branch location are stocked with currency in response to anticipated customer demand
-
-#### triggered_by
-- Central Cash Handling
-
-#### triggers
-- Servicing Event History
-- Branch Location Operations
-
-#### list_of_scenarios
-- Process Inventory of Cash and Distribution of Cash to Branches
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN3/BranchCurrencyDistribution/12.0.0
-
----
-
-### Branch Currency Management
-
-#### role_definition
-This service domain is responsible for tracking the available cash (currency) inventory held and distributed within the Branch location to teller and ATM positions, to ensure adequate float is always available at all positions. Also to check balances and see that excess cash is transferred to secure central storage as appropriate. If necessary specific criteria can be selected to refine the allocation
-
-#### core_business_object
-Branch Currency Management (object_38.html?object=48818)
-
-#### key_features
-- Cash inventory usage and availability tracking
-- Branch cash inventory requirements evaluation and planning
-- Oversight of cash availability and movements within the branch
-
-#### example_of_use
-The branch management reviews the available float and confirms end of day balances at the teller positions
-
-#### triggered_by
-- ATM Network Management
-
-#### triggers
-(None specified)
-
-#### list_of_scenarios
-- Review ATM Float and Outage
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/BranchCurrencyManagement/12.0.0
-
----
-
-### Central Cash Handling
-
-#### role_definition
-This service domain is responsible for tracking the available cash inventory held centrally and distributed/collected throughout the branch/ATM network and making allocation/redistribution requests to ensure adequate float is available at all locations and that excess cash at any location is transferred to central secure locations as appropriate. Also coordinating with other banks and central banks to ensure sufficient cash is on hand to support the branch network requirements
-
-#### core_business_object
-Central Cash Allocation
-
-#### key_features
-- Cash inventory usage and availability tracking
-- Cash inventory requirements evaluation and planning
-- Cash float availability and allocation oversight
-
-#### example_of_use
-The central cash management function reviews the current and projected available float at locations across the network to ensure adequate supply to meet projected demand
-
-#### triggered_by
-- Branch Location Operations
-
-#### triggers
-- Branch Currency Distribution
-
-#### list_of_scenarios
-- Process Inventory of Cash and Distribution of Cash to Branches
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN3/CentralCashHandling/12.0.0
-
 ---
 
 ### Corporate Action
@@ -153,6 +33,15 @@ A bank processes the required custody adjustments for customers holding security
 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/CorporateAction/12.0.0
+
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams:  JTB-HQ_INVESTMENT_INSTRUMENT-EVENT_STREAM_GNR
+- Core System: CCP
+- Data Objects: Instrument Event 
+- Key Systems flow: Bloomber -> CCP -> EI Kafka -> DKCZ/DKSK 
+- Data Quality: 
 
 ---
 
@@ -187,6 +76,15 @@ A non-bank customer obtains a currency exchange at the teller, buying foreign cu
 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/CurrencyExchange/12.0.0
+
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams:  JTB-HQ_EXCHANGE-RATES_FXRATES_INSTANT_STREAM_GNR - instantní s časovou složkou, JTB-HQ_EXCHANGE-RATES_FXRATES_DAILY_STREAM_GNR - denní 
+- Core System: CCP
+- Data Objects: FxRate record (denní, instantní) 
+- Key Systems flow: CCP -> EI Kafka -> DKCZ/DKSK
+- Data Quality: HIGH
 
 ---
 
@@ -289,6 +187,17 @@ A corporate financial advisory project references different instrument specifica
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN3/FinancialInstrumentReferenceDataManagement/12.0.0
 
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams: JTB-HQ_INVESTMENT_INSTRUMENT_STREAM_GNR, JTB-HQ_INVESTMENT_MARKET_DEPTH_STREAM_GNR
+- Core System: CCP
+- Data Objects:
+    Instrument - statické udaje o finančních instrumentech
+    Market Depth - hloubka trhu pro sledování liqudity 
+- Key Systems flow: STAHOVALDA -> CCP -> EI KAFKA -> DKCZ/DKSK
+- Data Quality: Poor - duplicates entries with ProdKat (například směnky jsou řešeny jinak než ostatní Cenné papíry)
+
 ---
 
 ### Financial Instrument Valuation
@@ -318,6 +227,26 @@ The assets held in an investment portfolio are subject to valuation as part of a
 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN3/FinancialInstrumentValuation/12.0.0
+
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams: 
+    JTB-HQ_INSTRUMENT_MARKET_PRICE_INSTANT_STREAM_GNR
+    JTB-HQ_INSTRUMENT_MARKET_PRICE_DELAYED_STREAM_GNR
+    JTB-HQ_INSTRUMENT_MARKET_PRICE_DAILY_STREAM_GNR
+    JTB-HQ_INSTRUMENT_VALUE_PRICE_INSTANT_STREAM_GNR
+    JTB-HQ_INSTRUMENT_VALUE_PRICE_DELAYED_STREAM_GNR
+    JTB-HQ_INSTRUMENT_VALUE_PRICE_DAILY_STREAM_GNR
+    
+- Core System: CCP
+- Data Objects: 
+    Market Price - InstrumentMarketPriceInstant, InstrumentMarketPriceInstantDelayed and  InstrumentMarketPriceDaily - kurzové ceny cenných papírů placené, zpožděné free a denní.
+    Instrument Price  - InstrumentValuePriceInstant, InstrumentValuePriceInstantDelayed and  InstrumentValuePriceDaily -    oceňovací ceny z vodopádu cen se/bez zpožděných o 15 min (free) cenných papírů placené, zpožděné free a denní (závěrkové ceny]).
+    Instrument Performance Market Price  - InstrumentPerformanceMarketPriceDaily -    oceňovací ceny z výkonosti cenného papíru v času k uzávěrce. 
+    
+- Key Systems flow: STAHOVALDA -> CCP -> EI KAFKA -> DKCZ/DKSK
+- Data Quality: Poor - duplicates entries with ProdKat (například směnky jsou řešeny jinak než ostatní Cenné papíry)
 
 ---
 

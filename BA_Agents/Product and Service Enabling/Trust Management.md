@@ -1,4 +1,4 @@
-### Trust Services
+### Trust Account Maintanance 
 
 #### role_definition
 Provide trust services for high value customers, including asset maintenance, court administration, tax and expense handling, asset management and estate, inheritance and income tax processing
@@ -27,32 +27,12 @@ Not available in source data
 #### api_bian_portal_link
 Trust Services API (https://app.swaggerhub.com/apis/BIAN-3/TrustServices/12.0.0)
 
----
+##### IT details
+- REST APIs:  
+- Key API Operations: 
+- Event Streams:  
+- Core System: Assets
+- Data Objects: Estate assets 
+- Key Systems flow: 
+- Data Quality: 
 
-### Corporate Trust Services
-
-#### role_definition
-Provide corporate trust services focused on the independent/fiduciary handling of a broad range of possible corporate debt instruments with investors and supporting escrow account arrangements as necessary
-
-#### core_business_object
-Not available in source data
-
-#### key_features
-- Administer financial reporting with bond investors
-- Resolve investor issues as an objective/independent party
-- Establish and maintain supporting escrow accounts
-
-#### example_of_use
-A corporate uses the corporate trust services of the bank to manage its investor relations for a major debt issue
-
-#### triggered_by
-Not available in source data
-
-#### triggers
-Not available in source data
-
-#### list_of_scenarios
-Not available in source data
-
-#### api_bian_portal_link
-Corporate Trust Services API (https://app.swaggerhub.com/apis/BIAN3/CorporateTrustServices/12.0.0)

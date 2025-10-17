@@ -212,24 +212,16 @@ A back office unit determines which collateral items are due for a valuation rev
 Consumer loans.
 
 *No JSON file found for this domain*
+##### IT details
+- REST APIs: ClientDocument, clientDocumentReconciliation 
+- Key API Operations: Create/update/delete operations on contract documents (mostly via CRM API calls)
+- Event Streams: JTB-CZ_DOCUMENTS_CLIENT-DOCUMENT_EVENT_GNR, JTB-SK_DOCUMENTS_CLIENT-DOCUMENT_EVENT_GNR 
+- Core System: SHAREPOINT
+- Data Objects: ClientDocument entity with before/after states 
+- Key Systems flow: DKCZ/DKSK -> CRM -> Sharepoint -> EI KAFKA -> DKCZ/DKSK
+- Data Quality: Poor - Statement processing monitored through 12 distinct states
 
 ---
-
-#### Mortgage Loan
-Mortgage loans.
-
-*No JSON file found for this domain*
-
----
-
-#### Collateral Registration
-Collateral registration.
-
-*No JSON file found for this domain*
-
----
-
-## Additional Domain Found
 
 #### Leasing Item Administration
 Track the status of the assets underlying leasing agreements as they represent collateral items that could be accessed in the event of account recovery.

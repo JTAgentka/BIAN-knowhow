@@ -1,34 +1,6 @@
 # Product Management
 
 ## Capabilities Overview
-
-### ATM Network Management
-
-#### role_definition
-Configure the allocation of products and services across the ATM network and oversee ATM access registration & controls
-
-#### core_business_object
-Not specified
-
-#### key_features
-Not specified
-
-#### example_of_use
-A new set of standalone ATM's is installed at an airport and configured with limited services to ensure high availability for cash dispensing
-
-#### triggered_by
-Not specified
-
-#### triggers
-- ATM Network Operations
-- Branch Currency Management
-
-#### list_of_scenarios
-- Review ATM Float and Outage
-
-#### api_bian_portal_link
-Not specified
-
 ---
 
 ### Product Deployment
@@ -281,6 +253,15 @@ Not specified
 #### api_bian_portal_link
 Not specified
 
+##### IT details
+- REST APIs: FeesCalculation
+- Key API Operations: Create, Read, Update, Delete operations for fee calculation rules
+- Event Streams:  
+- Core System: Produktový katalog
+- Data Objects: FeesCalculation with pricing rules, product mappings, and calculation logic
+- Key Systems flow: DKCZ, DKSK  → ESBW → Validation engine  → ProdKat
+- Data Quality: 
+
 ---
 
 ### Product Design
@@ -506,6 +487,27 @@ A customer accesses the product directory to obtain product feature descriptions
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/ProductDirectory/12.0.0
 
+##### IT details
+- REST APIs: getProducts, relevantProduct
+- Key API Operations: Create, Read, Update, Delete operations for product configurations
+- Event Streams:  JTB-HQ_PRODUCTS_PRODUCT_SYNC_GNR 
+- Core System: Produktový katalog
+- Data Objects: Product configuration with filtering attributes (provider, publication place, contract type, segment, service level)
+    - product: Common attributes across all products (union, not intersection)
+    - banking: Attributes common to daily banking products
+    - investment: Attributes common to investment products
+    - currentAccount: Current account specific attributes
+    - mutualFund: Mutual fund specific attributes
+    - termDeposit: Term deposit specific attributes
+    - deposit: Common deposit attributes (term and notice deposits)
+    - noticeDeposit: Notice deposit specific attributes
+    - card: Card product specific attributes
+    - combined: Combined product attributes (banking + investment) 
+- Key Systems flow: 
+    - investment: TA-TOPAS → CCP  → ProdKat → EI KAFKA →  DKCZ, DKSK
+    - banking: Questor  → ProdKat → EI KAFKA →  DKCZ, DKSK
+- Data Quality: 
+
 ---
 
 ### Product Matching
@@ -551,70 +553,14 @@ A customer servicing representative initiates a product matching dialogue after 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/ProductMatching/12.0.0
 
----
-
-### Special Pricing Conditions
-
-#### role_definition
-This service domain allows the bank to apply special pricing terms and conditions that override standard price calculations. These override facilities are to be used in specific situations where a bank level decision is taken to amend prices or pricing terms in response to some major event or business development action
-
-#### core_business_object
-Special Pricing Conditions Directory Entry
-
-#### key_features
-- Capture authorized override bank pricing terms
-- Broadcast special terms to interested parties
-- Confirm terms applied as required in production
-
-#### example_of_use
-The bank suspends certain product fees during a major brand awareness campaign
-
-#### triggered_by
-Not specified
-
-#### triggers
-Not specified
-
-#### list_of_scenarios
-- Special Pricing Conditions SD Overview (views/view_50728.html)
-- BIAN Service Landscape V12.0 Value Chain (views/view_51705.html)
-- BIAN Service Landscape V12.0 Matrix View (views/view_51891.html)
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/SpecialPricingConditions/12.0.0
-
----
-
-### Product Inventory Item Management
-
-#### role_definition
-Maintain the available central product materials inventory in coordination with distribution activities and new product/materials ordering, receipt and warehousing
-
-#### core_business_object
-Product Inventory
-
-#### key_features
-- Maintain product inventory
-- Administer the distribution of inventory
-- Request stock replenishment
-
-#### example_of_use
-Newly developed product inventory is distributed as part of a product deployment project
-
-#### triggered_by
-- Product Deployment
-- Product Design
-
-#### triggers
-- Product Inventory Distribution
-
-#### list_of_scenarios
-- Create New Sales Product Bundle
-- Launch New Sales Product
-- Create New Sales Product Single
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/ProductInventoryItemManagement/12.0.0
+##### IT details
+- REST APIs:  validateProduct
+- Key API Operations: check eligibility of product for customer
+- Event Streams:  
+- Core System: Validační engine
+- Data Objects:  product
+- Key Systems flow: DKCZ/DKSK -> ESBW -> VE
+- Data Quality: 
 
 ---
 
@@ -693,5 +639,26 @@ A bank packages its Current Account product with features suited to students as 
 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/SalesProduct/12.0.0
+
+##### IT details
+- REST APIs: getProducts, relevantProduct
+- Key API Operations: Create, Read, Update, Delete operations for product configurations
+- Event Streams:  JTB-HQ_PRODUCTS_PRODUCT_SYNC_GNR 
+- Core System: Produktový katalog
+- Data Objects: Product configuration with filtering attributes (provider, publication place, contract type, segment, service level)
+    - product: Common attributes across all products (union, not intersection)
+    - banking: Attributes common to daily banking products
+    - investment: Attributes common to investment products
+    - currentAccount: Current account specific attributes
+    - mutualFund: Mutual fund specific attributes
+    - termDeposit: Term deposit specific attributes
+    - deposit: Common deposit attributes (term and notice deposits)
+    - noticeDeposit: Notice deposit specific attributes
+    - card: Card product specific attributes
+    - combined: Combined product attributes (banking + investment) 
+- Key Systems flow: 
+    - investment: TA-TOPAS → CCP  → ProdKat → EI KAFKA →  DKCZ, DKSK
+    - banking: Questor  → ProdKat → EI KAFKA →  DKCZ, DKSK
+- Data Quality: 
 
 ---

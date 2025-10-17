@@ -41,6 +41,26 @@ An investment manager monitoring the markets determines that an identified oppor
 #### api_bian_portal_link
 Investment Portfolio Management API (https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioManagement/12.0.0)
 
+##### IT details
+- REST APIs:  investmentAdvisoryModeling
+- Key API Operations: approve existing modeling or get details of it
+- Event Streams:  
+    JTB-CZ_INVESTMENT_CUSTOM_PROIFLE_SYNC
+    JTB-CZ_INVESTMENT_MODELING_DETAIL_SYNC
+    JTB-CZ_INVESTMENT_MODELING_ORDER_SYNC
+    JTB-CZ_INVESTMENT_MODELING_STARE_AFTER_SYNC
+- Core System: 
+    Investiční poradentsvi
+- Data Objects: 
+    Custom Modeling Profile - individual, standard, and risk level
+    Modeling details - information of rebalancing (assets allocations -  current vs target model)
+    Modeling Orders - collection of orders to rebalance portfolio
+    Target asset allocation - the state after execution of orders 
+- Key Systems flow: DKCZ -> ESBW -> Investicni poradenstvi -> EI Kafka -> DKCZ
+- Data Quality: 
+
+
+
 ---
 
 ### Investment Portfolio Analysis
@@ -108,37 +128,6 @@ Hedge Fund Administration API (https://app.swaggerhub.com/apis/BIAN-3/HedgeFundA
 
 ---
 
-### Unit Trust Administration
-
-#### role_definition
-Unit trusts offer a fixed term investment vehicle for bank customers with terms typically ranging from one to twenty years. Unlike many other types of investment fund the unit trust issues a fixed number of shares and is not actively managed during its term. The fund may exchange severely underperforming assets in rare cases. Investors may be able to exchange shares with other investors within the trust but the fund is essentially 'closed' to the originating investor pool for its full term
-
-#### core_business_object
-Not explicitly mentioned in the document
-
-#### key_features
-- Handle the unit trust's accounting, tax administration and financial reporting needs
-- Package the initial investment for the trust
-- Handle share exchanges between investors in the trust
-- Process management fees
-- Support/oversee all general investor servicing and process middle and back office functions
-
-#### example_of_use
-An investment trust is established and sold to a group of investors
-
-#### triggered_by
-No triggers specified
-
-#### triggers
-No triggers specified
-
-#### list_of_scenarios
-No scenarios specified
-
-#### api_bian_portal_link
-Unit Trust Administration API (https://app.swaggerhub.com/apis/BIAN-3/UnitTrustAdministration/12.0.0)
-
----
 
 ### Mutual Fund Administration
 
@@ -209,3 +198,21 @@ A relationship manager established the investment agreement for a customer that 
 
 #### api_bian_portal_link
 Investment Portfolio Planning API (https://app.swaggerhub.com/apis/BIAN-3/InvestmentPortfolioPlanning/12.0.0)
+
+##### IT details
+- REST APIs:  investmentAdvisoryModeling
+- Key API Operations: approve existing modeling or get details of it
+- Event Streams:  
+    JTB-CZ_INVESTMENT_CUSTOM_PROIFLE_SYNC
+    JTB-CZ_INVESTMENT_MODELING_DETAIL_SYNC
+    JTB-CZ_INVESTMENT_MODELING_ORDER_SYNC
+    JTB-CZ_INVESTMENT_MODELING_STARE_AFTER_SYNC
+- Core System: 
+    Investiční poradentsvi
+- Data Objects: 
+    Custom Modeling Profile - individual, standard, and risk level
+    Modeling details - information of rebalancing (assets allocations -  current vs target model)
+    Modeling Orders - collection of orders to rebalance portfolio
+    Target asset allocation - the state after execution of orders 
+- Key Systems flow: DKCZ -> ESBW -> Investicni poradenstvi -> EI Kafka -> DKCZ
+- Data Quality: 
