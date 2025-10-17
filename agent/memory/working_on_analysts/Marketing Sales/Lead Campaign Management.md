@@ -1,37 +1,3 @@
-### Prospect Campaign Management
-
-#### role_definition
-Oversee the use and assess the coverage and impact of external/prospect campaigns. Direct prospect campaign execution resources to maximize business impact and in response to any identified market opportunities and threats. Oversee campaign design and development activity.
-
-#### core_business_object
-Prospect Campaign (object_26.html?object=40891)
-
-#### key_features
-- Track market/competitor activity
-- Assess customer segment performance/opportunities
-- Assess coverage of prospect campaigns
-- Direct the development of prospect campaigns
-- Direct the execution of prospect campaigns
-
-#### example_of_use
-Prospect Campaign Management identifies competitor activity that is targeting an untapped market segment. Campaign design is initiated to develop a competitive acquisition campaign to address the threat
-
-#### triggered_by
-- Business Development (object_20.html?object=32900)
-- Branch Network Management (object_23.html?object=48774)
-
-#### triggers
-- Prospect Campaign Design (object_22.html?object=39556)
-- Prospect Campaign Execution (object_22.html?object=47050)
-
-#### list_of_scenarios
-- Execute External Campaign (views/view_55170.html)
-- Analyse External Campaign Portfolio Performance (views/view_55338.html)
-- Review Branch Location Performance (views/view_55272.html)
-- Develop External Campaign (views/view_54948.html)
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/ProspectCampaignManagement/12.0.0
 
 ---
 
@@ -65,41 +31,6 @@ Business development reviews market research to determine levels of awareness fo
 
 #### api_bian_portal_link
 https://app.swaggerhub.com/apis/BIAN-3/Advertising/12.0.0
-
----
-
-### Prospect Campaign Design
-
-#### role_definition
-This Service Domain designs and refines prospect campaigns (or integrates designs from external campaign specialists). Prospect campaigns target new customer acquisition and are typically proactive (involving prospect targeting, contact and solicitation). Version numbering is used to track the impact of changes made to campaigns over their usage.
-
-#### core_business_object
-Prospect Campaign (object_26.html?object=40891)
-
-#### key_features
-- Define the target profile/impact of a campaign
-- Specify a prospect campaign
-- Track the impact of a campaign
-- Refine/reconfigure a campaign
-
-#### example_of_use
-A prospect acquisition campaign is updated to provide amended/improved pricing terms that can be offered to targeted prospects poor take-up rate has been detected for the campaign
-
-#### triggered_by
-- Prospect Campaign Management (object_21.html?object=32462)
-- Business Development (object_20.html?object=32900)
-- Prospect Campaign Execution (object_22.html?object=47050)
-
-#### triggers
-- Market Research (object_21.html?object=34938)
-
-#### list_of_scenarios
-- Execute External Campaign (views/view_55170.html)
-- Analyse External Campaign Portfolio Performance (views/view_55338.html)
-- Develop External Campaign (views/view_54948.html)
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN-3/ProspectCampaignDesign/12.0.0
 
 ---
 
@@ -139,40 +70,7 @@ https://app.swaggerhub.com/apis/BIAN3/CustomerCampaignManagement/12.0.0
 
 ---
 
-### Prospect Campaign Execution
 
-#### role_definition
-Handle the deployment, execution and on-going refinement of a prospect campaign. This includes many types of proactive prospect acquisition campaigns. The campaign execution process performs the initial selection and confirmation/validation of candidate lists and includes providing critical feedback on the impact of the campaign to the design unit to support re-calibration and refinement of the specification based on practical experience
-
-#### core_business_object
-Prospect Campaign (object_26.html?object=40891)
-
-#### key_features
-- Candidate prospect selection/identification (list development)
-- Prospect interaction and response capture
-- Campaign performance analysis and feedback
-
-#### example_of_use
-A bank implements a targeted take-one mailshot acquisition campaign to attract additional customers
-
-#### triggered_by
-- Prospect Campaign Management (object_21.html?object=32462)
-- Prospect Campaign Execution (object_22.html?object=47050)
-
-#### triggers
-- Party Lifecycle Management (object_20.html?object=29780)
-- Correspondence (object_20.html?object=32927)
-- Market Analysis (object_21.html?object=36136)
-- Prospect Campaign Design (object_22.html?object=39556)
-- Prospect Campaign Execution (object_22.html?object=47050)
-
-#### list_of_scenarios
-- Execute External Campaign (views/view_55170.html)
-
-#### api_bian_portal_link
-https://app.swaggerhub.com/apis/BIAN3/ProspectCampaignExecution/12.0.0
-
----
 
 ### Customer Campaign Design
 
@@ -251,7 +149,7 @@ A bank implements a targeted cross-sell campaign in the customer servicing cente
 https://app.swaggerhub.com/apis/BIAN-3/CustomerCampaignExecution/12.0.0
 
 
-### Lead and Opportunity Management
+### Lead Management
 
 #### role_definition
 This service domain captures, evaluates and progresses identified lead/opportunities that may arise during customer relationship development, sales, servicing and fulfillment interactions. It will clarify and confirm the customer's interest and check that the product is suitable and the customer eligible prior to initiating the formal offer process (see service domain Customer Offer)

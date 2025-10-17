@@ -207,7 +207,7 @@ An existing customer has discussed short term funding needs with the Financial A
 
 https://app.swaggerhub.com/apis/BIAN-3/CustomerOffer/12.0.0
 
-### Corporate Communications
+### Message Management
 
 #### role_definition
 Develop and distribute key corporate messages as needed to support the strategy and maintain the enterprise reputation and brand

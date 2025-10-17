@@ -1,4 +1,4 @@
-### Promotional Events
+### Event Management
 
 #### role_definition
 

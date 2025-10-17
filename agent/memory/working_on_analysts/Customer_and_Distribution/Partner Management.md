@@ -2,41 +2,7 @@
 
 ## Service Domain Capabilities
 
-### Merchant Acquiring Facility
 
-#### Role Definition
-This service domain is the primary service domain for handling the Merchant Account and the specific terms and conditions for the merchant. It includes opening the Merchant account, performing the required setup for card acceptance, such as assigning POS terminals, maintaining the accounts payable balances for the merchant, performing periodic settlement, and handling fees and charges. When Merchants submit card payment transactions, the Acquiring Bank is responsible for paying the Merchants in accordance with the terms of the Merchant agreement, which specify when the merchant should be paid and the amount that is withheld from the payment as merchant discount or service fees.
-
-#### Core Business Object
-Merchant Agreement (object_26.html?object=37615)
-
-#### Key Features
-- Merchant facility set-up and maintenance
-- Merchant POS assignment/registration
-- Merchant chargeback processing
-- Merchant clearing and settlement
-- Merchant discount and fee processing
-
-#### Example of Use
-The Acquiring Bank signs up Merchants for accepting Card Payments and opens Merchant Accounts for them.
-
-#### Triggered By
-- Card Case (object_21.html?object=30796)
-- Card Clearing (object_21.html?object=36804)
-- Card Terminal Operation (object_22.html?object=45274)
-
-#### Triggers
-No triggers specified
-
-#### List of Scenarios
-- Authorise Card Use by Acquirer (views/view_55588.html)
-- Process Card Clearing by Acquirer (views/view_55404.html)
-- Handle Request for Information for Chargeback at Acquirer (views/view_55149.html)
-
-#### API BIAN Portal Link
-https://app.swaggerhub.com/apis/BIAN-3/MerchantAcquiringFacility/12.0.0
-
----
 
 ### Corporate Relationship
 
@@ -167,43 +133,7 @@ https://app.swaggerhub.com/apis/BIAN-3/InterbankRelationshipManagement/12.0.0
 
 ---
 
-### Card Network Participant Facility
-
-#### Role Definition
-Cards issued by banks are affiliated with one of many international Card Networks, such as Visa, Master Card, Diners, American Express. This service domain is used by the Card Network for setting up Acquiring and Issuing Bank accounts and their terms and conditions.
-
-#### Core Business Object
-Card Network Participant Agreement
-
-#### Key Features
-- Acquiring bank facility terms administration
-- Issuing bank facility terms administration
-- Participant bank service status maintenance
-
-#### Example of Use
-The Card Network signs up Acquiring Banks for recruiting and setting up accounts for merchants and Issuing Banks for issuing cards to its customers.
-
-#### Triggered By
-- Card Transaction Switch
-- Card Case
-- Processing Order
-- Card Clearing
-
-#### Triggers
-No triggers specified
-
-#### List of Scenarios
-- Handle Request for Chargeback at Acquirer
-- Handle Card Chargeback at Issuer
-- Handle Request for Information for Chargeback at Acquirer
-- Process Authentication Request by Card Network
-- Process Card Clearing by Card Network
-- Authorise Card Use by Card Network
-
-#### API BIAN Portal Link
-https://app.swaggerhub.com/apis/BIAN-3/CardNetworkParticipantFacility/12.0.0
-
----
+#
 
 ### Correspondent Bank Operations
 
@@ -294,37 +224,6 @@ https://app.swaggerhub.com/apis/BIAN-3/CounterpartyAdministration/12.0.0
 
 ---
 
-### Corporate Alliance and Stake Holder
-
-#### Role Definition
-Manage key alliance and stake holder relationship - define tasks needed to develop and maintain contact and ensure relevant information is shared as appropriate
-
-#### Core Business Object
-Alliance Partner Relationship Management Plan
-
-#### Key Features
-- Alliance relationship management
-- Stakeholder relationship management
-- Information sharing coordination
-- Contact development and maintenance
-- Strategic partnership alignment
-
-#### Example of Use
-Corporate strategy is communicated and aligned with a product alliance partner
-
-#### Triggered By
-No triggers specified
-
-#### Triggers
-No triggers specified
-
-#### List of Scenarios
-No scenarios specified
-
-#### API BIAN Portal Link
-Not specified
-
----
 
 ### Syndicate Management
 
