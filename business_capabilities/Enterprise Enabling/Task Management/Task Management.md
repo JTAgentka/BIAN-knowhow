@@ -1,0 +1,581 @@
+# Task Management
+
+### Contact Handler
+
+#### Role Definition
+BIAN defines a customer contact as the overarching structure handling a customer interaction from start to end. A contact can include one or more servicing dialogue 'sessions' in parallel or sequence to support different device/channel uses within the contact and to allow for the customer to be passed on to different servicing specialists as necessary during the contact. Each session is handled at a servicing position where the Contact Dialogue service domain is called to handle the specific customer interaction. Contact Handler concludes the contact, handles the authorization permissions and shares any contact information collected during the contact between sessions as necessary
+
+#### Core Business Object
+CustomerContactSession
+
+#### Key Features
+- Handle customer contacts with the bank
+- Obtain customer identity authentication
+- Consolidate reference information and recent contact activity details
+- Obtain routing decision (select optimal servicing resource)
+- Initiate servicing sessions
+- Log contact activity
+
+#### Example of Use
+A customer is self serving on the web and then requests to talk to a servicing representative directory using the VoIP capability presented on the banks web portal.
+
+#### Triggered By
+- eBranch Operations
+- Advanced Voice Services Operations
+- Contact Handler
+- Brokered Product
+- Session Dialogue
+
+#### Triggers
+- Party Lifecycle Management
+- Customer Access Entitlement
+- eBranch Operations
+- Issued Device Administration
+- Party Routing Profile
+- Channel Activity Analysis
+- Customer Workbench
+- Servicing Mandate
+- Channel Activity History
+- Party Authentication
+- Contact Routing
+- Customer Position
+- Contact Handler
+- Point of Service
+- Fraud Resolution
+- Party Reference Data Directory
+- Service Directory
+- Session Dialogue
+- Transaction Authorization
+
+#### List of Scenarios
+- EXT Handle Request for Overdraft Limit on Virtual Account (views/view_55055.html)
+- EXT Handle Request to Add Account to Sweep Agreement (views/view_55061.html)
+- Update status of the consent to authorized and get authentication code (views/view_39389.html)
+- EXT Handle Request to Move Overdraft Limit between Virtual Accounts (views/view_54989.html)
+- EXT Handle Request for High Volume Account Opening (views/view_54681.html)
+- Retrieve a list of connected ASPSB banks (views/view_46375.html)
+- Handle Customer Request for User Access Token Using Bank Authorization Grant and its Client Secret within Active Contact (views/view_54913.html)
+- Create Customer Reports (views/view_55419.html)
+- EXT Handle Merchandising Loan Application (views/view_55092.html)
+- EXT Handle Request to Open Retail Current Account (views/view_55487.html)
+- Execute Interactive Retention Campaign (views/view_55098.html)
+- EXT Handle Customer Relationships Case (views/view_55529.html)
+- EXT Handle Request to Reactivate Dormant Corporate Current Account (views/view_55347.html)
+- Process Contact setup and start TPP Servicing Dialogue (views/view_55305.html)
+- EXT Handle Request to Change Corporate Current Account Ownership (views/view_55493.html)
+- Develop Opportunity (views/view_55143.html)
+- EXT Handle Request to Pre-Open Corporate Current Account (views/view_55077.html)
+- EXT Handle Request to Add Signatory to Corporate Current Account (views/view_55296.html)
+- EXT Process B2B Direct Debit Mandate Notice from Creditor Bank at Debtor Bank (views/view_55425.html)
+- EXT Handle Bulk Request for Opening Salary Accounts (views/view_55326.html)
+- Handle Servicing Request for Access Attempt with out of Pattern Customer or TPP Behaviour (views/view_55532.html)
+- Handle TPP Request for Registration with Bank and Exchange of 'Client Identifier' and 'Client Secret' for Later Reference (views/view_55320.html)
+- EXT Handle Request to Use Direct Debits as Payment Instrument (views/view_55260.html)
+- Get Customer Request and Show Account Balance (views/view_55475.html)
+- EXT Handle Request to Terminate Sweep Agreement (views/view_55499.html)
+- EXT Handle Instruction to Terminate B2B Direct Debits Service at Creditor Bank (views/view_55440.html)
+- Process Access Request by TPP on Behalf of Customer (views/view_55437.html)
+- EXT Handle Request to Change Virtual Account Ownership (views/view_55562.html)
+- Customer Sees the NBP Offer and Decides if to Apply (views/view_55585.html)
+- EXT Handle Request to Close Virtual Account (views/view_55455.html)
+- EXT Handle Request for High Volume Virtual Account Opening (views/view_55266.html)
+- EXT Handle Request to Close Corporate Current Account (views/view_55101.html)
+- EXT Handle Request for Combined Account Statement (views/view_55637.html)
+- EXT Handle Request for Renewal of Uncollateralised Consumer Loan (views/view_55034.html)
+- Get Customer account details (views/view_36796.html)
+- EXT Handle Request to Detach Account from Corporate Payroll Service Agreement (views/view_54714.html)
+- Get customer account beneficiaries (views/view_46252.html)
+- Get and store authentication token, trigger a request to transfer account (views/view_32684.html)
+- Initiate Consent (views/view_39366.html)
+- Initiate consent authorization (views/view_48589.html)
+- Customer log-in (views/view_38593.html)
+- Initiate Consent (views/view_44841.html)
+- EXT Handle Request for Preferential Rates for Corporate Current Account (views/view_54889.html)
+- Retrieve accounts and consent details (views/view_35037.html)
+- Get customer account balances (views/view_30223.html)
+- End Mobile Access Session and Update Event and Servicing and Channel History (views/view_54816.html)
+- Create account consent (views/view_48501.html)
+- EXT Handle Request for Account Statement and Outgoing Credit Transfer (views/view_54747.html)
+- Handle Customer Request to Log On to Bank to Authenticate and to Authorise Client Access to Their Account (views/view_54928.html)
+- Check Customer Channel Access History and Access Entitlements (views/view_54968.html)
+- Handle Failed Self Service Product Application (views/view_54810.html)
+- EXT Handle Request for Account Statement and Balances (views/view_54631.html)
+- Process Customer Access Request and Authentication (views/view_54634.html)
+- EXT Handle Request to Change Sweep Sequence (views/view_54834.html)
+- EXT Record Core SEPA Direct Debit Mandate at Creditor Bank (views/view_54744.html)
+- Periodically the TPP Bank Request Account Updates (views/view_54916.html)
+- Get customer account transactions (views/view_39221.html)
+- EXT Handle Request to Open Corporate Current Account (views/view_54675.html)
+- Handle Customer Request for Payment Order during Active Mobile Access Session (views/view_55010.html)
+- Save selected accounts (views/view_35560.html)
+- Get access token, refresh access token (views/view_35507.html)
+- EXT Handle Request to Open Virtual Account (views/view_54790.html)
+- Get list of customer accounts (views/view_30521.html)
+- Retrieve a list of ASPSB banks from the OB Directory (views/view_42714.html)
+- Exchange OTP (views/view_41381.html)
+- EXT Handle Request to Open Term Deposit Agreement for Retail Customer (views/view_55007.html)
+- EXT Handle Request to Change Term Deposit Agreement Conditions (views/view_54971.html)
+- EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Retail Customer (views/view_55547.html)
+- EXT Handle Request to Change Term Deposit Attached Corporate Current Account (views/view_55610.html)
+- EXT Handle request for Corporate Debit Cards Service (views/view_55446.html)
+- EXT Handle Request to Open Term Deposit under Term Deposit Agreement for Corporate Customer (views/view_55209.html)
+- EXT Handle Request to Establish Term Deposit Agreement (views/view_54702.html)
+- EXT Handle Request for Early Closing of Term Deposit (views/view_54863.html)
+- EXT Handle Request for Early Renewal of Term Deposit (views/view_54866.html)
+- EXT Handle Request to Establish Credit Transfer Standing Order on Corporate Current Account (views/view_54951.html)
+- EXT Handle Request for Modification of Merchandising Loan (views/view_54708.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/ContactHandler/12.0.0
+
+---
+
+### Contact Routing
+
+#### Role Definition
+Contact Routing is called from Contact Management to identify the next available and most suited servicing resource to handle a servicing session within an active customer contact. Selection is optimized to leverage of specialized/qualified servicing resources based on any known details about the customer and the purpose of their contact with the bank.
+
+#### Core Business Object
+Individual Analytics: customerServicingResourceAllocationAccumulators, customerServicingResourceAllocationActivityAnalysis, customerServicingResourceAllocationPerformanceAnalysis, customerServicingResourceAllocationTrends&Events; Portfolio Analytics: customerServicingResourceAllocationPortfolioActivityAnalysis, customerServicingResourceAllocationPortfolioMake-UpAnalysis, customerServicingResourceAllocationPortfolioPerformanceAnalysis
+
+#### Key Features
+- Track the status/availability of servicing resources
+- Assign/select resources to match customer servicing needs
+
+#### Example of Use
+A high value customer contacts the bank. They have been flagged as a sales prospect and so are routed to the next available rep that is registered as being skilled in the specific product of interest and also experienced in sales
+
+#### Triggered By
+- Contact Handler
+- Contact Center Operations
+
+#### Triggers
+- Channel Activity History
+- Point of Service
+- Contact Center Operations
+
+#### List of Scenarios
+- Execute Interactive Retention Campaign (views/view_55098.html)
+- Register Servicing Position in Call Centre (views/view_55125.html)
+- Develop Opportunity (views/view_55143.html)
+- Check Customer Channel Access History and Access Entitlements (views/view_54968.html)
+- Handle Failed Self Service Product Application (views/view_54810.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/ContactRouting/12.0.0
+
+---
+
+### Card Collections
+
+#### Role Definition
+The card collection process relates to the determination and execution of the optimal strategy to ensure the collection of unsecured distressed card debt, which may include aggressive collection efforts, renegotiation of payments terms in order to improve customer commitment to make the payment, or to take any applicable legal actions against the customer.
+
+#### Core Business Object
+Individual Analytics: cardCollectionsProcedureAccumulators, cardCollectionsProcedureActivityAnalysis, cardCollectionsProcedurePerformanceAnalysis, cardCollectionsProcedureTrends&Events; Portfolio Analytics: cardCollectionsProcedurePortfolioActivityAnalysis, cardCollectionsProcedurePortfolioMake-UpAnalysis, cardCollectionsProcedurePortfolioPerformanceAnalysis
+
+#### Key Features
+- Card collection case classification and assignment
+- Collection payment terms and processing
+- Collection processing resolution/conclusion
+
+#### Example of Use
+A card account is canceled when the age of outstanding balance exceeds policy limits (normally 90 days) or when delinquency management and dunning efforts are determined to be unsuccessful at eliciting payment. The account is then assigned to an internal Collections department or an external Collection Agency for making aggressive attempts at securing the payment of the outstandings.
+
+#### Triggered By
+- Credit Card
+- Card Collections
+
+#### Triggers
+- Correspondence
+- Credit Card
+- Card Collections
+
+#### List of Scenarios
+- Process Periodic Review of Collection Actions (views/view_55302.html)
+- Process Card Collection (views/view_54910.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/CardCollections/12.0.0
+
+---
+
+### Servicing Issue
+
+#### Role Definition
+Capture, track, resolve and report on the more general customer servicing issues that may arise in the servicing center. Note that this does not include the handling of specific customer cases (such as a payment dispute). Servicing issues typically requiring some kind of follow-up by the contact service representative (CSR), production support services or their management
+
+#### Core Business Object
+Not specified
+
+#### Key Features
+- Capture servicing issue details and impact
+- Analyze root cause of the issue
+- Determine remedial actions to resolve issue
+- Propose procedural and systems amendments to mitigate cause
+
+#### Example of Use
+A servicing representative notes that the guidelines for a particular product are confusing and result in frequent customer enquiries. The apparent shortfall is raised to management for review
+
+#### Triggered By
+- Session Dialogue (object_23.html?object=48273)
+
+#### Triggers
+Not specified
+
+#### List of Scenarios
+- Servicing Issue Procedure_Invocation (object_18.html?object=238756)
+- Servicing Issue_SD_Service Group (object_18.html?object=238789)
+- update Servicing Issue Procedure (object_18.html?object=239185)
+- configure Servicing Issue Procedure (object_19.html?object=239318)
+- record Servicing Issue Procedure (object_19.html?object=240625)
+- request Servicing Issue Procedure (object_19.html?object=241230)
+- Servicing Issue Procedure_Instantiation (object_19.html?object=241545)
+- execute Servicing Issue Procedure (object_19.html?object=241872)
+- Servicing Issue Procedure_Reporting (object_20.html?object=247384)
+- notify Servicing Issue Procedure (object_20.html?object=247385)
+- retrieve Servicing Issue Procedure (object_20.html?object=249338)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/ServicingIssue/12.0.0
+
+---
+
+### Open Item Management
+
+#### Role Definition
+This service domain handles open item processing against accounts typically for loans. It enables a unit to handle resolution across multiple accounts as a specialized/centralized administrative activity
+
+#### Core Business Object
+Open Item (object_26.html?object=44546)
+
+#### Key Features
+- Register and classify open items for processing
+- Process/resolve open items
+- Report on open item resolution activity
+
+#### Example of Use
+Open items are cleared against an active loan facility
+
+#### Triggered By
+- Open Item Management (object_21.html?object=31686)
+- Consumer Loan (object_22.html?object=42931)
+
+#### Triggers
+- Open Item Management (object_21.html?object=31686)
+- Customer Billing (object_20.html?object=42033)
+- Delinquent Account Handling (object_22.html?object=47264)
+
+#### List of Scenarios
+- Process Consumer Loan Delinquency First Stage (views/view_55407.html)
+- Open Item Procedure_Instantiation (object_18.html?object=210441)
+- Open Item Management_SD_Operations (object_19.html?object=210451)
+- Open Item Procedure_Invocation (object_18.html?object=210463)
+- Open Item Procedure_Reporting (object_18.html?object=210468)
+- Open Item Management_SD_Service Group (object_19.html?object=240393)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/OpenItemManagement/12.0.0
+
+---
+
+### Case Root Cause Analysis
+
+#### Role Definition
+Analyze customer servicing case resolution records for root cause insights. Analysis can be focused for more specific analysis including: problematic product and service features that can be refined; possible operational weaknesses that might require improved training/guidelines; and, to detect possible credit/fraud patterns
+
+#### Core Business Object
+Not specified
+
+#### Key Features
+- Product and service feature related issue analysis
+- Servicing and operational performance issue analysis
+- Credit and fraudulent behavior analysis
+
+#### Example of Use
+Contact center case resolution records are reviewed to identify recurring issues that can be resolved with improved servicing representative training and guidelines
+
+#### Triggered By
+Not specified
+
+#### Triggers
+Not specified
+
+#### List of Scenarios
+- Customer Case Root Cause Analysis_Reporting (object_17.html?object=133961)
+- Customer Case Root Cause Analysis_Instantiation (object_17.html?object=133967)
+- Case Root Cause Analysis_SD_Operations (object_19.html?object=133974)
+- Customer Case Root Cause Analysis_Invocation (object_17.html?object=133978)
+- Case Root Cause Analysis_SD_Service Group (object_19.html?object=240068)
+- Customer Case Root Cause Analysis (object_24.html?object=30472)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/CaseRootCauseAnalysis/12.0.0
+
+---
+
+### Customer Case Management
+
+#### Role Definition
+Manage customer case handling, track the effectiveness and impact of case resolution. Evaluate and confirm that the decision making rules and thresholds are well balanced in terms of equitable determination with general customer and merchant acceptance of the process. Ensure and that sufficient and appropriately trained resources are available
+
+#### Core Business Object
+Customer Case Management Plan
+
+#### Key Features
+- Define and refine the guiding principles and rules for case resolution
+- Assess effectiveness of the case processing function
+- Determine and monitor staffing levels and utilization
+
+#### Example of Use
+Customer case handling is assessed over a period and the rules and thresholds guiding resolution decisions recalibrated
+
+#### Triggered By
+Not specified
+
+#### Triggers
+Not specified
+
+#### List of Scenarios
+No scenarios available
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/CustomerCaseManagement/12.0.0
+
+---
+
+### Card Case
+
+#### Role Definition
+Capture, track, resolve and report on card related transactional disputes, handling all the dispute resolution messages between the Issuer, the Card Network and the Acquirer.
+
+#### Core Business Object
+Card Case (object_26.html?object=47333)
+
+#### Key Features
+- Consolidation of transaction details
+- Chargeback processing
+- Case decisioning and arbitration
+- Case resolution
+
+#### Example of Use
+A card holder reports a payment dispute to the contact center and a case is initiated. The account is credited and documentation requested from the merchant. The case is finally judged when the documents are available for review and all interested parties are notified of the resolution
+
+#### Triggered By
+- Card Case (object_21.html?object=30796)
+- Card Clearing (object_21.html?object=36804)
+- Customer Case (object_22.html?object=47339)
+
+#### Triggers
+- Card Case (object_21.html?object=30796)
+- Operational Gateway (object_21.html?object=32276)
+- Correspondence (object_20.html?object=32927)
+- Card Transaction Capture (object_21.html?object=35397)
+- Payment Order (object_21.html?object=35550)
+- Card Clearing (object_21.html?object=36804)
+- Credit Card (object_22.html?object=40448)
+- Merchant Acquiring Facility (object_20.html?object=42530)
+- Card Network Participant Facility (object_22.html?object=42759)
+- Document Directory (object_22.html?object=44708)
+
+#### List of Scenarios
+- Process Card Clearing by Issuer (views/view_55194.html)
+- Handle Request for Chargeback at Acquirer (views/view_55230.html)
+- Handle Card Chargeback at Issuer (views/view_55464.html)
+- Handle Request for Information for Chargeback at Acquirer (views/view_55149.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/CardCase/12.0.0
+
+---
+
+### Delinquent Account Handling
+
+#### Role Definition
+This service domain determines and executes strategies for eliciting payment from high risk accounts. These strategies may include communicating with the customer through text messages, emails or phone calls. The account may continue to maintain some facilities at this stage. Eventually it can be necessary to reduce the credit line or block the account to prevent further increase in risk, or to cancel the account and transfer it to Collections.
+
+#### Core Business Object
+Not specified
+
+#### Key Features
+- Delinquent account assessment
+- Account owner contact
+- Account payment processing
+- Delinquent account resolution (re-instated or passed to collections)
+
+#### Example of Use
+When a Card Account is assessed to be at a high risk of default, such as a Charge Card Account with high out of pattern outstandings or a Credit Card Account with significant aged balances, attempts are made to elicit the payment of the outstanding amounts or to limit further increase in risk through optimal strategies for contacting the customer and inducing payment of the outstanding amount.
+
+#### Triggered By
+- Open Item Management (object_21.html?object=31686)
+- Credit Card (object_22.html?object=40448)
+- Delinquent Account Handling (object_22.html?object=47264)
+- Customer Case (object_22.html?object=47339)
+
+#### Triggers
+- Correspondence (object_20.html?object=32927)
+- Credit Card (object_22.html?object=40448)
+- Customer Credit Rating (object_22.html?object=43153)
+- Document Directory (object_22.html?object=44708)
+- Delinquent Account Handling (object_22.html?object=47264)
+
+#### List of Scenarios
+- Process Consumer Loan Delinquency First Stage (views/view_55407.html)
+- Process Card Account Delinquency Review (views/view_55269.html)
+- Process Card Collection (views/view_54910.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/DelinquentAccountHandling/12.0.0
+
+---
+
+### Customer Case
+
+#### Role Definition
+Case resolution tasks follow specific procedures for the type of case involved. Case resolution can be quick by applying resolution rules and obtaining additional authorization as necessary, or they can be long living activities, for example where documentation is requested and has to be retrieved from merchants or other interested parties before the disputed issue can finally be ruled upon. A wide range of case types can be expected
+
+#### Core Business Object
+Not specified
+
+#### Key Features
+- Customer case capture and classification
+- Case related information consolidation
+- Customer case diagnosis and decisioning
+- Customer case resolution implementation
+
+#### Example of Use
+A case resolution operator works through the resolution of a case, following the established process for the specific case - in this case a disputed charge that is below a threshold allowing the credit to be charged to the merchant
+
+#### Triggered By
+- Customer Relationship Management (object_21.html?object=30437)
+- Servicing Order (object_21.html?object=32295)
+- Customer Case (object_22.html?object=47339)
+- Session Dialogue (object_23.html?object=48273)
+
+#### Triggers
+- Card Case (object_21.html?object=30796)
+- Customer Agreement (object_20.html?object=32862)
+- Correspondence (object_20.html?object=32927)
+- Corporate Current Account (object_21.html?object=34221)
+- Customer Workbench (object_21.html?object=34733)
+- Customer Behavior Insights (object_21.html?object=34917)
+- Product Directory (object_21.html?object=34953)
+- Card Transaction Capture (object_21.html?object=35397)
+- Payment Order (object_21.html?object=35550)
+- Account Recovery (object_21.html?object=35767)
+- Current Account (object_21.html?object=37122)
+- Savings Account (object_21.html?object=38858)
+- Credit Card (object_22.html?object=40448)
+- Collections (object_22.html?object=44734)
+- Delinquent Account Handling (object_22.html?object=47264)
+- Customer Case (object_22.html?object=47339)
+- Customer Event History (object_23.html?object=47633)
+
+#### List of Scenarios
+- Customer Relationship Case Initiation (views/view_55022.html)
+- EXT Handle Customer Relationships Case (views/view_55529.html)
+- Handle Card Chargeback at Issuer (views/view_55464.html)
+- Process Notification to Remove Amount Block (views/view_54828.html)
+- Initiate Customer Relationship Case (views/view_54598.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/CustomerCase/12.0.0
+
+---
+
+### Servicing Order
+
+#### Role Definition
+The Servicing Order service domain handles the processing of a request that may impact multiple products and services and may involve processing cycles/steps and possibly have associated fees/charges. There can be several types of standard 'servicing order' defined for selection as appropriate. A servicing order can be initiated by a customer directly or may be requested on their behalf by an authorized third party service provider. If the request is made by a third party service provider on behalf of a customer the process can include a check that the associated permissions/mandates are in place
+
+#### Core Business Object
+Not specified
+
+#### Key Features
+- Support the selection of predefined servicing order
+- Confirm the associated permissions/mandates are in place
+- Orchestrate the work steps/tasks in the servicing order
+- Track and report on servicing order activities
+
+#### Example of Use
+A customer changes address and requests that all of their product and service arrangements are updated
+
+#### Triggered By
+- Financial Gateway (object_20.html?object=29241)
+- Customer Relationship Management (object_21.html?object=30437)
+- Operational Gateway (object_21.html?object=32276)
+- Servicing Order (object_21.html?object=32295)
+- Correspondence (object_20.html?object=32927)
+- Session Dialogue (object_23.html?object=48273)
+
+#### Triggers
+- Party Lifecycle Management (object_20.html?object=29780)
+- Customer Access Entitlement (object_20.html?object=30136)
+- Document Services (object_21.html?object=30399)
+- Customer Relationship Management (object_21.html?object=30437)
+- Term Deposit (object_21.html?object=30653)
+- Issued Device Administration (object_21.html?object=30905)
+- Mortgage Loan (object_21.html?object=31825)
+- Syndicated Loan (object_21.html?object=31921)
+- Operational Gateway (object_21.html?object=32276)
+- Servicing Order (object_21.html?object=32295)
+- Corporate Payroll Services (object_21.html?object=32364)
+- Direct Debit (object_21.html?object=32677)
+- Customer Agreement (object_20.html?object=32862)
+- Correspondence (object_20.html?object=32927)
+- Term Deposit Framework Agreement (object_20.html?object=33675)
+- Standing Order (object_21.html?object=34129)
+- Corporate Current Account (object_21.html?object=34221)
+- Channel Activity Analysis (object_21.html?object=34254)
+- Customer Workbench (object_21.html?object=34733)
+- Product Directory (object_21.html?object=34953)
+- Servicing Mandate (object_21.html?object=35374)
+- Payment Order (object_21.html?object=35550)
+- Customer Tax Handling (object_21.html?object=35884)
+- ACH Operations (object_21.html?object=36614)
+- Customer Product And Service Eligibility (object_21.html?object=36792)
+- Corporate Treasury (object_21.html?object=37090)
+- Current Account (object_21.html?object=37122)
+- Legal Entity Directory (object_21.html?object=37530)
+- Advanced Voice Services Operations (object_21.html?object=37680)
+- Sales Product Agreement (object_21.html?object=37916)
+- Direct Debits Service (object_21.html?object=38821)
+- Savings Account (object_21.html?object=38858)
+- Customer Offer (object_22.html?object=39968)
+- Credit Card (object_22.html?object=40448)
+- Party Authentication (object_22.html?object=40912)
+- Customer Position (object_22.html?object=41136)
+- Cash Concentration (object_22.html?object=41205)
+- Merchandising Loan (object_22.html?object=41553)
+- Customer Product and Service Directory (object_22.html?object=41591)
+- Customer Billing (object_20.html?object=42033)
+- Information Provider Operation (object_20.html?object=42204)
+- Consumer Loan (object_22.html?object=42931)
+- Customer Credit Rating (object_22.html?object=43153)
+- Point of Service (object_22.html?object=43170)
+- Underwriting (object_22.html?object=44666)
+- Document Directory (object_22.html?object=44708)
+- Party Reference Data Directory (object_22.html?object=45230)
+- Virtual Account (object_22.html?object=45513)
+- Direct Debit Mandate (object_22.html?object=46204)
+- Regulatory Compliance (object_22.html?object=46420)
+- Customer Case (object_22.html?object=47339)
+- Loan Syndication (object_23.html?object=47935)
+- Session Dialogue (object_23.html?object=48273)
+- Transaction Authorization (object_23.html?object=48811)
+- Product Fulfillment SDs (object_25.html?object=83652)
+
+#### List of Scenarios
+- EXT Handle Request for Overdraft Limit on Virtual Account (views/view_55055.html)
+- EXT Handle Request to Add Account to Sweep Agreement (views/view_55061.html)
+- Process Modification of Merchandising Loan (views/view_55069.html)
+- Handle Request for Balance Transfer (views/view_55031.html)
+- EXT Handle Request to Move Overdraft Limit between Virtual Accounts (views/view_54989.html)
+- Handle Request for Card Activation (views/view_55025.html)
+- Customer Relationship Case Initiation (views/view_55022.html)
+- Process Bank Internal Instruction to Block Corporate Current Account (views/view_54931.html)
+- EXT Handle Request for High Volume Account Opening (views/view_54681.html)
+- Handle Request for Copy of Active Version of Mandate at Debtor Bank (views/view_55016.html)
+
+#### API BIAN Portal Link
+https://app.swaggerhub.com/apis/BIAN-3/ServicingOrder/12.0.0
