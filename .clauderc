@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "event": "PreToolUse",
+      "matcher": "Task",
+      "command": "node .claude/hooks/inject-subagent-memory.js"
+    }
+  ]
+}
